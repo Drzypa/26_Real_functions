@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GradientInCurvilinearCoordinates}
+\pmcreated{2013-03-22 15:27:32}
+\pmmodified{2013-03-22 15:27:32}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{gradient in curvilinear coordinates}
+\pmrecord{5}{37309}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{26B10}
+\pmrelated{gradient}
+\pmrelated{Gradient}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amsthm}
+\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\ve}{\mathbf{e}}
+\begin{document}
+We give the formulas for the gradient expressed in various curvilinear coordinate systems.
+We also show the metric tensors $g_{ij}$ so
+that the reader may verify the results
+by working from the basic formulas for the gradient.
+\tableofcontents
+
+\section{Cylindrical coordinate system}
+In the
+cylindrical system of coordinates $(r,\theta, z)$ we have
+\[
+g_{ij} =
+\begin{pmatrix}
+1 &0&0\\ 0&r^2&0\\ 0&0&1
+\end{pmatrix}\,.
+\]
+So that
+\begin{align*}
+\nabla f 
+&= \frac{\partial f}{\partial r}\,\ve_r +
+\frac{1}{r}\frac{\partial f}{\partial\theta}\,\ve_\theta +
+\frac{\partial f}{\partial z}\,\vk\,,
+\end{align*}
+
+where
+\begin{align*}
+\ve_r &= \frac{\partial}{\partial r} =
+\frac{x}{r}\, \vi + \frac{y}{r}\, \vj \\
+\ve_\theta &= \frac{1}{r}\frac{\partial}{\partial \theta} =
+-\frac{y}{r}\, \vi + \frac{x}{r}\, \vj
+\end{align*}
+are the unit vectors in the direction of increase of $r$ and $\theta$.  Of course,
+$\vi, \vj, \vk$ denote the unit vectors along the positive $x, y, z$ axes respectively.
+
+The notations $\partial/\partial r, \partial/\partial \theta$, etc.,
+denote the tangent vectors corresponding to infinitesimal changes in $r, \theta$, etc. respectively.
+Concretely, in terms of Cartesian coordinates, $\partial/\partial r$
+is the vector $\vi \, \partial x/\partial r + \vj \, \partial y/\partial r + \vk \, \partial z/\partial r$.
+And similarly for the other variables.  (There is a deep reason for using the seemingly strange notation:
+see Leibniz notation for vector fields for details.)
+
+
+\section{Polar coordinate system}
+This is just the special case of the cylindrical coordinate system where we chop off the $z$ coordinate.
+Thus
+\begin{align*}
+\nabla f &= \frac{\partial f}{\partial r} \, \ve_r + \frac{1}{r} \frac{\partial f}{\partial \theta} \, \ve_\theta\,.
+\end{align*}
+
+\section{Spherical coordinate system}
+To stave off confusion, note that this is the ``mathematicians'~'' convention for the spherical coordinate
+system $(\rho,\phi,\theta)$.
+That is, $\phi$ is the co-latitude angle, and $\theta$ is the longitudinal angle.
+
+\[
+g_{ij} =
+\begin{pmatrix}
+1&0&0 \\ 0&\rho^2&0\\ 0&0&\rho^2\sin^2\phi
+\end{pmatrix}.
+\]
+
+\begin{align*}
+\nabla f &= 
+\frac{\partial f}{\partial\rho}\,\ve_\rho +
+\frac{1}{\rho}\frac{\partial f}{\partial\phi}\,\ve_\phi +
+\frac{1}{\rho\sin\phi}\frac{\partial f}{\partial\theta}\,\ve_\theta\,,
+\end{align*}
+where
+\begin{align*}
+\ve_\rho &= \frac{\partial}{\partial \rho} =
+\frac{x}{\rho}\, \vi + \frac{y}{\rho}\, \vj + \frac{z}{\rho}\, \vk\\
+\ve_\phi &= \frac{1}{\rho} \frac{\partial}{\partial \phi} = \frac{z
+x}{r\rho} \, \vi +
+\frac{ zy}{r\rho}\, \vj - \frac{r}{\rho}\, \vk\\
+\ve_\theta &= \frac{1}{\rho\sin\theta}\frac{\partial}{\partial
+\theta} = - \frac{y}{r}\, \vi +
+\frac{x}{r}\, \vj
+\end{align*}
+are the unit vectors in the direction of increase of $\rho, \phi, \theta$, respectively.
+%%%%%
+%%%%%
+\end{document}

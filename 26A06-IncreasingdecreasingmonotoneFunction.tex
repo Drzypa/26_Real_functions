@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IncreasingdecreasingmonotoneFunction}
+\pmcreated{2013-03-22 13:36:05}
+\pmmodified{2013-03-22 13:36:05}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{increasing/decreasing/monotone function}
+\pmrecord{12}{34228}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A48}
+\pmdefines{increasing}
+\pmdefines{decreasing}
+\pmdefines{strictly increasing}
+\pmdefines{strictly decreasing}
+\pmdefines{monotone}
+\pmdefines{monotonic}
+\pmdefines{strictly monotone}
+\pmdefines{strictly monotonic}
+\pmdefines{weakly increasing}
+\pmdefines{weakly decreasing}
+\pmdefines{strongly increasing}
+\pmdefines{strongly decreasing}
+\pmdefines{strongly monotone}
+\pmdefines{weakly monotone}
+\pmdefines{stronly mono}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\sR}[0]{\mathbb{R}}
+
+\PMlinkescapeword{increasing}
+\PMlinkescapeword{strictly increasing}
+\PMlinkescapeword{decreasing}
+\PMlinkescapeword{strictly decreasing}
+\PMlinkescapeword{monotone}
+\PMlinkescapeword{strictly monotone}
+
+{\bf Definition}
+Let $A$ be a subset of $\sR$, and let $f$ be a function from $f:A\to \sR$.
+Then
+\begin{enumerate}
+\item $f$ is \emph{increasing} or \emph{weakly increasing}, if
+$x\le y$ implies that $f(x)\le f(y)$ (for all $x$ and $y$ in $A$).
+\item $f$ is \emph{strictly increasing} or \emph{strongly increasing}, if
+$x< y$ implies that $f(x)< f(y)$.
+\item $f$ is \emph{decreasing} or \emph{weakly decreasing}, if
+$x\le y$ implies that $f(x)\ge f(y)$.
+\item $f$ is \emph{strictly decreasing} or \emph{strongly decreasing} if
+$x< y$ implies that $f(x)> f(y)$.
+\item $f$ is \emph{monotone},
+if $f$ is either increasing or decreasing.
+\item $f$ is \emph{strictly monotone} or \emph{strongly monotone},
+if $f$ is either strictly increasing or strictly decreasing.
+\end{enumerate}
+
+{\bf Theorem} Let $X$ be a bounded or unbounded open interval of $\sR$.
+In other words, let $X$ be an interval of the form $X=(a,b)$, where $a,b\in\sR\cup\{-\infty,\infty\}$.
+Futher, let $f:X\to \sR$ be a monotone function. 
+\begin{enumerate}
+\item The set of points where $f$ is discontinuous is at most 
+countable \cite{aliprantis, rudin}. 
+\item [Lebesgue] $f$ is differentiable almost 
+everywhere (\cite{jones}, pp. 514). 
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{aliprantis}
+ C.D. Aliprantis, O. Burkinshaw, \emph{Principles of Real Analysis},
+ 2nd ed., Academic Press, 1990.
+\bibitem{rudin}
+ W. Rudin, \emph{Principles of Mathematical Analysis}, McGraw-Hill Inc., 1976.
+ \bibitem{jones}
+F. Jones, \emph{Lebesgue Integration on Euclidean Spaces}, 
+Jones and Barlett Publishers, 1993.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

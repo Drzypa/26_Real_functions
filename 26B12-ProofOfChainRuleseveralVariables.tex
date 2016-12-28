@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfChainRuleseveralVariables}
+\pmcreated{2013-03-22 16:05:07}
+\pmmodified{2013-03-22 16:05:07}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of chain rule (several variables)}
+\pmrecord{6}{38145}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+We first consider the case $m=1$ i.e.\ $G\colon I\to \R^n$ where $I\subset \R$ is a neighbourhood of a point $x_0\in \R$ and $F\colon U\subset \R^n\to \R$ is defined on a neighbourhood $U$ of $y_0=G(x_0)$ such that $G(I)\subset U$. We suppose that both $G$ is differentiable at the point $x_0$ and $F$ is differentiable in $y_0$. We want to compute the derivative of the compound
+function $H(x)=F(G(x))$ at $x=x_0$.
+
+By the definition of derivative (using Landau notation) we have
+\[
+  F(y_0+ k) = F(y_0) + DF(y_0) k + o(|k|).
+\]
+Choose any $h\neq 0$ such that $x_0+h\in I$ and set $k=G(x_0+h)-G(x_0)$ to obtain
+\begin{align*}
+\frac{H(x_0+h)-H(x_0)}{h} &=
+\frac{F(G(x_0+h))-F(G(x_0))}{h}\\
+&=\frac{F(G(x_0)+k)-F(G(x_0))}{h} = \frac{F(y_0+k)-F(y_0)}{h}\\
+&=\frac{DF(y_0) (G(x_0+h)-G(x_0)) + o(|G(x_0+h)-G(x_0)|)}{h}\\
+&=DF(y_0) \frac{G(x_0 + h) -G(x_0)}{h} +\frac{o(|G(x_0+h)-G(x_0)|)}{h}.
+\end{align*}
+
+Letting $h\to 0$ the first term of the sum converges to $DF(y_0) G'(x_0)$ hence 
+we want to prove that the second term converges to $0$.
+Indeed we have
+\[
+  \left|\frac{o(|G(x_0+h)-G(x_0)|)}{h}\right|
+ =\left|\frac{o(|G(x_0+h)-G(x_0)|)}{|G(x_0+h)-G(x_0)|}\right|\cdot
+  \left|\frac{G(x_0+h)-G(x_0)}{h}\right|.
+\]
+By the definition of $o(\cdot)$ the first fraction tends to $0$, while 
+the second fraction tends to the absolute value of $G'(x_0)$. Thus the product
+tends to $0$, as needed.
+
+Consider now the general case $G\colon V\subset \R^m\to U\subset \R^n$.
+Given $v\in \R^m$ we are going to compute the directional derivative
+\[
+\frac{\partial F\circ G}{\partial v} (x_0) = \frac{d F\circ g}{dt} (0)
+\]
+where $g(t)=G(x_0+tv)$ is a function of a single variable $t\in\R$. Thus
+we fall back to the previous case and we find that 
+\[
+\frac{\partial F\circ G}{\partial v} (x_0) = DF(G(x_0)) g'(0).
+= DF(G(x_0)) \frac{\partial G}{\partial v} (x_0)
+\]
+In particular when $v=e_k$ is the $k$-th coordinate vector, we find
+\[
+g'(0) = 
+ D_{x_k} F \circ G (x_0) = DF(G(x_0)) D_{x_k} G(x_0)
+= \sum_{i=1}^n D_{y_i} G(x_0) D_{x_k} G^i(x_0)
+\]
+which can be compactly written
+\[
+  D F \circ G(x_0) = DF(G(x_0)) DG(x_0).
+\]
+
+%%%%%
+%%%%%
+\end{document}

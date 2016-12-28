@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfArithmeticgeometricharmonicMeansInequality}
+\pmcreated{2013-03-22 12:41:25}
+\pmmodified{2013-03-22 12:41:25}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of arithmetic-geometric-harmonic means inequality}
+\pmrecord{6}{32970}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+\pmrelated{ArithmeticMean}
+\pmrelated{GeometricMean}
+\pmrelated{HarmonicMean}
+\pmrelated{GeneralMeansInequality}
+\pmrelated{WeightedPowerMean}
+\pmrelated{PowerMean}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Let $M$ be $\max\{x_1,x_2,x_3,\ldots,x_n\}$ and let $m$ be $\min\{x_1,x_2,x_3,\ldots,x_n\}$.
+
+Then
+$$M=\frac{M+M+M+\cdots+M}{n}\geq\frac{x_1+x_2+x_3+\cdots+x_n}{n}$$
+$$m=\frac{n}{\frac{n}{m}}=
+\frac{n}{\frac{1}{m}+\frac{1}{m}+\frac{1}{m}+\cdots+\frac{1}{m}}
+\leq\frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\frac{1}{x_3}+\cdots+\frac{1}{x_n}}$$
+where all the summations have $n$ terms.
+So we have proved in this way the two inequalities at the extremes.
+
+Now we shall prove the inequality between arithmetic mean and geometric mean.
+
+\section{Case $n=2$}
+We do first the case $n=2$.
+
+\begin{eqnarray*}
+(\sqrt{x_1}-\sqrt{x_2})^2 &\geq& 0\\
+x_1-2\sqrt{x_1x_2}+x_2&\geq&0\\
+x_1+x_2&\geq&2\sqrt{x_1x_2}\\
+\frac{x_1+x_2}{2}&\geq&\sqrt{x_1x_2}
+\end{eqnarray*}
+
+\section{Case $n=2^k$}
+Now we prove the inequality for any power of $2$ (that is, $n=2^k$ for some integer $k$) by using mathematical induction. 
+
+\begin{eqnarray*}
+\lefteqn{
+    \frac{x_1+x_2+\cdots+x_{2^k}+x_{2^k+1}+\cdots+x_{2^{k+1}}}{2^{k+1}}
+}\\
+&=&
+\frac{\left(
+   \frac{x_1+x_2+\cdots+x_{2^k}}{2^k}
+\right)
++
+\left(
+   \frac{x_{2^k+1}+x_{2^k+2}+\cdots+x_{2^{k+1}}}{2^k}
+\right)}
+{2}
+\end{eqnarray*}
+and using the case $n=2$ on the last expression we can state the following inequality
+\begin{eqnarray*}
+\lefteqn{
+    \frac{x_1+x_2+\cdots+x_{2^k}+x_{2^k+1}+\cdots+x_{2^{k+1}}}{2^{k+1}}
+}\\
+&\ge&
+\sqrt{
+\left(
+   \frac{x_1+x_2+\cdots+x_{2^k}}{2^k}
+\right)
+\left(
+   \frac{x_{2^k+1}+x_{2^k+2}+\cdots+x_{2^{k+1}}}{2^k}
+\right)
+}\\
+&\ge&
+\sqrt{
+\sqrt[2^k]{x_1x_2\cdots x_{2^k}}
+\sqrt[2^k]{x_{2^k+1}x_{2^k+2}\cdots x_{2^{k+1}}}
+}
+\end{eqnarray*}
+where the last inequality was obtained by applying the induction hypothesis with $n=2^k$. Finally, we see that the last expression is equal to
+$\sqrt[2^{k+1}]{x_1x_2x_3\cdots x_{2^{k+1}}}$
+and so we have proved the truth of the inequality when the number of terms is a power of two.
+
+\section{Inequality for $n$ numbers implies inequality for $n-1$}
+Finally, we prove that if the inequality holds for any $n$, it must also hold for $n-1$, and this proposition, combined with the preceding proof for powers of $2$, is enough to prove the inequality for any positive integer.
+
+Suppose that 
+$$\frac{x_1+x_2+\cdots+x_n}{n}\geq\sqrt[n]{x_1x_2\cdots x_n}$$
+is known for a given value of $n$ (we just proved that it is true for powers of two, as example).
+Then we can replace $x_n$ with the average of the first $n-1$ numbers. So
+\begin{eqnarray*}
+\lefteqn{
+\frac{
+x_1+x_2+\cdots+x_{n-1}+
+\left(\frac{x_1+x_2+\cdots+x_{n-1}}{n-1} \right)
+}{n}
+}\\
+&=&
+\frac{(n-1)x_1+(n-1)x_2+\cdots+(n-1)x_{n-1}+x_1+x_2+\cdots+x_{n-1}}{n(n-1)}\\
+&=&
+\frac{n x_1+ n x_2 + \cdots + n x_{n-1}}{n(n-1)}\\
+&=&
+\frac{x_1+x_2 + \cdots + x_{n-1}}{(n-1)}
+\end{eqnarray*}
+
+On the other hand
+\begin{eqnarray*}
+\lefteqn{\sqrt[n]{
+x_1x_2\cdots x_{n-1}
+\left(\frac{x_1+x_2+\cdots+x_{n-1}}{n-1}\right)
+}}\\
+&=&
+\sqrt[n]{x_1x_2\cdots x_{n-1}}
+\sqrt[n]{\frac{x_1+x_2+\cdots+x_{n-1}}{n-1}}
+\end{eqnarray*}
+which, by hypothesis (the inequality holding for $n$ numbers) and the observations made above, leads to:
+$$\left(\frac{x_{1}+x_{2}+\cdots+x_{n-1}}{n-1}\right)^{n}\ge 
+(x_{1}x_{2}\cdots x_{n})\left(\frac{x_1+x_2+\cdots+x_{n-1}}{n-1}\right)
+$$
+and so
+$$
+\left(\frac{x_{1}+x_{2}+\cdots+x_{n-1}}{n-1}\right)^{n-1}\ge 
+x_{1}x_{2}\cdots x_{n}
+$$
+from where we get that 
+$$
+\frac{x_{1}+x_{2}+\cdots+x_{n-1}}{n-1}\ge\sqrt[n-1]{x_{1}x_{2}\cdots x_{n}}.$$
+
+So far we have proved the inequality between the arithmetic mean and the geometric mean. The geometric-harmonic inequality is easier. Let $t_i$ be $1/x_{i}$.
+
+From 
+$$\frac{t_{1}+t_{2}+\cdots+t_{n}}{n}\geq\sqrt[n]{t_{1}t_{2}t_{3}\cdots t_{n}}$$
+we obtain
+$$\frac{\frac{1}{x_{1}}+\frac{1}{x_{2}}+\frac{1}{x_{3}}+\cdots+\frac{1}{x_{n}}}{n}\geq
+\sqrt[n]{\frac{1}{x_{1}}\frac{1}{x_{2}}\frac{1}{x_{3}}\cdots\frac{1}{x_{n}}}$$
+and therefore
+$$\sqrt[n]{x_{1}x_{2}x_{3}\cdots x_{n}}\geq
+\frac{n}{
+\frac{1}{x_{1}}+\frac{1}{x_{2}}+\frac{1}{x_{3}}+\cdots+\frac{1}{x_{n}}
+}$$
+and so, our proof is completed.
+%%%%%
+%%%%%
+\end{document}

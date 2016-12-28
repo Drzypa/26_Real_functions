@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RealAndImaginaryPartsOfContourIntegral}
+\pmcreated{2013-03-22 19:14:32}
+\pmmodified{2013-03-22 19:14:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{real and imaginary parts of contour integral}
+\pmrecord{6}{42167}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B20}
+\pmclassification{msc}{30E20}
+\pmclassification{msc}{30A99}
+\pmrelated{ContourIntegral}
+\pmrelated{PathIntegral}
+\pmrelated{RealPartSeriesAndImaginaryPartSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If $f(z)$ is continuous on the contour $\gamma$ of the complex plane and
+$$z \;=\; x\!+\!iy \quad (x,\,y \in \mathbb{R}), \qquad\Re{f(z)} \;=\; u(x,\,y), \qquad \Im{f(z)} \;=\; v(x,\,y),$$
+then the contour integral of $f(z)$ along $\gamma$ may be expressed via two real path integrals as
+$$\int_{\gamma}f(z)\,dz \,\;=\; \int_{\gamma}(u\,dx-v\,dy)+i\!\int_{\gamma}(v\,dx+u\,dy).$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SincFunction}
+\pmcreated{2013-03-22 14:17:22}
+\pmmodified{2013-03-22 14:17:22}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{sinc function}
+\pmrecord{20}{35744}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{sine cardinal}{SincFunction}
+\pmsynonym{cardinal sine}{SincFunction}
+\pmrelated{SineIntegral}
+\pmrelated{SineIntegralInInfinity}
+\pmrelated{LimitOfDisplaystyleFracsinXxAsXApproaches0}
+\pmrelated{Asymptote}
+\pmrelated{LaplaceTransformOfIntegralSine}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+{\bf Definition}
+The \emph{$\operatorname{sinc}$-\PMlinkescapetext{function}} is the function 
+$\operatorname{sinc}:\sR\to \sR$ defined as
+ \begin{eqnarray*}
+ \operatorname{sinc}(x) &=& \left\{ \begin {array}{ll} \frac{\sin x}{x} & \mbox{when}\,\, x\neq 0, \\
+ 1 & \mbox{when}\,\, x= 0.
+ \end{array} \right.
+ \end{eqnarray*}
+
+In some situations, it is more convenient to work with an alternative "normalized variant," in which for $x\neq 0$ we redefine the function as
+\begin{align*}
+\operatorname{sinc}(x)=\frac{\sin(\pi x)}{\pi x}.
+\end{align*}
+
+The remainder of this entry deals with the initial definition, though most properties can clearly be suitably modified for the normalized version.
+
+\begin{center}
+\begin{pspicture}(-9,-2)(9,2)
+\psaxes[Dx=11,Dy=1]{->}(0,0)(-8.5,-1.5)(8.5,2)
+\rput(8.5,-0.2){$x$}
+\rput(0.2,2){$y$}
+\rput(1,-0.25){$\pi$}
+\rput(-1.1,-0.25){$-\pi$}
+\psplot[linecolor=blue]{-8}{-0.01}{x 180 mul sin x div 3 div}
+\psplot[linecolor=blue]{0.01}{8}{x 180 mul sin x div 3 div}
+\psdot[linecolor=red](0,1)
+\end{pspicture}
+\end{center}
+
+
+
+
+\subsubsection*{Properties}
+\begin{itemize}
+\item Using a Taylor expansion of $\sin$, one can show that $\operatorname{sinc}$
+is infinitely many times differentiable.
+In particular, $\operatorname{sinc}$ is continuous. In this sense, the value $1$
+for $x=0$ is motivated. 
+\item Jordan's inequality implies that $|\operatorname{sinc}(x)|\le 1$ for all $x\in \sR$.  More generally, one can also show that all derivatives of $\operatorname{sinc}$ are bounded by 1.  See \PMlinkname{this entry}{AllDerivativesOfSincAreBoundedBy1}.
+\item $\operatorname{sinc}$ is an even function.
+\item The zeros of $\operatorname{sinc}$ are $x=\pm \pi, \pm 2\pi,\ldots$.
+\item $\operatorname{sinc}$ is in $L^2$, but not in $L^1$, and \cite{gearhart}
+\begin{eqnarray*}
+\int_{-\infty}^\infty \operatorname{sinc}(x)\,dx &=& \pi,\\
+\int_{-\infty}^\infty \operatorname{sinc}^2(x)\,dx &=& \pi,
+\end{eqnarray*}
+where the first of these denotes an improper Riemann integral.
+\item For all $x\in \sR$, we have \cite{gearhart}
+\begin{eqnarray*}
+\operatorname{sinc} (x) &=& \sum_{k=0}^\infty (-1)^k \frac{x^{2k}}{(2k+1)!}, \\
+\operatorname{sinc} (x) &=& \prod_{k=1}^\infty \left(1-\frac{x^2}{(k\pi)^2}\right), \\
+\operatorname{sinc} (x) &=& \prod_{k=1}^\infty \cos \frac{x}{2^k}.
+\end{eqnarray*}
+\item The Fourier transform of $\operatorname{sinc}$ is the box function, i.e.
+\begin{align*}
+\operatorname{sinc}(x) = {1\over 2} \int_{-1}^1 e^{ixt} dt.
+\end{align*}
+\item The $\operatorname{sinc}$ function satisfies the differential equation
+\begin{align*}
+ x \operatorname{sinc}'' + 2 \operatorname{sinc}' + x \operatorname{sinc} = 0
+\end{align*}
+This is a consequence of a comment in the sine integral entry.
+\item There is no known simple expression for the integral of
+sinc. However, this function is known as the sine integral. 
+\end{itemize}
+
+\subsubsection*{Synonym and Etymology}
+The $\operatorname{sinc}$ function is also 
+called \PMlinkescapetext{\emph{sine cardinal}}
+or  \PMlinkescapetext{\emph{cardinal sine}}.
+
+\subsubsection*{Use}
+
+The sinc function is relevant in several fields.  For one, its Fourier transform is a box, so it is the frequency respose of a perfect on/off sampling device, and therefore often the correct way to interpolate between frequencies in a sampled signal.  The resulting function is in fact analytic on the entire complex plane.
+
+\begin{thebibliography}{9}
+ \bibitem{gearhart} W.B. Gearhart, H.S.Shultz, \emph{The Function $\frac{\sin x }{x}$},
+The College Mathematics Journal, March 1990, Volume 21, Number 2, pp. 90-99.
+\PMlinkexternal{(online)}{http://www.maa.org/pubs/Calc_articles/ma003.pdf}.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

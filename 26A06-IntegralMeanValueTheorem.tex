@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralMeanValueTheorem}
+\pmcreated{2013-03-22 17:15:56}
+\pmmodified{2013-03-22 17:15:56}
+\pmowner{me_and}{17092}
+\pmmodifier{me_and}{17092}
+\pmtitle{integral mean value theorem}
+\pmrecord{9}{39604}
+\pmprivacy{1}
+\pmauthor{me_and}{17092}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{EstimatingTheoremOfContourIntegral}
+
+%\usepackage{amssymb}
+\usepackage{amsmath} %Needed for align & align* and to render proofs properly
+%\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%Named sets
+%\newcommand{\R}{\mathbb{R}} %Real numbers (amssymb or amsfonts)
+%\newcommand{\C}{\mathbb{C}} %Complex numbers (amssymb or amsfonts)
+
+%Functions
+\newcommand{\modulus}[1]{\left|{#1}\right|} %|z|
+\newcommand{\integral}[4]{\int_{#1}^{#2}\!{#3}\,\mathrm{d}{#4}}
+
+%Numbers
+%\newcommand{\I}{\mathrm{i}} %sqrt{-1}
+%\newcommand{\e}{\mathrm{e}} %exponential
+
+%Letters
+%\newcommand{\ve}{\varepsilon} %nice epsilon
+\begin{document}
+\newtheorem*{imvt}{The Integral Mean Value Theorem}
+
+\begin{imvt}
+If $f$ and $g$ are continuous real functions on an interval $[a,b]$, and $g$ is additionally non-negative on $(a,b)$, then there exists a $\zeta\in(a,b)$ such that
+\[
+  \integral{a}{b}{f(x)g(x)}{x}=f(\zeta)\integral{a}{b}{g(x)}{x}
+.\]
+\end{imvt}
+
+\begin{proof}
+Since $f$ is continuous on a closed bounded set, $f$ is bounded and attains its bounds, say $f\left(x_0\right)\leq f(x)\leq f\left(x_1\right)$ for all $x\in[a,b]$. Thus, since $g$ is non-negative for all $x\in[a,b]$
+\[
+  f\left(x_0\right)g(x)\leq f(x)g(x)\leq f\left(x_1\right)g(x)
+.\]
+Integrating both sides gives
+\[
+  f\left(x_0\right)\integral{a}{b}{g(x)}{x}\leq\integral{a}{b}{f(x)g(x)}{x}\leq f\left(x_1\right)\integral{a}{b}{g(x)}{x}
+.\]
+If $\integral{a}{b}{g(x)}{x}=0$, then $g(x)$ is identically zero, and the result follows trivially. Otherwise,
+\[
+  f\left(x_0\right)\leq\frac{\integral{a}{b}{f(x)g(x)}{x}}{\integral{a}{b}{g(x)}{x}}\leq f\left(x_1\right)
+,\]
+and the result follows from the intermediate value theorem.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

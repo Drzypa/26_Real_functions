@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FubinisTheorem}
+\pmcreated{2013-03-22 13:39:13}
+\pmmodified{2013-03-22 13:39:13}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Fubini's theorem}
+\pmrecord{11}{34307}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmrelated{TonellisTheorem}
+\pmrelated{FubinisTheoremForTheLebesgueIntegral}
+\pmrelated{IntegrationUnderIntegralSign}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\R}{\mathbb{R}}
+\begin{document}
+\PMlinkescapeword{states}
+\PMlinkescapeword{order}
+\PMlinkescapeword{time}
+
+\textbf{Fubini's theorem}
+Let $I \subset \R^N$ and $J \subset \R^M$ be compact intervals, and let $f : I \times J \to \R^K$ be a Riemann integrable function such that, for each $x \in I$ the integral
+\[
+F(x) := \int_J f(x, y)\, d\mu_J(y)
+\]
+exists. Then $F:I\to\R^K$ is Riemann integrable, and
+\[
+\int_I F = \int_{I\times J} f.
+\]
+
+This theorem effectively states that, given a function of $N$ variables, you may integrate it one variable at a time, and that the order of integration does not affect the result.
+
+\textbf{Example} Let $I := [0, \pi/2]\times[0,\pi/2]$, and let $f : I \to \R, x \mapsto \sin(x)\cos(y)$ be a function.
+Then
+\begin{equation*}
+\begin{split}
+\int_I f &= \iint_{[0, \pi/2]\times[0,\pi/2]} \sin(x)\cos(y) \\
+&=\int_0^{\pi/2} \left( \int_0^{\pi/2} \sin(x)\cos(y)\,dy\right)\,dx \\
+&=\int_0^{\pi/2} \sin(x)\left(1 - 0\right)\,dx =(0 - -1) = 1.
+\end{split}
+\end{equation*}
+
+Note that it is often simpler (and no less correct) to write $\idotsint_I f$ as $\int_I f$.
+%%%%%
+%%%%%
+\end{document}

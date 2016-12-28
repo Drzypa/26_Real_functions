@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroOfAFunction}
+\pmcreated{2013-03-22 14:00:58}
+\pmmodified{2013-03-22 14:00:58}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{zero of a function}
+\pmrecord{30}{34921}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E99}
+\pmsynonym{zero}{ZeroOfAFunction}
+\pmsynonym{vanish}{ZeroOfAFunction}
+\pmsynonym{vanishes}{ZeroOfAFunction}
+\pmrelated{SupportOfFunction}
+\pmdefines{zero set}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\C{\mathbb{C}}
+\def\R{\mathbb{R}}
+\begin{document}
+\PMlinkescapeword{closed}
+\PMlinkescapephrase{closed set}
+\PMlinkescapeword{root}
+\PMlinkescapeword{simple}
+
+Suppose $X$ is a set and $f$ a \PMlinkname{complex}{Complex}-valued function\, $f\colon X\to \C$.\, Then a {\em zero} of $f$ is an element\, $x\in X$\, such that\, $f(x) = 0$.\, It is also said that $f$ {\em vanishes} at $x$.
+
+The {\em zero set} of $f$ is the set
+$$Z(f) := \{ x\in X \mid f(x)=0\}.$$
+
+{\bf Remark.} When $X$ is a ``simple'' space, such as $\R$ or $\C$ a zero is also called a {\em root}.\, However, in pure mathematics and especially if $Z(f)$ is infinite, it seems to be customary to talk of zeroes and the zero set instead of roots. 
+
+{\bf Examples}
+
+\begin{itemize}
+\item For any $z\in \C$, define $\hat{z}:X\to \C$ by $\hat{z}(x)=z$.  Then $Z(\hat{0})=X$ and $Z(\hat{z})=\varnothing$ if $z\ne 0$.
+\item Suppose $p$ is a \PMlinkname{polynomial}{Polynomial}\, $p\colon\C\to\C$\, of degree $n\ge 1$.\, Then $p$ has at most $n$ zeroes. That is, $|Z(p)|\le n$. 
+\item If $f$ and $g$ are functions $f\colon X\to\C$ and  $g\colon X\to\C$, then
+\begin{eqnarray*}
+Z(fg)&=&Z(f)\cup Z(g),\\
+Z(fg)&\supseteq& Z(f),
+\end{eqnarray*}
+where $fg$ is the function\, $x\mapsto f(x) g(x)$.
+\item For any $f\colon X\to \R$, then $$Z(f)=Z(|f|)=Z(f^n),$$ where $f^n$ is the defined $f^n(x)=(f(x))^n$.
+\item If $f$ and $g$ are both real-valued functions, then
+$$Z(f)\cap Z(g)=Z(f^2+g^2)=Z(|f|+|g|).$$
+\item If $X$ is a topological space and $f:X\to \C$ is a function, then the \PMlinkname{support}{SupportOfFunction} of $f$ is given by:
+$$\operatorname{supp} f = \overline{Z(f)^\complement}$$
+Further, if $f$ is continuous, then $Z(f)$ is \PMlinkname{closed}{ClosedSet} in $X$ (assuming that $\C$ is given the usual topology of the complex plane where
+$\{0\}$ is a closed set).
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HeronianMeanIsBetweenGeometricAndArithmeticMean}
+\pmcreated{2013-03-22 17:49:14}
+\pmmodified{2013-03-22 17:49:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Heronian mean is between geometric and arithmetic mean}
+\pmrecord{10}{40284}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B99}
+\pmclassification{msc}{26D07}
+\pmclassification{msc}{01A20}
+\pmclassification{msc}{00A05}
+\pmsynonym{Heronian mean inequalities}{HeronianMeanIsBetweenGeometricAndArithmeticMean}
+%\pmkeywords{mean}
+\pmrelated{ArithmeticGeometricMeansInequality}
+\pmrelated{ComparisonOfPythagoreanMeans}
+\pmrelated{SquareOfSum}
+\pmrelated{Equivalent3}
+\pmrelated{HeronsPrinciple}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{chains}
+
+\textbf{Theorem.}\, For non-negative numbers $x$ and $y$, the inequalities
+$$\sqrt{xy} \;\leqq\; \frac{x\!+\!\sqrt{xy}\!+\!y}{3} \;\leqq\; \frac{x\!+\!y}{2}$$
+are in \PMlinkescapetext{force}, i.e. the Heronian mean is always at least equal to the geometric mean and at most equal to the arithmetic mean.\, The equality signs are true if and only if \,$x = y$.\\
+
+{\em Proof.}\\
+$1^\circ.$\; \begin{align*}
+\sqrt{xy}\;\leqq\;\frac{x\!+\!\sqrt{xy}\!+\!y}{3}&\quad\Leftrightarrow\quad 3\sqrt{xy} \leqq x\!+\!\sqrt{xy}\!+\!y\\ 
+& \quad \Leftrightarrow \quad 2\sqrt{xy} \leqq x\!+\!y\\ 
+& \quad \Leftrightarrow \quad 4xy \leqq x^2\!+\!2xy\!+\!y^2\\
+& \quad \Leftrightarrow \quad 0 \leqq x^2\!-\!2xy\!+\!y^2\\
+& \quad \Leftrightarrow \quad 0 \leqq (x\!-\!y)^2
+\end{align*}
+$2^\circ.$\; \begin{align*}
+\frac{x\!+\!\sqrt{xy}\!+\!y}{3} \leqq \frac{x\!+\!y}{2}\;\;& \quad\Leftrightarrow\quad 2x\!+\!2\sqrt{xy}\!+\!2y \leqq 3x\!+\!3y\\ 
+& \quad \Leftrightarrow \quad 2\sqrt{xy} \leqq x\!+\!y\\
+& \quad \Leftrightarrow \quad  4xy \leqq x^2\!+\!2xy\!+\!y^2\\
+& \quad \Leftrightarrow \quad 0 \leqq (x\!-\!y)^2
+\end{align*}
+All \PMlinkescapetext{consecutive} inequalities of both chains are \PMlinkname{equivalent}{Equivalent3} since $x$ and $y$ are non-negative.\, As for the equalities, the chains are valid with the mere equality signs.
+%%%%%
+%%%%%
+\end{document}

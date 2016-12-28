@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeierstrassCriterionOfUniformConvergence}
+\pmcreated{2013-03-22 14:38:21}
+\pmmodified{2013-03-22 14:38:21}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Weierstrass' criterion of uniform convergence}
+\pmrecord{9}{36225}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{40A30}
+\pmsynonym{Weierstrass' M-test}{WeierstrassCriterionOfUniformConvergence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\, \,Let the real functions $f_1(x)$, $f_2(x)$, ... be defined in the interval $[a, b]$. \,If they all \PMlinkescapetext{satisfy} the condition 
+         $$|f_n(x)| \leqq M_n \quad \forall\,x\in[a, b],$$
+with $\sum_{n = 1}^{\infty}M_n$ a convergent series of \PMlinkescapetext{constant terms}, then the function series 
+                      $$f_1(x)\!+\!f_2(x)\!+\!\cdots$$
+\PMlinkname{converges uniformly}{SumFunctionOfSeries} on the interval $[a, b]$.
+\end{thmplain}
+
+The theorem is valid also for the series with complex function terms, when one replaces the interval with a subset of $\mathbb{C}$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TestingForContinuityViaBasicOpenSets}
+\pmcreated{2013-03-22 19:08:55}
+\pmmodified{2013-03-22 19:08:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{testing for continuity via basic open sets}
+\pmrecord{4}{42052}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54C05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{prop} Let $X,Y$ be topological spaces, and $f:X\to Y$ a function.  The following are equivalent:
+\begin{enumerate}
+\item $f$ is continuous;
+\item $f^{-1}(U)$ is open for any $U$ in a basis ($U$ called a basic open set) for the topology of $Y$;
+\item $f^{-1}(U)$ is open for any $U$ is a subbasis for the topology of $Y$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+First, note that $(1)\Rightarrow (2)\Rightarrow (3)$, since every basic open set is open, and every element in a subbasis is in the basis it generates.  We next prove $(3)\Rightarrow (2)\Rightarrow (1)$.
+\begin{itemize}
+\item $(2)\Rightarrow (1)$.  Suppose $\mathcal{B}$ is a basis for the topology of $Y$.  Let $U$ be an open set in $Y$.  Then $U$ is the union of elements in $\mathcal{B}$.  In other words, $$U=\bigcup \lbrace U_i \in \mathcal{B} \mid i\in I\rbrace,$$ for some index set $I$.  So 
+\begin{eqnarray*}
+f^{-1}(U) &=& f^{-1}(\bigcup \lbrace U_i \in \mathcal{B} \mid i\in I\rbrace ) \\
+&=& \bigcup \lbrace f^{-1}(U_i) \mid i \in I\rbrace.
+\end{eqnarray*}
+By assumption, each $f^{-1}(U_i)$ is open, so is their union $f^{-1}(U)$.
+\item $(3)\Rightarrow (2)$.  Suppose now that $\mathcal{S}$ is a subbasis, which generates the basis $\mathcal{B}$ for the topology of $Y$.  If $U$ is a basic open set, then $$U=\bigcap_{i=1}^n U_i,$$ where each $U_i \in \mathcal{S}$.  Then 
+\begin{eqnarray*}
+f^{-1}(U) &=& f^{-1}(\bigcap_{i=1}^n U_i ) \\
+&=& \bigcap_{i=1}^n f^{-1}(U_i).
+\end{eqnarray*}
+By assumption, each $f^{-1}(U_i)$ is open, so is their (finite) intersection $f^{-1}(U)$.
+\end{itemize}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

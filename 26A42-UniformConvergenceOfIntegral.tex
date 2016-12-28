@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformConvergenceOfIntegral}
+\pmcreated{2013-03-22 14:40:30}
+\pmmodified{2013-03-22 14:40:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{uniform convergence of integral}
+\pmrecord{13}{36277}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmrelated{SumFunctionOfSeries}
+\pmrelated{ConvergenceOfIntegrals}
+\pmdefines{integral converging uniformly}
+\pmdefines{uniformly converging integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let the function\, $f(x,\,t)$\, be continuous in the domain
+ $$a \;\leqq\; x \;<\; b, \quad c \;\leqq\; t \;\leqq\; d,$$
+where $b$ is a real number or $\infty$, and let the improper integral
+\begin{align}
+   F(t) \;:=\, \int_a^b f(x,\,t)\,dx \;=\; \lim_{u \to b-}\int_a^u f(x,\,t)\,dx
+\end{align}
+be \PMlinkname{convergent}{ImproperIntegral} in every point $t$ of the interval\, $[c,\,d]$.\, We say that the \PMlinkescapetext{{\em integral converges uniformly}} on the interval\, $[c,\,d]$,\, if for each positive number $\varepsilon$ there is a value $x_\varepsilon \in [a,\,b]$\, such that
+$$\left|\int_x^b f(x,\,t)\,dx\right| \;<\; \varepsilon\quad\forall t\in [c,\,d]$$
+when\, $x_\varepsilon \leqq x < b$.
+%%%%%
+%%%%%
+\end{document}

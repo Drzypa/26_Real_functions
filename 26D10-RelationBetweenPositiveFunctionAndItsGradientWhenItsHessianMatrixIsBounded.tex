@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RelationBetweenPositiveFunctionAndItsGradientWhenItsHessianMatrixIsBounded}
+\pmcreated{2013-03-22 15:53:10}
+\pmmodified{2013-03-22 15:53:10}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{relation between positive function and its gradient when its Hessian matrix is bounded}
+\pmrecord{16}{37887}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f:R^{n}\rightarrow R$ a positive function, twice
+differentiable everywhere. Furthermore, let $\left\Vert \mathbf{H}_{f}(%
+\mathbf{x})\right\Vert _{2}\leq M,M>0$ $\forall \mathbf{x}\in R^{n}$, where $%
+\mathbf{H}_{f}(\mathbf{x})$ is the Hessian matrix of $f(\mathbf{x})$.
+Then, for any $\mathbf{x}\in R^{n}$,
+\[
+\left\Vert \nabla f(\mathbf{x})\right\Vert _{2}\leq \sqrt{2Mf(\mathbf{x})}
+\]
+
+\begin{proof}
+Let $\mathbf{x},$ $\mathbf{x}_{0}\in R^{n}$ be arbitrary points. By
+positivity of $f(\mathbf{x})$, writing Taylor expansion of $f(\mathbf{x})$
+with Lagrange error formula around $\mathbf{x}_{0}$, a point $\mathbf{c}\in
+R^{n}$ exists such that:
+\begin{eqnarray*}
+0 &\leq &f(\mathbf{x}) \\
+&=&f(\mathbf{x}_{0})+\nabla f(\mathbf{x}_{0})\cdot (\mathbf{x}-\mathbf{x}%
+_{0})+\frac{1}{2}(\mathbf{x}-\mathbf{x}_{0})^{T}\cdot \mathbf{H}_{f}(\mathbf{%
+c})\cdot (\mathbf{x}-\mathbf{x}_{0}) \\
+&=&\left\vert f(\mathbf{x}_{0})+\nabla f(\mathbf{x}_{0})\cdot (\mathbf{x}-%
+\mathbf{x}_{0})+\frac{1}{2}(\mathbf{x}-\mathbf{x}_{0})^{T}\cdot \mathbf{H}%
+_{f}(\mathbf{c})\cdot (\mathbf{x}-\mathbf{x}_{0})\right\vert  \\
+&\leq &f(\mathbf{x}_{0})+\left\vert \nabla f(\mathbf{x}_{0})\cdot (\mathbf{x}%
+-\mathbf{x}_{0})\right\vert +\frac{1}{2}\left\vert (\mathbf{x}-\mathbf{x}%
+_{0})^{T}\cdot \mathbf{H}_{f}(\mathbf{c})\cdot (\mathbf{x}-\mathbf{x}%
+_{0})\right\vert  \\
+&\leq &f(\mathbf{x}_{0})+\left\Vert \nabla f(\mathbf{x}_{0})\right\Vert
+_{2}\left\Vert \mathbf{x}-\mathbf{x}_{0}\right\Vert _{2}+\frac{1}{2}%
+\left\Vert \mathbf{H}_{f}(\mathbf{c})\right\Vert _{2}\left\Vert \mathbf{x}-%
+\mathbf{x}_{0}\right\Vert _{2}^{2}\text{\ \ \ \ \ (by Cauchy-Schwartz
+inequality)} \\
+&\leq &f(\mathbf{x}_{0})+\left\Vert \nabla f(\mathbf{x}_{0})\right\Vert
+_{2}\left\Vert \mathbf{x}-\mathbf{x}_{0}\right\Vert _{2}+\frac{1}{2}%
+M\left\Vert \mathbf{x}-\mathbf{x}_{0}\right\Vert _{2}^{2}
+\end{eqnarray*}
+The rightest side is a second degree polynomial in variable $\left\Vert 
+\mathbf{x}-\mathbf{x}_{0}\right\Vert _{2}$; for it to be positive for any
+choice of $\left\Vert \mathbf{x}-\mathbf{x}_{0}\right\Vert _{2}$ (that is,
+for any choice of $\mathbf{x}$), the discriminant
+\[
+\left\Vert \nabla f(\mathbf{x}_{0})\right\Vert _{2}^{2}-4\cdot \frac{1}{2}Mf(%
+\mathbf{x}_{0})
+\]
+must be negative, whence the thesis.
+\end{proof}
+
+Note: The condition on the boundedness of the Hessian matrix is actually needed. In fact, in the Lagrange form remainder, the constant $\mathbf{c}$ depends upon the point $\mathbf{x}$. Thus, if we couldn't rely on the condition $\left\Vert \mathbf{H}_{f}(\mathbf{x})\right\Vert _{2}\leq M$, we could only state
+$f(\mathbf{x}_{0})+\left\Vert \nabla f(\mathbf{x}_{0})\right\Vert
+_{2}\left\Vert \mathbf{x}-\mathbf{x}_{0}\right\Vert _{2}+\frac{1}{2}%
+\left\Vert \mathbf{H}_{f}(\mathbf{c(\mathbf{x})})\right\Vert _{2}\left\Vert \mathbf{x}-%
+\mathbf{x}_{0}\right\Vert _{2}^{2}\geq 0$
+which, not being a second degree polynomial, wouldn't imply any particular further condition.
+Moreover, in the case $n=1$, the lemma assumes the simpler form:
+Let $f:\mathbb{R}\rightarrow \mathbb{R}$ a positive function, twice differentiable everywhere.
+Furthermore, let $f^{\prime \prime }(x)\leq M,M>0$ $\forall x\in \mathbb{R}$. Then,
+for any $x\in \mathbb{R}$,
+$\left\vert f^{\prime }(x)\right\vert \leq \sqrt{2Mf(x)}$.
+%%%%%
+%%%%%
+\end{document}

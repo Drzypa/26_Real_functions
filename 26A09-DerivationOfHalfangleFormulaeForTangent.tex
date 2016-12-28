@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfHalfangleFormulaeForTangent}
+\pmcreated{2013-03-22 17:00:19}
+\pmmodified{2013-03-22 17:00:19}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{derivation of half-angle formulae for tangent}
+\pmrecord{9}{39287}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmrelated{TangentOfHalvedAngle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Start with the angle duplication formula
+\[
+\tan (x) = {2 \tan (x/2) \over 1 - \tan^2 (x/2)}.
+\]
+Cross-multiply and move terms around:
+\[
+\tan (x) \tan^2 (x/2) + 2 \tan (x/2) = \tan (x)
+\]
+Divide by $\tan (x)$:
+\[
+\tan^2 (x/2) + {2 \tan (x/2) \over \tan x} = 1
+\]
+Add $1 / \tan^2 (x)$ to both sides:
+\[
+\tan^2 (x/2) + {2 \tan (x/2) \over \tan x} + {1 \over \tan^2 (x)} = 1 + {1 \over \tan^2 (x)}
+\]
+\PMlinkname{Complete the square}{CompletingTheSquare}:
+\[
+\left (\tan (x/2) + {1 \over \tan (x)} \right)^2 =  1 + {1 \over \tan^2 (x)}
+\]
+Take a square root and move a term to obtain the half-angle formula:
+\[
+\tan (x/2) = \sqrt{ 1 + {1 \over \tan^2 (x)} } - {1 \over \tan (x)}
+\]
+
+To derive the other forms of the formula, we start by substituting
+$\sin (x) / \cos (x)$ for $\tan (x)$:
+\[
+\tan (x/2) = \sqrt{ 1 + {\cos^2 (x) \over \sin^2 (x)}} - 
+{\cos (x) \over \sin (x)}
+\]
+Put the stuff inside the square root over a common denominator:
+\[
+\sqrt {\sin^2 (x) + \cos^2 (x) \over \sin^2 (x)} - 
+{\cos (x) \over \sin (x)}
+\]
+Recall that $\sin^2 (x) + \cos^2 (x) = 1$.  Hence, we may get rid
+of the square root:
+\[
+{1 \over \sin x} - {\cos (x) \over \sin (x)}
+\]
+Putting the terms over a common denominator, we obtain our formula:
+\[
+\tan (x/2) = {1 - \cos (x)  \over \sin (x)}
+\]
+
+To obtain the next formula, multiply both numerator and denominator
+by $1 + \cos (x)$:
+\[
+{(1 - \cos (x)) (1 + \cos (x))  \over \sin (x) (1 + \cos (x))}
+\]
+Multiply out the numerator and simplify:
+\[
+{1 - \cos^2 (x) \over \sin (x) (1 + \cos (x))}
+\]
+Note that the numerator equals $\sin^2 (x)$:
+\[
+{\sin^2 (x) \over \sin (x) (1 + \cos (x))}
+\]
+Cancel a common factor of $\sin (x)$ to obtain the formula
+\[
+\tan (x/2) = {\sin (x) \over 1 + \cos (x)} .
+\]
+
+To obtain the last formula, multiply the previous two formulae:
+\[
+\tan^2 (x/2) = {1 - \cos (x)  \over \sin (x)}\cdot
+{\sin (x) \over 1 + \cos (x)}
+\]
+Cancel the common factor of $\sin (x)$:
+\[
+\tan^2 (x/2) = {1 - \cos (x)  \over 1 + \cos (x)}
+\]
+Take the square root of both sides to obtain the formula
+\[
+\tan{\frac{x}{2}}\; = \;\pm\sqrt{1 - \cos{x}  \over 1 + \cos{x}};
+\]
+here the sign ($\pm$) has to be chosen according to the 
+quadrant where the angle $\displaystyle\frac{x}{2}$ is.
+
+%%%%%
+%%%%%
+\end{document}

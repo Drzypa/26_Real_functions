@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StairFunction}
+\pmcreated{2013-03-22 15:32:32}
+\pmmodified{2013-03-22 15:32:32}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{stair function}
+\pmrecord{6}{37439}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26-00}
+%\pmkeywords{characteristic function}
+%\pmkeywords{real function}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\md}{d}
+\newcommand{\mv}[1]{\mathbf{#1}} % matrix or vector
+\newcommand{\mvt}[1]{\mv{#1}^{\mathrm{T}}}
+\newcommand{\mvi}[1]{\mv{#1}^{-1}}
+\newcommand{\mderiv}[1]{\frac{\md}{\md {#1}}} %d/dx
+\newcommand{\mnthderiv}[2]{\frac{\md^{#2}}{\md {#1}^{#2}}} %d^n/dx
+\newcommand{\mpderiv}[1]{\frac{\partial}{\partial {#1}}} %partial d^n/dx
+\newcommand{\mnthpderiv}[2]{\frac{\partial^{#2}}{\partial {#1}^{#2}}} %partial d^n/dx
+\newcommand{\borel}{\mathfrak{B}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\complexes}{\mathbb{C}}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\defined}{:=}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\corr}{\mathrm{corr}}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\bra}[1]{\langle#1 \vert}
+\newcommand{\ket}[1]{\vert \hspace{1pt}#1\rangle}
+\newcommand{\braket}[2]{\langle #1 \ket{#2}}
+\begin{document}
+A \emph{stair} function is a real function of the form
+\begin{equation}
+\phi = \sum_{k=1}^{n} a_k \chi_{I_k}
+\end{equation}
+where \,$a_k \in \mathbb{R}$,\,\,$\chi_{I_k}$ is the characteristic function, $k=1,2,\ldots,n$
+and $I_1, I_2,\ldots I_n$ are bounded, pairwise disjoint intervals,
+for some $n \in \naturals$.
+%%%%%
+%%%%%
+\end{document}

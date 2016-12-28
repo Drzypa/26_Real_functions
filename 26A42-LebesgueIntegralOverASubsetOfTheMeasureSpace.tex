@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LebesgueIntegralOverASubsetOfTheMeasureSpace}
+\pmcreated{2013-03-22 16:13:54}
+\pmmodified{2013-03-22 16:13:54}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{Lebesgue integral over a subset of the measure space}
+\pmrecord{7}{38332}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28A25}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{property}
+
+Let $(X,\mathfrak{B},\mu)$ be a measure space and $A \in \mathfrak{B}$.
+
+Let $s \colon X \to [0,\infty]$ be a simple function.  Then $\displaystyle \int_A s \, d\mu$ is defined as $\displaystyle \int_A s \, d\mu := \int_X \chi_As \, d\mu$, where $\chi_A$ denotes the characteristic function of $A$.
+
+Let $f \colon X \to [0,\infty]$ be a measurable function and \\ $S=\{s \colon X \to [0,\infty]~~|~~s \text{ is a simple function and } s \le f\}$.  Then $\displaystyle \int_A f \, d\mu$ is defined as $\displaystyle \int_A f \, d\mu := \sup_{s \in S} \int_A s \, d\mu$.
+
+By the properties of the Lebesgue integral of nonnegative measurable functions (property 3), we have that $\displaystyle \int_A f \, d\mu=\int_X \chi_A f \, d\mu$.
+
+Let $f \colon X \to [-\infty, \infty]$ be a measurable function such that not both of $\displaystyle \int_A f^+ \, d\mu$ and $\displaystyle \int_A f^- \, d\mu$ are infinite.  (Note that $f^+$ and $f^-$ are defined in the entry Lebesgue integral.)  Then $\displaystyle \int_A f \, d\mu$ is defined as $\displaystyle \int_A f \, d\mu := \int_A f^+ \, d\mu -\int_A f^- \, d\mu$.
+
+By the properties of the Lebesgue integral of Lebesgue integrable functions (property 3), we have that $\displaystyle \int_A f \, d\mu=\int_X \chi_A f \, d\mu$.
+%%%%%
+%%%%%
+\end{document}

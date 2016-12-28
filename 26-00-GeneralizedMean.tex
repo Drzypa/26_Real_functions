@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedMean}
+\pmcreated{2013-03-22 14:32:12}
+\pmmodified{2013-03-22 14:32:12}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{generalized mean}
+\pmrecord{8}{36081}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26-00}
+\pmsynonym{Kolmogorov-Nagumo function of the mean}{GeneralizedMean}
+\pmsynonym{H\"older mean}{GeneralizedMean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Definition}
+
+Let $x_1$, $x_2,\ldots, x_n$ be real numbers, and $f$ a continuous
+and strictly increasing or decreasing function on the real
+numbers. If each number $x_i$ is assigned a weight $p_i$, with
+$\sum_{i=1}^n p_i= 1$, for $i=1,\ldots,n$, then the \emph{generalized mean}
+is defined as
+\[
+  f^{-1}\Big( \sum_{i=1}^n p_i f(x_i) \Big).
+\]
+
+{\bf Special cases}
+
+\begin{enumerate}
+\item $f(x)=x$, $p_i=1/n$ for all $i$: arithmetic mean
+
+\item $f(x)=x$: weighted mean
+
+\item $f(x)=\log(x)$, $p_i=1/n$ for all $i$: geometric mean
+
+\item $f(x)=1/x$ and $p_i=1/n$ for all $i$: harmonic mean
+
+\item $f(x)=x^2$ and $p_i=1/n$ for all $i$: root-mean-square
+
+\item $f(x)=x^d$ and $p_i=1/n$ for all $i$: power mean
+
+\item $f(x)=x^d$: weighted power mean
+
+\item $f(x)=2^{(1-\alpha)x}$, $\alpha\neq 1$, $x_i=-\log_2 p_i$:
+R\'enyi's $\alpha$-entropy
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContraharmonicProportion}
+\pmcreated{2015-09-06 19:48:08}
+\pmmodified{2015-09-06 19:48:08}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{contraharmonic proportion}
+\pmrecord{24}{40269}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E60}
+\pmclassification{msc}{11-00}
+\pmclassification{msc}{01A17}
+\pmclassification{msc}{01A20}
+%\pmkeywords{mean}
+\pmrelated{ProportionEquation}
+\pmrelated{Mean3}
+\pmrelated{PythagoreanHypotenusesAsContraharmonicMeans}
+\pmrelated{HarmonicMean}
+\pmrelated{ConstructionOfContraharmonicMeanOfTwoSegments}
+\pmrelated{ContrageometricProportion}
+\pmdefines{contraharmonic mean}
+\pmdefines{antiharmonic mean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Three positive numbers\, $x$, $m$, $y$\, are in {\em contraharmonic proportion}, if the ratio of the difference of the second and the first number to the difference of the third and the second number is equal the ratio of the third and the first number, i.e. if
+\begin{align}
+\frac{m\!-\!x}{y\!-\!m} \;=\; \frac{y}{x}.
+\end{align}
+The middle number $m$ is then called the {\em contraharmonic mean} (sometimes {\em antiharmonic mean}) of the first and the last number.
+
+The contraharmonic proportion has very probably been known in the proportion doctrine of the Pythagoreans, since they have in a manner \PMlinkescapetext{similar} to (1) described the classical Babylonian means:
+$$\frac{m\!-\!x}{y\!-\!m} \;=\; \frac{m}{m} \qquad (\mbox{arithmetic mean }m)$$
+$$\frac{m\!-\!x}{y\!-\!m} \;=\; \frac{m}{y} \qquad (\mbox{geometric mean }m)$$
+$$\frac{m\!-\!x}{y\!-\!m} \;=\, \frac{x}{y} \qquad (\mbox{harmonic mean }m)$$
+
+The contraharmonic mean $m$ is between $x$ and $y$. Indeed, if we solve it from (1), we get
+\begin{align}
+m \;=\; \frac{x^2\!+\!y^2}{x\!+\!y},
+\end{align}
+and if we assume that\, $x \leqq y$, we see that
+$$x \;=\; \frac{x^2\!+\!xy}{x\!+\!y} \;\leqq\; \frac{x^2\!+\!y^2}{x\!+\!y}
+\;\leqq\; \frac{xy\!+\!y^2}{x\!+\!y} \;=\; y.$$
+The contraharmonic mean $c$ is the greatest of all the mentioned means,
+$$x \;\leqq\; h \;\leqq\; g \;\leqq\; a \;\leqq\; c \;\leqq\; y,$$
+where $a$ is the arithmetic mean, $g$ the geometric mean and $h$ the harmonic mean. It is easy to see that
+$$\frac{c\!+\!h}{2} \;=\; a \quad\mbox{and}\quad \sqrt{ah} \;=\; g.$$\\
+
+\textbf{Example.}\, The integer 5 is the contraharmonic mean of 2 and 6, as well as of 3 and 6, i.e. \,
+2, 5, 6,\, are in contraharmonic proportion, similarly are\, 3, 5, 6:
+$$\frac{2^2\!+\!6^2}{2\!+\!6} \;=\; \frac{40}{8} \;=\; 5, \qquad \frac{3^2\!+\!6^2}{3\!+\!6}
+\;=\; \frac{45}{9} \;=\; 5$$\\
+
+\textbf{Note 1.}\, The graph of (2) is a quadratic cone surface \,$x^2\!+\!y^2\!-xz\!-\!yz = 0$, as one may infer of its level curves
+$$\left(x-\frac{c}{2}\right)^2+\left(y-\frac{c}{2}\right)^2 \;=\; \frac{c^2}{2}$$
+which are circles.\\
+
+\textbf{Note 2.}\, Generalising (2) one defines the contraharmonic mean of several positive numbers:
+$$c(x_1,\,\ldots,\,x_n) := \frac{x_1^2\!+\ldots+\!x_n^2}{x_1\!+\ldots+\!x_n}$$
+There is also a more general Lehmer mean:
+$$c^m(x_1,\,\ldots,\,x_n) := \frac{x_1^{m+1}\!+\ldots+\!x_n^{m+1}}{x_1^m\!+\ldots+\!x_n^m}$$
+
+
+\begin{thebibliography}{8}
+\bibitem{DD}{\sc Diderot \& d'Alembert}: {\em Encyclop\'edie}. Paris (1751--1777).\, (Electronic version \PMlinkexternal{here}{http://portail.atilf.fr/encyclopedie/}).
+
+\bibitem{HH}{\sc Horst Hischer}: ``\PMlinkexternal{Viertausend Jahre Mittelwertbildung}{http://hischer.de/uds/forsch/preprints/hischer/Preprint98.pdf}''.\, --- {\em mathematica didactica} \textbf{25} (2002). See also \PMlinkexternal{this}{http://www.math.uni-sb.de/PREPRINTS/preprint126.pdf}.
+\bibitem{PJ}{\sc J. Pahikkala}: ``On contraharmonic mean and Pythagorean triples''.\, -- \emph{Elemente der Mathematik} \textbf{65}:2 (2010).
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

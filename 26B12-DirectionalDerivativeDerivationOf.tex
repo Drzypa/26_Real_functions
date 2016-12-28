@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectionalDerivativeDerivationOf}
+\pmcreated{2013-03-22 15:25:22}
+\pmmodified{2013-03-22 15:25:22}
+\pmowner{apmc}{9183}
+\pmmodifier{apmc}{9183}
+\pmtitle{directional derivative, derivation of}
+\pmrecord{7}{37267}
+\pmprivacy{1}
+\pmauthor{apmc}{9183}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{26B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f(x,y)$ be a function where $x=x(t)$ and $y=y(t)$.  Let $\vec{r}=a\hat{\mathbf{i}}+b\hat{\mathbf{j}}$ be the vector in the desired direction.  The line through this vector is given parametrically by:
+
+\begin{center}$\displaystyle x=x_0+at;\quad y=y_0+bt$\end{center}
+
+The derivative of $f$ with respect to $t$ is as follows:
+
+\begin{center}$\displaystyle \frac{\partial f}{\partial t}=\frac{\partial f}{\partial x}\frac{dx}{dt}+\frac{\partial f}{\partial y}\frac{dy}{dt}$\end{center}
+
+But from the equation of the line, we know that $\frac{dx}{dt}=a$ and $\frac{dy}{dt}=b$ so the derivative becomes:
+
+\begin{center}$\displaystyle \frac{\partial f}{\partial t}=\frac{\partial f}{\partial x}a+\frac{\partial f}{\partial y}b=\nabla f\cdot\vec{r}$\end{center}
+%%%%%
+%%%%%
+\end{document}

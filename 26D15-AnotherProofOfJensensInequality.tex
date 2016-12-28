@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnotherProofOfJensensInequality}
+\pmcreated{2013-03-22 15:52:53}
+\pmmodified{2013-03-22 15:52:53}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{another proof of Jensen's inequality}
+\pmrecord{12}{37881}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+\pmclassification{msc}{39B62}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First of all, it's clear that defining
+\[
+\lambda _{k}=\frac{\mu _{k}}{\sum_{k=1}^{n}\mu _{k}}
+\]
+we have
+\[
+\sum_{k=1}^{n}\lambda _{k}=1
+\]
+
+so it will we enough to prove only the simplified version.
+
+Let's proceed by induction.
+
+1) $n=2$; we have to show that, for any $x_{1}$and $x_{2}$ in $[a,b]$, 
+\[
+f\left( \lambda _{1}x_{1}+\lambda _{2}x_{2}\right) \leq \lambda
+_{1}f(x_{1})+\lambda _{2}f(x_{2}).
+\]
+But, since $\lambda _{1}+\lambda _{2}$ must be equal to 1, we can put $%
+\lambda _{2}=1-\lambda _{1}$, so that the thesis becomes 
+\[
+f\left( \lambda _{1}x_{1}+\left( 1-\lambda _{1}\right) x_{2}\right) \leq
+\lambda _{1}f(x_{1})+\left( 1-\lambda _{1}\right) f(x_{2}),
+\]
+which is true by definition of a convex function.
+
+2) Taking as true that $f\left( \sum_{k=1}^{n-1}\mu _{k}x_{k}\right) \leq
+\sum_{k=1}^{n-1}\mu _{k}f\left( x_{k}\right) $, where $\sum_{k=1}^{n-1}\mu
+_{k}=1$, we have to prove that 
+\[
+f\left( \sum_{k=1}^{n}\lambda _{k}x_{k}\right) \leq \sum_{k=1}^{n}\lambda
+_{k}f\left( x_{k}\right) ,
+\]
+where $\sum_{k=1}^{n}\lambda _{k}=1$.
+
+First of all, let's observe that 
+\[
+\sum_{k=1}^{n-1}\frac{\lambda _{k}}{1-\lambda _{n}}=\frac{\left(
+\sum_{k=1}^{n}\lambda _{k}\right) -\lambda _{n}}{1-\lambda _{n}}=\frac{%
+1-\lambda _{n}}{1-\lambda _{n}}=1
+\]
+and that if all $x_{k}\in \lbrack a,b]$, $\sum_{k=1}^{n-1}\frac{\lambda _{k}%
+}{1-\lambda _{n}}x_{k}$ belongs to $[a,b]$ as well. In fact, $\frac{\lambda
+_{k}}{1-\lambda _{n}}$ being non-negative, 
+\[
+a\leq x_{k}\leq b\Rightarrow \frac{\lambda _{k}}{1-\lambda _{n}}a\leq \frac{%
+\lambda _{k}}{1-\lambda _{n}}x_{k}\leq \frac{\lambda _{k}}{1-\lambda _{n}}b,
+\]
+and, summing over $k$,%
+\[
+a\sum_{k=1}^{n-1}\frac{\lambda _{k}}{1-\lambda _{n}}\leq \sum_{k=1}^{n-1}%
+\frac{\lambda _{k}}{1-\lambda _{n}}x_{k}\leq b\sum_{k=1}^{n-1}\frac{\lambda
+_{k}}{1-\lambda _{n}},
+\]%
+that is%
+\[
+a\leq \sum_{k=1}^{n-1}\frac{\lambda _{k}}{1-\lambda _{n}}x_{k}\leq b.
+\]
+
+We have, by definition of a convex function:
+\begin{eqnarray*}
+f\left( \sum_{k=1}^{n}\lambda _{k}x_{k}\right)  &=&f\left(
+\sum_{k=1}^{n-1}\lambda _{k}x_{k}+\lambda _{n}x_{n}\right)  \\
+&=&f\left( \left( 1-\lambda _{n}\right) \sum_{k=1}^{n-1}\frac{\lambda _{k}}{%
+1-\lambda _{n}}x_{k}+\lambda _{n}x_{n}\right)  \\
+&\leq &\left( 1-\lambda _{n}\right) f\left( \sum_{k=1}^{n-1}\frac{\lambda
+_{k}}{1-\lambda _{n}}x_{k}\right) +\lambda _{n}f\left( x_{n}\right) .
+\end{eqnarray*}
+But, by inductive hypothesis, since $\sum_{k=1}^{n-1}\frac{\lambda _{k}}{%
+1-\lambda _{n}}=1$, we have:
+\[
+f\left( \sum_{k=1}^{n-1}\frac{\lambda _{k}}{1-\lambda _{n}}x_{k}\right) \leq
+\sum_{k=1}^{n-1}\frac{\lambda _{k}}{1-\lambda _{n}}f\left( x_{k}\right) ,
+\]
+so that%
+\begin{eqnarray*}
+f\left( \sum_{k=1}^{n}\lambda _{k}x_{k}\right)  &\leq &\left( 1-\lambda
+_{n}\right) f\left( \sum_{k=1}^{n-1}\frac{\lambda _{k}}{1-\lambda _{n}}%
+x_{k}\right) +\lambda _{n}f\left( x_{n}\right)  \\
+&\leq &\left( 1-\lambda _{n}\right) \sum_{k=1}^{n-1}\frac{\lambda _{k}}{%
+1-\lambda _{n}}f\left( x_{k}\right) +\lambda _{n}f\left( x_{n}\right)  \\
+&=&\sum_{k=1}^{n-1}\lambda _{k}f\left( x_{k}\right) +\lambda _{n}f\left(
+x_{n}\right)  \\
+&=&\sum_{k=1}^{n}\lambda _{k}f\left( x_{k}\right) 
+\end{eqnarray*}
+which is the thesis.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolenoidalField}
+\pmcreated{2013-03-22 13:09:02}
+\pmmodified{2013-03-22 13:09:02}
+\pmowner{giri}{919}
+\pmmodifier{giri}{919}
+\pmtitle{solenoidal field}
+\pmrecord{9}{33590}
+\pmprivacy{1}
+\pmauthor{giri}{919}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{solenoidal}{SolenoidalField}
+\pmrelated{SourcesAndSinksOfVectorField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\vA}{\mathbf{A}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vN}{\mathbf{N}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\vnabla}{\nabla}
+\begin{document}
+\PMlinkescapeword{potential}
+
+A solenoidal vector field is one that satisfies $$\vnabla\cdot\vB = 0$$
+at every point where the vector field $\vB$ is defined. Here $\vnabla\cdot\vB$ is the divergence.
+
+This condition actually implies that there exists a vector $\vA$, such that
+$$\vB = \vnabla\times\vA.$$
+
+For a function $f$ satisfying Laplace's equation $$\vnabla^2f = 0,$$ it follows that $\vnabla f$ is solenoidal.
+%%%%%
+%%%%%
+\end{document}

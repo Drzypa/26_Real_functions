@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TestingContinuityViaFilters}
+\pmcreated{2013-03-22 19:09:31}
+\pmmodified{2013-03-22 19:09:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{testing continuity via filters}
+\pmrecord{4}{42064}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54C05}
+\pmrelated{Filter}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{prop} Let $X,Y$ be topological spaces.  Then a function $f:X\to Y$ is continuous iff it sends converging filters to converging filters. \end{prop}
+
+\begin{proof}  Suppose first $f$ is continuous.  Let $\mathbb{F}$ be a filter in $X$ converging to $x$.  We want to show that $f(\mathbb{F}):=\lbrace f(F)\mid F\in \mathbb{F}\rbrace$ converges to $f(x)$.  Let $N$ be a neighborhood of $f(x)$.  So there is an open set $U$ such that $f(x)\in U\subseteq N$.  So $f^{-1}(U)$ is open and contains $x$, which means that $f^{-1}(U)\in \mathbb{F}$ by assumption.  This means that $ff^{-1}(U)\in f(\mathbb{F})$.  Since $ff^{-1}(U)\subseteq U \subseteq N$, we see that $N\in f(\mathbb{F})$ as well.
+
+Conversely, suppose $f$ preserves converging filters.  Let $V$ be an open set in $Y$ containing $f(x)$.  We want to find an open set $U$ in $X$ containing $x$, such that $f(U)\subseteq V$.  Let $\mathbb{F}$ be the neighborhood filter of $x$.  So $\mathbb{F}\to x$.  By assumption, $f(\mathbb{F}) \to f(x)$.  Since $V$ is an open neighborhood of $f(x)$, we have $V\in f(\mathbb{F})$, or $f(F)\subseteq V$ for some $F\in \mathbb{F}$.  Since $F$ is a neighborhood of $x$, it contains an open neighborhood $U$ of $x$.  Furthermore, $f(U) \subseteq f(F) \subseteq V$.  Since $x$ is arbitrary, $f$ is continuous.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

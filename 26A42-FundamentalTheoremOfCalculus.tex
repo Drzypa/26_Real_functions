@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfCalculus}
+\pmcreated{2013-03-22 14:13:27}
+\pmmodified{2013-03-22 14:13:27}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{fundamental theorem of calculus}
+\pmrecord{13}{35660}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmsynonym{Newton-Leibniz}{FundamentalTheoremOfCalculus}
+\pmsynonym{Barrow's rule}{FundamentalTheoremOfCalculus}
+\pmsynonym{Barrow's formula}{FundamentalTheoremOfCalculus}
+\pmrelated{FundamentalTheoremOfCalculus}
+\pmrelated{FundamentalTheoremOfCalculusForKurzweilHenstockIntegral}
+\pmrelated{FundamentalTheoremOfCalculusForRiemannIntegration}
+\pmrelated{LaplaceTransformOfFracftt}
+\pmrelated{LimitsOfNaturalLogarithm}
+\pmrelated{FundamentalTheoremOfIntegralCalculus}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f\colon[a,b]\to \mathbf R$ be a continuous function, let $c\in[a,b]$ be given 
+and consider the integral function $F$ defined on $[a,b]$ as
+\[
+  F(x)= \int_c^x f(t)\, dt.
+\]
+
+Then $F$ is an antiderivative of $f$ that is, 
+$F$ is differentiable in $[a,b]$ and
+\[
+  F'(x)=f(x)\qquad \forall x\in [a,b].
+\]
+
+
+The previous relation rewritten as
+\[
+   \frac{d}{dx} \int_c^x f(t)\, dt = f(x)  
+\]
+shows that the differentiation operator $\frac{d}{dx}$ is the inverse of the integration operator $\int_c^x$. This formula is sometimes called Newton-Leibniz formula.
+
+On the other hand if $f\colon[a,b]\to \mathbf R$ is a continuous function 
+and $G\colon[a,b]\to \mathbf R$ is any antiderivative of $f$, i.e.\ $G'(x)=f(x)$ for all $x\in[a,b]$, then
+\begin{equation}\label{eq:barrow}
+  \int_a^b f(t) \, dt = G(b)-G(a). 
+\end{equation}
+
+This shows that up to a constant, the integration operator is the inverse of the derivative operator:
+\[
+  \int_a^x D G = G - G(a).
+\]
+
+\section*{Notes}
+Equation~\eqref{eq:barrow} is sometimes called ``Barrow's rule'' or ``Barrow's formula''.
+%%%%%
+%%%%%
+\end{document}

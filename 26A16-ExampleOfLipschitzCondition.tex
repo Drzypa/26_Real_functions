@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfLipschitzCondition}
+\pmcreated{2013-03-22 17:14:16}
+\pmmodified{2013-03-22 17:14:16}
+\pmowner{me_and}{17092}
+\pmmodifier{me_and}{17092}
+\pmtitle{example of Lipschitz condition}
+\pmrecord{10}{39567}
+\pmprivacy{1}
+\pmauthor{me_and}{17092}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A16}
+
+%\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%Named sets
+\newcommand{\R}{\mathbb{R}} %Real numbers (amssymb or amsfonts)
+%\newcommand{\C}{\mathbb{C}} %Complex numbers (amssymb or amsfonts)
+
+%Functions
+\newcommand{\modulus}[1]{\left|{#1}\right|} %|z|
+
+%Numbers
+%\newcommand{\I}{\mathrm{i}} %sqrt{-1}
+%\newcommand{\e}{\mathrm{e}} %exponential
+
+%Greek
+\newcommand{\ve}{\varepsilon} %nice epsilon
+\begin{document}
+\theoremstyle{definition}
+\newtheorem{st}{Statement}
+
+\begin{st}
+Let $f(x)=x^2$. Then $f$ satisfies the Lipschitz condition on $[a,b]\subset\R$ for finite real numbers $a<b$.
+\end{st}
+
+\begin{proof}
+We want to show that for some real constant $L$, and for all $x,y\in[a,b]$,
+\[ \modulus{x^2-y^2}\leq L\modulus{x-y}. \]
+Let $x,y\in[a,b]$. Clearly if $x=y$, the above inequality holds, so assume $x\neq y$. Since $x$ and $y$ are interchangable in the above equation, it can be assumed without loss of generality that $x<y$.
+
+Since $f$ is differentiable on $(a,b)$, by the mean-value theorem, there is a $z\in(x,y)$ such that
+  \[ \frac{f(x)-f(y)}{x-y}=f'(z), \]
+that is,
+  \[ \frac{x^2 - y^2}{x-y} = 2z. \]
+Taking the modulus of both sides gives
+  \[ \frac{\modulus{x^2-y^2}}{\modulus{x-y}} = 2\modulus{z}. \]
+Finally, to find $L$ it is necessary to consider all possible values of $z$:
+\begin{align*}
+  \frac{\modulus{x^2-y^2}}{\modulus{x-y}} &=    2\modulus{z} \\ 
+                                          &\leq 2\sup\{\modulus{z}\colon z\in (a,b) \} \\
+                                          &=    2\max\{\modulus{a},\modulus{b}\}.
+\end{align*}
+Thus, for all $x,y\in[a,b]$,
+\[ \modulus{f(x) - f(y)} \leq 2\max\{\modulus{a},\modulus{b}\}\modulus{x-y} \]
+as required.
+\end{proof}
+
+\begin{st}
+Additionally, $L=2\max\{\modulus{a},\modulus{b}\}$ is the Lipschitz constant of $f$.
+\end{st}
+
+\begin{proof}
+Assume $\modulus{b}\geq\modulus{a}$, since if $\modulus{b}<\modulus{a}$, it is possible to consider $-f$ instead of $f$. This also implies that $b>0$. Let $\ve>0$ be sufficiently small that $a<b-\ve$ and that higher powers of $\ve$ can be ignored. Now,
+\begin{align*}
+  \frac{\modulus{f(b)-f(b-\ve)}}{\modulus{b-(b-\ve)}} &= \frac{b^2-(b-\ve)^2}{b-(b-\ve)} \\
+    &= \frac{b^2-b^2+2b\ve-\ve^2}{b-b+\ve} \\
+    &= \frac{2b\ve}{\ve} \\
+    &= 2b. \\
+\end{align*}
+By the assumption above, $b=\max\{\modulus{a},\modulus{b}\}$. Thus, since $b,b-\ve\in[a,b]$ and by the definition of the Lipschitz condition,
+\[ L\geq \frac{\modulus{f(b)-f(b-\ve)}}{\modulus{b-(b-\ve)}} = 2\max\{\modulus{a},\modulus{b}\}. \]
+However, the result from the previous proof gives
+\[ \frac{\modulus{f(b) - f(b-\ve)}}{\modulus{b-(b-\epsilon)}} \leq L \leq 2\max\{\modulus{a},\modulus{b}\}. \]
+Combining these inequalities provides
+\[ 2\max\{\modulus{a},\modulus{b}\}\leq L\leq 2\max\{\modulus{a},\modulus{b}\}, \]
+and the result follows by trichotomy.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,215 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfDerivatives}
+\pmcreated{2013-03-22 17:34:48}
+\pmmodified{2013-03-22 17:34:48}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{table of derivatives}
+\pmrecord{31}{39992}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmrelated{IntegralTables}
+\pmrelated{Derivative2}
+\pmrelated{GeneralFormulasForIntegration}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand{\arsinh}{\operatorname{arsinh}}
+\newcommand{\arcosh}{\operatorname{arcosh}}
+\newcommand{\artanh}{\operatorname{artanh}}
+\newcommand{\arcoth}{\operatorname{arcoth}}
+\begin{document}
+\PMlinkescapeword{mode}
+\PMlinkescapeword{open}
+\PMlinkescapeword{line}
+\PMlinkescapeword{lines}
+\PMlinkescapeword{code}
+\PMlinkescapeword{section}
+Below are some tables of some real-valued functions and their corresponding derivatives:
+
+\subsubsection*{Basic rules}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$f(x)$ & $\displaystyle{\frac{df(x)}{dx}} = f'(x)$ \\
+\hline\hline
+$f(x) + g(x)$ & $f'(x)+g'(x)$ \\
+\hline
+$f(x)g(x)$ & $f'(x)g(x)+f(x)g'(x)$ \\
+\hline
+$\displaystyle \frac{f(x)}{g(x)},\, g\neq 0$ & $\displaystyle \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}$ \\
+\hline
+$f(g(x))$&$f'(g(x))g'(x)$ \\
+\hline
+$f^{-1}(x)$& $\displaystyle{\frac{1}{f'(f^{-1}(x))}}$ \\
+\hline
+% add your function here & add its derivative here \\
+% \hline 
+\end{tabular}
+\end{center}
+
+\subsubsection*{\PMlinkname{Polynomials}{Polynomial} and powers}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$f(x)$ & $f'(x)$ & applicable domain \\
+\hline\hline
+$c\in \mathbb{R}$ & 0 & $x\in \mathbb{R}$ \\
+\hline
+$x^r$ & $rx^{r-1}$ & $x\in \mathbb{R}$ \\
+\hline
+$\sqrt{x}$ & $\displaystyle\frac{1}{2\sqrt{x}}$ & $x>0$ \\
+\hline
+$|x|$ & $\displaystyle\frac{x}{|x|}=\frac{|x|}{x}$ & $x\ne 0$ \\
+\hline
+% add your function here & add its derivative here & specify where f is differentiable \\
+% \hline 
+\end{tabular}
+\end{center}
+
+\subsubsection*{Exponential and logarithmic functions}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$f(x)$ & $f'(x)$ & applicable domain \\
+\hline\hline
+$\exp(x)=e^x$ & $\exp(x)=e^x$ & $x\in \mathbb{R}$ \\
+\hline
+$a^x$ & $a^x\ln{a}$ & $x\in \mathbb{R}$ \\
+\hline
+$\ln x$ & $\displaystyle{\frac{1}{x}}$ & $x>0$ \\
+\hline
+$x^x$ & $x^x(1+\ln x)$ & $x>0$ \\
+\hline
+% add your function here & add its derivative here & specify where f is differentiable \\
+% \hline 
+\end{tabular}
+\end{center}
+
+\subsubsection*{\PMlinkname{Trigonometric functions}{Trigonometry}}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$f(x)$ & $f'(x)$ & applicable domain \\
+\hline\hline
+$\sin{x}$ & $\cos{x}$ & $x\in \mathbb{R}$ \\
+\hline
+$\cos{x}$ & $-\sin{x}$ & $x\in \mathbb{R}$ \\
+\hline
+$\tan{x}$ & $\sec^2{x}$ & $x\ne n\pi+\displaystyle{\frac{\pi}{2}},\, n\in \mathbb{Z}$  \\
+\hline
+$\cot{x}$ & $-\csc^2{x}$ & $x\ne n\pi,\, n\in \mathbb{Z}$ \\
+\hline
+$\sec{x}$ & $\sec{x}\tan{x}$ & $x\ne n\pi+\displaystyle{\frac{\pi}{2}},\, n\in \mathbb{Z}$ \\
+\hline
+$\csc{x}$ & $-\csc{x}\cot{x}$ & $x\ne n\pi,\, n\in \mathbb{Z}$ \\
+\hline
+$\arcsin{x}$ & $\displaystyle\frac{1}{\sqrt{1-x^2}}$ & $|x|<1$ \\
+\hline
+$\arccos{x}$ & $\displaystyle-\frac{1}{\sqrt{1-x^2}}$ & $|x|<1$ \\
+\hline
+$\arctan{x}$ & $\displaystyle\frac{1}{1+x^2}$ & $x\in \mathbb{R}$ \\
+\hline
+% add your function here & add its derivative here & specify where f is differentiable \\
+% \hline 
+\end{tabular}
+\end{center}
+
+\subsubsection*{\PMlinkname{Hyperbolic functions}{HyperbolicFunctions}}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$f(x)$ & $f'(x)$ & applicable domain \\
+\hline\hline
+$\sinh{x}$ & $\cosh{x}$ & $x\in \mathbb{R}$ \\
+\hline
+$\cosh{x}$ & $\sinh{x}$ & $x\in \mathbb{R}$ \\
+\hline
+$\tanh{x}$ & $\sech^2{x}$ & $x\in \mathbb{R}$ \\
+\hline 
+$\coth{x}$ & $-\csch^2{x}$ & $x\ne 0$ \\
+\hline
+$\sech{x}$ & $-\sech{x}\tanh{x}$ & $x\in \mathbb{R}$ \\
+\hline
+$\csch{x}$ & $-\csch{x}\coth{x}$ & $x\ne 0$ \\
+\hline
+$\arsinh{x}$ & $\displaystyle\frac{1}{\sqrt{x^2\!+\!1}}$ & $x\ne 0$ \\
+\hline
+$\arcosh{x}$ & $\displaystyle\frac{1}{\sqrt{x^2\!-\!1}}$ & $|x|>1$ \\
+\hline
+$\artanh{x}$ & $\displaystyle\frac{1}{1\!-\!x^2}$ & $-1 < x < 1$ \\
+\hline
+$\arcoth{x}$ & $\displaystyle\frac{1}{1\!-\!x^2}$ & $|x| > 1$ \\
+\hline
+% add your function here & add its derivative here & specify where f is differentiable \\
+% \hline 
+
+\end{tabular}
+\end{center}
+
+\subsubsection*{Other functions} (see error function, logarithmic integral, sine integral, Gudermannian, Hermite polynomials)
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$f(x)$ & $f'(x)$ & applicable domain \\
+\hline\hline
+$\mbox{Erf}\,x\,$ & $\displaystyle\frac{2}{\sqrt{\pi}}e^{-x^2}$ & $x\in \mathbb{R}$ \\
+\hline
+$\mbox{Li}\,x$ & $\displaystyle\frac{1}{\ln{x}}$ & $x > 1$ \\
+\hline
+$\mbox{Si}\,x$ & $\displaystyle\mbox{sinc}\,x$ & $x \in \mathbb{R}$ \\
+\hline
+$\mbox{gd}\,x$ & $\displaystyle\frac{1}{\cosh{x}}$ &  $x \in \mathbb{R}$\\
+\hline 
+$\mbox{gd}^{-1}x$ & $\displaystyle\frac{1}{\cos{x}}$ &  $|x| < \frac{\pi}{2}$\\
+\hline 
+$H_n(x)$ & $2nH_{n-1}(x)$ & $x \in \mathbb{R}$ \\
+ \hline 
+% add your function here & add its derivative here & specify where f is differentiable \\
+% \hline 
+
+
+\end{tabular}
+\end{center}
+
+
+
+
+\textbf{Instructions on how to add a function and its derivative}.  Open the entry in edit mode.  Using the appropriate table for your function (or make a new table if applicable), make a copy of the two lines of comment (starting with \%) in the code (within the tabular environment) and paste it immediately before the comment.  For functions outside of the ``Basic rules'' section, include the appropriate domain.  Uncomment the lines (take out the \% symbols) after completing.  Preview before saving the entry.
+%%%%%
+%%%%%
+\end{document}

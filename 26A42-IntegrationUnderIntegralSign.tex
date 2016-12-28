@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegrationUnderIntegralSign}
+\pmcreated{2013-03-22 18:46:27}
+\pmmodified{2013-03-22 18:46:27}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integration under integral sign}
+\pmrecord{5}{41567}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmrelated{FubinisTheorem}
+\pmrelated{DifferentiationUnderIntegralSign}
+\pmrelated{RelativeOfExponentialIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+Let
+$$I(\alpha) \;=\; \int_a^b\!f(x,\,\alpha)\,dx.$$
+where \,$f(x,\,\alpha)$ is continuous in the rectangle
+$$a \leqq x \leqq b,\, \quad \alpha_1 \leqq \alpha \leqq \alpha_2.$$
+Then\, $\alpha \mapsto I(\alpha)$\, is continuous and hence \PMlinkname{integrable}{RiemannIntegrable} on the interval 
+\,$\alpha_1 \leqq \alpha \leqq \alpha_2$;\, we have
+$$\int_{\alpha_1}^{\alpha_2}I(\alpha)\,d\alpha \;=\; \int_{\alpha_1}^{\alpha_2}\left(\int_a^b\!f(x,\,\alpha)\,dx\right)d\alpha.$$
+This is a double integral over a \PMlinkescapetext{regular domain} in the $x\alpha$-plane, whence one can change the \PMlinkname{order of integration}{FubinisTheorem} and accordingly write 
+$$\int_{\alpha_1}^{\alpha_2}\left(\int_a^b\!f(x,\,\alpha)\,dx\right)d\alpha 
+\;=\; \int_a^b\left(\int_{\alpha_1}^{\alpha_2}\!f(x,\,\alpha)\,d\alpha\right)dx.$$
+Thus, a definite integral depending on a parametre may be integrated  with respect to this parametre by performing the integration under the integral sign.\\
+
+
+\textbf{Example.}\, For being able to evaluate the improper integral
+$$I \;=\; \int_0^\infty\frac{e^{-ax}-e^{-bx}}{x}\,dx \qquad (a > 0,\; b > 0),$$
+we may interprete the integrand as a definite integral:
+$$\frac{e^{-ax}-e^{-bx}}{x} \;=\; \sijoitus{\alpha=b}{\quad a}\!\frac{e^{-\alpha x}}{x} 
+\;=\; \int_a^b\!e^{-\alpha x}\,d\alpha.$$
+Accordingly, we can calculate as follows:
+\begin{align*}
+I & \;=\; \int_0^\infty\left(\int_a^b\!e^{-\alpha x}\,d\alpha\right)dx\\
+& \;=\; \int_a^b\left(\int_0^\infty\!e^{-\alpha x}\,dx\right)d\alpha\\
+& \;=\; \int_a^b\left(\sijoitus{x=0}{\quad\infty}\!-\frac{e^{-\alpha x}}{\alpha}\right)d\alpha\\
+& \;=\; \int_a^b\!\frac{1}{\alpha}\,d\alpha \;=\; \sijoitus{a}{\quad b}\!\ln{\alpha}\\ 
+& \;=\; \ln\frac{b}{a}
+\end{align*}
+
+
+%%%%%
+%%%%%
+\end{document}

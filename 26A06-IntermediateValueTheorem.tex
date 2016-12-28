@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntermediateValueTheorem}
+\pmcreated{2013-03-22 11:51:29}
+\pmmodified{2013-03-22 11:51:29}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{intermediate value theorem}
+\pmrecord{15}{30423}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{70F25}
+\pmclassification{msc}{17B50}
+\pmclassification{msc}{81-00}
+\pmrelated{RollesTheorem}
+\pmrelated{MeanValueTheorem}
+\pmrelated{Continuous}
+
+
+\begin{document}
+\PMlinkescapeword{order}
+
+If $f$ is a real-valued continuous function on the interval $[a,b]$,
+and $x_1$ and $x_2$ are points with $a\le x_1<x_2\le b$
+such that $f(x_1)\ne f(x_2)$,
+then for every $y$ strictly between $f(x_1)$ and $f(x_2)$
+there is a $c\in(x_1,x_2)$ such that $f(c)=y$.
+
+Bolzano's theorem is a special case of this.
+
+The theorem can be generalized as follows:
+If $f$ is a real-valued continuous function
+on a connected topological space $X$,
+and $x_1, x_2 \in X$ with $f(x_1) \ne f(x_2)$,
+then for every $y$ between $f(x_1)$ and $f(x_2)$
+there is a $\xi \in X$ such that $f(\xi) = y$.
+(However, this ``generalization'' is essentially trivial,
+and in order to derive the intermediate value theorem from it
+one must first establish the less trivial fact that $[a,b]$ is connnected.)
+This result remains true
+if the codomain is an arbitrary ordered set with its order topology;
+see the entry
+\PMlinkname{proof of generalized intermediate value theorem}{ProofOfGeneralizedIntermediateValueTheorem}
+for a proof.
+
+
+
+
+
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

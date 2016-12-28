@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProsthaphaeresisFormulas}
+\pmcreated{2013-03-22 14:33:55}
+\pmmodified{2013-03-22 14:33:55}
+\pmowner{mathfanatic}{5028}
+\pmmodifier{mathfanatic}{5028}
+\pmtitle{Prosthaphaeresis formulas}
+\pmrecord{7}{36121}
+\pmprivacy{1}
+\pmauthor{mathfanatic}{5028}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmsynonym{Simpson's formulas}{ProsthaphaeresisFormulas}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\begin{document}
+The Prosthaphaeresis formulas convert sums of sines or cosines to products of them:
+
+\begin{eqnarray*}
+\sin A + \sin B &=& 2 \sin \left( \frac{A+B}{2} \right) \cos \left (\frac{A-B}{2} \right) \\
+\sin A - \sin B &=& 2 \sin \left( \frac{A-B}{2} \right) \cos \left (\frac{A+B}{2} \right) \\
+\cos A + \cos B &=& 2 \cos \left( \frac{A+B}{2} \right) \cos \left (\frac{A-B}{2} \right) \\
+\cos A - \cos B &=& -2 \sin \left( \frac{A+B}{2} \right) \sin \left (\frac{A-B}{2} \right)
+\end{eqnarray*}
+
+We prove the first two using the sine of a sum and sine of a difference formulas:
+
+\begin{eqnarray*}
+\sin (X+Y) &=& \sin X \cos Y + \cos X \sin Y \\
+\sin (X-Y) &=& \sin X \cos Y - \cos X \sin Y
+\end{eqnarray*}
+
+Adding or subtracting the two equations yields
+\begin{eqnarray*}
+\sin (X+Y) + \sin (X-Y) &=& 2 \sin X \cos Y \\
+\sin (X+Y) - \sin (X-Y) &=& 2 \sin Y \cos X
+\end{eqnarray*}
+
+If we let $X = \frac{A+B}{2}$ and $Y = \frac{A-B}{2}$, then $X+Y = \frac{2A}{2} = A$ and $X-Y = \frac{2B}{2} = B$, and the last two equations become
+
+\begin{eqnarray*}
+\sin A + \sin B &=& 2 \sin \left( \frac{A+B}{2} \right) \cos \left (\frac{A-B}{2} \right) \\
+\sin A - \sin B &=& 2 \sin \left( \frac{A-B}{2} \right) \cos \left (\frac{A+B}{2} \right)
+\end{eqnarray*}
+
+as desired.
+
+The last two can be proven similarly, this time using the cosine of a sum and cosine of a difference formulas:
+
+\begin{eqnarray*}
+\cos (X+Y) &=& \cos X \cos Y - \sin X \sin Y \\
+\cos (X-Y) &=& \cos X \cos Y + \sin X \sin Y
+\end{eqnarray*}
+
+Adding or subtracting the two equations yields
+\begin{eqnarray*}
+\cos (X+Y) + \cos(X-Y) &=& 2 \cos X \cos Y \\
+\cos (X+Y) - \cos(X-Y) &=& - 2 \sin Y \sin X
+\end{eqnarray*}
+
+Again, if we let $X = \frac{A+B}{2}$ and $Y = \frac{A-B}{2}$, then $X+Y = \frac{2A}{2} = A$ and $X-Y = \frac{2B}{2} = B$, and the last two equations become
+
+\begin{eqnarray*}
+\cos A + \cos B &=& 2 \cos \left( \frac{A+B}{2} \right) \cos \left (\frac{A-B}{2} \right) \\
+\cos A - \cos B &=& - 2 \sin \left( \frac{A-B}{2} \right) \sin \left (\frac{A+B}{2} \right)
+\end{eqnarray*}
+
+as desired.
+
+\subsubsection*{Notes} 
+'Prosthaphaeresis' comes from the Greek: ``prosthesi'' = addition + ``afairo'' = subtraction. 
+
+The Prosthaphaeresis formula 
+$\cos x \cos y = \frac{\cos (x+y) + \cos (x-y)}{2}$ 
+was used by scientists to transform multiplication into addition.  For example, to calculate the product $ab$, where $0 < a, b < 1$ (for $a$ and $b$ outside of this range, it is a simple matter to multiply or divide by a factor of 10 and divide or multiply this back in later), one would let $\cos x = a$ and $\cos y = b$.  Using a table of cosines, one could then find an approximate value for $x$ and $y$, then find $x+y$ and $x-y$, and look up the cosines of the resulting two quantities (that is, $\cos (x+y)$ and $\cos (x-y)$).  The average of these numbers is the desired product $ab$.  This technique was used by Tycho Brahe to perform astronomical calculations.
+%%%%%
+%%%%%
+\end{document}

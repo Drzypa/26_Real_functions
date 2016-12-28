@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HelmholtzDecomposition}
+\pmcreated{2013-03-22 17:59:40}
+\pmmodified{2013-03-22 17:59:40}
+\pmowner{invisiblerhino}{19637}
+\pmmodifier{invisiblerhino}{19637}
+\pmtitle{Helmholtz decomposition}
+\pmrecord{5}{40506}
+\pmprivacy{1}
+\pmauthor{invisiblerhino}{19637}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{fundamental theorem of vector calcululs}{HelmholtzDecomposition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The Helmholtz theorem states that any vector $\mathbf{F}$ may be decomposed into an irrotational (curl-free) and a solenoidal (divergence-free) part under certain conditions (given below). More precisely, it may be written in the form:
+\begin{equation}
+\mathbf{F} = -\nabla \varphi + \nabla \times \mathbf{A}
+\end{equation}
+where $\varphi$ is a scalar potential and $\mathbf{A}$ is a vector potential. By the definitions of scalar and vector potentials it follows that the first term on the right-hand side is irrotational and the second is solenoidal. The  general conditions for this to be true are:
+\begin{enumerate}
+\item The divergence of $\mathbf{F}$ must vanish at infinity.
+\item The curl of $\mathbf{F}$ must also vanish at infinity.
+\end{enumerate}
+
+%%%%%
+%%%%%
+\end{document}

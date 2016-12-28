@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClairautsTheorem}
+\pmcreated{2013-03-22 13:53:44}
+\pmmodified{2013-03-22 13:53:44}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Clairaut's theorem}
+\pmrecord{18}{34642}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{equality of mixed partials}{ClairautsTheorem}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{amsthm}
+
+\newtheorem*{cthm*}{Clairaut's Theorem}
+\begin{document}
+\begin{cthm*}
+If $\mathbf{f}\colon\mathbb{R}^n \to \mathbb{R}^m$ is a function whose second partial derivatives exist and are continuous on a set $S \subseteq \mathbb{R}^n$, then
+\[
+   \frac{\partial^2 f}{\partial x_i \partial x_j}
+  =\frac{\partial^2 f}{\partial x_j \partial x_i}
+\]
+on $S$, where $1 \leq i,j \leq n$.
+\end{cthm*}
+
+This theorem is commonly referred to as \emph{the equality of mixed partials}.
+It is usually first presented in a vector calculus course,
+and is useful in this context for proving basic properties of the interrelations of gradient, divergence, and curl.
+For example, if $\mathbf{F}\colon \mathbb{R}^3 \to \mathbb{R}^3$ is a function satisfying the hypothesis, then $\nabla \cdot (\nabla \times \mathbf{F}) =0$.
+Or, if $f\colon\mathbb{R}^3 \to \mathbb{R}$ is a function satisfying the hypothesis, then $\nabla \times \nabla f= \mathbf{0}$.
+%%%%%
+%%%%%
+\end{document}

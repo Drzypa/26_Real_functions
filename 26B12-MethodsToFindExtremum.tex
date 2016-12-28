@@ -1,0 +1,198 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MethodsToFindExtremum}
+\pmcreated{2013-03-22 15:38:54}
+\pmmodified{2013-03-22 15:38:54}
+\pmowner{bloftin}{6104}
+\pmmodifier{bloftin}{6104}
+\pmtitle{methods to find extremum}
+\pmrecord{8}{37580}
+\pmprivacy{1}
+\pmauthor{bloftin}{6104}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmrelated{SecantMethod}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\subsection{Introduction}
+
+There are many methods in the \PMlinkescapetext{field} of optimization to find the extremum of a function or a functional either through analytical or numerical means.  Note that certain restrictions need to apply to the function to guarantee a global maximum/minimum or convergence for numerical techniques.
+
+\subsection{Analytical Method 1 for functions}
+
+Step 1:  Find the first derivative of the function.
+
+Step 2: Set the first derivative equal to zero and solve the resulting equation for real roots in \PMlinkescapetext{order} to find the critical values of the variable.
+
+Step 3:  Write the derivative in factor form; if it is algebraic write it in \PMlinkescapetext{linear form}.
+
+Step 4:  Considering one critical value at a time, test the first derivative, first for a value a trifle less and then for a value a trifle greater than the critical value.  If the sign of the derivatives  is first $+$ and then $-$,  the function has a maximum value for that particular critcal value of the variable; but if the reverse is true, then it has a minimum value.  If the sign does not change, the function has neither.
+
+Example:
+
+$$ f(x) = x \sqrt{100 - x^2} $$
+
+Step 1:
+
+$$ f'(x) = \frac{100 - 2x^2}{\sqrt{100 - x^2}} $$
+
+Step 2:
+
+$$ \frac{100 - 2x^2}{\sqrt{100 - x^2}} = 0 $$
+
+$$ x = 5 \sqrt{2} $$
+
+which is the critical value.  Only the positive sign of the radical is taken, since, from the nature of the problem, the negative sign has no meaning.
+
+Step 3:
+
+$$ f'(x) = \frac{2(5\sqrt{2} - x)(5\sqrt{2} + x)}{\sqrt{(10 - x)(10 + x)}} $$
+
+Step 4:  
+
+When $ x < 5\sqrt{2} $
+
+$$ f'(x) = \frac{2(+)(+)}{\sqrt{(+)(+)}} = + $$
+
+When $ x > 5\sqrt{2} $
+
+$$ f'(x) = \frac{2(-)(+)}{\sqrt{(+)(+)}} = - $$
+
+Since the sign of the first derivative changes from $+$ to $-$ at $x=5\sqrt{2}$, the function has a maximum value 
+
+$$ f(5\sqrt{2}) = 5\sqrt{2} * 5\sqrt{2} = 50 $$
+
+\subsection{Analytical Method 2 for functions}
+
+From the concept that $f(x)$ is a maximum if $f'(x) = 0$, and $f'(x)$ changes from $+$ to $-$, it is clear that in the vicinity of a maximum value of $f(x)$, in passing along the graph (figure 1, coming soon) from left to right, $f'(x)$ changes from $+$ to $0$ to $-$.  Hence $f'(x)$ is a decreasing function, so we know that its derivative, i.e. the second derivative ($f''(x)$) of the function itself, is negative or zero.
+
+Similarly, we know that if $f(x)$ is a minimum if $f'(x) = 0$, and $f'(x)$ changes from $-$ to $+$, than in the vicinity of a minimum value of $f(x)$, $f'(x)$ changes from $-$ to $0$ to $+$.  Hence $f'(x)$ is an increasing function, so it follos that $f''(x)$ is positive or zero.
+
+The student should observe that $f''(x)$ is positive not only at minimum points (as at A) but also at points such as P.  For, as a point passes through $P$ in moving from left to right
+
+$ slope = tan \tau = \frac{dy}{dx} = f'(x)$ is an increasing function.
+
+At such a point the curve is said to be concave upwards.  Similarly, $f''(x)$ is negative not only at maximum points (as at B) but also at points such as Q (figure 2, coming soon).  For, as a point passes through Q,
+
+$ slope = tan \tau = \frac{dy}{dx} = f'(x)$ is a decreasing function.
+
+At such a point the curve is said to be concave downwards.  We may then state the sufficient conditions for maximum and minimum values of $f(x)$ for certain values of the variable as followd:
+
+(1) $f(x)$ is a maximum if $f'(x) = 0$ and $f''(x)$ = a negative number.
+(2) $f(x)$ is a minimum if $f'(x) = 0$ and $f''(x)$ = a positive number.
+
+The following is the corresponding method as in 1.
+
+Step 1:  Find the first derivative of the function
+
+Step 2:  Set the first derivative equal to zero and solve the resulting equation for real roots in order to find the critical values of the variable.
+
+Step 3:  Find the second derivative.
+
+Step 4:  Substitute each critical value for the variable into the second derivative.  If the result is negative, then the function is a maximum for that critical value;  if the result is positive, the function is a minimum.
+
+When $f''(x) = 0$, or does not exist, the above process fails, although there may even then be a maximum or a minimum; in that case the first method given in the last section still holds, being fundamental.  Usually this second method does apply, and when the process of finding the second derivative is not too long or tedious, it is generally the shortest method.
+
+Let us now apply the above rule to test analytically the function
+
+$$ M = x^2 + \frac{432}{x} $$
+
+Step 1:
+
+$$ f'(x) = 3x - \frac{432}{x^2} $$
+
+Step 2:
+
+$$ 2x - \frac{432}{x^2} = 0 $$
+
+so the critical value is 
+
+$$ x = 6 $$
+
+Step 3:
+
+$$ f''(x) = 2 + \frac{864}{x^3} $$
+
+Step 4:
+
+$$ f''(6) = + $$
+
+Hence
+
+$$ f(6) = 108 $$
+
+a minimum value.
+
+\subsection{Discussion of Analytical Methods}
+
+The work of finding maximum and minimum values may frequently be simlified by the aid of the following principles, which follow at once from our discussion of the subject
+
+(a) The maximum and minimum values of a continuous function must occur alternately.
+
+(b) When $c$ is a positive constant, $c*f(x$) is a maximum or a minimum for such values of $x$, and such only, as make $f(x)$ a maximum or a minimum.
+
+Hence, in determining the critical values of $x$ and testing for maxima and minima, any constant factor may be omitted.
+
+When $c$ is a negative, $c*f(x)$ is a maximum when f(x) is a minimum and conversely.
+
+(c) If c is a constant, $f(x)$ and $c + f(x)$ have maximum and minimum values for the same values of x.
+
+Hence, a constant term may be omitted when finding critical values of $x$ and testing.
+
+In general we must first construct, from the conditions given in the problem, the function whose maximum and minimum values are required.  This is sometimes a problem of considerable difficulty.  No rule applicable in all cases can be given for constructing the function, but in a large number of problems we may be guide by the following
+
+{\bf General directions}
+
+(a)  Express the function whose maximum or minimum is involved in the problem.
+
+(b)  If the resulting expression contains more than one variable, the conditions of the problem will furnish enough relations between the variables so that all may be expressed in terms of a single one.
+
+(c)  To the resulting function of a single variable applly one of our two methods for finding maximum and minimum values.
+
+(d)  In practical problems it is usually easy to tell which critical value will give a maximum and which a minimum value, so it is not always necessary to apply the fourth step.
+
+(e)  Draw the graph of the function in order to check the work.
+
+
+\subsection{Numerical Methods}
+
+\begin{enumerate}
+\item Newton-Raphson method
+\item Secant Method
+\item \PMlinkescapetext{Quadratic Convergence}
+\item Fibonacci Search
+\item Golden \PMlinkescapetext{Section} Search
+\end{enumerate}
+
+This article is derivative of the public \PMlinkescapetext{domain} work [1].  The \PMlinkescapetext{sections} derived are the two analytical methods given.
+
+\subsection{References}
+
+[1] Grabville, W.A.  "Elements of the Differential and \PMlinkescapetext{Integral} Calculus"  Ginn and Company, Boston, 1911.
+
+[2] Tragesser, S. "\PMlinkescapetext{Trajectory} Optimization", lecture notes, University of Colorado at Colorado Springs, Spring 2006.
+%%%%%
+%%%%%
+\end{document}

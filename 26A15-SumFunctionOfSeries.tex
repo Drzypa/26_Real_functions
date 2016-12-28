@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumFunctionOfSeries}
+\pmcreated{2013-03-22 14:38:15}
+\pmmodified{2013-03-22 14:38:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{sum function of series}
+\pmrecord{18}{36223}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{40A30}
+\pmrelated{UniformConvergenceOfIntegral}
+\pmrelated{SumOfSeries}
+\pmrelated{OneSidedContinuityBySeries}
+\pmdefines{function series}
+\pmdefines{sum function}
+\pmdefines{uniform convergence of series}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let the terms of a series be real functions $f_n$ defined in a certain subset $A_0$ of $\mathbb{R}$; we can speak of a {\em function series}.\, All points $x$ where the series
+ \begin{align}
+                  f_1+f_2+\cdots
+ \end{align}
+converges form a subset $A$ of $A_0$, and we have the {\em \PMlinkescapetext{sum function}}\, $S\!:x\mapsto S(x)$\, of (1) defined in $A$.
+
+If the sequence\, $S_1,\,S_2,\,\ldots$\, of the partial sums\, 
+$S_n = f_1\!+\!f_2\!+\cdots+\!f_n$\, of the series (1) \PMlinkname{converges uniformly}{LimitFunctionOfSequence} in the interval\, $[a,\,b] \subseteq{A}$\, to a function \, $S\!:x\mapsto S(x)$,\, we say that {\em the series \PMlinkescapetext{converges uniformly}} in this interval.\, We may also set the direct
+
+\textbf{Definition.}\, The function series (1), which converges in every point of the interval\, $[a,\,b]$\, having sum function\, $S:x\mapsto S(x)$,\, 
+{\em \PMlinkescapetext{converges uniformly}} in the interval\, $[a,\,b]$,\, if for every positive number $\varepsilon$ there is an integer $n_\varepsilon$ such that each value of $x$ in the interval\, $[a,\,b]$\, \PMlinkescapetext{satisfies} the inequality
+          $$|S_n(x)-S(x)| < \varepsilon$$
+when\, $n \geqq n_\varepsilon$.\\
+
+\textbf{Note.}\, One can without trouble be convinced that the term functions of a uniformly converging series converge uniformly to 0 (cf. the necessary condition of convergence).\\
+
+The notion of \PMlinkescapetext{uniform convergence} of series can be extended to the series with complex function terms (the interval is replaced with some subset of $\mathbb{C}$).\, The significance of the \PMlinkescapetext{uniform convergence} is therein that the sum function of a series with this property and with continuous term-functions is continuous and may be integrated termwise.
+%%%%%
+%%%%%
+\end{document}

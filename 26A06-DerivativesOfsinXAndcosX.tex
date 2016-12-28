@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativesOfsinXAndcosX}
+\pmcreated{2013-03-22 16:58:51}
+\pmmodified{2013-03-22 16:58:51}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{derivatives of $\sin x$ and $\cos x$}
+\pmrecord{8}{39257}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26A03}
+\pmrelated{Derivative2}
+\pmrelated{LimitOfDisplaystyleFracsinXxAsXApproaches0}
+\pmrelated{LimitOfDisplaystyleFrac1CosXxAsXApproaches0}
+\pmrelated{DerivativesOfSineAndCosine}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\begin{thm*}
+$$\frac{d}{dx} (\sin x)=\cos x$$
+\end{thm*}
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rl}
+$\displaystyle \frac{d}{dx} (\sin x)$ & $=\displaystyle \lim_{h \to 0} \frac{\sin (x+h)-\sin x}{h}$ \\
+& $=\displaystyle \lim_{h \to 0} \frac{\sin x \cos h+\cos x \sin h-\sin x}{h}$ by addition formula for sine \\
+& $=\displaystyle \lim_{h \to 0} \frac{\sin x (\cos h-1)+\cos x \sin h}{h}$ \\
+& $=\displaystyle \lim_{h \to 0} \left( \sin x \cdot \frac{\cos h-1}{h} +\cos x \cdot \frac{\sin h}{h} \right)$ \\
+& $=\displaystyle \sin x \left( \lim_{h \to 0} \frac{\cos h-1}{h} \right) +\cos x \left( \lim_{h \to 0} \frac{\sin h}{h} \right)$ by \PMlinkname{this entry}{LimitRulesOfFunctions} \\
+& $=\displaystyle \sin x \cdot 0+\cos x \cdot 1$ by \PMlinkname{this theorem}{LimitOfDisplaystyleFracsinXxAsXApproaches0} and its \PMlinkname{corollary}{LimitOfDisplaystyleFrac1CosXxAsXApproaches0} \\
+& $=\cos x$
+\end{tabular}
+\end{center}
+\end{proof}
+
+\begin{thm*}
+$$\frac{d}{dx} (\cos x)=-\sin x$$
+\end{thm*}
+
+\begin{proof}
+\begin{center}
+\begin{tabular}{rl}
+$\displaystyle \frac{d}{dx} (\cos x)$ & $=\displaystyle \lim_{h \to 0} \frac{\cos (x+h)-\cos x}{h}$ \\
+& $=\displaystyle \lim_{h \to 0} \frac{\cos x \cos h-\sin x \sin h-\cos x}{h}$ by \PMlinkname{addition formula for cosine}{AdditionFormulaForCosine} \\
+& $=\displaystyle \lim_{h \to 0} \frac{\cos x (\cos h-1)+\sin x \sin h}{h}$ \\
+& $=\displaystyle \lim_{h \to 0} \left( \cos x \cdot \frac{\cos h-1}{h} -\sin x \cdot \frac{\sin h}{h} \right)$ \\
+& $=\displaystyle \cos x \left( \lim_{h \to 0} \frac{\cos h-1}{h} \right) -\sin x \left( \lim_{h \to 0} \frac{\sin h}{h} \right)$ by \PMlinkname{this entry}{LimitRulesOfFunctions} \\
+& $=\displaystyle \cos x \cdot 0-\sin x \cdot 1$ by \PMlinkname{this theorem}{LimitOfDisplaystyleFracsinXxAsXApproaches0} and its \PMlinkname{corollary}{LimitOfDisplaystyleFrac1CosXxAsXApproaches0} \\
+& $=-\sin x$
+\end{tabular}
+\end{center}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

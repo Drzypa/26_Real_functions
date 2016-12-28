@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMonotonicityCriterion}
+\pmcreated{2013-03-22 13:45:14}
+\pmmodified{2013-03-22 13:45:14}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of monotonicity criterion}
+\pmrecord{6}{34454}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let us start from the implications ``$\Rightarrow$''.
+
+Suppose that $f'(x)\ge 0$ for all $x\in (a,b)$. We want to prove that therefore $f$ is increasing. So take $x_1,x_2\in [a,b]$ with $x_1<x_2$. Applying the mean-value Theorem on the interval $[x_1,x_2]$ we know that there exists a point $x\in (x_1,x_2)$ such that
+\[
+  f(x_2)-f(x_1) = f'(x) (x_2-x_1)
+\]
+and being $f'(x)\ge 0$ we conclude that $f(x_2)\ge f(x_1)$.
+
+This proves the first claim. The other three cases can be achieved with minor modifications: replace all ``$\ge$'' respectively with $\le$, $>$ and $<$.
+
+Let us now prove the implication ``$\Leftarrow$'' for the first and second statement.
+
+Given $x\in (a,b)$ consider the ratio
+\[
+  \frac{f(x+h)-f(x)}{h}.
+\]
+If $f$ is increasing the numerator of this ratio is $\ge 0$ when $h>0$ and is $\le 0$ when $h<0$. Anyway the ratio is $\ge 0$ since the denominator has the same sign of the numerator. Since we know by hypothesis that the function $f$ is differentiable in $x$ we can pass to the limit to conclude that 
+\[
+f'(x)=\lim_{h\to 0} \frac{f(x+h)-f(x)}{h} \ge 0.
+\]
+
+If $f$ is decreasing the ratio considered turns out to be $\le 0$ hence the conclusion $f'(x)\le 0$.
+
+Notice that if we suppose that $f$ is strictly increasing we obtain the this ratio is $>0$, but passing to the limit as $h\to 0$ we cannot conclude that $f'(x)>0$ but only (again) $f'(x)\ge 0$.
+%%%%%
+%%%%%
+\end{document}

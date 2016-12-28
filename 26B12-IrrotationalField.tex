@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IrrotationalField}
+\pmcreated{2013-03-22 13:09:05}
+\pmmodified{2013-03-22 13:09:05}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{irrotational field}
+\pmrecord{9}{33591}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{irrotational vector field}{IrrotationalField}
+\pmsynonym{curl free field}{IrrotationalField}
+\pmsynonym{curl-free vector field}{IrrotationalField}
+\pmrelated{Curl}
+\pmrelated{LaminarField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+
+Suppose $\Omega$ is an open set in $\sR^3$, and $\bV$ is a vector field
+with differentiable real (or possibly complex) valued component functions.
+If $\nabla\times \bV=0$, then $\bV$ is called an {\bf irrotional vector field},
+or {\bf curl free field}.
+
+If $\bU$ and $\bV$ are irrotational, then $\bU\times\bV$ is solenoidal.
+%%%%%
+%%%%%
+\end{document}

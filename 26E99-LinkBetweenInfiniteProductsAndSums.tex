@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinkBetweenInfiniteProductsAndSums}
+\pmcreated{2013-03-22 13:41:38}
+\pmmodified{2013-03-22 13:41:38}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{link between infinite products and sums}
+\pmrecord{7}{34368}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E99}
+\pmclassification{msc}{40A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+Let 
+\[
+  \prod_{k=1}^\infty p_k
+\]
+be an infinite product such that $p_k>0$ for all $k$.
+Then the infinite product converges if and only if the infinite sum
+\[
+  \sum_{k=1}^\infty \log p_k
+\]
+converges. Moreover
+\[
+  \prod_{k=1}^\infty p_k = \exp \sum_{k=1}^\infty \log p_k.
+\]
+
+\emph{Proof.}
+
+Simply notice that
+\[
+  \prod_{k=1}^N p_k = \exp \sum_{k=1}^N \log p_k.
+\]
+If the infinite sum converges then (by continuity of $\exp$ function)
+\[
+  \lim_{N\to \infty} \prod_{k=1}^N p_k = \lim_{N\to\infty} \exp \sum_{k=1}^N \log p_k = \exp \sum_{k=1}^\infty \log p_k
+\]
+and also the infinite product converges.
+%%%%%
+%%%%%
+\end{document}

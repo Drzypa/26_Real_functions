@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfQuotientRuleusingProductRule}
+\pmcreated{2013-03-22 15:00:45}
+\pmmodified{2013-03-22 15:00:45}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{proof of quotient rule (using product rule)}
+\pmrecord{5}{36719}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Suppose $f$ and $g$ are differentiable functions defined on some interval
+of $\R$, and $g$ never vanishes. Let us prove that 
+$$
+\left( \frac{f}{g}\right)' = \frac{ f' g - f g'}{g^2}.
+$$
+
+Using the product rule $(fg)'=f'g + fg'$, and $(g^{-1})'=-g^{-2}g'$, 
+we have
+\begin{eqnarray*}
+ \left( \frac{f}{g}\right)' &=& (f g^{-1})' \\
+           &=& f' g^{-1} + f (g^{-1})' \\
+           &=& f' g^{-1} + f (-1) g^{-2} g'\\ 
+           &=& \frac{f'}{g} - \frac{fg'}{g^2} \\
+           &=& \frac{f'g- fg'}{g^2}. 
+\end{eqnarray*}
+Here $g^{-1}=1/g$ and $g^{-2}=1/g^2$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SincIsNotL1}
+\pmcreated{2013-03-22 15:44:32}
+\pmmodified{2013-03-22 15:44:32}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{sinc is not $L^1$}
+\pmrecord{14}{37693}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The main results used in the proof will be that $f \in L^1(A) \iff |f|\in L^1(A)$ and the dominated convergence theorem.
+
+Proof by contradiction:
+
+Let $f(x) = |\operatorname{sinc}(x)|$ and suppose it's Lebesgue integrable in $\mathbb{R}^+$.
+
+
+Consider the intervals $I_k = [k\pi, (k+1)\pi]$ and $U_k = \bigcup_{i=0}^k I_k = [0, (k+1)\pi]$.
+
+and the succession of functions $f_n(x) = f(x)\chi_{U_n}(x)$, where $\chi_{U_n}$ is the characteristic function of the set $U_n$.
+
+Each $f_n$ is a continuous function of compact support and will thus be integrable in $\mathbb{R}^+$. Furthermore $f_n(x) \nearrow f(x)$ (pointwise)
+
+in each $I_k$, $f(x)\ge \frac{|\sin(x)|}{(k+1)\pi}$.
+
+So
+
+$ \displaystyle \int_{\mathbb{R}^+} f_n = \sum_{k=0}^{n} \int_{k\pi}^{(k+1)\pi} \frac{|\sin(x)|}{x} dx \ge \sum_{k=0}^{n} \int_{k\pi}^{(k+1)\pi} \frac{|sin(x)|}{(k+1)\pi} = \sum_{k=0}^{n} \frac{2}{(k+1)\pi}$.
+
+Suppose $f$ is integrable in $\mathbb{R}^+$. Then by the dominated convergence theorem $\lim_{n \to \infty} \int_{\mathbb{R}^+} f_n = \int_{\mathbb{R}^+} f$.
+
+But $\lim_{n \to \infty} \int_{\mathbb{R}^+} f_n \ge \lim_{n \to \infty}  \sum_{k=0}^{n} \frac{2}{(k+1)\pi} = +\infty$ and we get the contradiction $\int_{\mathbb{R}^+} f \ge +\infty$.
+
+So $f$ cannot be integrable in $\mathbb{R}^+$.
+This implies that $f$ cannot be integrable in $\mathbb{R}$ and since a function is integrable in a set iff its absolute value is
+
+$\operatorname{sinc}(x) \notin L^1(\mathbb{R})$
+%%%%%
+%%%%%
+\end{document}

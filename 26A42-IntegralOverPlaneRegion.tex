@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralOverPlaneRegion}
+\pmcreated{2013-03-22 18:50:57}
+\pmmodified{2013-03-22 18:50:57}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integral over plane region}
+\pmrecord{13}{41658}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28-00}
+\pmsynonym{planar integral}{IntegralOverPlaneRegion}
+\pmrelated{RiemannMultipleIntegral}
+\pmdefines{double integral}
+\pmdefines{iterated integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{side} \PMlinkescapeword{inner} \PMlinkescapeword{right}
+The integrals over a planar region are generalisations of usual Riemann integrals, but special cases of \PMlinkid{surface integrals}{6660}.
+
+\subsection{Integral over a rectangle}
+Let $R$ be the rectangle of $xy$-plane defined by
+\begin{align}
+a \leqq x \leqq b, \quad c \leqq y \leqq d
+\end{align}
+and the function $f$ be defined and bounded in $R$.\, Let
+\begin{align}
+D:
+\begin{cases}
+x_0 = a,\,x_1,\,\ldots,\,x_m = b\\
+y_0 = c,\,y_1,\,\ldots,\,y_n = d
+\end{cases}
+\end{align}
+a \PMlinkescapetext{division} of $R$ into the rectangular parts $\Delta_i$ with areas $\Delta_iA$ ($i = 1,\,\ldots,\,mn$).\, Denote
+$$m_i \;:=\; \inf_{\Delta_i}f(x,\,y), \qquad M_i \;:=\; \sup_{\Delta_i}f(x,\,y)$$
+and 
+$$s_D \;:=\; \sum_Dm_i\Delta_iA, \qquad S_D \;:=\; \sum_DM_i\Delta_iA.$$\\
+
+\textbf{Definition 1.}\; If\; $\displaystyle\sup_D\{s_D\} \,=\, \inf_D\{S_D\}$,\, then we say that $f$ is \emph{integrable over} $R$ and call the common value the (\emph{Riemann}) \emph{integral of $f$ over the rectangle} $R$ and denote it by
+$$\int_Rf, \quad \int_Rf(x,\,y)\,dx\,dy \quad \mbox{or} \quad \iint_Rf(x,\,y)\,dx\,dy.$$\\
+
+
+Let then $f$ be defined in a region $A$ of $xy$-plane such that that it can be enclosed in a rectangle $R$ defined by (1).\, Define the new function $f_1$ through
+\begin{align}
+f_1(x,\,y) \;:=\;
+\begin{cases}
+f(x,\,y) \quad\mbox{when\;\;} (x,\,y) \in A,\\
+0 \qquad\mbox{otherwise.}
+\end{cases}
+\end{align}
+
+\textbf{Definition 2.}\; If $f_1$ is integrable over the rectangle $R$, we say that $f$ is \emph{integrable over} $A$ and define
+\begin{align}
+\int_Af \;:=\; \int_Rf_1.
+\end{align}
+It's apparent that (4) is \PMlinkescapetext{independent} on the choice of $R$ since the points of $\mathbb{R}^2\!\smallsetminus\!A$ give zero-terms to the lower and upper sums.
+
+\subsection{Double integrals}
+\textbf{Definition 3.}\; Let $f$ be bounded in $R$ as before.\, Suppose that
+$$\varphi(x) \;:=\; \int_c^df(x,\,y)\,dy$$
+is defined on\, $[a,\,b]$.\, If also the integral
+\begin{align}
+\int_a^b\varphi(x)\,dx \;=\; \int_a^b\left[\int_c^df(x,\,y)\,dy\right]dx
+\end{align}
+exists, it is called a \emph{double integral} or \emph{iterated integral} and denoted by
+$$\int_a^bdx\int_c^df(x,\,y)\,dy.$$\\
+
+One may prove the
+
+\textbf{Theorem.}\, $\displaystyle\int_Rf(x,\,y)\,dx\,dy \,=\, \int_a^bdx\int_c^df(x,\,y)\,dy$,\; provided that the integral of the left side exists and that the inner integral $\int_c^df(x,\,y)\,dy$ of the right side exists for every $x$ in\, $[a,\,b]$.\\
+
+It's clear that\; $\displaystyle\int_a^bdx\int_c^df(x,\,y)\,dy \,=\, \int_c^ddy\int_a^bf(x,\,y)\,dx$\; if also the integral $\int_a^bf(x,\,y)\,dx$ exists for every $y$ in\, $[c,\,d]$.\, If especially the function $f$ is continuous in the rectangle $R$, then surely
+$$\int_Rf(x,\,y)\,dx\,dy \;=\; \int_a^bdx\int_c^df(x,\,y)\,dy \;=\; \int_c^ddy\int_a^bf(x,\,y)\,dx.$$\\
+
+Assume now, that $f$ is defined and bounded in the region
+$$A \;:=\; \{(x,\,y) \in \mathbb{R}^2\vdots\; a \leqq x \leqq b,\; h_1(x) \leqq y \leqq h_2(x)\}$$
+where $A$ is contained in the rectangle $R$ determined by (1).\, Then the planar integral $\displaystyle\int_Af$ is defined as
+$$\int_Af \;=\; \int_Rf$$
+if the integral of right side exists.\, For this, he continuity of $f$ in $A$ does not necessarily suffice, because $f_1$ may have a jump discontinuity on the border of $A$ whence the integrability of $f_1$ needs not be guaranteed.\, One case where the integrability is true is that the graphs of the functions $h_1$ and $h_2$ are rectifiable (i.e. the functions have continuous derivatives).\, For a continuous $f$, we then have
+$$\int_c^df_1(x,\,y)\,dy \;=\; \int_c^{h_1(x)}0\,dy +\int_{h_1(x)}^{h_2(x)}f(x,\,y)\,dy+\int_{h_2(x)}^d0\,dy 
+\;=\; \int_{h_1(x)}^{h_2(x)}f(x,\,y)\,dy.$$
+Thus
+\begin{align}
+\int_Af \;=\; \int_Rf_1 \;=\; \int_a^bdx\int_{h_1(x)}^{h_2(x)}f(x,\,y)\,dy,
+\end{align}
+i.e. the planar integral has been expressed as a double integral.
+
+[Not ready ...]
+
+%%%%%
+%%%%%
+\end{document}

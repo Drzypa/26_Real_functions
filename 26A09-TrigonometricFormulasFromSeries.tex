@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TrigonometricFormulasFromSeries}
+\pmcreated{2013-03-22 18:50:47}
+\pmmodified{2013-03-22 18:50:47}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{trigonometric formulas from series}
+\pmrecord{9}{41654}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmsynonym{series definition of sine and cosine}{TrigonometricFormulasFromSeries}
+%\pmkeywords{sine}
+%\pmkeywords{cosine}
+\pmrelated{RigorousDefinitionOfTrigonometricFunctions}
+\pmrelated{ApplicationOfFundamentalTheoremOfIntegralCalculus}
+\pmrelated{TrigonometricFormulasFromDeMoivreIdentity}
+\pmrelated{GoniometricFormulae}
+\pmdefines{$\pi$}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+One may define the sine and the cosine functions for real (and complex) arguments using the power series
+\begin{align}
+\sin{x} \;=\; x-\frac{x^3}{3!}+\frac{x^5}{5!}-+\ldots,
+\end{align}
+\begin{align}
+\cos{x} \;=\; 1-\frac{x^2}{2!}+\frac{x^4}{4!}-+\ldots,
+\end{align}
+and using only the properties of power series, easily derive most of the goniometric formulas, without any geometry.\, For example, one gets instantly from (1) and (2) the values
+$$\sin0 \;=\; 0, \qquad \cos0 \;=\; 1$$
+and the \PMlinkname{parity relations}{EvenoddFunction}
+$$\sin(-x) \;=\; -\sin{x}, \qquad \cos(-x) \;=\; \cos{x}.$$
+Using the Cauchy multiplication rule for series one can obtain the addition formulas
+\begin{align}
+\begin{cases}
+   \sin(x\!+\!y) \;=\; \sin{x}\cos{y}+\cos{x}\sin{y},\\
+   \cos(x\!+\!y) \;=\; \cos{x}\cos{y}-\sin{x}\sin{y}.
+\end{cases}
+\end{align}
+These produce straightforward many other important formulae, e.g.
+\begin{align}
+\sin2x \;=\; 2\sin{x}\cos{x}, \qquad \cos2x \;=\; \cos^2x-\sin^2x \qquad (y \;=:\; x)
+\end{align}
+and
+\begin{align}
+\cos^2x+\sin^2x \;=\; 1 \qquad\qquad\qquad (y \;=:\; -x).
+\end{align}
+
+
+The value\, $\displaystyle\cos\frac{\pi}{2} = 0$,\, as well as the formulae expressing the periodicity of sine and cosine, cannot be directly obtained from the series (1) and (2) --- in fact, one must define the number $\pi$ by using the function properties of the \PMlinkescapetext{cosine series} and its \PMlinkname{derivative series}{PowerSeries}.
+
+The equation
+$$\cos{x} \;=\; 0$$
+has on the interval \,$(0,\,2)$\, exactly one \PMlinkname{root}{Equation}.\, Actually, as sum of a power series, 
+$\cos{x}$ is continuous,\, $\cos0 = 1 > 0$\, and\, $\cos2 < 1-\frac{2^2}{2!}+\frac{2^4}{4!} < 0$\, (see \PMlinkname{Leibniz' estimate for alternating series}{LeibnizEstimateForAlternatingSeries}), whence there is at least one root.\, If there were more than one root, then the derivative
+$$-\sin{x} \;=\; -x+\frac{x^3}{3!}-+\ldots \;=\; -x(1-\frac{x^2}{3!}+-\ldots)$$
+would have at least one zero on the interval; this is impossible, since by Leibniz the series in the parentheses does not change its sign on the interval:
+$$1-\frac{x^2}{3!}+-\ldots \;>\;1-\frac{2^2}{3!} \;>\; 0$$
+Accordingly, we can define the number pi to be the least positive solution of the equation\, $\cos{x} = 0$, multiplied by 2.
+
+Thus we have\, $0 < \pi < 4$\, and\, $\cos\frac{\pi}{2} = 0$.\, Furthermore, by (5),
+$$\sin\frac{\pi}{2} \;=\; 1,$$
+and by (4),
+$$\sin\pi \;=\; 0, \qquad \cos\pi \;=\; -1, \qquad \sin2\pi \;=\; 0, \qquad \cos2\pi \;=\; 1.$$
+Consequently, the addition formulas (3) yield the \PMlinkname{periodicities}{PeriodicFunctions}
+$$\sin(x\!+\!2\pi) \;=\; \sin{x}, \qquad \cos(x\!+\!2\pi) \;=\; \cos{x}.$$
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

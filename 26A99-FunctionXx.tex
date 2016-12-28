@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FunctionXx}
+\pmcreated{2014-07-20 12:01:34}
+\pmmodified{2014-07-20 12:01:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{function $x^x$}
+\pmrecord{17}{38566}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A99}
+\pmsynonym{$x$ to the $x$th power}{FunctionXx}
+\pmrelated{ExponentialFunction}
+\pmrelated{GrowthOfExponentialFunction}
+\pmrelated{ImproperIntegral}
+\pmrelated{PowerTowerSequence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We list some properties of the real function\, $x \mapsto x^x$\,
+which may be called {\it 2-tetration}.\, Cf. also [1].\\
+
+\begin{itemize}
+  \item The function is defined only for positive values of $x$ (and for negative integers $x$ which we neglect in the following items); cf. fraction power and power function.
+  \item $x^x$ can be \PMlinkname{composed}{Composition} of\, $e^t$\, and\, 
+$t = x\ln{x}$.
+  \item $\displaystyle\lim_{x\to 0+}x^x = 1$,\, as one sees by substituting\, $t = x\ln{x}$\, into the Taylor expansion of $e^t$.
+  \item $x^x$ is differentiable: Using the chain rule on\, $e^{x\ln{x}}$, one obtains: 
+\[\frac{d}{dx}(x^x) = x^x(1+\ln{x}).\]
+  \item The function has absolute minimum value\,
+ $\displaystyle e^{-\frac{1}{e}} \approx 0.6922$\, and achieves all real values above this.
+  \item $\displaystyle\lim_{x\to\infty}\frac{e^x}{x^x} =
+\lim_{x\to\infty}e^{(1-\ln{x})x} = 0$\, (cf. growth of exponential function)
+  \item $x^x$ has no elementary function as antiderivative.
+  \item $\displaystyle \int_0^1 x^x\,dx = 
+\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^n} = 0.7834305107\ldots$ 
+(see the entry \PMlinkname{Sophomore's dream}{SophomoreSDream}).
+  \item $y := x^x$\, satisfies the differential equations
+$$yy'' - (y')^2  - y^2/x = 0$$
+and
+$$y^3 y''' - y^2 (y'')^2 + 2 y (y')^2 y'' - 3 y^2 y' y'' - (y')^4 + 2 y (y')^3 = 0.$$
+
+\end{itemize}
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(3.5,9)
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-0.5,-0.5)(3.5,8.5)
+\rput(3.55,-0.2){$x$}
+\rput(0.2,8.48){$y$}
+\rput(-0.3,-0.3){$0$}
+\psplot[linecolor=blue]{0.01}{2.4}{x x exp}
+\psdot[linecolor=red](0,1)
+\psdot[linecolor=blue](0.35,0.69)
+\psline[linestyle=dashed](0.35,0)(0.35,0.69)
+\rput(0.35,-0.36){$\frac{1}{e}$}
+\rput(3,5){$y = x^x$}
+\end{pspicture}\\
+
+\begin{thebibliography}{8}
+\bibitem{SM}{\sc J. Sondow \& D. Marques}:\, Algebraic and transcendental solutions
+of some exponential equations.\, $-$ \emph{Annales Mathematicae et Informaticae} \textbf{37} (2010); available directly at \PMlinkexternal{arXiv}{http://arxiv.org/pdf/1108.6096.pdf}.
+\end{thebibliography}
+
+
+
+
+
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubstitutionForIntegration}
+\pmcreated{2013-03-22 14:33:38}
+\pmmodified{2013-03-22 14:33:38}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{substitution for integration}
+\pmrecord{21}{36114}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmsynonym{variable changing for integration}{SubstitutionForIntegration}
+\pmsynonym{integration by substitution}{SubstitutionForIntegration}
+\pmsynonym{substitution rule}{SubstitutionForIntegration}
+\pmrelated{IntegrationOfRationalFunctionOfSineAndCosine}
+\pmrelated{IntegrationOfFractionPowerExpressions}
+\pmrelated{ChangeOfVariableInDefiniteIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+For determining the antiderivative $F(x)$ of a given real function $f(x)$ in a  ``closed form'', i.e. for integrating $f(x)$, the result is often obtained by using the
+
+\begin{thmplain}
+\,\,If 
+      $$\int f(x)\,dx = F(x)+C$$
+and \,$x = x(t)$\, is a differentiable function,
+then
+\begin{align}
+     F(x(t)) = \int f(x(t))\,x'(t)\,dt+c.
+\end{align}
+\end{thmplain}
+
+{\em Proof.} \, By virtue of the chain rule,
+   $$\frac{d}{dt}F(x(t)) = F'(x(t))\cdot x'(t),$$
+and according to the supposition, $F'(x) = f(x)$. \,Thus we get the claimed equation (1).\\
+
+\textbf{Remarks.}
+\begin{itemize}
+ \item The expression $x'(t)\,dt$ in (1) may be understood as the differential of $x(t)$.
+ \item For returning to the original variable $x$, the inverse function \,$t = t(x)$\, of $x(t)$ must be substituted to $F(x(t))$.\\
+\end{itemize}
+
+\textbf{Example.} \, For integrating $\int \frac{x\,dx}{1+x^4}$ we take \,$x^2 = t$\, as a new variable. \,Then, \,$2x\,dx = dt$, $x\,dx = \frac{dt}{2}$, and we get
+$$\int \frac{x\,dx}{1+x^4} = \frac{1}{2}\int \frac{dt}{1+t^2} = \frac{1}{2}\arctan t+ C= \frac{1}{2}\arctan x^2+C.$$
+%%%%%
+%%%%%
+\end{document}

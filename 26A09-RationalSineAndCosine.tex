@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RationalSineAndCosine}
+\pmcreated{2013-03-22 17:54:50}
+\pmmodified{2013-03-22 17:54:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{rational sine and cosine}
+\pmrecord{8}{40408}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{11D09}
+\pmclassification{msc}{11A67}
+\pmrelated{RationalPointsOnTwoDimensionalSphere}
+\pmrelated{GreatestCommonDivisor}
+\pmrelated{GeometricProofOfPythagoreanTriplet}
+\pmrelated{RationalBriggsianLogarithmsOfIntegers}
+\pmrelated{AlgebraicSinesAndCosines}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, The only acute angles, whose sine and cosine are rational, are those determined by the Pythagorean triplets \,$(a,\,b,\,c)$.
+
+{\em Proof.} $1^{\underline{o}}$. When the catheti $a$, $b$ and the hypotenuse $c$ of a right triangle are integers, i.e. they form a Pythagorean triplet, then the sine $\frac{a}{c}$ and the cosine $\frac{b}{c}$ of one of the acute angles of the triangle are rational numbers.
+
+$2^{\underline{o}}$. Let the sine and the cosine of an acute angle $\omega$ be rational numbers 
+$$\sin\omega \;=\; \frac{a}{c}, \quad \cos\omega = \frac{b}{d},$$
+where the integers $a$, $b$, $c$, $d$ satisfy
+\begin{align}
+\gcd(a,\,c) \;=\; \gcd(b,\,d) \;=\; 1.
+\end{align}
+Since the square sum of sine and cosine is always 1, we have\, 
+\begin{align}
+\frac{a^2}{c^2}\!+\!\frac{b^2}{d^2} \;=\; 1.
+\end{align}
+\, By removing the denominators we get the Diophantine equation
+$$a^2d^2\!+\!b^2c^2 \;=\; c^2d^2.$$
+Since two of its terms are divisible by $c^2$, also the third term $a^2d^2$ is divisible by $c^2$.\, But because by (1), the integers $a^2$ and $c^2$ are coprime, we must have \,$c^2 \mid d^2$ (see the corollary of B\'ezout's lemma).\, Similarly, we also must have \,$d^2 \mid c^2$.\, The last divisibility relations mean that\, $c^2 = d^2$,\, whence (2) may be written
+$$a^2+b^2 \;=\; c^2,$$
+and accordingly the sides $a,\,b,\,c$ of a corresponding right triangle are integers.
+
+
+
+%%%%%
+%%%%%
+\end{document}

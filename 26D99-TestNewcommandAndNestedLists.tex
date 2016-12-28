@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TestNewcommandAndNestedLists}
+\pmcreated{2013-03-22 18:51:38}
+\pmmodified{2013-03-22 18:51:38}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{test newcommand and nested lists}
+\pmrecord{4}{41674}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\renewcommand{\labelenumi}{\Roman{enumi}.}
+\renewcommand{\labelenumii}{\Roman{enumi}. \alph{enumii}}
+
+\noindent Here's my list:
+
+\begin{enumerate}
+\item Item 1.
+\begin{enumerate}
+\item List 2, Item 1
+\item List 2, Item 2
+\end{enumerate}
+\item Item 2.
+\item Item 3.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

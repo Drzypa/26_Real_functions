@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SecondDerivativeAsSimpleLimit}
+\pmcreated{2013-03-22 19:00:00}
+\pmmodified{2013-03-22 19:00:00}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{second derivative as simple limit}
+\pmrecord{9}{41868}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmsynonym{second derivative as limit}{SecondDerivativeAsSimpleLimit}
+%\pmkeywords{second derivative}
+\pmrelated{DifferenceQuotient}
+\pmrelated{ImproperLimits}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If the real function $f$ is  twice differentiable  in a neighbourhood of\, $x = x_0$,\, then
+\begin{align}
+f''(x_0) \;=\; \lim_{h \to 0}\frac{f(x_0\!+\!2h)-2f(x_0\!+\!h)+f(x_0)}{h^2}.
+\end{align}
+
+
+\emph{Proof.}\, The right hand side of the asserted equation is of the indeterminate form $\frac{0}{0}$.\, Using 
+\PMlinkid{l'H\^opital's rule}{2657}, we obtain
+\begin{align*}
+\lim_{h \to 0}\frac{f(x_0\!+\!2h)-2f(x_0\!+\!h)+f(x_0)}{h^2} &\;=\; 
+\lim_{h \to 0}\frac{f'(x_0\!+\!2h)\cdot2-2f'(x_0\!+\!h)}{2h}-\frac{f'(x_0)}{h}+\frac{f'(x_0)}{h}\\
+&\;=\;2\lim_{2h \to 0}\frac{f'(x_0\!+\!2h)-f'(x_0)}{2h}-\lim_{h \to 0}\frac{f'(x_0\!+\!h)-f'(x_0)}{h} \\
+&\;=\; 2f''(x_0)-f''(x_0) \\
+&\;=\; f''(x_0).
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

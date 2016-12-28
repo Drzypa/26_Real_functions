@@ -1,0 +1,291 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfTangentFunctionFromAdditionFormula}
+\pmcreated{2013-03-22 16:58:39}
+\pmmodified{2013-03-22 16:58:39}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{construction of tangent function from addition formula}
+\pmrecord{24}{39254}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{dfn}{Definition}
+\newtheorem{thm}{Theorem}
+\begin{document}
+It is possible to define trigonometric functions rigorously using a
+procedure based upon the addition formula for the tangent function.
+The idea is to first note a few purely algebraic facts and then use
+these to show that a certain limiting process converges to a function
+which satisfies the properties of the tangent function, from which
+the remaining trigonometric functions may be defined by purely
+algebraic operations.
+
+\begin{thm}
+If $x$ is a positive real number, then
+\[
+ 0 < \sqrt{1 + {1 \over x^2}} - {1 \over x} < 1
+\]
+(Here and henceforth, the square root sign denotes
+the positive square root.)
+\end{thm}
+
+\begin{proof}
+Let $y = 1/x$.  Then $y$ is also a positive real number.
+We have the following inequalities:
+\[
+ y^2 < 1 + y^2 < 1 + 2y + y^2
+\]
+Taking square roots:
+\[
+ y < \sqrt{1 + y^2} < 1 + y
+\]
+Subtracting $y$:
+\[
+ 0 \le \sqrt{1 + y^2} - y < 1
+\]
+Remembering the definition of $y$, this is the
+inequality which we set out to demonstrate.
+\end{proof}
+
+\begin{dfn}
+Define the algebraic functions $s \colon 
+\{ (x,y) \in \mathbb{R}^2 \mid xy \neq 1 \} \to \mathbb{R}$ 
+and $h \colon (0,\infty) \to (0,1)$ and 
+$g \colon (0,1) \to (0,1)$ as follows:
+\begin{align}
+s(x,y) &= {x + y \over 1 - x y} \\
+h(x) &= \sqrt{1 + {1 \over x^2}} - {1 \over x} \\
+g(x) &= h \left( {1 + x \over 1 - x} \right)
+      = {\sqrt{x^2 - 2 x + 2} + x - 1 \over x + 1}
+\end{align}
+\end{dfn}
+
+\begin{thm}
+$s(s(x,y),z) = s(x,s(y,z))$
+\end{thm}
+
+\begin{proof}
+Calculemus!  On the one hand,
+\[
+s(s(x,y),z) = 
+{{x + y \over 1 - x y} + z \over
+ 1 - {x + y \over 1 - x y} z} \\ =
+{x + y + z - xyz \over 1 - xy - yz - zx}
+\]
+On the other hand,
+\[
+s(x,s(y,z)) =
+{x + {y + z \over 1 - yz} \over
+ 1 - x {y + z \over 1 - yz}} =
+{x + y + z - xyz \over 1 - xy - yz - zx}
+\]
+These quantities are equal.
+\end{proof}
+
+\begin{thm}
+$s(h(x),h(x)) = x$
+\end{thm}
+
+\begin{proof}
+Calculemus rursum!
+\begin{align*}
+s(h(x),h(x)) &=
+{2 \sqrt{1 + {1 \over x^2}} - {2 \over x}  \over
+ 1 - \left( \sqrt{1 + {1 \over x^2}} - {1 \over x} \right)^2} \\ &=
+{2 \sqrt{1 + {1 \over x^2}} - {2 \over x}  \over
+ 1 - \left( 1 + {2 \over x^2} - {2 \over x} \sqrt {1 + {1 \over x^2}} \right)} \\ &=
+{2 \sqrt{1 + {1 \over x^2}} - {2 \over x}  \over
+ -{1 \over x} \left( {2 \over x} - 2 \sqrt {1 + {1 \over x^2}} \right)}
+= x
+\end{align*}
+\end{proof}
+
+\begin{thm}
+$s(h(x),h(y)) = h(s(x,y))$
+\end{thm}
+
+\begin{thm}
+For all $x > 0$, we have $h(x) < x$.
+\end{thm}
+
+\begin{proof}
+Since $x > 0$, we have
+\[
+x^2 + 1 < x^4 + 2 x^2 + 1.
+\]
+By the binomial identity, the right-hand side equals $(x+1)^2$.  
+Taking square roots of both sides,
+\[
+\sqrt{x^2 + 1} < x^2 + 1.
+\]
+Subtracting $1$ from both sides,
+\[
+\sqrt{x^2 + 1} - 1 < x^2.
+\]
+Dividing by $x$ on both sides,
+\[
+\sqrt{1 + {1 \over x^2}} - {1 \over x} < x,
+\]
+or $h(x) < x$.
+\end{proof}
+
+\begin{thm}
+Let $a$ be a positive real number.  Then the sequence
+\[
+a, h(a), h(h(a)), h(h(h(a))), h(h(h(h(a)))), h(h(h(h(h(a))))), \ldots
+\]
+converges to $0$.
+\end{thm}
+
+\begin{proof}
+By the foregoing theorem, this sequence is decreasing.  Hence, it
+must converge to its infimum.  Call this infimum $b$.  Suppose that
+$b > 0$.  Then, since $h$ is continuous, we must have $h(b) = b$,
+which is not possible by the foregoing theorem.  Hence, we must 
+have $b = 0$, so the sequence converges to $0$.
+\end{proof}
+
+Having made these preliminary observations, we may now begin making
+the construction of the trigonometric function.  We begin by defining
+the tangent function for successive bisections of a right angle.
+
+\begin{dfn}
+Define the sequence $\{t_n\}_{n=0}^\infty$ as follows:
+\begin{align*}
+t_0 &= 1 \\
+t_{n+1} &= h(t_n)
+\end{align*}
+\end{dfn}
+
+By the forgoing theorem, this is a decreasing sequence which tends
+to zero.  These will be the values of the tangent function at 
+successive bisections of the right angle.  We now use our function 
+$s$ to construct other values of the tangent function.
+
+\begin{dfn}
+Define the sequence $\{r_{mn}\}$ by the following recursions:
+\begin{align*}
+r_{m0} &= 0 \\
+r_{m \, n+1} &= s(r_{mn},t_m)
+\end{align*}
+\end{dfn}
+
+There is a subtlety involved in this definition (which is why we
+did not specify the range of $m$ and $n$).  Since $s(x,y)$ is
+only well-defined when $xy \neq 1$, we do not know that $r_{mn}$ 
+is well defined for all $m$ and $n$.  In particular, if it should
+happen that $r_{mn}$ is well defined for some $m$ and $n$ but that
+$r_{mn} t_m = 1$, then $r_{mk}$ will be undefined for all $k > m$.
+
+
+\begin{thm}
+Suppose that $r_{mn}$, $r_{mn'}$, and $r_{m \, n+n'}$ are all well-defined.
+Then $r_{m \, n+n'} = s(r_{mn}, r_{mn'})$.
+\end{thm}
+
+\begin{proof}
+We proceed by induction on $n'$.  If $n'=0$, then $r_{m0}$ is defined to
+be $0$, and it is easy to see that $s(r_{mn},0) = r_{mn}$.
+
+Suppose, then, that we know that $r_{m \, n+n'-1} = s(r_{mn}, 
+r_{m \,n'-1})$.  By definition, $r_{mn'} = s(r_{m \, n'-1}, t_m)$ and,
+by theorem 2, we have 
+\begin{align*}
+s(r_{mn}, s(r_{m \, n'-1}, t_m)) &= 
+s(s (r_{mn}, r_{m \, n'-1}), t_m) \\ &=
+s(r_{m \, n+n'-1}, t_m) \\ &=
+r_{m \, n + n'}
+\end{align*}
+\end{proof}
+
+\begin{thm}
+If $n \le 2^m$, then $r_{mn}$ is well-defined, $r_{mn} \le 1$, and 
+$r_{m-1 \, n} = r_{m \, 2n}$.
+\end{thm}
+
+\begin{proof}
+We shall proceed by induction on $m$.  To begin, we note that $r_{00} \le 1$
+because $r_{00} = 0$.  Also note that, if $m=0$, then $n=0$ is the only value for
+which the condition $n \le 2^m$ happens to be satisfied.  The condition 
+$r_{m-1 \, n} = r_{m \, 2n}$ is not relevant when $n = 0$.
+
+Suppose that we know that, for a certain $m$, when $n \le 2^m$, then $r_{mn}$ is 
+well-defined and $r_{mn} \le 1$.  We will now make an induction on $n$ to show that
+if $n \le 2^{m+1}$, then $r_{m+1 \, n}$ is well-defined, $r_{m \, n} \le 1$ and 
+$r_{mn} = r_{m+1 \, 2n}$.  When $n=0$, we have, by definition, $r_{m+1 \, 0} = 0$ 
+so the quantity is defined and it is obvious that $r_{m \, n} \le 1$ and 
+$r_{mn} = r_{m+1 \, 2n}$.
+
+Suppose we know that, for some number $n < 2^m$, we find that $r_{m+1 \, 2n}$ 
+is well-defined, strictly less than $1$ and equals $r_{m+1 \, 2n}$.  By theorem 4,
+since $r_{mn} \le 1$ and $r_{m \, n+1} \le 1$, we may conclude that $h(r_{mn}) < 1$ 
+and $h(r_{m \, n+1}) < 1$, which implies that $h(r_{mn}) h(r_{m \, n+1}) \neq 1$,
+so $s(h(r_{mn}), h(r_{m \, n+1}))$ is well-defined.  By definition, $r_{m \, n+1} =
+s(r_{mn}, t_m)$, so $h(r_{m \, n+1}) = s(h(r_{mn}), h(t_m))$.  Recall that $h(t_m) = 
+t_{m+1}$.  By theorem 1, we have
+\[
+s(h(r_{mn}), s(h(r_{mn}), t_{m+1})) =
+s(s(h(r_{mn}), h(r_{mn})), t_{m+1})).
+\]
+By theorem 2, $s(h(r_{mn}), h(r_{mn}))$ equals $r_{mn}$ which, in turn, by our
+induction hypothesis, equals $r_{m+1 \, n}$.  Combining the results of this
+paragraph, we may conclude that:
+\[
+s(h(r_{mn}), h(r_{m \, n+1})) =
+s(r_{m+1 \, 2n}, t_{m+1}),
+\]
+which means that $r_{m+1 \, 2n+1}$ is defined and equals $s(h(r_{mn}), h(r_{m \, n+1}))$.
+
+Moreover, by definition,
+\[
+s(h(r_{mn}), h(r_{m \, n+1})) =
+{h(r_{mn}) + h(r_{m \, n+1}) \over 1 - h(r_{mn}) h(r_{m \, n+1})}
+\]
+Since $r_{m \, n+1} > r_{mn}$, we have $h(r_{m \, n+1}) > h(r_{mn})$ as well.  This
+implies that the numerator is less than $2 h(r_{m \, n+1})$ and that the denominator
+is greater than $1 - h(r_{m \, n+1}^2$.  Hence, we have $r_{m+1 \, 2n+1} < 
+s(h(r_{m \, n+1}, h(r_{m \, n+1}) = h(r_{m \, n+1} < 1$.
+
+Since, as we have just shown, $r_{m+1 \, 2n+1} < 1$ and, as we already know,
+$t_{m+1} < 1$, we have $r_{m+1 \, 2n+1} t_{m+1} < 1$, so $r_{m+1 \, 2n+2}$
+is well-defined.  Furthermore, we may evaluate this quantity using theorem 1:
+\begin{align*}
+s(r_{m+1 \, 2n+1}, t_{m+1}) &=
+s(s(r_{m \, n}, t_{m+1}), t_{m+1}) \\ &=
+s(r_{m \, n}, s(t_{m+1}, t_{m+1})) \\ &=
+s(r_{m \, n}, t_m) \\ &=
+r_{m \, n + 1}
+\end{align*}
+Hence, we have $r_{m+1 2m+2} = r_{m \, n+1}$.
+
+\end{proof}
+
+
+%%%%%
+%%%%%
+\end{document}

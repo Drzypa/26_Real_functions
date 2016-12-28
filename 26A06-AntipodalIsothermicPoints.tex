@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AntipodalIsothermicPoints}
+\pmcreated{2013-03-22 18:32:10}
+\pmmodified{2013-03-22 18:32:10}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{antipodal isothermic points}
+\pmrecord{6}{41247}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Assume that the momentary temperature on any great circle of a sphere varies \PMlinkname{continuously}{Continuous}.\, Then there exist two diametral points (i.e. antipodal points, end points of a certain \PMlinkname{diametre}{Diameter}) having the same temperature.\\
+
+{\em Proof.}\, Denote by $x$ the distance of any point $P$ measured in a certain direction along the great circle from a \PMlinkescapetext{fixed point} and let $T(x)$ be the temperature in $P$.\, Then we have a continuous (and \PMlinkname{periodic}{PeriodicFunctions}) real function $T$ defined for \,$x \geqq 0$\, satisfying \,$T(x\!+\!p) = T(x)$\, where 
+$p$ is the perimetre of the circle.\, Then also the function $f$ defined by
+                 $$f(x) \;:=\; T\left(x\!+\!\frac{p}{2}\right)-T(x),$$
+i.e. the temperature difference in two antipodic (diametral) points of the great circle, is continuous.\, We have
+\begin{align}
+f\left(\frac{p}{2}\right) \;=\; T(p)-T\left(\frac{p}{2}\right) = T(0)-T\left(\frac{p}{2}\right) = -f(0).
+\end{align}
+If $f$ happens to vanish in\, $x = 0$,\, then the temperature is the same in\, $x = \frac{p}{2}$\, and the assertion proved.\, But if\, $f(0) \neq 0$,\, then by (1), the values of $f$ in\, $x = 0$\, and in\, $x = \frac{p}{2}$\, have opposite signs.\, Therefore, by Bolzano's theorem, there exists a point $\xi$ between $0$ and $\frac{p}{2}$ such that\, $f(\xi) = 0$.\, Thus the temperatures in $\xi$ and $\xi\!+\!\frac{\pi}{2}$ are the same.\\
+
+
+\textbf{Reference:}\; \PMlinkexternal{Fr{\aa}ga Lund om matematik, 6 april 2006}{http://www.maths.lth.se/query/}
+%%%%%
+%%%%%
+\end{document}

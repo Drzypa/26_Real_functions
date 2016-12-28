@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArithmeticgeometricMeanAsAProduct}
+\pmcreated{2013-03-22 17:09:59}
+\pmmodified{2013-03-22 17:09:59}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{arithmetic-geometric mean as a product}
+\pmrecord{6}{39478}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E60}
+\pmclassification{msc}{33E05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Recall that, given two real numbers $0 < x \le y$, their arithmetic-geometric
+mean may be defined as $M(x,y) = \lim_{n \to \infty} g_n$, where
+\begin{align*}
+g_0 &= x \\
+a_0 &= y \\
+g_{n+1} &= \sqrt{a_n g_n} \\
+a_{n+1} &= {a_n + g_n \over 2} .
+\end{align*}
+In this entry, we will re-express this quantity as an infinite product.
+We begin by rewriting the recursion for $g_n$:
+\[
+g_{n+1} = \sqrt{a_n g_n} =
+\sqrt{ {a_n \over g_n} \cdot g_n^2 } =
+g_n \sqrt{a_n \over g_n}
+\]
+From this, it follows that
+\[
+g_n = g_0 \prod_{m=0}^{n-1} h_m
+\]
+where $h_n = \sqrt{a_n / g_n}$.
+
+As it stands, this is not so interesting because no way has been given
+to determine the factors $h_n$ other than first computing $a_n$ and 
+$g_n$.  We shall now correct this defect by deriving a recursion which
+may be used to compute the $h_n$'s directly:
+\begin{align*}
+h_{n+1} &= \sqrt{a_{n+1} \over g_{n+1}} \\
+&= \sqrt{a_n + g_n \over 2 \sqrt{a_n g_n}} \\
+&= \sqrt{ {1 \over 2} 
+\left(
+\sqrt{a_n \over g_n} +
+\sqrt{g_n \over a_n}
+\right)} \\
+&= \sqrt{ {1 \over 2}
+\left(
+h_n + {1 \over h_n}
+\right)} \\
+&= \sqrt{h_n^2 + 1 \over 2 h_n}
+\end{align*}
+
+Taking the limit $n \to \infty$, we then have the formula
+\[
+M(x,y) = x \prod_{m=0}^\infty h_n
+\]
+where
+\[
+h_0 = {y \over x}
+\]
+and
+\[
+h_{n+1} = \sqrt{h_n^2 + 1 \over 2 h_n} .
+\]
+%%%%%
+%%%%%
+\end{document}

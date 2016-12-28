@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RiemannMultipleIntegral}
+\pmcreated{2013-03-22 15:03:34}
+\pmmodified{2013-03-22 15:03:34}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{Riemann multiple integral}
+\pmrecord{14}{36778}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmrelated{Polyrectangle}
+\pmrelated{RiemannIntegral}
+\pmrelated{Integral2}
+\pmrelated{AreaOfPlaneRegion}
+\pmrelated{DevelopableSurface}
+\pmrelated{VolumeAsIntegral}
+\pmrelated{AreaOfPolygon}
+\pmrelated{MoscowMathematicalPapyrus}
+\pmrelated{IntegralOverPlaneRegion}
+\pmdefines{Riemann integrable}
+\pmdefines{Peano Jordan}
+\pmdefines{measurable}
+\pmdefines{area}
+\pmdefines{volume}
+\pmdefines{Jordan content}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+We are going to extend the concept of Riemann integral to functions of several variables.
+
+Let $f\colon\mathbb R^n \to\mathbb R$ be a bounded function with compact support. 
+Recalling the definitions of polyrectangle and the definitions of upper and lower Riemann sums on polyrectangles,
+we define
+\[
+  S^*(f) := \inf\{ S^*(f,P) \colon \text{$P$ is a polyrectangle, $f(x)=0$ for every $x\in\mathbb R^n\setminus \cup P$}\},
+\]
+\[
+  S_*(f) := \sup\{ S_*(f,P) \colon \text{$P$ is a polyrectangle, $f(x)=0$ for every $x\in\mathbb R^n\setminus \cup P$}\}.
+\]
+If $S^*(f)=S_*(f)$ we say that $f$ is \emph{Riemann-integrable} on $\mathbb R^n$ and we define the Riemann integral of $f$:
+\[
+  \int f(x)\, dx := S^*(f) = S_*(f).
+\]
+
+Clearly one has $S^*(f,P)\ge S_*(f,P)$. Also one has $S^*(f,P)\ge S_*(f,P')$ when $P$ and $P'$ are any two polyrectangles containing the support of $f$. In fact one can always find a common refinement $P''$ of both $P$ and $P'$ so that $S^*(f,P)\ge S^*(f,P'')\ge S_*(f,P'')\ge S_*(f,P')$. So, to prove that a function is Riemann-integrable it is enough to prove that for every $\epsilon>0$ there exists a polyrectangle $P$ such that $S^*(f,P)-S_*(f,P)<\epsilon$.
+
+Next we are going to define the integral on more general domains. As a byproduct we also define the measure of sets in $\mathbb R^n$.
+
+Let $D\subset \mathbb R^n$ be a bounded set. We say that $D$ is \emph{Riemann measurable} if
+the characteristic function 
+\[
+\chi_D(x):=\begin{cases} 1 &\text{if $x\in D$}\\
+0 &\text{otherwise}\end{cases}
+\]
+is Riemann measurable on $\R^n$ (as defined above). Moreover we define the \emph{Peano-Jordan measure} of $D$ as
+\[
+  \mathbf{meas}(D) := \int \chi_D(x)\, dx.
+\]
+When $n=3$ the Peano Jordan measure of $D$ is called the \emph{volume} of $D$, 
+and when $n=2$ the Peano Jordan measure of $D$ is called the \emph{area} of $D$.
+
+Let now $D\subset \mathbb R^n$ be a Riemann measurable set and let $f\colon D\to \mathbb R$ be a bounded function. We say that $f$ is \emph{Riemann measurable} if the function $\bar f\colon\mathbb R^n\to\mathbb R$
+\[
+  \bar f(x) :=\begin{cases} f(x)&\text{if $x\in D$}\\
+0&\text{otherwise}
+\end{cases}
+\]
+is Riemann integrable as defined before. In this case we denote with
+\[
+   \int_D f(x)\, dx := \int \bar f(x)\, dx
+\]
+the \emph{Riemann integral} of $f$ on $D$.
+%%%%%
+%%%%%
+\end{document}

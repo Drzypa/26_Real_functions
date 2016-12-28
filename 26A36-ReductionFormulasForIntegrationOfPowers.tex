@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReductionFormulasForIntegrationOfPowers}
+\pmcreated{2013-03-22 18:36:53}
+\pmmodified{2013-03-22 18:36:53}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{reduction formulas for integration of powers}
+\pmrecord{10}{41349}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmclassification{msc}{26A09}
+\pmsynonym{integration of powers}{ReductionFormulasForIntegrationOfPowers}
+%\pmkeywords{power of function}
+\pmrelated{GeneralFormulasForIntegration}
+\pmrelated{IntegralTables}
+\pmrelated{WallisFormulae}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The following reduction formulas, with integer $n$ and \PMlinkescapetext{derivable} via integration by parts, may be used for lowing ($n > 0$) or raising ($n < 0$) the the powers:
+\begin{itemize}
+\item $\displaystyle \int\sin^nx\,dx 
+\;=\; -\frac{1}{n}\sin^{n-1}x\cos{x}+\frac{n\!-\!1}{n}\int\sin^{n-2}x\,dx \qquad (n \gtrless 0)$
+\item $\displaystyle \int\cos^nx\,dx 
+\;=\; \frac{1}{n}\cos^{n-1}x\sin{x}+\frac{n\!-\!1}{n}\int\cos^{n-2}x\,dx \qquad (n \gtrless 0)$
+\item $\displaystyle\int(\ln{x})^n\,dx \;=\; x(\ln{x})^n-n\int(\ln{x})^{n-1}\,dx \qquad (n \gtrless 0)$
+\item $\displaystyle \int\frac{1}{(1+x^2)^n}\,dx 
+\;=\; \frac{1}{2n\!-\!2}\cdot\frac{x}{(1\!+\!x^2)^{n-1}}+\frac{2n\!-\!3}{2n\!-\!2}\int\frac{1}{(1\!+\!x^2)^{n-1}}\,dx
+      \quad (n > 1)$
+\end{itemize}
+
+\textbf{Example.}\, For finding $\displaystyle\int\!\frac{dx}{\sin^3x}$, we apply the first formula with\, $n := -1$,\, getting first
+$$\int\!\frac{dx}{\sin{x}} \,=\, -\frac{1}{-1}\cdot\frac{\cos{x}}{\sin^2x}+\frac{-2}{-1}\int\frac{dx}{\sin^3x}.$$
+From this we solve
+$$\int\!\frac{dx}{\sin^3x} \,=\, -\frac{1}{2}\frac{\cos{x}}{\sin^2x}+\int\!\frac{dx}{\sin{x}} 
+\,=\, -\frac{1}{2}\frac{\cos{x}}{\sin^2x}+\ln\left|\tan\frac{x}{2}\right|+C$$
+(see integration of rational function of sine and cosine).\\
+
+\textbf{Note 1.}\, Instead of the two first formulae, it is simpler in the cases when $n$ is a positive odd or a negative even number to use the following\\
+$\displaystyle\int\sin^{2m+1}x\,dx \,=\, \int\sin^{2m}x\sin{x}\,dx \,=\, -\int(1-\cos^2x)^m(-\sin{x})\,dx$,\\
+$\displaystyle\int\cos^{2m+1}x\,dx \,=\, \int\cos^{2m}x\cos{x}\,dx \,=\, \int(1-\sin^2x)^m\cos{x}\,dx,$\\
+$\displaystyle\int\frac{1}{\sin^{2m}x}\,dx \,=\; \int\frac{1}{\sin^{2m-2}x}\cdot\frac{1}{\sin^2x}\,dx
+\,=\, -\int(1+\cot^2x)^{m-1}\,d\cot{x}$,\\
+$\displaystyle\int\frac{1}{\cos^{2m}x}\,dx \,=\; \int\frac{1}{\cos^{2m-2}x}\cdot\frac{1}{\cos^2x}\,dx
+\,=\, \int(1+\tan^2x)^{m-1}\,d\tan{x}$,\\
+which may be found after making the powers on the right hand sides to polynomials.\\
+
+\textbf{Note 2.}\, $\int\tan^nx\,dx$\, ($n \in \mathbb{Z}_+$)\, is obtained easily by the \PMlinkname{substitution}{IntegrationBySubstitution} \,$\tan{x} := t$,\; $dx = \frac{dt}{t^2\!+\!1}$\,  and a division; e.g.
+\begin{align*}
+\int\tan^5x\,dx &\,=\, \int\frac{t^5}{t^2\!+\!1}\,dt \,=\, \int\!\left(t^3-t+\frac{t}{t^2\!+\!1}\right)dt\\
+&\,=\, \frac{t^4}{4}-\frac{t^2}{2}+\frac{1}{2}\ln(t^2\!+\!1)+C \\
+&\,=\, \frac{\tan^4x}{4}-\frac{\tan^2x}{2}+\ln\sqrt{\tan^2x+1}+C.
+\end{align*}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfTestsForLocalExtremaInLagrangeMultiplierMethod}
+\pmcreated{2013-03-22 19:12:19}
+\pmmodified{2013-03-22 19:12:19}
+\pmowner{scineram}{4030}
+\pmmodifier{scineram}{4030}
+\pmtitle{example of tests for local extrema in Lagrange multiplier method}
+\pmrecord{9}{42120}
+\pmprivacy{1}
+\pmauthor{scineram}{4030}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{49K35}
+\pmclassification{msc}{49-00}
+%\pmkeywords{lagrange multiplier function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $n\in\mathbb{N}^+$ and $c\in\mathbb{R}$. We want to find the local extrema of the function
+\[f\colon\mathbb{R}^n\to\mathbb{R},\quad x\mapsto\sum_{1\le i<j\le n}x_ix_j\]
+subject to the condition $g=0$, where
+\[g\colon\mathbb{R}^n\to\mathbb{R},\quad x\mapsto\sum_{1\le i\le n}x_i-c.\]
+The first and second order partial derivatives are for all $i,j\in\{1,\dots,n\}$
+\[\partial_if(x)=\sum_{k\neq i}x_k,\quad\partial_ig(x)=1,\]
+\[\partial_i\partial_jf(x)=1-\delta_{i,j},\quad\partial_i\partial_jg(x)=0,\]
+where $\delta_{i,j}$ is the Kroenecker-delta. Thus the necessary condition $f'(x)=\lambda g'(x)$ together with $g(x)=0$ gives the system of equations
+\[\sum_{j\neq i}x_j=\lambda,\quad i\in\{1,\dots,n\},\]
+\[\sum_{1\le j\le n}x_j=c.\]
+By summing the first $n$ equations and then substituting in the last we get
+\[(n-1)c=n\lambda,\]
+\[x_i=\sum_{1\le j\le n}x_j-\sum_{j\neq i}x_j=c-\lambda=\frac{c}{n},\quad i\in\{1,\dots,n\}.\]
+Thus there is only one point, where local extremum is possible. We apply the test in the parent entry to the matrix
+\[D^2(f-\lambda g)(x)=[1-\delta_{i,j}]_{i,j=1}^n=nP-I,\]
+where $P$ is the matrix containing $1/n$ in all entries, and $I$ is the identity matrix. $P$ is a rank one projection. Therefore the second derivative has spectrum $\sigma(nP-I)=\{n-1,-1\}$, where $-1$ has multiplicity $n-1$, and $n-1$ has multiplicity $1$. Thus the second derivative of $f-\lambda g$ is indefinit, so it has no local extrema. However the nullspace of $g'(x)$ is precisely the nullspace of $P$, thus the second derivative is strictly negative on the tangent space $T_x(M)$, so the vector $(c/n,\dots,c/n)$ is a local maximum of $f$ subject to $g=0$.
+%%%%%
+%%%%%
+\end{document}

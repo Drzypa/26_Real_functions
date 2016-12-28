@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfChainRule}
+\pmcreated{2013-03-22 12:35:32}
+\pmmodified{2013-03-22 12:35:32}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{example of chain rule}
+\pmrecord{4}{32843}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\begin{document}
+Suppose we wanted to differentiate 
+$$h(x)=\sqrt{\sin(x)}.$$
+Here, $h(x)$ is given by the composition 
+$$h(x)=f(g(x)),$$
+where
+$$f(x)=\sqrt{x}\quad\mbox{and}\quad g(x)=\sin(x).$$
+Then chain rule
+says that 
+$$h'(x)=f'(g(x))g'(x).$$
+
+Since
+$$f'(x)=\frac{1}{2\sqrt{x}},\quad\mbox{and}\quad
+g'(x)=\cos(x),$$
+we have by chain rule
+$$h'(x) = \left(\frac{1}{2\sqrt{\sin x}}\right)\cos x=\frac{\cos
+  x}{2\sqrt{\sin 
+x}}$$
+
+Using the Leibniz formalism, the above calculation would have the
+following appearance.  First we describe the functional relation as
+$$z = \sqrt{\sin(x)}.$$
+Next, we introduce an auxiliary variable $y$, and write
+$$z= \sqrt{y},\qquad y=\sin(x).$$
+We then have
+$$\frac{dz}{dy} = \frac{1}{2\sqrt{y}},\qquad \frac{dy}{dx} =
+\cos(x),$$
+and hence the chain rule gives
+\begin{align*}
+\frac{dz}{dx} &= \frac{1}{2\sqrt{y}}\, \cos(x) \\
+&= \frac{1}{2}\,\frac{\cos(x)}{\sqrt{\sin(x)}}
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

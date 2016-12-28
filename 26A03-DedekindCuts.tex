@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DedekindCuts}
+\pmcreated{2013-03-22 12:38:34}
+\pmmodified{2013-03-22 12:38:34}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Dedekind cuts}
+\pmrecord{26}{32907}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+\pmsynonym{Schnitt}{DedekindCuts}
+\pmrelated{RealNumber}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newtheorem{thm}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{definition}
+\newtheorem*{rem}{Remark}
+
+\theoremstyle{definition}
+\newtheorem*{nott}{Notation}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem*{eg}{Example}
+\newtheorem*{ex}{Exercise}
+\newtheorem*{prop}{Proposition}
+
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\leftbb}{[ \! [}
+\newcommand{\rightbb}{] \! ]}
+\newcommand{\bt}{\begin{thm}}
+\newcommand{\et}{\end{thm}}
+\newcommand{\Rel}{\mathbf{R}}
+\newcommand{\er}{\thicksim}
+\newcommand{\sqle}{\sqsubseteq}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+\begin{document}
+\PMlinkescapeword{cut}
+\PMlinkescapeword{sound}
+
+The purpose of Dedekind cuts is to provide a sound logical foundation for the real number system.
+Dedekind's motivation behind this project is to notice that a real number $\alpha$, intuitively,
+is completely determined by the rationals strictly smaller than $\alpha$ and those strictly larger than
+$\alpha$.  Concerning the completeness or continuity of the real line, Dedekind notes in \cite{Dedekind} that
+
+\begin{quote}
+If all points of the straight line fall into two classes such that every point of the first class lies to the
+left of every point of the second class, then there exists one and only one point which produces this division
+of all points into two classes, this severing of the straight line into two portions.
+\end{quote}
+
+Dedekind defines a point to produce the division of the real line if this point is either the
+least or greatest element of either one of the classes mentioned above.  He further notes that the completeness 
+property, as he just phrased it, is deficient in the rationals, which motivates the definition of reals as cuts 
+of rationals.  Because all rationals greater than $\alpha$ are really 
+just excess baggage, we prefer to sway
+somewhat from Dedekind's original definition.  Instead, we adopt the following definition.
+
+\begin{defn}
+A \emph{Dedekind cut} is a subset $\alpha$ of the rational numbers $\QQ$ that satisfies these
+properties:
+
+\begin{enumerate}
+\item
+$\alpha$ is not empty.
+
+\item
+$\mathbb{Q} \setminus \alpha$ is not empty.
+
+\item
+$\alpha$ contains no greatest element
+
+\item
+For $x, y \in \QQ$, if $x \in \alpha$ and $y < x$, then $y \in \alpha$ as well.
+\end{enumerate}
+\end{defn}
+
+Dedekind cuts are particularly appealing for two reasons.  First, they make it very easy to
+prove the completeness, or continuity of the real line.  Also, they make it quite plain to
+distinguish the rationals from the irrationals on the real line, and put the latter on a firm
+logical foundation.
+In the construction of the real numbers from Dedekind cuts, we make the following definition:
+
+\begin{defn}
+A \emph{real number} is a Dedekind cut.  We denote the set of all real numbers by $\RR$ and we
+order them by set-theoretic inclusion, that is to say, for any $\alpha, \beta \in \RR$,
+\[ \alpha < \beta \mbox{ if and only if } \alpha \subset \beta \]
+where the inclusion is strict.  We further define $\alpha = \beta$ as real numbers 
+if $\alpha$ and $\beta$ are equal as sets.  As usual, we write $\alpha \leq \beta$ 
+if $\alpha < \beta$ or $\alpha=\beta$.  Moreover, a real number $\alpha$ is said to be \emph{irrational}
+if $\QQ \setminus \alpha$ contains no least element.
+\end{defn}
+
+The Dedekind completeness property of real numbers, expressed as the supremum property, now becomes straightforward 
+to prove.  In what follows, we will reserve Greek variables for real numbers, and Roman variables for rationals.
+
+\begin{thm}
+Every nonempty subset of real numbers that is bounded above has a least upper bound.
+\end{thm}
+\begin{proof}
+Let $A$ be a nonempty set of real numbers, such that for every $\alpha \in A$ we have that
+$\alpha \leq \gamma$ for some real number $\gamma$.  Now define the set 
+
+\[ \sup A =  \bigcup_{\alpha \in A} \alpha. \]
+
+We must show that this set is a real number.  This amounts to checking the four conditions
+of a Dedekind cut. 
+\begin{enumerate}
+\item
+$\sup A$ is clearly not empty, for it is the nonempty union of nonempty sets.
+
+\item
+Because $\gamma$ is a real number, there is some rational $x$ that is not in $\gamma$.  Since
+every $\alpha \in A$ is a subset of $\gamma$, $x$ is not in any $\alpha$, so $x \not\in \sup A$
+either.  Thus, $\QQ \setminus \sup A$ is nonempty.
+
+\item
+If $\sup A$ had a greatest element $g$, then $g \in \alpha$
+for some $\alpha \in A$.  Then $g$ would be a greatest element of $\alpha$, but $\alpha$ is a real number, so 
+by contrapositive, $\sup A$ has no greatest element. 
+\item
+Lastly, if $x \in \sup A$, then $x \in \alpha$ for some $\alpha$, so given any $y < x$ because $\alpha$ 
+is a real number $y \in \alpha$, whence $y \in \sup A$. 
+\end{enumerate}
+Thus, $\sup A$ is a real number. Trivially, $\sup A$ is an upper bound of $A$, for every $\alpha \subseteq \sup A$.
+It now suffices to prove that $\sup A \leq \gamma$, because $\gamma$ was an arbitrary
+upper bound.  But this is easy, because
+every $x \in \sup A$ is an element of $\alpha$ for some $\alpha \in A$, so because $\alpha \subseteq \gamma$, 
+$x \in \gamma$.  Thus,
+$\sup A$ is the least upper bound of $A$.  We call this real number the \emph{supremum} of A.
+\end{proof}
+
+To finish the construction of the real numbers, we must endow them with algebraic operations, define the additive
+and multiplicative identity elements, prove that these definitions give a field, and prove further results about the order of the reals (such as the totality of this
+order) -- in short, build a complete ordered field.  This task is somewhat laborious, but we include here the
+appropriate definitions.  Verifying their correctness can be an instructive, albeit tiresome, exercise.  We use the 
+same symbols for the operations on the reals as for the rational numbers; this should cause no confusion in context.
+
+\begin{defn}
+Given two real numbers $\alpha$ and $\beta$, we define
+\begin{itemize}
+\item
+ The \emph{additive identity}, denoted $0$, is 
+  \[0 := \{ x \in \QQ : x < 0 \} \]
+\item
+ The \emph{multiplicative identity}, denoted $1$, is
+  \[1 := \{x \in \QQ : x < 1 \} \]
+\item
+ \emph{Addition} of $\alpha$ and $\beta$ denoted $\alpha + \beta$ is
+\[ \alpha + \beta := \{x + y : x \in \alpha, ~y \in \beta \} \]
+\item
+ The \emph{opposite} of $\alpha$, denoted $-\alpha$, is
+  \[ -\alpha := \{x \in \QQ: -x \not\in \alpha, \mbox{ but } -x \mbox{ is not the least element of }
+    \QQ \setminus \alpha \} \]
+\item
+ The \emph{absolute value} of $\alpha$, denoted $|\alpha|$, is
+\begin{equation*}
+|\alpha| :=
+ \begin{cases}
+   \alpha, &\text{if } ~\alpha \geq 0 \\
+  -\alpha, &\text{if } ~\alpha \leq 0
+ \end{cases}
+\end{equation*}
+\item
+ If $\alpha, \beta > 0$, then \emph{multiplication} of $\alpha$ and $\beta$, denoted $\alpha \cdot \beta$, is
+  \[\alpha \cdot \beta := \{z \in \QQ : z \leq 0 \mbox{ or } z = xy \mbox{ for some } x \in \alpha, ~y \in \beta 
+               \mbox{ with } x, y > 0 \} \]
+ In general, 
+ \begin{equation*}
+ \alpha \cdot \beta :=
+  \begin{cases}
+    0,                    &\text{if } ~\alpha = 0  \text{ or } ~\beta = 0 \\
+    |\alpha|\cdot|\beta|  &\text{if } ~\alpha > 0, ~\beta > 0 \text { or } ~\alpha < 0, ~\beta < 0 \\
+    -(|\alpha|\cdot|\beta|) &\text{if } ~\alpha > 0, ~\beta < 0 \text { or } ~\alpha > 0, ~\beta < 0
+   \end{cases}
+  \end{equation*}
+\item
+The \emph{inverse} of $\alpha > 0$, denoted $\alpha^{-1}$, is
+\[
+\alpha^{-1} := \{x \in \QQ : x \leq 0 \text{ or } x > 0 \text{ and } (1/x) \not\in \alpha, \text{ but }
+                1/x \text{ is not the least element of } \QQ \setminus \alpha \}
+\]
+If $\alpha < 0$, 
+\[ \alpha^{-1} :=  -(|\alpha|)^{-1}  \]
+ 
+\end{itemize}
+\end{defn}
+
+All that remains (!) is to check that the above definitions do indeed define a complete ordered field, and that
+all the sets implied to be real numbers are indeed so.  
+The properties of $\RR$ as an ordered field follow from these definitions and the properties of $\QQ$ as an
+ ordered field. 
+It is important to point out that in two steps, in showing that inverses and opposites are properly defined, 
+we require an extra property of $\QQ$, not merely in its capacity as an ordered field.
+This requirement is the Archimedean property.
+
+Moreover, because $\RR$ is a field of characteristic $0$, it contains an isomorphic copy of $\QQ$.  The rationals
+correspond to the Dedekind cuts $\alpha$ for which $\QQ \setminus \alpha$ contains a least member.
+
+\begin{thebibliography}{99}
+\bibitem{Courant&Robbins}
+Courant, Richard and Robbins, Herbert.  {\it What is Mathematics?} pp. 68-72  Oxford University Press, Oxford, 1969
+\bibitem{Dedekind}
+Dedekind, Richard.  {\it Essays on the Theory of Numbers}  Dover Publications Inc, New York 1963
+\bibitem{Rudin}
+Rudin, Walter {\it Principles of Mathematical Analysis} pp. 17-21 McGraw-Hill Inc, New York, 1976
+\bibitem{Spivak}
+Spivak, Michael.  {\it Calculus} pp. 569-596  Publish or Perish, Inc. Houston, 1994
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminationOfFourierCoefficients}
+\pmcreated{2013-03-22 18:22:47}
+\pmmodified{2013-03-22 18:22:47}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{determination of Fourier coefficients}
+\pmrecord{7}{41022}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{42A16}
+\pmsynonym{calculation of Fourier coefficients}{DeterminationOfFourierCoefficients}
+%\pmkeywords{Fourier coefficients}
+\pmrelated{UniquenessOfFourierExpansion}
+\pmrelated{FourierSineAndCosineSeries}
+\pmrelated{OrthogonalityOfChebyshevPolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Suppose that the real function $f$ may be presented as sum of the Fourier series:
+\begin{align}
+f(x) \;=\; \frac{a_0}{2}+\sum_{m=0}^\infty(a_m\cos{mx}+b_m\sin{mx})
+\end{align}
+Therefore, $f$ is periodic with period $2\pi$.\, For expressing the Fourier coefficients $a_m$ and $b_m$
+with the function itself, we first multiply the series (1) by $\cos{nx}$ ($n \in \mathbb{Z}$) and integrate from $-\pi$ to $\pi$.\, Supposing that we can integrate termwise, we may write
+\begin{align}
+\int_{-\pi}^\pi\!f(x)\cos{nx}\,dx \,=\, \frac{a_0}{2}\!\int_{-\pi}^\pi\!\cos{nx}\,dx
++\!\sum_{m=0}^\infty\!\left(a_m\!\int_{-\pi}^\pi\!\cos{mx}\cos{nx}\,dx+b_m\!\int_{-\pi}^\pi\!\sin{mx}\cos{nx}\,dx\right)\!.
+\end{align}
+When\, $n = 0$,\, the equation (2) reads
+\begin{align}
+\int_{-\pi}^\pi f(x)\,dx = \frac{a_0}{2}\cdot2\pi = \pi a_0,
+\end{align}
+since in the sum of the right hand side, only the first addend is distinct from zero. 
+
+When $n$ is a positive integer, we use the product formulas of the trigonometric identities, getting
+$$\int_{-\pi}^\pi\cos{mx}\cos{nx}\,dx 
+= \frac{1}{2}\int_{-\pi}^\pi[\cos(m-n)x+\cos(m+n)x]\,dx,$$
+$$\int_{-\pi}^\pi\sin{mx}\cos{nx}\,dx 
+= \frac{1}{2}\int_{-\pi}^\pi[\sin(m-n)x+\sin(m+n)x]\,dx.$$
+The latter expression vanishes always, since the sine is an odd function.\, If\, $m \neq n$,\, the former equals zero because the antiderivative consists of sine terms which vanish at multiples of $\pi$; only in the case\, $m = n$\, we obtain from it a non-zero result $\pi$.\, Then (2) reads
+\begin{align}
+\int_{-\pi}^\pi f(x)\cos{nx}\,dx = \pi a_n
+\end{align}
+to which we can include as a special case the equation (3).
+
+By multiplying (1) by $\sin{nx}$ and integrating termwise, one obtains similarly
+\begin{align}
+\int_{-\pi}^\pi f(x)\sin{nx}\,dx = \pi b_n.
+\end{align}
+The equations (4) and (5) imply the formulas
+$$a_n \;=\; \frac{1}{\pi}\int_{-\pi}^\pi f(x)\cos{nx}\,dx \quad (n = 0,\,1,\,2,\,\ldots)$$
+and
+$$b_n \;=\; \frac{1}{\pi}\int_{-\pi}^\pi f(x)\sin{nx}\,dx \quad (n = 1,\,2,\,3,\,\ldots)$$
+for finding the values of the Fourier coefficients of $f$.
+
+
+
+%%%%%
+%%%%%
+\end{document}

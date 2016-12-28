@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChainRule}
+\pmcreated{2013-03-22 12:26:43}
+\pmmodified{2013-03-22 12:26:43}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{chain rule}
+\pmrecord{12}{32561}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{Derivative}
+\pmrelated{ChainRuleSeveralVariables}
+\pmrelated{ExampleOnSolvingAFunctionalEquation}
+\pmrelated{GudermannianFunction}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+Let $f, g$ be differentiable,
+real-valued functions such that $g$ is defined on an open set 
+$I\subseteq \mathbb{R}$, and $f$ is defined on $g(I)$. 
+Then the derivative of the composition $f\circ g$ is given by
+the \emph{chain rule}, which asserts that
+$$
+  (f\circ g)'(x) = (f'\circ g)(x)\, g'(x), \quad x\in I.
+$$
+
+The chain rule has a particularly suggestive appearance in terms of
+the Leibniz formalism.  Suppose that $z$ depends differentiably on
+$y$, and that $y$ in turn depends differentiably on $x$.  Then we have
+$$
+  \frac{dz}{dx} = \frac{dz}{dy}\, \frac{dy}{dx}.
+$$
+The apparent cancellation  of the $dy$ term is at best a formal
+mnemonic, and does not constitute a rigorous proof of this result.
+Rather, the Leibniz format is well suited to the interpretation of the
+chain rule in terms of related rates. To wit:
+\begin{quote}
+  \em The instantaneous rate of change of $z$ relative to $x$ is equal to the
+  rate of change of $z$ relative to $y$ times the rate of change of
+  $y$ relative to $x$.
+\end{quote}
+%%%%%
+%%%%%
+\end{document}

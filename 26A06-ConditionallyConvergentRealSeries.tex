@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConditionallyConvergentRealSeries}
+\pmcreated{2013-03-22 18:41:41}
+\pmmodified{2013-03-22 18:41:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{conditionally convergent real series}
+\pmrecord{7}{41455}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{40A05}
+\pmrelated{SumOfSeriesDependsOnOrder}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{terms} \PMlinkescapeword{mean}
+
+\textbf{Theorem.}\, If the series
+\begin{align}
+u_1\!+\!u_2\!+\!u_3\!+\ldots
+\end{align}
+with real terms $u_i$ is conditionally convergent, i.e. converges but $|u_1|\!+\!|u_2|\!+\!|u_3|\!+\cdots$ diverges,
+then the both series
+\begin{align}
+a_1\!+\!a_2\!+\!a_3\!+\ldots \quad \mbox{and} \quad -b_1\!-\!b_2\!-\!b_3\!-\ldots
+\end{align}
+consisting of the positive and negative terms of (1) are divergent --- more accurately,
+$$\lim_{n\to\infty}\sum_{i=1}^na_n \;=\; +\infty\quad\mbox{and}\quad\lim_{n\to\infty}\sum_{i=1}^n(-b_n) \;=\; -\infty.$$\\
+
+{\em Proof.}\, If both of the series (2) were convergent, having the sums $A$ and $-B$, then we had 
+$$0 \leqq |u_1|\!+\!|u_2|\!+\ldots+\!|u_n| < A\!+\!B$$
+for every $n$.\, This would however mean that (1) would converge absolutely, contrary to the conditional convergence.\, If, on the other hand, one of the series (2) were convergent and the other divergent, then we can see that (1) had to diverge, contrary to what is supposed in the theorem.\, In fact, if e.g. $a_1\!+\!a_2\!+\!a_3\!+\ldots$ were convergent, then the partial sum $a_1\!+\!a_2\!+\ldots+\!a_n$ were below a finite bound for each $n$, whereas the 
+$n^\mathrm{th}$ partial sum of the divergent one of (2) would tend to\, $-\infty$ as $n \to \infty$; then should also the $n^\mathrm{th}$ partial sum of (1) tend to\, $-\infty$.
+%%%%%
+%%%%%
+\end{document}

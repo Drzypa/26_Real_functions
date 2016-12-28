@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RigorousDefinitionOfTheLogarithm}
+\pmcreated{2013-03-22 17:00:37}
+\pmmodified{2013-03-22 17:00:37}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{rigorous definition of the logarithm}
+\pmrecord{18}{39292}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{dfn}{Definition}
+\newtheorem{thm}{Theorem}
+\begin{document}
+In this entry, we shall construct the logarithm as a Dedekind cut
+and then demonstrate some of its basic properties.  All that is
+required in the way of background material are the properties of
+integer powers of real numbers.
+
+\begin{thm}
+Suppose that $a,b,c,d$ are positive integers such that
+$a/b = c/d$ and that $x>0$ and $y>0$ are  real numbers. 
+Then $x^a \le y^b$ if and only if $x^c \le y^d$.
+\end{thm}
+
+\begin{proof}
+Cross multiplying, the condition $a/b = c/d$ is equivalent to $ad = bc$.
+By elementary properties of powers, $x^a \le y^b$ if and only if
+$x^{ad} \le y^{bd}$.  Likewise, $x^c \le x^d$ if and only if $x^{bc} \le
+y^{bd}$ which, since $bc = ad$, is equivalent to $x^{ad} \le y^{bd}$.
+Hence, $x^a \le y^b$ if and only if $x^c \le x^d$.
+\end{proof}
+
+\begin{thm}
+Suppose that $a,b,c,d$ are positive integers such that
+$a/b \le c/d$ and that $x>1$ and $y>0$ are real numbers.  
+If $x^c \le y^d$ then $x^a \le y^b$.
+\end{thm}
+
+\begin{proof}
+Since we assumed that $b > 0$, we have that $x^c \le y^d$ is equivalent
+to $x^{bc} \le y^{bd}$.  Likewise, since $d > 0$, we have that $x^a \le 
+y^b$ is equivalent to $x^{ad} \le y^{bd}$.  Cross-multiplying, $a/b \le c/d$
+is equivalent to $ad \le bc$.  Since $x > 1$, we have $x^{ad} \le x^{bc}$.
+Combining the above statements, we conclude that $x^c \le y^d$ implies
+$x^a \le y^b$.
+\end{proof}
+
+\begin{thm}
+Suppose that $a,b,c,d$ are positive integers such that
+$a/b > c/d$ and that $x>1$ and $y>0$ are real numbers.  
+If $x^a > y^b$ then $x^c > y^d$.
+\end{thm}
+
+\begin{proof}
+Since we assumed that $b > 0$, we have that $x^c > y^d$ is equivalent
+to $x^{bc} > y^{bd}$.  Likewise, since $d > 0$, we have that $x^a > 
+y^b$ is equivalent to $x^{ad} > y^{bd}$.  Cross-multiplying, $a/b > c/d$
+is equivalent to $ad > bc$.  Since $x > 1$, we have $x^{ad} > x^{bc}$.
+Combining the above statements, we conclude that $x^c > y^d$ implies
+$x^a > y^b$.
+\end{proof}
+
+\begin{thm}
+Let $x>1$ and $y$ be real numbers.
+Then there exists an integer $n$ such that $x^n > y$.
+\end{thm}
+
+\begin{proof}
+Write $x = 1 + h$.  Then we have $(1 + h)^n \ge 1 + n h$ for all
+positive integers $n$.  This fact is easily proved by induction.
+When $n = 1$, it reduces to the triviality $1 + h \ge h$.  If
+$(1 + h)^n \ge 1 + n h$, then
+\[
+(1 + h)^{n+1} = (1 + h) (1 + h)^n \ge (1 + h) (1 + n h) =
+1 + (n+1) h + n h^2 \ge 1 + (n+1) h.
+\]
+By the Archimedean property, there exists an integer $n$ such
+that $1 + nh > y$, so $x^n > y$.
+\end{proof}
+
+\begin{thm}
+Let $x>1$ and $y$ be real numbers. 
+Then the pair of sets $(L,U)$ where
+\begin{align}
+L &= \{r \in \mathbb{Q} \mid (\exists a, b \in \mathbb{Z}) \quad
+b > 0 ~\land~ r = a/b ~\land~ x^a \le y^b\} \\
+U &= \{r \in \mathbb{Q} \mid (\exists a, b \in \mathbb{Z}) \quad
+b > 0 ~\land~ r = a/b ~\land~ x^a > y^b\}
+\end{align}
+forms a Dedekind cut.
+\end{thm}
+
+\begin{proof}
+Let $r$ be any rational number.  Then we have $r = a/b$ for some integers
+$a$ and $b$ such that $b > 0$.  The possibilities $x^a \le y^b$ and
+$x^a > y^b$ are exhaustive so $r$ must belong to at least one of $U$ and
+$L$.  By theorem 1, it cannot belong to both.  By theorem 2, if $r \in L$
+and $s \le r$, then $s \in L$ as well.  By theorem 3, if $r \in U$
+and $s > r$, then $s \in U$ as well.  By theorem 4, neither $L$ nor $U$
+are empty.  Hence, $(L,U)$ is a Dedekind cut and defines a
+real number.
+\end{proof}
+
+\begin{dfn}
+Suppose $x>1$ and $y>0$ are real numbers.   Then,
+we define $\log_x y$ to be the real number defined by the cut $(L,U)$ of
+the above theorem.
+\end{dfn}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GronwallsLemma}
+\pmcreated{2013-03-22 13:22:20}
+\pmmodified{2013-03-22 13:22:20}
+\pmowner{jarino}{552}
+\pmmodifier{jarino}{552}
+\pmtitle{Gronwall's lemma}
+\pmrecord{4}{33901}
+\pmprivacy{1}
+\pmauthor{jarino}{552}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D10}
+\pmsynonym{Gronwall's inequality}{GronwallsLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If, for $t_0\leq t\leq t_1$, $\phi(t)\geq 0$ and $\psi(t)\geq 0$ are continuous functions such that the inequality
+\[
+\phi(t)\leq K+L\int_{t_0}^t \psi(s)\phi(s)ds
+\]
+holds on $t_0\leq t\leq t_1$, with $K$ and $L$ positive constants, then
+\[
+\phi(t)\leq K\exp\left(L\int_{t_0}^t \psi(s)ds\right)
+\]
+on $t_0\leq t\leq t_1$.
+%%%%%
+%%%%%
+\end{document}

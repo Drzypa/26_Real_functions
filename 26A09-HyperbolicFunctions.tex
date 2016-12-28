@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperbolicFunctions}
+\pmcreated{2013-03-22 12:38:27}
+\pmmodified{2013-03-22 12:38:27}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{hyperbolic functions}
+\pmrecord{13}{32905}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmrelated{UnitHyperbola}
+\pmrelated{ComplexTangentAndCotangent}
+\pmrelated{ParallelCurve}
+\pmrelated{HyperbolicAngle}
+\pmrelated{ExampleOfCauchyMultiplicationRule}
+\pmrelated{DerivationOfFormulasForHyperbolicFunctionsFromDefinitionOfHyperbolicAngle}
+\pmrelated{HeavisideFormula}
+\pmrelated{Catenary}
+\pmrelated{HyperbolicSineIntegral}
+\pmrelated{InverseGudermannia}
+\pmdefines{sinh}
+\pmdefines{cosh}
+\pmdefines{tanh}
+\pmdefines{coth}
+\pmdefines{sech}
+\pmdefines{csch}
+\pmdefines{hyperbolic sine}
+\pmdefines{hyperbolic cosine}
+\pmdefines{hyperbolic tangent}
+\pmdefines{hyperbolic cotangent}
+\pmdefines{hyperbolic secant}
+\pmdefines{hyperbolic cosecant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\begin{document}
+The hyperbolic functions $\sinh$ ({\em sinus hyperbolicus}) and $\cosh$ ({\em cosinus hyperbolicus}) with arbitrary complex argument $x$ are defined as follows:
+\begin{eqnarray*}
+\sinh x&:=&\frac{e^x-e^{-x}}{2},\\
+\cosh x&:=&\frac{e^x+e^{-x}}{2}.
+\end{eqnarray*}
+One can then also also define the functions $\tanh$ ({\em tangens hyperbolica}) and $\coth$ ({\em cotangens hyperbolica}) in analogy to the definitions of $\tan$ and $\cot$:
+\begin{eqnarray*}
+\tanh x&:=&\frac{\sinh x}{\cosh x}=\frac{e^x-e^{-x}}{e^x+e^{-x}},\\
+\coth x&:=&\frac{\cosh x}{\sinh x}=\frac{e^x+e^{-x}}{e^x-e^{-x}}.
+\end{eqnarray*}
+We further define the $\sech$ and $\csch$:
+\begin{eqnarray*}
+\sech x&:=&\frac{1}{\cosh x}=\frac{2}{e^x+e^{-x}},\\
+\csch x&:=&\frac{1}{\sinh x}=\frac{2}{e^x-e^{-x}},
+\end{eqnarray*}
+where $\cosh x$ resp. $\sinh x$ is not $0$.
+
+\begin{figure}[h]
+\begin{centering}
+\includegraphics[angle=270, scale=0.6]{hyperbolic.ps}
+\caption{Graphs of the hyperbolic functions.}\label{fig:graphs}
+\end{centering}
+\end{figure}
+
+The hyperbolic functions are named in that way because the hyperbola
+$$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1$$
+can be written in parametrical form with the equations:
+$$x=a\cosh t,\quad y=b\sinh t.$$
+This is because of the equation
+$$\cosh^2 x-\sinh^2 x=1.$$
+There are also addition formulas which are like the ones for trigonometric functions:
+\begin{eqnarray*}
+\sinh (x\pm y)&=&\sinh x\cosh y\pm\cosh x\sinh y\\
+\cosh (x\pm y)&=&\cosh x\cosh y\pm\sinh x\sinh y.
+\end{eqnarray*}
+The Taylor series for the hyperbolic functions are:
+\begin{eqnarray*}
+\sinh x&=&\sum_{n=0}^{\infty}\frac{x^{2n+1}}{(2n+1)!}\\
+\cosh x&=&\sum_{n=0}^{\infty}\frac{x^{2n}}{(2n)!}.
+\end{eqnarray*}
+There are  the following \PMlinkescapetext{connections} between the hyperbolic and the trigonometric functions:
+\begin{eqnarray*}
+\sin x&=&\frac{\sinh (ix)}{i}\\
+\cos x&=&\cosh (ix).
+\end{eqnarray*}
+
+%%%%%
+%%%%%
+\end{document}

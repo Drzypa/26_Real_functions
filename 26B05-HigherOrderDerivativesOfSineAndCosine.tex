@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HigherOrderDerivativesOfSineAndCosine}
+\pmcreated{2013-03-22 14:45:16}
+\pmmodified{2013-03-22 14:45:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{higher order derivatives of sine and cosine}
+\pmrecord{13}{36395}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{46G05}
+\pmclassification{msc}{26A24}
+\pmrelated{FractionalDifferentiation}
+\pmrelated{HigherOrderDerivatives}
+\pmrelated{ExampleOfTaylorPolynomialsForSinX}
+\pmrelated{CosineAtMultiplesOfStraightAngle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{order}
+
+One may consider the sine and cosine either as \PMlinkname{real}{RealFunction} or complex functions.\, In both  cases they are everywhere smooth, having the derivatives of all \PMlinkname{orders}{OrderOfDerivative} in every point.\, The formulae
+$$\frac{d^n}{dx^n}\sin{x} \;=\; \sin{(x+n\!\cdot\!\frac{\pi}{2})}$$
+and
+$$\frac{d^n}{dx^n}\cos{x} \;=\; \cos{(x+n\!\cdot\!\frac{\pi}{2})},$$
+where\, $n = 0,\,1,\,2,\,\ldots$ (the derivative of the $0^\mathrm{th}$ order means the function itself), can be proven by induction on $n$.\, Another possibility is to utilize Euler's formula, obtaining
+$$\frac{d^n}{dx^n}\cos{x}+i\frac{d^n}{dx^n}\sin{x} \;=\; \frac{d^n}{dx^n}e^{ix} \;=\; 
+e^{ix}i^n \;=\; e^{ix+in\frac{\pi}{2}} \;=\; 
+\cos{(x+n\!\cdot\!\frac{\pi}{2})}+i\sin{(x+n\!\cdot\!\frac{\pi}{2})};$$
+here one has to compare the \PMlinkname{real}{ComplexFunction} and imaginary parts -- supposing that $x$ is real.
+%%%%%
+%%%%%
+\end{document}

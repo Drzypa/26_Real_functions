@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfProductRule}
+\pmcreated{2013-03-22 12:28:00}
+\pmmodified{2013-03-22 12:28:00}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of product rule}
+\pmrecord{6}{32629}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmrelated{Derivative}
+\pmrelated{ProductRule}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\D}[1]{\ensuremath{\mathrm{d}#1}}
+\begin{document}
+We begin with two differentiable functions $f(x)$ and $g(x)$ and show that their product is differentiable, and that the derivative of the product has the desired form.
+
+By simply calculating, we have for all values of $x$ in the domain of $f$ and $g$ that 
+
+\begin{eqnarray*}
+\frac{\D{}}{\D{x}}\left[f(x)g(x)\right]
+& = & \lim_{h\to0}\frac{f(x+h)g(x+h) - f(x)g(x)}{h} \\
+& = & \lim_{h\to0}\frac{f(x+h)g(x+h) + f(x+h)g(x) - f(x+h)g(x) - f(x)g(x)}{h} \\
+& = & \lim_{h\to0}\left[f(x+h)\frac{g(x+h)-g(x)}{h} + g(x)\frac{f(x+h)-f(x)}{h}\right] \\
+& = & \lim_{h\to0}\left[f(x+h)\frac{g(x+h)-g(x)}{h}\right] + \lim_{h\to0}\left[g(x)\frac{f(x+h)-f(x)}{h}\right] \\
+& = & f(x)g'(x) + f'(x)g(x).
+\end{eqnarray*}
+
+The key argument here is the next to last line, where we have used the fact that both $f$ and $g$ are differentiable, hence the limit can be distributed across the sum to give the desired equality.
+%%%%%
+%%%%%
+\end{document}

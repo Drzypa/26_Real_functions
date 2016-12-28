@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FunctionOfNotBoundedVariation}
+\pmcreated{2013-03-22 17:56:29}
+\pmmodified{2013-03-22 17:56:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{function of not bounded variation}
+\pmrecord{6}{40438}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A45}
+\pmsynonym{example of unbounded variation}{FunctionOfNotBoundedVariation}
+\pmsynonym{function of unbounded variation}{FunctionOfNotBoundedVariation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Example.}\, We show that the function
+\begin{eqnarray*}
+ f\!:\; x\mapsto\! & \left\{ \begin {array}{ll} x\cos\frac{\pi}{x} & \mbox{when}\,\,x \neq 0,\\
+ 0 & \mbox{when}\,\, x = 0,
+ \end{array} \right.
+ \end{eqnarray*}
+which is continuous in the whole $\mathbb{R}$, is not of bounded variation on any interval containing the zero.
+
+Let us take e.g. the interval \,$[0,\,a]$.\, Chose a positive integer $m$ such that \, $\frac{1}{m} < a$ and the partition of the interval with the points \, $\frac{1}{m},\, \frac{1}{m+1},\,\frac{1}{m+2},\, \ldots,\, \frac{1}{n}$\, into the subintervals
+$[0,\,\frac{1}{n}],\; [\frac{1}{n},\,\frac{1}{n-1}],\;\ldots,\; [\frac{1}{m+1},\,\frac{1}{m}],\; [\frac{1}{m},\,a]$.\; For each positive integer $\nu$ we have (see \PMlinkname{this}{CosineAtMultiplesOfStraightAngle})
+$$f\left(\frac{1}{\nu}\right) = \frac{1}{\nu}\cos\nu\pi = \frac{(-1)^\nu}{\nu}.$$
+Thus we see that the total variation of $f$ in all partitions of \,$[0,\,a]$\, is at least
+$$\frac{1}{n}\!+\!\left(\frac{1}{n}\!+\!\frac{1}{n\!-\!1}\right)\!+\ldots+\!\left(\frac{1}{m\!+\!1}+\frac{1}{m}\right)
+= \frac{1}{m}+2\!\sum_{\nu=m+1}^n\frac{1}{\nu}.$$
+Since the harmonic series diverges, the above sum increases to $\infty$ as\, $n\to\infty$.\, Accordingly, the total variation must be infinite, and the function $f$ is not of bounded variation on\, $[0,\,a]$.
+
+It is not difficult to justify that $f$ is of bounded variation on any finite interval that does not contain 0.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc E. Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset III. Toinen osa.}\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1940).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

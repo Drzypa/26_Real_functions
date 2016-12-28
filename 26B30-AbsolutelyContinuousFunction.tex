@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbsolutelyContinuousFunction}
+\pmcreated{2013-03-22 15:18:47}
+\pmmodified{2013-03-22 15:18:47}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{absolutely continuous function}
+\pmrecord{13}{37116}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B30}
+\pmclassification{msc}{26A46}
+\pmrelated{SingularFunction}
+\pmrelated{AbsolutelyContinuous}
+\pmdefines{fundamental theorem of calculus for the Lebesgue integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{order}
+
+\PMlinkescapetext{Absolute continuity} is the precise condition one needs to 
+impose in order for the fundamental theorem of calculus 
+to hold for the Lebesgue integral.
+
+\PMlinkescapeword{absolutely continuous}
+\PMlinkescapeword{property}
+{\bf Definition}
+Suppose $[a,b]$ be a closed bounded interval of $\R$.
+Then a function $f\colon [a,b]\to\C$ is 
+   {\bf absolutely continuous} on $[a,b]$,
+if for any $\varepsilon>0$, there is a $\delta>0$ such that the following
+condition holds:
+\begin{itemize}
+\item[($\ast$)] If $(a_1,b_1), \ldots, (a_n,b_n)$ is a finite
+collection of disjoint open intervals in $[a,b]$
+such that
+$$ 
+  \sum_{i=1}^n (b_i-a_i)< \delta,
+$$
+then
+$$ 
+   \sum_{i=1}^n |f(b_i)-f(a_i)|< \varepsilon.
+$$
+\end{itemize}
+
+\begin{thm}[\PMlinkescapetext{Fundamental theorem of calculus for the Lebesgue integral}]
+Let $f\colon [a,b] \to \C$ be a
+function. Then $f$ is absolutely continuous if and only if
+there is a function $g\in L^1(a,b)$ (i.e. a $g\colon(a,b)\to \C$ with
+$\displaystyle \int_a^b |g|< \infty$), such that
+$$ 
+   f(x) = f(a) + \int_a^x g(t) dt
+$$
+for all $x\in[a,b]$.
+What is more, if $f$ and $g$ are as above, then $f$ is differentiable
+almost everywhere and $f'=g$
+almost everywhere. (Above, both integrals are Lebesgue integrals.)
+\end{thm}
+
+See \cite{jones,aliprantis} for proof.
+
+See also \cite{wikiabs}, and \cite{barcenas} for a discussion 
+about different proofs.
+
+\begin{thebibliography}{9}
+\bibitem{wikiabs} Wikipedia, entry on 
+   \PMlinkexternal{Absolute continuity}{http://en.wikipedia.org/wiki/Absolute_continuity}.
+\bibitem{jones}
+F. Jones, \emph{Lebesgue Integration on Euclidean Spaces},
+Jones and Barlett Publishers, 1993.
+\bibitem{aliprantis}
+C.D. Aliprantis, O. Burkinshaw, \emph{Principles of Real Analysis},
+2nd ed., Academic Press, 1990.
+\bibitem{barcenas}  D. B'arcenas,
+\emph{The Fundamental Theorem of
+Calculus for Lebesgue Integral},
+Divulgaciones Matem\'aticas, Vol. 8, No. 1, 2000, pp. 75-85.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

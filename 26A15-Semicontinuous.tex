@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Semicontinuous}
+\pmcreated{2013-03-22 12:45:41}
+\pmmodified{2013-03-22 12:45:41}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{semi-continuous}
+\pmrecord{6}{33069}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54-XX}
+\pmsynonym{semicontinuous}{Semicontinuous}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+A real function $f: A \rightarrow \R$, where $A\subseteq \R$ is said to be \emph{lower semi-continuous} in $x_0$ if
+\[ \forall \varepsilon > 0\ \exists \delta > 0\ \forall x \in A\ |x-x_0| < \delta \Rightarrow f(x) > f(x_0) - \varepsilon, \]
+
+and $f$ is said to be \emph{upper semi-continuous} if
+\[ \forall \varepsilon > 0\ \exists \delta > 0\ \forall x \in A\ |x-x_0| < \delta \Rightarrow f(x) < f(x_0) + \varepsilon. \]
+
+\paragraph{Remark}
+A real function is continuous in $x_0$ if and only if it is both upper and lower semicontinuous in $x_0$.
+
+We can generalize the definition to arbitrary topological spaces as follows.
+
+Let $A$ be a topological space.
+$f:A\to\R$ is lower semicontinuous at $x_0$ if, for each $\varepsilon>0$ there is a neighborhood $U$ of $x_0$ such that $x\in U$ implies $f(x)>f(x_0)-\varepsilon$.
+
+\paragraph{Theorem}
+Let $f: [a,b] \rightarrow \mathbb{R}$ be a lower (upper) semi-continuous function. Then $f$ has a minimum (maximum) in $[a,b]$.
+%%%%%
+%%%%%
+\end{document}

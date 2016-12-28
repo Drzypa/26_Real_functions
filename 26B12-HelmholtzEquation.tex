@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HelmholtzEquation}
+\pmcreated{2013-03-22 13:09:09}
+\pmmodified{2013-03-22 13:09:09}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Helmholtz equation}
+\pmrecord{11}{33592}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{35-00}
+\pmsynonym{Helmholtz differential equation}{HelmholtzEquation}
+\pmsynonym{reduced wave equation}{HelmholtzEquation}
+\pmrelated{WaveEquation}
+\pmrelated{PoissonsEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\vA}{\mathbf{A}}
+\newcommand{\vB}{\mathbf{B}}
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vN}{\mathbf{N}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\vnabla}{\nabla}
+\begin{document}
+The \emph{Helmholtz equation} is a partial differential equation which, in scalar form is $$\vnabla^2f+k^2f = 0,$$ or in vector form is $$\vnabla^2\vA+k^2\vA = 0,$$ where $\vnabla^2$ is the Laplacian.
+The solutions of this equation represent the solution of the wave equation, which is of great interest in physics.
+
+Consider a wave equation $$\frac{\partial^2\psi}{\partial t^2} = c^2\vnabla^2\psi$$
+with wave speed $c$. If we look for time harmonic standing waves of frequency $\omega$,
+$$\psi(\vx,t) = e^{-j\omega t}\phi(\vx)$$
+we find that $\phi(x)$ satisfies the Helmholtz equation:
+$$(\vnabla^2+k^2)\phi = 0$$
+where $k=\omega/c$ is the wave number.
+
+Usually the Helmholtz equation is solved by the separation of variables method, in Cartesian, spherical or cylindrical coordinates.
+%%%%%
+%%%%%
+\end{document}

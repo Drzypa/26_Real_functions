@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AppellSequence}
+\pmcreated{2014-05-23 17:08:17}
+\pmmodified{2014-05-23 17:08:17}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Appell sequence}
+\pmrecord{15}{42016}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A99}
+\pmclassification{msc}{12-00}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{11B83}
+\pmclassification{msc}{11B68}
+\pmrelated{BinomialCoefficient}
+\pmrelated{HermitePolynomials}
+\pmrelated{HermiteNumbers}
+\pmdefines{generalized monomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formula}
+
+The sequence of polynomials
+\begin{align}
+\langle P_0(x),\, P_1(x),\, P_2(x),\, \ldots\rangle
+\end{align}
+with
+$$P_n(x) \;:=\; ax^n \qquad (n = 0,\,1,\,2,\,\ldots)$$
+is a geometric sequence and has trivially the properties
+\begin{align}
+P_n'(x) \;=\; nP_{n-1}(x) \qquad (n = 0,\,1,\,2,\,\ldots)
+\end{align}
+and
+\begin{align}
+P_n(x\!+\!y) \;=\; \sum_{k=0}^n {n \choose k}P_k(x)y^{n-k}
+\end{align}
+(see the binomial theorem).\, There are also other polynomial sequences (1) having these properties, for example the sequences of the Bernoulli polynomials, the Euler polynomials and the Hermite polynomials.\, Such sequences are called \emph{Appell sequences} and their members are sometimes characterised as \emph{generalised monomials}, because of resemblance to the geometric sequence.
+
+Given the first member $P_0(x)$, which must be a nonzero constant polynomial, of any Appell sequence (1), the other members are determined recursively by
+\begin{align}
+P_n(x) \;=\; \int_0^x\!\!P_{n-1}(t)\,dt+C_n
+\end{align}
+as one gives the values of the constants of integration $C_n$; thus the number sequence
+$$\langle C_0,\,C_1,\,C_2,\,\ldots\rangle$$
+determines the Appell sequence uniquely.\, So the choice \,$C_1 = C_2 = \ldots := 0$\, yields a geometric sequence and the choice \,$C_n := B_n$\, for\, $n = 0,\,1,\,2,\,\ldots$\, the \PMlinkname{Bernoulli polynomials}{BernoulliPolynomialsAndNumbers}.\\
+
+The properties (2) and (3) are 
+\PMlinkname{equivalent}{Equivalent3}.\, The implication\, 
+$(2)\Rightarrow(3)$ may be shown by 
+\PMlinkname{induction}{Induction} on $n$.\, The reverse 
+implication is gotten by using the definition of derivative:
+\begin{align*}
+P_n'(x) &\;=\;  \lim_{\Delta x \to 0}\frac{P_n(x\!+\!\Delta x)-P_n(x)}{\Delta x}\\
+& \;=\; \lim_{\Delta x \to 0}\frac{P_0(x)\Delta x^n+{n \choose 1}P_1(x)\Delta x^{n-1}+\ldots+{n \choose n-1}P_{n-1}(x)\Delta x}{\Delta x}\\
+& \;=\; {n \choose n\!-\!1}P_{n-1}(x)\\
+& \;=\; nP_{n-1}(x).
+\end{align*}
+
+
+
+See also \PMlinkexternal{Wiki}{http://en.wikipedia.org/wiki/Appell_polynomials}.
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

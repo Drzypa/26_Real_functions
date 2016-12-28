@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ASpecialCaseOfPartialIntegration}
+\pmcreated{2013-03-22 17:38:35}
+\pmmodified{2013-03-22 17:38:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{a special case of partial integration}
+\pmrecord{11}{40065}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+%\pmkeywords{integration by parts}
+\pmrelated{IntegralTables}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\Li}{Li}
+\begin{document}
+In determining the antiderivative of a \PMlinkname{transcendental}{AlgebraicFunction} function $U$ whose derivative $U'$ is \PMlinkname{algebraic}{AlgebraicFunction}, the result can be obtained when choosing in the formula 
+             $$\int UV'\,dx = UV-\!\int VU'\,dx$$
+of integration by parts \,$V' \equiv 1$;\, then one has
+          $$\int U\,dx = \int U\!\cdot\!1\,dx\; =\; U\!\cdot\!x-\!\int x\!\cdot\!U'\,dx.$$ 
+The functions $U$ in question are mainly the \PMlinkname{logarithm}{NaturalLogarithm2}, the cyclometric functions and the area functions.\\ 
+
+\textbf{Examples.}    
+\begin{enumerate}
+\item $\displaystyle\int\!\ln{x}\,dx = x\ln{x}-\!\int x\!\cdot\!\frac{1}{x}\,dx =\; x\ln{x}-x+C$
+\item $\displaystyle\int\!\arcsin{x}\,dx = x\arcsin{x}-\!\int\!x\!\cdot\!\frac{1}{\sqrt{1\!-\!x^2}}\,dx = 
+x\arcsin{x}+\frac{1}{2}\int\!\frac{-2x}{\sqrt{1\!-\!x^2}}\,dx\\ = x\arcsin{x}+\sqrt{1\!-\!x^2}+C$
+\item $\displaystyle\int\!\arctan{x}\,dx = x\arctan{x}-\!\int\!x\!\cdot\!\frac{1}{1\!+\!x^2}\,dx = 
+x\arctan{x}-\!\frac{1}{2}\int\!\frac{2x}{1\!+\!x^2}\,dx\\ = x\arctan{x}-\frac{1}{2}\ln(1\!+\!x^2)+C
+=\; x\arctan{x}-\ln\sqrt{1\!+\!x^2}+C$
+\item $\displaystyle\int\!\arcosh{x}\,dx = x\arcosh{x}-\!\int\!x\!\cdot\!\frac{1}{\sqrt{x^2\!-\!1}}\,dx \\=
+x\arcosh{x}-\sqrt{x^2\!-\!1}+C$
+\end{enumerate}
+
+The choice\, $V' \equiv 1$\, works as well in such cases as\, $\int(\ln{x})^2\,dx$\, and\, $\int\ln(\ln{x})\,dx$,\, giving respectively\, $x((\ln{x})^2-2\ln{x}+2)+C$\, and\, $x\ln(\ln{x})-\Li{x}+C$ (see logarithmic integral).  Also\, 
+$\int(\arcsin{x})^2\,dx$\, \PMlinkescapetext{succeeds}, requiring two integrations by parts, and giving the result\, $x(\arcsin{x})^2+2\sqrt{1\!-\!x^2}\arcsin{x}-2x+C$.
+%%%%%
+%%%%%
+\end{document}

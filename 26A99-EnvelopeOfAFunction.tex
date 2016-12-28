@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EnvelopeOfAFunction}
+\pmcreated{2013-03-22 15:44:22}
+\pmmodified{2013-03-22 15:44:22}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{envelope of a function}
+\pmrecord{5}{37690}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\env}{env}
+\begin{document}
+Consider $f:\mathbb{R} \to \mathbb{R}$ a real function of real variable.
+
+We call the upper envelope of $f$ to the function:
+
+$\env_{\sup}(f)(x) = \inf_{\epsilon} \{\sup \{ f(y): \epsilon>0,\: |y-x|<\epsilon \}\}$
+
+similarly the lower envelope of $f$ is the function:
+
+$\env_{\inf}(f)(x) = \sup_{\epsilon} \{\inf \{ f(y): \epsilon>0,\: |y-x|<\epsilon \}\}$
+
+The envelopes have the following properties:
+(in this list $\env_\ast$ represents either the upper or lower envelope)
+
+\begin{itemize}
+\item $ \env_{\inf}(f)(x) \le f(x) \le \env_{\sup}(f)(x)$
+\item $ \env_{\sup}(f) = \env_{\inf}(f) \iff f \text{is continuous} $
+\item $ \env_{\sup}(f)(x) - \env_{\inf}(f)(x) = \text{oscillation of} f \text{at } x$
+\item $\env_{\inf} f = - \env_{\sup}(-f)$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

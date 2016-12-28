@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LagrangeMultiplierAppliedToTheLegendreTransform}
+\pmcreated{2013-03-22 18:52:47}
+\pmmodified{2013-03-22 18:52:47}
+\pmowner{dh2718}{16929}
+\pmmodifier{dh2718}{16929}
+\pmtitle{Lagrange multiplier applied to the Legendre transform}
+\pmrecord{7}{41727}
+\pmprivacy{1}
+\pmauthor{dh2718}{16929}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Since the Legendre transform is a stationary point of a function, Lagrange multipliers should be the natural choice for handling constraints. However, there is a problem due to the fact that we are mostly interested in its functional dependence on the transform parameter, and not on its value.\\\\
+\textbf{THE LEGENDRE-LAGRANGE PROBLEM}\\
+
+Let $f(\overline{x})$ be a function of the real n-vector $\overline{x}$ and $g(\overline{p})$ its Legendre transform defined by
+\begin{align}
+g(\overline{p}) \;=\;\overline{p}.\overline{x}-f(\overline{x})\quad\quad p_i\;=\;\frac{\partial f}{\partial x_i}
+\end{align}
+The vector $\overline{p}$ is a function of $\overline{x}$, or conversely, $\overline{x}$ is a function of $\overline{p}$, so that $g(\overline{p})$ is a function of $\overline{p}$ alone.
+The Legendre transform is also alternatively defined as the maximum of the function $\overline{p}.\overline{x}-f(\overline{x})$. This maximum is reached for $\overline{x}$ satifying the second set of equations in (1).
+Suppose now that the components $x_i$ are not all independent, but are linked by the constraint:
+\begin{align}
+h(\overline{x})\;=\;0
+\end{align}
+This equation defines one of the components, $x_\alpha$ for example, as a function of all the others. Putting this function into (1) would give us the transform $g(\overline{p})$ as a function of the vector $\overline{p}$ with n-1 components. It would be nice if we could instead use a Lagrange multiplier $k$ and compute the maximum of the function $$\overline{p}.\overline{x}-f(\overline{x})+kh(\overline{x})$$ with all its n components. But then, how does the constraint (2) on $\overline{x}$ translate to $\overline{p}$? The answer is amazingly simple, as we shall see next.\\\\
+\textbf{DIRECT COMPUTATION OF THE TRANSFORM}\\
+
+We are going first to compute the Legendre transform the hard way, without the help of a multiplier, by considering $x_\alpha$ as a function of the other components: 
+\begin{align}
+p_i=\frac{df}{dx_i}=\frac{\partial f}{\partial x_i}+\frac{\partial f}{\partial x_\alpha}\frac{\partial x_\alpha}{\partial x_i}\quad\quad \frac{dh}{dx_i}=\frac{\partial h}{\partial x_i}+\frac{\partial h}{\partial x_\alpha}\frac{\partial x_\alpha}{\partial x_i}=0\quad\quad i\neq\alpha
+\end{align}
+Taking the value of \Large $\frac{\partial x_\alpha}{\partial x_i}$ \normalsize from the second set of equations (3) and putting it into the first set, we get:
+\begin{align}
+p_i\;=\;\frac{\partial f}{\partial x_i}-\Phi\frac{\partial h}{\partial x_i}\quad \mbox{with} \quad \Phi\;=\;\frac{\frac{\partial f}{\partial x_\alpha}}{\frac{\partial h}{\partial x_\alpha}}\quad\mbox{and}\quad i\neq\alpha 
+\end{align}
+From definition (1), the Legendre transform $g$ is therefore:
+\begin{align}
+g(\overline{p})\;=\;\sum_{i\neq\alpha} x_i\left( \frac{\partial f}{\partial x_i} - \Phi\frac{\partial h}{\partial x_i}\right)-f(\overline{x})
+\end{align}\\
+\textbf{BACK TO THE LAGRANGE MULTIPLIER}\\
+
+In the first equation (4), if we set $i=\alpha$ we get $p_\alpha = 0$ and conversely, getting the value of $\Phi$. So, in (5), we may remove the condition $i\neq\alpha$ and sum over all the n components of $\overline{p}$. The constraint $p_\alpha = 0$ reduces the number of independent components to n-1. In fact, we are back to the traditional Lagrange method with the multiplier $\Phi$ and an additional constraint. We even have the choice between n such constraints. They generate up to n functionally different transforms corresponding to the n possible forms of the function $\overline{x}$, according to which component $x_\alpha$ we choose to eliminate. 
+The method extends easily to the case of more than one constraint:\\ $h_1=h_2=...h_m=0$. We use m multipliers $\Phi_1, \Phi_2...\Phi_m$. They are computed by equating to zero any set of m components from $\overline{p}$.
+\begin{thebibliography}{1}
+\bibitem {A} \PMlinkexternal{Fersanz at PM - Legendre Transform}{http://planetmath.org/encyclopedia/LegendreTransform.html}\\
+This link is actually broken but, hopefully, should be operative soon.
+\bibitem {B} \PMlinkexternal{Wikipedia - Legendre transformation}{http://en.wikipedia.org/wiki/Legendre_transformation}
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

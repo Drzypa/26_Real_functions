@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbsolutelyContinuousOn01VersusAbsolutelyContinuousOnvarepsilon1ForEveryvarepsilon0}
+\pmcreated{2013-03-22 16:12:19}
+\pmmodified{2013-03-22 16:12:19}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{absolutely continuous on $[0,1]$ versus absolutely continuous on $[\varepsilon, 1]$ for every $\varepsilon >0$}
+\pmrecord{11}{38300}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A46}
+\pmclassification{msc}{26B30}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{lem*}{Lemma}
+
+\begin{document}
+\PMlinkescapeword{absolutely continuous}
+
+\begin{lem*}
+Define $f \colon \mathbb{R} \to \mathbb{R}$ by 
+
+$$f(x)= \begin{cases}
+0 & \text{ if } x=0 \\
+\displaystyle x\sin\left( \frac{1}{x} \right) & \text{ if } x \neq 0. \end{cases}$$
+
+Then $f$ is \PMlinkname{absolutely continuous}{AbsolutelyContinuousFunction2} on $[\varepsilon, 1]$ for every $\varepsilon >0$ but is not absolutely continuous on $[0,1]$.
+\end{lem*}
+
+\begin{proof}
+Note that $f$ is continuous on $[0,1]$ and differentiable on $(0,1]$ with $\displaystyle f'(x)=\sin \left( \frac{1}{x} \right)-\frac{1}{x}\cos \left( \frac{1}{x} \right)$.
+
+Let $\varepsilon >0$.  Then for all $x \in [\varepsilon ,1]$:
+
+\begin{center}
+$\begin{array}{ll}
+|f'(x)| & \displaystyle =\left| \sin \left( \frac{1}{x} \right)-\frac{1}{x}\cos \left( \frac{1}{x} \right) \right| \\
+\\
+& \displaystyle \le \left| \sin \left( \frac{1}{x} \right) \right|+\left| \frac{1}{x} \right| \cdot \left| \cos \left( \frac{1}{x} \right) \right| \\
+\\
+& \displaystyle \le 1+\frac{1}{\varepsilon} \cdot 1 \\
+\\
+& \displaystyle =1+\frac{1}{\varepsilon} \end{array}$
+\end{center}
+
+Since $f$ is continuous on $[\varepsilon, 1]$ and differentiable on $(\varepsilon, 1)$, the \PMlinkname{mean value theorem}{MeanValueTheorem} can be applied to $f$.  Thus, for every $x_1, x_2 \in (\varepsilon, 1)$ with $x_1 \neq x_2$, $\displaystyle \left| \frac{f(x_2)-f(x_1)}{x_2-x_1} \right| \le 1+\frac{1}{\varepsilon}$.  This yields $\displaystyle |f(x_2)-f(x_1)| \le \left( 1+\frac{1}{\varepsilon} \right) |x_2-x_1|$, which also holds when $x_1=x_2$.  Thus, $f$ is Lipschitz on $(\varepsilon, 1)$.  It follows that $f$ is absolutely continuous on $[\varepsilon, 1]$.
+
+On the other hand, it can be verified that $f$ is not of bounded variation on $[0,1]$ and thus cannot be absolutely continuous on $[0,1]$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

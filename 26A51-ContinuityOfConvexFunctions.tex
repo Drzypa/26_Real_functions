@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuityOfConvexFunctions}
+\pmcreated{2013-03-22 15:28:00}
+\pmmodified{2013-03-22 15:28:00}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{continuity of convex functions}
+\pmrecord{5}{37319}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A51}
+\pmclassification{msc}{26B25}
+%\pmkeywords{continuity}
+%\pmkeywords{convexity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{open}
+We will prove below that every convex function on an
+\PMlinkname{open}{Open} convex subset $A$ of a finite-dimensional
+real vector space is continuous.  This statement becomes false if we
+do not require $A$ to be open,
+since we can increase the value of $f$ at any point of $A$ which is
+not a convex combination of two other points without affecting the
+convexity of $f$.  An example of this is shown in Figure \ref{fig2}.
+\begin{figure}
+\begin{center}
+\includegraphics{convex.2}
+\end{center}
+\caption{A convex function on a non-open set need not be continuous.}
+\label{fig2}
+\end{figure}
+
+Let $A$ be an open convex set in a finite-dimensional vector space $V$
+over $\mathbb{R}$, and let $f\colon A\to\mathbb{R}$ be a convex
+function.  Let $x\in A$ be arbitrary, and let $P$ be a parallelepiped
+centered at $x$ and lying completely inside $A$.  Here ``a
+parallelepiped centered at $x$'' means a subset of $V$ of the form
+$$
+P=\left\{x+\sum_{i=1}^n \lambda_ib_i\colon -1\le\lambda_i\le 1
+\text{ for }i=1,2,\ldots,n\right\},
+$$
+where $\{b_1,\ldots,b_n\}$ is some basis of $V$.  Furthermore, let
+$$
+\partial P=\left\{x+\sum_{i=1}^n \lambda_ib_i\colon\max_{1\le i\le n}
+\vert\lambda_i\vert=1\right\}
+$$
+denote the boundary of $P$.  We will show that $f$ is continuous at
+$x$ by showing that $f$ attains a maximum on $\partial P$ and by
+estimating $\vert f(y)-f(x)\vert$ in \PMlinkescapetext{terms}
+of this maximum as $y\to x$.
+
+The idea is to use the condition of convexity to `squeeze' the graph
+of $f$ near $x$, as is shown in Figure \ref{fig1}.
+\begin{figure}
+\begin{center}
+\includegraphics{convex.1}
+\end{center}
+\caption{Given the values of $f$ in $x$ and on
+  $\partial P=\{y_1,y_2\}$, the convexity condition restricts the
+  graph of $f$ to the grey area.}
+\label{fig1}
+\end{figure}
+
+For $\lambda\in[0,1]$ and $y\in\partial P$, the convexity of $f$
+implies
+\begin{eqnarray}
+\label{ineq1}
+\nonumber
+f\big((1-\lambda)x+\lambda y\big)&\le&(1-\lambda) f(x)+\lambda f(y) \\
+&=&f(x)+\lambda\big(f(y)-f(x)\big).
+\end{eqnarray}
+On the other hand, for all $\mu\in[0,1/2]$ we have
+\begin{eqnarray*}
+f(x)&=&f\left((1-\mu)\left[\frac{(1-2\mu)x}{1-\mu}
++\frac{\mu y}{1-\mu}\right]+\mu(2x-y)\right) \\
+&\le&(1-\mu)f\left(\frac{(1-2\mu)x}{1-\mu}
++\frac{\mu y}{1-\mu}\right)+\mu f(2x-y).
+\end{eqnarray*}
+Dividing by $1-\mu$ and setting $\lambda=\frac{\mu}{1-\mu}\in[0,1]$
+gives
+\begin{equation}
+\label{ineq2}
+(1+\lambda)f(x)\le f\big((1-\lambda)x+\lambda y\big)+\lambda f(2x-y).
+\end{equation}
+From the two inequalities (\ref{ineq1}) and (\ref{ineq2}) we obtain
+\begin{equation}
+\label{ineq3}
+-\lambda\big(f(2x-y)-f(x)\big)\le f\big(x+\lambda(y-x)\big)-f(x)
+\le\lambda\big(f(y)-f(x)\big).
+\end{equation}
+Note that both $y$ and $2x-y$ \PMlinkescapetext{lie on}
+$\partial P$, and that $f$ is
+bounded on $P$ (hence in particular on $\partial P$).  Indeed, the
+convexity of $f$ implies that $f$ is bounded by its values at two
+\PMlinkescapetext{opposite} faces of $P$, and repeatedly applying
+this \PMlinkescapetext{property} shows
+that $f$ attains a maximum at one of the corners of $P$.
+
+Write $P_\lambda$ for the parallelepiped $P$ shrunk by a
+\PMlinkescapetext{factor} $\lambda$ relative to $x$:
+$$
+P_\lambda=\{x+\lambda(y-x)\colon y\in P\}.
+$$
+Now the inequality (\ref{ineq3}) implies that for all
+$\lambda\in[0,1]$ and all $z\in\partial
+P_\lambda$, 
+we have
+$$
+\left\vert f(z)-f(x)\right\vert\le\lambda
+\left\vert\max_{y\in\partial P} f(y)-f(x)\right\vert.
+$$
+Consequently, the same inequality holds for all $\lambda\in(0,1]$ and
+all $z$ in the open neighbourhood $P_\lambda\setminus\partial
+P_\lambda$ of $x$.  The right-hand \PMlinkescapetext{side}
+of this inequality goes to
+zero as $\lambda\to 0$, from which we conclude that $f$ is continuous
+at $x$.
+%%%%%
+%%%%%
+\end{document}

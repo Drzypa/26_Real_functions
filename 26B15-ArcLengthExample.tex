@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArcLengthExample}
+\pmcreated{2013-03-22 18:57:43}
+\pmmodified{2013-03-22 18:57:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{arc length example}
+\pmrecord{15}{41820}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B15}
+\pmsynonym{logarithm of sine function}{ArcLengthExample}
+\pmrelated{SubstitutionNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+\PMlinkescapeword{ln}
+
+The functions
+$$x \;\mapsto\; \ln\sin{x} \quad \mbox{and} \quad x \;\mapsto\, \ln\cos{x}$$
+belong to the few real functions, the arc length of which are expressible in closed form (other ones are mentioned in the entry arc length of parabola).\\
+
+We calculate the arc length of the curve
+$$y \;=\; \ln\sin{x}\qquad (0 \;<\; a \;\leqq\; x \;\leqq\; \frac{\pi}{2}).$$
+By the chain rule, we have
+$$y' \;=\; \frac{1}{\sin{x}}\cdot\cos{x} \;=\; \cot{x}.$$
+Hence the arc length is
+$$s \;=\; \int_a^{\frac{\pi}{2}}\!\sqrt{1+(\cot{x})^2}\,dx \;=\; \int_a^{\frac{\pi}{2}}\!\frac{1}{\sin{x}}\,dx
+\;=\; \sijoitus{a}{\quad\frac{\pi}{2}}\!\ln|\tan\frac{x}{2}| \;=\;\ln1-\ln|\tan\frac{a}{2}| \;=\; \ln\cot\frac{a}{2}$$
+(see integration of rational function of sine and cosine). \\
+
+\begin{center}
+\begin{pspicture}(-1,-6)(4,2.5)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-0.5,-5.5)(3.5,2)
+\rput(3.6,0.2){$x$}
+\rput(0.2,2.1){$y$}
+\psplot[linecolor=blue]{0.01}{1.5708}{180 x mul 3.14159 div sin ln}
+\rput(2,-1.5){$y = \ln\sin{x}$}
+\psdot[linecolor=blue](1.5708,0)
+\rput(1.57,-0.35){$\frac{\pi}{2}$}
+\psline(-0.07,1)(0.07,1)
+\rput(-0.2,1){1}
+\rput(-1,-6){.}
+\rput(4,2.5){.}
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

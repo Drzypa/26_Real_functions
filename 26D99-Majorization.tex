@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Majorization}
+\pmcreated{2013-03-22 14:30:22}
+\pmmodified{2013-03-22 14:30:22}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{majorization}
+\pmrecord{8}{36043}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D99}
+\pmdefines{majorize}
+\pmdefines{majorization}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For any real vector $x = (x_1,x_2,\ldots,x_n)\in \mathbb{R}^n$, let $x_{(1)}\geq x_{(2)} \geq \cdots \geq x_{(n)}$ denote the components of $x$ in non-increasing order.
+
+For $x, y \in \mathbb{R}^n$, we say that $x$ is majorized by $y$, or $y$ majorizes $x$, if
+\begin{align*}
+ \sum_{i=1}^m x_{(i)} &\leq \sum_{i=1}^m y_{(i)}, \quad \text{ for $m=1,\ldots, n-1$, and} \\
+ \sum_{i=1}^n x_{(i)} &= \sum_{i=1}^n y_{(i)}
+\end{align*} 
+A common notation for ``$x$ is majorized by $y$'' is $x \prec y$.
+
+
+{\bf Remark:}
+
+A canonical example is that, if $y_1$, $y_2, \ldots, y_n$ are non-negative real numbers such that their sum is equal to 1, then
+\[
+ \left(\frac{1}{n},\ldots,\frac{1}{n} \right) \prec (y_1,\ldots,y_n).
+\]
+In general, $x\prec y$ vaguely means that the components of $x$ is less spread out than are the components of~$y$.
+
+
+{\bf Reference}
+
+\begin{itemize}
+\item G. H. Hardy, J. E. Littlewood and G. P{\'o}lya, {\em Inequalities}, 2nd edition, 1952, Cambridge University Press, London.
+
+\item A. W. Marshall and I. Olkin, {\em Inequalities: Theory of Majorization and Its Applications}, 1979, Acadamic Press, New York.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

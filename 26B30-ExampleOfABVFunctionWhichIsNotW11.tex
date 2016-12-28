@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfABVFunctionWhichIsNotW11}
+\pmcreated{2013-03-22 15:12:59}
+\pmmodified{2013-03-22 15:12:59}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{example of a $BV$ function which is not $W^{1,1}$}
+\pmrecord{5}{36979}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+The following example presents a function $u\in BV(\Omega)\setminus W^{1,1}(\Omega)$.
+\begin{example}
+Let $\Omega:=(-1,1)\times(-1,1)\subset \R^2$. We will show that the function
+\[
+u(x,y)=\begin{cases}
+1,\quad\text{if $x\ge 0$}\\
+0,\quad\text{if $x< 0$}\end{cases}
+\]
+belongs to $BV(\Omega)$.
+Given $\phi\in C_c^1(\Omega,\R^2)$, $\phi=(\phi^1,\phi^2)$, one has
+\begin{align*}
+\iint_\Omega u(x,y)\mathrm{div}\phi(x,y)\, dxdy
+&=\int_{-1}^1 \left[\int_0^1 \phi^1_x(x,y)\, dx \right]dy
++ \int_0^1 \left[\int_{-1}^1 \phi^2_y(x,y)\, dy \right]dx\\
+&=\int_{-1}^1 \phi^1(1,y)-\phi^1(0,y)\, dy + \int_0^1 \phi^2(x,1)-\phi^2(x,-1)\, dx\\
+&=-\int_{-1}^1 \phi^1(0,y) + 0
+=-\int \phi(x,y)\,d \mu(x,y)
+\end{align*}
+if we choose $\mu:=(\mu^1,\mu^2):=(\mathcal H^1\llcorner(\{0\}\times(-1,1)),0)$. So we notice that $u\in BV(\Omega)$ and $Du=\mu$ is singular with respect to the Lebesgue measure $\mathcal L$.
+\end{example}
+%%%%%
+%%%%%
+\end{document}

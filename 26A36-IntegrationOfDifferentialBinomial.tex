@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegrationOfDifferentialBinomial}
+\pmcreated{2013-03-22 14:45:49}
+\pmmodified{2013-03-22 14:45:49}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{integration of differential binomial}
+\pmrecord{5}{36408}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Theorem.}\, Let $a$, $b$, $c$, $\alpha$, $\beta$ be given real numbers and \,$\alpha\beta \neq 0$. \,The antiderivative
+$$I = \int x^a(\alpha+\beta x^b)^c\,dx$$
+is expressible by \PMlinkescapetext{means} of the elementary functions only in the three cases: \,
+$(1)\,\, \frac{a+1}{b}+c\in\mathbb{Z}$,\,\,
+$(2)\,\, \frac{a+1}{b}\in\mathbb{Z}$,\,\,
+$(3)\,\, c\in\mathbb{Z}$
+
+In accordance with P. L. Chebyshev (1821$-$1894), who has proven this theorem, the expression \,$x^a(\alpha+\beta x^b)^c\,dx$\, is called a {\em differential binomial}.
+
+It may be worth noting that the differential binomial may be expressed in terms of the incomplete beta function and the hypergeometric function.  Define $y = \beta x^b / \alpha$.  Then we have
+ $$I = {1 \over b} \alpha^{{a + 1 \over b} + c} \beta^{-{a + 1 \over b}} B_y \left( {1 + a \over b}, c - 1 \right)$$
+ $$= {1 \over 1 + a} \alpha^{{a + 1 \over b} + c} \beta^{-{a + 1 \over b}} y^{1 + a \over b} F \left( {a + 1 \over b}, 2-c; {1 + a + b \over b}; y \right)$$
+
+Chebyshev's theorem then follows from the theorem on elementary cases of the hypergeometric function.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfVectorPotential}
+\pmcreated{2013-03-22 15:42:56}
+\pmmodified{2013-03-22 15:42:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of vector potential}
+\pmrecord{7}{37663}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+If the solenoidal vector \,$\vec{U} = \vec{U}(x,\,y,\,z)$\, is a homogeneous function of degree $\lambda$ ($\neq -2$),\, then it has the vector potential
+\begin{align}
+\vec{A} = \frac{1}{\lambda\!+\!2}\vec{U}\!\times\!\vec{r},
+\end{align}
+where\, $\vec{r} = x\vec{i}\!+\!y\vec{j}\!+\!z\vec{k}$\, is the position vector.
+
+{\em Proof.}\, Using the entry nabla acting on products, we first may write
+$$\nabla\times(\frac{1}{\lambda\!+\!2}\vec{U}\!\times\!\vec{r}) =
+\frac{1}{\lambda\!+\!2}[(\vec{r}\cdot\nabla)\vec{U}
+-(\vec{U}\cdot\nabla)\vec{r}-(\nabla\cdot\vec{U})\vec{r}
++(\nabla\cdot\vec{r})\vec{U}].$$
+In the brackets the first product is, according to Euler's theorem on homogeneous functions, equal to $\lambda\vec{U}$.\, The second product can be written as\, $U_x\frac{\partial\vec{r}}{\partial x}+
+U_y\frac{\partial\vec{r}}{\partial y}+U_z\frac{\partial\vec{r}}{\partial z}$, which is $U_x\vec{i}+U_y\vec{j}+U_z\vec{k}$, i.e. $\vec{U}$.\, The third product is, due to the sodenoidalness, equal to\, $0\vec{r} = \vec{0}$.\, The last product equals to $3\vec{U}$ (see the \PMlinkname{first formula}{PositionVector} for position vector).\, Thus we get the result
+$$\nabla\times(\frac{1}{\lambda\!+\!2}\vec{U}\!\times\!\vec{r}) =
+\frac{1}{\lambda\!+\!2}[\lambda\vec{U}-\vec{U}-\vec{0}+3\vec{U}] = \vec{U}.$$
+This means that $\vec{U}$ has the vector potential (1).
+%%%%%
+%%%%%
+\end{document}

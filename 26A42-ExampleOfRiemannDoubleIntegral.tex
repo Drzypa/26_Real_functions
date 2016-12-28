@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfRiemannDoubleIntegral}
+\pmcreated{2013-03-22 19:12:22}
+\pmmodified{2013-03-22 19:12:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of Riemann double integral}
+\pmrecord{11}{42121}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28-00}
+\pmrelated{SubstitutionNotation}
+\pmrelated{ChangeOfVariablesInIntegralOnMathbbRn}
+\pmrelated{ExampleOfRiemannTripleIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+Let us determine the value of the double integral
+\begin{align}
+I \;:=\; \iint_D\frac{dx\,dy}{(1\!+\!x^2\!+\!y^2)^2}
+\end{align}
+where $D$ is the triangle \PMlinkescapetext{bounded} by the lines \,$x = 0$,\; $y = 0$\, and\, $x\!+\!y = 1$.\\
+
+Since the triangle is defined by the inequalities \;$0 \leqq x \leqq 1, \;\; 0 \leqq y \leqq 1\!-\!x$,\;
+one can write
+\begin{align*}
+I &\;=\; \int_0^1\!\int_0^{1-x}\frac{dx\,dy}{(1\!+\!x^2\!+\!y^2)^2}
+    \;=\; \int_0^1\frac{dx}{(1\!+\!x^2)^2}
+\int_0^{1-x}\frac{dy}{\left[1+\left(\frac{y}{\sqrt{1+x^2}}\right)^2\right]^2}\\
+  &\;=\; \int_0^1\frac{1}{(1\!+\!x^2)^2}\cdot\frac{\sqrt{1\!+\!x^2}}{2}
+\sijoitus{y=0}{\quad 1-x}
+\left(\arctan\frac{y}{\sqrt{1\!+\!x^2}}+\frac{\frac{y}{\sqrt{1+x^2}}}{1+\frac{y^2}{1+x^2}}\right)\,dx\\
+  &\;=\; \int_0^1\left(\frac{1}{2}(1\!+\!x^2)^{-\frac{3}{2}}\arctan\frac{1\!-\!x}{\sqrt{1\!+\!x^2}}
++\frac{1\!-\!x}{(1\!-\!x\!+\!x^2)(1\!+\!x^2)}\right)\,dx.
+\end{align*}
+The last expression seems quite difficult to calculate to a closed form ...\\
+
+Some appropriate \PMlinkname{substitution}{ChangeOfVariablesInIntegralOnMathbbRn} 
+$$x \;:=\; x(u,\,v), \quad y \;:=\; y(u,\,v)$$
+directly to the form (1) could offer a better \PMlinkescapetext{way of calculation.\, The general formula for such substitutions} is
+\begin{align}
+\iint_Df(x,\,y)\,dx\,dy \:=\; 
+\iint_\Delta\!f(x(u,\,v),\,y(u,\,v))
+\left|\frac{\partial(x,\,y)}{\partial(u,\,v)}\right|\,du\,dv.
+\end{align}
+
+What kind a change of variables would be good?\, One idea were to use some ``natural substitution'', i.e. such one that would give constant \PMlinkname{limits}{DefiniteIntegral}.\, For example, the equations
+$$x\!+\!y \;:=\; u, \quad \frac{y}{x} \;:=\; v,$$
+map the triangular \PMlinkname{domain}{Domain2} $D$ to the ``rectangle'' 
+$$\Delta\!:\;\; 0 \leqq u \leqq 1, \quad 0 \leqq v < \infty.$$
+Then we need the Jacobian
+$$\frac{\partial(x,\,y)}{\partial(u,\,v)} \;=\; \frac{u\!+\!v^2}{(v\!+\!1)^3}.$$
+By (2), we have
+$$I \;=\; 
+\int_0^1\!\int_0^\infty\!\frac{(v\!+\!1)^4}{u^2\!+\!2v^2\!+\!2v\!+\!1}\!\cdot\!\frac{u\!+\!v^2}{(v\!+\!1)^3}\,du\,dv
+ \;=\; \int_0^\infty\!(v\!+\!1)\,dv\int_0^1\frac{u\!+\!v^2}{u^2\!+\!2v^2\!+\!2v\!+\!1}\,du.$$\\
+But here after integrating with respect to $u$, one obtains a difficult single integral.\, Thus, when the \PMlinkescapetext{limits are simple}, the integrand may become awkward.\\
+
+
+A second idea would be to try to make the integrand simpler.\, For this end, the transition to the polar coordinates
+$$x \;:=\; r\cos\varphi, \quad y \;:=\; r\sin\varphi$$
+in (1) is more suitable.\, We have
+$$\frac{\partial(x,\,y)}{\partial(r,\,\varphi)} \;=\;
+\left|\begin{matrix} 
+  \cos\varphi & -r\sin\varphi \\ 
+  \sin\varphi & r\cos\varphi
+\end{matrix}\right| \;\equiv\; r.$$
+The Pythagorean theorem gives the equation\, $r^2 \,=\, x^2\!+\!y^2 \,=\, (r\cos\varphi)^2+(1-r\cos\varphi)^2$,\, i.e. 
+$$r^2\cos2\varphi-2r\cos\varphi+1 \;=\; 0,$$
+from which we get the upper limit
+$$r \;=\; \frac{2\cos\varphi\pm\sqrt{4\cos^2\varphi-4\cos2\varphi}}{2\cos2\varphi} \;=\; 
+\frac{\cos\varphi\pm\sin\varphi}{\cos^2\varphi-\sin^2\varphi};$$
+this is $\displaystyle\frac{1}{\cos\varphi+\sin\varphi}$, since the ``+'' alternative can be excluded by choosing e.g.\, 
+$\varphi = \frac{\pi}{2}$.\, Thus
+$$\Delta\!: \quad 0 \leqq \varphi \leqq \frac{\pi}{2}, \quad 0 \leqq r \leqq \frac{1}{\cos\varphi+\sin\varphi}$$
+and
+$$I \;=\; \frac{1}{2}\int_0^{\frac{\pi}{2}}\!\int_0^{\frac{1}{\cos\varphi+\sin\varphi}}\frac{2r\,dr}{(1\!+\!r^2)^2}\,d\varphi
+\;=\; \frac{1}{2}\int_0^{\frac{\pi}{2}}\frac{d\varphi}{2+\sin2\varphi}.$$
+Here, the \PMlinkid{Weierstrass substitution}{9380} \,$\tan\varphi \,:=\, t$\, easily yields the final result
+\begin{align}
+I \;=\; \frac{2\pi\sqrt{3}}{9}.
+\end{align}
+
+%%%%%
+%%%%%
+\end{document}

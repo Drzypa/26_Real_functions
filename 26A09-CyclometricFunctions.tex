@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CyclometricFunctions}
+\pmcreated{2013-03-22 14:36:00}
+\pmmodified{2013-03-22 14:36:00}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{cyclometric functions}
+\pmrecord{34}{36169}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmsynonym{arc functions}{CyclometricFunctions}
+\pmsynonym{arcus functions}{CyclometricFunctions}
+\pmsynonym{inverse trigonometric functions}{CyclometricFunctions}
+%\pmkeywords{multivalued}
+\pmrelated{Trigonometry}
+\pmrelated{ComplexSineAndCosine}
+\pmrelated{TaylorSeriesOfArcusSine}
+\pmrelated{TaylorSeriesOfArcusTangent}
+\pmrelated{AreaFunctions}
+\pmrelated{RamanujansFormulaForPi}
+\pmrelated{SawBladeFunction}
+\pmrelated{TerminalRay}
+\pmrelated{DerivativeOfInverseFunction}
+\pmrelated{LaplaceTransformOfFracftt}
+\pmrelated{OstensiblyDiscontinuousAntiderivative}
+\pmrelated{I}
+\pmdefines{branch}
+\pmdefines{principal branch}
+\pmdefines{sine}
+\pmdefines{cosine}
+\pmdefines{arc sine}
+\pmdefines{arc cosine}
+\pmdefines{arc tangent}
+\pmdefines{arc cotangent}
+\pmdefines{inverse sine}
+\pmdefines{inverse tangent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\DeclareMathOperator{\arccot}{arccot}
+\begin{document}
+The \PMlinkname{trigonometric functions}{DefinitionsInTrigonometry} are periodic, and thus get all their values infinitely many times.\, Therefore their inverse functions, the {\em cyclometric functions}, are multivalued, but the values within suitable chosen intervals are unique; they form single-valued functions, called the \emph{branches} of the multivalued functions.
+
+The \PMlinkescapetext{{\em principal branches}} of the most used cyclometric functions are as follows:
+\begin{itemize}
+ \item $\arcsin{x}$\, is the angle $y$ satisfying\, $\sin y = x$\, and\, 
+$-\frac{\pi}{2} < y \leqq \frac{\pi}{2}$\, (defined for $-1 \leqq x \leqq 1$)
+
+ \item $\arccos{x}$\, is the angle $y$ satisfying\, $\cos y = x$\, and\, 
+$0 \leqq y < \pi$\, (defined for $-1 \leqq x \leqq 1$)
+
+ \item $\arctan{x}$\, is the angle $y$ satisfying\, $\tan y = x$\, and\, 
+$-\frac{\pi}{2} < y < \frac{\pi}{2}$\, (defined in the whole $\mathbb{R}$)
+
+ \item $\arccot\,{x}$\, is the angle $y$ satisfying\, $\cot y = x$\, and\, 
+$0 < y < \pi$\, (defined in the whole $\mathbb{R}$) 
+\end{itemize}
+
+Those functions are denoted also $\sin^{-1}x$, $\cos^{-1}x$, $\tan^{-1}x$ and $\cot^{-1}x$.\, We here use these notations temporarily for giving the corresponding multivalued functions ($n = 0,\, \pm1,\, \pm2,\, ...$):
+$$\sin^{-1}x = n\pi+(-1)^n\arcsin{x}$$
+$$\cos^{-1}x = 2n\pi\pm\arccos{x}$$
+$$\tan^{-1}x = n\pi+\arctan{x}$$
+$$\cot^{-1}x = n\pi+\arccot\,{x}$$\\
+
+\textbf{Some formulae}
+$$\arcsin{x}+\arccos{x} = \frac{\pi}{2}$$
+$$\arctan{x}+\arccot\,{x} = \frac{\pi}{2}$$
+$$\arcsin{x} = \int_0^x\frac{dt}{\sqrt{1-t^2}}\,dt$$
+$$\arctan{x} = \int_0^x\frac{dt}{1+t^2}\,dt$$
+$$\arcsin{x} = x+\frac{1}{2}\!\cdot\!\frac{x^3}{3}+
+\frac{1\!\cdot\!3}{2\!\cdot\!4}\!\cdot\!\frac{x^5}{5}+
+\frac{1\!\cdot\!3\!\cdot\!5}{2\!\cdot\!4\!\cdot\! 6}\!\cdot\!\frac{x^7}{7}+\ldots\quad(|x|\leqq 1)$$
+$$\arctan{x} = x-\frac{x^3}{3}+\frac{x^5}{5}-\frac{x^7}{7}+-\ldots
+\quad(|x| \leqq 1)$$
+$$\frac{d}{dx}\arccos{x} = -\frac{1}{\sqrt{1-x^2}}\quad(|x| < 1)$$
+$$\frac{d}{dx}\arccot\,{x} = -\frac{1}{1+x^2}\quad(\forall x\in \mathbb{R})$$
+
+
+The classic abbreviations of the cyclometric functions are usually explained as follows.\, The values of the trigonometric functions are got from the unit circle by means of its arc (in Latin {\em arcus}) with starting point 
+\,(1,\,0).\, The arc \PMlinkescapetext{represents} the angle (which may be thought as a central angle of the circle), and its end point\, $(\xi,\,\eta)$\, is achieved when the starting point has circulated along the circumference anticlockwise for positive angle (and clockwise for negative angle).\, Then the cosine of the arc (i.e. angle) is the abscissa $\xi$ of the end point, the sine of the arc is the ordinate $\eta$ of it.\, Correspondingly, one can get the tangent and cotangent of the arc by using certain points on the tangent lines\, $x = 1$\, and\, $y = 1$\, of the unit circle.
+
+The word cosine is in Latin {\em cosinus}, its genitive form is {\em cosini}.\, So e.g. ``$\arccos$'' of a given real number $x$ means the `arc of the cosine value $x$', in Latin {\em arcus cosini x}.
+%%%%%
+%%%%%
+\end{document}

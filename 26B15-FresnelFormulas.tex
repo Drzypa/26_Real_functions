@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FresnelFormulas}
+\pmcreated{2013-03-22 18:20:46}
+\pmmodified{2013-03-22 18:20:46}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Fresnel formulas}
+\pmrecord{11}{40980}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{26A36}
+\pmsynonym{Fresnel formulae}{FresnelFormulas}
+\pmsynonym{Fresnel integrals at infinity}{FresnelFormulas}
+\pmrelated{UsingResidueTheoremNearBranchPoint}
+\pmrelated{AreaUnderGaussianCurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+$$\int_0^\infty\!\cos{x^2}\,dx \,=\, \int_0^\infty\!\sin{x^2}\,dx \,=\, \frac{\sqrt{2\pi}}{4}$$
+
+
+{\em Proof.}
+
+\begin{center}
+\begin{pspicture}(-1,-1)(6.2,4.2)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-1,-1)(6,4)
+\rput(-0.2,4.1){$y$}
+\rput(6.1,-0.2){$x$}
+\rput(-0.17,-0.22){0}
+\rput(5,-0.3){$R$}
+\rput(0.7,0.3){$\frac{\pi}{4}$}
+\rput(1.4,1.7){$s$}
+\rput(4.7,2.2){$b$}
+\psline[linecolor=blue,linewidth=0.05]{->}(0,0)(5,0)
+\psline[linecolor=blue,linewidth=0.04]{->}(3.55,3.55)(0,0)
+\psarc[linecolor=blue,linewidth=0.04]{->}(0,0){5}{-1}{45}
+\psarc(0,0){0.5}{0}{45}
+\end{pspicture}
+\end{center}
+
+The function \,$\displaystyle z \mapsto e^{-z^2}$\, is entire, whence by the fundamental theorem of complex analysis we have
+\begin{align}
+\oint_\gamma e^{-z^2}\,dz \;=\; 0
+\end{align}
+where $\gamma$ is the \PMlinkname{perimeter}{BasicPolygon} of the circular sector described in the picture.\, We split this contour integral to three portions:
+\begin{align}
+\underbrace{\int_0^R\!e^{-x^2}\,dx}_{I_1}+\underbrace{\int_b\!e^{-z^2}\,dz}_{I_2}
++\underbrace{\int_s\!e^{-z^2}\,dz}_{I_3} \,=\,0
+\end{align}
+By the entry concerning the Gaussian integral, we know that
+$$\lim_{R\to\infty}I_1 = \frac{\sqrt{\pi}}{2}.$$
+
+For handling $I_2$, we use the substitution
+$$z \,:=\, Re^{i\varphi} = R(\cos\varphi+i\sin\varphi), \quad dz \,=\,iRe^{i\varphi}\,d\varphi \quad
+(0 \leqq \varphi \leqq \frac{\pi}{4}).$$
+Using also de Moivre's formula we can write
+$$|I_2| = \left|iR\int_0^{\frac{\pi}{4}}e^{-R^2(\cos2\varphi+i\sin2\varphi)}e^{i\varphi}d\varphi\right| \leqq 
+R\!\int_0^{\frac{\pi}{4}}\left|e^{-R^2(\cos2\varphi+i\sin2\varphi)}\right|\cdot\left|e^{i\varphi}\right|\cdot|d\varphi|
+= R\!\int_0^{\frac{\pi}{4}}e^{-R^2\cos2\varphi}d\varphi.$$
+Comparing the graph of the function \,$\varphi \mapsto \cos2\varphi$\, with the line through the points \,$(0,\,1)$\, and\, $(\frac{\pi}{4},\,0)$\, allows us to estimate $\cos2\varphi$ downwards:
+$$\cos2\varphi \geqq 1\!-\!\frac{4\varphi}{\pi} \quad\mbox{for}\quad 0 \leqq \varphi \leqq \frac{\pi}{4}$$
+Hence we obtain
+$$|I_2| \leqq R\int_0^{\frac{\pi}{4}}\frac{d\varphi}{e^{R^2\cos2\varphi}} 
+        \leqq R\int_0^{\frac{\pi}{4}}\frac{d\varphi}{e^{R^2(1-\frac{4\varphi}{\pi})}} 
+\leqq \frac{R}{e^{R^2}} \int_0^{\frac{\pi}{4}} e^{\frac{4R^2}{\pi}\varphi} d\varphi,$$
+and moreover
+$$|I_2| \leqq \frac{\pi}{4Re^{R^2}}(e^{R^2}-1) < \frac{\pi e^{R^2}}{4Re^{R^2}} = \frac{\pi}{4R} \; \to 0
+\quad \mbox{as} \quad R \to \infty.$$
+Therefore
+$$\lim_{R\to\infty}I_2 = 0.\\$$
+
+Then make to $I_3$ the substitution
+$$z \;:=\; \frac{1\!+\!i}{\sqrt{2}}t, \quad dz \,=\, \frac{1\!+\!i}{\sqrt{2}}dt \quad(R \geqq t \geqq 0).$$
+It yields
+\begin{align*}
+I_3 &\quad = \frac{1\!+\!i}{\sqrt{2}}\int_R^0e^{-it^2}\,dt
+= -\frac{1}{\sqrt{2}}\int_0^R(1+i)(\cos{t^2}-i\sin{t^2})\,dt \\
+    &\quad = -\frac{1}{\sqrt{2}}\left(\int_0^R\sin{t^2}\,dt+\int_0^R\cos{t^2}\,dt\right)
++\frac{i}{\sqrt{2}}\left(\int_0^R\sin{t^2}\,dt-\int_0^R\cos{t^2}\,dt\right).
+\end{align*}
+Thus, letting\, $R \to \infty$,\, the equation (2) implies
+\begin{align}
+\frac{\sqrt{\pi}}{2}\!+\!0\!
+-\frac{1}{\sqrt{2}}\left(\int_0^\infty\!\sin{t^2}\,dt+\!\int_0^\infty\!\cos{t^2}\,dt\right)\!
++\!\frac{i}{\sqrt{2}}\left(\int_0^\infty\!\sin{t^2}\,dt-\!\int_0^\infty\!\cos{t^2}\,dt\right) \;=\; 0.
+\end{align}
+Because the imaginary part vanishes, we infer that\, $\int_0^\infty\cos{x^2}\,dx = \int_0^\infty\sin{x^2}\,dx$,\, whence (3) reads
+$$\frac{\sqrt{\pi}}{2}+0-\frac{1}{\sqrt{2}}\!\cdot\!2\!\int_0^\infty\!\sin{t^2}\,dt \,=\, 0.$$ 
+So we get also the result\, $\int_0^\infty\sin{x^2}\,dx = \frac{\sqrt{2}}{2}\cdot\frac{\sqrt{\pi}}{2} = 
+\frac{\sqrt{2\pi}}{4}$,\, Q.E.D.
+
+
+%%%%%
+%%%%%
+\end{document}

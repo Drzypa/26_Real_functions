@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FunctionContinuousAtOnlyOnePoint}
+\pmcreated{2013-03-22 14:56:19}
+\pmmodified{2013-03-22 14:56:19}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{function continuous at only one point}
+\pmrecord{7}{36629}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54C05}
+\pmrelated{DirichletsFunction}
+\pmrelated{FunctionDifferentiableAtOnlyOnePoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let us show that the function $f\colon \R\to\R$, 
+$$
+  f(x) = \begin{cases} x, & \mbox{when $x$ is rational}, \\
+                     -x, & \mbox{when $x$ is irrational}, 
+   	\end{cases}
+$$
+is continuous at $x=0$, but discontinuous for all $x\in \R\setminus\{0\}$ 
+\cite{tv}.
+
+
+We shall use the following characterization of continuity for $f$:
+$f$ is continuous at $a\in \R$ if and only if $\lim_{k\to \infty} f(x_k)=f(a)$
+for all sequences $(x_k)\subset \R$ such that $\lim_{k\to \infty} x_k=a$.
+
+It is not difficult to see that $f$ is continuous at $x=0$. Indeed, if $x_k$ is a
+sequence converging to $0$. Then 
+\begin{eqnarray*}
+  \lim_{k\to \infty} |f(x_k)| &=&   \lim_{k\to \infty} |f(x_k)| \\
+			&=&   \lim_{k\to \infty} |x_k| \\
+			&=&   0.
+\end{eqnarray*}
+
+Suppose $a\neq 0$. Then there exists a sequence of irrational numbers $x_1, x_2, \ldots$
+converging to $a$. For instance, if $a$ is irrational, we can take $x_k = a+1/k$, and 
+if $a$ is rational, we can take $x_k = a+\sqrt{2}/k$. For this sequence we have 
+\begin{eqnarray*}
+  \lim_{k\to \infty} f(x_k) &=& -\lim_{k\to \infty} x_k \\
+			 &=& -a.
+\end{eqnarray*}
+
+On the other hand, we can also construct a sequence of rational numbers $y_1,y_2,\ldots$ 
+converging to $a$. For example, if $a$ is irrational, this follows as the rational numbers
+are dense in $\R$, and if $a$ is rational, we can set $y_k = x_k+ 1/k$. 
+For this sequence we have 
+\begin{eqnarray*}
+  \lim_{k\to \infty} f(y_k) &=& \lim_{k\to \infty} y_k \\
+			 &=& a.
+\end{eqnarray*}
+In conclusion $f$ is not continuous at $a$. 
+
+
+\begin{thebibliography}{9}
+\bibitem{tv} Homepage of Thomas Vogel,
+\PMlinkexternal{A function which is continuous at only one point.
+}{http://www.math.tamu.edu/~tom.vogel/gallery/node3.html}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

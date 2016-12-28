@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRearrangementInequality}
+\pmcreated{2013-03-22 13:08:41}
+\pmmodified{2013-03-22 13:08:41}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of rearrangement inequality}
+\pmrecord{4}{33583}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+%\pmkeywords{inequality}
+\pmrelated{ChebyshevsInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We first prove the rearrangement inequality for the case $n=2$.  Let
+$x_1,x_2,y_1,y_2$ be real numbers such that $x_1\le x_2$ and $y_1\le
+y_2$.  Then
+$$
+(x_2-x_1)(y_2-y_1)\ge 0,
+$$
+and therefore
+$$
+x_1y_1+x_2y_2\ge x_1y_2+x_2y_1.
+$$ Equality holds iff $x_1=x_2$ or $y_1=y_2$.\\
+\\
+For the general case, let $x_1,x_2,\ldots,x_n$ and
+$y_1,y_2,\ldots,y_n$ be real numbers such that $x_1\le x_2\le\cdots\le
+x_n$.  Suppose that $(z_1,z_2,\ldots,z_n)$ is a permutation
+(rearrangement) of $\{y_1,y_2,\ldots,y_n\}$ such that the sum
+$$
+x_1z_1+x_2z_2+\cdots+x_nz_n
+$$
+is maximized.  If there exists a pair $i<j$ with $z_i>z_j$, then
+$x_iz_j+x_jz_i\ge x_iz_i+x_jz_j$ (the $n=2$ case); equality holds iff
+$x_i=x_j$.  Therefore, $x_1z_1+x_2z_2+\cdots+x_nz_n$ is not maximal
+unless $z_1\le z_2\le\cdots\le z_n$ or $x_i=x_j$ for all pairs $i<j$
+such that $z_i>z_j$.  In the latter case, we can consecutively
+interchange these pairs until $z_1\le z_2\le\cdots\le z_n$ (this is
+possible because the number of pairs $i<j$ with $z_i>z_j$ decreases
+with each step).  So $x_1z_1+x_2z_2+\cdots+x_nz_n$ is maximized if
+$$
+z_1\le z_2\le\cdots\le z_n.
+$$
+To show that $x_1z_1+x_2z_2+\cdots+x_nz_n$ is minimal for a
+permutation $(z_1,z_2,\ldots,z_n)$ of $\{y_1,y_2,\ldots,y_n\}$ if
+$z_1\ge z_2\ge\cdots\ge z_n$, observe that
+$-(x_1z_1+x_2z_2+\cdots+x_nz_n)=x_1(-z_1)+x_2(-z_2)+\cdots+x_n(-z_n)$
+is maximized if $-z_1\le-z_2\le\cdots\le-z_n$.  This implies that
+$x_1z_1+x_2z_2+\cdots+x_nz_n$ is minimized if
+$$
+z_1\ge z_2\ge\cdots\ge z_n.
+$$
+%%%%%
+%%%%%
+\end{document}

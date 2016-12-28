@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfIntegralCalculus}
+\pmcreated{2013-03-22 18:50:49}
+\pmmodified{2013-03-22 18:50:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{fundamental theorem of integral calculus}
+\pmrecord{7}{41655}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{FundamentalTheoremOfCalculusClassicalVersion}
+\pmrelated{VanishingOfGradientInDomain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The derivative of a real function, which has on a whole interval a \PMlinkname{constant}{ConstantFunction} value $c$, vanishes in every point of this interval:
+$$\frac{d}{dx}c \;=\; 0$$\\
+
+The converse theorem of this is also true.\, Ernst Lindel\"of calls it the \emph{fundamental theorem of integral calculus} (in Finnish \emph{integraalilaskun peruslause}).\, It can be formulated as
+
+\textbf{Theorem.}\, If a real function in continuous and its derivative vanishes in all points of an interval, the value of this function does not change on this interval.
+
+\emph{Proof.}\, We make the antithesis that there were on the interval two distinct points $x_1$ and $x_2$ with\, $f(x_1) \neq f(x_2)$.\, Then the mean-value theorem guarantees a point $\xi$ between $x_1$ and $x_2$ such that
+$$f'(\xi) \;=\; \frac{f(x_1)\!-\!f(x_2)}{x_1\!-\!x_2},$$
+which value is distinct from zero.\, This is, however, impossible by the assumption of the theorem.\, So the antithesis is wrong and the theorem \PMlinkescapetext{right}.\\
+
+The contents of the theorem may be expressed also such that if two functions have the same derivative on a whole interval, then the difference of the functions is constant on this interval.\, Accordingly, if $F$ is an antiderivative of a function $f$, then any other antiderivative of $f$ has the form $x \mapsto F(x)\!+\!C$, where $C$ is a constant.
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

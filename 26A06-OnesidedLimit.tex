@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OnesidedLimit}
+\pmcreated{2013-03-22 12:40:28}
+\pmmodified{2013-03-22 12:40:28}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{one-sided limit}
+\pmrecord{11}{32950}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{limit from below}{OnesidedLimit}
+\pmsynonym{limit from above}{OnesidedLimit}
+\pmsynonym{left-sided limit}{OnesidedLimit}
+\pmsynonym{left-handed limit}{OnesidedLimit}
+\pmsynonym{right-sided limit}{OnesidedLimit}
+\pmsynonym{right-handed limit}{OnesidedLimit}
+%\pmkeywords{"unit step"}
+\pmrelated{Limit}
+\pmrelated{OneSidedDerivatives}
+\pmrelated{IntegratingTanXOver0fracpi2}
+\pmrelated{OneSidedContinuity}
+\pmdefines{Heaviside unit step function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+{\bf Definition}
+Let $f$ be a real-valued function defined on $S \subseteq \sR$.  The \emph{left-hand one-sided 
+limit} at $a\in \sR$ is defined to be the real number $L^-$ such that for every $\epsilon > 0$ there 
+exists a $\delta > 0$ such that $|f(x) - L^-| < \epsilon$ whenever $0 < a - x < \delta$.
+
+Analogously, the \emph{right-hand one-sided limit} at $a\in \sR$ is the 
+real number $L^+$ such that 
+for every $\epsilon > 0$ there exists a $\delta > 0$ such that $|f(x) - L^+| < \epsilon$ whenever
+$0 < x - a < \delta$.  
+
+Common notations for the one-sided limits are
+\begin{eqnarray*}
+L^+ &=& f(x+) = \lim_{x \to a^+} f(x) =\lim_{x \searrow a} f(x), \\
+L^-  &=&f(x-) = \lim_{x \to a^-} f(x) =\lim_{x \nearrow a} f(x).
+\end{eqnarray*}
+%\[
+%L^+ := \lim_{x \to a^+} f(x) \mbox{ or } L^+ := \lim_{x \searrow a} f(x)
+%\]
+%\[
+%L^- := \lim_{x \to a^-} f(x) \mbox{ or } L^- := \lim_{x \nearrow a} f(x)
+%\]
+Sometimes, left-handed limits are referred to as limits \emph{from below} while 
+right-handed limits are \emph{from above}.  
+
+{\bf Theorem} The ordinary limit of a function exists at a point if and only 
+if both one-sided limits exist at this point and are equal (to the ordinary limit).
+
+{\bf Example}
+The Heaviside unit step function, sometimes colloquially referred to as the diving board function,
+defined by
+\[
+H(x) = 
+ \begin{cases}
+  0& \mbox{ if } ~x < 0 \\
+  1& \mbox{ if } ~x \geq 0
+ \end{cases}
+\]
+has the simplest kind of discontinuity at $x = 0$, a jump discontinuity.   Its ordinary limit does not exist at this point, but the one-sided limits do exist, and are
+\[
+\lim_{x \to 0^-} H(x) = 0 \mbox{ and } \lim_{x \to 0^+} H(x) = 1.
+\]
+%%%%%
+%%%%%
+\end{document}

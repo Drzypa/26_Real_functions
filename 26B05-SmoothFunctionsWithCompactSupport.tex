@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SmoothFunctionsWithCompactSupport}
+\pmcreated{2013-03-22 13:44:00}
+\pmmodified{2013-03-22 13:44:00}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{smooth functions with compact support}
+\pmrecord{10}{34423}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmrelated{Cn}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\newcommand{\cD}[0]{\mathcal{D}}
+\newcommand{\scomp}[0]{C^\infty_0}
+
+{\bf Definition} 
+Let $U$ be an open set in $\sR^n$. Then the set of 
+{\bf smooth functions with compact support} (in $U$) is the set
+of functions $f:\sR^n \to \sC$ which are smooth 
+(i.e., $\partial^\alpha f:\sR^n\to\sC$ 
+is a continuous function for all multi-indices $\alpha$)
+and $\operatorname{supp} f$ is compact and contained in $U$.
+This function space is denoted by $C^\infty_0(U)$.
+
+\subsubsection{Remarks}
+\begin{enumerate}
+\item  A proof that $C^\infty_0(U)$ is non-trivial (that is, it contains other functions
+than the zero function) can be found 
+\PMlinkname{here}{Cinfty_0UIsNotEmpty}. 
+\item With the usual point-wise addition and point-wise multiplication 
+by a scalar, $C^\infty_0(U)$ is a vector space over the field $\sC$.
+\item Suppose $U$ and $V$ are open subsets in $\sR^n$ and $U\subset V$. 
+Then $C^\infty_0(U)$ is a vector subspace of $C^\infty_0(V)$. 
+In particular, $C^\infty_0(U)\subset C^\infty_0(V)$. 
+\end{enumerate}
+
+It is possible to equip $\scomp(U)$ with a topology, which makes 
+$\scomp(U)$ into a locally convex topological vector space. The idea is
+to exhaust $U$ with compact sets. Then, for each compact set $K\subset U$, 
+one defines  a topology of smooth functions on $U$ with 
+support on $K$. The topology for $C_0^\infty(U)$ is the inductive
+limit topology of these topologies. See e.g. \cite{rudin_fap}. 
+
+
+\begin{thebibliography}{9}
+ \bibitem{rudin_fap}
+ W. Rudin, \emph{Functional Analysis},
+ McGraw-Hill Book Company, 1973.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

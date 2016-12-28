@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBolzanosTheorem}
+\pmcreated{2013-03-22 15:43:29}
+\pmmodified{2013-03-22 15:43:29}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{proof of Bolzano's theorem}
+\pmrecord{7}{37674}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the compact interval $[a,b], a<b$ and a continuous real valued function $f$. If $f(a).f(b)<0$ then there exists $c\in(a,b)$ such that $f(c)=0$
+
+WLOG consider $f(a)<0$ and $f(b)>0$. The other case can be proved using $-f(x)$ which will also verify the theorem's conditions.
+
+consider $a_1 = \frac{a+b}{2}$, three cases can occur:
+
+\begin{itemize}
+\item $f(a_1)=0$, in this case the theorem is proved $c=a_1$
+\item $f(a_1)>0$, in this case consider the interval $I_1 = (a,a_1)$
+\item $f(a_1)<0$, in this case consider the interval $I_1 = (a_1,b)$
+\end{itemize}
+
+so starting with an open interval $I_0 = (a,b)$ we get another open interval $I_1 \subset I_0$ with length half of the original $|I_1| = \frac{|I_0|}{2}$.
+
+Repeat the procedure to the interval $I_n$ and get another interval $I_{n+1}$.
+
+We can thus define a succession of open intervals $I_n$ such that $I_{n+1} \subset I_n$, $|I_n|=2^{-n}|I_0|$, such that $I_n = (a_n,b_n)$ and $f(a_n)<0<f(b_n)$.
+
+The succession $c_{2n} = a_n, c_{2n+1}=b_n$ is Cauchy by construction since $m>n \implies |c_m-c_n|<2^{-[n/2]}|I_0|$.
+
+$c_n$ is therefore convergent $c_n\to c\in [a,b]$, and since $a_n$ and $b_n$ are sub-successions, they converge to the same limit. 
+
+$f$ is continuous in $[a,b]$ so $x_n \to x \implies f(x_n) \to f(x)$
+
+By construction
+
+$f(a_n)<0$ and $f(b_n)>0$ so in the limit $\lim_{n \to \infty} f(a_n) = f(\lim_{n \to \infty} a_n)= f(c)\le 0$ and $\lim_{n \to \infty} f(b_n) = f(c) \ge 0$.
+
+So there exists $c \in [a,b]$ such that $0 \le f(c) \le 0 \implies f(c)=0$.
+
+But since $f(a).f(b)<0$, neither $f(a)=0$ nor $f(b)=0$ and since $f(c)=0$, $c \in (a,b)$
+%%%%%
+%%%%%
+\end{document}

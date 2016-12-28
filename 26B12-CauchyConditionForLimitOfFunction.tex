@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyConditionForLimitOfFunction}
+\pmcreated{2013-03-22 17:42:18}
+\pmmodified{2013-03-22 17:42:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Cauchy condition for limit of function}
+\pmrecord{7}{40147}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{54E35}
+\pmsynonym{necessary and sufficient condition of limit}{CauchyConditionForLimitOfFunction}
+\pmrelated{Complete}
+\pmrelated{CauchyCriterionForTheExistenceOfALimitOfAFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+ \usepackage[T2A]{fontenc}
+ \usepackage[russian, english]{babel}
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+A real function $f$ has the limit $\displaystyle\lim_{x\to x_0}f(x)$ if and only if for every positive number $\varepsilon$ there exists another positive number $\delta(\varepsilon)$ satisfying
+ $$|f(u)-f(v)| < \varepsilon\quad \mbox{when}\quad 
+0 < |u-x_0| < \delta(\varepsilon)\;\;\mbox{and}\;\;0 < |v-x_0| < \delta(\varepsilon).$$ 
+
+\begin{thebibliography}{7}
+\bibitem{LDK} \CYRL. \CYRD. \CYRK\cyru\cyrd\cyrr\cyrya\cyrv\cyrc\cyre\cyrv: 
+{\em \CYRM\cyra\cyrt\cyre\cyrm\cyra\cyrt\cyri\cyrch\cyre\cyrs\cyrk\cyri\cyrishrt \,\cyra\cyrn\cyra\cyrl\cyri\cyrz. I \cyrt\cyro\cyrm}. \,\CYRI\cyrz\cyrd\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrs\cyrt\cyrv\cyro \,
+``\CYRV\cyrery\cyrs\cyrsh\cyra\cyrya \,\cyrsh\cyrk\cyro\cyrl\cyra''. \CYRM\cyro\cyrs\cyrk\cyrv\cyra \,(1970).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

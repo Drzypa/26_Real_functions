@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorvaluedFunction}
+\pmcreated{2013-03-22 19:02:19}
+\pmmodified{2013-03-22 19:02:19}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{vector-valued function}
+\pmrecord{8}{41915}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{26A24}
+\pmrelated{Component}
+\pmrelated{DifferenceOfVectors}
+\pmdefines{integrable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $n$ be a positive integer greater than 1.\, A function $F$ from a subset $T$ of $\mathbb{R}$ to the Cartesian product $\mathbb{R}^n$ is called a \emph{vector-valued function} of one real variable.\, Such a function \PMlinkescapetext{joins} to any real number $t$ of $T$ a coordinate vector
+$$F(t) \;=\; (f_1(t),\,\ldots,\,f_n(t)).$$
+Hence one may say that the vector-valued function $F$ is composed of $n$ real functions \,$t \mapsto f_i(t)$,\, the values of which at $t$ are the components of $F(t)$.\, Therefore the function $F$ itself may be written in the component form
+\begin{align}
+F \;=\; (f_1,\,\ldots,\,f_n).
+\end{align}
+
+
+\textbf{Example.}\, The ellipse
+$$\{(a\cos{t},\,b\sin{t})\,\vdots\;\; t \in \mathbb{R}\}$$
+is the value set of a vector-valued function\, $\mathbb{R} \to \mathbb{R}^2$\, ($t$ is the eccentric anomaly).\\
+
+
+\emph{Limit, derivative and integral} of the function (1) are defined componentwise through the equations
+\begin{itemize}
+\item $\displaystyle\lim_{t\to t_0}F(t) \;:=\; \left(\lim_{t\to t_0}f_1(t),\,\ldots,\,\lim_{t\to t_0}f_n(t)\right)$
+\item $\displaystyle F'(t) \;:=\; \left(f_1'(t),\,\ldots,\,f_n'(t)\right)$
+\item $\displaystyle\int_a^b\!F(t)\,dt \;:=\; \left(\int_a^b\!f_1(t)\,dt,\,\ldots,\,\int_a^b\!f_n(t)\,dt\right)$
+\end{itemize}
+The function $F$ is said to be \emph{continuous, differentiable or integrable} on an interval \,$[a,\,b]$\, if every component of $F$ has such a property.\\
+
+\textbf{Example.}\, If $F$ is continuous on \,$[a,\,b]$,\, the set
+\begin{align}
+\gamma \;:=\; \{F(t)\,\vdots\;\;\; t \in [a,\,b]\}
+\end{align}
+is a (continuous) curve in $\mathbb{R}^n$.\, It follows from the above definition of the derivative $F'(t)$ that $F'(t)$ is the limit of the expression
+\begin{align}
+\frac{1}{h}[F(t\!+\!h)-F(t)]
+\end{align}
+as\, $h \to 0$.\, Geometrically, the vector (3) is parallel to the line segment connecting (the end points of the position vectors of) the points $F(t\!+\!h)$ and $F(t)$.\, If $F$ is differentiable in $t$, the direction of this line segment then tends infinitely the direction of the tangent line of $\gamma$ in the point $F(t)$.\, Accordingly, the direction of the tangent line is determined by the derivative vector $F'(t)$.
+
+%%%%%
+%%%%%
+\end{document}

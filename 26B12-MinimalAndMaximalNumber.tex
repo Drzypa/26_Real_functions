@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinimalAndMaximalNumber}
+\pmcreated{2014-02-15 18:33:33}
+\pmmodified{2014-02-15 18:33:33}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{minimal and maximal number}
+\pmrecord{25}{36118}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{03E04}
+\pmsynonym{least and greatest number}{MinimalAndMaximalNumber}
+%\pmkeywords{least}
+%\pmkeywords{greatest}
+\pmrelated{Infimum}
+\pmrelated{Supremum}
+\pmrelated{UltrametricTriangleInequality}
+\pmrelated{GrowthOfExponentialFunction}
+\pmrelated{EstimatingTheoremOfContourIntegral}
+\pmrelated{LeastAndGreatestValueOfFunction}
+\pmrelated{FuzzyLogic2}
+\pmrelated{ZerosAndPolesOfRationalFunction}
+\pmrelated{UniformConvergenceOnUnionInterval}
+\pmrelated{Interprime}
+\pmrelated{LehmerMean}
+\pmrelated{Ab}
+\pmdefines{least number}
+\pmdefines{greatest number}
+\pmdefines{minimal number}
+\pmdefines{maximal number}
+\pmdefines{set function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let's consider a finite non-empty set\, 
+$A \,=\, \{a_1,\,\ldots,\,a_n\}$\,\, of real numbers or an infinite but compact (i.e. bounded and closed) set $A$ of real numbers.\, In both cases the set has a unique least number and a unique greatest number.
+\begin{itemize}
+ \item The least number of the set is denoted by\, 
+ $\min\{a_1,\,\ldots,\,a_n\}$\, or\, $\min{A}$.
+ \item The greatest number of the set is denoted by\, $\max\{a_1,\,\ldots,\,a_n\}$\, or\, $\max{A}$.
+\end{itemize}
+
+In both cases we have
+$$\min{A} \;=\; \inf{A},$$
+$$\max{A} \;=\; \sup{A},$$
+$$\min{A} \;\leqq\; x \;\leqq\; \max{A} \quad \forall x\in A,$$
+where\, $\inf{A}$\, and\, $\sup{A}$\, are the infimum and supremum of the set $A$.
+
+The $\min$ and $\max$ are {\em set functions}, i.e. they map 
+subsets of a certain set to $\mathbb{R}$.
+
+The $\min$ and $\max$ have the following distributive properties 
+with respect to addition:
+$$\min\{a_1,\,\ldots,\,a_n\}+b 
+\;=\; \min\{a_1+b,\,\ldots,\,a_n+b\}$$
+$$\max\{a_1,\,\ldots,\,a_n\}+b 
+\;=\; \max\{a_1+b,\,\ldots,\,a_n+b\}$$\\
+
+The minimal and maximal number of a set of two real numbers obey 
+the formulae
+$$\min\{a,\,b\} \;=\; \frac{a\!+\!b}{2}\!-\!\frac{|a\!-\!b|}{2},$$
+$$\max\{a,\,b\} \;=\; \frac{a\!+\!b}{2}\!+\!\frac{|a\!-\!b|}{2},$$\
+$$\max\{a,\,b\}-\min\{a,\,b\} \;=\; |a\!-\!b|,$$\
+$$\max\{a,\,b\}+\min\{a,\,b\} \;=\; a\!+\!b,$$\
+$$\max\{a,\,-a\} \;=\; |a|$$
+
+%%%%%
+%%%%%
+\end{document}

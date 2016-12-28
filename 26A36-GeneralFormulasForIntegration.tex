@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralFormulasForIntegration}
+\pmcreated{2013-03-22 17:39:31}
+\pmmodified{2013-03-22 17:39:31}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{general formulas for integration}
+\pmrecord{16}{40092}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmsynonym{integration formulas}{GeneralFormulasForIntegration}
+%\pmkeywords{antiderivative}
+\pmrelated{TableOfDerivatives}
+\pmrelated{IntegralTables}
+\pmrelated{IntegrationByParts}
+\pmrelated{ReductionFormulasForIntegrationOfPowers}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\newcommand{\ds}{\displaystyle}
+\begin{document}
+\begin{enumerate}
+\item $\ds \int f'(x)\,dx = f(x)+C$
+\item $\ds \int\lambda\,dx = \lambda x+C$
+\item $\ds \int\lambda f(x)\,dx = \lambda\int f(x)\,dx$
+\item $\ds \int(f(x)+g(x))\,dx = \int f(x)\,dx+\int g(x)\,dx$
+\item $\ds \int f(x)g'(x)\,dx = f(x)g(x)-\int g(x)f'(x)\,dx$
+\item $\ds \int g(f(x))f'(x)\,dx = G(f(x))+C$\;\; if\;\; $G'(t) = g(t)$
+\item $\ds \int [f(x)]^rf'(x)\,dx = \frac{1}{r\!+\!1}[f(x)]^{r+1}+C$\;\; for\,\, $r \neq -1$
+\item $\ds \int \frac{f'(x)}{f(x)}\,dx = \ln|f(x)|+C$
+\item $\ds \int e^{f(x)}f'(x)\,dx = e^{f(x)}+C$
+\item $\ds \int \!\frac{f(x)}{(f(x)\!+\!a)(f(x)\!+\!b)}\,dx \,=\, 
+\frac{a}{a\!-\!b}\int\!\frac{dx}{f(x)\!+\!a}-\frac{b}{a\!-\!b}\int\!\frac{dx}{f(x)\!+\!b}$
+\item $\ds \int \sin(\omega x+\varphi)\,dx = -\frac{\cos(\omega x+\varphi)}{\omega}+C$
+\item $\ds \int \cos(\omega x+\varphi)\,dx = \frac{\sin(\omega x+\varphi)}{\omega}+C$
+\item $\ds \int \sinh(\omega x+\varphi)\,dx = \frac{\cosh(\omega x+\varphi)}{\omega}+C$
+\item $\ds \int \cosh(\omega x+\varphi)\,dx = \frac{\sinh(\omega x+\varphi)}{\omega}+C$
+\item $\ds \int \sqrt{ax\!+\!b}\;dx = \frac{2}{3a}(ax\!+\!b)\sqrt{ax\!+\!b}+C$
+\item $\ds \int \sqrt{ax^2\!+\!b}\;dx = \frac{x}{2}\sqrt{ax^2\!+\!b}+\frac{b}{2\sqrt{a}}\ln(x\sqrt{a}+\sqrt{ax^2\!+\!b})+C$
+\item $\displaystyle \int \sin^n x \cos^m x \, dx = -\frac{\sin^{n-1} x \cos^{m+1} x}{m+n} + \frac{n-1}{m+n} \int \sin^{n-2}x \cos^m x \, dx$
+\item $\displaystyle \int \sin^n x \cos^m x \, dx = \frac{\sin^{n+1} x \cos^{m-1} x}{m+n} + \frac{m-1}{m+n} \int \sin^n x \cos^{m-2} x \, dx$\\
+\end{enumerate}
+
+Some series-formed antiderivatives:
+
+$\ds \int f(x)\,dx = C+f(0)x+\frac{f'(0)}{2!}x^2+\frac{f''(0)}{3!}x^3+\ldots$\\
+$\ds \int f(x)\,dx = C+xf(x)-\frac{x^2}{2!}f'(x)+\frac{x^3}{3!}f''(x)-+\ldots$\\
+$\ds \int UV\,dx = UV^{(-1)}-U'V^{(-2)}+U''V^{(-3)}-+\ldots \;=\; \sum_{n=0}^\infty (-1)^n U^{(n)}V^{(-n-1)}$
+
+The derivatives with negative \PMlinkname{order}{HigherOrderDerivatives} \PMlinkescapetext{mean} that $V$ has been integrated repeatedly.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocalMinimumOfConvexFunctionIsNecessarilyGlobal}
+\pmcreated{2013-03-22 13:33:37}
+\pmmodified{2013-03-22 13:33:37}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{local minimum of convex function is necessarily global}
+\pmrecord{13}{34165}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B25}
+\pmsynonym{extremal value of convex/concave functions}{LocalMinimumOfConvexFunctionIsNecessarilyGlobal}
+\pmsynonym{local maximum of concave function is necessarily global}{LocalMinimumOfConvexFunctionIsNecessarilyGlobal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+A local minimum (resp. local maximum) of a convex function
+(resp. concave function) on a
+convex subset of a topological vector space, is always a global extremum.
+
+\begin{proof}
+Let $f:S\to \mathbb{R}$ be a convex function
+on a convex set $S$ in a topological vector space.
+
+Suppose $x$ is a local minimum for $f$;
+that is, there is an open neighborhood $U$ of $x$
+where $f(x) \leq f(\xi)$  for all $\xi\in U$.
+We prove $f(x) \leq f(y)$ for arbitrary $y \in S$.
+
+Consider the convex combination $(1-t)x + ty$ for $0 \leq t \leq 1$:
+\begin{figure}[!htb]
+\begin{center}
+  \includegraphics{convex-minimum.eps}
+\end{center}
+\end{figure}
+Since scalar multiplication and vector addition are, by definition,
+continuous in a topological vector space, the convex combination approaches
+$x$ as $t \to 0$.  Therefore for small enough $t$,
+$(1-t)x + ty$ is in the neighborhood $U$.
+Then
+\begin{align*}
+f(x) &\leq f\bigl(ty + (1-t) x\bigr)  & \text{for small $t > 0$} \\
+&\leq t \, f(y) + (1-t) f(x) & \text{since $f$ is convex.}
+\end{align*}
+Rearranging \PMlinkescapetext{terms}, we have $f(x) \leq f(y)$.
+
+To show the analogous situation for a concave function $f$,
+the above reasoning can be applied after replacing $f$ with $-f$.
+\end{proof}
+\end{thm}
+
+%%%%%
+%%%%%
+\end{document}

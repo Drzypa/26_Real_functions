@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LogarithmicScale}
+\pmcreated{2013-03-22 18:32:53}
+\pmmodified{2013-03-22 18:32:53}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{logarithmic scale}
+\pmrecord{18}{41268}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A09}
+\pmrelated{ThereforeSign}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{solution} \PMlinkescapeword{solutions}
+
+A \PMlinkescapetext{functional} dependence of two real variables $x$ and $y$ is in certain cases in the applying sciences good to illustrate by replacing one or both of them by its logarithm in an appointed base.\, If we use e.g. the natural logarithms and denote
+$$X \;:=\; \log_ex, \quad Y \;:=\; \log_ey,$$
+then e.g. an exponential dependence changes to a linear one,
+\begin{align}
+y \;=\; ae^{mx} \quad \therefore\;\; Y \;=\; \log_e{a}+mx,
+\end{align}
+and a power function dependence correspondently,
+\begin{align}
+y \;=\; ax^m \quad \therefore\;\; Y \;=\; \log_e{a}+mX.
+\end{align}
+In these cases we thus can investigate rectilinear graphs (with slope $m$) instead of curved ones.
+
+Using (1) is advantageous especially when the range of the quantity $y$ extends from very small positive values to much greater ones --- then taking logarithms condenses the wide range and replaces the original values with some constant ratio by the values with certain constant difference:
+$$y_2:y_1 \;=\; k \quad \therefore\;\; \log{y_2}-\log{y_1} \;=\; \log{k}.$$\\
+
+The below \PMlinkescapetext{diagram} utilises (2) for three power functions.
+
+\begin{center}
+\begin{pspicture}(-1,-2)(7,6)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-1,-2)(6.5,5.5)
+\rput(6.85,-0.1){$(X)$}
+\rput(0.35,5.6){$(Y)$}
+\psdots(1,0)(2,0)(3,0)(4,0)(5,0)(6,0) (0,1)(0,2)(0,3)(0,4)(0,5)
+\rput(1,-0.3){$0.25$}
+\rput(2,-0.3){$0.5$}
+\rput(3,-0.3){$1$}
+\rput(4,-0.3){$2$}
+\rput(5,-0.3){$4$}
+\rput(6,-0.3){$8$}
+\rput(-0.5,1){$0.01$}
+\rput(-0.3,2){$0.1$}
+\rput(-0.2,3){$1$}
+\rput(-0.3,4){$10$}
+\rput(-0.4,5){$100$}
+\psline[linecolor=blue]{-}(1,1.79)(5,4.205)
+\psline[linecolor=blue]{-}(1,1.2)(5,4.806)
+\psline[linecolor=blue]{-}(1,3.6)(5,2.4)
+\rput(5.5,4.1){$x^2$}
+\rput(5.5,4.9){$x^3$}
+\rput(5.5,2.4){$x^{-1}$}
+\rput(3,-1.3){$\mbox{Graphs of \,} x^{-1},\,x^2,\,x^3$}
+\end{pspicture}
+\end{center}
+
+
+\textbf{Example 1.}\, The scale of \PMlinkescapetext{pH} values, indicating the acidity of aqueous solutions, is logarithmic:
+$$\mathrm{pH} \;:=\; \log_{0.1}[\mathrm{H_3O^+}] \;=\; -\log_{10}[\mathrm{H_3O^+}] $$
+Here, \,$[\mathrm{H_3O^+}]$\, is the so-called activity of the \PMlinkexternal{hydronium}{http://en.wikipedia.org/wiki/Hydronium} ions in the solution in question.\, Thus, a difference 1 in \PMlinkescapetext{pH} values means that one solution \PMlinkescapetext{contains} active hydronium ions 10 times more than the other (and is 10 times sourer).
+The values of $[\mathrm{H_3O^+}]$ can vary mostly from $10^{-14}$ to 1 mole per litre, which wide range is squeezed by \PMlinkescapetext{pH} to the interval \,$[0,\,14]$.\\
+
+\textbf{Example 2.}\, The scale of the loud pithches of our ear is logarithmic.\, It means for example that the acoustic frequences of distinct notes (c, d, e, f, g, a, b) of an octave have not certain differences but certain ratios which are \PMlinkescapetext{simple} fractional numbers; the ratio of frequencies of two notes an octave apart is always 1:2.\, Especially, the frequencies of the notes in the C major scale have the ratios $24:27:30:32:36:40:45:48$.
+
+
+%%%%%
+%%%%%
+\end{document}

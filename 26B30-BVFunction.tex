@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BVFunction}
+\pmcreated{2013-03-22 15:12:32}
+\pmmodified{2013-03-22 15:12:32}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{BV function}
+\pmrecord{11}{36969}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B30}
+\pmsynonym{function of bounded variation}{BVFunction}
+\pmrelated{TotalVariation}
+\pmdefines{total variation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+Functions of bounded variation, $BV$ functions, are functions whose distributional derivative is a finite Radon measure. More precisely:
+
+\begin{definition}[functions of bounded variation]
+Let $\Omega\subset \R^n$ be an open set. We say that a function $u\in L^1(\Omega)$ 
+has \emph{bounded variation}, and write $u\in BV(\Omega)$, if there exists a finite Radon vector measure $Du\in\mathcal M(\Omega,\R^n)$ such that
+\[
+  \int_\Omega u(x)\,\mathrm{div}\phi(x)\, dx = - \int_\Omega \langle \phi(x), Du(x)\rangle
+\] 
+for every function $\phi\in C_c^1(\Omega,\R^n)$. The measure $Du$, 
+represents the distributional derivative of $u$ since the above equality holds true for every $\phi\in C^\infty_c(\Omega,\R^n)$.
+\end{definition}
+
+Notice that $W^{1,1}(\Omega)\subset BV(\Omega)$. In fact if $u\in W^{1,1}(\Omega)$ one can choose $\mu:=\nabla u\mathcal L$ (where $\mathcal L$ is the Lebesgue measure on $\Omega$). 
+The equality $\int u\mathrm{div \phi} = -\int \phi\, d\mu
+= -\int \phi \nabla u$ 
+is nothing else than the definition of weak derivative, and hence holds true.
+One can easily find an example of a $BV$ functions which is not $W^{1,1}$.
+
+An equivalent definition can be given as follows. 
+\begin{definition}[variation]
+Given $u\in L^1(\Omega)$ we define the \emph{variation} of $u$ in $\Omega$ as
+\[
+  V(u,\Omega):=\sup\{\int_\Omega u\mathrm{div}\phi\colon \phi\in\mathcal C_c^1(\Omega,\R^n),\ \Vert \phi\Vert_{L^\infty(\Omega)}\le 1\}.
+\]
+We define $BV(\Omega)=\{ u\in L^1(\Omega)\colon V(u,\Omega)<+\infty\}$.
+\end{definition}.
+%%%%%
+%%%%%
+\end{document}

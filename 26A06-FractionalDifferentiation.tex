@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FractionalDifferentiation}
+\pmcreated{2013-03-22 16:18:46}
+\pmmodified{2013-03-22 16:18:46}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{fractional differentiation}
+\pmrecord{21}{38437}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{Grunwald-Letnikov differentiation}{FractionalDifferentiation}
+\pmrelated{HigherOrderDerivativesOfSineAndCosine}
+\pmdefines{fractional derivative}
+\pmdefines{left-hand Grunwald-Letnikov derivative}
+\pmdefines{left hand Grundwald Letnikov derivative}
+\pmdefines{right-hand Grundwald-Letnikov derivative}
+\pmdefines{right hand Grundwald-Letnikov derivative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The idea of Grunwald-Letnikov differentiation comes from the following formulas of \PMlinkname{backward}{BackwardDifference} and forward difference \PMlinkescapetext{equations}. Within this entry, $[ \cdot ]$ will be used to denote the greatest integer function and $\Gamma$ will be used to denote the gamma function.
+
+{\bf Backward difference} 
+
+\begin{equation}D_{-}(f)(x) = \lim_{h\to 0}\frac{f(x)-f(x-h)}{h} 
+\end{equation}
+
+\begin{equation}D^n_{-}(f)(x)=\lim_{h\to 0}\frac{1}{h^n}\sum_{k=0}^n
+\frac{(-1)^k n!}{k! (n-k)!}f(x-kh) \end{equation}
+
+For derivatives of integer orders, we only requires to specifies one point $x\in {\mathbb R}$. Fractional derivatives, like fractional definite integrals, require an interval $[a,b]$ to be specified for the function $f:{\mathbb R}\to {\mathbb R}$ we are talking about.
+
+{\bf Definition 1:  Left-hand Grunwald-Letnikov derivative} 
+
+\begin{equation}D^p_{-}(f)(x)=
+\lim_{h\to 0}\frac{1}{h^p}\sum_{k=0}^{\left[\frac{b-a}{h}\right]}
+\frac{(-1)^k\Gamma (p+1)}{k! \Gamma (p-k+1)} f(x-kh) \end{equation}
+
+{\bf Forward difference}
+
+\begin{equation}D_{+}(f)(x) = \lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
+\end{equation}
+
+\begin{equation}D^n_{+}(f)(x) = \lim_{h\to 0}\frac{1}{h^n}\sum^n_{k=0}
+\frac{(-1)^k n!}{k! (n-k)!} f(x+(n-k-1)h) \end{equation}
+
+{\bf Definition 2:  Right-hand Grunwald-Letnikov derivative}
+
+\begin{equation}D^p_{+}(f)(x)=
+\lim_{h\to 0}\frac{1}{h^p}\sum_{k=0}^{\left[\frac{b-a}{h}\right]}
+\frac{(-1)^k\Gamma (p+1)}{k! \Gamma (p-k+1)} f(x+(m-k-1)h) \end{equation}
+
+{\bf Theorem 1: Properties of fractional derivatives}
+
+\begin{itemize}
+\item {\rm Linearity}:  $D^p_{\pm}(a f+ b g)(x) = a D^p_{\pm}(f)(x) + b D^p_{\pm}(g)(x)$ where $a,b\in {\mathbb R}$ are any real constants
+\item {\rm Iteration}:  $D^p_{\pm}D^q_{\pm}(f)(x) = D^{p+q}_{\pm}(f)(x)$
+\item {\rm Chain rule}:  $\displaystyle{\frac{d^\beta f(g(x))}{dx^{\beta}} 
+=\sum_{k=0}^{\infty}\frac{\Gamma(1+\beta)}{\Gamma(1+k)\Gamma(1-k+\beta)}
+\frac{d^{\beta-k}1}{dx^{\beta-k}}
+\frac{d^k f(g(x))}{dx^k} }$
+\item {\rm Leibniz Rule}:   $\displaystyle{\frac{d^\beta (f(x)g(x))}{dx^\beta}
+=\sum_{k=0}^{\infty}\frac{\Gamma(1+\beta)}{\Gamma(1+k)\Gamma(1-k+\beta)}
+\frac{d^k f(x)}{dx^k} \frac{d^{\beta-k}g(x)}{dx^{\beta-k}} }$
+\end{itemize}
+
+{\bf Theorem 2: Table of fractional derivatives} 
+
+\begin{itemize}
+\item $\displaystyle{ D^{\alpha}_{\pm}(x^p)
+=\frac{\Gamma (p+1)x^{p-\alpha}}{\Gamma (p-\alpha+1)} }$ where $\alpha,p\in {\mathbb R}$ and $\Gamma(x)$
+\item $\displaystyle{ D^{\alpha}_{\pm}( e^{\lambda x} )
+=\lambda^{\alpha} e^{\lambda x} }$ for all $\lambda\in {\mathbb R}$
+\item $\displaystyle{ D^{\alpha}_{\pm} (\sin x) = \sin \left(x+\frac{\alpha \pi}{2}\right)}$
+\item $\displaystyle{ D^{\alpha}_{\pm} (\cos x) = \cos \left(x+\frac{\alpha \pi}{2}\right)}$
+\item $\displaystyle{ D^{\alpha}_{\pm} (e^{i x}) =\cos \left(x+\frac{\pi\alpha}{2}\right)+i\sin \left(x+\frac{\pi\alpha}{2}\right) }$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

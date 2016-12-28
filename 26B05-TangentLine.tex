@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TangentLine}
+\pmcreated{2013-03-22 14:50:31}
+\pmmodified{2013-03-22 14:50:31}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{tangent line}
+\pmrecord{12}{36511}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmsynonym{tangent}{TangentLine}
+\pmsynonym{tangent of the curve}{TangentLine}
+\pmsynonym{tangent to the curve}{TangentLine}
+\pmrelated{Curve}
+\pmrelated{TangentOfConicSection}
+\pmrelated{Hyperbola2}
+\pmdefines{tangency point}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If the curve \, $y = f(x)$\, of $xy$-plane is sufficiently smooth in its point\, $(x_0,\,y_0)$\, and in a neighborhood of this, the curve may have a tangent line (or simply \PMlinkescapetext{{\em tangent}\footnote{The word is initially a participial form {\em tangens} (its genitive: {\em tangentis}) of the Latin verb {\em tangere} `to touch'.}}) in\, $(x_0,\,y_0)$.\, Then the {\em tangent line} of the curve\, $y = f(x)$\, in the point\, $(x_0,\,y_0)$\, is the limit position of the secant line through the two points\, $(x_0,\,y_0)$\, and\, $(x,\,f(x))$\, of the curve, when $x$ limitlessly tends to the value $x_0$ (i.e.\, $x\to x_0)$.\, Due to the smoothness, 
+                   $$f(x)\to f(x_0) = y_0,$$
+                 $$(x,\,f(x))\to (x_0,\,y_0),$$
+and the slope $m$ of the \PMlinkname{secant}{SecantLine} tends to
+          $$\lim_{x\to x_0}\frac{f(x)\!-\!f(x_0)}{x\!-\!x_0} = f'(x_0)$$
+which will be the slope of the tangent line.
+
+\textbf{Note.}\, Because the tangency is a local property on the curve, the tangent with the {\em tangency point}\, $(x_0,\,y_0)$\, may intersect the curve in another point, and then the tangent is a \PMlinkname{secant}{SecantLine}, too.\, For example, the curve\, $y = x^3\!-\!3x^2$\, has the line\, $y = 0$\, as its tangent in the point\, $(0,\,0)$\, but this line \PMlinkescapetext{cuts} the curve also in the point\, $(3,\,0)$.
+%%%%%
+%%%%%
+\end{document}

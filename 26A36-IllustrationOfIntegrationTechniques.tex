@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IllustrationOfIntegrationTechniques}
+\pmcreated{2013-03-22 17:50:16}
+\pmmodified{2013-03-22 17:50:16}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{illustration of integration techniques}
+\pmrecord{13}{40309}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{integral}
+\PMlinkescapeword{integrals}
+
+The following integral is an example that illustrates many integration techniques.
+
+\textbf{Problem.} Determine the antiderivative of $\sqrt{\tan x}$.
+
+\emph{\PMlinkescapetext{Solution}.}  We start with \PMlinkname{substitution}{IntegrationBySubstitution}:
+
+\begin{align*}
+u & =\sqrt{\tan x} \\
+u^2 & =\tan x \\
+2u \, du & =\sec^2 x \, dx
+\end{align*}
+Using the Pythagorean identity $\tan^2 x+1=\sec^2 x$, we obtain:
+\begin{align*}
+2u \, du & =(\tan^2 x+1) \, dx \\
+2u \, du & =(u^4+1) \, dx \\
+\frac{2u}{u^4+1} \, du & =dx
+\end{align*}
+
+Thus,
+\begin{align*}
+\int\sqrt{\tan x} \, dx & =\int u\,\frac{2u}{u^4+1} \, du \\
+& =\int\frac{2u^2}{(u^2-u\sqrt{2}+1)(u^2+u\sqrt{2}+1)} \, du.
+\end{align*}
+
+For this last integral, we use the method of \PMlinkname{partial fractions}{ALectureOnThePartialFractionDecompositionMethod}:
+\begin{align*}
+\frac{2u^2}{(u^2-u\sqrt{2}+1)(u^2+u\sqrt{2}+1)} & =\frac{A+Bu}{u^2-u\sqrt{2}+1}+\frac{C+Du}{u^2+u\sqrt{2}+1} \\ \\
+2u^2 & =(A+Bu)(u^2+u\sqrt{2}+1)+(C+Du)(u^2-u\sqrt{2}+1) \\
+& =(B\!+\!D)u^3+(A\!+\!C\!+\!(B\!-\!D)\sqrt{2})u^2+(B\!+\!D\!+\!(A\!-\!C)\sqrt{2})u+A\!+\!C
+\end{align*}
+From this, we obtain the following system of equations:
+
+\[
+\left\{
+\begin{array}{cccc}
+              &   & B+D           & =0 \\
+A+C           & + & (B-D)\sqrt{2} & =2 \\
+(A-C)\sqrt{2} & + & B+D           & =0 \\
+A+C           &   &               & =0
+\end{array}
+\right.
+\]
+
+This can be \PMlinkescapetext{separated} into two smaller systems of equations:
+
+\[
+\left\{
+\begin{array}{rcrc}
+A         & + & C         & =0 \\
+A\sqrt{2} & - & C\sqrt{2} & =0
+\end{array}
+\right.
+\]
+
+\[
+\left\{
+\begin{array}{rcrc}
+B         & + & D         & =0 \\
+B\sqrt{2} & - & D\sqrt{2} & =2
+\end{array}
+\right.
+\]
+
+It is clear that the first system yields $A=C=0$, and it can easily be verified that $B=\frac{1}{\sqrt{2}}$ and $D=\frac{-1}{\sqrt{2}}$.  Therefore,
+\begin{align*}
+\int\sqrt{\tan x} \, dx & =\frac{1}{\sqrt{2}}\int\frac{u}{u^2-u\sqrt{2}+1} \, du-\frac{1}{\sqrt{2}}\int\frac{u}{u^2+u\sqrt{2}+1} \, du \\
+& =\frac{1}{\sqrt{2}}\int\frac{u}{u^2-u\sqrt{2}+\frac{1}{2}+\frac{1}{2}} \, du-\frac{1}{\sqrt{2}}\int\frac{u}{u^2+u\sqrt{2}+\frac{1}{2}+\frac{1}{2}} \, du \\
+& =\frac{1}{\sqrt{2}}\int\frac{u}{(u-\frac{1}{\sqrt{2}})^2+\frac{1}{2}} \, du-\frac{1}{\sqrt{2}}\int\frac{u}{(u+\frac{1}{\sqrt{2}})^2+\frac{1}{2}} \, du.
+\end{align*}
+
+Now we make the following substitutions:
+
+\begin{center}
+$\begin{array}{rclcrcl}
+v  & = & u-\frac{1}{\sqrt{2}} & \bigskip & w  & = & u+\frac{1}{\sqrt{2}} \\
+dv & = & du                   &          & dw & = & du
+\end{array}$
+\end{center}
+
+Note that we have $v+\frac{1}{\sqrt{2}}=u=w-\frac{1}{\sqrt{2}}$.  Therefore,
+\begin{align*}
+\int\sqrt{\tan x} \, dx & =\frac{1}{\sqrt{2}}\int\frac{v+\frac{1}{\sqrt{2}}}{v^2+\frac{1}{2}} \, dv-\frac{1}{\sqrt{2}}\int\frac{w-\frac{1}{\sqrt{2}}}{w^2+\frac{1}{2}} \, dw \\
+& =\frac{1}{\sqrt{2}}\int\frac{v}{v^2+\frac{1}{2}} \, dv-\frac{1}{2}\int\frac{dv}{v^2+\frac{1}{2}}-\frac{1}{\sqrt{2}}\int\frac{w}{w^2+\frac{1}{2}} \, dw+\frac{1}{2}\int\frac{dw}{w^2+\frac{1}{2}}.
+\end{align*}
+
+For the first and third integrals in the last expression, note that the numerator is a \PMlinkescapetext{constant multiple} of the derivative of the denominator.  For these, we use the formula
+\[
+\int\frac{kf'(x)}{f(x)} \, dx=k\ln|f(x)|.
+\]
+For the second and fourth integrals in the last expression, we use the formula
+\[
+\int\frac{dx}{x^2+a^2}=\frac{1}{a}\arctan\left(\frac{x}{a}\right)
+\]
+with $a=\frac{1}{\sqrt{2}}$.  Hence,
+\begin{align*}
+\int\sqrt{\tan x} \, dx & =\frac{1}{2\sqrt{2}}\ln\left(v^2+\frac{1}{2}\right)+\frac{1}{\sqrt{2}}\arctan(v\sqrt{2}) -\frac{1}{2\sqrt{2}}\ln\left(w^2+\frac{1}{2}\right)+\frac{1}{\sqrt{2}}\arctan(w\sqrt{2})+K \\
+& =\frac{1}{2\sqrt{2}}\ln\left(\frac{v^2+\frac{1}{2}}{w^2+\frac{1}{2}}\right) +\frac{1}{\sqrt{2}}(\arctan(v\sqrt{2})+\arctan(w\sqrt{2}))+K \\
+& =\frac{1}{2\sqrt{2}}\ln\left(\frac{(u-\frac{1}{\sqrt{2}})^2+\frac{1}{2}}{(u+\frac{1}{\sqrt{2}})^2+\frac{1}{2}}\right) +\frac{1}{\sqrt{2}}\left(\!\arctan\left[\!\left(\!u-\frac{1}{\sqrt{2}}\!\right)\!\sqrt{2}\right]\! +\!\arctan\left[\!\left(\!u+\frac{1}{\sqrt{2}}\!\right)\!\sqrt{2}\right]\!\right)\!+\!K \\
+& =\frac{1}{2\sqrt{2}}\ln\left(\frac{u^2-u\sqrt{2}+1}{u^2+u\sqrt{2}+1}\right) +\frac{1}{\sqrt{2}}[\arctan(u\sqrt{2}-1)+\arctan(u\sqrt{2}+1)]+K \\
+& =\frac{1}{2\sqrt{2}}\ln\left(\frac{\tan x-\sqrt{2\tan x}+1}{\tan x+\sqrt{2\tan x}+1}\right) +\frac{1}{\sqrt{2}}[\arctan(\sqrt{2\tan x}-1)+\arctan(\sqrt{2\tan x}+1)]+K.
+\end{align*}
+
+(We use $K$ for the constant of integration to avoid confusion with $C$ from the system of equations.)
+%%%%%
+%%%%%
+\end{document}

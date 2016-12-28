@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SecondIntegralMeanvalueTheorem}
+\pmcreated{2013-03-22 18:20:21}
+\pmmodified{2013-03-22 18:20:21}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{second integral mean-value theorem}
+\pmrecord{12}{40972}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A48}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{\PMlinkescapetext{Second integral mean-value theorem.}}\, If the real functions $f$ and $g$ are continuous and $f$ monotonic on the interval \,$[a,\,b]$,\, then the equation
+\begin{align}
+\int_a^b\!f(x)g(x)\,dx \;=\; f(a)\!\int_a^{\,\xi}\!g(x)\,dx+f(b)\!\int_\xi^{\,b}\!g(x)\,dx
+\end{align}
+is true for a value $\xi$ in this interval.\\
+
+
+\emph{Proof.}\, We can suppose that\, $f(a) \neq f(b)$\, since otherwise any value of $\xi$ between $a$ and $b$ would do.
+
+Let's first prove the auxiliary result, that if a function $\varphi$ is continuous on an open interval $I$ containing\, 
+$[a,\,b]$\, then
+\begin{align}
+\lim_{h\to0}\int_a^b\!\frac{\varphi(x\!+\!h)\!-\!\varphi(x)}{h}\,dx \;=\; \varphi(b)\!-\varphi(a).
+\end{align}
+In fact, when we take an antiderivative $\Phi$ of $\varphi$, then for every nonzero $h$ the function
+$$x \;\mapsto\; \frac{\Phi(x\!+\!h)-\Phi(x)}{h}$$
+is an antiderivative of the integrand of (2) on the interval\, $[a,\,b]$.\, Thus we have
+$$\int_a^b\!\frac{\varphi(x\!+\!h)\!-\!\varphi(x)}{h}\,dx 
+\;=\; \frac{\Phi(b\!+\!h)\!-\!\Phi(x)}{h}-\frac{\Phi(a\!+\!h)\!-\!\Phi(x)}{h} \;\to\; \varphi(b)\!-\!\varphi(a) 
+\quad \mbox{as} \;\; h \,\to\, 0.$$
+
+The given functions $f$ and $g$ can be extended on an open interval $I$ containing\, $[a,\,b]$\, such that they remain continuous and $f$ monotonic.\, We take an antiderivative $G$ of $g$ and a nonzero number $h$ having small absolute value.\, Then we can write the identity
+\begin{align}
+\int_a^b\!\frac{f(x\!+\!h)G(x\!+\!h)\!-\!f(x)G(x)}{h}\,dx \;=\; 
+\int_a^b\!\frac{f(x\!+\!h) [G(x\!+\!h)\!-\!G(x)]}{h}\,dx-\int_a^b\!\frac{f(x\!+\!h)\!-\!f(x)}{h}G(x)\,dx. 
+\end{align}
+
+By (2), the left hand side of (3) may be written
+\begin{align}
+\int_a^b\!\frac{f(x\!+\!h)G(x\!+\!h)\!-\!f(x)G(x)}{h}\,dx \;=\; f(b)G(b)\!-\!f(a)G(a)\!+\!\varepsilon_1(h)
+\end{align}
+where\, $\varepsilon_1(h) \to 0$\, as\, $h \to 0$.\, Further, the function
+\begin{align*}
+x \;\mapsto\;
+\begin{cases}
+\frac{f(x+h)[G(x+h)-G(x)]}{h} \quad \mbox{for}\quad h \;\neq\; 0 \\
+f(x)g(x) \qquad \mbox{for}\qquad h \;=\; 0
+\end{cases}
+\end{align*}
+is continuous in a rectangle \;$a \le x \le b,\;\, -\delta \le h \le \delta$,\, whence we have
+\begin{align}
+\int_a^b\!\frac{f(x\!+\!h)[G(x\!+\!h)\!-\!G(x)]}{h}\,dx \;=\; \int_a^b\!f(x)g(x)\,dx+\varepsilon_2(h)
+\end{align}
+where\, $\varepsilon_2(h) \to 0$\, as\, $h \to 0$.\, Because of the monotonicity of $f$, the expression 
+$\frac{f(x\!+\!h)-f(x)}{h}$ does not change its sign when\, $a \le x \le b$.\, Then the usual integral mean value theorem guarantees for every $h$ (sufficiently near 0) a number $\xi_h$ of the interval\, $[a,\,b]$\, such that
+$$\int_a^b\!\frac{f(x\!+\!h)\!-\!f(x)}{h}G(x)\,dx \;=\; G(\xi_h)\!\int_a^b\!\frac{f(x\!+\!h)\!-\!f(x)}{h}\,dx,$$
+and the auxiliary result (2) allows to write this as
+\begin{align}
+\int_a^b\!\frac{f(x\!+\!h)\!-\!f(x)}{h}G(x)\,dx \;=\; G(\xi_h)[f(b)\!-\!f(a)\!+\!\varepsilon_3(h)]
+\end{align}
+with\, $\varepsilon_3(h) \to 0$\, as\, $h \to 0$.\, Now the equations (4), (5) and (6) imply
+\begin{align}
+f(b)G(b)\!-\!f(a)G(a)+\varepsilon_1(h) \;=\; 
+\int_a^b\!f(x)g(x)\,dx+\varepsilon_2(h)+G(\xi_h)[f(b)\!-\!f(a)\!+\!\varepsilon_3(h)].
+\end{align}
+Because\, $f(b)\!-\!f(a) \neq 0$,\, the expression $G(\xi_h)$ has a limit $L$ for\, $h \to 0$.\, By the continuity of 
+$G$ there must be a number $\xi$ between $a$ and $b$ such that\, $G(\xi) = L$.\, Letting then $h$ tend to 0 we thus get the limiting equation
+$$f(b)G(b)\!-\!f(a)G(a) \;=\; \int_a^b\!f(x)g(x)\,dx+G(\xi)[f(b)\!-\!f(a)],$$
+which finally gives
+$$\int_a^b\!f(x)g(x)\,dx \;=\; f(a)[G(\xi)\!-\!G(a)]+f(b)[G(b)\!-\!G(\xi)] 
+\;=\; f(a)\!\int_a^{\,\xi}\!g(x)\,dx+f(b)\!\int_\xi^{\,b}\!g(x)\,dx$$
+Q.E.D.
+%%%%%
+%%%%%
+\end{document}

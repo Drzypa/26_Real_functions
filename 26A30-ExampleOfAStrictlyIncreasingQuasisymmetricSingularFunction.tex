@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfAStrictlyIncreasingQuasisymmetricSingularFunction}
+\pmcreated{2013-03-22 14:10:37}
+\pmmodified{2013-03-22 14:10:37}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{example of a strictly increasing quasisymmetric singular function}
+\pmrecord{5}{35603}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An example of a strictly increasing quasisymmetric function that also a purely singular function can be defined as:
+\begin{equation*}
+f(x) = \lim_{k \rightarrow \infty} \int_0^x \prod_{i=1}^k (1 + \lambda \cos n_i s) ds ,
+\end{equation*}
+where $0< \lambda < 1$ and carefully picked $n_i$.
+We can pick the $n_i$ such that $n_{i+1}$ is strictly
+greater then $\sum_{j=1}^i n_j$.  However if we pick the $\lambda$
+and $n_i$ more carefully, we can construct functions with the quasisymmetricity
+constant as close to 1 as we want.  That is, we can construct functions such that
+\begin{equation*}
+\frac{1}{M} 
+\leq
+\frac{f(x+t)-f(x)}{f(x)-f(x-t)}
+\leq
+M
+\end{equation*}
+for all $x$ and $t$ where $M$ is as close to 1 as we want.  If $M=1$ note that
+the function must be a straight line.
+
+It is also possible from this to construct a quasiconformal mapping of the upper half plane to itself by extending this function to the whole real line and then using the Beurling-Ahlfors quasiconformal extension.  Then we'd have a quasiconformal mapping such that its boundary correspondence would be a purely singular function.
+
+For more detailed explanation, \PMlinkescapetext{graphs} and
+proof (it is too long to reproduce here) see bibliography.
+
+{\bf Bibliography}
+
+\begin{itemize}
+\item
+A.\@ Beurling, L\@. V.\@ Ahlfors.  \PMlinkescapetext{The boundary
+correspondence under quasiconformal mappings}.  \emph{Acta Math.}, 96:125-142,
+1956.
+\item
+J.\@ Lebl.  \emph{\PMlinkescapetext{Quasiconformal Extensions of Quasisymmetric
+Mappings}}.  \PMlinkescapetext{Masters thesis, San Diego State University, San
+Diego, CA, May 2003}.  Also available at
+\PMlinkexternal{http://www.jirka.org/thesis.pdf}{http://www.jirka.org/thesis.pdf}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

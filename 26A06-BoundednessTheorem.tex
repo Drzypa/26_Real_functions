@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundednessTheorem}
+\pmcreated{2013-03-22 14:29:18}
+\pmmodified{2013-03-22 14:29:18}
+\pmowner{classicleft}{5752}
+\pmmodifier{classicleft}{5752}
+\pmtitle{boundedness theorem}
+\pmrecord{6}{36022}
+\pmprivacy{1}
+\pmauthor{classicleft}{5752}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Boundedness Theorem. }
+{\it
+Let $a$ and $b$ be real numbers with $a<b$, and let $f$ be a continuous, real valued function on $[a,b]$. Then $f$ is bounded above and below on $[a,b]$.
+}
+
+{\it Proof. }
+Suppose not. Then for all natural numbers $n$ we can find some $x_n \in [a,b]$ such that $|f(x_n)|>n$. The sequence $(x_n)$ is bounded, so by the Bolzano-Weierstrass theorem it has a convergent sub sequence, say $(x_{n_i})$. As $[a,b]$ is closed $(x_{n_i})$ converges to a value in $[a,b]$. By the continuity of $f$ we should have that $f(x_{n_i})$ converges, but by construction it diverges. This contradiction finishes the proof.
+%%%%%
+%%%%%
+\end{document}

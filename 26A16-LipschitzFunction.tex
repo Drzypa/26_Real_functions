@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LipschitzFunction}
+\pmcreated{2013-03-22 14:01:42}
+\pmmodified{2013-03-22 14:01:42}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{Lipschitz function}
+\pmrecord{12}{35054}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A16}
+\pmdefines{Lipschitz}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\begin{document}
+\PMlinkescapeword{Lipschitz}
+Let $W \subseteq X \subseteq \C$ and $f\colon X\to\C$.  Then $f$ is \emph{\PMlinkescapetext{Lipschitz}} on $W$ if there exists an $M\in\R$ such that, for all $x,y\in W$, $x \neq y$
+$$|f(x)-f(y)|\leq M|x-y|$$
+
+If $a,b\in\R$ with $a<b$ and $f\colon [a,b]\to\R$ is Lipschitz on $(a,b)$, then $f$ is absolutely continuous on $[a,b]$.
+
+\textbf{Example:} Is   
+
+$$f(x) = \frac{1}{\sqrt{x}},~~~x \in [0,1]$$
+
+a Lipschitz function.
+
+We need to estimate the constant $M$. 
+
+$$|f(x) - f(y)| = \left|\frac{1}{\sqrt{x}} - \frac{1}{\sqrt{y}} \right| = \left|\frac{\sqrt{x} - \sqrt{y}}{\sqrt{xy}} \right| = \left|\frac{x - y}{\sqrt{xy} (\sqrt{x} + \sqrt{y})} \right| = \frac{1}{|\sqrt{xy} (\sqrt{x} + \sqrt{y})|} |x-y|.$$
+
+ 
+It follows that
+
+$$ M = \frac{1}{|\sqrt{xy} (\sqrt{x} + \sqrt{y})|} $$
+
+and $f(x)$ is not Lipschitz at $x=0$.
+
+%%%%%
+%%%%%
+\end{document}

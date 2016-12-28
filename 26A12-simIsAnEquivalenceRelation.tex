@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{simIsAnEquivalenceRelation}
+\pmcreated{2013-03-22 16:13:16}
+\pmmodified{2013-03-22 16:13:16}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{$\sim$ is an equivalence relation}
+\pmrecord{9}{38319}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A12}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+Note that $\sim$ as defined in the entry Landau notation is an equivalence relation on the set of all functions from $\mathbb{R}^+$ to $\mathbb{R}^+$.  This set of functions will be denoted in this entry as $F$.
+
+\emph{\PMlinkname{Reflexive}{Reflexive}:} For any $f \in F$, $\displaystyle \lim_{x \to \infty} \frac{f(x)}{f(x)}=1$, and $f \sim f$.
+
+\emph{Symmetric:} If $f,g \in F$ with $f \sim g$, then $\displaystyle \lim_{x \to \infty} \frac{f(x)}{g(x)}=1$.  Thus:
+
+\begin{center}
+$\begin{array}{ll}
+\displaystyle \lim_{x \to \infty} \frac{g(x)}{f(x)} & \displaystyle =\lim_{x \to \infty} \frac{1}{\left( \frac{f(x)}{g(x)} \right)} \\
+\\
+& \displaystyle =\frac{1}{1} \\
+\\
+& =1 \end{array}$
+\end{center}
+
+Therefore, $g \sim f$.
+
+\PMlinkname{\emph{Transitive}}{Transitive3}\emph{:} If $f,g,h \in F$ with $f \sim g$ and $g \sim h$, then $\displaystyle \lim_{x \to \infty} \frac{f(x)}{g(x)}=1$ and $\displaystyle \lim_{x \to \infty} \frac{g(x)}{h(x)}=1$.  Thus:
+
+\begin{center}
+$\begin{array}{ll}
+\displaystyle \lim_{x \to \infty} \frac{f(x)}{h(x)} & \displaystyle =\lim_{x \to \infty} \left( \frac{f(x)}{g(x)} \cdot \frac{g(x)}{h(x)} \right) \\
+\\
+& =1 \cdot 1 \\
+\\
+& =1 \end{array}$
+\end{center}
+
+Therefore, $f \sim h$.
+%%%%%
+%%%%%
+\end{document}

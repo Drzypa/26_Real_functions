@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfExtendedMeanvalueTheorem}
+\pmcreated{2013-03-22 13:09:00}
+\pmmodified{2013-03-22 13:09:00}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of extended mean-value theorem}
+\pmrecord{6}{33589}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{proof of Cauchy's mean-value theorem}{ProofOfExtendedMeanvalueTheorem}
+\pmrelated{MeanValueTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f:[a,b]\to\mathbb{R}$ and $g:[a,b]\to\mathbb{R}$ be continuous on $[a,b]$ and differentiable on $(a,b)$.  Define the function
+$$
+h(x)=f(x)\left(g(b)-g(a)\right)-g(x)\left(f(b)-f(a)\right)-f(a)g(b)+f(b)g(a).
+$$
+Because $f$ and $g$ are continuous on $[a,b]$ and differentiable on $(a,b)$, so is $h$.  Furthermore, $h(a)=h(b)=0$, so by Rolle's theorem there exists a $\xi\in(a,b)$ such that $h'(\xi)=0$.  This implies that
+$$
+f'(\xi)\left(g(b)-g(a)\right)-g'(\xi)\left(f(b)-f(a)\right)=0
+$$
+and, if $g(b)\neq g(a)$,
+$$
+\frac{f'(\xi)}{g'(\xi)}=\frac{f(b)-f(a)}{g(b)-g(a)}.
+$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IfFcolonXtoYIsContinuousThenFcolonXtoFXIsContinuous}
+\pmcreated{2013-03-22 15:16:28}
+\pmmodified{2013-03-22 15:16:28}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{If $f\colon X\to Y$ is continuous then $f\colon X\to f(X)$ is continuous}
+\pmrecord{6}{37062}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54C05}
+\pmrelated{ContinuityIsPreservedWhenCodomainIsExtended}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm}
+Suppose $X,Y$ are topological spaces and $f\colon X\to Y$ is a
+continuous function. Then 
+$f\colon X\to f(X)$ is continuous when $f(X)$ is equipped with
+the subspace topology.
+\end{thm}
+
+\begin{proof} Let us first note that using a 
+propert{y} on \PMlinkname{this page}{InverseImage}, we have
+$$
+  X = f^{-1} f(X).
+$$
+For the proof, suppose that $A$ is ope{n} 
+  in $f(X)$, that is, $A=U\cap f(X)$
+  for some open set $U\subset Y$. From the properties of 
+  the inverse image, we have
+$$
+  f^{-1}(A) = f^{-1}(U) \cap f^{-1}(f(X))= f^{-1}(U)
+$$
+so $f^{-1}(A)$ is open in $X$. 
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

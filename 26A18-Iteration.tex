@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Iteration}
+\pmcreated{2013-03-22 12:43:40}
+\pmmodified{2013-03-22 12:43:40}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{iteration}
+\pmrecord{9}{33027}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A18}
+\pmsynonym{iterate}{Iteration}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f\colon X\to X$ be a function, $X$ being any set. The $n$-th iteration of a function is the function which is obtained if $f$ is applied $n$ times, and is denoted by $f^n$. More formally we define:
+$$f^0(x)=x$$
+and
+$$f^{n+1}(x)=f(f^n(x))$$
+for nonnegative integers $n$. If $f$ is invertible, then by going backwards we can define the iterate also for negative $n$.
+%%%%%
+%%%%%
+\end{document}

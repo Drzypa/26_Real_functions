@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OscillationOfAFunction}
+\pmcreated{2013-03-22 17:45:50}
+\pmmodified{2013-03-22 17:45:50}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{oscillation of a function}
+\pmrecord{5}{40217}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{TotalVariation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn*}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\DeclareMathOperator{\sgn}{sgn}
+\begin{document}
+\begin{defn*}
+Let $f:X\subset\mathbb{R}\to\mathbb{R}$. The {\bf oscillation} of the function $f$ on the set $X$ is said to be
+$$\omega(f,X)=\sup_{a,b\,\in\, X}|f(b)-f(a)|,$$
+where $a, b$ are arbitrary points in $X$.
+\end{defn*}
+
+\subsection{Examples}
+\begin{itemize}
+\item $\omega(x^2, \, [-1,2])=4$
+\item $\omega(x, \, [-1,2])=3$
+\item $\omega(x, \, (-1,2))=3$
+\item $\omega(\sgn x \, [-1,2])=2$
+\item $\omega(\sgn x \, [0,2])=1$
+\item $\omega(\sgn x \, (0,2])=0$
+\end{itemize}
+Cauchy's criterion can be expressed in terms of this concept.\cite{cite:Zorich}
+
+\begin{thebibliography}{99}
+\bibitem{cite:Zorich}
+V., Zorich, {\em Mathematical Analysis I}, pp. 131, First Ed., Springer-Verlag, 2004. 
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

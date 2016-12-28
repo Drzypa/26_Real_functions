@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DefinitionsInTrigonometry}
+\pmcreated{2013-03-22 13:55:08}
+\pmmodified{2013-03-22 13:55:08}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{definitions in trigonometry}
+\pmrecord{10}{34676}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmrelated{Trigonometry}
+\pmrelated{Sinusoid}
+\pmrelated{ComplexSineAndCosine}
+\pmrelated{ExampleOnSolvingAFunctionalEquation}
+\pmrelated{DerivativesOfSineAndCosine}
+\pmrelated{AdditionFormulasForSineAndCosine}
+\pmrelated{AdditionFormulaForTangent}
+\pmrelated{GoniometricFormulae}
+\pmrelated{OsculatingCurve}
+\pmdefines{sine}
+\pmdefines{cosine}
+\pmdefines{exponential}
+\pmdefines{tangent}
+\pmdefines{cotangent}
+\pmdefines{secant}
+\pmdefines{cosecant}
+\pmdefines{trigonometric function}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\begin{document}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{names}
+\PMlinkescapeword{inverses}
+\includegraphics{trig.eps}
+
+\textbf{Informal definitions}
+
+Given a triangle $ABC$ with a signed angle $x$ at $A$ and a
+right angle at $B$, the ratios
+$$\frac{BC}{AC}\qquad \frac{AB}{AC}\qquad \frac{BC}{AB}$$
+are dependent only on the angle $x$, and therefore define functions,
+denoted by
+$$\sin x\qquad \cos x\qquad \tan x$$
+respectively, where the names are short for \emph{sine, cosine} and
+\emph{tangent}. Their inverses are rather less important,
+but also have names:
+\begin{eqnarray*}
+\cot x &=& \frac{AB}{BC} = \frac{1}{\tan x} \text{  (cotangent)} \\
+\csc x &=& \frac{AC}{BC} = \frac{1}{\sin x} \text{  (cosecant)} \\
+\sec x &=& \frac{AC}{AB} = \frac{1}{\cos x} \text{  (secant)}
+\end{eqnarray*}
+From Pythagoras's theorem we have $\cos^2 x+\sin^2 x = 1$ for all (real) $x$.
+Also it is ``clear'' from the diagram at left that functions $\cos$ and $\sin$
+are periodic with period $2\pi$. However:
+
+\textbf{Formal definitions}
+
+The above definitions are not fully rigorous, because we have not defined
+the word \emph{angle}. We will sketch a more rigorous approach.
+
+The power series
+$$\sum_{n=0}^\infty\frac{x^n}{n!}$$
+converges uniformly on compact subsets of $\mathbb{C}$ and its sum,
+denoted by $\exp(x)$ or by $e^x$, is therefore an entire function of $x$,
+called the exponential function.
+$f(x)=\exp(x)$ is the unique solution of the boundary value problem
+$$f(0)=1\qquad f'(x)=f(x)$$
+on $\mathbb{R}$.
+The sine and cosine functions, for real arguments, are defined in terms
+of $\exp$, simply by
+$$\exp(ix)=\cos x + i(\sin x)\;.$$
+Thus
+$$\cos x = 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots$$
+$$\sin x = \frac{x}{1!}-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots$$
+Although it is not self-evident, $\cos$ and $\sin$ are periodic functions on
+the real line, and have the same period. That period is denoted by $2\pi$.
+%%%%%
+%%%%%
+\end{document}

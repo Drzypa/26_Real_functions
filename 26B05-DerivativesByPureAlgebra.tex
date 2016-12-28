@@ -1,0 +1,239 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativesByPureAlgebra}
+\pmcreated{2013-03-22 15:59:37}
+\pmmodified{2013-03-22 15:59:37}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{derivatives by pure algebra}
+\pmrecord{16}{38018}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{46G05}
+\pmclassification{msc}{26A24}
+\pmrelated{DerivativeOfXn}
+\pmrelated{AlternativeProofOfDerivativeOfXn}
+\pmrelated{DerivativeOfPolynomial}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newtheorem{example}{Example}
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Let $R$ be any commutative unique factorization domain (UFD) and $x$ and $h$ indeterminants.  For instance, let $R=\mathbb{R}$ the usual real numbers, or any other field.  We treate $R[x]$ as a subring of $R[x,h]$.
+
+We derive a definition for derivatives of polynomial and rational functions over $R$ along with the usual rules: product rule and power rule.  Despite the abstract nature of the definitions, the mechanics reflect the general understanding of introductory calculus, without any appeal to the Cauchy style $\varepsilon-\delta$ limits of analysis.
+
+\begin{defn}
+Define
+\[\frac{f(x+h)-f(x)}{h}=a_1(x,h)\cdots a_m(x,h)\]
+where $f(x+h)-f(x)=h a_1(x,h)\cdots a_m(x,h)$ in the UFD $R[x,h]$.
+Furthermore, given $g(x,h)\in R[x,h]$ define 
+\[\lim_{h\rightarrow 0} g(x,h)=g(x,0)\]
+(which is simply the evaluation homomorphism at $h=0$.)
+Finally define
+\[\frac{df}{dx}:=\lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}
+=a_1(x,0)\cdots a_m(x,0).\]
+We also denote $\frac{df}{dx}$ by $f'(x)$.
+\end{defn}
+
+\begin{example}
+\[\frac{d}{dx}(5x^2-7x+9)=10x-7.\]
+\end{example}
+\begin{proof}
+First we reduce the fraction in a manner identical to the usual methods of 
+calculus:
+\begin{eqnarray*}
+\frac{d}{dx}(5x^2-7x+9) 
+ & = & \lim_{h\rightarrow 0}\frac{(5(x+h)^2-7(x+h)+9)-(5x^2-7x+9)}{h}\\
+ & = & \lim_{h\rightarrow 0}\frac{5x^2+10xh+5h^2-7x-7h+9-5x^2+7x-9}{h}\\
+ & = & \lim_{h\rightarrow 0}\frac{10xh+5h^2-7h}{h} \\
+ & = & \lim_{h\rightarrow 0}10x+5h-7.
+\end{eqnarray*}
+At this stage we must interpret the $\lim_{h\rightarrow 0}$.  Because the 
+limit notation simply means to evaluate this polynomial at $h=0$ we find:
+\[\frac{d}{dx}(5x^2-7x+9)=10x+5(0)-7=10x-7.\]
+This is in contrast to the typical approach where $h$ is said to ``approach''
+$0$.  However, no difference is found in the solution and almost no difference
+is found in the method, only in the interpretation of the method.
+\end{proof}
+
+\begin{prop}
+The derivative formula is well-defined.  In particular, 
+$h$ divides $f(x+h)-f(x)\in R[x,h]$ for every $f(x)\in R[x]$,
+and the $a_1(x,h)\cdots a_m(x,h)$ are unique to $f(x)$.
+\end{prop}
+\begin{proof}
+For all $f(x),g(x)\in R[x]$, it follows
+\begin{multline*}
+(f+g)(x+h)-(f+g)(x) =f(x+h)+g(x+h)-f(x)\\
+    -g(x)(f(x+h)-f(x))+(g(x+h)-g(x)).
+\end{multline*}
+Furthermore, for all $a\in R$
+\[(af)(x+h)-(af)(x)=af(x+h)-af(x)=a(f(x+h)-f(x)).\]
+So now if we take $f(x)=a_0+a_1 x+\cdots + a_n x^n$,
+then $h|(f(x+h)-f(x))$ if $h|((x+h)^i-x^i)$ for every $i\in \mathbb{N}$.
+When $i=0$, $(x+h)^0-x^0=0$ so $h|((x+h)^0-x^0)$.  Now take $i>0$
+and use of the binomial theorem to find:
+\begin{eqnarray*}
+(x+h)^i-x^i & = & \sum_{j=0}^{i} \binom{i}{j} x^{i-j} h^{j}-x^i\\
+   & = & \sum_{j=1}^{i} \binom{i}{j} x^{i-j} h^{j}\\
+   & = & h\sum_{j=1}^{i} \binom{i}{j} x^{i-j} h^{j-1}.\\
+\end{eqnarray*}
+Hence $h|(f(x+h)-f(x))$.
+
+As $R$ is a UFD, so is $R[x,h]$.  Also $h$ is irreducible in $R[x,h]$, and
+$h|(f(x+h)-f(x))$, so $f(x+h)-f(x)=h a_1(x,h)\cdots a_m(x,h)$ for some
+$a_i(x,h)\in R[x,h]$, $1\leq i\leq m$, with each $a_i(x,h)$ unique to $f(x+h)-f(x)$ up to multiplication by a unit of $R[x,h]$, that is, a unit of $R$.  In particular, $a_1(x,h)\cdots a_m(x,h)$ is unique to $f(x+h)-f(x)$, and so unique to $f(x)$.
+\end{proof}
+
+\begin{remark}
+Although potentially obtuse, the notation $\lim_{h\rightarrow 0}$ is a function,
+$\lim_{h\rightarrow 0}:R[x,h]\rightarrow R[x]$ and has kernel $Rh=(h)$.  So
+we have $R[x,h]/(h)\cong R[x]$.  Therefore we may also write:
+\[\frac{df}{dx} \equiv \frac{f(x+h)-f(x)}{h} \pmod{h}.\]
+It is important that we always reduce the fractions so that we are not encountering any division by 0 at any stage.
+\end{remark}
+
+\begin{thm}
+Derivatives satisfy the following rules:
+\begin{itemize}
+\item[Linearity]  For $f(x),g(x)\in R[x]$ and $a\in R$
+\[\frac{d}{dx}(f(x)+g(x))=\frac{df}{dx}+\frac{dg}{dx},\qquad
+\frac{d}{dx}(af(x))=a\frac{df}{dx},\]
+\item[Power Rule]
+\[\frac{d}{dx}(x^n)=nx^{n-1}.\]
+\item[Product Rule]
+\[\frac{d}{dx}(f(x)g(x))=\frac{df}{dx}g(x)+f(x)\frac{dg}{dx}.\]
+\end{itemize}
+\end{thm}
+
+This form of a formal derivative applies to any UFD and so it also applies to $\mathbb{R}$.  Thus it is possible to express polynomial calculus in terms of algebraic theory without any proper use of limits.  This obscures many of the geometric properties such as the slope of a tangent line to a graph.  However, computationally this technique outlines how $\varepsilon,\delta$-limits are not required for the computation of derivatives.  
+
+Although abstract algebra, such as quotients of rings, are required to properly understand $R[x,h]/(h)$, this approach still provides elementary proofs of derivative rules like the product rule.  Although it is not necessary, to draw a distinct between $R[x]$ and $R[x,h]/(h)$ one may use $\equiv$ when we consider the expressions in $R[x,h]/(h)$ if the distinction is clarifying.
+
+\section{Derivatives of rational functions}
+
+One may also generalize the derivative to apply to general rational function $f(x)\in R(x)$
+by observing $1=x^n x^{-n}$. Therefore
+\begin{gather*}
+\frac{d}{dx}(1) = \frac{d}{dx}(x^n x^{-n})\\
+0 = \frac{d}{dx}(x^n) x^{-n}+x^n \frac{d}{dx}(x^{-n})\\
+0 = nx^{n-1} x^{-n}+x^n\frac{d}{dx}(x^{-n})
+ = \frac{n}{x}+x^n\frac{d}{dx}(x^{-n}).
+\end{gather*}
+Now solve for $\frac{d}{dx}(x^{-n})$.
+\[\frac{d}{dx}(x^{-n})=-\frac{n}{x}\frac{1}{x^n}=(-n)x^{(-n)-1}.\]
+
+Thus we also derive the usual quotient rule:
+\[\frac{d}{dx}\left(\frac{f}{g}\right) =
+\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}.\]
+
+%%%%%
+%%%%%
+\end{document}

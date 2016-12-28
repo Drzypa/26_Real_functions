@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntermediateValueTheoremForExtendedRealNumbers}
+\pmcreated{2013-03-22 15:35:15}
+\pmmodified{2013-03-22 15:35:15}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{intermediate value theorem for extended real numbers}
+\pmrecord{6}{37498}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{ExtendedRealNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm}
+Let $\overline{\R}$ be the extended real numbers, and
+suppose $f\colon \overline{\R}\to \overline{\R}$ is a continuous function.
+Suppose $x_1<x_2\in \overline{\R}$ are such that $f(x_1)\neq f(x_2)$. If
+$y\in(f(x_1),f(x_2))$, then
+for some $c\in (x_1,x_2)$ we have 
+$$
+   f(c)=y.
+$$
+\end{thm}
+
+\begin{proof}
+As $\overline{\R}$ is homeomorphic to $[0,1]$, we can assume that $f$ is a function
+$f\colon[0,1]\to \overline{\R}$. For simplicity, 
+let us also assume that $x_1=0$,$x_2=1$, and $f(0)<f(1)$. Then
+for some $\varepsilon>0$ we have 
+$$
+  f(0)<y-\varepsilon<y<y+\varepsilon < f(1).
+$$
+Let $g\colon [0,1]\to \R$ be the continuous function
+$$
+  g(x) = \operatorname{max}\{ \operatorname{min}\{ f(x), y+\varepsilon\}, y-\varepsilon\}.
+$$
+Now $g(0)=y-\varepsilon$ and $g(1)=y+\varepsilon$, 
+so for some $c\in(0,1)$, we have $g(c)=y$, and thus $f(c)=y$. 
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

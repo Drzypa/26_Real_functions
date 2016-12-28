@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArithmeticgeometricMean}
+\pmcreated{2013-03-22 14:23:46}
+\pmmodified{2013-03-22 14:23:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{arithmetic-geometric mean}
+\pmrecord{7}{35893}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E60}
+\pmclassification{msc}{33E05}
+\pmsynonym{agm}{ArithmeticgeometricMean}
+\pmsynonym{AGM}{ArithmeticgeometricMean}
+\pmrelated{EllipticIntegralsAndJacobiEllipticFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\oo{\infty}
+\def\agm{\operatorname{agm}}
+\def\AGM{\operatorname{AGM}}
+\begin{document}
+If $x$ and $y$ are non-negative real numbers, we can form their arithmetic
+mean $a_0 = (x+y)/2$ as well as their geometric mean $g_0 = \sqrt{xy}$.
+This procedure can be repeated to form a sequence of arithmetic and
+geometic means $a_{n+1} = (a_n+g_n)/2$ and $g_{n+1} = \sqrt{a_n g_n}$.
+By the arithmetic-geometric means inequality we have $a_n \ge a_{n+1} \ge g_{n+1} \ge g_n$ (with equality holding only when $a_n=g_n$),
+hence these sequences converge to a number between $x$ and $y$,
+with the rate of convergence being superlinear.
+The \emph{arithmetic-geometric mean} $M(x,y)$ of $x$ and $y$
+is defined as this limit
+\begin{equation*}
+  M(x,y) = \lim_{n\to\oo} a_n, g_n.
+\end{equation*}
+The origin of the name is obvious from the construction. Alternative notations
+for $M(x,y)$ are $\agm(x,y)$ or $\AGM(x,y)$.
+
+The AGM lies between the arithmetic and geometric
+means of $x$ and $y$,
+\begin{equation*}
+  \frac{x+y}{2} \ge M(x,y) \ge \sqrt{xy},
+\end{equation*}
+with equality holding only in case of equality $x=y$. The AGM is also a
+homogeneous function of degree $1$, namely $M(\alpha x, \alpha y)
+= \alpha M(x,y)$ for $\alpha > 0$. It is also symmetric $M(x,y) = M(y,x)$.
+These properties are obvious from the construction.
+
+The AGM can be used to numerically evaluate elliptic integrals of the
+first and second kinds. For example,
+\begin{equation}
+  M(x,y) = \frac{\pi}{4} \frac{x+y}{K\left(\frac{|x-y|}{x+y}\right)},
+\end{equation}
+where $K(k)$ is the elliptic integral of the first kind as function of
+the modulus $k$.
+
+As a numerical method, the arithmetic-geometric mean has much to recommend it.
+By its nature, it automatically provides upper and lower bounds for the
+answer, so one does not have to separately estimate error.  To compute
+the arithmetic-geometric mean to a certain accuracy, we only need to carry
+out the computation until the difference between $a_n$ and $g_n$ is smaller
+than the desired accuracy.
+
+Because convergence is superlinear, only a few iterations are necessarry to
+obtain the answer.  For instance, if we compute $M(1,k)$ with $k$ less than 
+a billion, we already obtain at least fifteen-place accuracy after eight 
+iterations, as the following computation of $M(1,123456789)$ shows:
+
+\begin{tabular}
+{c|c|c}
+$n$ & $g_n$ & $a_n$ \\
+0 & 1.0 & 123456789.0 \\
+1 & 11111.111060555555 & 61728395.0 \\
+2 & 828173.3227017411 & 30869753.055530276 \\
+3 & 5056234.365511624 & 15848963.189116009 \\
+4 & 8951875.352937901 & 10452598.777313817 \\
+5 & 9673177.418448625 & 9702237.06512586 \\
+6 & 9687696.345716598 & 9687707.241787244 \\
+7 & 9687701.793750389 & 9687701.793751922 \\
+8 & 9687701.793751154 & 9687701.793751154
+\end{tabular}
+
+The fact that relatively few iterations are necessarry to obtain a highly
+accurate result also means that one does not have to worry much about the 
+cumulative effect of roundoff errors in the various steps of the computation.
+%%%%%
+%%%%%
+\end{document}

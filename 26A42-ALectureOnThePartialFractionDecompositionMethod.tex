@@ -1,0 +1,209 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ALectureOnThePartialFractionDecompositionMethod}
+\pmcreated{2013-03-22 15:39:12}
+\pmmodified{2013-03-22 15:39:12}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{a lecture on the partial fraction decomposition method}
+\pmrecord{5}{37586}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28-00}
+\pmrelated{ALectureOnIntegrationBySubstitution}
+\pmrelated{ALectureOnIntegrationByParts}
+\pmrelated{ALectureOnTrigonometricIntegralsAndTrigonometricSubstitution}
+\pmrelated{PartialFractionsOfExpressions}
+\pmrelated{PartialFractionsForPolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{exe}{Problem}
+\newtheorem*{exe1}{Problem 1}
+\newtheorem*{exe2}{Problem 2}
+\newtheorem*{exe3}{Problem 3}
+\newtheorem*{exe4}{Problem 4}
+
+\theoremstyle{definition}
+\newtheorem{exa}[thm]{Example}
+
+\def\notdiv{\ \mathbin{\mkern-8mu|\!\!\!\smallsetminus}}
+\newcommand{\Qoft}{\mathbb{Q}(T)}  %use in linux
+\newcommand{\done}{\Box} %use in linux
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\peri}{\operatorname{Perimeter}}
+\newcommand{\lc}{\lim_{x\to c}}
+\newcommand{\lzero}{\lim_{x\to 0}}
+\newcommand{\lhzero}{\lim_{h\to 0}}
+\newcommand{\linf}{\lim_{x\to \infty}}
+\begin{document}
+\section{Integrating Rational Functions}
+
+A rational function is a function of the form
+$y=\frac{p(x)}{q(x)}$ where $p(x)$ and $q(x)$ are polynomials
+(with real coefficients). Here we are interested in how to solve
+the integral
+$$\int \frac{p(x)}{q(x)} dx$$
+We already know how to integrate some functions of this type. As
+we know, the chain rule tells us that the derivative of $y=\ln
+(g(x))$ is $y'=\frac{g'(x)}{g(x)}$, where $g(x)$ is any other
+function. Therefore: \begin{eqnarray}\label{log}\int
+\frac{g'(x)}{g(x)}dx=\ln|g(x)|+C.
+\end{eqnarray}
+\begin{exa}
+$$\int \frac{2x+1}{x^2+x+1} dx = \ln|x^2+x+1|+C.$$
+\end{exa}
+\begin{exa}
+Equation (\ref{log}) may also be used to integrate any function of
+the form $y=\frac{a}{bx+c}$, for any constants $a,b,c$. Indeed:
+$$\int \frac{a}{bx+c}dx=\frac{a}{b}\int
+\frac{b}{bx+c}dx=\frac{a}{b}\ln|bx+c| +C$$ or alternatively use a
+substitution $u=bx+c$.
+\end{exa}
+\begin{exa}
+Using a substitution we may also integrate any function of the
+form $y=\frac{a}{(bx+c)^n}$, namely $u=bx+c$ does the job. For
+example, using $u=2x+1$, $du=2dx$:
+$$\int
+\frac{3}{(2x+1)^4}dx=\frac{3}{2}\int\frac{1}{u^4}du=-\frac{1}{2}\frac{1}{u^3}+C=-\frac{1}{2(2x+1)^3}+C.$$
+\end{exa}
+\begin{exa}
+The derivative of the arc tangent function, $y=\arctan x$, is
+$y'=\frac{1}{1+x^2}$. Therefore:
+$$\int \frac{1}{1+x^2} dx= \arctan x + C.$$
+Thus, for any constant $a$, using a substitution $x=au$ one may
+integrate
+$$\int \frac{1}{a^2+x^2} dx= \frac{1}{a}\arctan \frac{x}{a} + C.$$
+You may also use the arctangent function to integrate other
+functions, by completing the square of the denominator. For
+example, $x^2+2x+2=1+(x+1)^2$, thus:
+$$\int \frac{1}{x^2+2x+2}dx=\int
+\frac{1}{1+(x+1)^2}dx=\arctan(x+1)+C.$$
+\end{exa}
+\begin{exa}
+The arctangent also allows us to integrate another family of
+functions, namely:
+$$\int \frac{bx+c}{a^2+x^2}dx.$$
+The trick is to use the favorite strategy of Napoleon: {\it divide
+and conquer}, i.e. we break the fraction into a sum of two (here
+we pick $a=1$ for simplicity):
+$$\int \frac{bx+c}{1+x^2}dx=\int \frac{bx}{1+x^2}dx+\int \frac{c}{1+x^2}dx=\frac{b}{2}\ln|1+x^2|+c\arctan x + C.$$
+\end{exa}
+\section{Partial Fraction Decomposition}
+The objective of this method is to reduce any integral of the type
+$\int \frac{p(x)}{q(x)}dx$ to a sum of integrals of the types
+described in the previous sections. For example:
+\begin{exa}
+We would like to solve the following integral:
+$$\int \frac{2}{x^2+3x-4}dx.$$
+First, we factor the denominator: $$x^2+3x-4=(x+4)(x-1)$$ In order
+to integrate, we are going to express the fraction in the
+integrand as a sum:
+$$\frac{2}{x^2+3x-4}=\frac{A}{x+4}+\frac{B}{x-1}$$
+for some constants $A,B$ to be determined. The right hand side
+(after realizing a common denominator) adds up to
+$\frac{A(x-1)+B(x+4)}{(x+4)(x-1)}$. Therefore, in order to have an
+equality we need the numerators to be equal:
+\begin{eqnarray}\label{eq1}A(x-1)+B(x+4)=2\end{eqnarray} for {\bf all} values of $x$ (i.e. this
+should be an equality of polynomials). Thus, we can substitute
+values of $x$ and obtain equations relating $A$ and $B$ and
+hopefully we'll be able to determine the value of the constants.
+The easiest values to pick are the roots of the denominator of the
+original fraction. In this case, when we plug $x=1$ in Eq.
+(\ref{eq1}) we get $5B=2$, and so $B=2/5$. When we plug $x=-4$ we
+obtain $-5A=2$ and so $A=-2/5$, and we are done! Now we can finish
+the integral: \begin{eqnarray*}\int
+\frac{2}{x^2+3x-4}dx &=& \int\frac{-2/5}{x+4}dx+\int\frac{2/5}{x-1}dx\\
+&=&
+-\frac{2}{5}\ln|x+4|+\frac{2}{5}\ln|x-1|+C=\frac{2}{5}\ln|\frac{x-1}{x+4}|
++C.\end{eqnarray*}
+\end{exa}
+{\bf The method.} The goal of the method, as explained above, is
+to express any fraction $\frac{p(x)}{q(x)}$ as the sum of {\it
+partial fractions} of the types discussed in the previous section.
+\begin{enumerate}
+\item If the degree of $p(x)$ is larger than the degree of $q(x)$
+then use polynomial division to divide and obtain a quotient
+$t(x)$ and remainder $r(x)$ polynomials such that
+$p(x)=q(x)t(x)+r(x)$. Thus
+$$\frac{p(x)}{q(x)}= t(x) + \frac{r(x)}{q(x)}$$
+where the degree of $r$ is lower than the degree of $q$. Now use
+the partial fraction decomposition with $r(x)/q(x)$.
+
+\item Factor the denominator, $q(x)$, into irreducible polynomials
+(over $\R$). Thus, we may express $q(x)$ as a product of linear
+polynomials (perhaps to a power other than $1$) and irreducible
+quadratic polynomials.
+
+\item If a linear factor $(x-a)$ to the {\bf first} power appears
+in the denominator of $q(x)$, the partial fraction decomposition
+should have a term $\frac{A}{(x-a)}$, for some constant $A$ to be
+determined.
+
+\item If a linear factor to the {\bf nth} power, say $(x-b)^n$
+appears in the denominator of $q(x)$, the partial fraction
+decomposition should have terms
+$$\frac{B_1}{(x-b)}+\frac{B_2}{(x-b)^2}+\ldots+\frac{B_n}{(x-b)^n}$$ for some
+$n$ constants $B_1, B_2, \ldots, B_n$ to be determined.
+
+\item If a quadratic polynomial $ax^2+bx+c$ to the $n$th power appears in the
+factorization of $q(x)$, i.e. $(ax^2+bx+c)^n$ is a factor of $q(x)$, then the partial fraction decomposition
+should have terms
+$$\frac{C_1x+D_1}{ax^2+bx+c}+\frac{C_2x+D_2}{(ax^2+bx+c)^2}+\ldots+\frac{C_nx+D_n}{(ax^2+bx+c)^n}$$
+for some constants $C_i,D_i$ to be determined.
+
+\item Once you have the sum of all appropriate partial fractions
+(see above), group together all these partial fractions into one
+fraction $\frac{P(x)}{q(x)}$ (use a minimum common multiple for
+the denominator! The minimum common multiple will actually be
+$q(x)$). In order to have an equality you need to find appropriate
+constants $A,B,\ldots$ such that $p(x)=P(x)$. For this, plug
+values of $x$ to obtain equations relating the constants.
+\end{enumerate}
+
+\begin{exa}
+Suppose we want to find the partial fraction decomposition of:
+$$\frac{3x+2}{(x-1)(x-2)(x-3)^2(1+x^2)}$$
+Then, we need constants $A,B,C,D,E,F$ such that
+$$\frac{3x+2}{(x-1)(x-2)(x-3)^2(1+x^2)}=\frac{A}{x-1} + \frac{B}{x-2}+\frac{C}{x-3}+\frac{D}{(x-3)^2}+\frac{Ex+F}{1+x^2}.$$
+The next step would be to add up all the partial fractions into
+one big fraction $$\frac{P(x)}{(x-1)(x-2)(x-3)^2(1+x^2)}$$ and
+find constants $A,B,C,D,E,F$ such that $P(x)=3x+2$ for all $x$.
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

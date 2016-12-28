@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralMeansInequality}
+\pmcreated{2013-03-22 12:39:49}
+\pmmodified{2013-03-22 12:39:49}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{general means inequality}
+\pmrecord{6}{32934}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+\pmsynonym{power means inequality}{GeneralMeansInequality}
+\pmrelated{ArithmeticGeometricMeansInequality}
+\pmrelated{ArithmeticMean}
+\pmrelated{GeometricMean}
+\pmrelated{HarmonicMean}
+\pmrelated{PowerMean}
+\pmrelated{ProofOfArithmeticGeometricHarmonicMeansI}
+\pmrelated{RootMeanSquare3}
+\pmrelated{DerivationOfZerothWeightedPowerMean}
+\pmrelated{ProofOfArithmeticGeometricHarmonicMeansInequality}
+\pmrelated{ComparisonOfPythagor}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+The power means inequality is a generalization of arithmetic-geometric means inequality.
+
+If $0\neq r\in\R$, the $r$-mean (or $r$-th power mean) of the nonnegative
+numbers $a_1,\ldots,a_n$ is defined as
+$$M^r(a_1,a_2,\ldots,a_n)= \left(\frac{1}{n}\displaystyle{\sum_{k=1}^n a_k^r}\right)^{1/r}$$
+
+Given real numbers $x,y$ such that $xy\neq 0$
+and $x<y$, we have
+$$M^x \leq M^y$$
+and the equality holds if and only if $a_1 = ... = a_n$.
+
+Additionally, if we define $M^0$ to be the
+geometric mean $(a_1a_2...a_n)^{1/n}$, we have
+that the inequality above holds for arbitrary real numbers $x<y$.
+
+The mentioned inequality is a special case of this one, since $M^1$ is the arithmetic mean, $M^0$ is the geometric mean and $M^{-1}$ is the harmonic mean.
+
+This inequality can be further generalized using weighted power means.
+%%%%%
+%%%%%
+\end{document}

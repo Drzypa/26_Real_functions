@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBarbalatsLemma}
+\pmcreated{2013-03-22 15:10:45}
+\pmmodified{2013-03-22 15:10:45}
+\pmowner{ncrom}{8997}
+\pmmodifier{ncrom}{8997}
+\pmtitle{proof of Barbalat's lemma}
+\pmrecord{7}{36933}
+\pmprivacy{1}
+\pmauthor{ncrom}{8997}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We suppose that $y(t) \not\rightarrow 0$ as  $t \rightarrow \infty$. There exists a sequence $(t_{n})$ in $\mathbb{R}_{+}$ such that $t_{n} \rightarrow \infty$ as $n \rightarrow \infty$ and $|y(t_{n})| \geq \varepsilon$ for all $n \in \mathbb{N}$. By the uniform continuity of $y$, there exists a $\delta > 0$ such that, for all $n \in \mathbb{N}$ and all $t \in \mathbb{R}$,
+\[
+|t_{n} - t| \leq \delta \; \Rightarrow \; |y(t_{n})  - y(t)| \leq \frac{\varepsilon}{2}.
+\]
+So, for all $t \in [t_{n}, t_{n}+\delta]$, and for all $n \in \mathbb{N}$ we have
+\begin{eqnarray*}
+|y(t)| & = & |y(t_{n}) - (y(t_{n})- y(t))| \geq |y(t_{n})| - |y(t_{n})- y(t)| \geq \\
+& \geq & \varepsilon - \frac{\varepsilon}{2} = \frac{\varepsilon}{2}.
+\end{eqnarray*}
+Therefore,
+\[
+\left| \int_{0}^{t_{n}+\delta} y(t) dt - \int_{0}^{t_{n}} y(t) dt \right| = \left| \int_{t_{n}}^{t_{n}+\delta} y(t) dt \right| = \int_{t_{n}}^{t_{n}+\delta} |y(t)| dt \geq \frac{\varepsilon \delta}{2} > 0
+\]
+for each $n \in \mathbb{N}$. By the hypothesis, the improprer Riemann integral $\int_{0}^{\infty} y(t) dt$ exists, and thus the left hand side of the inequality converges to 0 as $n \rightarrow \infty$, yielding a contradiction.
+%%%%%
+%%%%%
+\end{document}

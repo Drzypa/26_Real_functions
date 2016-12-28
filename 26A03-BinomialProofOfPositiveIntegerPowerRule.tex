@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BinomialProofOfPositiveIntegerPowerRule}
+\pmcreated{2013-03-22 12:29:43}
+\pmmodified{2013-03-22 12:29:43}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{binomial proof of positive integer power rule}
+\pmrecord{8}{32721}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+We will use the difference quotient in this proof of the power rule for positive integers. Let $f(x)=x^n$ for some integer $n\geq 0$. Then we have
+\begin{align*}
+f'(x) = \lim_{h\rightarrow 0} \frac{(x+h)^n - x^n}{h}.
+\end{align*}
+We can use the binomial theorem to expand the numerator
+\begin{align*}
+f'(x) = \lim_{h\rightarrow 0} \frac{C_0^n x^0h^n + C_1^n x^1h^{n-1} + \cdots + C_{n-1}^n x^{n-1}h^1 + C_n^n x^nh^0 - x^n}{h}
+\end{align*}
+where $C_k^n=\frac{n!}{k!(n-k)!}$. We can now simplify the above
+\begin{align*}
+f'(x)&= \lim_{h\rightarrow 0} \frac{h^n + nxh^{n-1} + \cdots + nx^{n-1}h + x^n - x^n}{h}\\
+&=\lim_{h\rightarrow 0} (h^{n-1} + nxh^{n-2} + \cdots + nx^{n-1})\\
+&=nx^{n-1}\\
+&= nx^{n-1}.
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

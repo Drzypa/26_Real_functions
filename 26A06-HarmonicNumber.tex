@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HarmonicNumber}
+\pmcreated{2013-03-22 13:01:28}
+\pmmodified{2013-03-22 13:01:28}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{harmonic number}
+\pmrecord{10}{33421}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{40A05}
+\pmrelated{Series}
+\pmrelated{AbsoluteConvergence}
+\pmrelated{HarmonicSeries}
+\pmrelated{PrimeHarmonicSeries}
+\pmrelated{WolstenholmesTheorem}
+\pmdefines{harmonic number of order}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+The \emph{harmonic number of order $n$ of $\theta$} is defined as
+
+$$ H_{\theta}(n) = \sum_{i=1}^n \frac{1}{i^{\theta}} $$
+
+Note that $n$ may be equal to $\infty$, provided $\theta > 1$.  
+
+If $\theta \le 1$, while $n=\infty$, the harmonic series does not converge and hence the harmonic number does not exist.
+
+If $\theta = 1$, we may just write $H_{\theta}(n)$ as $H_n$ (this is a common notation).
+
+\textbf{\PMlinkescapetext{Properties}}
+
+\begin{itemize}
+\item If $\Re(\theta) > 1$ and $n=\infty$ then the sum is the Riemann zeta function.
+\item If $\theta=1$, then we get what is known simply as``the harmonic number'', and it has many important properties. For example, it has asymptotic expansion $H_n=\ln n+\gamma+\frac{1}{2m}+\dotsc$ where $\gamma$ is Euler's constant.
+\item It is possible\footnote{See ``The Art of computer programming'' vol. 2 by D. Knuth} to define harmonic numbers for non-integral $n$. This is done by means of the series  $H_n(z)=\sum_{n\geq 1}(n^{-z}-(n+x)^{-z})$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

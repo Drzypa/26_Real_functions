@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralOfLimitFunction}
+\pmcreated{2013-03-22 19:01:41}
+\pmmodified{2013-03-22 19:01:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integral of limit function}
+\pmrecord{10}{41900}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{40A30}
+\pmrelated{TermwiseDifferentiation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If a sequence $f_1,\,f_2,\,\ldots$ of real functions, continuous on the interval \,$[a,\,b]$,\, converges uniformly on this interval to the limit function $f$, then
+\begin{align}
+\int_a^b\!f(x)\,dx \;=\; \lim_{n\to\infty}\int_a^b\!f_n(x)\,dx.
+\end{align}
+
+
+\emph{Proof.}\, Let\, $\varepsilon > 0$.\, The uniform continuity implies the existence of a positive integer 
+$n_\varepsilon$ such that 
+$$|f_n(x)\!-\!f(x)| \;<\; \frac{\varepsilon}{b\!-\!a} \quad \forall x \in [a,\,b] \qquad \mbox{when}\;\; 
+n \,>\, n_\varepsilon.$$
+The function $f$ is continuous (see \PMlinkid{this}{7191}) and thus \PMlinkname{Riemann integrable}{RiemannIntegral} (see \PMlinkid{this}{4461}) on the interval.\, Utilising the estimation theorem of integral, we obtain
+$$\left|\int_a^b\!f_n(x)\,dx\!-\!\int_a^b\!f(x)\,dx\right| \,=\, \left|\int_a^b\!(f_n(x)\!-\!f(x))\,dx\right| 
+\,\leqq\, \int_a^b\!|f_n(x)\!-\!f(x)|\,dx \,<\, \frac{\varepsilon}{b\!-\!a}(b\!-\!a) \,=\, \varepsilon$$
+as soon as\, $n > n_\varepsilon$.\, Consequently, (1) is true.\\
+
+\textbf{Remark 1.}\, The equation (1) may be written in the form
+\begin{align}
+\int_a^b\!\lim_{n\to\infty}f_n(x)\,dx \;=\; \lim_{n\to\infty}\int_a^b\!f_n(x)\,dx,
+\end{align}
+i.e. under the assumptions of the theorem, the integration and the limit process can be interchanged.\\
+
+\textbf{Remark 2.}\, Considering the partial sums of a series $\sum_{n=1}^\infty f_n(x)$ with continuous terms and converging uniformly on\, $[a,\,b]$,\, one gets from the theorem the result analogous to (2):
+\begin{align}
+\int_a^b\!\sum_{n=1}^\infty f_n(x)\,dx \;=\; \sum_{n=1}^\infty\int_a^b\!f_n(x)\,dx.
+\end{align}
+
+
+%%%%%
+%%%%%
+\end{document}

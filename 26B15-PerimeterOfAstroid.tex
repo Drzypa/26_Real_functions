@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PerimeterOfAstroid}
+\pmcreated{2013-03-22 17:14:06}
+\pmmodified{2013-03-22 17:14:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{perimeter of astroid}
+\pmrecord{7}{39564}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B15}
+\pmsynonym{perimetre of astroid}{PerimeterOfAstroid}
+\pmrelated{Parameter}
+\pmrelated{ClairautsEquation}
+\pmrelated{SubstitutionNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+The {\em astroid}
+$$\sqrt[3]{x^2}+\sqrt[3]{y^2} = \sqrt[3]{a^2}$$
+can be presented in the parametric form
+$$x = a\cos^3\varphi,\quad y = a\sin^3\varphi,$$
+where the polar angle $\varphi$ gets the values from $0$ to $2\pi$.  The curve consists of four congruent arcs, one of which is obtained letting\, $0\leqq \varphi \leqq \frac{\pi}{2}$.  Thus the whole perimeter of the astroid is
+$$s = 
+4\int_0^{\frac{\pi}{2}}\!\sqrt{\left(\frac{dx}{d\varphi}\right)^2+\left(\frac{dy}{d\varphi}\right)^2}\,d\varphi.$$
+This expression is easily simplified to
+$$s = 12a\int_0^{\frac{\pi}{2}}\sin\varphi\cos\varphi\,d\varphi$$
+giving the result 
+$$s = 6a\int_0^{\frac{\pi}{2}}\sin{2\varphi}\,d\varphi = 
+-3a\!\sijoitus{0}{\quad \frac{\pi}{2}}\!\cos{2\varphi} = 6a.$$
+
+
+%%%%%
+%%%%%
+\end{document}

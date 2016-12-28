@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TermwiseDifferentiation}
+\pmcreated{2013-03-22 14:38:38}
+\pmmodified{2013-03-22 14:38:38}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{termwise differentiation}
+\pmrecord{9}{36231}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{40A30}
+\pmsynonym{differentiating a series}{TermwiseDifferentiation}
+%\pmkeywords{uniform convergence}
+\pmrelated{PowerSeries}
+\pmrelated{IntegrationOfLaplaceTransformWithRespectToParameter}
+\pmrelated{IntegralOfLimitFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\,\,If in the open interval $I$,
+all the \PMlinkescapetext{terms} of the series 
+  \begin{align}     
+          f_1(x)\!+\!f_2(x)\!+\cdots
+  \end{align}
+have continuous derivatives,
+the series converges  having sum $S(x)$ and
+the differentiated series\, $f_1'(x)\!+\!f_2'(x)\!+\!\cdots$\, 
+\PMlinkname{converges uniformly}{SumFunctionOfSeries} on the interval $I$,
+then the series (1) can be differentiated termwise, i.e. in every point of $I$ the sum function $S(x)$ is differentiable and
+       $$\frac{d\,S(x)}{dx} = f_1'(x)\!+\!f_2'(x)\!+\cdots$$
+The situation implies also that the series (1) converges uniformly on $I$.
+\end{thmplain}
+%%%%%
+%%%%%
+\end{document}

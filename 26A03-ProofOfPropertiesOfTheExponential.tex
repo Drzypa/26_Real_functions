@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPropertiesOfTheExponential}
+\pmcreated{2013-03-22 14:34:17}
+\pmmodified{2013-03-22 14:34:17}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of properties of the exponential}
+\pmrecord{5}{36129}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+%\pmkeywords{exponential}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This proof will build up to the results in three easy steps.  First, they will be proven for integer exponents, then for rational exponents, and finally for real exponents.  For simplicity, I have assumed that the exponents are positive; it is easy enough to derive the reults for negative exponents by taking reciprocals.
+
+\emph{Integer exponents}
+This first case is rather trivial.  Although one could make the proofs formal and rigorous by using induction or infinite descent, there is no need to go to such extremities except as an exercise in formal logic, so simple verbal indications should suffice.
+
+Homogeneity: This is a simple consequence of commutativity of multiplication --$xy$ multiplied by itself $p$ times can be rewritten as $x$ multiplied by itself $p$ times $y$ multiplied by itself $p$ times.
+
+Additivity: This is a consequence of assocuiativity of multiplication -- $x$ multiplied by itself $p + q$ times can be rebracketed as $x$ multiplied by itself $p$ times multiplied by $x$ multiplied by itself $q$ times.
+
+Monotonicity: If $a<b$ and $c<d$ for positive integers $a,b,c,d$, then $ac<bd$.  Applying this fact repeatedly to $x<y$ shows that $x^p  < y<p$ when $x<y$ and $p$ is a positive integer.
+
+Continuity: This is irrelevant since the integers are discrete.
+
+\emph{Rational exponents}
+For rational exponent $p = m/n$, $x^p$ may be defined as the Dedekind cut
+ $$( \{y \in \mathbb{Q} \mid y^n < x^m \}, \{z \in \mathbb{Q} \mid z^n > x^m \} )$$
+For this to be well-defined, three conditions need to be verified:
+
+1) It must not depend on the choice of $m$ and $n$ as long as $p = m/n$
+
+Any pair of integers $(m,n)$ such that $p = m/n$ may uniquely be expressed as $(km',kn')$ where $m'$ and $n'$ are relatively prime.  The monotonicity property implies that $y^n < x^m$ if and only if $y^{n'} < x^{m'}$.
+
+2) If $y^n < x^m$ and $z^n > x^m$ then $y < z$.
+
+By transitivity, $y^n < z^n$.  By monotonicity, it follows that $y < z$.
+
+3) At most one rational number can not belong to either $\{y \in \mathbb{Q} \mid y^n < x^m \}$ or $\{z \in \mathbb{Q} \mid z^n > x^m \}$.
+
+Given a rational number $r$, it is only possible for a rational number $q$ to satisfy neither $q<r$ nor $q>$ if $q=r$.  So for a rational number $r$ to belong to neither set, it must be the case that $r^n = x^m$.  Suppose that there were two rational numbers such that $r_1^n = x^m$ and $r_2^n = x^m$.  Then $r_1^n = r_2^n$.  If $r_1 \neq r_2$, either $r_1<r_2$ or $r_1>r_2$.  Either way, motonicity implies that $r_1^n = r_2^n$, so $r_1 = r_2$.  Hence at most one rational number belongs to neither set, so one has a well-defined Dedekind cut which defines $x^p$ when $p$ is a rational number.
+
+Homogeneity:  The Dedekind cuts defining $x^p$ and $y^p$ are
+ $$( \{u \in \mathbb{Q} \mid u^n < x^m \}, \{v \in \mathbb{Q} \mid v^n > x^m \} )$$
+and
+ $$( \{u \in \mathbb{Q} \mid u^n < y^m \}, \{v \in \mathbb{Q} \mid v^n > y^m \} )$$
+respectively.  By the homogeneity property for integer exponents, if $u_1^n < x^m$ and $u_2^n < y^m$, then $(u_1 u_2)^n < (xy)^m$.  Likewise, if $v_1^n > x^m$ and $v_2^n > y^m$, then $(v_1 v_2)^n < (xy)^m$.  By the definition of multiplication for Dedekind cuts, it follows that $x^p y^p = (xy)^p$ for rational exponents $p$.
+
+Additivity:  Write $p$ and $q$ over a common denominator: $p = m/k$ and $q = n/k$.  Then $x^p$ and $x^q$ are determined by the Dedekind cuts
+ $$( \{u \in \mathbb{Q} \mid u^k < x^m \}, \{v \in \mathbb{Q} \mid v^k > x^m \} )$$
+and
+ $$( \{u \in \mathbb{Q} \mid u^k < x^n \}, \{v \in \mathbb{Q} \mid v^k > x^n \} )$$
+respectively.  If $\mid u_1^k < x^m$ and $u_2^k < x^n$, then $(u_1 u_2)^k < x^{m+n}$ by additivity for integer exponents.  Likewise, if $\mid v_1^k > x^m$ and $v_2^k > x^n$, then $(v_1 v_2)^k > x^{m+n}$.  By the definition of multiplication for Dedekind cuts, it follows that $x^p x^q = x^{p+q}$ for rational exponents $p$ and $q$.
+
+Monotonicity: Suppose that $p < q$.  Write $p$ and $q$ over a common denominator: $p = m/k$ and $q = n/k$.  Then $m < n$.  Then $x^p$ and $x^q$ are determined by the Dedekind cuts
+ $$( \{u \in \mathbb{Q} \mid u^k < x^m \}, \{v \in \mathbb{Q} \mid v^k > x^m \} )$$
+and
+ $$( \{u \in \mathbb{Q} \mid u^k < x^n \}, \{v \in \mathbb{Q} \mid v^k > x^n \} )$$
+respectively.  If $\mid u_1^k < x^m$, then $u_1^k < x^n$ since $x_m < x^n$ by the law of monotonicity for integer exponents.  Likewise, $\mid v_2^k > x^n$, then $v_2^k > x^m$.  Hence, by the definition of ``greater than'' for Dedekind cuts, $x^p < x^q$.
+
+Continuity:  Because of the additivity property, it suffices to prove that $\lim_{p \to 0} x^p = 1$.  By monotonicity, it suffices to prove that $\lim_{n \to \infty} x^{1/2^n} = 1$.  Suppose that $x > 1$. Write $x = 1 + y$.  The considerations of last paragraph show that one can restrict attention to the case $0 < y < 1/4$.  Let $x^{1/2} = 1 + z$.  By simple algebra, one has
+ $$z = {y - z^2 \over 2}$$
+By monotonicity, $z > 0$.   Hence, $z \le y/2$.  Repeating this line of reasoning $n$ times, it follows that, if $x^{1/2^n} = 1 + z_n$, then $z_n \le y / 2^n$.  Hence $\lim_{n \to \infty} z_n = 0$, so $\lim_{n \to \infty} x^{1/2^n} = 1$.
+
+\emph{Real exponents}
+
+If $p$ is real, define $x^p = \lim_{n \to \infty} x^{r_n}$ where $r_n$ is a sequence of rational numbers such that $\lim_{n \to \infty} r_n = p$.  The limit is well-defined and does not depend on the choice of sequence $r_n$ because of the monotonicity and continuity properties for rational exponents.  The homogeneity, additivity, monotonicity, and homogeneity properties for real exponents follow from the properties for rational exponents by standard theorems on limits.
+%%%%%
+%%%%%
+\end{document}

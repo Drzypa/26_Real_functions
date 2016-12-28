@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBernoullisInequalityEmployingTheMeanValueTheorem}
+\pmcreated{2013-03-22 15:49:53}
+\pmmodified{2013-03-22 15:49:53}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of Bernoulli's inequality employing the mean value theorem}
+\pmrecord{10}{37803}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let us take as our assumption that $x \in I = \left(-1,
+\infty\right)$ and that $r \in J = \left(0, \infty\right)$. Observe
+that if $x = 0$ the inequality holds quite obviously. Let us now
+consider the case where $x \neq 0$. \linebreak
+Consider now the
+function $f: I\text{x}J\rightarrow\mathbb{R}$ given by
+$$f(x,r) = (1 + x)^r - 1 - rx$$ Observe that for all $r$ in $J$
+fixed, $f$ is, indeed, differentiable on $I$. In particular,
+$$\frac{\partial}{{\partial}x}f(x,r) = r(1+x)^{r-1}-r$$ Consider
+two points $a \neq 0$ in $I$ and $0$ in $I$. Then clearly by the
+mean value theorem, for any arbitrary, fixed $\alpha$ in $J$, there
+exists a $c$ in $I$ such that,
+$$f'_x(c, \alpha) = \frac{f(a, \alpha) - f(0, \alpha)}{a}$$
+\begin{equation}
+\Leftrightarrow f'_xf(c,
+\alpha)=\frac{(1+a)^\alpha-1-{\alpha}a}{a}\label{eq:last}
+\end{equation}
+Since $\alpha$ is in $J$, it is clear that if $a < 0$, then
+$$f'_x(a,\alpha) < 0$$
+and, accordingly, if $a > 0$ then
+$$f'_x(a,\alpha) > 0$$
+Thus, in either case, from {\ref{eq:last}} we deduce that
+$$\frac{(1+a)^\alpha-1-{\alpha}a}{a} < 0$$ if $a < 0$ and
+$$\frac{(1+a)^\alpha-1-{\alpha}a}{a} > 0$$ if $a > 0$. From this we
+conclude that, in either case,$(1+a)^\alpha-1-{\alpha}a > 0$. That
+is, $$(1 + a)^\alpha > 1+{\alpha}a$$ for all choices of $a$ in $I -
+\left\{0\right\}$ and all choices of $\alpha$ in $J$. If $a = 0$ in
+$I$, we have$$(1 + a)^\alpha = 1+{\alpha}a$$ for all choices of
+$\alpha$ in $J$. Generally, for all $x$ in $I$ and all $r$ in $J$ we
+have:
+$$(1+x)^r \geq 1 + rx$$
+This completes the proof.
+
+Notice that if $r$ is in $\left(-1, 0\right)$ then the inequality would be reversed. That is: $$(1+x)^r \leq 1 + rx$$. This can be proved using exactly the same method, by fixing $\alpha$ in the proof above in $\left(-1, 0\right)$.
+%%%%%
+%%%%%
+\end{document}

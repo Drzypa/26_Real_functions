@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitFunctionOfSequence}
+\pmcreated{2013-03-22 14:37:45}
+\pmmodified{2013-03-22 14:37:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{limit function of sequence}
+\pmrecord{22}{36209}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{40A30}
+%\pmkeywords{continuity}
+%\pmkeywords{uniform convergence}
+\pmrelated{LimitOfAUniformlyConvergentSequenceOfContinuousFunctionsIsContinuous}
+\pmrelated{PointPreventingUniformConvergence}
+\pmdefines{function sequence}
+\pmdefines{limit function}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+ \, Let\, $f_1,\,f_2,\,\ldots$\, be a sequence of real functions all defined in the interval\, $[a,\,b]$.\, This {\em function sequence} converges uniformly to the {\em limit function} $f$ on the interval\, $[a,\,b]$\, if and only if
+$$\lim_{n\to\infty}\sup\{|f_n(x)-f(x)|\vdots \,\, a \leqq x \leqq b\} = 0.$$
+\end{thmplain}
+
+If all functions $f_n$ are continuous in the interval\, $[a,\,b]$\, and\, $\lim_{n\to\infty}f_n(x) = f(x)$\, in all points $x$ of the interval, the limit function needs not to be continuous in this interval; example\, $f_n(x) = \sin^{n}x$\, in\, $[0,\,\pi]$:
+\begin{center}
+\includegraphics{pmplot}
+\end{center}
+
+\begin{thmplain}
+ \, If all the functions $f_n$ are continuous and the sequence \,$f_1,\,f_2,\,\ldots$\, converges uniformly to a function $f$ in the interval\, $[a,\,b]$,\, then the limit function $f$ is continuous in this interval.
+\end{thmplain}
+
+\textbf{Note.} \,The notion of \PMlinkescapetext{uniform convergence} can be extended to the sequences of complex functions (the interval is replaced with some subset $G$ of $\mathbb{C}$).\, The limit function of a uniformly convergent sequence of continuous functions is continuous in $G$.
+%%%%%
+%%%%%
+\end{document}

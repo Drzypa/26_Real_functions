@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BarbualatsLemma}
+\pmcreated{2013-03-22 14:52:31}
+\pmmodified{2013-03-22 14:52:31}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Barb\u{a}lat's lemma}
+\pmrecord{7}{36552}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{Barbalat's lemma}{BarbualatsLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{lemma}[Barb\u{a}lat]
+Let $f \colon (0,\infty) \to {\mathbb{R}}$ be Riemann integrable and uniformly continuous then
+\begin{equation*}
+\lim_{t \to \infty} f(t) = 0 .
+\end{equation*}
+\end{lemma}
+
+Note that if $f$ is non-negative, then Riemann integrability is the same as being $L^1$ in the sense of Lebesgue, but if $f$ oscillates then the Lebesgue integral may not exist.
+
+Further note that the uniform continuity is required to prevent sharp ``spikes'' that might prevent the limit from existing.  For example suppose we add a spike of height 1 and area $2^{-n}$ at every integer.  Then the function is continuous and $L^1$ (and thus Riemann integrable), but
+$f(t)$ would not have a limit at infinity.
+
+\begin{thebibliography}{9}
+\bibitem{LoRy}
+Hartmut Logemann, Eugene P.\@ Ryan.
+\PMlinkescapetext{Asymptotic behaviour of nonlinear systems}.
+\emph{The American Mathematical Monthly}, 111(10):864--889,
+2004.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

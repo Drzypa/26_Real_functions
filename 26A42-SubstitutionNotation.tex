@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubstitutionNotation}
+\pmcreated{2013-03-22 15:08:12}
+\pmmodified{2013-03-22 15:08:12}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{substitution notation}
+\pmrecord{18}{36880}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+%\pmkeywords{such that sign}
+\pmrelated{HermitePolynomials}
+\pmrelated{AreaUnderGaussianCurve}
+\pmrelated{SineIntegralInInfinity}
+\pmrelated{Tractrix}
+\pmrelated{FourierSineAndCosineSeries}
+\pmrelated{ProofOfClosedDifferentialFormsOnASimpleConnectedDomain}
+\pmrelated{TaylorSeriesOfArcusTangent}
+\pmrelated{PerimeterOfAstroid}
+\pmrelated{PotentialOfHollowBall}
+\pmrelated{VolumeOfEllipsoid}
+\pmrelated{Arc}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+The following are two commonly used {\em substitution notations} for calculating definite integrals with the antiderivative:
+\begin{itemize}
+\item $\int_a^b f(x)\,dx = \left[F(x)\right]_a^b$
+\item $\int_a^b f(x)\,dx = F(x)|_a^b$
+\end{itemize}
+Here, the right hand \PMlinkescapetext{sides mean} the difference \,$F(b)-F(a)$. \,For example, one has
+      $$\int_1^2\frac{1}{x}\,dx \;=\; \left[\ln x\right]_1^2.$$
+In Finland (only?) the corresponding notation is
+      $$\int_1^2\frac{1}{x}\,dx \;=\; \sijoitus{1}{\quad 2}\ln x$$
+which may be somewhat better;\, it is read in same manner as the definite integral notation, ``{\em sijoitus 1:st\"a 2:een ln x}'' (literally: ``{\em substitution from 1 to 2 \,ln x}'').\, The position of the substitution symbol in front of the function to be substituted is perhaps more natural in the sense that the symbol has an operator \PMlinkescapetext{character} (as e.g. the summing symbol).\, One of benefits of the Finnish notation is that one can comfortably clarify in it which is the variable to be substituted (as in the sum notation), e.g. in the case
+  $$\int_0^\pi\sin{tx}\,dt \;=\; -\frac{1}{x}\sijoitus{t = 0}{\quad \pi}\cos{tx}.$$
+
+The notation
+  $$\sijoitus{a}{\quad b}\!F(x) \;:=\; F(b)-F(a)$$
+is extended also to such cases as 
+  $$\sijoitus{a}{\quad\infty}\!F(x) \;:=\; 
+    \lim_{b\to\infty}\sijoitus{a}{\quad b}\!F(x).$$
+
+
+\textbf{Formulae} 
+\begin{itemize}
+\item \,$\sijoitus{a}{b}\!F(x) \;=\; -\!\sijoitus{b}{a}\!F(x)$
+\item \,$\sijoitus{a}{b}\!kF(x) \;=\; k\!\sijoitus{a}{b}\!F(x)$
+\item \,$\sijoitus{a}{b}\![F_1(x)+\ldots+F_n(x)] \;=\; 
+  \sijoitus{a}{b}\!F_1(x)+\ldots+\sijoitus{a}{b}\!F_n(x)$
+\item \,$\int_a^b u(x)\,v'(x)\,dx \;=\; \sijoitus{a}{b}\!u(x)\,v(x)
+  -\int_a^b u'(x)\,v(x)\,dx$
+\end{itemize}
+
+
+\textbf{Note.}\, There are in Finland also some other ``national'', unofficial mathematical notations used in universities, e.g.
+$$-\!\!\!\ni\!\!\!-$$
+which means `such that'.\, For example, one may write
+$$\forall\, x \in \mathbb{Z}\; \exists\, y \in \mathbb{Z}\;\; -\!\!\!\ni\!\!\!- \;\; x\!+\!y = 0.$$
+
+%%%%%
+%%%%%
+\end{document}

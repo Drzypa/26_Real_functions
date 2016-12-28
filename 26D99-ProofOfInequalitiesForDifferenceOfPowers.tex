@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfInequalitiesForDifferenceOfPowers}
+\pmcreated{2013-03-22 15:48:45}
+\pmmodified{2013-03-22 15:48:45}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof of inequalities for difference of powers}
+\pmrecord{14}{37777}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\section{First Inequality}
+
+We have the factorization
+\[ u^n - v^n = (u - v) \sum_{k=0}^{n-1} u^k v^{n-k-1}. \]
+Since the largest term in the sum is is $u^{n-1}$ and the smallest is
+$v^{n-1}$, and there are $n$ terms in the sum, we deduce the following
+inequalities: 
+\[ n (u-v) v^{n-1} < u^n - v^n < n (u-v) u^{n-1} \]
+
+\section{Second Inequality}
+
+This inequality is trivial when $x = 0$.  We split the rest of 
+the proof into two cases.
+
+\subsection{$-1 < x < 0$}
+
+In this case, we set $u = 1$ and $v = 1 + x$ in the second 
+inequality above:
+\[ 1 - (1 + x)^n < n (-x) \]
+Reversing the signs of both sides yields
+\[ nx < (1 + x)^n-1  \]
+
+\subsection{$0 < x$}
+
+In this case, we set $u = 1 + x$ and $v = 1$ in the first
+inequality above:
+\[ nx <  (1 + x)^n -1\]
+ 
+\section{Third Inequality}
+
+This inequality is trivial when $x = 0$.  We split the rest of 
+the proof into two cases.
+
+\subsection{$-1 < x < 0$}
+
+Start with the first inequality for differences of powers, expand
+the left-hand side,
+\[ n u v^{n-1} - n v^n < u^n - v^n, \]
+move the $v^n$ to the other side of the inequality,
+\[ n u v^{n-1} - (n-1) v^n < u^n, \]
+and divide by $v^n$ to obtain
+\[ n {u \over v} - n + 1 < \left( {u \over v} \right)^n. \]
+Taking the reciprocal, we obtain
+\[ \left( {v \over u} \right)^n < {v \over v + n(u - v)} =
+1 - {n (u - v) \over v + n(u-v)} \]
+Setting $u = 1$ and $v = 1 + x$, and moving a term from one side
+to the other, this becomes
+\[ (1 + x)^n - 1 < { n x \over 1 - (n - 1) x}. \]
+
+\subsection{$0 < x < 1/(n-1)$}
+
+Start with the second inequality for differences of powers, expand 
+the right-hand side,
+\[ u^n - v^n < n u^n - n u^{n-1} v \]
+move terms from one side of the inequality to the other,
+\[ n u^{n-1} v - (n - 1) u^n < v^n \]
+and divide by $u^n$ to obtain
+\[ n {v \over u} - n + 1 < \left( {v \over u} \right)^n \]
+When the left-hand side is positive, (i.e. $n v > (n - 1) u$)
+we can take the reciprocal:
+\[ \left( {u \over v} \right)^n < {u \over u - n(u - v)} = 
+1 + {n (u - v) \over u  - n (u - v)} \]
+Setting $u = 1 + x$ and $v = 1$, and moving a term from one side 
+to the other, this becomes
+\[ (1 + x)^n - 1 < { n x \over 1 - (n - 1) x} \]
+and the positivity condition mentioned above becomes $(n - 1) x < 1$.
+%%%%%
+%%%%%
+\end{document}

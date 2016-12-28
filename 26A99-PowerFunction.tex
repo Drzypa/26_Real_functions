@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PowerFunction}
+\pmcreated{2013-03-22 14:46:32}
+\pmmodified{2013-03-22 14:46:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{power function}
+\pmrecord{17}{36421}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A99}
+\pmrelated{PropertiesOfTheExponential}
+\pmrelated{FractionPower}
+\pmrelated{CubeOfANumber}
+\pmrelated{Polytrope}
+\pmrelated{PowerTowerSequence}
+\pmrelated{LaplaceTransformOfLogarithm}
+\pmdefines{natural power function}
+\pmdefines{root function}
+\pmdefines{fraction power function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+A real {\em power function} \,$f\!:\,\mathbb{R}_+\to\mathbb{R}$\, has the form
+ $$f(x) \;=\; x^a$$
+where $a$ is a given real number.
+
+\begin{thmplain}
+ \,The power function\, $x\mapsto x^a$\, is differentiable with the derivative \,$x\mapsto ax^{a-1}$\, and strictly increasing if\, $a > 0$\, and strictly decreasing if\, $a < 0$\, (and \PMlinkescapetext{constant} 1 if\, 
+$a = 0$).
+\end{thmplain}
+
+The power functions comprise the {\em natural power functions}\, $x\mapsto x^n$\, with\, $n = 0,\,1,\,2,\,\ldots$,\, the {\em root functions}\, $x\mapsto \sqrt[n]{x} = x^{\frac{1}{n}}$\, with\, $n = 1,\,2,\,3,\,\ldots$\, and other {\em fraction power functions}\, $x\mapsto x^a$\, with $a$ any fractional number.
+
+
+
+\textbf{Note.} \,The power $x^a$ may of course be meaningful also for other than positive values of $x$, if $a$ is an integer.\, On the other hand, e.g. $(-1)^{\sqrt{2}}$ has no real values --- see the general power.
+%%%%%
+%%%%%
+\end{document}

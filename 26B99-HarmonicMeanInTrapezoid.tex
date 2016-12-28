@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HarmonicMeanInTrapezoid}
+\pmcreated{2013-03-22 17:49:22}
+\pmmodified{2013-03-22 17:49:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{harmonic mean in trapezoid}
+\pmrecord{14}{40286}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B99}
+\pmclassification{msc}{51M04}
+\pmclassification{msc}{51M15}
+%\pmkeywords{intersection of diagonals}
+%\pmkeywords{parallel to bases}
+%\pmkeywords{similarity}
+\pmrelated{HarmonicMean}
+\pmrelated{SimilarityOfTriangles}
+\pmrelated{CorrespondingAnglesInTransversalCutting}
+\pmrelated{SimilarityInGeometry}
+\pmrelated{MedianOfTrapezoid}
+\pmrelated{ConstructionOfContraharmonicMeanOfTwoSegments}
+\pmrelated{IntegerHarmonicMeans}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If a line parallel to the bases of a trapezoid passes through the intersecting point of the diagonals, then the portion of the line inside the trapezoid is the harmonic mean of the bases.
+
+{\em Proof.}\, Let $AB$ and $DC$ be the bases of a trapezoid $ABCD$ and $E$ the intersecting point of the diagonals of $ABCD$.  Denote the cutting point of $AD$ and the line through $E$ and parallel to the bases by $P$, and the cutting point of $BC$ and the same line by $Q$.\, Then we have
+$$\Delta CDE \;\sim\; \Delta ABE$$
+with line ratio \,$\displaystyle\frac{k}{h} = \frac{CD}{AB}$, where $h$ and $k$ are the heights of the triangles $ABE$ and $CDE$, respectively, when $h\!+\!k$ equals the height of the trapezoid.\, We have also
+$$\Delta PED \;\sim\; \Delta ABD$$
+with line ratio
+$$PE:AB \;=\; \frac{k}{h\!+\!k} \;=\; \frac{\frac{k}{h}}{1\!+\!\frac{k}{h}} 
+\;=\; \frac{\frac{CD}{AB}}{1+\frac{CD}{AB}}.$$
+Thus we can express the length of $PE$ as
+$$PE \;=\; AB\cdot\frac{\frac{CD}{AB}}{1+\frac{CD}{AB}} 
+\;=\; \frac{CD}{1+\frac{CD}{AB}} \;=\; \frac{AB\!\cdot\!CD}{AB\!+\!CD}.$$
+Similarly we may determine $EQ$ and \PMlinkescapetext{state} that\, $EQ = PE$.\, Consequently,
+$$PQ \;=\; PE\!+\!EQ \;=\; \frac{2\!\cdot\!AB\!\cdot\!CD}{AB\!+\!CD},$$
+which is the harmonic mean of the bases $AB$ and $CD$.\\
+
+\begin{center}
+\begin{pspicture}(-1,-1)(7,4)
+\pspolygon(0,0)(6,0)(5,4)(2,4)
+\psline[linecolor=blue, linewidth=0.06](0,0)(6,0)
+\psline[linecolor=blue, linewidth=0.06](2,4)(5,4)
+
+\psline(0,0)(5,4)
+\psline(6,0)(2,4)
+\psline[linecolor=red, linewidth=0.06](1.33,2.67)(5.33,2.67)
+\psline(-0.5,2.67)(1.33,2.67)
+\psline(5.33,2.67)(6.5,2.67)
+\psdot(1.33,2.67)
+\psdot(5.33,2.67)
+\psline[linestyle=dotted](3.33,0)(3.33,4)
+\rput[a](0,-0.3){$A$}
+\rput[a](6,-0.3){$B$}
+\rput[a](5,4.3){$C$}
+\rput[a](2,4.3){$D$}
+\rput[a](3.4,2.40){$E$}
+\rput[a](1.2,2.85){$P$}
+\rput[a](5.5,2.85){$Q$}
+\rput[a](3.5,1.30){$h$}
+\rput[a](3.5,3.45){$k$}
+\psline(3.33,0.2)(3.11,0.2)
+\psline(3.11,0.2)(3.11,0)
+\end{pspicture}
+\end{center}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomogeneousEquation}
+\pmcreated{2013-03-22 15:14:41}
+\pmmodified{2013-03-22 15:14:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{homogeneous equation}
+\pmrecord{7}{37022}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C05}
+\pmclassification{msc}{26B35}
+\pmclassification{msc}{00A99}
+%\pmkeywords{proportional}
+\pmrelated{Variation}
+\pmrelated{HomogeneousPolynomial}
+\pmrelated{Equation}
+\pmrelated{RegularDecagonInscribedInCircle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+The {\em homogeneous equation}
+   $$f(x,\,y) = 0,$$
+where the left hand \PMlinkescapetext{side} is a homogeneous polynomial of degree $r$ in $x$ and $y$,\, determines the ratio $x/y$ between the indeterminates.\, One can be persuaded of this by dividing both \PMlinkescapetext{sides} of the equation by $y^r$.\, Then the left \PMlinkescapetext{side} depends only on $x/y$ (which may be denoted e.g. by $t$).
+
+\textbf{Examples} 
+\begin{itemize}
+ \item The equation\, $5x+8y = 0$\, determines that\, $x/y = -\frac{8}{5}$.
+ \item The equation\, $x^2-7xy+10y^2 = 0$\, determines that\, $x/y = 2$\, or\, $x/y = 5$\, (these values are obtained by first dividing both \PMlinkescapetext{sides} of the equation by $y^2$ and then solving the equation\, $(x/y)^2-7(x/y)+10 = 0$).
+ \item The equation\, $2x^3-x^2y-6xy^2+3y^3 = 0$\, determines that
+\, $x/y = \frac{1}{2}$\, or\, $x/y = \pm\sqrt{3}$ (first divide the equation by $y^3$ and then solve\, $2(x/y)^3-(x/y)^2-6(x/y)+3 = 0$).
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedIntermediateValueTheorem}
+\pmcreated{2013-03-22 17:17:44}
+\pmmodified{2013-03-22 17:17:44}
+\pmowner{azdbacks4234}{14155}
+\pmmodifier{azdbacks4234}{14155}
+\pmtitle{generalized intermediate value theorem}
+\pmrecord{8}{39639}
+\pmprivacy{1}
+\pmauthor{azdbacks4234}{14155}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+%\pmkeywords{continuous}
+%\pmkeywords{connected}
+%\pmkeywords{order}
+%\pmkeywords{order topology}
+\pmrelated{OrderTopology}
+\pmrelated{TotalOrder}
+\pmrelated{Continuous}
+\pmrelated{ConnectedSpace}
+\pmrelated{ConnectednessIsPreservedUnderAContinuousMap}
+
+%packages
+\usepackage{amsmath,mathrsfs,amsfonts,amsthm}
+%theorem environments
+\theoremstyle{plain}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{lem*}{Lemma}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{prop*}{Proposition}
+%delimiters
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\medset}[1]{\big\{#1\big\}}
+\newcommand{\bigset}[1]{\bigg\{#1\bigg\}}
+\newcommand{\Bigset}[1]{\Bigg\{#1\Bigg\}}
+\newcommand{\abs}[1]{\vert#1\vert}
+\newcommand{\medabs}[1]{\big\vert#1\big\vert}
+\newcommand{\bigabs}[1]{\bigg\vert#1\bigg\vert}
+\newcommand{\Bigabs}[1]{\Bigg\vert#1\Bigg\vert}
+\newcommand{\norm}[1]{\Vert#1\Vert}
+\newcommand{\mednorm}[1]{\big\Vert#1\big\Vert}
+\newcommand{\bignorm}[1]{\bigg\Vert#1\bigg\Vert}
+\newcommand{\Bignorm}[1]{\Bigg\Vert#1\Bigg\Vert}
+\newcommand{\vbrack}[1]{\langle#1\rangle}
+\newcommand{\medvbrack}[1]{\big\langle#1\big\rangle}
+\newcommand{\bigvbrack}[1]{\bigg\langle#1\bigg\rangle}
+\newcommand{\Bigvbrack}[1]{\Bigg\langle#1\Bigg\rangle}
+\newcommand{\sbrack}[1]{[#1]}
+\newcommand{\medsbrack}[1]{\big[#1\big]}
+\newcommand{\bigsbrack}[1]{\bigg[#1\bigg]}
+\newcommand{\Bigsbrack}[1]{\Bigg[#1\Bigg]}
+%operators
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\vol}{vol}
+
+\begin{document}
+\begin{thm*}
+Let $f:X\rightarrow Y$ be a continuous function with $X$ a connected space and $Y$ a totally ordered set in the order topology. If $x_1,x_2\in X$ and $y\in Y$ lies between $f(x_1)$ and $f(x_2)$, then there exists $x\in X$ such that $f(x)=y$.
+\end{thm*}
+\begin{proof}
+The sets $U=f(X)\cap(-\infty,y)$ and $V=f(X)\cap(y,\infty)$ are disjoint open subsets of $f(X)$ in the subspace topology, and they are both non-empty, as $f(x_1)$ is contained in one and $f(x_2)$ is contained in the other. If $y\notin f(X)$, then $U\cup V$ constitutes a \PMlinkescapetext{separation} of the space $f(X)$, contradicting the hypothesis that $f(X)$ is the continuous image of the connected space $X$. Thus there must exist $x\in X$ such that $f(x)=y$.
+\end{proof}
+This version of the intermediate value theorem reduces to the familiar one of \PMlinkid{real analysis}{7599} when $X$ is taken to be a closed interval in $\mathbb{R}$ and $Y$ is taken to be $\mathbb{R}$. 
+
+\begin{thebibliography}{1}
+\bibitem{munkres}
+J. Munkres, \emph{Topology}, 2nd ed. Prentice Hall, 1975.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

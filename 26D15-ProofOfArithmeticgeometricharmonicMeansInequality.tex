@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfArithmeticgeometricharmonicMeansInequality}
+\pmcreated{2013-03-22 15:09:37}
+\pmmodified{2013-03-22 15:09:37}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof of arithmetic-geometric-harmonic means inequality}
+\pmrecord{10}{36909}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For the Arithmetic Geometric Inequality, I claim it is enough to prove that if
+$\prod_{i=1}^n x_i = 1$ with $x_i \geq 0$ then $\sum_{i=1}^n x_i \geq n$. The arithmetic geometric inequality for $y_1,\ldots,y_n$ will follow by taking
+$x_i = \frac{y_i}{\sqrt[n]{\prod_{k=1}^n y_k}}$. The geometric harmonic inequality follows from the arithmetic geometric by taking $x_i = \frac{1}{y_i}$.
+
+So, we show that if $\prod_{i=1}^n x_i = 1$ with $x_i \geq 0$ then $\sum_{i=1}^n x_i \geq n$ by induction on $n$.
+
+Clear for $n=1$.
+
+Induction Step: By reordering indices we may assume the $x_i$ are increasing, so $x_{n} \geq 1 \geq x_1$. Assuming the statement is true for $n-1$, we have
+$x_2 + \cdots + x_{n-1} + x_1x_{n} \geq n-1$. Then,
+\begin{equation*} 
+\sum_{i=1}^n x_i \geq n-1 + x_n + x_1-x_1x_n
+\end{equation*}
+ by adding $x_1+x_n$ to both sides and subtracting $x_1x_n$. And so,
+\begin{align*}
+\sum_{i=1}^n x_i 
+&\geq n+( x_n -1)+ (x_1 -x_1 x_n) \\
+&= n + (x_n - 1) - x_1 (x_n -1)\\
+&= n + (x_n - 1)(1 - x_1) \\
+&\geq n
+\end{align*}
+The last line follows since $x_n\geq 1 \geq x_1$.
+%%%%%
+%%%%%
+\end{document}

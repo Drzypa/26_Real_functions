@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SourcesAndSinksOfVectorField}
+\pmcreated{2013-03-22 18:47:03}
+\pmmodified{2013-03-22 18:47:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{sources and sinks of vector field}
+\pmrecord{12}{41579}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{26B12}
+%\pmkeywords{sink of vector field}
+\pmrelated{Divergence}
+\pmrelated{SolenoidalField}
+\pmrelated{CirculationAndVorticity}
+\pmdefines{source}
+\pmdefines{sink}
+\pmdefines{source of vector field}
+\pmdefines{productivity}
+\pmdefines{strength}
+\pmdefines{source density}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{flow} \PMlinkescapeword{field} \PMlinkescapeword{closed}
+\PMlinkescapeword{density}
+
+Let the vector field $\vec{U}$ of $\mathbb{R}^3$ be interpreted, as in the remark of the \PMlinkname{parent entry}{Flux}, as the velocity \PMlinkescapetext{field of a stationary flow} of a liquid.\, Then the flux 
+\[
+\oint_a\vec{U}\cdot d\vec{a}
+\]
+of $\vec{U}$ through a closed surface $a$ expresses how much more liquid per time-unit it comes from inside of $a$ to outside than contrarily.\, Since for a usual incompressible liquid, the outwards flow and the inwards flow are equal, we must think in the case that the flux differs from 0 either that the flowing liquid is suitably compressible or that there are inside the surface some {\em sources} creating liquid and {\em sinks} annihilating liquid.\, Ordinarily, one uses the latter idea.\, Both the sources and the sinks may be called sources, when the sinks are {\em negative sources}.\, The flux of the vector $\vec{U}$ through $a$ is called the {\em productivity} or the {\em strength} of the sources inside $a$.
+
+For example, the sources and sinks of an electric field ($\vec{E}$) are the locations containing positive and negative charges, respectively.\, The gravitational field has only sinks, which are the locations containing \PMlinkescapetext{mass}.\\
+
+The expression
+\[
+\frac{1}{\Delta v}\oint_{\partial\Delta v}\vec{U}\cdot d\vec{a},
+\]
+where $\Delta v$ means a region in the vector field and also its volume, is the productivity of the sources in 
+$\Delta v$ per a volume-unit.\, When we let $\Delta v$ to shrink towards a point $P$ in it, to an infinitesimal volume-element $dv$, we get the limiting value
+\begin{align}
+\varrho \;:=\; \frac{1}{dv}\oint_{\partial dv}\vec{U}\cdot d\vec{a},
+\end{align}
+called the {\em source density} in $P$.\, Thus the productivity of the source in $P$ is $\varrho\,dv$.\, If\, 
+$\varrho = 0$, there is in $P$ neither a source, nor a sink.\\
+
+The Gauss's theorem
+\[
+\int_v\nabla\cdot\vec{U}\,dv \;=\; \oint_a\vec{U}\cdot d\vec{a}
+\]
+applied to $dv$ says that
+\begin{align}
+\nabla\cdot\vec{U} \;=\; \frac{1}{dv}\oint_{\partial dv}\vec{U}\cdot d\vec{a}.
+\end{align}
+Accordingly,
+\begin{align}
+\varrho \;=\; \nabla\cdot\vec{U}
+\end{align}
+and
+\begin{align}
+\oint_{a}\vec{U}\cdot d\vec{a} \;=\; \int_v\varrho\,dv.
+\end{align}
+This last \PMlinkescapetext{formula} can be read that\, {\em the flux of the vector through a closed surface equals to the total productivity of the sources inside the surface.}\, For example, if $\vec{U}$ is the electric flux density 
+$\vec{D}$, (4) means that the electric flux through a closed surface equals to the total charge inside.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfIntermediateValueTheorem}
+\pmcreated{2013-03-22 12:33:56}
+\pmmodified{2013-03-22 12:33:56}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{proof of intermediate value theorem}
+\pmrecord{9}{32813}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+We first prove the following lemma.
+
+If $f:[a,b] \to \mathbb{R}$ is a continuous function with $f(a) \le 0 \le f(b)$ then there exists a $c \in [a,b]$ such that $f(c) = 0$.
+
+Define the sequences $(a_n)$ and $(b_n)$ inductively, as follows.
+
+$$a_0 = a \quad b_0 = b$$
+$$c_n = \frac{a_n + b_n}{2}$$
+$$(a_n, b_n) = \begin{cases} (a_{n-1}, c_{n-1}) & f(c_{n-1}) \ge 0 \\			(c_{n-1}, b_{n-1}) & f(c_{n-1}) < 0  \end{cases}$$
+
+We note that
+
+$$ a_0 \le a_1 \le \cdots \le a_n \le b_n \le \cdots \le b_1 \le b_0 $$
+\begin{equation} (b_n - a_n) = 2^{-n}(b_0 - a_0) \end{equation}
+\begin{equation} \label{eqn} f(a_n) \le 0 \le f(b_n) \end{equation}
+
+By the fundamental axiom of analysis $(a_n) \to \alpha$ and $(b_n) \to \beta$. But $(b_n - a_n) \to 0$ so $\alpha = \beta$.
+By continuity of $f$
+$$(f(a_n)) \to f(\alpha) \quad (f(b_n)) \to f(\alpha)$$
+But we have $f(\alpha) \le 0$ and $f(\alpha) \ge 0$ so that $f(\alpha) = 0$. Furthermore we have $a \le \alpha \le b$, proving the assertion.
+
+Set $g(x) = f(x) - k$ where $f(a) \le k \le f(b)$. $g$ satisfies the same conditions as before, so there exists a $c$ such that $f(c) = k$. Thus proving the more general result.
+%%%%%
+%%%%%
+\end{document}

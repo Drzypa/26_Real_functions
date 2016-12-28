@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BinomialFormulaForNegativeIntegerPowers}
+\pmcreated{2013-03-22 14:57:26}
+\pmmodified{2013-03-22 14:57:26}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{binomial formula for negative integer powers}
+\pmrecord{9}{36654}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{GeneralizedBinomialCoefficients}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\addtocounter{MaxMatrixCols}{2}
+\begin{document}
+For negative integer powers, the binomial formula can be written in terms of binomial coefficients like so:
+ $$(1 - x)^{-n} = \sum_{m = 1}^\infty \binom{m+n-1}{n-1} x^m$$
+
+{\it Proof: \,}  We shall prove this by induction on $n$.  First, note that, if $n=1$, then $\binom{m}{0} = 1$, so our formula reduces to
+ $$(1 - x)^{-1} = \sum_{m = 1}^\infty x^m ,$$
+which is the formula for the sum of an infinite geometric series.
+
+Next, suppose that the formula is valid for a certain value of $n$.  Then we have
+ $$(1 - x)^{-n-1} = (1 - x)^{-1} (1 - x)^{-n} = \left( \sum_{k = 0}^\infty x^k \right) \left( \sum_{m = 0}^\infty {m+n-1 \choose n-1} x^m \right)$$
+The product of sums can be rewritten as the following double sum:
+ $$\sum_{m = 0}^\infty \sum_{k = 0}^m {n+k-1 \choose n-1} x^m$$
+The easiest way to see this is by rearranging the double sum as follows and adding columns
+ $$\begin{matrix}
+x^0 \sum_{m = 0}^\infty \binom{m+n-1}{n-1} x^m = & \binom{n-1}{n-1} & + & \binom{n}{n-1} x & + & \binom{n+1}{n-1} x^2 & + & \binom{n+2}{n-1} x^3 & + & \binom{n+3}{n-1} x^4 & + & \cdots \\
+x^1 \sum_{m = 0}^\infty \binom{m+n-1}{n-1} x^m = & & & \binom{n-1}{n-1} x & + & \binom{n}{n-1} x^2 & + & \binom{n+1}{n-1} x^3 & + & \binom{n+2}{n-1} x^4 & + & \cdots \\
+x^2 \sum_{m = 0}^\infty \binom{m+n-1}{n-1} x^m = & & & & & \binom{n-1}{n-1} x^2 & + & \binom{n}{n-1} x^3 & + & \binom{n+1}{n-1} x^4 & + & \cdots \\
+x^3 \sum_{m = 0}^\infty \binom{m+n-1}{n-1} x^m = & & & & & & & \binom{n-1}{n-1} x^3 & + & \binom{n}{n-1} x^4 & + & \cdots \\
+. & . & . & . & . & . & . & . & . & . & . & .
+\end{matrix}$$
+To evaluate the finite sums, we shall use the following identity for binomial coefficients.  (See the entry \PMlinkid{``binomial coefficient''}{273} for more information about this identity.)
+ $$\sum_{k = 0}^m \binom{n+k-1}{n-1} = \binom{m + n}{n}$$
+Inserting this result value for the finite sum back into the double sum, we obtain
+ $$(1 - x)^{-n-1} = \sum_{m = 0}^\infty \binom{m + n}{n} x^m.$$
+\rightline{Q.E.D.}
+%%%%%
+%%%%%
+\end{document}

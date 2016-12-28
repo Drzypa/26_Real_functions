@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfChainRule}
+\pmcreated{2013-03-22 12:41:48}
+\pmmodified{2013-03-22 12:41:48}
+\pmowner{n3o}{216}
+\pmmodifier{n3o}{216}
+\pmtitle{proof of chain rule}
+\pmrecord{6}{32978}
+\pmprivacy{1}
+\pmauthor{n3o}{216}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let's say that $g$ is differentiable in $x_0$ and $f$ is differentiable in $y_0 = g(x_0)$. We define:
+\[ \varphi(y) = \left \{ \begin{array}{ll}
+\frac{f(y) - f(y_0)}{y-y_0} & \textrm{if $y \neq y_0$} \\
+f'(y_0) & \textrm{if $y = y_0$}
+\end{array} \right.
+\]
+
+Since $f$ is differentiable in $y_0$, $\varphi$ is continuous.
+We observe that, for $x \neq x_0$,
+\[ \frac{f(g(x))-f(g(x_0))}{x-x_0} = \varphi(g(x)) \frac{g(x) - g(x_0)}{x-x_0}, \]
+in fact, if $g(x) \neq g(x_0)$, it follows at once from the definition of $\varphi$, while if $g(x) = g(x_0)$, both members of the equation are 0.
+
+Since $g$ is continuous in $x_0$, and $\varphi$ is continuous in $y_0$,
+\[ \lim_{x \to x_0} \varphi(g(x)) = \varphi(g(x_0)) = f'(g(x_0)), \]
+hence
+\begin{eqnarray*}
+(f \circ g)'(x_0) &=& \lim_{x\to x_0} \frac{f(g(x))-f(g(x_0))}{x-x_0}  \\
+  &=& \lim_{x\to x_0} \varphi(g(x)) \frac{g(x) - g(x_0)}{x-x_0}  \\
+  &=& f'(g(x_0))g'(x_0). 
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

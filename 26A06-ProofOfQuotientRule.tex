@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfQuotientRule}
+\pmcreated{2013-03-22 12:38:58}
+\pmmodified{2013-03-22 12:38:58}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{proof of quotient rule}
+\pmrecord{5}{32915}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+Let $F(x) = f(x)/g(x)$.  Then
+
+\begin{eqnarray*}
+F'(x) & = & \lim_{h \to0} \frac{F(x+h)-F(x)}{h} = \lim_{h \to0} \frac{\frac{f(x+h)}{g(x+h)}-\frac{f(x)}{g(x)}}{h}\\
+& = & \lim_{h\to0} \frac{f(x+h)g(x)-f(x)g(x+h)}{hg(x+h)g(x)}
+\end{eqnarray*}
+
+Like the product rule, the key to this proof is subtracting and adding the same quantity.  We separate $f$ and $g$ in the above expression by subtracting and adding the term $f(x)g(x)$ in the numerator.
+
+\begin{eqnarray*}
+F'(x) & = & \lim_{h \to0} \frac{f(x+h)g(x)-f(x)g(x)+f(x)g(x)-f(x)g(x+h)}{hg(x+h)g(x)} \\
+& = & \lim_{h \to0} \frac{g(x)\frac{f(x+h)-f(x)}{h}-f(x) \frac{g(x+h)-g(x)}{h}}{g(x+h)g(x)} \\
+& = & \frac{\lim_{h \to0}g(x) \cdot \lim_{h \to0} \frac{f(x+h)-f(x)}{h}-\lim_{h \to0} f(x) \cdot \lim_{h \to0} \frac{g(x+h)-g(x)}{h}}{\lim_{h \to0}g(x+h) \cdot \lim_{h \to0}g(x)} \\
+& = & \frac{g(x)f'(x)-f(x)g'(x)}{\lbrack g(x) \rbrack ^2}
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

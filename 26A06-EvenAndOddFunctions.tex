@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EvenAndOddFunctions}
+\pmcreated{2013-03-22 13:34:19}
+\pmmodified{2013-03-22 13:34:19}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{even and odd functions}
+\pmrecord{12}{34187}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{HermitianFunction}
+\pmdefines{even function}
+\pmdefines{odd function}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\sR}[0]{\mathbb{R}}
+
+
+\begin{document}
+\PMlinkescapeword{even}
+\PMlinkescapeword{odd}
+
+\section*{Definition}
+Let $f$ be a function from $\sR$ to $\sR$. 
+If $f(-x)=f(x)$ for all $x\in \sR$, 
+then $f$ is an \emph{even function}.
+Similarly, 
+if $f(-x)=-f(x)$ for all $x\in \sR$, 
+then $f$ is an \emph{odd function}.
+
+Although this entry is mainly concerned with functions $\sR\to\sR$,
+the definition can be generalized to other types of function.
+
+\section*{Notes}
+A real function is even if and only if it is symmetric about the $y$-axis.
+It is odd if and only if symmetric about the origin.
+
+\section*{Examples}
+\begin{enumerate}
+\item The function $f(x)=x$ is odd.
+\item The function $f(x)=|x|$ is even.
+\item The sine and cosine functions are odd and even, respectively.
+\end{enumerate}
+
+\section*{Properties}
+\begin{enumerate}
+\item
+The only function that is both even and odd
+is the function defined by $f(x)=0$ for all real $x$.
+\item
+A sum of even functions is even, and a sum of odd functions is odd.
+In fact, the even functions form a real vector space,
+as do the odd functions.
+\item
+Every real function can be expressed in a unique way
+as the sum of an odd function and an even function.
+\item
+From the above it follows that
+the vector space of real functions is the direct sum of 
+the vector space of even functions and the vector space of odd functions.
+See the entry
+\PMlinkname{direct sum of even/odd functions (example)}{DirectSumOfEvenoddFunctionsExample}.)
+\item 
+Let $f\colon\mathbb{R}\to \mathbb{R}$ be a differentiable function.
+\begin{enumerate}
+\item
+If $f$ is an even function, then the derivative $f'$ is an odd function.
+\item
+If $f$ is an odd function, then the derivative $f'$ is an even function.
+\end{enumerate}
+(For a proof, see the entry
+\PMlinkname{derivative of even/odd function (proof)}{DerivativeOfEvenoddFunctionProof}.)
+\item Let $f\colon\sR\to \sR$ be a smooth function.
+Then there exist smooth functions $g,h\colon\sR\to\sR$ such that
+\[
+  f(x) = g(x^2)+ xh(x^2)
+\]
+for all $x\in \sR$.
+Thus, if $f$ is even, we have $f(x)=g(x^2)$,
+and if $f$ is odd, we have $f(x)=xh(x^2)$.
+(\cite{hormander}, Exercise 1.2)
+\item
+The Fourier transform of a real even function is purely real and even.
+The Fourier transform of a real odd function is purely imaginary and odd.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{hormander}
+L. H\"ormander, \emph{The Analysis of Linear Partial Differential Operators I,
+(Distribution theory and Fourier Analysis)}, 2nd ed, Springer-Verlag, 1990.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

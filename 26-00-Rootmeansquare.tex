@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Rootmeansquare}
+\pmcreated{2013-03-22 13:10:24}
+\pmmodified{2013-03-22 13:10:24}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{root-mean-square}
+\pmrecord{4}{33618}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26-00}
+\pmclassification{msc}{26D15}
+\pmsynonym{root mean square}{Rootmeansquare}
+\pmsynonym{rms}{Rootmeansquare}
+\pmsynonym{quadratic mean}{Rootmeansquare}
+%\pmkeywords{mean}
+%\pmkeywords{expectation}
+\pmrelated{ArithmeticMean}
+\pmrelated{GeometricMean}
+\pmrelated{HarmonicMean}
+\pmrelated{PowerMean}
+\pmrelated{WeightedPowerMean}
+\pmrelated{ArithmeticGeometricMeansInequality}
+\pmrelated{GeneralMeansInequality}
+\pmrelated{ProofOfGeneralMeansInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $x_1,x_2,\ldots,x_n$ are real numbers, we define their
+\emph{root-mean-square} or \emph{quadratic mean} as
+$$
+R(x_1,x_2,\ldots,x_n)=\sqrt{\frac{x_1^2+x_2^2+\cdots+x_n^2}{n}}.
+$$
+
+The root-mean-square of a random variable X is defined as the square
+root of the expectation of $X^2$:
+$$
+R(X)=\sqrt{E(X^2)}
+$$
+
+If $X_1,X_2,\ldots,X_n$ are random variables with standard deviations
+$\sigma_1,\sigma_2,\ldots,\sigma_n$, then the standard deviation of
+their arithmetic mean, $\frac{X_1+X_2+\cdots+X_n}{n}$, is the
+root-mean-square of $\sigma_1,\sigma_2,\ldots,\sigma_n$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TestingForContinuityViaClosureOperation}
+\pmcreated{2013-03-22 19:09:11}
+\pmmodified{2013-03-22 19:09:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{testing for continuity via closure operation}
+\pmrecord{8}{42057}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54C05}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{prop} Let $X,Y$ be topological spaces, and $f:X\to Y$ a function.  Then the following are equivalent: 
+\begin{enumerate}
+\item $f$ is continuous,
+\item for any closed set $D\subseteq Y$, the set $f^{-1}(D)$ is closed in $X$,
+\item $f(\overline{A})\subseteq \overline{f(A)}$, where $\overline{A}$ is the closure of $A$,
+\item $\overline{f^{-1}(B)} \subseteq f^{-1}(\overline{B})$,
+\item $f^{-1}(C^{\circ}) \subseteq f^{-1}(C)^{\circ}$, where $C^{\circ}$ is the interior of $C$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+\begin{itemize}
+\item $(1)\Leftrightarrow (2)$.  Use the identity $f^{-1}(A-B)=f^{-1}(A)-f^{-1}(B)$ for any function $f$.  Then $f^{-1}(Y-D)=X-f^{-1}(D)$.  So if $D$ is closed (or open), $f^{-1}(Y-D)$ is open (or closed), whence $f^{-1}(D)$ is closed (or open).
+\item $(2)\Leftrightarrow (3)$.  Suppose first that $f:X\to Y$ is continuous.  Since $$\overline{f(A)}=\bigcap \lbrace C \mid C\mbox{ closed in }Y,\mbox{ and }f(A)\subseteq C\rbrace,$$ $A\subseteq f^{-1}f(A)\subseteq f^{-1}(C)$, which is closed in $X$.  So $\overline{A} \subseteq f^{-1}(C)$, and therefore $f(\overline{A})\subseteq ff^{-1}(C)\subseteq C$.  As a result, $$f(\overline{A})\subseteq \bigcap \lbrace C \mid C\mbox{ closed in }Y,\mbox{ and }f(A)\subseteq C\rbrace = \overline{f(A)}.$$
+
+Conversely, let $V$ be closed in $Y$.  Then $\overline{V}=V$.  Let $U=f^{-1}(V)$.  So $f(U)=V$.  Let $W=\overline{U}$.  Then $f(W)=f(\overline{U})\subseteq \overline{f(U)}=\overline{V}=V$.  So $W\subseteq f^{-1}f(W)\subseteq f^{-1}(V)=U \subseteq \overline{U}=W$.  As a result, $U=W$ is closed.
+
+\item $(3)\Leftrightarrow (4)$.  First, assume $(2)$.  Let $B\subseteq Y$ and $A=f^{-1}(B)$.  So $f(A)\subseteq B$.  Then $f(\overline{A})\subseteq \overline{f(A)} \subseteq  \overline{B}$.  As a result, $\overline{f^{-1}(B)}=\overline{A}\subseteq f^{-1}f(\overline{A})\subseteq f^{-1}(\overline{B})$.
+
+Conversely, assume $(3)$.  Let $A\subseteq X$ and $B=f(A)$.  So $A\subseteq f^{-1}(B)$.  Then $$f(\overline{A}) \subseteq f(\overline{f^{-1}(B)}) \subseteq ff^{-1}(\overline{B})\subseteq \overline{B} =\overline{f(A)}.$$
+
+\item $(4)\Leftrightarrow (5)$.  First, assume $(3)$.  We use the identity: $C^{\circ}=Y-\overline{Y-C}$.  Then 
+\begin{eqnarray*}
+f^{-1}(C^{\circ}) &=& f^{-1}(Y-\overline{Y-C})=f^{-1}(Y)-f^{-1}(\overline{Y-C})\subseteq X-\overline{f^{-1}(Y-C)} \\ &=& X-\overline{f^{-1}(Y)-f^{-1}(C)}=X-\overline{X-f^{-1}(C)}=f^{-1}(C)^{\circ}.
+\end{eqnarray*}
+
+Conversely, assume $(4)$.  We use the identity $\overline{B}=Y-(Y-B)^{\circ}$.  Then 
+\begin{eqnarray*}
+\overline{f^{-1}(B)} &=& X-(X-f^{-1}(B))^{\circ} = X-f^{-1}(Y-B)^{\circ} \\ &\subseteq& X-f^{-1}((Y-B)^{\circ}) =f^{-1}(Y-(Y-B)^{\circ})=f^{-1}(\overline{B}).
+\end{eqnarray*}
+\end{itemize}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

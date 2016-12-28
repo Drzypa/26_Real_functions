@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedRiemannIntegral}
+\pmcreated{2013-03-22 13:40:03}
+\pmmodified{2013-03-22 13:40:03}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{generalized Riemann integral}
+\pmrecord{12}{34328}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmsynonym{Kurzweil-Henstock integral}{GeneralizedRiemannIntegral}
+\pmsynonym{gauge integral}{GeneralizedRiemannIntegral}
+\pmdefines{generalized Riemann integrable}
+\pmdefines{gauge}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{gauge} $\delta$ is a function which assigns to every real number $x$ an interval $\delta (x)$ such that $x \in \delta (x)$.
+
+Given a gauge $\delta$, a partition ${U_i}_{i=1}^n$ of an interval $[a,b]$ is said to be $\delta$-fine if, for every point $x \in [a,b]$, the set $U_i$ containing $x$ is a subset of $\delta (x)$
+
+A function $f : [a, b] \rightarrow \mathbb{R}$ is said to be \textbf{generalized Riemann integrable} on $[a,b]$ if there exists a number $L \in \mathbb{R}$ such that for every $\epsilon > 0$ there exists a gauge $\delta_{\epsilon}$ on $[a,b]$ such that if $\dot{\mathcal{P}}$ is any $\delta_{\epsilon}$-fine partition of $[a,b]$, then
+\[| S(f ; \dot{\mathcal{P}}) - L | < \epsilon,\]
+where $S(f ; \dot{\mathcal{P}})$ is any Riemann sum for $f$ using the partition $\dot{\mathcal{P}}$. The collection of all generalized Riemann integrable functions is usually denoted by $\mathcal{R}^{*}[a,b]$.
+
+If $f \in \mathcal{R}^{*}[a,b]$ then the number $L$ is uniquely determined, and is called the \textbf{generalized Riemann integral} of $f$ over $[a,b]$.
+
+The reason that this is called a generalized Riemann integral is that, in the special case where $\delta (x) = [x - y, x + y]$ for some number $y$, we recover the Riemann integral as a special case.
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{riemann.eps}
+\caption{Riemann sum over a $\delta$-fine partition}
+\end{center}
+\end{figure}
+
+
+%%%%%
+%%%%%
+\end{document}

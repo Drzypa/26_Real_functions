@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiniteLimitImplyingUniformContinuity}
+\pmcreated{2013-03-22 19:00:20}
+\pmmodified{2013-03-22 19:00:20}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{finite limit implying uniform continuity}
+\pmrecord{5}{41874}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If the real function $f$ is continuous on the interval \,$[0,\,\infty)$\, and the limit 
+\,$\displaystyle\lim_{x\to\infty}f(x)$\, exists as a finite number $a$, then $f$ is uniformly continuous on that interval.\\
+
+\emph{Proof.}\, Let\, $\varepsilon > 0$.\, According to the limit condition, there is a positive number $M$ such that 
+\begin{align}
+|f(x)\!-\!a| \;<\; \frac{\varepsilon}{2} \quad \forall x > M.
+\end{align}
+The function is continuous on the finite interval\, $[0,\,M\!+\!1]$;\, hence $f$ is also uniformly continuous on this compact interval.\, Consequently, there is a positive number\, $\delta < 1$\, such that
+\begin{align}
+|f(x_1)\!-\!f(x_2)| \;<\; \varepsilon 
+\quad \forall\, x_1,\,x_2 \in [0,\,M\!+\!1]\;\;\mbox{with}\;\;|x_1\!-\!x_2| < \delta.
+\end{align}
+Let $x_1,\,x_2$ be nonnegative numbers and\, $|x_1\!-\!x_2| < \delta$.\, Then\, $|x_1\!-\!x_2| < 1$\, and thus both numbers either belong to\, $[0,\,M\!+\!1]$\, or are greater than $M$.\, In the latter case, by (1) we have
+\begin{align}
+|f(x_1)\!-\!f(x_2)| \;=\; |f(x_1)\!-\!a\!+\!a\!-\!f(x_2)|\;\leqq\; |f(x_1)\!-\!a|+|f(x_2)\!-\!a| 
+\;<\; \frac{\varepsilon}{2}+\frac{\varepsilon}{2} \;=\; \varepsilon.
+\end{align}
+So, one of the conditions (2) and (3) is always in \PMlinkescapetext{force}, whence the assertion is true.
+
+%%%%%
+%%%%%
+\end{document}

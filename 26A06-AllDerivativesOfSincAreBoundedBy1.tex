@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AllDerivativesOfSincAreBoundedBy1}
+\pmcreated{2013-03-22 15:39:03}
+\pmmodified{2013-03-22 15:39:03}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{all derivatives of sinc are bounded by $1$}
+\pmrecord{10}{37583}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let us show that all derivatives of $\operatorname{sinc}$ are bounded by $1$. 
+
+First of all, let us \PMlinkescapetext{point} out that $\operatorname{sinc}(t)\le 1$ is 
+bounded by the Jordan's inequality. To \PMlinkescapetext{bound} the derivatives, let 
+us write $\operatorname{sinc}$ as a Fourier integral,
+$$
+  \operatorname{sinc}(t) = {1\over 2} \int_{-1}^1 e^{ixt} \, dx.
+$$
+Let $k=1,2,\ldots$. Then
+$$
+{d^k\over dt^k} \operatorname{sinc}(t) = {1\over 2} \int_{-1}^1 (ix)^k e^{ixt} \, dx.
+$$
+and
+\begin{eqnarray*}
+\left\vert {d^k\over dt^k} \operatorname{sinc}(t) \right\vert &=& \left\vert {1\over 2} \int_{-1}^1 (ix)^k e^{ixt} \, dx \right\vert \\
+&\le& {1\over 2} \int_{-1}^1 \vert (ix)^k e^{ixt} \vert \, dx \\
+&\le& {1\over 2} \int_{-1}^1 \vert x \vert^k \, dx \\
+&\le& {1\over 2} \cdot 2 \int_0^1 \vert x \vert^k \, dx \\
+&\le& \int_0^1  x^k  \, dx \\
+&\le& \frac{1}{k+1} \\
+&<& 1.
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

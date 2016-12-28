@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CantorFunction}
+\pmcreated{2013-03-22 14:08:23}
+\pmmodified{2013-03-22 14:08:23}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Cantor function}
+\pmrecord{9}{35554}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A30}
+\pmsynonym{Cantor ternary function}{CantorFunction}
+\pmsynonym{Cantor-Lebesgue function}{CantorFunction}
+\pmsynonym{Devil's staircase}{CantorFunction}
+\pmrelated{CantorSet}
+\pmrelated{SingularFunction}
+\pmdefines{Cantor function}
+\pmdefines{Cantor ternary function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The {\em Cantor function} is a canonical example of a singular function.  It is based on the Cantor set, and is usually defined as follows.  Let $x$ be a real number in $[0,1]$ with the ternary expansion $0.a_1 a_2 a_3 \ldots$, then let $N$ be $\infty$ if no $a_n = 1$ and
+otherwise let $N$ be the smallest value such that $a_n = 1$.  Next let $b_n = \frac{1}{2}a_n$ for all $n < N$ and let $b_N = 1$.  We define the Cantor function (or the Cantor ternary function) as
+\begin{equation*}
+f(x) = \sum_{n=1}^N \frac{b_n}{2^n}.
+\end{equation*}
+
+This function can be easily checked to be continuous and monotonic on $[0,1]$ and also $f'(x) = 0$ almost everywhere (it is constant on the complement of the Cantor set), with $f(0) = 0$ and $f(1) = 1$.  Another
+interesting fact about this function is that the arclength of the graph is 2, hence the calculus arclength formula does not work in this case.
+
+\begin{center}
+% done in Genius, http://www.jirka.org/genius.html
+% see attached source code for function Cantor
+\includegraphics[width=5.19in]{cantorfunction.eps}
+\vspace*{0.1in}
+
+{\tiny Figure 1: Graph of the cantor function using 20 iterations.}
+\end{center}
+
+This function, and functions similar to it are frequently called the Devil's staircase.  Such functions sometimes occur naturally in various areas of mathematics and mathematical physics and are not just a pathological oddity.
+
+\begin{thebibliography}{9}
+\bibitem{royden}
+H.\@ L.\@ Royden. \emph{\PMlinkescapetext{Real Analysis}}. Prentice-Hall, Englewood Cliffs, New Jersey, 1988
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

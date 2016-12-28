@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Cinfty0UIsNotEmpty}
+\pmcreated{2013-03-22 13:43:57}
+\pmmodified{2013-03-22 13:43:57}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{$C^\infty_0(U)$ is not empty}
+\pmrecord{17}{34422}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\PMlinkescapeword{basis}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{support}
+
+{\bf Theorem.} If $U$ is a non-empty open set in $\sR^n$, then the set of
+smooth functions with compact support $C^\infty_0(U)$ is non-trivial (that is, it contains functions other than the zero function). 
+
+\emph{Remark.} This theorem may seem to be obvious at first sight. 
+A way to notice that it is not so obvious, is to formulate it for
+analytic functions with compact support: in that case, the result
+does not hold; in fact, there are no nonconstant analytic
+functions with compact support at all. 
+One important consequence of this theorem is the existence of partitions
+of unity.
+
+\emph{Proof of the theorem:}
+Let us first prove this for $n=1$:
+If $a<b$ be real numbers, then there exists a 
+smooth non-negative function $f:\sR \to \sR$, whose \PMlinkname{support}{SupportOfFunction} is the 
+compact set $[a,b]$. 
+
+To see this, let $\phi\colon \sR \to \sR$ be the function
+ defined on \PMlinkname{this page}{InfinitelyDifferentiableFunctionThatIsNotAnalytic},
+and let
+$$ 
+  f(x) = \phi(x-a) \phi(b-x).
+$$
+Since $\phi$ is smooth, it follows that $f$ is smooth. Also, from the
+definition of $\phi$, we see that
+$\phi(x-a)=0$ precisely when $x\le a$, and 
+$\phi(b-x)=0$ precisely when $x\ge b$. 
+Thus the support of $f$ is indeed $[a,b]$. 
+
+Since $U$ is non-empty and
+open there exists an $x\in U$ and $\varepsilon>0$ such that
+$B_\varepsilon(x)\subseteq U$. Let $f$ be smooth function
+such that $\operatorname{supp} f =[-\varepsilon/2,\varepsilon/2]$, and
+let
+$$
+ h(z) = f(\Vert x-z \Vert^2).
+$$
+Since $\lVert\cdot \rVert^2$ (Euclidean norm) is smooth, the claim follows. 
+$\Box$
+%%%%%
+%%%%%
+\end{document}

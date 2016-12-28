@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaplaceTransformOfConvolution}
+\pmcreated{2013-03-22 18:24:04}
+\pmmodified{2013-03-22 18:24:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Laplace transform of convolution}
+\pmrecord{6}{41047}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{44A10}
+\pmsynonym{convolution property of Laplace transform}{LaplaceTransformOfConvolution}
+\pmrelated{Convolution}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If
+$$\mathcal{L}\{f_1(t)\} \,=\, F_1(s) \quad\mbox{and}\quad \mathcal{L}\{f_2(t)\} \,=\, F_2(s),$$
+then
+$$\mathcal{L}\left\{\int_0^tf_1(\tau)f_2(t-\tau)\,d\tau\right\} \;=\; F_1(s)F_2(s).$$\\
+
+{\em Proof.}\, According to the definition of Laplace transform, one has
+$$\mathcal{L}\left\{\int_0^tf_1(\tau)f_2(t-\tau)\,d\tau\right\} 
+ \;=\; \int_0^\infty e^{-st}\left(\int_0^t f_1(\tau)f_2(t-\tau)\,d\tau\right)dt,$$
+where the right hand side is a double integral over the angular region bounded by the lines \,$\tau = 0$\, and\, $\tau = t$\, in the first quadrant of the $t\tau$-plane.\, Changing the \PMlinkescapetext{order} of integration, we write
+$$\mathcal{L}\left\{\int_0^tf_1(\tau)f_2(t-\tau)\,d\tau\right\} 
+ \;=\; \int_0^\infty\left(f_1(\tau)\int_\tau^\infty e^{-st}f_2(t-\tau)\,dt\right)d\tau.$$
+Making in the inner integral the substitution\, $t-\tau := u$,\, we obtain
+$$\int_\tau^\infty e^{-st}f_2(t-\tau)\,dt \,=\, \int_0^\infty e^{-(u+\tau)s}f_2(u)\,du 
+= e^{-\tau s}\int_0^\infty e^{-su}f_2(u)\,du = e^{-\tau s}F_2(s),$$
+whence
+$$\mathcal{L}\left\{\int_0^tf_1(\tau)f_2(t-\tau)\,d\tau\right\} \;=\; \int_0^\infty f_1(\tau)e^{-\tau s}F_2(s)\,d\tau 
+\,=\, F_2(s)\int_0^\infty f_1(\tau)e^{-\tau s}\,d\tau  = F_1(s)F_2(s),$$
+Q.E.D.
+
+%%%%%
+%%%%%
+\end{document}

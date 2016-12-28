@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PTAHInequality}
+\pmcreated{2013-03-22 16:54:32}
+\pmmodified{2013-03-22 16:54:32}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{PTAH inequality}
+\pmrecord{27}{39169}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\sigma = \{(\theta_1, \ldots , \theta_n) \in {\mathbb{R}}^{n}| \theta_i \ge 0, \sum_{i=1}^{n} \theta_i = 1\}$.
+
+
+Let $X$ be a measure space with measure $m$. 
+Let $a_i: X \to \mathbb{R}$ be measurable functions such that
+$a_i(x) \ge 0$ a.e [m] for $i=1, \ldots, n$.
+
+Note: the notation ``a.e. [m]'' means that the condition holds almost everywhere with respect to the measure $m$.
+
+Define  $p: X \times \sigma \to \mathbb{R}$ by 
+
+
+$$
+ p(x, \lambda ) = \prod_{i=1}^n {\lambda_i}^{a_i(x)}
+$$
+where $\lambda = (\lambda_1, \ldots, \lambda_n)$.
+
+And define $P: \sigma \to \mathbb{R}$ and $Q: \sigma \times \sigma \to \mathbb{R}$
+by 
+
+$$
+P(\lambda ) = \int p(x,\lambda) dm(x)
+$$
+and 
+$$
+Q(\lambda, \lambda' ) = \int p(x,\lambda ) \log p(x, \lambda') dm(x).
+$$
+
+Define $\overline{\lambda_i}$ by
+$$
+\overline{\lambda_i} = \frac{\lambda_i \partial P/\partial \lambda_i}{\sum_j    \lambda_j \partial P /\partial \lambda_j}.
+$$
+
+
+\textbf{Theorem.} Let $\lambda \in \sigma$ and $\overline{\lambda}$ be defined
+as above.  Then for every $\lambda' \in \sigma$ we have
+$$
+Q(\lambda , \lambda' ) \le Q(\lambda , \overline{\lambda})
+$$
+with strict inequality unless $\lambda' = \overline{\lambda}$. Also,
+
+$$
+P(\lambda ) \le P( \overline{\lambda})
+$$
+with strict inequality unless $\lambda = \overline{\lambda}$.
+The second inequality is known as the \emph{PTAH inequality}.
+
+
+The significance of the PTAH inequality is that some of the 
+classical inequalities are all special cases of PTAH.
+
+Consider:
+
+(A) The arithmetic-geometric mean inequality:
+$$
+\prod {x_i}^{\frac{1}{n}}\le \sum \frac{x_i}{n}
+$$
+(B) the concavity of $\log x$:
+$$
+\sum \theta_i \log x_i \le \log \sum \theta_i x_i
+$$
+(C) the Kullback-Leibler inequality:
+$$
+\prod {\theta_i}^{r_i} \le \prod (\frac{r_i}{\sum r_j})^{r_i}
+$$
+(D) the convexity of $x\log x$:
+$$
+(\sum \theta_i x_i )\log (\sum \theta_i x_i ) \le \sum \theta_i x_i \log x_i
+$$
+(E)
+$$
+Q(\lambda, \lambda') \le Q(\lambda , \overline{\lambda})
+$$
+(F) 
+$$
+Q(\lambda, \lambda') - Q(\lambda , \lambda) \le P(\lambda) \log \frac{P(\lambda')}{P(\lambda)}
+$$
+(G) the maximum-entropy inequality (in logarithmic form)
+$$
+ - \sum_{i=1}^n p_i \log p_i \le \log n  
+$$
+(H) \PMlinkname{H\"{o}lder's generalized inequality}{GeneralizedHolderInequality} \\
+$$
+   \sum_{j=1}^n \prod_{i=1}^m a_{i,j}^{\theta_i} \le 
+   \prod_{i=1}^m \left( \sum_{j=1}^n a_{i,j} \right)^{\theta_i}
+$$
+(P) The PTAH inequality:
+$$
+P(\lambda) \le P(\overline{\lambda})
+$$
+All the sums and products range from 1 to $n$, all the
+$\theta_i, x_i, r_i$ are positive and 
+$(\theta_i), \lambda, \lambda'$ are in $\sigma$ and the set $X$ is
+discrete, so that
+$$
+P(\lambda) = \sum_x p(x,\lambda) m(x)
+$$
+$$
+Q(\lambda, \lambda') = \sum_i r_i(\lambda) \log {\lambda_i}'
+$$
+where $m(x) > 0$ $p(x,\lambda) = \prod_i {\lambda_i}^{a_i(x)}$
+and $a_i(x) \ge 0$,
+ $r_i(\lambda) = \sum a_i(x)p(x,\lambda)m(x)$
+and 
+$$
+\overline{\lambda_i} = \frac{\lambda_i \partial P/\partial \lambda_i}{\sum \lambda_j \partial P/\partial \lambda_j},
+$$
+and $\overline{\lambda} = (\overline{\lambda_i})$.
+Then it turns out that (A) to (G) are all special cases of  (H), and
+in fact (A) to (G) are all equivalent, in the sense that given any two of them,
+each is a special case of the other.
+(H) is a special case of (P), However, it appears that none of  the reverse 
+implications holds.
+According to George Soules:
+
+
+"The folklore at the Institute for Defense Analyses in Princeton NJ
+is that the first program to maximize a function P(z) by iterating the growth transformation
+ $$
+z \to \overline{z}
+$$
+
+
+was written while the programmer was listening to the opera Aida,
+in which the Egyptian god of creation Ptah is mentioned, and that became the name of the program (and of the inequality). The name is in upper case because the word processor in use in the middle 1960's 
+had no lower case."
+
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{GWS}
+George W. Soules, \emph{The PTAH inequality and its relation to certain classical inequalities}, Institute for Defense Analyses, Working paper No. 429, November 1974.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

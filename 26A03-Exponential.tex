@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Exponential}
+\pmcreated{2013-03-22 12:29:59}
+\pmmodified{2013-03-22 12:29:59}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{exponential}
+\pmrecord{17}{32730}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+\pmsynonym{exponential operation}{Exponential}
+\pmrelated{RealNumber}
+\pmdefines{exponent}
+\pmdefines{power}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\paragraph{Preamble.}  We use $\reals^+\subset\reals$ to denote the set of
+positive real numbers. Our aim is to define the exponential, or
+the generalized power operation,  
+$$x^p,\quad x\in\reals^+,\; p\in\reals.$$
+The power index $p$ in the above
+expression is called the exponent. We take it as proven that $\reals$
+is a complete, ordered field.  No other properties of the real numbers
+are invoked.
+
+\paragraph{Definition.}
+For $x\in\reals^+$ and $n\in\znums$ we define $x^n$ in terms of
+repeated multiplication.  To be more precise, we inductively
+characterize natural number powers as follows:
+$$x^0 = 1,\quad x^{n+1} = x\cdot x^n,\quad n\in\natnums.$$
+The existence of the
+reciprocal is guaranteed by the assumption that $\reals$ is a field.
+Thus, for negative exponents, we can define
+$$x^{-n} = (x^{-1})^n,\quad n\in\natnums,$$
+where $x^{-1}$ is the reciprocal of $x$.
+
+The case of arbitrary exponents is somewhat more complicated.  A
+possible strategy is to define roots, then rational powers, and then
+extend by continuity.  Our approach is different.  For $x\in\reals^+$
+and $p\in \reals$, we define the set of all reals that one would want
+to be smaller than $x^p$, and then define the latter as the least
+upper bound of this set.  To be more precise, let $x>1$ and define
+$$L(x,p)=\{ z\in\reals^+: z^n<x^m \text{ for all } m\in\znums,\; n\in
+\natnums \text{ such that } m<pn\}.$$
+We then define $x^p$ to be the least upper bound of $L(x,p)$.
+For $x<1$ we define  
+$$x^p = (x^{-1})^{-p}.$$
+
+
+
+The exponential operation possesses a number of
+important \PMlinkname{properties}{PropertiesOfTheExponential},
+some of which characterize it up to uniqueness.
+
+
+\paragraph{Note.} It is also possible to define the exponential operation in
+terms of the exponential function and the natural logarithm. Since these concepts require
+the context of
+differential theory, it seems preferable to give a basic definition
+that relies only on the foundational property of the reals.
+%%%%%
+%%%%%
+\end{document}

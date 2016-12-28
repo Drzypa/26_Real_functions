@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperbolicAngle}
+\pmcreated{2013-03-22 17:24:25}
+\pmmodified{2013-03-22 17:24:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{hyperbolic angle}
+\pmrecord{10}{39779}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmrelated{HyperbolicFunctions}
+\pmrelated{AreaFunctions}
+\pmdefines{measure of hyperbolic angle}
+\pmdefines{hyperbolic angle between}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry, we define the notion of a \emph{hyperbolic angle} and use it to give a geometric characterization of hyperbolic functions, namely, the $\sinh$, $\cosh$ and $\tanh$ functions.
+
+Let $H$ be the unit hyperbola in the Euclidean plane $\mathbb{E}$.  Under the usual Cartesian coordinates, $H$ has the form $x^2-y^2=1$.  $H$ has two branches (connected components), the branch $H_1$ where $x>0$ and the branch $H_2$ where $x<0$.
+
+\begin{center}
+\psset{unit=1.5cm}
+\begin{pspicture}(-3,-2.5)(3,2.25)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-2.5,-2)(2.5,2.25)
+\rput(-0.2,2.25){$y$}
+\rput(2.5,-0.2){$x$}
+\rput(1.8,1.9){$H_1$}
+\rput(-1.8,1.9){$H_2$}
+%\psline{-}(-2,-2)(2,2)
+%\psline{-}(-2,2)(2,-2)
+\psplot{1}{2}{x 2 exp -1 add 0.5 exp}
+\psplot{-1}{-2}{x 2 exp -1 add 0.5 exp }
+\psplot{1}{2}{x 2 exp -1 add 0.5 exp -1 mul}
+\psplot{-1}{-2}{x 2 exp -1 add 0.5 exp -1 mul}
+\rput(0,-2.5){$\mbox{Graph of \,}H \mbox{\, with two branches }H_1\mbox{ and }H_2$}
+\end{pspicture}
+\end{center}
+
+Pick a point $P=(a,b)$ on $H_1$.  Then $P'=(a,-b)$ is also a point on $H_1$.  Let $m=\overline{OP}$ and $m'=\overline{OP'}$, where $O$ is the origin $(0,0)$.  Let $A(P)$ be the region bounded by $m,m'$ and $H_1$ (indicated by the yellow region below), and $B(P)$ be the region bounded by $m$, the $x$-axis and $H_1$ (indicated by the yellow shaded region below).
+
+\begin{center}
+\psset{unit=2cm}
+\begin{pspicture}(-1,-2)(3,2.25)
+\pspolygon[fillstyle=solid, fillcolor=yellow](0,0)(1.342,0.894)(1,0)(1.342,-0.894)
+\pspolygon[fillstyle=vlines](0,0)(1.342,0.894)(1,0)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-0.5,-1.75)(2.5,1.8)
+\rput(-0.1,1.8){$y$}
+\rput(2.5,-0.1){$x$}
+\rput(2.2,1.7){$H_1$}
+\rput(-0.1,-0.2){$O$}
+\rput(1.32,1.05){$P$}
+\rput(1.28,-1.05){$P'$}
+\rput(2.15,1.25){$m$}
+\rput(2.15,-1.25){$m'$}
+\psplot[fillstyle=solid, fillcolor=white]{1}{2}{x 2 exp -1 add 0.5 exp}
+\psplot[fillstyle=solid, fillcolor=white]{1}{2}{x 2 exp -1 add 0.5 exp -1 mul}
+\psline(-0.3,-0.2)(1.95,1.3)
+\psline(-0.3,0.2)(1.95,-1.3)
+\psdot(0,0)
+\psdot(1,0)
+\psdot(1.342,0.894)
+\psdot(1.342,-0.894)
+\rput(1,-2.1){$A(P)=\mbox{ yellow region; }B(P)=\mbox{ shaded yellow region.}$}
+\end{pspicture}
+\end{center}
+
+For any point $P=(a,b)$ on $H_1$, let $P^{+}$ be the point $(a,|b|)$ (which is on $H_1$).  Define $A(P)$ to be $A(P^{+})$, and $B(P)$ to be $B(P^{+})$.
+
+\textbf{Definition}.  The \emph{hyperbolic angle} $\alpha$ at $P\in H_1$ is the region $B(P)$.  The \emph{measure of hyperbolic angle} $\alpha$ is the area of $A(P)$ (or twice the area of $B(P)$).  A \emph{hyperbolic angle} is the hyperbolic angle $\alpha$ at some point $P\in H_1$, whose measure is the measure of $\alpha$.  Let $P,Q\in H_1$.  Suppose $B(P)\subseteq B(Q)$.  The \emph{hyperbolic angle between} $P$ and $Q$ is the region $B(Q)-B(P)$ (set difference).  The \emph{measure} of the hyperbolic angle between $P$ and $Q$ is the area of $A(Q)-A(P)$.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+The above definition is similar to the definition of the measure of the ordinary angle: given a unit circle $C$ and a point $P=(a,b)\in C$, the measure of the angle $\theta$ at $P$ is the arc length from the $x$-axis to $P$ along $C$ (moving in the counterclockwise direction, as indicated by the red arc below).  The value of the arc length is the same as the value of area of the yellow region (bounded by $C$, and the lines $\overline{OP}$ and $\overline{OP'}$, where $P'=(a,-b)$).  Therefore, we can equivalently define the measure of $\theta$ to be the area of the yellow region.
+
+\begin{center}
+\psset{unit=1.5cm}
+\begin{pspicture}(-3,-2.5)(3,2.25)
+\psline(-0.3,-0.2)(1.95,1.3)
+\psline(-0.3,0.2)(1.95,-1.3)
+\begin{psclip}{\pscircle(0,0){1.9}}
+\pspolygon[fillstyle=solid, fillcolor=yellow](0,0)(3,2)(3,0)(3,-2)
+\end{psclip}
+\pscircle(0,0){1.9}
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-2.5,-2.25)(2.5,2.25)
+\psarc{->}{0.5}{0}{32}
+\psarc[linewidth=2pt, linecolor=red]{-}{1.9}{0}{32.5}
+\rput(-0.2,2.25){$y$}
+\rput(2.5,-0.2){$x$}
+\rput(0.7,0.225){$\theta$}
+\rput(1.7,1.35){$P$}
+\psdot(0,0)
+\psdot(1.9,0)
+\psdot(1.581,1.054)
+\psdot(1.581,-1.054)
+\rput[r](-2.5,0){.}
+\rput[a](0,-2.25){.}
+\end{pspicture}
+\end{center}
+\item
+It is not hard to see that for every real number $r\ge 0$, there is a \emph{unique} hyperbolic angle $\alpha$ whose measure is $r$.  The uniqueness part is clear.  The existence is guaranteed because the area of $B(P)$ is a continuous unbounded real-valued function.  In other words, measure of a hyperbolic angle can take on any non-negative real number, unlike the measure of an ordinary angle, which is bounded by $[-1,1]$.
+\end{itemize}
+
+We are now in the position to characterize hyperbolic functions.  Again, let $P=(a,b)\in H_1$ with $b\ge 0$.  Let $\alpha=B(P)$ be the hyperbolic angle at $P$.  Because of the second remark above, let us identify $\alpha$ with its measure, so that $\alpha$ is now viewed as a non-negative real number.  We will draw some lines:
+\begin{enumerate}
+\item
+Draw a line $\ell$ through $P$ so that $\ell \perp x$-axis, and let $Q$ be the intersection.  
+\item
+Let $R$ be the intersection of $H_1$ and the $x$-axis.  Draw a line $n$ through $R$ so that $n\perp x$-axis, and let $S$ be the intersection.
+\end{enumerate}
+
+\begin{center}
+\psset{unit=3cm}
+\begin{pspicture}(-0.5,-0.45)(2.1,1.6)
+\pspolygon[fillstyle=solid, fillcolor=yellow](0,0)(1.342,0.894)(1,0)
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-0.5,-0.4)(2.1,1.6)
+\rput(-0.2,1.5){$y$}
+\rput(2,-0.2){$x$}
+\rput(2.1,1.5){$H_1$}
+\rput(0.2,-0.2){$O$}
+\psplot[fillstyle=solid, fillcolor=white]{1}{1.8}{x 2 exp -1 add 0.5 exp}
+\psplot{1}{1.06}{x 2 exp -1 add 0.5 exp -1 mul}
+\psline(-0.3,-0.2)(1.8,1.2)
+\psline(1.342,-0.2)(1.342,1.3)
+\psline(1,-0.3)(1,1.2)
+\psline[linewidth=2pt, linecolor=red](1.342,0)(1.342,0.894)
+\psline[linewidth=2pt, linecolor=blue](0,0)(1.342,0)
+\psline[linewidth=2pt, linecolor=green](1,0)(1,0.667)
+\rput(1.5,0.8){$P$}
+\rput(1.5,-0.2){$Q$}
+\rput(0.8,-0.2){$R$}
+\rput(0.8,0.8){$S$}
+\psdot(1.342,0)
+\psdot(0,0)
+\psdot(1,0)
+\psdot(1.342,0.894)
+\psdot(1,0.667)
+\rput[r](-0.5,0){.}
+\rput[a](0,-0.4){.}
+\end{pspicture}
+\end{center}
+
+With the lines drawn, we define
+\begin{itemize}
+\item $\sinh \alpha:=$ the length of the line segment $PQ$ (in red),
+\item $\cosh \alpha:=$ the length of the line segment $OQ$ (in blue),
+\item $\tanh \alpha:=$ the length of the line segment $RS$ (in green).
+\end{itemize}
+
+\textbf{Remarks}.
+\begin{itemize}
+\item Again, we see the parallel in definition between the hyperbolic functions and the corresponding trigonometric functions.  For example, if we refer to the diagram of the circle above, $\sin \theta$ is defined as the length of the line segment $PQ$, where $Q$ is the intersection of the $x$-axis and the line $\ell$ through $P$ perpendicular to the $x$-axis.  $\tan \theta$, on the other hand, is the length of the line segment $RS$ where $R=(1,0)$ and $S$ is the intersection of $\overline{OP}$ and the line passing through $R$ and perpendicular to the $x$-axis.
+\item It can be shown, that the above definitions are equivalent to the analytic definitions of the hyperbolic functions for non-negative real valued $\alpha$.  Of course, to extend the domain of the hyperbolic functions to all real numbers, and finally to all complex numbers, we would employ the analytic definitions instead.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

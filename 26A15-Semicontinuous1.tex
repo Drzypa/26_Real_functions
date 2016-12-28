@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Semicontinuous1}
+\pmcreated{2013-03-22 14:00:16}
+\pmmodified{2013-03-22 14:00:16}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{semicontinuous}
+\pmrecord{13}{34844}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmdefines{lower semicontinuous}
+\pmdefines{upper semicontinuous}
+\pmdefines{lower semi-continuous}
+\pmdefines{upper semi-continuous}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\R}[0]{\mathbb{R}}
+\newcommand{\C}[0]{\mathbb{C}}
+\newcommand{\N}[0]{\mathbb{N}}
+\newcommand{\Z}[0]{\mathbb{Z}}
+\newcommand{\Q}[0]{\mathbb{Q}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+Suppose $X$ is a topological space, and $f$ is a function
+from $X$ into the extended real numbers $\mathbb{R}^*$; $f:X\to \mathbb{R}^*$.
+Then:
+\begin{enumerate}
+\item
+If
+$f^{-1}((\alpha,\infty])=\{x\in X \mid f(x) >\alpha\}$ 
+is an open set in $X$ for all $\alpha\in \mathbb{R}$,
+then $f$ is said to be {\bf lower semicontinuous}.
+\item
+If
+$f^{-1}([-\infty,\alpha))=\{x\in X \mid f(x) <\alpha\}$ 
+is an open set in $X$ for all $\alpha\in \mathbb{R}$,
+then $f$ is said to be {\bf upper semicontinuous}.
+\end{enumerate}
+
+In other words, $f$ is lower semicontinuous, if $f$ is continuous with 
+respect to the topology for $\mathbb{R}^*$ containing $\emptyset$ and 
+open sets
+$$
+   U(\alpha) = (\alpha,\infty], \quad \quad \alpha\in \mathbb{R}\cup \{-\infty\}.
+$$
+It is not difficult to see that this is a topology. For example, 
+for a union of sets $U(\alpha_i)$ we have $\cup_i U(\alpha_i)=U(\inf \alpha_i)$. 
+Obviously, this topology is much coarser than
+the usual topology for the extended numbers. 
+However,
+the sets $U(\alpha)$ can be seen as neighborhoods of infinity, so
+in some sense, semicontinuous functions are "continuous at infinity"
+(see example 3 below). 
+
+\subsubsection{Examples}
+\begin{enumerate}
+\item A function $f\colon X\to \mathbb{R}^*$ is continuous if and only if 
+it is lower and upper semicontinuous. 
+\item Let $f$ be the characteristic function of a set $\Omega\subseteq X$. 
+Then $f$ is lower (upper)
+  semicontinuous if and only if $\Omega$ is open (closed).
+This also holds for the function that
+  equals $\infty$ in the set and $0\,$ outside. 
+  
+It follows that the characteristic function of $\Q$ is not
+semicontinuous.
+
+\item On $\mathbb{R}$, the function $f(x)=1/x$ for $x\neq 0$ and $f(0)=0$, is not
+semicontinuous. This example illustrate how semicontinuous "at infinity".
+\end{enumerate}
+  
+\subsubsection{Properties}
+
+Let $f\colon X\to \mathbb{R}^*$ be a function.
+\begin{enumerate}
+\item Restricting $f$ to a subspace preserves semicontinuity.
+\item Suppose $f$ is upper (lower) semicontinuous, $A$ is a topological space, and 
+$\Psi\colon A\to X$ is a homeomorphism. Then $f\circ\Psi$ is upper (lower) semicontinuous. 
+\item Suppose $f$ is upper (lower) semicontinuous, and 
+$S\colon \mathbb{R}^*\to \mathbb{R}^*$ is a sense preserving homeomorphism. 
+Then $S\circ f$ is upper (lower) semicontinuous. 
+\item $f$ is lower semicontinuous if and only if 
+$-f$ is upper semicontinuous.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+ \bibitem{rudin_real}
+ W. Rudin, \emph{Real and complex analysis}, 3rd ed., McGraw-Hill Inc., 1987.
+\bibitem{cohn}
+ D.L. Cohn, \emph{Measure Theory}, Birkh\"auser, 1980.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

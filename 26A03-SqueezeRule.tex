@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SqueezeRule}
+\pmcreated{2013-03-22 13:46:31}
+\pmmodified{2013-03-22 13:46:31}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{squeeze rule}
+\pmrecord{4}{34483}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+\pmsynonym{squeeze theorem}{SqueezeRule}
+\pmsynonym{squeeze test}{SqueezeRule}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\e}{\epsilon}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\begin{document}
+\textbf{Squeeze rule for sequences}
+
+Let $f,g,h:\N\to\R$ be three sequences of real numbers such that
+$$f(n)\le g(n)\le h(n)$$
+for all $n$. If $\lim_{n\to\infty}f(n)$ and $\lim_{n\to\infty}h(n)$ exist
+and are equal, say to $a$, then $\lim_{n\to\infty}g(n)$ also exists and
+equals $a$.
+
+The proof is fairly straightforward. Let $\e$ be any real number $>0$.
+By hypothesis there exist $M,N\in\N$ such that
+$$|a-f(n)|<\e\text{ for all }n\ge M$$
+$$|a-h(n)|<\e\text{ for all }n\ge N$$
+Write $L=\max(M,N)$. For $n\ge L$ we have
+\begin{itemize}
+\item if $g(n)\ge a$:
+$$|g(n)-a|=g(n)-a\le h(n)-a<\e$$
+\item else $g(n)<a$ and:
+$$|g(n)-a|=a-g(n)\le a-f(n)<\e$$
+\end{itemize}
+So, for all $n\ge L$, we have $|g(n)-a|<\e$, which is the desired conclusion.
+
+\textbf{Squeeze rule for functions}
+
+Let $f,g,h:S\to\R$ be three real-valued functions on a neighbourhood
+$S$ of a real number $b$, such that $$f(x)\le g(x)\le h(x)$$
+for all $x\in S-\{b\}$. If $\lim_{x\to b}f(x)$ and $\lim_{x\to b}h(x)$
+exist and are equal, say to $a$, then $\lim_{x\to b}g(x)$ also exists
+and equals $a$.
+
+Again let $\e$ be an arbitrary positive real number. Find positive reals
+$\alpha$ and $\beta$ such that
+$$|a-f(x)|<\e\text{ whenever }0<|b-x|<\alpha$$
+$$|a-h(x)|<\e\text{ whenever }0<|b-x|<\beta$$
+Write $\delta=\min(\alpha,\beta)$. Now, for any $x$ such that
+$|b-x|<\delta$, we have
+\begin{itemize}
+\item if $g(x)\ge a$:
+$$|g(x)-a|=g(x)-a\le h(x)-a<\e$$
+\item else $g(x)<a$ and:
+$$|g(x)-a|=a-g(x)\le a-f(x)<\e$$
+\end{itemize}
+and we are done.
+%%%%%
+%%%%%
+\end{document}

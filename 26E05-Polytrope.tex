@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Polytrope}
+\pmcreated{2014-02-23 21:50:23}
+\pmmodified{2014-02-23 21:50:23}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{polytrope}
+\pmrecord{16}{42110}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E05}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26A03}
+\pmsynonym{polytropic equation}{Polytrope}
+\pmrelated{GraphOfEquationXyConstant}
+\pmrelated{AsymptotesOfGraphOfRationalFunction}
+\pmrelated{PowerFunction}
+\pmdefines{cubic hyperbola}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{constant}
+\PMlinkescapeword{complex}
+\PMlinkescapeword{entropy}
+\paragraph{Mathematical concept}
+Let $n$ be a nonnegative constant.\, A 
+\emph{polytropic equation} expresses that the real variable 
+$y$ is inversely proportional to the power $x^n$ of the real 
+variable $x$.\, So, it is a question of the equation
+\begin{align}
+y \;=\; \frac{c}{x^n}
+\end{align}
+where $c$ is another constant.
+
+The graph of a polytropic equation is called a 
+\emph{polytrope}.\, It has the coordinate axes as asymptotes 
+for\, $n \neq 0$.\, Special cases of polytrope are the 
+hyperbola \,$y = \frac{c}{x}$\, and the 
+\emph{cubic hyperbola}
+$$y = \frac{c}{x^2}.$$\\
+
+Below one sees the \PMlinkescapetext{right} halves of three polytropes given by the integer $n$ values 0 (green), 1 (cyan) and 2 (blue); farther below a whole cubic hyperbola.
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(7,5.7) 
+\psaxes[Dx=1,Dy=1]{->}(0,0)(5.4,5.4)
+\rput(5.6,-0.2){$x$}
+\rput(-0.2,5.6){$y$}
+\psplot[linecolor=green]{0}{5}{1}
+\psplot[linecolor=cyan]{0.2}{5}{1 x div}
+\psplot[linecolor=blue]{0.45}{5}{1 x div x div}
+\psdot(1,1)
+\rput(3.5,3){$\displaystyle y \,=\, \frac{1}{x^n}$ \;for\; $n = 0,\,1,\,2$}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{pspicture}(-7,-0.5)(7,5.7) 
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-5.4,0)(5.4,5.4)
+\rput(5.6,-0.2){$x$}
+\rput(-0.2,5.6){$y$}
+\psdot(0,0)
+\psplot[linecolor=blue]{-5}{-0.45}{1 x div x div}
+\psplot[linecolor=blue]{0.45}{5}{1 x div x div}
+\rput(3.5,3){Cubic hyperbola\;\; $\displaystyle y \,=\, \frac{1}{x^2}$}
+\end{pspicture}
+\end{center} 
+
+
+\paragraph{An application to thermodynamics: The reversible polytropic process}
+When a gas undergoes a reversible process in which there is heat transfer, the process frequently takes place in such a manner that a plot of $\log{p}$ vs. $\log{v}$ is a straight line. Here $p$ denotes absolute pressure (e.g. in psia) and $v$ specific volume (e.g. in $ft^3/lbm$).  For such a process
+$$pv^n = \mbox{constant}.$$
+This is called a \emph{polytropic process}.  Indeed this equation represents a \emph{constitutive equation} since it can be verifiable experimentally in a lab for different processes of heat transfer, i.e. for distinct rational values of $n$. It is obvious, from the above equation, that
+$$\frac{d \log{p}}{d \log{v}} = -n,$$
+where $-n$ is the slope of the straight line on the mentioned logarithmic chart. Typical polytropic processes are tabulated as follow. \\
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+\multicolumn{4}{|c|}{\bf Some Typical Polytropic Processes} \\
+\hline 
+{\bf Process Name} & {\bf Constant \PMlinkescapetext{Property}} & {\bf $n$} 
+& {\bf Physical \PMlinkescapetext{Units}} \\
+\hline
+Isobaric & $p$ & 0 & lbf/in$^2$ abs. \\
+\hline
+Isothermal & $T$ & 1 & $^{\circ}\mathrm{R}$ \\
+\hline
+Isentropic & $s$ & $k$ & Btu/lbm-$^{\circ}\mathrm{R}$ \\
+\hline
+Isochoric(Isovolumetric) & $v$ & $\infty$ & ft$^3$/lbm \\
+\hline
+\end{tabular}
+\end{center} 
+
+Legend:\, $p$ $=$ abs. pressure;\, $T$ $=$ abs. temperature;\, $s$ $=$ specific entropy;\, $v$ $=$ specific volume \\
+
+
+In general, one may have more complex processes of heat transfer where $n$ is any rational number (e.g.\, $n = -2,\,-1,\, -0.5$, etc.). \,Specific examples are the expansion of the combustion gases in the cylinders of water-cooled internal combustion engines and reciprocating machines. \,In such cases the pressure and volume during a polytropic process are measured, as might be done with an \emph{engine indicator}, so that the logarithm of the pressure and volume are plotted in \PMlinkescapetext{order} to know the \emph{polytropic constant} $n$.  \\
+
+
+%%%%%
+%%%%%
+\end{document}

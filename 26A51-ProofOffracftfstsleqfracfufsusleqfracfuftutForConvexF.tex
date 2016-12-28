@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOffracftfstsleqfracfufsusleqfracfuftutForConvexF}
+\pmcreated{2013-03-22 18:25:34}
+\pmmodified{2013-03-22 18:25:34}
+\pmowner{yesitis}{13730}
+\pmmodifier{yesitis}{13730}
+\pmtitle{proof of $\frac{f(t)-f(s)}{t-s}\leq\frac{f(u)-f(s)}{u-s}\leq\frac{f(u)-f(t)}{u-t}$ for convex $f$}
+\pmrecord{6}{41080}
+\pmprivacy{1}
+\pmauthor{yesitis}{13730}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We will prove
+\begin{equation}\label{3}
+    \displaystyle
+    \frac{f(t)-f(s)}{t-s}\leq\frac{f(u)-f(s)}{u-s}.
+\end{equation}
+The proof of the right-most inequality is similar.
+
+Suppose (\ref{3}) does not hold. Then for some $s, t, u$,
+\begin{equation}\label{2}
+    \displaystyle
+    \frac{f(t)-f(s)}{t-s}>\frac{f(u)-f(s)}{u-s}.
+\end{equation}
+This inequality is just the statement of the slope of the line
+segment $\overline{AB}, A=(t, f(t)), B=(s, f(s))$, being larger than
+the slope of the segment $\overline{CB}, C=(u, f(u))$. Since $t$ is
+between $s$ and $u$, and $f$ is continuous, this implies
+\begin{equation}
+    f(t)>h(x)=\frac{f(u)-f(s)}{u-s}(x-s)+f(s),
+\end{equation}
+$s<x<u$. This contradicts convexity of $f$ on $(a, b)$. Hence,
+(\ref{2}) is false and (\ref{3}) follows.
+
+Note that we have tacitly use the fact that $x=\lambda u + (1-\lambda)s$ and $h(x)=\lambda
+f(u)+(1-\lambda)f(s)$ for some $\lambda$. 
+%%%%%
+%%%%%
+\end{document}

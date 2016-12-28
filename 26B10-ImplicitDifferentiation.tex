@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ImplicitDifferentiation}
+\pmcreated{2013-03-22 12:28:22}
+\pmmodified{2013-03-22 12:28:22}
+\pmowner{slider142}{78}
+\pmmodifier{slider142}{78}
+\pmtitle{implicit differentiation}
+\pmrecord{8}{32660}
+\pmprivacy{1}
+\pmauthor{slider142}{78}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Implicit differentiation is a tool used to analyze the solution sets of equations of the form $f(\mathbf{x}, \mathbf{y}) = 0$ that cannot be conveniently put into a form $\mathbf{y}=g(\mathbf{x})$ that explicitly shows the dependence of $\mathbf{y}$ on the variable $\mathbf{x}$. To use implicit differentiation meaningfully, you must be certain that $\mathbf{y}$ is actually a function of $\mathbf{x}$ in a neighborhood of the point $(\mathbf{a}, \mathbf{b})$ where you plan to apply the derivative. This means you want to ensure that $f(\mathbf{x}, \mathbf{y})$ satisfies the implicit function theorem in that neighborhood ($f$ must be continuously differentiable at $(\mathbf{a}, \mathbf{b})$, and its derivative must be non-singular at $(\mathbf{a}, \mathbf{b})$). If this is not the case, the quantity you get from naively differentiating both sides of the equation may not represent the derivative. To actually differentiate implicitly, we use the chain rule to differentiate the entire equation.
+
+\textbf{Example:} The first step is to identify the implicit function. Suppose we have simplified an equation to the form $x^2 + y^2 + xy =0$ (Since this is a two dimensional equation, all one has to check is that the graph of $y$ may be an implicit function of $x$ in local neighborhoods.) Then, to differentiate implicitly, we differentiate both sides of the equation with respect to $x$, using the chain rule whenever we encounter $y$, as $y$ is treated as a function of $x$. We will get
+$$2x + 2y\cdot \frac{dy}{dx} + x\cdot 1\cdot\frac{dy}{dx} + y = 0$$
+Next, we simply solve for our implicit derivative $\frac{dy}{dx}=-\frac{2x+y}{2y+x}$. Note that the derivative depends on both the variable and the implicit function $y$. Most of your derivatives will be functions of one or all the variables, including the implicit function itself.
+
+%%%%%
+%%%%%
+\end{document}

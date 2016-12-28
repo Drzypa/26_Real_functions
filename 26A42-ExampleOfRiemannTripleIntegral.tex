@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfRiemannTripleIntegral}
+\pmcreated{2013-03-22 19:10:59}
+\pmmodified{2013-03-22 19:10:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of Riemann triple integral}
+\pmrecord{14}{42091}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmsynonym{volume as triple integral}{ExampleOfRiemannTripleIntegral}
+\pmrelated{Volume2}
+\pmrelated{VolumeAsIntegral}
+\pmrelated{SubstitutionNotation}
+\pmrelated{ChangeOfVariablesInIntegralOnMathbbRn}
+\pmrelated{ExampleOfRiemannDoubleIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+Determine the volume of the solid \PMlinkescapetext{bounded} in $\mathbb{R}^3$ by the part of the surface
+$$(x^2\!+\!y^2\!+\!z^2)^3 \;=\; 3a^3xyz$$
+being in the first octant ($a > 0$).\\
+
+
+Since $x^2\!+\!y^2\!+\!z^2$ is the squared distance of the point \,$(x,\,y,\,z)$\, from the origin, the solid is apparently defined by
+$$D \;:=\; 
+\{(x,\,y,\,z)\in\mathbb{R}^3\,\vdots\;\, x \geqq 0,\;\, y \geqq 0,\;\, z \geqq 0,\;\, 
+(x^2\!+\!y^2\!+\!z^2)^3 \leqq 3a^3xyz\}.$$
+By the definition
+$$\mathbf{meas}(D) \;:=\: \int \chi_D(v)\, dv$$
+in the \PMlinkname{parent entry}{RiemannMultipleIntegral}, the volume in the question
+is
+\begin{align}
+V \;=\; \int_D1\,dv \;=\; \iiint_D dx\,dy\,dz.
+\end{align}
+For calculating the integral (1) we express it by the (geographic) spherical coordinates through
+\begin{align*}
+\begin{cases}
+x \;=\; r\cos\varphi\cos\lambda\\
+y \;=\; r\cos\varphi\sin\lambda\\
+z \;=\; r\sin\varphi
+\end{cases}
+\end{align*}
+where the latitude angle $\varphi$ of the position vector $\vec{r}$ is measured from the $xy$-plane (not as the colatitude $\phi$ from the positive $z$-axis); $\lambda$ is the longitude.\, For the change of coordinates, we need the Jacobian determinant
+\begin{align*}
+\frac{\partial(x,\,y,\,z)}{\partial(r,\,\varphi,\,\lambda)} \:=\;
+ \left| \begin{matrix}
+\frac{\partial x}{\partial r} & \frac{\partial y}{\partial r} & \frac{\partial z}{\partial r} \\
+\frac{\partial x}{\partial \varphi} & \frac{\partial y}{\partial \varphi} & \frac{\partial z}{\partial \varphi} \\
+\frac{\partial x}{\partial \lambda} & \frac{\partial y}{\partial \lambda} & \frac{\partial z}{\partial \lambda}
+\end{matrix}\right| \;=\; 
+ \left| \begin{matrix}
+\cos\varphi\cos\lambda & \cos\varphi\sin\lambda & \sin\varphi \\
+-r\sin\varphi\cos\lambda & -r\sin\varphi\sin\lambda & r\cos\varphi \\
+-r\cos\varphi\sin\lambda & r\cos\varphi\cos\lambda & 0
+\end{matrix}\right|,
+\end{align*}
+which is simplified to $r^2\cos\varphi$.\, The equation of the surface attains the form
+$$r^6 \;=\; 3a^3r^3\cos^2\varphi\sin\varphi\cos\lambda\sin\lambda,$$
+or
+$$r \;=\; \sqrt[3]{3a^3\cos^2\varphi\sin\varphi\cos\lambda\sin\lambda} \;:=\; r(\varphi,\,\lambda).$$
+In the solid, we have\, $0 \leqq r \leqq r(\varphi,\,\lambda)$\, and
+$$r \;=\; 0 \quad \mbox{if only if}\;\; \cos^2\varphi\sin\varphi\cos\lambda\sin\lambda \;=\; 0.$$
+Thus we can write
+$$V \;=\; \int_0^{\frac{\pi}{2}}\int_0^{\frac{\pi}{2}}\int_0^{r(\varphi,\,\lambda)}\!r^2\cos\varphi\;d\varphi\;d\lambda\;dr
+\;=\; 
+\frac{1}{3}\int_0^{\frac{\pi}{2}}\int_0^{\frac{\pi}{2}}\left(\sijoitus{r=0}{\quad r(\varphi,\,\lambda)}\!r^3\right)\cos\varphi\;d\varphi\;d\lambda,$$
+getting then
+$$V \;=\; 
+a^3\int_0^{\frac{\pi}{2}}\!(\cos^3\varphi)(-\sin\varphi)\,d\varphi
+\cdot\int_0^{\frac{\pi}{2}}\!(\cos\lambda)(-\sin\lambda)\,d\lambda
+\;=\; a^3\!\sijoitus{\varphi=0}{\quad\frac{\pi}{2}}\!\frac{\cos^4\varphi}{4}
+\cdot\!\sijoitus{\lambda=0}{\quad\frac{\pi}{2}}\!\frac{\cos^2\lambda}{2} \;=\; \frac{a^3}{8}.$$\\
+
+
+\textbf{Remark.}\, The general \PMlinkescapetext{formula} for variable changing in a triple integral is
+$$\iiint_Df(x,\,y,\,z)\,dx\,dy\,dz \:=\; 
+\iiint_\Delta\!f(x(\xi,\,\eta,\,\zeta),\,y(\xi,\,\eta,\,\zeta),\,z(\xi,\,\eta,\,\zeta))
+\left|\frac{\partial(x,\,y,\,z)}{\partial(\xi,\,\eta,\,\zeta)}\right|\,d\xi\,d\eta\,d\zeta.$$
+
+
+
+%%%%%
+%%%%%
+\end{document}

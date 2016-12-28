@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialEquationsForXx}
+\pmcreated{2013-03-22 17:24:37}
+\pmmodified{2013-03-22 17:24:37}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{differential equations for $x^x$}
+\pmrecord{6}{39783}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this entry, we will derive differential equations satisfied by the function $x^x$.
+\footnote{In this entry, we restrict $x$, and hence $x^x$ to be strictly positive
+real numbers, hence it is justified to divide by these quantities.}
+We begin by computing its derivative.  To do this, we write $x^x = e^{x \log x}$ and
+apply the chain rule:
+\[
+{d \over dx} x^x =
+{d \over dx} e^{x \log x} =
+e^{x \log x} (1 + \log x) =
+x^x (1 + \log x)
+\]
+Set $y = x^x$.  Then we have $y'/y = 1 + \log x$.  Taking
+another derivative, we have
+\[
+{d \over dx} \left( {y' \over y} \right) = {1 \over x} \cdot
+\]
+Applying the quotient rule and simplifying, this becomes
+\[
+yy'' - (y')^2 - y^2/x = 0 .
+\]
+It is also possible to derive an equation in which $x$ does not appear.
+We start by noting that, if $z = 1/x$, then $z' + z^2 = 0$.  If, as
+above, $y = x^x$, we have $(d/dx) (y'/y) = z$.  Combining equations,
+\[
+{d^2 \over dx^2} \left( {y' \over y} \right) +
+\left( {d \over dx} \left( {y' \over y} \right) \right)^2 = 0 ;
+\]
+applying the quotient rule and simplifying,
+\[
+y^3 y''' - y^2 (y'')^2 + 2 y (y')^2 y'' - 3 y^2 y' y'' - (y')^4 + 2 y (y')^3 = 0 .
+\]
+%%%%%
+%%%%%
+\end{document}

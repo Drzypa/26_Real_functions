@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SupportOfIntegrableFunctionIssigmafinite}
+\pmcreated{2013-03-22 18:38:47}
+\pmmodified{2013-03-22 18:38:47}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{support of integrable function is $\sigma$-finite}
+\pmrecord{4}{41388}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28A25}
+\pmrelated{SupportOfIntegrableFunctionWithRespectToCountingMeasureIsCountable}
+\pmdefines{$L^p$ functions have $\sigma$-finite support}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theroem -} Let $(X, \mathcal{B}, \mu)$ be a measure space and $f:X \to \mathbb{C}$ a measurable function. If $f$ is integrable, then the support of $f$ is \PMlinkname{$\sigma$-finite}{SigmaFinite}.
+
+It follows easily from this result that any function in an \PMlinkname{$L^p$-space}{LpSpace}, with $1 \leq p < \infty$, must have $\sigma$-finite support.
+
+{\bf \emph{\PMlinkescapetext{Proof}:}} Let $A_0 := [1, \infty[$, and for each $n \in \mathbb{N}$ let $A_n:= [\frac{1}{n+1}, \frac{1}{n}[$. Since $f$ is integrable, we must necessarily have $\mu \big(|f|^{-1}(A_n)\big) < \infty$ for each $n \in \mathbb{N} \cup \{0\}$, because
+
+\begin{align*}
+\mu \big(|f|^{-1} (A_n) \big) \cdot \frac{1}{n+1} \leq \int_{|f|^{-1}(A_n)} |f| \;d\mu \leq \int_X |f| \;d\mu < \infty.
+\end{align*}
+
+Since $f$ and $|f|$ have the same support, and the the support of the latter is $\displaystyle \mathrm{supp} \,  |f| = \bigcup_{n = 0}^{\infty} |f|^{-1} (A_n)$, it follows that the support of $f$ is $\sigma$-finite. $\square$
+%%%%%
+%%%%%
+\end{document}

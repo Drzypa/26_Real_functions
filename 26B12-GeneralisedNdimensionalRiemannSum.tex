@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralisedNdimensionalRiemannSum}
+\pmcreated{2013-03-22 13:37:40}
+\pmmodified{2013-03-22 13:37:40}
+\pmowner{vernondalhart}{2191}
+\pmmodifier{vernondalhart}{2191}
+\pmtitle{Generalised N-dimensional Riemann Sum}
+\pmrecord{4}{34270}
+\pmprivacy{1}
+\pmauthor{vernondalhart}{2191}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\R}{\mathbb{R}}
+\begin{document}
+Let $I = [a_1, b_1] \times \cdots \times [a_N, b_N]$ be an $N$-cell in $\R^N$. For each $j = 1, \ldots, N$, let $a_j = t_{j,0} < \ldots < t_{j,N} = b_j$ be a partition $P_j$ of $[a_j, b_j]$. We define a partition $P$ of $I$ as
+\[
+P := P_1 \times \cdots \times P_N
+\]
+Each partition $P$ of $I$ generates a subdivision of $I$ (denoted by $(I_\nu)_\nu$) of the form
+\[
+I_\nu = [t_{1,j},t_{1,j+1}]\times \cdots \times [t_{N,k},t_{N,k+1}]
+\]
+
+Let $f : U \to \R^M$ be such that $I \subset U$, and let $(I_\nu)_\nu$ be the corresponding subdivision of a partition $P$ of $I$. For each $\nu$, choose $x_\nu \in I_\nu$. Define
+\[
+S(f,P) := \sum_\nu f(x_\nu)\mu(I\nu)
+\]
+As the Riemann sum of $f$ corresponding to the partition $P$.
+
+A partition $Q$ of $I$ is called a refinement of $P$ if $P \subset Q$.
+%%%%%
+%%%%%
+\end{document}

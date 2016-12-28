@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NthRootFormulas}
+\pmcreated{2014-10-25 17:59:04}
+\pmmodified{2014-10-25 17:59:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{nth root formulas}
+\pmrecord{12}{42031}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmsynonym{root formulas}{NthRootFormulas}
+\pmsynonym{root formulae}{NthRootFormulas}
+%\pmkeywords{root}
+%\pmkeywords{nth root}
+\pmrelated{FractionPower}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formulas}
+
+In the following formulas, $a$ is a nonnegative real number 
+and other letters positive integers.\, For other formulas, see 
+the \PMlinkname{parent entry}{NthRoot}.
+
+\begin{enumerate}
+\item $\sqrt[n]{0} \;=\; 0$, \qquad $\sqrt[n]{1} \;=\; 1$
+\item $\sqrt[1]{a} \;=\; a$
+\item $\sqrt[m]{\sqrt[n]{a}} \;=\; \sqrt[mn]{a} \;=\; \sqrt[n]{\sqrt[m]{a}}$
+\item $\sqrt[nk]{a^{mk}} \;=\; \sqrt[n]{a^m}$
+\item $\sqrt[n]{a^m} \;=\; (\sqrt[n]{a})^m$
+\item $\sqrt[m]{a}\cdot\sqrt[n]{a} \;=\; \sqrt[mn]{a^{m+n}}$
+\end{enumerate}
+
+\emph{Proof.}\, For proving, one uses the definition of 
+\PMlinkid{$n$th root}{754} and the \PMlinkname{power}{GeneralAssociativity} laws.
+
+$1^\circ$.\; $0^n = 0, \quad 1^n = 1$
+
+$2^\circ$.\; $a^1 = a$
+
+$3^\circ$.\; $(\sqrt[m]{\sqrt[n]{a}})^{mn} \;=\; ((\sqrt[m]{\sqrt[n]{a}})^m)^n \;=\; (\sqrt[n]{a})^n \;=\; a$
+
+$4^\circ$.\; $(\sqrt[n]{a^m})^{nk} \;=\; ((\sqrt[n]{a^m})^n)^k \;=\; (a^m)^k \;=\; a^{mk}$
+
+$5^\circ$.\; $((\sqrt[n]{a})^m)^n \;=\; ((\sqrt[n]{a})^n)^m \;=\; a^m$
+
+$6^\circ$.\; $(\sqrt[m]{a}\cdot\sqrt[n]{a})^{mn} \;=\; (\sqrt[m]{a})^{mn}(\sqrt[n]{a})^{mn} \;=\;
+((\sqrt[m]{a})^m)^n((\sqrt[n]{a})^n)^m \;=\; a^na^m \;=\; a^{m+n}$
+%%%%%
+%%%%%
+\end{document}

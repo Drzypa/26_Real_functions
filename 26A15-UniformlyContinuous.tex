@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformlyContinuous}
+\pmcreated{2013-03-22 12:45:38}
+\pmmodified{2013-03-22 12:45:38}
+\pmowner{n3o}{216}
+\pmmodifier{n3o}{216}
+\pmtitle{uniformly continuous}
+\pmrecord{14}{33068}
+\pmprivacy{1}
+\pmauthor{n3o}{216}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmrelated{UniformContinuity}
+\pmdefines{uniformly continuous function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f: A \rightarrow \mathbb{R}$ be a real function defined on a subset $A$ of the real line. We say that $f$ is \emph{uniformly continuous} if, given an arbitrary small positive $\varepsilon$, there exists a positive $\delta$ such that whenever two points in $A$ differ by less than $\delta$, they are mapped by $f$ into points which differ by less than $\varepsilon$. In symbols:
+\[ \forall \varepsilon > 0\ \exists \delta > 0\ \forall x,y \in A\ |x-y| < \delta \Rightarrow |f(x)-f(y)| < \varepsilon. \]
+
+Every uniformly continuous function is also continuous, while the converse does not always hold. For instance, the function $f: ]0,+\infty[ \rightarrow \mathbb{R}$ defined by $f(x) = 1/x$ is continuous in its domain, but not uniformly.
+
+A more general definition of uniform continuity applies to functions between metric spaces (there are even more general environments for uniformly continuous functions, i.e. uniform spaces).
+Given a function $f: X \rightarrow Y$, where $X$ and $Y$ are metric spaces with distances $d_X$ and $d_Y$, we say that $f$ is uniformly continuous if
+\[ \forall \varepsilon > 0\ \exists \delta > 0\ \forall x,y \in X\ d_X(x,y) < \delta \Rightarrow d_Y(f(x),f(y)) < \varepsilon. \]
+
+Uniformly continuous functions have the property that they map Cauchy sequences to Cauchy sequences and that they preserve uniform convergence of sequences of functions.
+
+Any continuous function defined on a compact space is uniformly continuous (see Heine-Cantor theorem).
+%%%%%
+%%%%%
+\end{document}

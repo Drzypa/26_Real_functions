@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentiableFunction}
+\pmcreated{2013-03-22 12:39:10}
+\pmmodified{2013-03-22 12:39:10}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{differentiable function}
+\pmrecord{24}{32919}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{57R35}
+\pmsynonym{smooth function}{DifferentiableFunction}
+\pmsynonym{differentiable mapping}{DifferentiableFunction}
+\pmsynonym{differentiable map}{DifferentiableFunction}
+\pmsynonym{smooth mapping}{DifferentiableFunction}
+\pmsynonym{smooth map}{DifferentiableFunction}
+\pmsynonym{continuously differentiable}{DifferentiableFunction}
+%\pmkeywords{differentiable}
+%\pmkeywords{smooth}
+\pmrelated{OneSidedDerivatives}
+\pmrelated{RoundFunction}
+\pmrelated{ConverseTheorem}
+\pmrelated{WeierstrassFunction}
+\pmdefines{differentiable}
+\pmdefines{smooth}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $f\colon V\to W$ be a function, where $V$ and $W$ are Banach spaces.
+For $x\in V$, the function $f$ is said to be \emph{differentiable}
+at $x$ if its derivative exists at that point. Differentiability at
+$x\in V$ implies continuity at $x$. If $S\subset V$, then $f$ is said to
+be differentiable on $S$ if $f$ is differentiable at every point $x\in S$.
+
+For the most common example, a real function $f\colon\R\to\R$ is differentiable
+if its derivative $\frac{df}{dx}$ exists for every point in the region of
+interest. For another common case of a real function of $n$ variables
+$f(x_1,x_2,\ldots,x_n)$ (more formally $f\colon\R^n\to\R$),
+it is not sufficient that the partial derivatives
+$\frac{\partial f}{\partial x_i}$ exist for $f$ to be differentiable. The
+derivative of $f$ must exist in the original sense
+at every point in the region of interest,
+where $\R^n$ is treated as a Banach space under the usual Euclidean vector
+norm.
+
+If the derivative of $f$ is continuous, then $f$ is said to be $C^1$. If
+the $k$th derivative of $f$ is continuous, then $f$ is said to be $C^k$. By convention, if $f$
+is only continuous but does not have a continuous derivative, then $f$ is said to
+be $C^0$. Note the inclusion property $C^{k+1} \subset C^k$.
+And if the $k$-th derivative of $f$ is continuous for all $k$,
+then $f$ is said to be $C^\infty$. In other words $C^\infty$ is the
+intersection $C^\infty = \bigcap_{k=0}^\infty C^k$.
+
+Differentiable functions are often referred to as {\em smooth}. If $f$ is
+$C^k$, then $f$ is said to be $k$-smooth. Most often a function is called
+smooth (without qualifiers) if $f$ is $C^\infty$ or $C^1$, depending on the
+context.
+%%%%%
+%%%%%
+\end{document}

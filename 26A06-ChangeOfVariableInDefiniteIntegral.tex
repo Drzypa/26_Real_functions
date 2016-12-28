@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChangeOfVariableInDefiniteIntegral}
+\pmcreated{2014-05-27 13:13:22}
+\pmmodified{2014-05-27 13:13:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{change of variable in definite integral}
+\pmrecord{10}{41373}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{change of variable in Riemann integral}{ChangeOfVariableInDefiniteIntegral}
+\pmrelated{RiemannIntegral}
+\pmrelated{SubstitutionForIntegration}
+\pmrelated{FundamentalTheoremOfCalculus}
+\pmrelated{IntegralsOfEvenAndOddFunctions}
+\pmrelated{OrthogonalityOfChebyshevPolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, Let the real function \,$x \mapsto f(x)$\, be continuous on the interval \,$[a,\,b]$.\, We introduce via the the equation
+$$x \;=\; \varphi(t)$$
+a new variable $t$ satisfying
+\begin{itemize}
+\item $\varphi(\alpha) \,=\, a, \quad \varphi(\beta) \,=\, b$,
+\item $\varphi$ and $\varphi'$ are continuous on the interval with endpoints $\alpha$ and $\beta$.
+\end{itemize}
+Then
+$$\int_a^b\!f(x)\,dx \;=\; \int_\alpha^\beta\!f(\varphi(t))\,\varphi'(t)\,dt.$$\\
+
+
+{\em Proof.}\, As a continuous function, $f$ has an antiderivative $F$.\, Then the composite function $F\circ\varphi$ is an antiderivative of $(f\circ\varphi)\cdot\varphi'$, since by the chain rule we have
+$$\frac{d}{dt}F(\varphi(t)) \;=\; F'(\varphi(t))\,\varphi'(t) \;=\; f(\varphi(t))\,\varphi'(t).$$
+Using the \PMlinkname{Newton--Leibniz formula}{node/40459} we obtain
+$$\int_a^b\!f(x)\,dx \;=\; F(b)-F(a) \;=\; F(\varphi(\beta))-F(\varphi(\alpha)) 
+\;=\; \int_\alpha^\beta\!f(\varphi(t))\,\varphi'(t)\,dt,$$
+Q.E.D.
+%%%%%
+%%%%%
+\end{document}

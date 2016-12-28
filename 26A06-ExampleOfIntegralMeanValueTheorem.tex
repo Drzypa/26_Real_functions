@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfIntegralMeanValueTheorem}
+\pmcreated{2013-03-22 18:20:24}
+\pmmodified{2013-03-22 18:20:24}
+\pmowner{me_and}{17092}
+\pmmodifier{me_and}{17092}
+\pmtitle{example of integral mean value theorem}
+\pmrecord{4}{40973}
+\pmprivacy{1}
+\pmauthor{me_and}{17092}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+%\usepackage{amssymb}
+\usepackage{amsmath} %Needed for align & align* and to render proofs properly
+%\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%Named sets
+%\newcommand{\R}{\mathbb{R}} %Real numbers (amssymb or amsfonts)
+%\newcommand{\C}{\mathbb{C}} %Complex numbers (amssymb or amsfonts)
+
+%Functions
+\newcommand{\modulus}[1]{\left|{#1}\right|} %|z|
+\newcommand{\integral}[4]{\int_{#1}^{#2}\!{#3}\,\mathrm{d}{#4}}
+
+%Numbers
+%\newcommand{\I}{\mathrm{i}} %sqrt{-1}
+%\newcommand{\e}{\mathrm{e}} %exponential
+
+%Letters
+%\newcommand{\ve}{\varepsilon} %nice epsilon
+\begin{document}
+\theoremstyle{definition}
+\newtheorem*{ex}{Example}
+\begin{ex}
+If $f$ is a continuous real function on an interval $[a,b]$, then there exists a $\zeta\in(a,b)$ such that
+\[
+  \integral{a}{b}{f(x)}{x}=f(\zeta)(b-a)
+.\]
+\end{ex}
+\begin{proof}
+Let $g(x)\equiv 1$. Then by the Integral Mean Value Theorem, there exists $\zeta\in(a,b)$ such that
+\begin{align*}
+  \integral{a}{b}{f(x)}{x} &= \integral{a}{b}{f(x)g(x)}{x} \\
+                           &= f(\zeta)\integral{a}{b}{g(x)}{x} \\
+                           &= f(\zeta)\integral{a}{b}{1}{x} \\
+                           &= f(\zeta)(b-a)
+\end{align*}
+as required.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

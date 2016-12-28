@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InflexionPoint}
+\pmcreated{2013-03-26 15:57:49}
+\pmmodified{2013-03-26 15:57:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{inflexion point}
+\pmrecord{21}{39975}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A51}
+\pmclassification{msc}{53A04}
+\pmsynonym{inflection point}{InflexionPoint}
+\pmsynonym{point of inflection}{InflexionPoint}
+%\pmkeywords{second derivative}
+%\pmkeywords{curvature}
+\pmrelated{DerivativesOfSolutionOfFirstOrderODE}
+\pmdefines{concave upwards}
+\pmdefines{concave up}
+\pmdefines{concave downwards}
+\pmdefines{concave down}
+\pmdefines{saddle-point}
+\pmdefines{plain point (?)}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+In examining the graphs of differentiable real functions, it may be useful to \PMlinkescapetext{state} the intervals where the function is \PMlinkescapetext{convex} and the ones where it is \PMlinkescapetext{concave}.  
+
+\begin{itemize}
+
+\item A function $f$ is said to be \PMlinkescapetext{{\em convex} on an interval} if the \PMlinkname{restriction}{RestrictionOfAFunction} of $f$ to this interval is a (strictly) convex function; this may be characterized more illustratively by saying that the graph of $f$ is \PMlinkescapetext{{\em concave upwards}} or \PMlinkescapetext{\emph{concave up}}.  On such an interval, the tangent line of the graph is constantly turning counterclockwise, \PMlinkname{i.e.}{Ie}, the derivative $f'$ is increasing and thus the second derivative $f''$ is positive.  In the picture below, the sine curve is concave up on the interval\, $(-\pi,\,0)$.
+
+\item The {\em concavity} of the function $f$ on an interval correspondingly:  On such an interval, the graph of $f$ is \PMlinkescapetext{{\em concave downwards}} or \PMlinkescapetext{\emph{concave down}}, the tangent line turns clockwise, $f'$ decreases, and $f''$ is negative.  In the picture below, the sine curve is concave down on the interval\, $(0,\,\pi)$.
+
+\item The points in which a function changes from \PMlinkescapetext{concave to convex} or vice versa are the {\em inflexion points} (or \emph{inflection points}) of the graph of the function.  At an inflexion point, the tangent line crosses the curve, the second derivative vanishes and changes its sign when one passes through the point.
+
+\item A graph may have points where the second derivative vanishes but does not change its sign when passed such a point; thus the first derivative is here changing ``very slowly''.\, Such a point is sometimes called an {\it undulation point}.\, The graph of\, $x\mapsto x^4$\, has the origin as an undulation point.
+\end{itemize}
+
+\begin{center}
+\begin{pspicture}(-5,-2.5)(5,2)
+\psaxes[Dx=9,Dy=1]{->}(0,0)(-4.5,-1.5)(5,2)
+\rput(5,-0.2){$x$}
+\rput(0.2,2){$y$}
+\rput(3,-0.2){$\pi$}
+\rput(-3.1,-0.2){$-\pi$}
+\psplot[linecolor=blue]{-4}{4}{x 60 mul sin}
+\psdot[linecolor=red](0,0)
+\rput(0.2,-2.3){The origin is an inflexion point of the sinusoid \,$y = \sin{x}$.}
+\end{pspicture}
+\end{center}
+
+Since the sine function is $2\pi$-periodic, the sinusoid possesses infinitely many inflexion points.  Indeed,\, 
+$f(x) = \sin x$;\, $f''(x) = -\sin x = 0$\, for\, $x = 0,\,\pm\pi,\,\pm2\pi,\,\dots$;\, $f'''(x) = -\cos x$, $f'''(n\pi) = -\cos n\pi = (-1)^{n+1} \neq 0$.  Non-nullity of the third derivative at these critical points assures us the existence of those inflexion points.
+
+\textbf{Remarks}
+
+1.  For finding the inflexion points of the graph of $f$ it does not suffice to find the \PMlinkname{roots}{Equation} of the equation\, $f''(x) = 0$, since the sign of $f''$ does not necessarily change as one passes such a \PMlinkescapetext{root}.  If the second derivative maintains its sign when one of its zeros is passed, we can speak of a {\em plain point} (?) of the graph.  E.g. the origin is a plain point of the graph of\, $x\mapsto x^4$.
+
+2.  Recalling that the \PMlinkname{curvature}{CurvaturePlaneCurve} $\kappa$ for a plane curve \,$y = f(x)$\, is given by
+$$\kappa(x) \;=\; \frac{f''(x)}{[1+f'(x)^2]^{3/2}},$$
+we can say that the inflexion points are the points of the curve where the curvature changes its sign and where the curvature equals zero.
+
+3.  If an inflexion point\, $x = \xi$\, satisfies the additional condition \,$f'(\xi) = 0$,\, the point is said to be a \PMlinkescapetext{{\em stationary inflexion point}} or a {\em saddle-point}, while in the case\, $f'(\xi) \neq 0$\, it is a {\em non-stationary inflexion point}.
+%%%%%
+\end{document}

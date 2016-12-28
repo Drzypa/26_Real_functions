@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGeneralMeansInequality}
+\pmcreated{2013-03-22 13:10:26}
+\pmmodified{2013-03-22 13:10:26}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of general means inequality}
+\pmrecord{5}{33619}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+%\pmkeywords{power mean}
+%\pmkeywords{inequality}
+\pmrelated{ArithmeticMean}
+\pmrelated{GeometricMean}
+\pmrelated{HarmonicMean}
+\pmrelated{RootMeanSquare3}
+\pmrelated{PowerMean}
+\pmrelated{WeightedPowerMean}
+\pmrelated{ArithmeticGeometricMeansInequality}
+\pmrelated{JensensInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $w_1$, $w_2$, \dots, $w_n$ be positive real numbers such that
+$w_1+w_2+\cdots+w_n=1$.  For any real number $r\ne0$, the
+weighted power mean of degree $r$ of $n$ positive real numbers $x_1$,
+$x_2$, \dots, $x_n$ (with respect to the weights $w_1$, \dots,
+$w_n$) is defined as
+$$
+M_w^r(x_1,x_2,\ldots,x_n)=(w_1x_1^r+w_2x_2^r+\cdots+w_nx_n^r)^{1/r}.
+$$
+The definition is extended to the case $r=0$ by taking the limit
+$r\to 0$; this yields the weighted geometric mean
+$$
+M_w^0(x_1,x_2,\ldots,x_n)=x_1^{w_1}x_2^{w_2}\ldots x_n^{w_n}
+$$
+(see derivation of zeroth weighted power mean).  We will prove the
+weighted power means inequality, which states that for any two real
+numbers $r<s$, the weighted power means of orders $r$ and $s$ 
+of $n$ positive real numbers $x_1$, $x_2$, \dots, $x_n$ satisfy the 
+inequality
+$$
+M_w^r(x_1,x_2,\ldots,x_n)\le M_w^s(x_1,x_2,\ldots,x_n)
+$$
+with equality if and only if all the $x_i$ are equal.
+
+First, let us suppose that $r$ and $s$ are nonzero.  We
+distinguish three cases for the signs of $r$ and $s$: $r<s<0$,
+$r<0<s$, and $0<r<s$.  Let us consider the last case, i.e.\ assume
+$r$ and $s$ are both positive; the others are similar.  We write
+$t=\frac{s}{r}$ and $y_i=x_i^r$ for $1\le i\le n$; this implies
+$y_i^t=x_i^s$.  Consider the function
+\begin{eqnarray*}
+f\colon(0,\infty)&\to&(0,\infty)\\
+x&\mapsto&x^t.
+\end{eqnarray*}
+Since $t>1$, the second derivative of $f$ satisfies
+$f''(x)=t(t-1)x^{t-2}>0$ for all $x>0$, so $f$ is a strictly
+convex function.  Therefore, according to Jensen's inequality,
+\begin{eqnarray*}
+(w_1y_1+w_2y_2+\cdots+w_ny_n)^t&=&f(w_1y_1+w_2y_2+\cdots+w_ny_n)\\
+&\le&w_1f(y_1)+w_2f(y_2)+\cdots+w_nf(y_n)\\
+&=&w_1y_1^t+w_2y_2^t+\cdots+w_ny_n^t,
+\end{eqnarray*}
+with equality if and only if $y_1=y_2=\cdots=y_n$.  By substituting
+$t=\frac{s}{r}$ and $y_i=x_i^r$ back into this inequality, we get
+$$
+(w_1x_1^r+w_2x_2^r+\cdots+w_nx_n^r)^{s/r}\le
+w_1x_1^s+w_2x_2^s+\cdots+w_nx_n^s
+$$
+with equality if and only if $x_1=x_2=\cdots=x_n$.  Since $s$ is
+positive, the function $x\mapsto x^{1/s}$ is strictly increasing, so
+raising both sides to the power $1/s$ preserves the inequality:
+$$
+(w_1x_1^r+w_2x_2^r+\cdots+w_nx_n^r)^{1/r}\le
+(w_1x_1^s+w_2x_2^s+\cdots+w_nx_n^s)^{1/s},
+$$
+which is the inequality we had to prove.  Equality holds if and only
+if all the $x_i$ are equal.
+
+If $r=0$, the inequality is still correct: $M_w^0$ is defined as
+$\lim_{r\to 0}M_w^r$, and since $M_w^r\le M_w^s$ for all $r<s$ with
+$r\neq 0$, the same holds for the limit $r\to 0$.  The same argument
+shows that the inequality also holds for $s=0$, i.e.\ that
+$M_w^r\le M_w^0$ for all $r<0$.  We conclude that for all real numbers
+$r$ and $s$ such that $r<s$,
+$$
+M_w^r(x_1,x_2,\ldots,x_n)\le M_w^s(x_1,x_2,\ldots,x_n).
+$$
+%%%%%
+%%%%%
+\end{document}

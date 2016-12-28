@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfContractiveSequence}
+\pmcreated{2014-09-22 8:10:59}
+\pmmodified{2014-09-22 8:10:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of contractive sequence}
+\pmrecord{5}{88159}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Define the sequence\, $a_1,a_2,a_3,\ldots$\, by
+\begin{align}
+a_1 := 1, \qquad a_{n+1} := \sqrt{5-2a_n} \quad (n = 1,2,3,\ldots}).
+\end{align}
+We see by induction that the radicand in (1) cannot become 
+negative; in fact we justify that
+\begin{align}
+1 \leqq a_n \leqq \sqrt{3}
+\end{align}
+for every $n$:\,  It's clear when $n = 1$.  If it is true for 
+an $a_n$, it implies that $1 < 5-2a_n \leqq 3$, i.e. 
+$1 < a_{n+1} \leqq \sqrt{3}$.
+
+As for the convergence of the sequence, which is not monotonic, one could think to show that 
+it is a Cauchy sequence.  Unfortunately, it is almost impossible to directly express and 
+estimate the needed absolute value of $a_m-a_n$.  Fortunately, 
+the recursive definition (1) allows quite easily to estimate 
+$|a_n-a_{n+1}|$.\,  Then it turns out that it's a question of a 
+contractive sequence, whence it is by the \PMlinkname{parent entry}{ContractiveSequence} a 
+Cauchy sequence.
+
+We form the difference
+\begin{align*}
+a_n-a_{n+1} &= 
+\frac{(\sqrt{5-2a_{n-1}}-\sqrt{5-2a_n})(\sqrt{5-2a_{n-1}}+\sqrt{5-2a_n})}
+{\sqrt{5-2a_{n-1}}+\sqrt{5-2a_n}}\\
+&= \frac{-2(a_{n-1}-a_n)}{\sqrt{5-2a_{n-1}}+\sqrt{5-2a_n}}
+\end{align*}
+where $n > 1$.\, Thus we can estimate its absolute value, by 
+using (2):
+$$|a_n-a_{n+1}| = 
+\frac{2|a_{n-1}-a_n|}{\sqrt{5-2a_{n-1}}+\sqrt{5-2a_n}} \leqq
+\frac{2|a_{n-1}-a_n|}{\sqrt{5-2\sqrt{3}}+\sqrt{5-2\sqrt{3}}} =
+\frac{|a_{n-1}-a_n|}{\sqrt{5-2\sqrt{3}}}$$
+Since $\frac{1}{\sqrt{5-2\sqrt{3}}} < 1$, our sequence (1) is 
+contractive, consequently Cauchy.\, Therefore it converges to 
+a limit $A$.
+
+We have 
+$$A^2 = \left(\lim_{n \to \infty}a_{n+1}\right)^2 = 
+\lim_{n \to \infty}a_{n+1}^2 = 
+\lim_{n \to \infty}(5-2a_n) = 5-2A.$$
+From the quadratic equation\, $A^2+2A-5 = 0$\, we get the positive 
+root $A = \sqrt{6}-1$. I.e.,
+\begin{align}
+\lim_{n\to\infty}a_n = \sqrt{6}-1.
+\end{align\
+
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuousFunctionsOfSeveralVariablesAreRiemannSummable}
+\pmcreated{2013-03-22 15:07:56}
+\pmmodified{2013-03-22 15:07:56}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{continuous functions of several variables are Riemann summable}
+\pmrecord{9}{36875}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+Continuous functions defined on compact subsets of $\R^n$ are Riemann integrable.
+\end{theorem}
+\begin{proof}
+Let $D\subset \R^n$ be a compact subset of $\R^n$ and let $f\colon D\to \R$ be a continuous function. 
+Since $f$ is defined on a compact set, $f$ is uniformly continuous i.e.\ given $\epsilon>0$ there exists $\delta>0$ such that $|x-y|\le \delta \Rightarrow |f(x)-f(y)|\le \epsilon$. 
+Let $R>0$ be large enough so that $D\subset (-R,R)^n$ (such an $R$ exists because $D$ is bounded).
+Let $P$ be a polyrectangle such that $D\subset \cup P \subset (-R,R)^n$ and such that every rectangle $R$ in $P$ has diameter which is less then $\delta$. So one has $\sup_R f(x)-\inf_R f(x) \le \epsilon$ and hence
+\[
+ S^*(f,P)-S_*(f,P)\le \epsilon \sum_{Q\in P} \mathrm{meas} (Q) \le \epsilon \mathrm{meas}(P) \le \epsilon \mathrm{meas}[-R,R]^n = \epsilon 2^n R^n.
+\]
+Letting $\epsilon\to 0$ one concludes that $S^*(f)=S_*(f)$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

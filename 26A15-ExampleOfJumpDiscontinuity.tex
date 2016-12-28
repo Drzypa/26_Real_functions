@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfJumpDiscontinuity}
+\pmcreated{2013-03-22 16:25:02}
+\pmmodified{2013-03-22 16:25:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of jump discontinuity}
+\pmrecord{16}{38567}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54C05}
+\pmrelated{ExponentialFunction}
+\pmrelated{ImproperLimits}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The \PMlinkname{elementary}{ElementaryFunction} real function
+$$f\colon\,x \mapsto \frac{1}{1+e^\frac{1}{x}}$$
+has a jump discontinuity at the origin, since
+$$\lim_{x\to 0-}f(x) = 1\quad \mathrm{and}\quad \lim_{x\to 0+}f(x) =0.$$
+Indeed, 
+\begin{itemize}
+\item if\, $x \to 0-$,\, then\, $\displaystyle \frac{1}{x} \to -\infty$,\; 
+$\displaystyle e^\frac{1}{x} \to 0$,\; 
+$\displaystyle \frac{1}{1+e^\frac{1}{x}} \to 1$; 
+\item if\, $x \to 0+$,\, then\, $\displaystyle \frac{1}{x} \to \infty$,\; 
+$\displaystyle e^\frac{1}{x} \to \infty$,\; 
+$\displaystyle \frac{1}{1+e^\frac{1}{x}} \to 0$.
+\end{itemize}
+These results can be seen also from the series \PMlinkescapetext{expansions} of the function gotten by performing the divisions:\, for\, $x < 0$\, we obtain the \PMlinkname{converging}{Converge} \PMlinkname{alternating series}{LeibnizEstimateForAlternatingSeries}
+\begin{align*}
+1:(1+e^{\frac{1}{x}}) = \sum_{k=0}^\infty(-1)^ke^{\frac{k}{x}}
+= 1-e^{\frac{1}{x}}+e^{\frac{2}{x}}-e^{\frac{3}{x}}+-\ldots
+\end{align*}
+and for\, $x > 0$\, the series
+\begin{align*}
+1:(e^{\frac{1}{x}}+1) = \sum_{k=1}^\infty(-1)^{k+1}e^{-\frac{k}{x}}
+= e^{-\frac{1}{x}}-e^{-\frac{2}{x}}+e^{-\frac{3}{x}}-+\ldots
+\end{align*}
+
+\textbf{Note.}\, The derivative of the function may be written as 
+$$f'(x) = \frac{1}{x^2(e^{-\frac{1}{x}}+1)(1+e^\frac{1}{x})},$$ 
+and thus we have the one-sided limits\, $\displaystyle \lim_{x\to 0\pm}f'(x) = 0$ (see growth of exponential function).
+
+\begin{figure}[!tb]
+\begin{center}
+\includegraphics{e1xjump.eps}
+\end{center}
+\caption{Graph of the function $f$ with jump discontinuity}
+\end{figure}
+
+%%%%%
+%%%%%
+\end{document}

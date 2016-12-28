@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ShapiroInequality}
+\pmcreated{2013-03-22 13:43:15}
+\pmmodified{2013-03-22 13:43:15}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Shapiro inequality}
+\pmrecord{7}{34404}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D05}
+\pmsynonym{Shapiro's inequality}{ShapiroInequality}
+\pmrelated{NesbittsInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $n$ be a positive integer and let $x_1,\ldots,x_n$ be positive reals.
+If $n$ is even and $n \leq 12$, or $n$ is odd and $n \leq 23$, then
+$$\sum_{i=1}^n \frac{x_i}{x_{i+1}+x_{i+2}} \geq \frac{n}{2},$$
+where the subscripts are to be understood modulo $n$.
+
+The particular case of $n=3$ is also known as Nesbitts inequality.
+%%%%%
+%%%%%
+\end{document}

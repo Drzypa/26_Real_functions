@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AngleMultiplicationAndDivisionFormulaeForTangent}
+\pmcreated{2013-03-22 17:00:15}
+\pmmodified{2013-03-22 17:00:15}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{angle multiplication and division formulae for tangent}
+\pmrecord{8}{39286}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+From the angle addition formula for the tangent, we may derive formulae
+for tangents of multiples of angles:
+
+\begin{align*}
+\tan (2x) &= {2 \tan x \over 1 - \tan^2 x} \\
+\tan (3x) &= {3 \tan x - \tan^3 x \over 1 - 3 \tan^2 x} \\
+\tan (4x) &= {4 \tan x - 3 \tan^3 x \over 1 - 6 \tan^2 x + \tan^4 x}
+\end{align*}
+
+These formulae may be derived from a recursion.  Write $\tan x = w$ and
+write $\tan (nx) = u_n / v_n$ where the $u$'s and the $v$'s are
+polynomials in $w$.  Then we have the initial values $u_1 = w$ and 
+$v_1 = 1$ and the recursions
+\begin{align*}
+u_{n+1} &= u_n + w v_n \\
+v_{n+1} &= v_n - w u_n ,
+\end{align*}
+which follow from the addition formula.  Moreover, if we know the tangent
+of an angle and are interested in finding the tangent of a multiple of
+that angle, we may use our recursions directly without first having to derive 
+the multiple angle formulae.  From these recursions, one may show that the
+$u$'s will only involve odd powers of $w$ and the $v$'s will only involve
+even powers of $w$.
+
+Proceeding in the opposite direction, one may consider bisecting an angle.
+Solving for $\tan x$ in the duplication formula above, one arrives at the
+following half-angle formula:
+\[
+\tan \left( {x \over 2} \right) =
+\sqrt{ 1 + {1 \over \tan^2 x}} - {1 \over \tan x}
+\]
+Expressing the tangent in terms of sines and cosines and simplifying, one 
+finds the following equivalent formulae:
+\[
+\tan \left( {x \over 2} \right) =
+{1 - \cos x \over \sin x} =
+{\sin x \over 1 + \cos x} =
+\pm\sqrt{ 1 - \cos x \over 1 + \cos x }
+\]
+%%%%%
+%%%%%
+\end{document}

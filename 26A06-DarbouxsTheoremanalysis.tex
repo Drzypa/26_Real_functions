@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DarbouxsTheoremanalysis}
+\pmcreated{2013-03-22 12:45:01}
+\pmmodified{2013-03-22 12:45:01}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{Darboux's theorem (analysis)}
+\pmrecord{7}{33055}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{intermediate value property of the derivative}{DarbouxsTheoremanalysis}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\begin{document}
+Let $f:[a,b]\to\Reals$ be a real-valued continuous function on $[a,b]$, which is differentiable on $(a,b)$, differentiable from the right at $a$, and differentiable from the left at $b$.  Then $f'$ \PMlinkescapetext{satisfies} the intermediate value theorem: for every $t$ between $f'_{+}(a)$ and $f'_{-}(b)$, there is some $x\in [a,b]$ such that $f'(x)=t$.
+
+Note that when $f$ is continuously differentiable ($f\in C^1([a,b])$), this is trivially true \emph{by} the intermediate value theorem.  But even when $f'$ is \emph{not} continuous, Darboux's theorem places a severe restriction on what it can be.
+%%%%%
+%%%%%
+\end{document}

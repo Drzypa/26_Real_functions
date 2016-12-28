@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions}
+\pmcreated{2013-03-22 16:13:50}
+\pmmodified{2013-03-22 16:13:50}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{properties of the Lebesgue integral of nonnegative measurable functions}
+\pmrecord{22}{38331}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28A25}
+\pmrelated{PropertiesOfTheLebesgueIntegralOfLebesgueIntegrableFunctions}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{thm*}{Theorem}
+\begin{document}
+\begin{thm*}
+Let $(X, \mathfrak{B}, \mu)$ be a measure space, $f \colon X \to [0,\infty]$ and $g \colon X \to [0,\infty]$ be measurable functions, and $A,B \in \mathfrak{B}$.  Then the following properties hold:
+
+\begin{enumerate}
+\item $\displaystyle \int_A f \, d\mu \ge 0$
+
+\item If $f \le g$, then $\displaystyle \int_A f \, d\mu \le \int_A g \, d\mu$.
+
+\item $\displaystyle \int_A f \, d\mu =\int_X \chi_A f \, d\mu$, where $\chi_A$ denotes the characteristic function of $A$
+
+\item If $A \subseteq B$, then $\displaystyle \int_A f \, d\mu \le \int_B f \, d\mu$.
+
+\item If $c \ge 0$, then $\displaystyle \int_A cf \, d\mu =c\int_A f \, d\mu$.
+
+\item If $\mu(A)=0$, then $\displaystyle \int_A f \, d\mu =0$.
+
+\item $\displaystyle \int_A (f+g) \, d\mu = \int_A f \, d\mu +\int_A g \, d\mu$
+
+\item If $A \cap B=\emptyset$, then $\displaystyle \int_{A \cup B} f \, d\mu =\int_A f \, d\mu +\int_B f \, d\mu$.
+
+\item If $f=g$ almost everywhere with respect to $\mu$, then $\displaystyle \int_A f \, d\mu = \int_A g \, d\mu$.
+\end{enumerate}
+\end{thm*}
+
+\begin{proof}
+
+\begin{enumerate}
+\item Let $s$ be a simple function with $0 \le s \le f$.  Let $\displaystyle s=\sum_{k=1}^n c_k \chi_{A_k}$ for $c_k \in [0,\infty]$ and $A_k \in \mathfrak{B}$.  Then $\displaystyle \int_A s \, d\mu =\sum_{k=1}^n c_k \mu(A \cap A_k) \ge 0$.  By definition, $\displaystyle \int_A f \, d\mu \ge \int_A s \, d\mu$.  It follows that $\displaystyle \int_A f \, d\mu \ge 0$.
+
+\item Let $s$ be a simple function with $0 \le s \le f$.  Since $f \le g$, $0 \le s \le g$.  By definition, $\displaystyle \int_A s \, d\mu \le \int_A g \, d\mu$.  Since this holds for every simple function $s$ with $0 \le s \le f$, it follows that $\displaystyle \int_A f \, d\mu \le \int_A g \, d\mu$.
+
+\item Let $s$ be a simple function with $0 \le s \le f$.  Then $0 \le \chi_As \le \chi_Af$.  Let $\displaystyle s=\sum_{k=1}^n c_k \chi_{A_k}$ for $c_k \in [0,\infty]$ and $A_k \in \mathfrak{B}$.  Then
+
+\begin{center}
+$\begin{array}{ll}
+\displaystyle \int_A s \, d\mu & \displaystyle =\sum_{k=1}^n c_k \mu(A \cap A_k) \\
+\\
+& \displaystyle =\int_X \sum_{k=1}^n c_k \chi_{A \cap A_k} \, d\mu \\
+\\
+& \displaystyle =\int_X \sum_{k=1}^n c_k \chi_A \chi_{A_k} \, d\mu \\
+\\
+& \displaystyle =\int_X \chi_A\sum_{k=1}^n c_k \chi_{A_k} \, d\mu \\
+\\
+& \displaystyle =\int_X \chi_As \, d\mu \\
+\\
+& \displaystyle \le \int_X \chi_Af \, d\mu. \end{array}$
+\end{center}
+
+Thus, $\displaystyle \int_A f \, d\mu \le \int_X \chi_Af \, d\mu$.
+
+Let $t$ be a simple function with $0 \le t \le \chi_Af$.  Then $\chi_At=t$.  Thus, $\displaystyle \int_X t \, d\mu =\int_X \chi_At \, d\mu=\int_A t \, d\mu$.  Therefore, $\displaystyle \int_X \chi_Af \, d\mu =\int_A \chi_Af \, d\mu$.  Since $\chi_Af \le f$, $\displaystyle \int_A \chi_Af \, d\mu \le \int_A f \, d\mu$ by property 2.  Hence, $\displaystyle \int_A f \, d\mu \le \int_X \chi_Af \, d\mu =\int_A \chi_Af \, d\mu \le \int_A f \, d\mu$.  It follows that $\displaystyle \int_A f \, d\mu =\int_X \chi_Af \, d\mu$.
+
+\item Since $A \subseteq B$, $\chi_A \le \chi_B$.  Thus, $\chi_Af \le \chi_Bf$.  By property 2, $\displaystyle \int_X \chi_Af \, d\mu \le \int_X \chi_Bf \, d\mu$.  By property 3, $\displaystyle \int_A f \, d\mu =\int_X \chi_Af \, d\mu \le \int_X \chi_Bf \, d\mu =\int_B f \, d\mu$.
+
+\item If $c=0$, then $\displaystyle \int_A cf \, d\mu =\int_A 0 \, d\mu =0=0 \int_A f \, d\mu =c \int_A f \, d\mu$.
+
+If $c>0$, let $S=\{s \colon X \to [0,\infty] \mid s~\text{is simple and }s \le cf\}$ and 
+
+$T=\{t \colon X \to [0,\infty] \mid t~\text{is simple and }t \le f\}$.  Then $\displaystyle \int_A cf \, d\mu =\sup_{s \in S} \int_A s \, d\mu =\sup_{s \in S} \int_A c \cdot \frac{s}{c} \, d\mu =c\sup_{s \in S} \int_A \frac{s}{c} \, d\mu =c\sup_{t \in T} \int_A t \, d\mu =c \int_A f \, d\mu$.
+
+\item Let $s$ be a simple function with $0 \le s \le f$.  Let $\displaystyle s=\sum_{k=1}^n c_k \chi_{A_k}$ for $c_k \in [0,\infty]$ and $A_k \in \mathfrak{B}$.  Then $\displaystyle \int_A s \, d\mu =\sum_{k=1}^n c_k \mu(A \cap A_k)=\sum_{k=1}^n c_k \cdot 0=0$.  Thus, $\displaystyle \int_A f \, d\mu=0$.
+
+\item Let $\{s_n\}$ be a nondecreasing sequence of nonnegative simple functions converging pointwise to $f$ and $\{t_n\}$ be a nondecreasing sequence of nonnegative simple functions converging pointwise to $g$.  Then $\{s_n+t_n\}$ is a nondecreasing sequence of nonnegative simple functions converging pointwise to $f+g$.  Note that, for every $n$, $\displaystyle \int_A (s_n+t_n) \, d\mu =\int_A s_n \, d\mu +\int_A t_n \, d\mu$.  By Lebesgue's monotone convergence theorem, $\displaystyle \int_A (f+g) \, d\mu =\int_A f \, d\mu +\int_A g \, d\mu$.
+
+\item
+
+\vspace{1mm}
+
+\begin{center}
+$\begin{array}{ll}
+\displaystyle \int_{A \cup B} f \, d\mu & \displaystyle =\int_X \chi_{A \cup B}f \, d\mu \\
+\\
+& \displaystyle =\int_X \left( \chi_A+\chi_B-\chi_{A \cap B} \right)f \, d\mu \\
+\\
+& \displaystyle =\int_X \left( \chi_A+\chi_B-\chi_{\emptyset} \right)f \, d\mu \\
+\\
+& \displaystyle =\int_X \left( \chi_A+\chi_B-0 \right)f \, d\mu \\
+\\
+& \displaystyle =\int_X \left( \chi_Af+\chi_Bf \right) \, d\mu \\
+\\
+& \displaystyle =\int_X \chi_Af \, d\mu +\int_X \chi_Bf \, d\mu \\
+\\
+& \displaystyle =\int_A f \, d\mu +\int_B f \, d\mu \end{array}$
+\end{center}
+
+\item Let $E=\{x \in A:f(x)=g(x)\}$.  Since $f$ and $g$ are measurable functions and $A \in \mathfrak{B}$, it must be the case that $E \in \mathfrak{B}$.  Thus, $A \setminus E \in \mathfrak{B}$.  By hypothesis, $\mu(A \setminus E)=0$.  Note that $E \cap (A \setminus E)=\emptyset$ and $E \cup (A \setminus E)=A$.  Thus, $\displaystyle \int_A f \, d\mu =\int_E f \, d\mu +\int_{A \setminus E} f \, d\mu =\int_E f \, d\mu +0=\int_E g \, d\mu +0=\int_E g \, d\mu +\int_{A \setminus E} g \, d\mu =\int_A g \, d\mu$.
+
+\end{enumerate}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

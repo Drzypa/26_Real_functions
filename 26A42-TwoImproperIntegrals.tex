@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TwoImproperIntegrals}
+\pmcreated{2013-03-22 18:43:11}
+\pmmodified{2013-03-22 18:43:11}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{two improper integrals}
+\pmrecord{6}{41487}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A03}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let us consider first the improper integral
+$$I(k) \;:=\; \int_0^\infty\frac{1-\cos{kx}}{x^2}\,dx.$$
+The derivative $I'(k)$ may be formed by \PMlinkname{differentiating under the integral sign}{DifferentiationUnderIntegralSign}:
+$$I'(k) \;=\; \int_0^\infty\left(\frac{\partial}{\partial k}\frac{1-\cos{kx}}{x^2}\right) dx 
+\;=\; \int_0^\infty\frac{\sin{kx}}{x}\,dx \;=\; \int_0^\infty\frac{\sin{t}}{t}\,dt$$
+Here, the last form has been gotten by the \PMlinkname{substitution}{ChangeOfVariableInDefiniteIntegral} \,$kx = t$.\, 
+But since by the \PMlinkname{parent entry}{SineIntegralInInfinity} we have
+$$\int_0^\infty\frac{\sin{t}}{t}\,dt \;=\; \frac{\pi}{2}$$
+and since\, $I(0) = 0$, we can write
+$$I(k) \;=\; \int_0^k\frac{\pi}{2}\, dk \;=\; \frac{\pi k}{2}.$$
+Thus we have evaluated the integral $I(k)$:
+\begin{align}
+\int_0^\infty\frac{1-\cos{kx}}{x^2}\,dx \;=\; \frac{\pi k}{2}.
+\end{align}
+
+
+The formula (1) gives
+$$I(1) \;=\; \int_0^\infty\frac{1-\cos{x}}{x^2}\,dx \;=\; \frac{\pi}{2}.$$
+We use here the consequence formula
+$$1-\cos{x} \;=\; 2\sin^2{\frac{x}{2}}$$
+of the double angle formula \,$\cos{2\alpha} = 1-2\sin^2{\alpha}$,\, obtaining
+$$\frac{\pi}{2} \;=\; 2\int_0^\infty\frac{\sin^2\frac{x}{2}}{x^2}\,dx
+\;=\; \int_0^\infty\frac{\sin^2{u}}{u^2}\, du,$$
+where the substitution \,$\frac{x}{2} = u$\, has produced the last form.\, Accordingly, we can write as result the formula
+\begin{align}
+\int_0^\infty\!\left(\!\frac{\sin{x}}{x}\!\right)^2 dx \;=\; \frac{\pi}{2}.
+\end{align}
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

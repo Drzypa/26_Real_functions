@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaussGreenTheorem}
+\pmcreated{2013-03-22 15:01:51}
+\pmmodified{2013-03-22 15:01:51}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{Gauss Green theorem}
+\pmrecord{13}{36741}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B20}
+\pmsynonym{divergence theorem}{GaussGreenTheorem}
+\pmrelated{GreensTheorem}
+\pmrelated{GeneralStokesTheorem}
+\pmrelated{IntegrationWithRespectToSurfaceArea}
+\pmrelated{ClassicalStokesTheorem}
+\pmrelated{FluxOfVectorField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\R}{\mathbf R}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}[Gauss-Green]
+Let $\Omega\subset \R^n$ be a bounded open set with $C^1$ boundary, let $\nu_\Omega\colon \partial \Omega\to \R^n$ be the exterior unit normal vector to $\Omega$ in the point $x$ and let $f\colon \overline{\Omega}\to \R^n$ be a vector function in $C^0(\overline\Omega,\R^n)\cap C^1(\Omega,\R^n)$. Then
+\[
+  \int_\Omega \mathrm{div} f(x)\, dx 
+   =\int_{\partial \Omega} \langle f(x),\nu_\Omega(x)\rangle \, d\sigma(x).
+\]
+\end{theorem}
+
+Some remarks on notation.
+The operator $\mathrm{div} f$ is the divergence of the vector field $f$, which is sometimes written as $\nabla \cdot f$.
+In the right-hand side we have a surface integral, $d\sigma$ is the corresponding area measure on $\partial \Omega$.
+The scalar product in the second integral is sometimes written as $f_n(x)$
+and represents the \emph{normal component} of $f$ with respect to $\partial \Omega$; hence the whole integral represents the \emph{flux} of the vector field $f$ through $\partial \Omega$;
+
+This theorem can be easily extended to \emph{piecewise} regular domains. 
+However the more general statement of this Theorem involves the theory of \emph{perimeters} and $BV$ functions.
+\begin{theorem}[generalized Gauss-Green]
+Let $E\subset \R^n$ be any measurable set.
+Then 
+\[
+  \int_E \mathrm{div} f(x)\, dx
+  = \int_{\partial^* E} \langle \nu_E(x),f(x)\rangle \,d\mathcal H^{n-1}(x)
+\]
+holds for every continuously differentiable function $f\colon \R^n\to\R^n$ with compact support (i.e.\ $f\in\mathcal C^1_c(\R^n,\R^n)$) where
+\begin{itemize}
+\item
+$\partial^* E$ is the \emph{essential boundary} of $E$ which is a subset of the topological boundary $\partial E$;
+\item $\nu_E(x)$ is the exterior normal vector to $E$, which is defined when $x\in\mathcal F E$;
+\item $\mathcal H^{n-1}$ is the $(n-1)$-dimensional Hausdorff measure.
+\end{itemize}
+\end{theorem}
+%%%%%
+%%%%%
+\end{document}

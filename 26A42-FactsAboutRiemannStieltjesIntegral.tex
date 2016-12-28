@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FactsAboutRiemannStieltjesIntegral}
+\pmcreated{2013-03-22 18:55:03}
+\pmmodified{2013-03-22 18:55:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{facts about Riemann--Stieltjes integral}
+\pmrecord{5}{41767}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmsynonym{properties of Riemann--Stieltjes integral}{FactsAboutRiemannStieltjesIntegral}
+%\pmkeywords{Riemann Stieltjes integral}
+\pmrelated{PropertiesOfRiemannStieltjesIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\begin{itemize}
+
+\item If the integrator $g$ of the \PMlinkid{Riemann--Stieltjes integral}{3187}\, $\int_a^bf(x)\,dg(x)$ is the identity function, then the integral reduces to the Riemann integral $\int_a^bf(x)\,dx$.
+
+\item If the integrand of the Riemann--Stieltjes integral is a constant function, one has
+$$\int_a^b\!c\,dg(x) \;=\; c\!\cdot\!(g(b)\!-\!g(a)).$$
+
+\item If the integrand $f$ is continuous and the integrator $g$ monotonically nondecreasing on the interval \,$[a,\,b]$,\, then there exists a number $\xi$ on the interval such that
+$$\int_a^b\!f(x)\,dg(x) \;=\; f(\xi)(g(b)\!-\!g(a)).$$
+Cf. the integral mean value theorem.
+
+\item If $f$ is continuous, $g$ monotonically nondecreasing and differentiable on the interval \,$[a,\,b]$,\, then
+$$\frac{d}{dx}\int_a^x\!f(t)\,dg(t) \;=\; f(x)g'(x) \quad \mbox{for\;\;} a < x < b.$$
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

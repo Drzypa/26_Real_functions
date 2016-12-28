@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Continuous}
+\pmcreated{2013-03-22 11:51:55}
+\pmmodified{2013-03-22 11:51:55}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{continuous}
+\pmrecord{12}{30439}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54C05}
+\pmclassification{msc}{81-00}
+\pmclassification{msc}{82-00}
+\pmclassification{msc}{83-00}
+\pmclassification{msc}{46L05}
+\pmsynonym{continuous function}{Continuous}
+\pmsynonym{continuous map}{Continuous}
+\pmsynonym{continuous mapping}{Continuous}
+\pmrelated{Limit}
+\pmdefines{continuous at}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+Let $X$ and $Y$ be topological spaces. A function $f\colon X \to Y$ is {\em continuous} if, for every open set $U \subset Y$, the inverse image $f^{-1}(U)$ is an open subset of $X$.
+
+In the case where $X$ and $Y$ are metric spaces (e.g. Euclidean space, or the space of real numbers), a function $f\colon X \to Y$ is continuous if and only if for every $x \in X$ and every real number $\epsilon > 0$, there exists a real number $\delta > 0$ such that whenever a point $z \in X$ has distance less than $\delta$ to $x$, the point $f(z) \in Y$ has distance less than $\epsilon$ to $f(x)$.
+
+{\bf Continuity at a point}
+
+A related notion is that of local continuity, or continuity at a point (as opposed  to the whole space $X$ at once). When $X$ and $Y$ are topological spaces, we say $f$ is {\em continuous at a point} $x \in X$ if, for every open subset $V \subset Y$ containing $f(x)$, there is an open subset $U \subset X$ containing $x$ whose image $f(U)$ is contained in $V$. Of course, the function $f\colon X \to Y$ is continuous in the first sense if and only if $f$ is continuous at every point $x \in X$ in the second sense (for students who haven't seen this before, proving it is a worthwhile exercise).
+
+In the common case where $X$ and $Y$ are metric spaces (e.g., Euclidean spaces), a function $f$ is continuous at $x \in X$ if and only if for every real number $\epsilon > 0$, there exists a real number $\delta > 0$ satisfying the property that $d_Y(f(x),f(z)) < \epsilon$ for all $z \in X$ with $d_X(x,z) < \delta$.
+Alternatively, the function $f$ is continuous at $a \in X$ if and only if the limit of $f(x)$ as $x \to a$ satisfies the equation
+$$
+\lim_{x \to a} f(x) = f(a).
+$$
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

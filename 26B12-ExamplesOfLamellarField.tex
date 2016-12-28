@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfLamellarField}
+\pmcreated{2013-03-22 17:39:25}
+\pmmodified{2013-03-22 17:39:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{examples of lamellar field}
+\pmrecord{13}{40090}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{example of scalar potential}{ExamplesOfLamellarField}
+\pmsynonym{determining the scalar potential}{ExamplesOfLamellarField}
+\pmrelated{Curl}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+In the examples that follow, show that the given vector field $\vec{U}$ is lamellar everywhere in $\mathbb{R}^3$  and determine its scalar potential $u$.\\
+
+\textbf{Example 1.}\, Given 
+\begin{align*}
+\vec{U} \,:=\, y\,\vec{i}+(x+\sin{z})\,\vec{j}+y\cos{z}\,\vec{k}.
+\end{align*}
+For the \PMlinkname{rotor}{NablaNabla} (curl) of the \PMlinkescapetext{field} we obtain
+$\displaystyle\nabla\!\times\!\vec{U} =   \left|\begin{matrix}
+\vec{i} & \vec{j} & \vec{k}\\
+\frac{\partial}{\partial{x}} & \frac{\partial}{\partial{y}} & \frac{\partial}{\partial{z}}\\
+y & x\!+\!\sin{z} & y\cos{z} 
+\end{matrix}\right| \\= 
+\left(\frac{\partial(y\cos{z})}{\partial{y}}-\frac{\partial(x\!+\!\sin{z})}{\partial{z}}\right)\vec{i}
+ +\left(\frac{\partial{y}}{\partial{z}}-\frac{\partial(y\cos{z})}{\partial{x}}\right)\vec{j}
+ +\left(\frac{\partial(x\!+\!\sin{z})}{\partial{x}}-\frac{\partial{y}}{\partial{y}}\right)\vec{k}$,\\
+which is identically $\vec{0}$ for all $x$, $y$, $z$.\, Thus, by the definition given in the  \PMlinkname{parent}{LaminarField} entry,  $\vec{U}$ is lamellar.\\
+Since \,$\nabla{u} = \vec{U}$,\, the scalar potential \,$u = u(x,\,y,\,z)$\, must satisfy the conditions
+$$\frac{\partial{u}}{\partial{x}} = y,\quad \frac{\partial{u}}{\partial{y}} = x\!+\!\sin{z},\quad \frac{\partial
+{u}}{\partial{z}} = y\cos{z}.$$
+Thus we can write
+$$u = \int y\,dx = xy+C_1,$$
+where $C_1$ may depend on $y$ or $z$.  Differentiating this result with respect to $y$ and comparing to the second 
+condition, we get
+$$\frac{\partial{u}}{\partial{y}} = x+\frac{\partial{C_1}}{\partial{y}} = x+\sin{z}.$$
+Accordingly,
+$$C_1 = \int\sin{z}\,dy = y\sin{z}+C_2,$$
+where $C_2$ may depend on $z$.\, So 
+$$u = xy+y\sin{z}+C_2.$$
+Differentiating this result with respect to $z$ and comparing to the third condition yields
+$$\frac{\partial{u}}{\partial{z}} \,=\, y\cos{z}+\frac{\partial{C_2}}{\partial{z}} \,=\, y\cos{z}.$$
+This means that $C_2$ is an arbitrary \PMlinkescapetext{constant}.  Thus the form
+$$u = xy+y\sin{z}+C$$
+expresses the required potential function.\\
+
+\textbf{Example 2.}\, This is a particular case in $\mathbb{R}^2$:
+\begin{align*}
+\vec{U}(x,\,y,\,0) \,:=\, \omega y \,\vec{i}+ \omega x \,\vec{j}, \quad \omega = \mbox{constant}
+\end{align*}
+Now,\; $\displaystyle\nabla\!\times\!\vec{U} = \left|\begin{matrix}
+\vec{i} & \vec{j} & \vec{k}\\
+\frac{\partial}{\partial{x}} & \frac{\partial}{\partial{y}} & \frac{\partial}{\partial{z}}\\
+\omega y & \omega x & 0
+\end{matrix}\right| = 
+\left(\frac{\partial(\omega x)}{\partial{x}}-\frac{\partial(\omega y)}{\partial{y}}\right)\vec{k}=\vec{0}$,\, and so $\vec{U}$ is lamellar.
+
+Therefore there exists a potential \PMlinkescapetext{field} $u$ with\, $\vec{U}=\nabla{u}$.\, We deduce successively:
+$$\frac{\partial{u}}{\partial{x}} = \omega y; \;\; u(x,y,0) = 
+\omega xy+f(y); \;\; \frac{\partial{u}}{\partial{y}}=
+\omega x+f'(y)\equiv \omega x; \;\; f'(y)=0; \;\; f(y)=C$$
+Thus we get the result
+$$u(x,\,y,\,0) = \omega xy+C,$$
+which corresponds to a particular case in $\mathbb{R}^2$.\\
+
+\textbf{Example 3.}\, Given
+\begin{align*}
+\vec{U} \,:=\, ax\vec{i}+by\vec{j}-(a+b)z)\vec{k}.
+\end{align*}
+The rotor is now\, $\displaystyle\nabla\!\times\!\vec{U} =   
+\left|\begin{matrix}
+\vec{i} & \vec{j} & \vec{k}\\
+\frac{\partial}{\partial{x}} & \frac{\partial}{\partial{y}} & \frac{\partial}{\partial{z}}\\
+ax & by & -(a+b)z
+\end{matrix}\right|= \vec{0}.$\; From\, $\nabla u=\vec{U}$\, we obtain
+$$\frac{\partial u}{\partial x} = ax \; \implies \; u = \frac{ax^2}{2}+f(y,z) \quad(1)$$
+$$\frac{\partial u}{\partial y} = by \; \implies \; u = \frac{by^2}{2}+g(z,x) \quad(2)$$
+$$\frac{\partial u}{\partial z} = -(a+b)z \; \implies \;u = -(a+b)\frac{z^2}{2}+h(x,y) \quad(3)$$ 
+Differentiating (1) and (2) with respect to $z$ and using (3) give
+$$-(a+b)z = \frac{\partial f(y,z)}{\partial z} \; \implies \; f(y,z) = -(a+b)\frac{z^2}{2}+F(y) \quad(1');$$
+$$-(a+b)z=\frac{\partial g(z,x)}{\partial z} \; \implies \; g(z,x) = -(a+b)\frac{z^2}{2}+G(x) \quad (2').$$
+We substitute $(1')$ and $(2')$ again into (1) and (2) and deduce as follows:
+$$u = \frac{ax^2}{2}-(a+b)\frac{z^2}{2}+F(y); \;\; \frac{\partial u}{\partial y} = F'(y) = by;
+\;\; F(y) = \frac{by^2}{2}+C_1; \;\; f(y,z) = \frac{by^2}{2}-(a+b)\frac{z^2}{2}+C_1 \quad (1'');$$
+$$u = \frac{by^2}{2}-(a+b)\frac{z^2}{2}+G(x); \;\; \frac{\partial u}{\partial x} = G'(x) = ax;
+\;\; G(x) = \frac{ax^2}{2}+C_2; \;\; g(z,x) = \frac{ax^2}{2}-(a+b)\frac{z^2}{2}+C_2\quad (2'');$$
+putting $(1'')$, $(2'')$ into (1), (2) then gives us
+$$u = \frac{ax^2}{2}+\frac{by^2}{2}-(a+b)\frac{z^2}{2}+C_1, \quad 
+  u = \frac{ax^2}{2}+\frac{by^2}{2}-(a+b)\frac{z^2}{2}+C_2,$$
+whence, by comparing,\, $C_1 = C_2 = C$,\, so that by (3), the expression $h(x,y)$ and $u$ itself have been found, that is,
+$$u = \frac{ax^2}{2}+\frac{by^2}{2}-(a+b)\frac{z^2}{2}+C.$$
+
+Unlike Example 1, the last two examples are also solenoidal, i.e.\, $\nabla\cdot\vec{U}=0$,\, which physically may be interpreted as the continuity equation of an incompressible fluid flow.\\
+
+\textbf{Example 4.}\, An additional example of a lamellar field would be
+$$\vec{U} \,:=\, -\frac{ay}{x^2+y^2}\vec{i}+\frac{ax}{x^2+y^2}\vec{j}+v(z)\vec{k}$$
+with a differentiable function \,$v:\mathbb{R}\to\mathbb{R}$;\, if $v$ is a constant, then $\vec{U}$ is also solenoidal.
+
+
+
+
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpeediestInclinedPlane}
+\pmcreated{2013-03-22 19:19:11}
+\pmmodified{2013-03-22 19:19:11}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{speediest inclined plane}
+\pmrecord{9}{42258}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26A06}
+\pmrelated{Extremum}
+\pmrelated{CalculusOfVariations}
+\pmrelated{BrachistochroneCurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We set the problem, how great must be the difference in altitude of the top and the bottom of an inclined plane in \PMlinkescapetext{order} that a little ball would frictionlessly roll the whole length of the plane as soon as possible 
+(cf. the \PMlinkname{brachistochrone problem}{CalculusOfVariations}).\, It is assumed that the \PMlinkid{projection}{9475} of the length on a horizontal plane has a given value $b$.
+\begin{center}
+\begin{pspicture}(-3,-1)(3,3)
+\psline[linewidth=0.05,linecolor=green](-2.5,0)(2,0)
+\psline(-2.5,0)(2,0)(2,2.5)
+\psline[linecolor=blue](2,2.5)(-2.5,0)
+\psarc(-2.5,0){0.4}{0}{32}
+\psline(1.8,0)(1.8,0.2)(2,0.2)
+\rput(-1.9,0.15){$\alpha$}
+\rput(0,-0.2){$b$}
+\rput(2.2,1.25){$x$}
+\rput(-1,1.4){$\sqrt{x^2\!+\!b^2}$}
+\psdot[linewidth=0.1,linecolor=red](1.96,2.6)
+\rput(-3,-1){.}
+\rput(3,3){.}
+\end{pspicture}
+\end{center}
+
+Using notations of mechanics, we can write
+$$F \;=\; ma \;=\; mg\sin\alpha \;=\; m\frac{gx}{\sqrt{x^2\!+\!b^2}},$$
+$$\sqrt{x^2\!+\!b^2} \;=\; s \;=\; \frac{1}{2}t^2a 
+    \;=\; \frac{t^2}{2}\!\cdot\!\frac{gx}{\sqrt{x^2\!+\!b^2}}.$$
+Thus we get the function
+$$t^2 \;=\; \frac{2}{g}\!\cdot\!\frac{x^2\!+\!b^2}{x} \;=:\; f(x) \qquad(x > 0),$$
+the absolute minimum point of which is to be found.\, This function is differentiable, and its derivative is
+$$f'(x) \;=\; \frac{2}{g}\!\cdot\!\frac{x^2\!-\!b^2}{x^2}.$$
+The only zero of $f'(x)$ is\, $x = b$,\, where the sign changes from minus to plus as $x$ increases.\, It means that\, $x = b$\, is the searched minimum point.\, The difference in altitude is thus equal to the \PMlinkid{base}{11642}, and the inclination $\alpha$ must be $45^\circ$.
+%%%%%
+%%%%%
+\end{document}

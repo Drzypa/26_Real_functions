@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApplicationOfFundamentalTheoremOfIntegralCalculus}
+\pmcreated{2013-03-22 18:50:52}
+\pmmodified{2013-03-22 18:50:52}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{application of fundamental theorem of integral calculus}
+\pmrecord{6}{41656}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{TrigonometricFormulasFromSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We will derive the addition formulas of the sine and the cosine functions supposing known only their derivatives and the chain rule.\\
+
+Define the function \,$F:\,\mathbb{R} \to \mathbb{R}$\, through
+$$F(x) \;:=\; 
+[\sin{x}\cos\alpha+\cos{x}\sin\alpha-\sin(x\!+\!\alpha)]^2+[\cos{x}\cos\alpha-\sin{x}\sin\alpha-\cos(x\!+\!\alpha)]^2$$
+where $\alpha$ is, for the \PMlinkescapetext{moment}, a constant.\, The derivative of $F$ is easily calculated:\\
+$F'(x) \;=\;\\
+\mbox{\;\;}2[\sin{x}\cos\alpha+\cos{x}\sin\alpha-\sin(x\!+\!\alpha)][\cos{x}\cos\alpha-\sin{x}\sin\alpha-\cos(x\!+\!\alpha)]\\
++2[\cos{x}\cos\alpha-\sin{x}\sin\alpha-\cos(x\!+\!\alpha)][-\sin{x}\cos\alpha-\cos{x}\sin\alpha+\sin(x\!+\!\alpha)]$
+
+
+But this expression is identically 0.\, By the fundamental theorem of integral calculus, $F$ must be a constant function.\, Since\, $F(0) = 0$,\, we have
+$$F(x) \;\equiv\; 0$$
+for any $x$ and naturally also for any $\alpha$.\, Because $F(x)$ is a sum of two squares, the both addends of it have to vanish identically, which yields the equalities
+$$\sin{x}\cos\alpha+\cos{x}\sin\alpha-\sin(x\!+\!\alpha) \;=\; 0, \qquad
+  \cos{x}\cos\alpha-\sin{x}\sin\alpha-\cos(x\!+\!\alpha) \;=\; 0.$$
+These \PMlinkescapetext{contain} the \PMlinkname{addition formulas}{GoniometricFormulae}
+$$\sin(x\!+\!\alpha) \;=\; \sin{x}\cos\alpha+\cos{x}\sin\alpha,$$
+$$\cos(x\!+\!\alpha) \;=\; \cos{x}\cos\alpha-\sin{x}\sin\alpha.$$
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompositionOfContinuousMappingsIsContinuous}
+\pmcreated{2013-03-22 15:16:52}
+\pmmodified{2013-03-22 15:16:52}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{composition of continuous mappings is continuous}
+\pmrecord{8}{37070}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm} The composition of two continuous mappings (when 
+defined) is continuous.
+\end{thm}
+
+\begin{proof} Let $X,Y,Z$ be topological space, and let $f,g$ be
+mappings
+\begin{eqnarray*}
+   f\colon X&\to& Y, \\
+   g\colon Y&\to& Z.
+\end{eqnarray*}
+We wish to prove that $g\circ f$ is continuous. Suppose $B$ is 
+an open set in $Z$. 
+  Since $g$ is continuous, $g^{-1}(B)$ is an open set in $Y$,
+and
+  since $f$ is continuous, $f^{-1}(g^{-1}(B))$ is an open set in $X$.
+Since $f^{-1}(g^{-1}(B))=(g\circ f)^{-1}(B)$, it follows 
+   that $(g\circ f)^{-1}(B)$ is open and the composition if continuous.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

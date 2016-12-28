@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ElementaryFunction}
+\pmcreated{2013-03-22 14:46:29}
+\pmmodified{2013-03-22 14:46:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{elementary function}
+\pmrecord{18}{36420}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A99}
+\pmrelated{RiemannZetaFunction}
+\pmrelated{LogarithmicIntegral}
+\pmrelated{AlgebraicFunction}
+\pmrelated{TableOfMittagLefflerPartialFractionExpansions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Li}{Li}
+\begin{document}
+An {\em elementary function} is a real function (of one variable) that can be constructed by a finite number of elementary operations (addition, subtraction, multiplication and division) and compositions from constant functions, the identity function ($x \mapsto x$), algebraic functions, exponential functions, logarithm functions, trigonometric functions and cyclometric functions.
+
+\textbf{Examples}
+\begin{itemize}
+ \item Consequently, the polynomial functions, the absolute value\, $|x| = \sqrt{x^2}$,\, the triangular-wave function\, $\arcsin(\sin{x})$, the power function\, $x^{\pi} = e^{\pi\ln{x}}$\, and the function\, $x^x = e^{x\ln{x}}$\, are elementary functions (N.B., the real power functions entail that\, $x > 0$).
+ \item $\displaystyle\zeta(x) := \sum_{n = 1}^{\infty}\frac{1}{n^x}$\, and\, $\displaystyle\Li{x} := \int_2^{x}\frac{dt}{\ln{t}}$\, are not elementary functions --- it may be shown that they can not be expressed is such a way which is required in the definition.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

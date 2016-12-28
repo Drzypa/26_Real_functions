@@ -1,0 +1,236 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfIntegrals}
+\pmcreated{2013-03-22 17:34:44}
+\pmmodified{2013-03-22 17:34:44}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{table of integrals}
+\pmrecord{42}{39991}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmrelated{TableOfDerivatives}
+\pmrelated{ASpecialCaseOfPartialIntegration}
+\pmrelated{GeneralFormulasForIntegration}
+\pmrelated{AreaFunctions}
+\pmrelated{TableOfLaplaceTransforms}
+\pmrelated{ReductionFormulasForIntegrationOfPowers}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+
+\theoremstyle{definition}
+\newtheorem{rem}{Remark}
+
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand{\arccot}{\operatorname{arccot}}
+\newcommand{\arcsec}{\operatorname{arcsec}}
+\newcommand{\arsinh}{\operatorname{arsinh}}
+\newcommand{\arcosh}{\operatorname{arcosh}}
+\newcommand{\Li}{\operatorname{Li}}
+\begin{document}
+\PMlinkescapeword{mode}
+\PMlinkescapeword{open}
+\PMlinkescapeword{line}
+\PMlinkescapeword{lines}
+\PMlinkescapeword{code}
+
+Below are some tables of some real-valued functions and their corresponding indefinite integrals.
+
+\subsubsection*{\PMlinkname{Polynomials}{Polynomial} and powers}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline\hline
+$f(x)$ & $\displaystyle{\int f(x)\, dx}$ & derivation \\
+\hline\hline
+$x^n$\, for $n\ne -1$ & $\displaystyle{\frac{x^{n+1}}{n\!+\!1}}+C$ & \PMlinkname{here}{DerivativeOfXn} \\
+\hline
+$x^{-1}$ & $\ln|x|+C$ & \\
+\hline
+$|x|^n$\, for $n\ne -1$ & $\displaystyle\frac{x|x|^n}{n\!+\!1}+C$ & \\
+\hline
+$|x|^{-1}$ & $\displaystyle\frac{x\ln|x|}{|x|}+C$ & \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Exponential and logarithmic functions}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline\hline
+$f(x)$ & $\displaystyle{\int f(x)\, dx}$ & derivation \\
+\hline\hline
+$e^x$ & $e^x+C$ & \\
+\hline
+$e^{kx}$\, for $k\neq 0$ & $\displaystyle\frac{e^{kx}}{k}+C$ & \\
+\hline
+$a^x$\, for $a>0$ & $\displaystyle\frac{a^x}{\ln{a}}+C$ & \\
+\hline
+$\ln{x}$ & $x\ln{x}-x+C$ & \PMlinkname{here}{ASpecialCaseOfPartialIntegration}\\
+\hline
+$(\ln{x})^2$ & $x[(\ln{x})^2-2\ln{x}+2]+C$ & \PMlinkname{here}{ASpecialCaseOfPartialIntegration}\\
+\hline
+$\displaystyle\frac{1}{\ln{x}}$ & $\Li{x}+C$ & Li \\
+\hline
+$\ln(\ln{x})$ & $x\ln\ln{x}-\Li{x}+C$ & \PMlinkname{here}{ASpecialCaseOfPartialIntegration}\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{\PMlinkname{Trigonometric functions}{Trigonometry}}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline\hline
+$f(x)$ & $\displaystyle{\int f(x)\, dx}$ & derivation \\
+\hline\hline
+$\cos{x}$ & $\sin{x}+C$ & \\
+\hline 
+$\sin{x}$ & $-\cos{x}+C$ & \PMlinkname{here}{DerivativesOfSinXAndCosX}\\
+\hline
+$\cot{x}$ & $\ln|\sin{x}|+C$ & \\
+\hline
+$\tan{x}$ & $-\ln|\cos{x}|+C$ & \\
+\hline
+$\sec{x}$ & $\ln|\sec{x}+\tan{x}|+C$ & \\
+\hline
+$\csc{x}$ & $-\ln|\csc{x}+\cot{x}|+C$ & \PMlinkname{here}{IntegrationOfRationalFunctionOfSineAndCosine}\\
+\hline
+$\displaystyle\frac{1}{\sin{x}}$ & $\displaystyle\ln\left|\tan\frac{x}{2}\right|+C$ & 
+\PMlinkname{here}{IntegrationOfRationalFunctionOfSineAndCosine}\\
+\hline
+$\sec^2{x}$ & $\tan{x}+C$ & \\
+\hline
+$\csc^2{x}$ & $-\cot{x}+C$ & \\
+\hline
+$\sec{x}\tan{x}$ & $\sec{x}+C$ & \\
+\hline
+$\csc{x}\cot{x}$ & $-\csc{x}+C$ & \\
+\hline
+$\displaystyle\frac{1}{1+x^2}$ & $\arctan{x}+C$ & \PMlinkname{here}{DerivativeOfInverseFunction}\\
+\hline
+$\displaystyle\frac{1}{\sqrt{1-x^2}}$ & $\arcsin{x}+C$ & \PMlinkname{here}{DerivativeOfInverseFunction}\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{\PMlinkname{Hyperbolic functions}{HyperbolicFunctions}}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline\hline
+$f(x)$ & $\displaystyle{\int f(x)\, dx}$ & derivation \\
+\hline\hline
+$\cosh{x}$ & $\sinh{x}+C$ & \PMlinkname{here}{DerivativesOfHyperbolicFunctions}\\
+\hline
+$\sinh{x}$ & $\cosh{x}+C$ & \PMlinkname{here}{DerivativesOfHyperbolicFunctions}\\
+\hline
+$\tanh{x}$ & $\ln(\cosh{x})+C$ & \\
+\hline
+$\coth{x}$ & $\ln|\sinh{x}|+C$ & \\
+\hline
+$\sech^2{x}$ & $\tanh{x}+C$ & \\
+\hline
+$\csch^2{x}$ & $-\coth{x}+C$ & \\
+\hline
+$\sech{x}\tanh{x}$ & $-\sech{x}+C$ & \\
+\hline
+$\csch{x}\coth{x}$ & $-\csch{x}+C$ & \\
+\hline
+% add your function here & add its integral here \\
+% \hline 
+\end{tabular}
+\end{center}
+
+\subsubsection*{\PMlinkname{Cyclometric functions}{CyclometricFunctions}}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline\hline
+$f(x)$ & $\displaystyle{\int f(x)\, dx}$ & derivation \\
+\hline\hline
+$\arccos{x}$ & $x\arccos{x}-\sqrt{1-x^2}+C$ & \\
+\hline
+$\arcsin{x}$ & $x\arcsin{x}+\sqrt{1-x^2}+C$ & \PMlinkname{here}{ASpecialCaseOfPartialIntegration}\\
+\hline
+$\arccot{x}$ & $x\arccot{x}+\ln\sqrt{1+x^2}+C$ & \\
+\hline
+$\arctan{x}$ & $x\arctan{x}-\ln\sqrt{1+x^2}+C$ & \PMlinkname{here}{ASpecialCaseOfPartialIntegration}\\
+\hline
+$\arcsec{x}$ & $x\arcsec{x}-\ln(x+\sqrt{x^2-1})+C$ & \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{Some \PMlinkname{square roots}{SquareRoot}}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline\hline
+$f(x)$ & $\displaystyle{\int f(x)\, dx}$ & derivation \\
+\hline\hline
+$\sqrt{x}$ & $\frac{2}{3}x\sqrt{x}+C$ & \PMlinkname{here}{DerivativeOfXn}\\
+\hline
+$\sqrt{x^2+1}$ & $\displaystyle\frac{x}{2}\sqrt{x^2+1}+\frac{1}{2}\arsinh{x}+C$ & \PMlinkname{here}{IntegrationOfSqrtx21}\\
+\hline
+$\sqrt{x^2-1}$ & $\displaystyle\frac{x}{2}\sqrt{x^2-1}-\frac{1}{2}\arcosh{x}+C$ & \PMlinkname{here}{IntegrationOfSqrtx21}\\
+\hline
+$\displaystyle\frac{1}{\sqrt{x^2+1}}$ & $\arsinh{x}+C$ & \PMlinkname{here}{EulersSubstitutionsForIntegration} \\
+\hline
+$\displaystyle\frac{1}{\sqrt{x^2-1}}$ & $\arcosh{x}+C\;\; (x > 1)$ & \PMlinkname{here}{EulersSubstitutionsForIntegration}\\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\begin{rem}
+$C$ above denotes an arbitrary constant real number; $\Li$ is the logarithmic integral.
+\end{rem}
+
+\begin{rem}
+The antiderivatives may be proven by differentiation; in some cases there are also given a link to a derivation.
+\end{rem}
+
+\begin{rem}
+Note that the table can only be used to compute a definite integral when the integrand is continuous on the domain of integration.  For example, note the following erroneous calculation:
+
+\[
+\int\limits_{-1}^1 |x|^{-1} \, dx=\frac{x\ln|x|}{|x|}\bigg|_{-1}^1=\frac{1\ln|1|}{|1|}-\frac{-1\ln|-1|}{|-1|}=0-0=0
+\]
+
+The above calculation is incorrect since $|x|^{-1}$ is not continuous at $x=0$.
+\end{rem}
+
+\textbf{Instructions on how to add a function and its integral}.  Open the entry in edit mode.  Using the appropriate table for your function (or make a new table if applicable), make a copy of the two lines of comment (starting with \%) in the code (within the tabular environment) and paste it immediately before the comment.  Uncomment the lines (take out the \% symbols) after completing.  Preview before saving the entry.
+%%%%%
+%%%%%
+\end{document}

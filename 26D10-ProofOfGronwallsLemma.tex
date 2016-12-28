@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGronwallsLemma}
+\pmcreated{2013-03-22 13:22:23}
+\pmmodified{2013-03-22 13:22:23}
+\pmowner{jarino}{552}
+\pmmodifier{jarino}{552}
+\pmtitle{proof of Gronwall's lemma}
+\pmrecord{5}{33902}
+\pmprivacy{1}
+\pmauthor{jarino}{552}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The inequality
+\begin{equation}
+\phi(t)\leq K+L\int_{t_0}^t\psi(s)\phi(s)ds
+\label{ineq}
+\end{equation}
+is equivalent to
+\[
+\frac{\phi(t)}{K+L\int_{t_0}^t\psi(s)\phi(s)ds}\leq 1
+\]
+Multiply by $L\psi(t)$ and integrate, giving
+\[
+\int_{t_0}^t \frac{L\psi(s)\phi(s)ds}{K+L\int_{t_0}^s\psi(\tau)\phi(\tau)d\tau}\leq L\int_{t_0}^t \psi(s)ds
+\]
+Thus
+\[
+\ln\left(K+L\int_{t_0}^t\psi(s)\phi(s)ds\right)-\ln K\leq L\int_{t_0}^t \psi(s)ds
+\]
+and finally
+\[
+K+L\int_{t_0}^t\psi(s)\phi(s)ds\leq K\exp\left(L\int_{t_0}^t\psi(s)ds\right)
+\]
+Using (\ref{ineq}) in the left hand side of this inequality gives the result.
+%%%%%
+%%%%%
+\end{document}

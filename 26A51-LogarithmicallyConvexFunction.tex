@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LogarithmicallyConvexFunction}
+\pmcreated{2013-03-22 14:13:33}
+\pmmodified{2013-03-22 14:13:33}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{logarithmically convex function}
+\pmrecord{7}{35664}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A51}
+\pmsynonym{logarithmically convex}{LogarithmicallyConvexFunction}
+\pmsynonym{log-convex function}{LogarithmicallyConvexFunction}
+\pmsynonym{log-convex}{LogarithmicallyConvexFunction}
+\pmsynonym{log convex function}{LogarithmicallyConvexFunction}
+\pmsynonym{log convex}{LogarithmicallyConvexFunction}
+\pmrelated{ConvexFunction}
+\pmrelated{BohrMollerupTheorem}
+\pmrelated{HadamardThreeCircleTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+A function $f\colon [a,b] \to {\mathbb{R}}$ such that $f(x) > 0$ for all $x$ is said
+to be {\em logarithmically convex} if $\log f(x)$ is a convex function.
+\end{defn}
+
+It is easy to see that a logarithmically convex function is a convex function, but the converse is not true.  For example $f(x) = x^2$ is a convex function, but $\log f(x) = \log x^2 = 2 \log x$ is not a convex function and thus $f(x) = x^2$ is not logarithmically convex.  On the other hand $e^{x^2}$ is logarithmically convex since $\log e^{x^2} = x^2$ is convex.  A less trivial example of a logarithmically convex function is the gamma function, if restricted to the positive reals.
+
+The definition is easily extended to functions $f\colon U \subset {\mathbb{R}} \to {\mathbb{R}}$, for any connected set $U$ (where still we have $f > 0$), in the obvious way.  Such a function is logarithmically convex if it is logarithmically convex on all intervals
+$[a,b] \subset U$.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

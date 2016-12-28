@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ALectureOnIntegrationBySubstitution}
+\pmcreated{2013-03-22 15:38:29}
+\pmmodified{2013-03-22 15:38:29}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{a lecture on integration by substitution}
+\pmrecord{4}{37573}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmrelated{ALectureOnIntegrationByParts}
+\pmrelated{ALectureOnTrigonometricIntegralsAndTrigonometricSubstitution}
+\pmrelated{ALectureOnThePartialFractionDecompositionMethod}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exe}{Problem}
+\newtheorem*{exe1}{Problem 1}
+\newtheorem*{exe2}{Problem 2}
+\newtheorem*{exe3}{Problem 3}
+\newtheorem*{exe4}{Problem 4}
+
+\theoremstyle{definition}
+\newtheorem{exa}[thm]{Example}
+
+\def\notdiv{\ \mathbin{\mkern-8mu|\!\!\!\smallsetminus}}
+\newcommand{\Qoft}{\mathbb{Q}(T)}  %use in linux
+\newcommand{\done}{\Box} %use in linux
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\peri}{\operatorname{Perimeter}}
+\newcommand{\lc}{\lim_{x\to c}}
+\newcommand{\lzero}{\lim_{x\to 0}}
+\newcommand{\lhzero}{\lim_{h\to 0}}
+\newcommand{\linf}{\lim_{x\to \infty}}
+\begin{document}
+\section*{The Method of Substitution (or Change of Variables)}
+
+The following is a general method to find indefinite integrals
+that look like the result of a chain rule.
+
+\begin{itemize}
+\item {\it When to use it:} We use the method of substitution for indefinite integrals which look like the result of
+a chain rule. In particular, try to use this method when you see a {\bf composition of two functions}.
+
+\item {\it How to use it:} In this method, we go from integrating with respect to $x$ to integrating with respect to
+a new variable, $u$, which makes the integral much easier.
+\begin{enumerate}
+\item Find inside the integral the composition of two functions and set $u=$ ``the inner function''.
+\item We also write $du=\frac{du}{dx}dx$.
+\item Substitute everything in the integral that depends on $x$ in terms of $u$.
+\item Integrate with respect to $u$.
+\item Once we have the result of integration in terms of $u$ ($+ C$), substitute back in terms of $x$.
+\end{enumerate}
+\end{itemize}
+
+The method is best explained through examples:
+
+\begin{exa}
+We want to find $\int e^{2x} dx $. The integrand is $e^{2x}$, which is a composition of two functions.
+The inner function is $2x$ so we set:
+$$u=2x,\quad du=2dx$$
+Thus,
+$$x=u/2,\quad dx=du/2$$
+Substitute into the integral:
+$$\int e^{2x}dx= \int e^u \frac{du}{2}=\frac{1}{2}\int e^u du = \frac{1}{2} e^u +C=\frac{1}{2}e^{2x} + C$$
+\end{exa}
+
+The following are typical examples where we use the subsitution method:
+
+\begin{exa}
+$$\int xe^{3x^2+7} dx$$ The inner function is $u=3x^2+7$ and $du=6x dx$. Thus $dx=du/(6x)$. Substitute:
+$$\int xe^{3x^2+7}dx = \int \frac{x e^u }{6x}du =\int \frac{e^u}{6} du = \frac{e^u}{6} +C = \frac{e^{3x^2+7}}{6} +C.$$
+\end{exa}
+
+\begin{exa}
+$$\int \sin (3x+7) dx$$ The inner function is $u=3x+7$ and $du=3 dx$. Therefore:
+$$\int \sin (3x+7) dx= \int \frac{\sin(u)}{3} du = -\frac{\cos(u)}{3} +C = -\frac{\cos(3x+7)}{3}+C.$$
+\end{exa}
+\eject
+\begin{exa}
+$$\int (2x+3)\sqrt{x^2+3x+20}\ dx $$ Inner $u=x^2+3x+20$ and $du=(2x+3)dx$. Thus:
+$$\int (2x+3)\sqrt{x^2+3x+20}\ dx =
+\int \sqrt{u} du= \int u^{1/2} du = \frac{2u^{3/2}}{3} + C = \frac{2(x^2+3x+20)^{3/2}}{3} +C.$$
+\end{exa}
+
+Now another integral which is a little more difficult:
+
+\begin{exa}
+$$\int \frac{\cos (\ln x)}{x} dx$$ The inner function here is $u=\ln x$ and $du= \frac{1}{x} dx$.
+$$\int \frac{\cos(\ln x)}{x} dx = \int \cos (u) \cdot \frac{1}{x} dx= \int \cos (u) du = \sin (u) +C= \sin(\ln x) +C.$$
+\end{exa}
+
+\begin{exa}
+$$\int \frac{3x^2+14x+1}{x^3+7x^2+x+115} dx $$
+This function is also a typical example of integration with substitution. Whenever there is a fraction, and the numerator
+looks like the derivative of the denominator, we set $u$ to be the denominator:
+$$u=x^3+7x^2+x+115, \quad du = (3x^2 +14x +1) dx$$
+Thus:
+$$\int \frac{3x^2+14x+1}{x^3+7x^2+x+115} dx = \int \frac{1}{u} du = \ln u + C= \ln (x^3+7x^2+x+115) + C.$$
+\end{exa}
+
+\begin{exa}
+
+$$\int \frac{7}{1+3x} dx $$
+As in the example above, we set $u=1+3x$, $du=3 dx $:
+$$\int \frac{7}{1+3x} dx = \int \frac{7}{u} \frac{du}{3} = \frac{7}{3} \int \frac{1}{u} du = \frac{7}{3} \ln u + C =
+\frac{7}{3} \ln (1+3x) + C.$$
+\end{exa}
+
+\begin{exa}
+$$\int t^3(t^4-50)^{700} dt$$
+Here the inner function is $u=t^4-50$ and $du=4t^3 dt$. Thus
+$$\int t^3(t^4-50)^{700} dt = \int \frac{u^{700}}{4} du=\frac{1}{4} \frac{u^{701}}{701} +C=
+\frac{(t^4-50)^{701}}{4\cdot 701} +C.$$
+\end{exa}
+
+Some other examples (solve them!):
+$$ \int e^x \sin (e^x) dx,\quad \int \frac{e^x}{e^x+1} dx, \quad \int \frac{1}{x\ln x } dx$$
+%%%%%
+%%%%%
+\end{document}

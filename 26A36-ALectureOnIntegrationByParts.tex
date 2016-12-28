@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ALectureOnIntegrationByParts}
+\pmcreated{2013-03-22 15:38:33}
+\pmmodified{2013-03-22 15:38:33}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{a lecture on integration by parts}
+\pmrecord{6}{37574}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmrelated{ALectureOnIntegrationBySubstitution}
+\pmrelated{ALectureOnTrigonometricIntegralsAndTrigonometricSubstitution}
+\pmrelated{ALectureOnThePartialFractionDecompositionMethod}
+\pmrelated{ExampleOfIntegrationByPartsInvolvingAlgebraicManipulation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exe}{Problem}
+\newtheorem*{exe1}{Problem 1}
+\newtheorem*{exe2}{Problem 2}
+\newtheorem*{exe3}{Problem 3}
+\newtheorem*{exe4}{Problem 4}
+
+\theoremstyle{definition}
+\newtheorem{exa}[thm]{Example}
+
+\def\notdiv{\ \mathbin{\mkern-8mu|\!\!\!\smallsetminus}}
+\newcommand{\Qoft}{\mathbb{Q}(T)}  %use in linux
+\newcommand{\done}{\Box} %use in linux
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\peri}{\operatorname{Perimeter}}
+\newcommand{\lc}{\lim_{x\to c}}
+\newcommand{\lzero}{\lim_{x\to 0}}
+\newcommand{\lhzero}{\lim_{h\to 0}}
+\newcommand{\linf}{\lim_{x\to \infty}}
+\begin{document}
+\section*{The Method of Integration by Parts}
+
+This method is used to find indefinite integrals that look like the result of a product rule.
+
+\begin{itemize}
+\item {\it When to use it:} Use this method when the integrand is a product of two functions (and when the method of
+substitution clearly does not work).
+
+\item {\it How to use it:} The method is based in the following formula:
+$$\int U\cdot V' \ dx = U \cdot V - \int U' \cdot V \ dx $$
+Suppose we want to solve $\int f(x) \ dx$:
+\begin{enumerate}
+\item Find functions $U$ and $V'$ such that $U\cdot V' = f(x)$. There are many possible choices.
+\item $U$ should be a function {\it easy} to derive and such that the derivative of $U$ is {\it easier, less complicated}
+than $U$ itself. For example good choices for $U$ are $U=x, x^2, x^3, e^x,\ln x$.
+\item $V'$ should be a function which is {\it easy} to integrate, such that we can find $\int V' dx$ easily and the integral
+is less complicated than $V'$ itself. Good choices
+for $V'$ are $V'=e^x, \sin x, \cos x$. The functions $x, x^2, x^3 , \ln x$ are {\bf bad} choices.
+\item Once the functions $U$ and $V'$ are chosen, find $U' =\frac{d}{dx}U$ and $V=\int V' \ dx$.
+\item Plug in the formula.
+\item Solve the new integral $\int U' \cdot V \ dx$, which if the choices of $U$ and $V'$ were good, should be easy.
+\item If the new integral is hard, the choices of $U$ and $V'$ might be wrong. So repeat the choice.
+\end{enumerate}
+\end{itemize}
+
+Again, the method is best explained through examples:
+
+\begin{exa}
+Find $\int xe^x \ dx$. This is a product of two functions and there is no composition visible, so we will be using
+integration by parts. We need two functions $U$ and $V'$ such that $U\cdot V' = xe^x$. A good choice for $U$ is $x$ because
+$U'=(x)'=1$ and the derivative is simpler than $x$ itself. A good choice for $V'=e^x$ because it is easy to integrate,
+$\int e^x \ dx = e^x $ (and $U \cdot V'=xe^x$). Therefore we apply the formula:
+$$\int xe^x \ dx = UV-\int U'V \ dx= xe^x-\int 1\cdot e^x \ dx = xe^x -\int e^x \ dx = xe^x - e^x + C.$$
+\end{exa}
+
+\begin{exa}
+Find: $$\int x\cos (x) \ dx .$$
+We choose $U=x$ and $V'=\cos(x)$. Then $U'=1$ and $V=\int V' \ dx= \sin(x)$. Apply the formula:
+$$\int x\cos(x) \ dx = x \sin (x) - \int \sin (x) \ dx= x\sin(x) - (-\cos (x)) +C = x\sin (x) + \cos (x) + C.$$
+\end{exa}
+
+\begin{exa}
+Find $\int \ln x \ dx$. Although this is not the product of two functions, $\ln x$ is a typical example of a function to be
+integrated by parts. Here is how, let $U=\ln x$ and $V'=1$ so that $U'=1/x$ and $V=x$. Look what happens when we use the formula:
+$$\int \ln x \ dx = x\ln x - \int \frac{1}{x}\cdot x \ dx = x\ln x - \int 1 \ dx = x\ln x - x + C.$$
+\end{exa}
+
+\eject
+\begin{exa}
+In some cases we have to use the method of integration by parts twice to get an answer. For example find $\int x^2 \sin x \ dx$.
+We put $U=x^2$ and $V'=\sin x$, and so $U'=2x$ and $V=\int \sin x \ dx=-\cos x$. Thus:
+$$\int x^2 \sin x \ dx = -x^2 \cos x +\int 2x \cos x \ dx = -x^2 \cos x + 2\int x \cos x \ dx$$
+and above, we have seen that in order to find $\int x \cos x \ dx$ we use integration by parts. Therefore the final anwser is:
+$$\int x^2 \sin x \ dx = -x^2 \cos x + 2(x \sin x + \cos x) + C.$$
+\end{exa}
+
+\begin{exa}
+Finally, in some other cases, after we do integration by parts twice, we get to the same integral we wanted to solve.
+Although it would seem we are stuck, no no! we will be able to find a solution right away.
+
+Find $\int e^x \sin x \ dx$. Let $I=\int e^x \sin x \ dx$. We start with integration by parts, taking
+$$U=e^x, V'=\sin x, U'=e^x, V=-\cos x$$
+Thus:
+$$I=-e^x\cos x + \int e^x \cos x \ dx $$
+Hmmm...the integral $\int e^x \cos x \ dx$ looks like the one we started with...we use integration by parts to solve this one.
+Take $U=e^x$ and $V'=\cos x $ so $U'=e^x$ and $V=\sin x$. Thus:
+$$\int e^x \cos x \ dx = e^x \sin x - \int e^x \sin x \ dx. $$
+Therefore:
+$$I=-e^x \cos x + ( e^x \sin x - \int e^x \sin x \ dx )= -e^x \cos x + e^x \sin x  - I$$
+Remember that we want to find $I$, so if we solve for $I$ above, we obtain:
+$$2I=-e^x \cos x + e^x \sin x$$
+and so $I=1/2 ( -e^x \cos x + e^x \sin x) + C$.
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

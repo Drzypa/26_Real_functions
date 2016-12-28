@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConverseOfEulersHomogeneousFunctionTheorem}
+\pmcreated{2013-03-22 18:07:56}
+\pmmodified{2013-03-22 18:07:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{converse of Euler's homogeneous function theorem}
+\pmrecord{7}{40683}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{15-00}
+\pmsynonym{converse of Euler's theorem on homogeneous functions}{ConverseOfEulersHomogeneousFunctionTheorem}
+%\pmkeywords{Euler's theorem on homogeneous functions}
+\pmrelated{ConverseTheorem}
+\pmrelated{ChainRuleSeveralVariables}
+\pmrelated{Logarithm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If the function $f$ of the real variables $x_1,\,\ldots,\,x_k$ satisfies the identity
+\begin{align}
+x_1\frac{\partial f}{\partial x_1}+\ldots+x_k\frac{\partial f}{\partial x_k} = nf,
+\end{align}
+then $f$ is a homogeneous function of degree $n$.\\
+
+
+{\em Proof.}\, Let\, $f(tx_1,\,\ldots,\,tx_k) := \varphi(t)$.\, Differentiating with respect to $t$ we obtain
+$$\varphi'(t) = x_1f'_{x_1}(tx_1,\,\ldots,\,tx_k)+\ldots+x_kf'_{x_k}(tx_1,\,\ldots,\,tx_k) 
+= \frac{1}{t}[tx_1f'_{x_1}(tx_1,\,\ldots,\,tx_k)+\ldots+tx_kf'_{x_k}(tx_1,\,\ldots,\,tx_k)],$$
+which by (1) may be written
+$$\varphi'(t) = \frac{n}{t}f(tx_1,\,\ldots,\,tx_k) = \frac{n}{t}\varphi(t).$$
+Accordingly,
+$$\frac{\varphi'(t)}{\varphi(t)} = \frac{n}{t},$$
+which implies the integrated form
+$$\ln|\varphi(t)| = \ln{t^n}+\ln{C}$$
+for any positive $t$.\, Thus we have\, $\varphi(t) = Ct^n$,\, where $C$ is independent on $t$.\, Choosing\, $t = 1$\, we see that\, $C = \varphi(1)$,\, and therefore\, $\varphi(t) = t^n\varphi(1)$.\, This last equation means that
+$$f(tx_1,\,\ldots,\,tx_k) = t^nf(x_1,\,\ldots,\,x_k)$$
+saying that $f$ is a (positively) homogeneous function of degree $n$.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset II}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1932).
+\end{thebibliography} 
+
+%%%%%
+%%%%%
+\end{document}

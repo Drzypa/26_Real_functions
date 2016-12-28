@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfJordansInequality}
+\pmcreated{2013-03-22 13:08:48}
+\pmmodified{2013-03-22 13:08:48}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Jordan's Inequality}
+\pmrecord{17}{33585}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To prove that
+$$ \frac{2}{\pi}x\leq\sin(x)\leq x, \forall\;x\in [0,\frac{\pi}{2}] $$
+
+consider a \PMlinkescapetext{unit} circle (circle with radius = 1 \PMlinkescapetext{unit}). Take any point $P$ on the circumference of the circle.
+
+Drop the perpendicular from $P$ to the horizontal line, $M$ being the foot of the perpendicular and $Q$ the reflection of $P$ at $M$.
+(refer to figure)
+
+Let $x = \angle POM.$
+
+For $x$ to be in $[0,\frac{\pi}{2}]$, the point $P$ lies in the first quadrant, as shown.
+
+\begin{center}
+\includegraphics{jord1.eps}
+\end{center}
+
+The length of line segment $PM$ is $\sin(x)$.
+Construct a circle of radius $MP$, with $M$ as the center.
+
+\begin{center}
+\includegraphics{jord2.eps}
+\end{center}
+
+Length of line segment $PQ$ is $2\sin(x)$.
+
+Length of arc $PAQ$ is $2x$.
+
+Length of arc $PBQ$ is $\pi\sin(x)$.
+
+Since $PQ \leq$ length of arc $PAQ$ (equality holds when $x = 0$)                                          
+we have $2\sin(x) \leq 2x$.                                                                                  
+This implies  $$\sin(x) \leq x$$
+
+Since length of arc $PAQ$ is $\leq $ length of arc $PBQ$ (equality holds true when $x = 0$ or $x = \frac{\pi}{2}$),
+we have $2x \leq \pi\sin(x)$.                                                                           
+This implies $$\frac{2}{\pi}x \leq \sin(x)$$
+
+Thus we have 
+$$ \frac{2}{\pi}x\leq\sin(x)\leq x,   \forall\;x\in [0,\frac{\pi}{2}] $$
+%%%%%
+%%%%%
+\end{document}

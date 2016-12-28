@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IteratedLimitInmathbbR2}
+\pmcreated{2013-03-22 17:28:27}
+\pmmodified{2013-03-22 17:28:27}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{iterated limit in $\mathbb{R}^2$}
+\pmrecord{10}{39860}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{26A06}
+\pmdefines{iterated limit}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $f$ be a function from a subset $S$ of\, $\mathbb{R}^2$\, to\, $\mathbb{R}$ and\, $(a,\, b)$\, an accumulation point of $S$.  The limits
+$$\lim_{x\to a}\left(\lim_{y\to b}f(x,\,y)\right) \quad\mbox{and}\quad \lim_{y\to b}\left(\lim_{x\to a}f(x,\,y)\right)$$
+are called {\em iterated limits}.\\
+
+\textbf{Example 1.}  If\; $\displaystyle f(x,\,y) := \frac{x\sin\frac{1}{x}+y}{x+y}$,\, then 
+\begin{itemize}
+\item $\lim_{x\to 0}\left(\lim_{y\to 0}f(x,\,y)\right) = \lim_{x\to0}\sin\frac{1}{x}$ does not exist
+\item $\lim_{y\to 0}\left(\lim_{x\to 0}f(x,\,y)\right) = \lim_{y\to0}1 = 1$
+\item the usual limit $\lim_{(x,y)\to(0,0)}f(x,\,y)$ does not exist.
+\end{itemize}
+
+\textbf{Example 2.}  If\; $\displaystyle f(x,\,y) := \frac{x^2}{x^2+y^2}$,\, then 
+\begin{itemize}
+\item $\lim_{x\to 0}\left(\lim_{y\to 0}f(x,\,y)\right) = \lim_{x\to0} \frac{x^2}{x^2} = 1$
+\item $\lim_{y\to 0}\left(\lim_{x\to 0}f(x,\,y)\right) = \lim_{y\to0} 0 = 0$
+\item the usual limit $\lim_{(x,y)\to(0,0)}f(x,\,y)$ again does not exist, \PMlinkescapetext{even} though both of the iterated limits do.
+\end{itemize}
+
+So far we have studied examples that present discontinuity at its point of accumulation. We now expose an illustrative example where such discontinuity can be avoided. \\
+
+\textbf{Example 3.}  Consider the function
+$$f(x,\,y) := \frac{x\sin{x}\cosh{y}+y\cos{x}\sinh{y}}{x^2+y^2};$$
+then (we apply \PMlinkname{l'H\^opital's rule}{LHpitalsRule} throughout)
+\begin{itemize}
+\item 
+$\lim_{x\to 0}\left(\lim_{y\to 0}f(x,\,y)\right) =
+\lim_{x\to 0}\left(\lim_{y\to 0}\frac{x\sin x\cosh y+y\cos x\sinh y}{x^2+y^2}\right)= 
+\lim_{x\to 0}\frac{x\sin x}{x^2}=\lim_{x\to 0}\frac{\sin x}{x}=\lim_{x\to 0}\cos x=1$
+\item 
+$\lim_{y\to 0}\left(\lim_{x\to 0}f(x,\,y)\right) =
+\lim_{y\to 0}\left(\lim_{x\to 0}\frac{x\sin x\cosh y+y\cos x\sinh y}{x^2+y^2}\right)= 
+\lim_{y\to 0}\frac{y\sinh y}{y^2}=\lim_{y\to 0}\frac{\sinh y}{y}=\lim_{y\to 0}\cosh y=1$
+\item  the usual limit $\lim_{(x,y)\to(0,0)}f(x,\,y)$ exists in this case.  An essential reason which assures the continuity of this function, arises from the fact that\, $f(x,\,y) \equiv \Re(\frac{\sin z}{z})$,\, $z = x+iy$,\, i.e. it is the real part of the analytic function \,$w := \frac{\sin z}{z}$\, having the removable singularity at\, $z = 0$ (see the entry complex sine and cosine). 
+\end{itemize}
+
+
+%%%%%
+%%%%%
+\end{document}

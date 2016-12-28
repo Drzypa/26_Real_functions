@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtremeValueTheorem}
+\pmcreated{2013-03-22 14:29:21}
+\pmmodified{2013-03-22 14:29:21}
+\pmowner{classicleft}{5752}
+\pmmodifier{classicleft}{5752}
+\pmtitle{extreme value theorem}
+\pmrecord{7}{36023}
+\pmprivacy{1}
+\pmauthor{classicleft}{5752}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{Weierstrass extreme value theorem}{ExtremeValueTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Extreme Value Theorem. }
+{\it
+Let $a$ and $b$ be real numbers with $a<b$, and let $f$ be a continuous, real valued function on $[a,b]$. Then there exists $c,d\in[a,b]$ such that $f(c)\leq f(x) \leq f(d)$ for all $x\in[a,b]$.
+}
+
+{\it Proof. }
+We show only the existence of $d$. By the boundedness theorem $f([a,b])$ is bounded above; let $l$ be the least upper bound of $f([a,b])$. Suppose, for a contradiction, that there is no $d\in[a,b]$ such that $f(d)=l$. Then the function $$ g(x) = \frac{1}{l-f(x)} $$
+is well defined and continuous on $[a,b]$. Since $l$ is the least upper bound of $f([a,b])$, for any positive real number $M$ we can find $\alpha\in[a,b]$ such that $f(\alpha)>l-\frac{1}{M}$, then
+$$ M < \frac{1}{l-f(\alpha)} \textrm{.}$$
+So $g$ is unbounded on $[a,b]$. But by the boundedness theorem $g$ is bounded on $[a,b]$. This contradiction finishes the proof.
+%%%%%
+%%%%%
+\end{document}

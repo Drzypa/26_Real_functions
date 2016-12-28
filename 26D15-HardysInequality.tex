@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HardysInequality}
+\pmcreated{2013-03-22 17:04:32}
+\pmmodified{2013-03-22 17:04:32}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Hardy's inequality}
+\pmrecord{8}{39368}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Suppose $p>1$ and $\{a_n\}$ is a sequence of nonnegative real numbers.
+Let $A_n = \sum_{i=1}^n a_i$. Then
+$$
+\sum_{n \ge 1}\left ( \frac{A_n}{n}\right )^p < \left ( \frac{p}{p-1} \right ) ^p \sum_{n \ge 1} {a_n}^p,
+$$
+unless all the $a_n$ are zero. The constant is best possible.
+
+This theorem has an integral analogue:
+Suppose that $p > 1$ and $f \ge 0$ on $(0, \infty)$. 
+Let $F(x) = \int_0^x f(t)dt$. Then
+$$
+\int_0^{\infty} \left ( \frac{F}{x} \right)^p dx < \left ( \frac{p}{p-1} \right )^p \int_0^{\infty} f^p(x)dx,
+$$ 
+unless $f \equiv 0$. The constant is best possible.
+
+
+\begin{thebibliography}{99}
+\item 
+G.H. Hardy, J.E. Littlewood and G.P{\'o}lya, \emph{Inequalities}, Cambridge University Press,
+Cambridge, 2nd edition, 1952, pp. 239-240.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

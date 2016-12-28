@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfTheLebesgueIntegralOfLebesgueIntegrableFunctions}
+\pmcreated{2013-03-22 16:14:01}
+\pmmodified{2013-03-22 16:14:01}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{properties of the Lebesgue integral of Lebesgue integrable functions}
+\pmrecord{19}{38334}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28A25}
+\pmrelated{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{thm*}{Theorem}
+
+\begin{document}
+\begin{thm*}
+Let $(X, \mathfrak{B}, \mu)$ be a measure space, $f \colon X \to [-\infty,\infty]$ and $g \colon X \to [-\infty,\infty]$ be Lebesgue integrable functions, and $A,B \in \mathfrak{B}$. Then the following properties hold:
+
+\begin{enumerate}
+\item $\displaystyle \left| \int_A f \, d\mu \right| \le \int_A |f| \, d\mu$
+
+\item If $f \le g$, then $\displaystyle \int_A f \, d\mu \le \int_A g \, d\mu$.
+
+\item $\displaystyle \int_A f \, d\mu =\int_X \chi_A f \, d\mu$, where $\chi_A$ denotes the characteristic function of $A$
+
+\item If $c \in \mathbb{R}$, then $\displaystyle \int_A cf \, d\mu =c\int_A f \, d\mu$.
+
+\item If $\mu(A)=0$, then $\displaystyle \int_A f \, d\mu =0$.
+
+\item $\displaystyle \int_A (f+g) \, d\mu =\int_A f \, d\mu +\int_A g \, d\mu$.
+
+\item If $A \cap B=\emptyset$, then $\displaystyle \int_{A \cup B} f \, d\mu =\int_A f \, d\mu +\int_B f \, d\mu$.
+
+\item If $f=g$ almost everywhere with respect to $\mu$, then $\displaystyle \int_A f \, d\mu =\int_A g \, d\mu$.
+
+\end{enumerate}
+\end{thm*}
+
+\begin{proof}
+
+\begin{enumerate}
+\item
+
+\vspace{1mm}
+
+\begin{center}
+\begin{tabular}{ll}
+$\displaystyle \left| \int_A f \, d\mu \right|$ & $\displaystyle =\left| \int_A f^+ \, d\mu -\int_A f^- \, d\mu \right|$ by definition \\
+& $\displaystyle \le \left| \int_A f^+ \, d\mu \right| +\left| \int_A f^- \, d\mu \right|$ by the triangle inequality \\
+& $\displaystyle =\int_A f^+ \, d\mu +\int_A f^- \, d\mu$ by the \\
+& properties of the Lebesgue integral of nonnegative measurable functions (property 1), \\
+& $\displaystyle =\int_A (f^++f^-) \, d\mu$ by the \\
+& \PMlinkname{properties of the Lebesgue integral of nonnegative measurable functions}{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions} (property 7), \\
+& $\displaystyle =\int_A |f| \, d\mu$ \end{tabular}
+\end{center}
+
+\item Since $f \le g$, the following must hold:
+
+\begin{itemize}
+\item $f^+=\max\{0,f\}\le\max\{0,g\}=g^+$;
+\item $-f \ge -g$;
+\item $f^-=\max\{0,-f\}\ge\max\{0,-g\}=g^-$.
+\end{itemize}
+
+Thus, by the \PMlinkname{properties of the Lebesgue integral of nonnegative measurable functions}{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions} (property 2), $\displaystyle \int_A f^+ \, d\mu \le \int_A g^+ \, d\mu$ and $\displaystyle \int_A f^- \, d\mu \ge \int_A g^- \, d\mu$.  Therefore, $\displaystyle -\int_A f^- \, d\mu \le -\int_A g^- \, d\mu$.  Hence, $\displaystyle \int_A f^+ \, d\mu -\int_A f^- \, d\mu \le \int_A g^+ \, d\mu -\int_A f^- \, d\mu \le \int_A g^+ \, d\mu -\int_A g^- \, d\mu$.  It follows that $\displaystyle \int_A f \, d\mu \le \int_A g \, d\mu$.
+
+\item
+
+\vspace{1mm}
+
+\begin{center}
+\begin{tabular}{ll}
+$\displaystyle \int_A f \, d\mu$ & $\displaystyle =\int_A f^+ \, d\mu -\int_A f^- \, d\mu$ by definition \\
+& $\displaystyle =\int_X \chi_Af^+ \, d\mu -\int_X \chi_Af^- \, d\mu$ by the \\
+& \PMlinkname{properties of the Lebesgue integral of nonnegative measurable functions}{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions} (property 3), \\
+& $\displaystyle =\int_X (\chi_Af)^+ \, d\mu -\int_X (\chi_Af)^- \, d\mu$ \\
+& $\displaystyle =\int_X \chi_Af \, d\mu$ by definition \end{tabular}
+\end{center}
+
+\item If $c \ge 0$, then
+
+\begin{center}
+\begin{tabular}{ll}
+$\displaystyle \int_A cf \, d\mu$ & $\displaystyle =\int_A (cf)^+ \, d\mu -\int_A (cf)^- \, d\mu$ by definition \\
+& $\displaystyle =\int_A cf^+ \, d\mu -\int_A cf^- \, d\mu$ \\
+& $\displaystyle =c\int_A f^+ \, d\mu -c\int_A f^- \, d\mu$ by the \\
+& \PMlinkname{properties of the Lebesgue integral of nonnegative measurable functions}{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions} (property 5) \\
+& $\displaystyle =c\left( \int_A f^+ \, d\mu -\int_A f^- \, d\mu \right)$ \\
+& $\displaystyle =c\int_A f \, d\mu$ by definition. \end{tabular}
+\end{center}
+
+If $c<0$, then
+
+\begin{center}
+\begin{tabular}{ll}
+$\displaystyle \int_A cf \, d\mu$ & $\displaystyle =\int_A (cf)^+ \, d\mu -\int_A (cf)^- \, d\mu$ by definition \\
+& $\displaystyle =\int_A (-c)f^- \, d\mu -\int_A (-c)f^+ \, d\mu$ \\
+& $\displaystyle =-c\int_A f^- \, d\mu +c\int_A f^+ \, d\mu$ by the \\
+& \PMlinkname{properties of the Lebesgue integral of nonnegative measurable functions}{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions} (property 5) \\
+& $\displaystyle =c\left( -\int_A f^- \, d\mu +\int_A f^+ \, d\mu \right)$ \\
+& $\displaystyle =c\int_A f \, d\mu$ by definition. \end{tabular}
+\end{center}
+
+\item Note that $\displaystyle \int_A f^+ \, d\mu=0$ and $\displaystyle \int_A f^- \, d\mu=0$ by the \PMlinkname{properties of the Lebesgue integral of nonnegative measurable functions}{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions} (property 6).  It follows that $\displaystyle \int_A f \, d\mu =0$.
+
+\item Let $\{s_n\}$ be a nondecreasing sequence of nonnegative simple functions converging pointwise to $f^++g^+$ and $\{t_n\}$ be a nondecreasing sequence of nonnegative simple functions converging pointwise to $f^-+g^-$.  Note that, for every $n$, $\displaystyle \int_A s_n \, d\mu -\int_A t_n \, d\mu =\int_A (s_n-t_n) \, d\mu$.
+
+Since $f$ and $g$ are integrable and $|f+g| \le |f|+|g|$, $f+g$ is integrable.  Thus,
+
+\begin{center}
+\begin{tabular}{ll}
+$\displaystyle \int_A f \, d\mu +\int_A g \, d\mu$ & $\displaystyle =\int_A f^+ \, d\mu -\int_A f^- \, d\mu +\int_A g^+ \, d\mu -\int_A g^- \, d\mu$ by definition \\
+& $\displaystyle =\int_A f^+ \, d\mu +\int_A g^+ \, d\mu -\left( \int_A f^- \, d\mu +\int_A g^- d\mu \right)$ \\
+& $\displaystyle =\int_A (f^++g^+) \, d\mu -\left( \int_A (f^-+g^-) \, d\mu \right)$ by the \\
+& \PMlinkname{properties of the Lebesgue integral of nonnegative measurable functions}{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions} (property 7) \\
+& $\displaystyle =\lim_{n \to \infty} \int_A s_n \, d\mu -\left( \lim_{n \to \infty} \int_A t_n \, d\mu \right)$ by Lebesgue's monotone convergence theorem \\
+& $\displaystyle =\lim_{n \to \infty} \left( \int_A s_n \, d\mu -\int_A t_n \, d\mu \right)$ \\
+& $\displaystyle =\lim_{n \to \infty} \int_A (s_n-t_n) \, d\mu$ \\
+& $\displaystyle =\int_A (f^++g^+-(f^-+g^-)) \, d\mu$ by Lebesgue's dominated convergence theorem \\
+& $\displaystyle =\int_A (f^+-f^-+g^+-g^-) \, d\mu$ \\
+& $\displaystyle =\int_A (f+g) \, d\mu$ by definition. \end{tabular}
+\end{center}
+
+\item
+
+\vspace{1mm}
+
+\begin{center}
+\begin{tabular}{ll}
+$\displaystyle \int_{A \cup B} f \, d\mu$ & $\displaystyle =\int_{A \cup B} f^+ \, d\mu -\int_{A \cup B} f^- \, d\mu$ by definition \\
+& $\displaystyle =\int_A f^+ \, d\mu +\int_B f^+ \, d\mu -\left( \int_A f^- \, d\mu +\int_B f^- \, d\mu \right)$ by the \\
+& \PMlinkname{properties of the Lebesgue integral of nonnegative measurable functions}{PropertiesOfTheLebesgueIntegralOfNonnegativeMeasurableFunctions} (property 8), \\
+& $\displaystyle =\int_A f^+ \, d\mu -\int_A f^- \, d\mu +\int_B f^+ \, d\mu -\int_B f^- \, d\mu$ \\
+& $\displaystyle =\int_A f \, d\mu +\int_B f \, d\mu$ by definition \end{tabular}
+\end{center}
+
+\item Let $E=\{x \in A:f(x)=g(x)\}$.  Since $f$ and $g$ are measurable functions and $A \in \mathfrak{B}$, it must be the case that $E \in \mathfrak{B}$.  Thus, $A-E \in \mathfrak{B}$.  By hypothesis, $\mu(A \setminus E)=0$.  Note that $E \cap (A \setminus E)=\emptyset$ and $E \cup (A \setminus E)=A$. Thus, $\displaystyle \int_A f \, d\mu =\int_E f \, d\mu +\int_{A \setminus E} f \, d\mu =\int_E f \, d\mu +0=\int_E g \, d\mu +0=\int_E g \, d\mu +\int_{A \setminus E} g \, d\mu =\int_A g \, d\mu.$
+
+\end{enumerate}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

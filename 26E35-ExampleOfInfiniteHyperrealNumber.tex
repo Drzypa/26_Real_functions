@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfInfiniteHyperrealNumber}
+\pmcreated{2013-03-22 17:25:59}
+\pmmodified{2013-03-22 17:25:59}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{example of infinite hyperreal number}
+\pmrecord{5}{39809}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The hyperreal number $\{n\}_{n \in \mathbb{N}}\; \in {}^*\mathbb{R}\;$ is \PMlinkescapetext{infinite} (or \PMlinkescapetext{unlimited}).
+
+{\bf Proof :} Let $\mathcal{F}$ be the nonprincipal ultrafilter \PMlinkescapetext{fixed} in the \PMlinkescapetext{parent} \PMlinkname{entry}{Hyperreal}.
+
+Given any positive $a \in \mathbb{R}$ we have that $\{n \in \mathbb{N} : n \leq a\}$ is finite, 
+so $\{n \in \mathbb{N} : a < n\} \in \mathcal{F}$ and therefore $\{a\}_{n \in \mathbb{N}} < \{n\}_{n \in \mathbb{N}}$.
+
+Thus  $\{n\}_{n \in \mathbb{N}}$ is infinite.$\square$
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SincIsL2}
+\pmcreated{2013-03-22 15:44:44}
+\pmmodified{2013-03-22 15:44:44}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{sinc is $L^2$}
+\pmrecord{9}{37697}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Our objective will be to prove the integral $\int_{\mathbb{R}} f^2(x) dx$ exists in the Lebesgue sense when $f(x) = \operatorname{sinc}(x)$.
+
+The integrand is an even function and so we can restrict our proof to the set $\mathbb{R}^+$.
+
+Since $f$ is a continuous function, so will $f^2$ be and thus for every $a>0$, $f \in L^2([0,a])$.
+
+Thus, if we prove $f \in L^2([\pi,\infty[)$, the result will be proved.
+
+Consider the intervals $I_k = [k\pi, (k+1)\pi]$ and $U_k = \bigcup_{i=1}^k I_k = [\pi, (k+1)\pi]$.
+
+and the succession of functions $f_n(x) = f^2(x)\chi_{U_n}(x)$, where $\chi_{U_n}$ is the characteristic function of the set $U_n$.
+
+Each $f_n$ is a continuous function of compact support and will thus be integrable in $\mathbb{R}^+$. Furthermore $f_n(x) \nearrow f^2(x)$ (pointwise) in this set.
+
+In each $I_k$,$ 0 \le f^2(x) \le \frac{\sin^2(x)}{(k\pi)^2}$, for $k>0$.
+
+So:
+
+$ \displaystyle \int_{x\ge \pi} f_n(x) dx = \sum_{k=1}^{n} \int_{k\pi}^{(k+1)\pi} \frac{\sin(x)^2}{x^2} dx \le \sum_{k=1}^{n} \int_{k\pi}^{(k+1)\pi} \frac{\sin(x)^2}{(k\pi)^2} = \sum_{k=1}^{n} \frac{1}{2k^2\pi} $
+\footnote{we have used the well known result $\int_{0}^{\pi}\sin^2(x) dx = \frac{\pi}{2}$}
+
+So: $\lim_{n\to \infty} \int_{x\ge \pi}f_n(x) dx \le  \lim_{n\to \infty} \sum_{k=1}^{n} \frac{1}{2k^2\pi}$ and since the series on the right side converges\footnote{asymptotic behaviour as $k^{-2}$} and $f_n \nearrow f^2$ we can use the monotone convergence theorem to state that $f^2 \in L([\pi,\infty[)$.
+
+So we get the result that $\operatorname{sinc} \in L^2(\mathbb{R})$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RiemannStieltjesIntegral}
+\pmcreated{2013-03-22 12:51:13}
+\pmmodified{2013-03-22 12:51:13}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Riemann-Stieltjes integral}
+\pmrecord{11}{33187}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmrelated{RiemannSum}
+\pmrelated{IntegralSign}
+\pmdefines{Riemann-Stieltjes sum}
+\pmdefines{integrator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f$ and $\alpha$ be bounded, real-valued functions defined upon a closed finite interval $I = [ a, b ]$ of $\mathbb{R} (a \neq b)$, $P = \{ x_{0}, ..., x_{n} \}$ a partition of $I$, and $t_{i}$ a point of the subinterval $[ x_{i - 1}, x_{i} ]$. A sum of the form
+
+$$S(P, f, \alpha) = \sum_{i = 1}^{n} f(t_{i}) (\alpha(x_{i}) - \alpha(x_{i - 1}))$$
+
+is called a \textbf{Riemann-Stieltjes sum} of $f$ with respect to $\alpha$. $f$ is said to be \textbf{Riemann Stieltjes integrable with respect to} $\alpha$ on $I$ if there exists $A \in \mathbb{R}$ such that given any $\epsilon > 0$ there exists a partition $P_{\epsilon}$ of $I$ for which, for all $P$ finer than $P_{\epsilon}$ and for every choice of points $t_{i}$, we have
+
+
+$$|S(P, f, \alpha) - A| < \epsilon$$
+
+
+If such an $A$ exists, then it is unique and is known as the \textbf{Riemann-Stieltjes integral of $f$ with respect to $\alpha$}. $f$ is known as the \textbf{integrand} and $\alpha$ the \textbf{integrator}. The integral is denoted by
+
+
+$$\int_{a}^{b}fd\alpha \quad \textrm{or} \quad \int_{a}^{b}f(x)d\alpha(x)$$
+
+%%%%%
+%%%%%
+\end{document}

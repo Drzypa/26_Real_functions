@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClassicalStokesTheorem}
+\pmcreated{2013-03-22 15:27:52}
+\pmmodified{2013-03-22 15:27:52}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{classical Stokes' theorem}
+\pmrecord{6}{37316}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B20}
+\pmrelated{GeneralStokesTheorem}
+\pmrelated{GaussGreenTheorem}
+\pmrelated{GreensTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+
+\newcommand{\vF}{\mathbf{F}}
+\newcommand{\vA}{\mathbf{A}}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vn}{\mathbf{n}}
+\newcommand{\vt}{\mathbf{t}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+
+\DeclareMathOperator{\curl}{curl}
+\begin{document}
+Let $M$ be a compact, oriented two-dimensional differentiable manifold (surface) with boundary in $\real^3$,
+and $\vF$ be a $C^2$-smooth vector field defined on an open set in $\real^3$ containing $M$.
+Then
+\[
+\iint_M (\nabla \times \vF) \cdot d\vA = \int_{\partial M} \vF \cdot d\vs\,.
+\]
+Here, the boundary of $M$, $\partial M$ (which is a curve)
+is given the induced orientation from $M$.  The symbol $\nabla \times \vF$
+denotes the curl of $\vF$.
+The symbol $d \vs$ denotes the line element $ds$ with a direction
+parallel to the unit tangent vector $\vt$ to $\partial M$, while $d \vA$ denotes
+the area element $dA$ of the surface $M$ with a direction parallel to the unit outward normal $\vn$
+to $M$.  In precise terms:
+\[
+d\vA = \vn \, dA\,, \quad d\vs = \vt \, ds\,.
+\]
+
+The classical Stokes' theorem reduces to Green's theorem on the plane if the surface $M$
+is taken to lie in the xy-plane.
+
+The classical Stokes' theorem, and 
+the other ``Stokes' type'' theorems
+are special cases of the general Stokes' theorem involving
+differential forms.
+In fact, in the proof we present below, we appeal to the general Stokes' theorem.
+
+\section*{Physical interpretation}
+(To be written.)
+
+\section*{Proof using differential forms}
+The proof becomes a triviality once we express
+$(\nabla \times \vF) \cdot d\vA$
+and $\vF \cdot d\vs$ in terms of differential forms.
+
+\begin{proof}
+Define the differential forms $\eta$ and $\omega$ by
+\begin{align*}
+\eta_p(\vu, \vv) &= \langle \curl \vF(p), \vu \times \vv \rangle\,, \\
+\omega_p(\vv) &= \langle \vF(p), \vv \rangle\,.
+\end{align*}
+for points $p \in \real^3$, and tangent vectors $\vu, \vv \in \real^3$.
+The symbol $\langle, \rangle$ denotes the dot product in $\real^3$.
+Clearly, the functions $\eta_p$ and $\omega_p$ are linear and alternating in 
+$\vu$ and $\vv$.
+
+We claim 
+\begin{align}
+\eta &= \nabla \times \vF \cdot d\vA & \text{ on $M$. } \\
+\omega &= \vF \cdot d\vs & \text{ on $\partial M$.}
+\end{align}
+
+To prove (1), it suffices to check
+it holds true when we evaluate the left- and right-hand sides
+on an orthonormal basis $\vu, \vv$ for the tangent space of $M$
+corresponding to the orientation of $M$,
+given by the unit outward normal $\vn$.
+We calculate
+\begin{align*}
+\nabla \times \vF \cdot d\vA(\vu,\vv) &= 
+\langle \curl \vF, \vn \rangle \,
+dA(\vu, \vv) 
+& \text{definition of $d\vA = \vn \, dA$}
+\\
+&= 
+\langle \curl \vF, \vn \rangle 
+& \text{definition of volume form $dA$}
+\\
+&= 
+\langle \curl \vF, \vu \times \vv \rangle 
+& \text{since $\vu \times \vv = \vn$} \\
+&=
+\eta(\vu, \vv)\,.
+\end{align*}
+
+For equation (2), similarly, we only have to check that it holds
+when both sides are evaluated at $\vv = \vt$,
+the unit tangent vector of $\partial M$
+with the induced orientation of $\partial M$.
+We calculate again,
+\begin{align*}
+\vF \cdot d\vs(\vt) &= \langle \vF, \vt \rangle \, ds(\vt) 
+& \text{definition of $d\vs = \vt \, ds$} \\
+&= \langle \vF, \vt \rangle 
+& \text{definition of volume form $ds$} \\
+&= \omega(\vt)\,.
+\end{align*}
+
+Furthermore, $d \omega$ = $\eta$.
+(This can be checked by a calculation
+in Cartesian coordinates, but in fact this equation
+is one of the coordinate-free \emph{definitions} of the curl.)
+
+The classical Stokes' Theorem now follows
+from the general Stokes' Theorem,
+\[
+\int_M \eta = \int_M d\omega = \int_{\partial M} \omega\,. \qedhere
+\]
+\end{proof}
+
+\begin{thebibliography}{3}
+\bibitem{Spivak} Michael Spivak. {\it Calculus on Manifolds}. Perseus Books, 1998.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

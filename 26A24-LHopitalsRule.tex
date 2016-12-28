@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LHopitalsRule}
+\pmcreated{2013-03-22 12:28:15}
+\pmmodified{2013-03-22 12:28:15}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{l'H\^opital's rule}
+\pmrecord{13}{32657}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{26C15}
+\pmsynonym{l'Hospital's rule}{LHopitalsRule}
+\pmrelated{IndeterminateForm}
+\pmrelated{DerivationOfHarmonicMeanAsTheLimitOfThePowerMean}
+\pmrelated{ImproperLimits}
+\pmrelated{ExampleUsingStolzCesaroTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+L'H\^opital's rule states that given an unresolvable limit of the form $\frac{0}{0}$ or $\frac{\infty}{\infty}$, the ratio of functions $\frac{f(x)}{g(x)}$ will have the same limit at $c$ as the ratio $\frac{f'(x)}{g'(x)}$. In short, if the limit of a ratio of functions approaches an indeterminate form, then
+$$\lim_{x\rightarrow c}\frac{f(x)}{g(x)} = \lim_{x\rightarrow c}\frac{f'(x)}{g'(x)}$$
+provided this last limit exists. L'H\^opital's rule may be applied indefinitely as long as the conditions are satisfied. However it is important to note, that the nonexistance of $\lim\frac{f'(x)}{g'(x)}$ does not prove the nonexistance of $\lim\frac{f(x)}{g(x)}$.
+
+\textbf{Example:}
+We try to determine the value of
+$$\lim_{x\to \infty}\frac{x^2}{e^x}.$$
+As $x$ approaches $\infty$ the expression becomes an indeterminate form $\frac{\infty}{\infty}$. By applying L'H\^opital's rule twice we get
+$$\lim_{x\to\infty}\frac{x^2}{e^x}=\lim_{x\to \infty}\frac{2x}{e^x}=\lim_{x\to \infty}\frac{2}{e^x}=0.$$
+Another example of the usage of L'H\^opital's rule can be found \PMlinkid{here}{5741}.
+
+%\textbf{Proof of L'H\^opital's Rule for} $\frac{0}{0}$ : 
+%Let there be two differentiable functions $f(x)$ and $g(x)$, such that trying %to evaluate $\lim_{x\rightarrow c}\frac{f(x)}{g(x)}$ yields an indeterminate %form $\frac{0}{0}$. The linearization of $f$ at $c$ is $f(x)\approx %f(c)+f'(c)(x-c)$, and is similar for $g(x)$. Since $x$ is approaching $c$, we %can use the linearization at $c$ to replace $f(x)$ and $g(x)$. Thus 
+%$$\lim_{x\rightarrow c}\frac{f(x)}{g(x)}=\lim_{x\rightarrow %c}\frac{f(c)+f'(c)(x-c)}{g(c)+g'(c)(x-c)}$$
+%We know that $f(c)$ and $g(c)$ approach $0$, so we can ignore these terms. The %$x-c$ term cancels out and we're left with 
+%$\frac{f'(c)}{g'(c)}$.
+%$\displaystyle \lim_{x\rightarrow c}\frac{f(x)}{g(x)} = %\lim_{x\rightarrowc}\frac{f'(x)}{g'(x)}$
+
+%Another way to prove this statement is by using Taylor's theorem, instead of %linearization. Thus
+%$$f(x) = f'(c)(x-c) + R(x)(x-c)^2$$
+%where $R(x)$ is a continuous function. When we use this substitution in the %limit, we see
+%$$\lim_{x\rightarrow c} \frac{f'(c)(x-c) + R(x)(x-c)^2}{g'(c)(x-c) + %S(x)(x-c)^2}$$
+%We can factor out an $x-c$ term leaving
+%$$\lim_{x\rightarrow c} \frac{f'(c) + R(x)(x-c)}{g'(c) + S(x)(x-c)}$$
+%which approaches $\frac{f'(c)}{g'(c)}$.
+
+%[examples and proof at infinity coming]
+%%%%%
+%%%%%
+\end{document}

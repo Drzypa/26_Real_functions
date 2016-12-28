@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLHopitalsRuleForinftyinftyForm}
+\pmcreated{2013-03-22 15:40:15}
+\pmmodified{2013-03-22 15:40:15}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{proof of l'H\^opital's rule for $\infty/\infty$ form}
+\pmrecord{7}{37611}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\begin{document}
+This is the proof of \PMlinkname{L'H\^opital's Rule}{LHpitalsRule}
+in the case of the indeterminate form $\pm \infty / \infty$.
+Compared to \PMlinkname{the proof for the $0/0$ case}{ProofOfDeLHopitalsRule},
+more complicated estimates are needed.
+
+Assume that
+\[
+\lim_{x \to a} f(x) = \pm \infty \,, \quad \lim_{x \to a} g(x) = \pm \infty\,, \quad
+\lim_{x \to a} \frac{f'(x)}{g'(x)} = m\,, 
+\]
+where $a$ and $m$ are real numbers. 
+The case when $a$ or $m$ is infinite only involves
+slight modifications to the arguments below.
+
+Given $\epsilon > 0$.
+there is a $\delta > 0$ such that 
+\[
+\absW{ \frac{f'(\xi)}{g'(\xi)}  - m} < \epsilon
+\]
+whenever $0 < \abs{\xi - a} < \delta$.
+
+Let $c$ and $x$ be points such that
+$a-\delta < c < x < a$ or $a < x < c < a+\delta$.
+(That is, both $c$ and $x$ are within distance $\delta$ of $a$,
+but $x$ is always closer.)
+By Cauchy's mean value theorem, there exists some $\xi_x$ 
+in between $c$ and $x$ (and hence $0 < \abs{\xi_x -a} < \delta$)
+such that
+\[
+\frac{f(x) - f(c)}{g(x) - g(c)} = \frac{f'(\xi_x)}{g'(\xi_x)}\,.
+\]
+We can assume the values $f(x)$, $g(x)$, $f(x) - f(c)$, $g(x) - g(c)$
+are \emph{all non-zero} when $x$ is close enough to $a$,
+say, when $0 < \abs{x - a} < \delta'$ for some $0 < \delta' < \delta$.
+(So there is no division by zero in our equations.)
+This is because $f(x)$ and $g(x)$ were assumed to approach $\pm \infty$,
+so when $x$ is close enough to $a$, 
+they will exceed the fixed values $f(c)$, $g(c)$, and $0$.
+
+We write
+\begin{align*}
+\frac{f(x)}{g(x)} &=
+\frac{f(x)}{f(x)-f(c)} \cdot
+\frac{g(x)-g(c)}{g(x)} \cdot
+\frac{f(x)-f(c)}{g(x)-g(c)}  \\
+&= 
+\frac{1-g(c)/g(x)}{1-f(c)/f(x)}
+\cdot \frac{f'(\xi_x)}{g'(\xi_x)}\,.
+\end{align*}
+Note that
+\[
+\lim_{x \to a} \frac{1-g(c)/g(x)}{1-f(c)/f(x)} = 1\,,
+\]
+but $\xi_x$ is not guaranteed to approach $a$ as $x$ approaches $a$,
+so we cannot just take the limit $x \to a$ directly.  However:
+there exists $0 < \delta'' < \delta'$ so that
+\[
+\absW{ \frac{1-g(c)/g(x)}{1-f(c)/f(x)}  - 1} < 
+\frac{\epsilon}{\abs{m} + \epsilon}
+\]
+whenever $0 < \abs{x - a} < \delta''$.  
+Then
+\begin{align*}
+\absW{\frac{f(x)}{g(x)} - m }
+&= \absW{\left( \frac{f'(\xi_x)}{g'(\xi_x)} -  m\right) + \frac{f'(\xi_x)}{g'(\xi_x)}  \left( \frac{1-g(c)/g(x)}{1-f(c)/f(x) } - 1 \right) }
+\\
+&\leq \epsilon + (\abs{m} + \epsilon) \frac{\epsilon}{\abs{m}+\epsilon}
+= 2\epsilon
+\end{align*}
+for $0 < \abs{x-a} < \delta''$.
+
+This proves
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = m
+=
+\lim_{x \to a} \frac{f'(x)}{g'(x)}\,.
+\]
+
+\begin{thebibliography}{XXXXXX}
+\bibitem{Spivak}
+Michael Spivak, \emph{Calculus}, 3rd ed. Publish or Perish, 1994.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

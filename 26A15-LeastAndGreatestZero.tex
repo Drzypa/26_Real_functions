@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeastAndGreatestZero}
+\pmcreated{2013-03-22 16:33:22}
+\pmmodified{2013-03-22 16:33:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{least and greatest zero}
+\pmrecord{6}{38742}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmsynonym{zeroes of continuous function}{LeastAndGreatestZero}
+%\pmkeywords{continuous real function}
+\pmrelated{ZeroesOfAnalyticFunctionsAreIsolated}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If a real function $f$ is continuous on the interval\, $[a,\,b]$\, and has zeroes on this interval, then $f$ has a least zero and a greatest zero.
+
+{\em Proof.}\, If\, $f(a) = 0$\, then the assertion concerning the least zero is true.\, Let's assume therefore, that\, $f(a) \neq 0$.\, 
+
+The set\, $A = \{x\in [a,\,b]\vdots\,\, f(x) = 0\}$\, is bounded from below since all numbers of $A$ are greater than $a$.\, Let the \PMlinkname{infimum}{InfimumAndSupremumForRealNumbers} of $A$ be $\xi$.\, Let us make the antithesis, that\, $f(\xi) \neq 0$.\, Then, by the continuity of $f$, there is a positive number $\delta$ such that
+$$f(x) \neq 0\quad \mathrm{always\,when}\,\,|x-\xi| < \delta.$$
+Chose a number $x_1$ between $\xi$ and $\xi\!+\!\delta$; then\, $f(x_1) \neq 0$,\, but this number $x_1$ is not a lower bound of $A$.\, Therefore there exists a member $a_1$ of $A$ which is less than $x_1$ ($\xi < a_1 < x_1$).\, Now\, $|a_1-\xi| < |x_1-\xi| < \delta$,\, whence this member of $A$ ought to satisfy that\, $f(a_1) = 0$.\, This \PMlinkescapetext{contains} a contradiction.\, Thus the antithesis is wrong, and\, $f(\xi) = 0$.
+
+This \PMlinkescapetext{means} that\, $\xi\in A$\, and $\xi$ is the least number of $A$.
+
+Analogically one shows that the supremum of $A$ is the greatest zero of $f$ on the interval.
+%%%%%
+%%%%%
+\end{document}

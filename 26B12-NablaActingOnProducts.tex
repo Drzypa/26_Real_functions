@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NablaActingOnProducts}
+\pmcreated{2013-03-22 15:27:05}
+\pmmodified{2013-03-22 15:27:05}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{nabla acting on products}
+\pmrecord{11}{37300}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{26B10}
+\pmrelated{Nabla}
+\pmrelated{NablaNabla}
+\pmdefines{gradient of vector}
+\pmdefines{divergence of dyad product}
+\pmdefines{curl of dyad product}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $f$, $g$ be differentiable scalar fields and $\vec{u}$, $\vec{v}$  differentiable vector fields in some domain of $\mathbb{R}^3$.\, There are following formulae:
+
+\begin{itemize}
+
+\item Gradient of a product function\\
+$\nabla(fg) = (\nabla f)g+(\nabla g)f$
+
+\item Divergence of a scalar-multiplied vector\\
+$\nabla\cdot(f\vec{u}) = (\nabla f)\cdot\vec{u}+(\nabla\cdot\vec{u})f$
+
+\item Curl of a scalar-multiplied vector\\
+$\nabla\!\times\!(f\vec{u}) = (\nabla f)\times\vec{u}+(\nabla\!\times\!\vec{u})f$
+
+\item Divergence of a vector product\\
+$\nabla\cdot(\vec{u}\!\times\!\vec{v}) = 
+  (\nabla\!\times\!\vec{u})\cdot\vec{v}-(\nabla\!\times\!\vec{v})\cdot\vec{u}$
+
+\item Curl of a vector product\\
+$\nabla\!\times\!(\vec{u}\!\times\!\vec{v}) = 
+(\vec{v}\cdot\nabla)\vec{u}-(\vec{u}\cdot\nabla)\vec{v}
+-(\nabla\cdot\vec{u})\vec{v}+(\nabla\cdot\vec{v})\vec{u}$
+
+\item Gradient of a scalar product\\
+$\nabla(\vec{u}\cdot\vec{v})\, =\, 
+(\vec{v}\cdot\nabla)\vec{u}+(\vec{u}\cdot\nabla)\vec{v}
++\vec{v}\!\times\!(\nabla\!\times\!\vec{u})
++\vec{u}\!\times\!(\nabla\!\times\!\vec{v})$\\
+or, using dyads,\\
+$\nabla(\vec{u}\cdot\vec{v}) = (\nabla\vec{u})\cdot\vec{v}+(\nabla\vec{v})\cdot\vec{u}$
+
+\item Gradient of a vector product\\
+$\nabla(\vec{u}\!\times\!\vec{v}) = (\nabla\vec{u})\!\times\!\vec{v}-(\nabla\vec{v})\!\times\!\vec{u}$
+
+\item Divergence of a dyad product\\
+$\nabla\cdot(\vec{u}\,\vec{v}) = 
+(\nabla\!\cdot\!\vec{u})\,\vec{v}+\vec{u}\cdot\nabla\vec{v}$
+
+\item Curl of a dyad product\\
+$\nabla\!\times\!(\vec{u}\,\vec{v}) = 
+(\nabla\!\times\!\vec{u})\,\vec{v}-\vec{u}\times\!\nabla\vec{v}$
+\end{itemize}
+
+\textbf{Explanations}
+\begin{enumerate}
+ \item $\vec{v}\cdot\nabla$ means the operator\, 
+$v_x\frac{\partial}{\partial x}+v_y\frac{\partial}{\partial y}
++v_z\frac{\partial}{\partial z}$.
+ \item The {\em gradient of a vector} $\vec{w}$ is defined as the dyad\, 
+$\nabla\vec{w} := \vec{i}\,\frac{\partial\vec{w}}{\partial x}
++\vec{j}\,\frac{\partial\vec{w}}{\partial y}
++\vec{k}\,\frac{\partial\vec{w}}{\partial z}$.
+ \item The {\em divergence} and the {\em curl} of a dyad product are defined by the equation\\
+$\nabla\!*\!(\vec{u}\vec{v}) := 
+\vec{i}\!*\!\frac{\partial(\vec{u}\vec{v})}{\partial x}
+\!+\!\vec{j}\!*\!\frac{\partial(\vec{u}\vec{v})}{\partial y}
+\!+\!\vec{k}\!*\!\frac{\partial(\vec{u}\vec{v})}{\partial z}$,\, where the asterisks are dots or crosses and the partial derivatives of the dyad product \PMlinkescapetext{mean} the expression\, 
+$\frac{\partial(\vec{u}\vec{v})}{\partial x} = 
+\frac{\partial\vec{u}}{\partial x}\vec{v}+
+\vec{u}\frac{\partial\vec{v}}{\partial x}$\, and so on.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

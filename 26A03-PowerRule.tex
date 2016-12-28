@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PowerRule}
+\pmcreated{2013-03-22 12:28:03}
+\pmmodified{2013-03-22 12:28:03}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{power rule}
+\pmrecord{7}{32630}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+\pmrelated{ProductRule}
+\pmrelated{Derivation}
+\pmrelated{Derivative}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\D}[1]{\ensuremath{\mathrm{d}#1}}
+\newcommand{\DDX}{\ensuremath{\frac{\D{}}{\D{x}}}}
+\begin{document}
+The \emph{power rule} states that
+
+\begin{equation*}
+\DDX x^p = px^{p-1}, \quad p \in \mathbb{R}
+\end{equation*}
+
+This rule, when combined with the chain rule, product rule, and sum rule,
+makes calculating many derivatives far more tractable.  This rule can be derived by repeated application of the product rule.
+See the \PMlinkname{proof of the power rule}{ProofOfPowerRule}.
+
+Repeated use of the above formula gives
+
+\begin{align*}
+\frac{d^i}{dx^i}x^k=
+\begin{cases}
+0&i>k\\
+\frac{k!}{(k-i)!}x^{k-i}&i\leq k,
+\end{cases}
+\end{align*}
+for $i,k\in\mathbb{Z}$.
+
+\subsection*{Examples}
+
+\begin{eqnarray*}
+\DDX x^0 & = & \frac{0}{x} = 0 = \DDX 1 \\
+\DDX x^1 & = & 1x^0 = 1 = \DDX x \\
+\DDX x^2 & = & 2x \\
+\DDX x^3 & = & 3x^2 \\
+\DDX \sqrt{x} & = & \DDX x^{1/2} = \frac{1}{2}x^{-1/2} = \frac{1}{2\sqrt{x}} \\
+\DDX 2x^e & = & 2ex^{e-1}
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

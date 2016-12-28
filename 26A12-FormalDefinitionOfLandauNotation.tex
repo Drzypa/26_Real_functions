@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FormalDefinitionOfLandauNotation}
+\pmcreated{2013-03-22 15:15:48}
+\pmmodified{2013-03-22 15:15:48}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{formal definition of Landau notation}
+\pmrecord{6}{37049}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A12}
+\pmsynonym{Landau notation}{FormalDefinitionOfLandauNotation}
+\pmsynonym{small o}{FormalDefinitionOfLandauNotation}
+\pmsynonym{big o}{FormalDefinitionOfLandauNotation}
+\pmsynonym{order of infinity}{FormalDefinitionOfLandauNotation}
+\pmsynonym{order of zero}{FormalDefinitionOfLandauNotation}
+\pmrelated{PropertiesOfOAndO}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+Let us consider a domain $D$ and an accumulation point $x_0\in \overline D$. Important examples are $D=\R$ and $x_0\in D$ or $D=\mathbb N$ and $x_0=+\infty$. Let $f\colon D\to \R$ be any function. We are going to define the spaces $o(f)$ and $O(f)$ which are families of real functions defined on $D$ and which depend on the point $x_0\in \overline D$. 
+
+Suppose first that there exists a neighbourhood $U$ of $x_0$ such that $f$ restricted to $U\cap D$ is always different from zero.
+We say that $g\in o(f)$  as $x\to x_0$ if
+\[
+  \lim_{x\to x_0} \frac{g(x)}{f(x)}=0.
+\]
+We say that $g \in O(f)$ as $x\to x_0$ if there exists a neighbourhood $U$ of $x_0$ such that 
+\[
+  \frac{g(x)}{f(x)} \text{is bounded if restricted to $D\cap U$}.
+\]
+In the case when $f\equiv 0$ in a neighbourhood of $x_0$, we define $o(f)=O(f)$ as the set of all functions $g$ which are null in a neighbourhood of $0$.
+
+The families $o$ and $O$ are usually called "small-o" and "big-o" or, sometimes,
+"small ordo", "big ordo".
+
+%%%%%
+%%%%%
+\end{document}

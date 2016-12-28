@@ -1,0 +1,169 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfComputingLimitsUsingTaylorExpansion}
+\pmcreated{2013-03-22 15:39:48}
+\pmmodified{2013-03-22 15:39:48}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{example of computing limits using Taylor expansion}
+\pmrecord{15}{37597}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+
+\newtheorem*{prob}{Problem}
+\begin{document}
+\PMlinkescapeword{sounds}
+\PMlinkescapeword{derivations}
+\PMlinkescapeword{sort}
+
+\begin{prob}
+Evaluate
+\[
+\lim_{x \to -\infty} \bigl( x + \sqrt{x^2 + 23 x} \bigr)\,.
+\]
+\end{prob}
+
+In beginners' courses in calculus, one is usually told to 
+rationalize the above expression by multiplying by $
+(x-\sqrt{x^2+ 23x})/(x-\sqrt{x^2+23 x})$.
+This approach is somewhat dissatisfying, because it depends
+on a specific \emph{algebraic} trick that works only for square roots
+ --- for example, it would have been more difficult or impossible to rationalize, if instead, we had a cube root or even a transcendental function   ---
+and this trick does not appeal to our intuition that
+$\sqrt{x^2 + 23 x}$ should be approximately 
+$\abs{x}$ for large $\abs{x}$.
+Fortunately, there  is another approach that
+exploits the \emph{analytic} properties of the functions involved.
+
+\PMlinkname{L'H\^{o}pital's Rule}{LHpitalsRule} is one analytic approach, 
+but in many cases, using Taylor expansion is even easier
+and straightforward. Essentially, Taylor expansion approximates 
+complicated functions by polynomials, whose limits are easy to evaluate.
+We illustrate the method below.
+
+First rewrite
+\[
+\lim_{x \to -\infty} \bigl(x+\sqrt{x^2 + 23 x} \bigr)
+= \lim_{x \to +\infty} \bigl(\sqrt{x^2 - 23 x} - x \bigr) \,,
+\]
+so  that we do not have to worry about the pesky negatives any more.
+Then, with the help of the binomial formula:
+\[
+(1+y)^{1/2} = 1 + \frac{1}{2} y + o(y)\,,\quad \textrm{as $y \to 0$,}
+\]
+(``$o$'' is Landau notation)
+we obtain:
+\begin{align*}
+\sqrt{x^2 - 23 x} - x  
+&= x \left( \sqrt{1 - \frac{23}{x}} - 1 \right) \\
+&= x \left( 1 - \frac{1}{2} \frac{23}{x} + o\left(\frac{23}{x}\right) - 1 \right)\,,
+\quad \textrm{as $x \to \infty$ (so $y = -\frac{23}{x} \to 0$)}\\
+&= -\frac{23}{2} + x \, o\left(\frac{23}{x}\right) \\
+&= -\frac{23}{2} + o(1)\,.
+\end{align*}
+Therefore
+\[
+\lim_{x \to -\infty} \bigl( x + \sqrt{x^2 + 23 x} \bigr) = \lim_{x\to\infty} \bigl( \sqrt{x^2 - 23 x} - x\bigr) = -\frac{23}{2}\,.
+\]
+
+\begin{prob}
+Evaluate 
+\[
+\lim_{x \to 0} \left( \frac{1}{\ln(1+ x)} - \frac{1}{\tan x} \right)\,.
+\]
+\end{prob}
+This example is admittedly artificial; it was made to be annoying to solve using
+L'H\^{o}pital's Rule alone, but much simpler if one knows how to use 
+the Taylor expansions:
+\begin{align*}
+\ln(1+x) &= x - \frac{1}{2} x^2 + o(x^2)\,, &  \text{as $x \to 0$, and} \\
+\tan x &= x + o(x^2)\,, & \text{as $x \to 0$.}
+\end{align*}
+So we compute:
+\begin{align*}
+\frac{1}{\ln (1 + x) } - \frac{1}{\tan x}
+= \frac{\tan x - \ln(1 + x)}{ \ln (1 + x) \tan x} 
+&= \frac{\bigl(x + o(x^2)\bigr) - \bigl( x - \frac{1}{2} x^2 + o(x^2) \bigr)}{ \ln(1+x) \tan x} \\
+&= \frac{\frac{1}{2} x^2 + o(x^2)}{\bigl(x + o(x) \bigr) \bigl( x + o(x) \bigr) } \\
+&= \frac{\frac{1}{2} + o(1)}{\bigl(1 + o(1) \bigr) \bigl(1+o(1) \bigr)} \\
+\end{align*}
+Therefore, 
+\[
+\lim_{x \to 0} \left( \frac{1}{\ln(1+ x)} - \frac{1}{\tan x} \right) = \frac{1}{2}\,.
+\]
+The reader might reasonably ask how
+did we know the right number of terms to use in the Taylor expansions.
+The answer is to guess.
+This is not as problematic as it sounds.  First, there is no harm
+in using more terms than necessary in the expansion (only that there is more writing).
+And if we used too few terms, we would know when we later encounter indeterminate forms such as $o(1)/x$ (as $x \to 0$) in our derivations.  If that happens, 
+it is not hard to go back and add the needed terms.
+
+Notice that all the essential information to evaluate the limit is contained in the first few derivatives of 
+the functions involved \emph{at particular points} --- in the  above example, 
+only at $x = 0$.
+This information can be obtained  by manipulating series, 
+unlike L'H\^{o}pital's Rule
+which necessitates computing the derivative \emph{functions} at all points.
+So even monstrous expressions like this one is tractable
+with Taylor expansion:
+\[
+\lim_{x \to 0} \left( \frac{1}{\ln(1+ \tan(\sin x))} - \frac{1}{e^{\sin(\tan x)}  -1 }\right)\,.
+\]
+
+On the other hand, there definitely are situations where 
+L'H\^{o}pital's Rule works but Taylor expansion does not: for instance,
+\[
+\lim_{x \to 0^+} x \ln x = \lim_{x \to 0^+} \frac{x}{1/\ln x}\,,
+\]
+because $1/\ln x$ cannot be expanded in a Taylor series about $x =0 $.
+
+\begin{prob}
+Here is a problem involving a different sort of limit:
+does the following series converge?
+\[
+\sum_{n=1}^\infty \arctan(n^{-1})
+\]
+\end{prob}
+Our intuition suggests that it does not, because 
+$\arctan (n^{-1})$ should be approximately $n^{-1}$, and $\sum_n n^{-1}$  diverges.
+However, the standard comparison test does not work
+because $\arctan x \leq x$ (for $x \geq 0$) has the inequality in the wrong direction.
+But with Taylor expansion the solution is a snap.
+By expanding
+\[
+\arctan x = x + O(x^3) \,, \quad \text{as $x \to 0$.}
+\]
+and summing both sides, we get
+\[
+\sum_{n=1}^\infty \arctan (n^{-1} ) = \sum_{n=1}^\infty n^{-1} + \sum_{n=1}^\infty O(n^{-3})\,.
+\]
+As $\sum_n O(n^{-3})$ converges (being dominated by $C\sum_n n^{-3}$ for some constant $C$), $\sum_n \arctan(n^{-1})$ must diverge (to $\infty$).
+
+(Of course, this problem could be solved by using the integral test,
+but who really wants to integrate $\int \arctan (1/x) \, dx$?)
+%%%%%
+%%%%%
+\end{document}

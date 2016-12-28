@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularityTheoremForTheLaplaceEquation}
+\pmcreated{2013-03-22 14:57:29}
+\pmmodified{2013-03-22 14:57:29}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{regularity theorem for the Laplace equation}
+\pmrecord{17}{36655}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Warning: This entry is still in the process of being written, hence is not yet \PMlinkescapetext{complete}.}
+
+Let $D$ be an open subset of $\mathbb{R}^n$.  Suppose that $f \colon D \to \mathbb{R}$ is twice differentiable and satisfies Laplace's equation.  Then $f$ has derivatives of all orders and is, in fact analytic.
+
+{\it Proof: \,}  Let ${\bf p}$ be any point of $D$.  We shall show that $f$ is analytic at ${\bf p}$.  Since $D$ is an open set, there must exist a real number $r > 0$ such that the closed ball of radius $r$ about ${\bf p}$ lies inside of $D$.
+
+Since $f$ satisfies Laplace's equation, we can express the value of $f$ inside this ball in terms of its values on the boundary of the ball by using Poisson's formula:
+ $$f({\bf x}) = {1 \over r^{n-1} A(n-1)} \int_{|{\bf y} - p| = r} f({\bf y}) {r^2 - |{\bf x} - {\bf p}|^2 \over |{\bf x} - {\bf y}|^n} \, d\Omega({\bf y})$$
+Here, $A(k)$ denotes the \PMlinkid{area of the $k$-dimensional sphere}{4495} and $d\Omega$ denotes the measure on the sphere of radius $r$ about ${\bf p}$.
+
+We shall show that $f$ is analytic by deriving a convergent power series for $f$.  From this, it will automatically follow that $f$ has derivatives of all orders, so a separate proof of this fact will not be necessary.  
+
+Since this involves manipulating power series in several variables, we shall make use of multi-index notation to keep the equations from becoming unnecessarily complicated and drowning in a plethora of indices.
+
+First, note that since $f$ is assumed to be twice differentiable in $D$, it is continuous in $D$ and, hence, since the sphere of radius $r$ about $s$ is compact, it attains a maximum on this sphere.  Let us denote this maxmum by $M$.  Next, let us consider the quantity
+ $${1 \over |{\bf x} - {\bf y}|^n}$$
+which appears in the integral.  We may write this quantity more explicitly as
+ $$\left( |{\bf y} - {\bf p}|^2 - 2 ({\bf x} - {\bf p}) \cdot ({\bf y} - {\bf p}) + |{\bf x} - {\bf p}|^2 \right)^{-{n \over 2}}.$$
+Since the values of the variable $y$ has been restricted by the condition $|{\bf y} - {\bf p}| = r$, we may rewrite this as
+ $${1 \over r^n} \left( 1 + {- 2({\bf x} - {\bf p}) \cdot ({\bf y} - {\bf p}) + |{\bf x} - {\bf p}|^2 \over r^2} \right)^{-{n \over 2}}.$$
+
+Assume that $|{\bf x} - {\bf p}| < r/4$.  Then we have 
+ $$\left| {- 2({\bf x} - {\bf p}) \cdot ({\bf y} - {\bf p}) + |{\bf x} - {\bf p}|^2 \over r^2} \right| \le {2 |({\bf x} - {\bf p}) \cdot ({\bf y} - {\bf p})| \over r^2} + {|{\bf x} - {\bf p}|^2 \over r^2} \le $$ 
+$${2 |{\bf x} - {\bf p}| \> |{\bf y} - {\bf p}| \over r^2} + \left( {|{\bf x} - {\bf p}| \over r} \right)^2 \le 2 \cdot {1 \over 4} + \left( {1 \over 4} \right)^2 = {9 \over 16} < 1.$$
+
+Since this absolute value is less than one, we may apply the binomial theorem to obtain the series
+ $${1 \over |{\bf x} - {\bf y}|^n} = {1 \over r^n} \left( 1 + {- 2({\bf x} - {\bf p}) \cdot ({\bf y} - {\bf p}) + |{\bf x} - {\bf p}|^2 \over r^2} \right)^{n \over 2} = $$
+$$\sum_{m = 0}^\infty {\left( {n \over 2} \right)^{\underline{m}} \over m!}  \left( {- 2({\bf x} - {\bf p}) \cdot ({\bf y} - {\bf p}) + |{\bf x} - {\bf p}|^2 \over r^2} \right)^m$$
+
+Note that each term in this sum is a polynomial in $x-p$.  The powers of the various components of $x-p$ that appear in the $m$-th term range between $m$ and $2m$.  Moreover, let us note that we can strengthen the assertion used to show that the binomial series converged by inserting absolute value bars.  If we write
+ $${- 2(x - p) \cdot (y - p) + |x - p|^2 \over r^2} = \sum_{k = 0}^n c_k (y) \> (x - p)_k + \sum_{k_1, k_2 = 0}^n c_{k_1 k_2} (y) \> (x - p)_{k_1} (x - p)_{k_2},$$
+(actually, the coefficients $c_{k_1 k_2}$ depend on $y$ trivially, but the dependence on $y$ has been indicated for the sake of uniformity) then
+ $$\sum_{k = 0}^n |c_k (y)| \> |(x - p)_k| + \sum_{k_1, k_2 = 0}^n |c_{k_1 k_2} (y)| \> |(x - p)_{k_1}| \> |(x - p)_{k_2}| \le {9 \over 16}.$$
+Raising this to the $m$-th power, we see that, if we define
+ $$\left( {- 2(x - p) \cdot (y - p) + |x - p|^2 \over r^2} \right)^m = \sum_{k_1, k_2, \ldots, k_m = 0}^n c_{k_1 k_2, \cdots k_m} (y) (x - p)_{k_1} (x - p)_{k_2} \cdots (x - p)_{k_m},$$
+then we have
+ $$\sum_{k_1, k_2, \ldots, k_m = 0}^n |c_{k_1 k_2, \cdots k_m} (y)| \> |(x - p)_{k_1}| \> |(x - p)_{k_2}| \cdots |(x - p)_{k_m}| \le \left( {9 \over 16} \right)^m$$
+Because of the fact that one may freely rearrange and regroup the terms in an absolutely convegent series, we may conclude that the expansion of $|x - y|^{-n}$ in powers of $x - p$ converges absolutely.  Furthermore, there exist constants $b_{k_1 k_2, \cdots k_m}$ such that the term involving $|(x - p)_{k_1}| \> |(x - p)_{k_2}| \cdots |(x - p)_{k_m}|$ in the power series is bounded by $b_{k_1 k_2, \cdots k_m}$.
+%%%%%
+%%%%%
+\end{document}

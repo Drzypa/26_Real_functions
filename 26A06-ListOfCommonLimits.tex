@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ListOfCommonLimits}
+\pmcreated{2014-02-23 10:09:07}
+\pmmodified{2014-02-23 10:09:07}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{pahio}{2872}
+\pmtitle{list of common limits}
+\pmrecord{29}{40107}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{2872}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A03}
+\pmclassification{msc}{26-00}
+\pmrelated{LimitRulesOfFunctions}
+\pmrelated{ImproperLimits}
+\pmrelated{LimitExamples}
+\pmrelated{HalleysFormula}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+Following is a list of common limits used in elementary calculus:
+
+\begin{itemize}
+\item For any real numbers $a$ and $c$,\, $lim_{x\to a} c=c$.
+\item For any real numbers $a$ and $n$,\, $\lim_{x\to a} x^n = a^n$\, 
+(proven \PMlinkname{here}{ContinuityOfNaturalPower} for $n$ a positive integer)
+\item $\lim_{x\to 0} \frac{\sin{x}}{x}=1$\, (proven \PMlinkname{here}{LimitOfDisplaystyleFracsinXxAsXApproaches0})
+\item $\lim_{x\to 0} \frac{1-\cos{x}}{x}=0$\, (proven \PMlinkname{here}{LimitOfDisplaystyleFrac1CosXxAsXApproaches0})
+\item $\lim_{x\to 0} \frac{\arcsin{x}}{x}=1$\, (proven \PMlinkname{here}{LimitExamples})
+\item $\lim_{x\to 0} \frac{e^x-1}{x}=1$\, (proven \PMlinkname{here}{DerivativeOfExponentialFunction})
+\item For $a>0$,\, $\lim_{x\to 0} \frac{a^x-1}{x}=\ln a$ (proven \PMlinkname{here}{LimitOfDisplaystyleFracax1xAsXApproaches0}).
+\item For $b>1$ and $a$ any real number,\, $\lim_{x\to\infty}\frac{x^a}{b^x} = 0$\, (proven \PMlinkname{here}{GrowthOfExponentialFunction}).
+\item $\lim_{x\to 0^+} x^x = 1$\, (proven \PMlinkname{here}{FunctionXx})
+\item $\lim_{x\to 0^+} x\ln{x} = 0$\, (proven \PMlinkname{here}{GrowthOfExponentialFunction})
+\item $\lim_{x\to\infty} \frac{\ln{x}}{x} = 0$\, (proven \PMlinkname{here}{GrowthOfExponentialFunction})
+\item $\lim_{x\to\infty} x^\frac{1}{x} = 1$\, (proven \PMlinkname{here}{GrowthOfExponentialFunction})
+\item $\lim_{x\to\pm\infty}\left(1+\frac{1}{x}\right)^x = e$
+\item $\lim_{x\to 0}\left(1+x\right)^\frac{1}{x} = e$
+\item $\lim_{x\to 0}(1+\sin{x})^\frac{1}{x} = e$\, (power of $e$, \PMlinkname{l'H\^{o}pital's rule}{LHpitalsRule})
+\item $\lim_{x\to\infty}(x-\sqrt{x^2-a^2}) = 0$\, (proven \PMlinkname{here}{Hyperbola})
+\item For $a>0$ and $n$ a positive integer,\, $\lim_{x\to a} \frac{x-a}{x^n-a^n}= \frac{1}{na^{n-1}}$.
+\item $\lim_{x\to 0} \frac{\tan x-\sin x}{x^3}= \frac{1}{2}$\, (by \PMlinkname{l'H\^{o}pital's rule}{LHpitalsRule})
+\item For $q > 0$, $\lim_{x \to \infty} \frac{(\log x)^p}{x^q} = 0$
+\item $\tan\left(x+\frac{\pi}{2}\right)=\lim_{\xi\to\frac{\pi}{2}}\frac{\tan x+\tan\xi}{1-\tan x\tan\xi}=
+\lim_{\xi\to\frac{\pi}{2}}\frac{\sec^2\xi}{-\tan x\sec^2\xi}=-\cot x$ \,\,
+(by\, \PMlinkname{l'H\^{o}pital's rule}{LHpitalsRule}) \\
+That is, $\tan x\tan(x+\frac{\pi}{2})=-1$, which indicates orthogonality of the slopes represented by those functions.
+\item For a real or complex constant $c$ and a variable $z$, \\
+$\lim_{n\to\infty} \frac{n^{n+1}}{z^{n+1}}\left(c+\frac{n}{z}\right)^{-(n+1)}=e^{-cz}.$
+\item For $x$ real (or complex),\, $\lim_{n\to\infty} n(\sqrt[n]{x}-1) = \log{x}$\, (proven \PMlinkname{here}{HalleysFormula} for real $x$).
+\end{itemize}
+
+\PMlinkescapetext{Feel free to add!  Also, if the limit you decide to add is proven somewhere on} PlanetMath, \PMlinkescapetext{please provide a link.  Thanks.}
+
+\begin{thebibliography}{1}
+\bibitem{cr} Catherine Roberts \& Ray McLenaghan, ``Continuous Mathematics'' in {\it Standard Mathematical Tables and Formulae} ed. Daniel Zwillinger. Boca Raton: CRC Press (1996): 333, 5.1 Differential Calculus
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulersSubstitutionsForIntegration}
+\pmcreated{2013-03-22 17:19:43}
+\pmmodified{2013-03-22 17:19:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Euler's substitutions for integration}
+\pmrecord{15}{39681}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmsynonym{integration of expressions of square roots of quadratic polynomials}{EulersSubstitutionsForIntegration}
+%\pmkeywords{square root of quadratic polynomial}
+\pmrelated{IntegrationOfRationalFunctionOfSineAndCosine}
+\pmrelated{Tractrix}
+\pmrelated{Arsinh}
+\pmrelated{Arcosh}
+\pmdefines{Euler's substitutions}
+\pmdefines{substitutions of Euler}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arcoth}{arcoth}
+\begin{document}
+In the integration task
+               $$\int\!R(x,\,\sqrt{ax^2+bx+c})\,dx,$$
+where the integrand is a rational function of $x$ and $\sqrt{ax^2+bx+c}$, the integrand can be changed to a rational function of a new variable $t$ by using the following substitutions of Euler.
+
+\begin{itemize}
+
+\item \textbf{The first substitution of Euler.}\; If\, $a > 0$,\, we may write
+\begin{align}
+               \sqrt{ax^2+bx+c} \;=\; \pm x\sqrt{a}+t.
+\end{align}
+When we take $\sqrt{a}$ with the minus sign, then
+$$ax^2+bx+c \;=\; ax^2-2xt\sqrt{a}+t^2,$$
+from which we get the expression
+$$x \;=\; \frac{t^2-c}{b+2t\sqrt{a}};$$
+thus also $dx$ is expressible rationally via $t$.  We have
+$$\sqrt{ax^2+bx+c} \;=\; -x\sqrt{a}+t \;=\; \frac{c-t^2}{b+2t\sqrt{a}}\sqrt{a}+t.$$
+
+\item \textbf{The second substitution of Euler.}\; If\, $c > 0$,\, we take
+\begin{align}
+                \sqrt{ax^2+bx+c} \;=\; xt\pm\sqrt{c}.
+\end{align}
+With the minus sign we obtain, similarly as above,
+$$x \;=\; \frac{2t\sqrt{c}+b}{t^2-a}.$$
+
+\item \textbf{The third substitution of Euler.}\; If the polynomial $ax^2\!+\!bx\!+\!c$ has the real zeros $\alpha$ and $\beta$, we may chose
+\begin{align}
+\sqrt{ax^2\!+\!bx\!+\!c} \;=\; (x\!-\!\alpha)t.
+\end{align}
+Now
+$$ax^2\!+\!bx\!+\!c \;=\; a(x\!-\!\alpha)(x\!-\!\beta) \;=\; (x\!-\!\alpha)^2t^2,$$
+whence\, $a(x\!-\!\beta) = (x\!-\!\alpha)t^2$.  This gives the expression
+$$x \;=\; \frac{a\beta\!-\!\alpha t^2}{a\!-\!t^2}.$$
+As in the preceding cases, we can express $dx$ and $\sqrt{ax^2\!+\!bx\!+\!c}$ rationally via $t$.
+
+\end{itemize}
+
+\textbf{Examples.}
+
+\textbf{1.}  In the integral $\displaystyle\int\!\frac{dx}{\sqrt{x^2+c}}$ we can use the first substitution:\, $\sqrt{x^2+c} = -x+t$;\, then\, $x^2+c = x^2-2xt+t^2$\, and thus
+$$x \;=\; \frac{t^2-c}{2t},\quad dx \;=\; \frac{t^2+c}{2t^2}\,dt,\quad \sqrt{x^2+c} \;=\; -\frac{t^2-c}{2t}+t \;=\; \frac{t^2+c}{2t}.$$
+Accordingly we obtain
+$$\int\!\frac{dx}{\sqrt{x^2+c}} \;=\; \int\!\frac{\frac{t^2+c}{2t^2}dt}{\frac{t^2+c}{2t}} \;=\; \int\!\frac{dt}{t} 
+\;=\; \ln|t|+C \;=\; \ln|x+\sqrt{x^2+c}|+C.$$
+Especially the cases \,$c = \pm1$\, give the formulas
+$$\int\!\frac{dx}{\sqrt{x^2+1}} \;=\; \arsinh{x}+C,  \quad \int\!\frac{dx}{\sqrt{x^2-1}} \;=\; \arcosh{x}+C \;\; 
+(x > 1).$$ 
+
+\textbf{2.}  The integral $\displaystyle\int\!\frac{\sqrt{c^2-x^2}}{x}\,dx$ is needed in deriving the equation of the tractrix.  We use for integrating the second substitution\, 
+$\sqrt{c^2-x^2} = xt-c$;\, then\, $c^2-x^2 = x^2t^2-2cxt+c^2$, which implies
+$$x \;=\; \frac{2ct}{t^2+1},\quad dx \;=\; \frac{2c(1-t^2)dt}{(1+t^2)^2},\quad 
+\sqrt{c^2-x^2} \;=\; \frac{2ct^2}{t^2+1}-c \;=\; \frac{c(t^2-1)}{t^2+1}.$$ 
+We then obtain
+$$\int\!\frac{\sqrt{c^2-x^2}}{x}\,dx \;=\; -c\int\!\frac{(1-t^2)^2}{t(1+t^2)^2}\,dt \;=\; 
+c\int\!\left(\frac{4t}{(1+t^2)^2}-\frac{1}{t}\right)dt \;=\; -\frac{2c}{1+t^2}-c\ln|t|+C_1.$$
+The equation tying $x$ and $t$ gives\, $\frac{2c}{1+t^2} = \frac{x}{t}$\, and\, $t = \frac{c+\sqrt{c^2-x^2}}{x}$,\, whence
+$$\int\!\frac{\sqrt{c^2-x^2}}{x}\,dx \;=\; -\frac{x^2}{c+\sqrt{c^2-x^2}}-c\ln\frac{c+\sqrt{c^2-x^2}}{x}+C_1 \;=\; 
+-c+\sqrt{c^2-x^2}-c\ln\frac{c+\sqrt{c^2-x^2}}{x}+C_1,$$
+i.e. 
+$$\int\!\frac{\sqrt{c^2-x^2}}{x}\,dx \;=\; \sqrt{c^2-x^2}-c\ln\frac{c+\sqrt{c^2-x^2}}{x}+C.$$
+
+\textbf{3.}  In the integral $\displaystyle\int\!\frac{dx}{\sqrt{x^2+3x-4}}$, the radicand is $(x+4)(x-1)$.  Using the third substitution of Euler, we take\, $\sqrt{x^2+4x-3} = (x+4)t$.  This simplifies to\, $x-1 = (x+4)t^2$.  Then we get
+$$x \;=\; \frac{1+4t^2}{1-t^2},\quad dx \;=\; \frac{10t}{(1-t^2)^2}\,dt,\quad 
+\sqrt{x^2+3x-4} \;=\; \left(\frac{1+4t^^2}{1-t^2}+4\right)t \;=\; \frac{5t}{1-t^2}.$$
+And we obtain
+$$\int\!\frac{dx}{\sqrt{x^2+3x-4}} \;=\; \int\!\frac{10t(1-t^2)}{(1-t^2)^2\cdot5t}\,dt \;=\; \int\!\frac{2}{1-t^2}\,dt
+= \ln\left|\frac{1+t}{1-t}\right|+C \;=\;
+ \ln\left|\frac{1+\sqrt{\frac{x-1}{x+4}}}{1-\sqrt{\frac{x-1}{x+4}}}\right|+C$$
+$$=\; \ln\left|\frac{\sqrt{x+4}+\sqrt{x-1}}{\sqrt{x+4}-\sqrt{x-1}}\right|+C.$$
+
+
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc N. Piskunov:} {\em Diferentsiaal- ja integraalarvutus k\~{o}rgematele tehnilistele \~{o}ppeasutustele}.  Viies, t\"aiendatud tr\"ukk.\, Kirjastus ``Valgus'', Tallinn  (1965).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

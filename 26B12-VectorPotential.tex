@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorPotential}
+\pmcreated{2013-03-22 15:42:54}
+\pmmodified{2013-03-22 15:42:54}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{vector potential}
+\pmrecord{8}{37662}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmrelated{IntegrationWithRespectToSurfaceArea}
+\pmrelated{LaminarField}
+\pmrelated{KalleVaisala}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let\, $\vec{U} = \vec{U}(x,\,y,\,z)$\, be a vector field in $\mathbb{R}^3$ with continuous partial derivatives.\, Then the following three conditions are \PMlinkname{equivalent}{Equivalent3}:
+\begin{itemize}
+ \item The surface integrals of $\vec{U}$ over all contractible \PMlinkname{closed surfaces}{Sphere} $S$ vanish:
+$$\oint_S\vec{U}\cdot d\vec{S} = 0$$
+ \item The divergence of $\vec{U}$ vanishes everywhere in the \PMlinkname{field}{VectorField}:
+$$\nabla\!\cdot\!\vec{U} = 0$$
+ \item There exists the {\em vector potential}\, $\vec{A} = \vec{A}(x,\,y,\,z)$\, of $\vec{U}$:
+$$\nabla\!\times\!\vec{A} = \vec{U}$$
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{VV}{\sc K. V\"ais\"al\"a:} {\em Vektorianalyysi}. \,Werner S\"oderstr\"om Osakeyhti\"o, Helsinki (1961).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

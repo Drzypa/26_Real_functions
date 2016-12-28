@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApplicationOfCauchySchwarzInequality}
+\pmcreated{2013-03-22 18:59:42}
+\pmmodified{2013-03-22 18:59:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{application of Cauchy--Schwarz inequality}
+\pmrecord{5}{41862}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{26A06}
+\pmsynonym{application of Cauchy-Schwarz inequality}{ApplicationOfCauchySchwarzInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+In determining the perimetre of ellipse one encounters the elliptic integral
+$$\int_0^{\frac{\pi}{2}}\!\!\sqrt{1-\varepsilon^2\sin^2t}\;dt,$$
+where the parametre $\varepsilon$ is the eccentricity of the ellipse ($0 \leqq \varepsilon < 1$).\, A good upper bound for the integral is obtained by utilising the \PMlinkid{Cauchy--Schwarz inequality}{1628} 
+$$\left|\int_a^bfg\right| \;\leqq\; \sqrt{\int_a^bf^2}\,\sqrt{\int_a^bg^2}$$
+choosing in it\, $f(t) := 1$\, and\, $g(t) := \sqrt{1-\varepsilon^2\sin^2t}$.\, Then we get
+\begin{align*}
+0 \;<\; \int_0^{\frac{\pi}{2}}\!\!\sqrt{1-\varepsilon^2\sin^2t}\;dt
+&\;\leqq\; \sqrt{\int_0^{\frac{\pi}{2}}1^2\,dt}\sqrt{\int_0^{\frac{\pi}{2}}\left(1-\varepsilon^2\sin^2t\right)\,dt}\\
+&\;=\;\sqrt{\frac{\pi}{2}}\sqrt{\int_0^{\frac{\pi}{2}}\left(1-\varepsilon^2\cdot\frac{1-\cos2t}{2}\right)\,dt}\\ 
+&\;=\; \frac{\pi}{2}\sqrt{1-\frac{\varepsilon^2}{2}}.
+\end{align*}
+Thus we have the estimation
+$$\int_0^{\frac{\pi}{2}}\!\!\sqrt{1-\varepsilon^2\sin^2t}\;dt
+    \;\leqq\; \frac{\pi}{2}\sqrt{1-\frac{\varepsilon^2}{2}}.$$
+It is the better approximation for the perimetre of ellipse the smaller is its eccentricity, i.e. the closer the ellipse is to circle.\, The accuracy is $O(\varepsilon^4)$
+
+%%%%%
+%%%%%
+\end{document}

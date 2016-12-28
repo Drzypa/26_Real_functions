@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EIsTranscendental}
+\pmcreated{2013-03-22 15:10:32}
+\pmmodified{2013-03-22 15:10:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{e is transcendental}
+\pmrecord{40}{36929}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C05}
+\pmclassification{msc}{11J82}
+\pmclassification{msc}{11J81}
+\pmsynonym{$e$ is transcendental}{EIsTranscendental}
+\pmsynonym{transcendence of e}{EIsTranscendental}
+\pmrelated{NaturalLogBase}
+\pmrelated{FundamentalTheoremOfTranscendence}
+\pmrelated{LindemannWeierstrassTheorem}
+\pmrelated{EIsIrrational}
+\pmrelated{ErIsIrrationalForRinmathbbQsetminus0}
+\pmrelated{ExampleOfTaylorPolynomialsForTheExponentialFunction}
+\pmrelated{ProofThatEIsNotANaturalNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\begin{thmplain}
+\,\, Napier's constant $e$ is transcendental.
+\end{thmplain}
+
+This theorem was first proved by Hermite in 1873.\, The below proof is near the one given by Hurwitz.\, We at first derive a couple of auxiliary results.
+
+Let $f(x)$ be any polynomial of \PMlinkescapetext{degree} $\mu$ and $F(x)$ the sum of its derivatives,
+\begin{align}
+F(x) \;:=\; f(x)+f'(x)+f''(x)+\ldots+f^{(\mu)}(x).
+\end{align}
+consider the product\, $\Phi(x) := e^{-x}F(x)$.\, The derivative of this is simply
+$$\Phi'(x) \;\equiv\; e^{-x}(F'(x)-F(x)) \;\equiv\; -e^{-x}f(x).$$
+Applying the \PMlinkname{mean value theorem}{MeanValueTheorem} to the function $\Phi$ on the interval with end points 0 and $x$ gives
+$$\Phi(x)-\Phi(0) \;=\; e^{-x}F(x)-F(0) \;=\; \Phi'(\xi)x \;=\; -e^{-\xi}f(\xi)x,$$
+which implies that\, $F(0) = e^{-x}F(x)+e^{-\xi}f(\xi)x$.\, Thus we obtain the
+
+\textbf{Lemma 1.}\, $F(0)e^x = F(x)+xe^{x-\xi}f(\xi)$\quad ($\xi$ is between 0 and $x$)
+
+When the polynomial $f(x)$ is expanded by the powers of $x\!-\!a$, one gets
+$$f(x) \;\equiv\; f(a)+f'(a)(x\!-\!a)+f''(a)\frac{(x\!-\!a)^2}{2!}+\ldots+
+f^{(\mu)}(a)\frac{(x\!-\!a)^{\mu}}{\mu!};$$
+comparing this with (1) one gets the 
+
+\textbf{Lemma 2.}\, The value $F(a)$ is obtained so that the polynomial $f(x)$ is expanded by the powers of $x\!-\!a$ and in this \PMlinkescapetext{expansion} the powers $x\!-\!a$, $(x\!-\!a)^2$, \ldots, $(x\!-\!a)^{\mu}$ are replaced respectively by the numbers 1!, 2!,\,\ldots,\,$\mu!$.
+
+Now we begin the proof of the theorem.\, We have to show that there cannot be any equation
+\begin{align}
+c_0+c_1e+c_2e^2+\ldots+c_ne^n \;=\; 0
+\end{align}
+with integer coefficients $c_i$ and at least one of them distinct from zero.\, The proof is indirect.\, Let's assume the contrary.\, We can presume that\, $c_0 \neq 0$.
+
+For any positive integer $\nu$, lemma 1 gives
+\begin{align}
+F(0)e^{\nu} \;=\; F(\nu)+\nu e^{\nu-\xi_{\nu}}f(\xi_{\nu})
+\quad(0 < \xi_{\nu} < \nu).
+\end{align}
+By virtue of this, one may write (2), multiplied by $F(0)$, as
+\begin{align}
+c_0F(0)\!+\!c_1F(1)\!+\!c_2F(2)\!+\!\ldots\!+\!c_nF(n) \;=\;
+-[c_1e^{1-\xi_1}f(\xi_1)\!+\!2c_2e^{2-\xi_2}f(\xi_2)\!+\ldots+nc_ne^{n-\xi_n}f(\xi_n)].
+\end{align}
+We shall show that the polynomial $f(x)$ can be chosen such that the left \PMlinkescapetext{side of (4) is a non-zero integer whereas the right side} has absolute value less than 1.
+
+We choose
+\begin{align}
+f(x) \;:=\; \frac{x^{p-1}}{(p-1)!}[(x\!-\!1)(x\!-\!2)\cdots(x\!-\!n)]^p,
+\end{align}
+where $p$ is a positive prime number on which we later shall set certain conditions.\, We must determine the corresponding values $F(0)$, $F(1)$, \ldots, $F(n)$.
+
+For determining $F(0)$ we need, according to lemma 2, to expand $f(x)$ by the powers of $x$, getting
+$$f(x) \;=\; \frac{1}{(p\!-\!1)!}[(-1)^{np}n!^px^{p-1}+A_1x^p+A_2x^p+1+\ldots]$$
+where $A_1,\,A_2,\,\ldots$ are integers, and to replace the powers $x^{p-1}$, $x^p$, $x^{p+1}$, ... with the numbers $(p\!-\!1)!$, $p!$, $(p\!+\!1)!$, \ldots\, We then get the expression
+$$F(0) \;=\; \frac{1}{(p\!-\!1)!}[(-1)^{np}n!^p(p\!-\!1)!+A_1p!+A_2(p\!+\!1)!+\ldots] 
+\;=\; (-1)^{np}n!^p+pK_0,$$
+in which $K_0$ is an integer.
+
+We now set for the prime $p$ the condition\, $p > n$.\, Then, $n!$ is not divisible by $p$, neither is the former addend $(-1)^{np}n!^p$.\, On the other hand, the latter addend $pK_0$ is divisible by $p$.\, Therefore:\\
+($\alpha$)\quad $F(0)$ is a non-zero integer not divisible by $p$.
+
+For determining $F(1)$, $F(2)$, \ldots, $F(n)$ we expand the polynomial $f(x)$ by the powers of $x\!-\!\nu$, putting \,$x := \nu\!+\!(x\!-\!\nu)$.\, Because $f(x)$ \PMlinkescapetext{contains} the factor $(x\!-\!\nu)^p$, we obtain an \PMlinkescapetext{expansion} of the form
+$$f(x) \;=\;
+\frac{1}{(p\!-\!1)!}[B_p(x\!-\!\nu)^p+B_{p+1}(x\!-\!\nu)^{p+1}+\ldots],$$
+where the $B_i$'s are integers.\, Using the lemma 2 then gives the result
+$$F(\nu) \;=\; \frac{1}{(p\!-\!1)!}[p!B_p+(p\!+\!1)!B_{p+1}+\ldots] \;=\; pK_{\nu},$$
+with $K_{\nu}$ a certain integer.\, Thus:\\
+($\beta$)\quad $F(1)$, $F(2)$, \ldots, $F(n)$ are integers all divisible by $p$.
+
+So, the left hand \PMlinkescapetext{side} of (4) is an integer having the form $c_0F(0)+pK$ with $K$ an integer.\, The factor $F(0)$ of the first addend is by ($\alpha$) indivisible by $p$.\, If we set for the prime $p$ a new requirement\, $p > |c_0|$,\, then also the factor $c_0$ is indivisible by $p$, and thus likewise the whole addend $c_0F(0)$.\, We conclude that the sum is not divisible by $p$ and therefore:\\
+($\gamma$)\quad If $p$ in (5) is a prime number greater than $n$ and $|c_0|$, then the left \PMlinkescapetext{side} of (4) is a nonzero integer.
+
+We then examine the right hand \PMlinkescapetext{side} of (4).\, Because the numbers $\xi_1$, ..., $\xi_n$ all are positive (cf. (3)), so the \PMlinkescapetext{exponential factors} $e^{1-\xi_1}$, ..., $e^{n-\xi_n}$ all are $< e^n$.\, If\, $0 < x < n$, then in the polynomial (5) the factors $x$,
+$x\!-\!1$, \ldots, $x\!-\!n$ all have the absolute value less than $n$ and thus
+$$|f(x)| \;<\; \frac{1}{(p\!-\!1)!}n^{p-1}(n^n)^p = n^n\cdot\frac{(n^{n+1})^{p-1}}{(p\!-\!1)!}.$$
+Because $\xi_1$, \ldots, $\xi_n$ all are between 0 and $n$ (cf. (3)), we especially have
+$$|f(\xi_{\nu})| \;<\; n^n\cdot\frac{(n^{n+1})^{p-1}}{(p\!-\!1)!}
+\quad\forall \,\nu = 1,\,2,\,\ldots,\,n.$$
+If we denote by $c$ the greatest of the numbers $|c_0|$, $|c_1|$, \ldots, $|c_n|$, then the right hand \PMlinkescapetext{side} of (4) has the absolute value less than
+$$(1\!+\!2\!+\!\ldots\!+\!n)ce^nn^n\cdot\frac{(n^{n+1})^{p-1}}{(p\!-\!1)!}
+\;=\; \frac{n(n\!+\!1)}{2}c(en)^n\cdot\frac{(n^{n+1})^{p-1}}{(p\!-\!1)!}.$$
+But the limit of $\frac{(n^{n+1})^{p-1}}{(p\!-\!1)!}$ is 0 as\, $p\to\infty$, and therefore the above expression is less than 1 as soon as $p$ exeeds some number $p_0$.
+
+If we determine the polynomial $f(x)$ from the equation (5) such that the prime $p$ is greater than the greatest of the numbers $n$, $|c_0|$ and $p_0$ (which is possible since there are \PMlinkname{infinitely many prime numbers}{ProofThatThereAreInfinitelyManyPrimes}), then the \PMlinkescapetext{left side of (4) is a non-zero integer and thus $\geqq 1$, whereas the right side} having the absolute value $< 1$.\, The contradiction proves that the theorem is right.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset I}.\, WSOY, Helsinki (1950).
+\end{thebibliography} 
+
+
+%%%%%
+%%%%%
+\end{document}

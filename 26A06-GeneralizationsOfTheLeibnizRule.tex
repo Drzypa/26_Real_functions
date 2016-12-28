@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizationsOfTheLeibnizRule}
+\pmcreated{2013-03-22 14:30:18}
+\pmmodified{2013-03-22 14:30:18}
+\pmowner{GeraW}{6138}
+\pmmodifier{GeraW}{6138}
+\pmtitle{generalizations of the Leibniz rule}
+\pmrecord{13}{36042}
+\pmprivacy{1}
+\pmauthor{GeraW}{6138}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{Leibniz rule}{GeneralizationsOfTheLeibnizRule}
+\pmrelated{MultinomialTheorem}
+\pmrelated{NthDerivativeOfADeterminant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\begin{document}
+For the derivative, the product rule
+$$
+   (fg)' = f'g + fg'
+$$
+is known as the \emph{Leibniz rule}. Below are various ways it
+can be generalized. 
+
+\subsubsection*{Higher derivatives}
+Let $f,g$ be real (or complex)
+functions defined on an open interval of $\sR$. If
+$f$ and $g$ are $k$ times differentiable, then
+$$
+   (fg)^{(k)} = \sum_{r=0}^k {k \choose r} f^{(k-r)} g^{(r)}.
+$$
+
+\subsubsection*{Generalized Leibniz rule for more functions}
+Let $f_1,\ldots,f_r$ be real (or complex) valued functions 
+that are defined on an open interval of $\mathbb{R}$.
+If $f_1,\ldots,f_r$  are $n$ times differentiable, then
+$$
+   \frac{d^n}{dt^n}\prod_{i=1}^rf_i(t) = \sum_{n_1+\cdots+n_r=n} {n \choose n_1,n_2,\ldots,n_r} \prod_{i=1}^r \frac{d^{n_i}}{dt^{n_i}}f_i(t).
+$$
+where ${n \choose n_1,n_2,\ldots,n_r}$ is the multinomial coefficient.
+
+
+\subsubsection*{Leibniz rule for multi-indices}
+If $f,g:\sR^n \to \sR$ are smooth functions defined on an 
+open set of $\sR^n$, and $j$ is a multi-index, then
+$$ \partial^j(fg) = \sum_{i\le j} {j \choose i} \partial^i(f)\, \partial^{j-i}(g),$$
+where $i$ is a multi-index.
+
+\begin{thebibliography}{3}
+\bibitem{Leibniz}
+Leibniz, Gottfried W. {\it Symbolismus memorabilis calculi Algebraici et Infinitesimalis, in comparatione potentiarum et differentiarum; et de Lege Homogeneorum Transcendentali}, Miscellanea Berolinensia ad incrementum 
+scientiarum, ex scriptis Societati Regiae scientarum pp. 160-165 (1710).
+Available online at the \PMlinkexternal{digital library of the 
+Berlin-Brandenburg Academy}{
+http://bibliothek.bbaw.de/bibliothek-digital/digitalequellen/schriften/anzeige/index_html?band=01-misc/1&seite:int=184}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

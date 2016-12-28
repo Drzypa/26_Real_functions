@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AsymptoteOfLamesCubic}
+\pmcreated{2013-03-22 17:54:34}
+\pmmodified{2013-03-22 17:54:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{asymptote of Lam\'e's cubic}
+\pmrecord{7}{40403}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C05}
+\pmclassification{msc}{53A04}
+\pmrelated{Hyperbola}
+\pmrelated{WitchOfAgnesi}
+\pmrelated{ConicSection}
+\pmdefines{Lam\'e's cubic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We will show that the {\em Lam\'e's cubic} 
+\begin{align}
+x^3+y^3 = a^3,
+\end{align}
+where $a$ is a positive \PMlinkescapetext{constant}, has the line
+$$y = \underbrace{-x}_{g(x)}$$
+as its asymptote.\\
+
+Because the equation (1) of the curve is symmetric with respect to $x$ and $y$, the curve is symmetric about the line \,$y = x$.\, From the solved form
+\begin{align}
+y = \underbrace{\sqrt[3]{a^3-x^3}}_{f(x)}
+\end{align}
+of (1) we see that every real value of $x$ gives one point of the curve. 
+
+\begin{center}
+\begin{pspicture}(-4,-4)(4,4)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-3.5,-3.5)(3.5,3.5)
+\rput(3.6,-0.2){$x$}
+\rput(0.2,3.5){$y$}
+\psdot[linecolor=blue](1,0)
+\psdot[linecolor=blue](0,1)
+\rput(1.13,-0.17){$a$}
+\rput(-0.17,1.13){$a$}
+\psline[linecolor=cyan](-3.5,3.5)(3.5,-3.5)
+\psline[linestyle=dashed](-3.5,-3.5)(3.5,3.5)
+\psplot[linecolor=blue]{-3.5}{1}{1 x 3 exp sub 1 3 div exp}
+\psplot[linecolor=blue]{1}{3.5}{0 x 3 exp 1 sub 1 3 div exp sub}
+\rput(0.5,-4){Lam\'e's cubic\, $y = \sqrt[3]{a^3-x^3}$\, (blue)}
+\end{pspicture}
+\end{center}
+
+The difference \,$\Delta = f(x)\!-\!g(x)$\, \PMlinkescapetext{represents} the distance of a point \,$(x,\,y)$\, of the curve and the point of the asserted asymptote\, $y = -x$\, with the same abscissa $x$.\, We multiply the numerator and denominator with the expression \,$(\sqrt[3]{a^3-x^3})^2-x\sqrt[3]{a^3-x^3}+x^2$ for being able to utilise the polynomial formula
+$$(u+v)(u^2-uv+v^2) = u^3+v^3,$$  
+getting
+\begin{align*}
+\Delta &= f(x)\!-\!g(x)\\
+       &= \frac{\sqrt[3]{a^3-x^3}+x}{1}\\
+       &= \frac{(\sqrt[3]{a^3-x^3})^3+x^3}{(\sqrt[3]{a^3-x^3})^2-x\sqrt[3]{a^3-x^3}+x^2}\\
+       &= \frac{a^3}{(\sqrt[3]{a^3-x^3})^2-x\sqrt[3]{a^3-x^3}+x^2}. 
+\end{align*}
+Thus,\, $\displaystyle \Delta \to \frac{a^3}{\infty+\infty+\infty} = 0$\; when\; $ |x| \to \infty$\; (see the improper limits).\, According to the definition of \PMlinkname{asymptote}{Asymptote}, the line\, $y = -x$\, is asymptote of Lam\'e's cubic.  
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuityOfSineAndCosine}
+\pmcreated{2013-03-22 19:15:37}
+\pmmodified{2013-03-22 19:15:37}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{continuity of sine and cosine}
+\pmrecord{4}{42189}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, The real functions \;$x\mapsto\sin{x}$\; 
+and\; $x\mapsto\cos{x}$\; are continuous at every real number $x$.\\
+
+{\em Proof.}\, Let $\varepsilon$ be an arbitrary positive number.\, 
+Denote\, $\Delta\sin{x} =: \sin{z}-\sin{x}$,\, 
+$\Delta\cos{x} =: \cos{z}-\cos{x}$\, where we suppose that\, 
+$|z-x| < \frac{\pi}{2}$.\, We may interpret $|z-x|$ as an arc 
+of the unit circle of the $xy$-plane.\, Let's think in the 
+circle the right triangle with hypotenuse the chord of the arc and 
+the catheti (i.e. the shorter sides) vertical and horizontal.\, Then 
+$|\Delta\sin{x}|$ and $|\Delta\cos{x}|$ are just these cathets; so we have
+$$|\Delta\sin{x}| \;\leqq\; |z-x|, \quad |\Delta\cos{x}| \;\leqq\; |z-x|.$$
+If we make\, $|z-x| < \varepsilon$,\, then also\, $|\Delta\sin{x}|$ and 
+$|\Delta\cos{x}|$ are less than $\varepsilon$.\, It means that both 
+functions are continuous at $x$.
+
+
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc E. Lindel\"of:} {\em Johdatus korkeampaan analyysiin}. Nelj\"as painos.\, Werner S\"oderstr\"om Osakeyhti\"o, Porvoo ja Helsinki (1956).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

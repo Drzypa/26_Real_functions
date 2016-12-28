@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativesOfSineAndCosine}
+\pmcreated{2013-03-22 16:58:58}
+\pmmodified{2013-03-22 16:58:58}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{derivatives of sine and cosine}
+\pmrecord{10}{39259}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmrelated{DerivativesOfSinXAndCosX}
+\pmrelated{LimitOfDisplaystyleFracsinXxAsXApproaches0}
+\pmrelated{DefinitionsInTrigonometry}
+\pmrelated{LimitRulesOfFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The \PMlinkescapetext{derivation} of the derivatives of sine and cosine is a bit simpler by using the prosthaphaeresis formulas
+\begin{align}
+\sin\alpha-\sin\beta = \,2\sin \left( \frac{\alpha\!-\!\beta}{2} \right) \,\cos \left( \frac{\alpha\!+\!\beta}{2} \right),
+\end{align}
+\begin{align}
+\cos\alpha-\cos\beta = -2\sin \left( \frac{\alpha\!+\!\beta}{2} \right) \, \sin\left( \frac{\alpha\!-\!\beta}{2} \right).
+\end{align}
+
+Let $x,\,t$ be any real numbers such that\, $t \neq x$.\, Then we obtain
+$$\frac{\sin{x}-\sin{t}}{x-t} = 
+\frac{2\sin \left( \frac{x-t}{2} \right) \cos \left( \frac{x+t}{2} \right) }{x-t} =
+\frac{\sin \left( \frac{x-t}{2} \right) }{\left( \frac{x-t}{2} \right) }\cdot\cos \left( \frac{x\!+\!t}{2} \right) \;\;
+\longrightarrow\; 1\cdot\cos \left( \frac{x\!+\!x}{2} \right) = \cos{x},$$
+as\; $t\to x$.\, Here we used the known limit \;$\displaystyle\lim_{u\to0}\frac{\sin{u}}{u} = 1$\; (see \PMlinkname{this entry}{LimitOfDisplaystyleFracsinXxAsXApproaches0}).
+
+The derivative of cosine is calculated similarly:
+$$\frac{\cos{x}-\cos{t}}{x-t} = \frac{-2\sin \left( \frac{x+t}{2} \right) \sin\left( \frac{x-t}{2} \right)}{x-t} =-1 \cdot \frac{\sin\left( \frac{x-t}{2} \right) }{\left( \frac{x-t}{2} \right) }\cdot \sin \left( \frac{x\!+\!t}{2} \right) \;\; \longrightarrow\; -1 \cdot 1\cdot \sin \left( \frac{x\!+\!x}{2} \right) =-\sin{x},$$
+as\; $t\to x$.
+%%%%%
+%%%%%
+\end{document}

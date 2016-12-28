@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectSumOfEvenoddFunctionsexample}
+\pmcreated{2013-03-22 13:34:24}
+\pmmodified{2013-03-22 13:34:24}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{direct sum of even/odd functions (example)}
+\pmrecord{6}{34191}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{DirectSumOfHermitianAndSkewHermitianMatrices}
+\pmrelated{ProductAndQuotientOfFunctionsSum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\sR}[0]{\mathbb{R}}
+
+{\bf Example.} Direct sum of even and odd functions 
+
+Let us define the sets
+\begin{eqnarray*}
+F &=& \{ f\, |\, f\,\mbox{ is a function from}\, \sR\, \mbox{ to}\, \sR \}, \\
+F_+ &=& \{ f\in F \,|\, f(x)=f(-x) \,\mbox{for all}\, x\in \sR\}, \\
+F_- &=& \{ f\in F \,|\, f(x)=-f(-x)\,\mbox{for all}\, x\in \sR\}.
+\end{eqnarray*}
+
+In other words, $F$ contain all functions from $\sR$ to $\sR$, $F_+\subset F$
+contain all even functions, and $F_-\subset F$ contain all odd functions.
+All of these spaces  have a natural vector space structure:
+for functions  $f$ and $g$ we define
+$f+g$ as the function $x\mapsto f(x)+g(x)$. Similarly, if $c$ is
+a real constant, then $cf$ is the
+function $x\mapsto cf(x)$.  With these operations, the zero vector
+is the mapping $x\mapsto 0$.
+
+We claim that $F$ is the direct sum of $F_+$ and $F_-$, i.e.,
+that
+\begin{eqnarray}
+\label{eq10}
+F &=& F_+ \oplus F_-.
+\end{eqnarray}
+
+To prove this claim, let us first note that  $F_\pm$ are vector subspaces of $F$.
+Second, given an arbitrary function $f$ in $F$, we can define
+\begin{eqnarray*}
+f_+(x) &=& \frac{1}{2}\big( f(x) + f(-x) \big), \\
+f_-(x) &=& \frac{1}{2}\big( f(x) - f(-x) \big).
+\end{eqnarray*}
+Now $f_+$ and $f_-$ are even and odd functions and $f=f_+ + f_-$.
+Thus any function in $F$ can be split into two components $f_+$ and $f_-$,
+such that $f_+ \in F_+$ and $f_-\in F_-$.
+To show that the sum is direct, suppose $f$ is an element in $F_+\cap F_-$.
+Then we have that $f(x)=-f(-x)=-f(x)$, so $f(x)=0$ for all $x$, i.e., $f$ is
+the zero vector in $F$. We have established equation \ref{eq10}.
+%%%%%
+%%%%%
+\end{document}

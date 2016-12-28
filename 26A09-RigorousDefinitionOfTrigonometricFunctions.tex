@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RigorousDefinitionOfTrigonometricFunctions}
+\pmcreated{2013-03-22 16:22:11}
+\pmmodified{2013-03-22 16:22:11}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{rigorous definition of trigonometric functions}
+\pmrecord{9}{38508}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmrelated{TrigonometricFormulasFromSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+It is possible to define the trigonometric functions rigorously by means of a
+process based upon the angle addition identities.  A sketch of how this is done
+is provided below.
+
+To begin, define a sequence $\{c_n\}_{n=1}^\infty$ by the initial condition 
+$c_1 = 1$ and the recursion
+ \[c_{n+1} = 1 - \sqrt{1 - {c_n \over 2}}.\]
+Likewise define a sequence $\{s_n\}_{n=1}^\infty$ by the conditions $s_1 = 1$ and
+ \[s_{n+1} = \sqrt{c_n \over 2}.\]
+(In both equations above, we take the positive square root.) 
+It may be shown that both of these sequences are strictly decreasing and approach $0$.
+
+Next, define a sequence of $2 \times 2$ matrices as follows:
+ \[m_n = \left( \begin{matrix} 1 - c_n & s_n \\ - s_n & 1 - c_n \end{matrix} \right) \]
+Using the recursion relations which define $c_n$ and $s_n$, it may be shown that
+$m_{n+1}^2 = m_n$,  More grenerally, using induction, this can be generalised to
+$m_{n+k}^{2^k} = m_n$.
+
+It is easy to check that the product of any two matrices of the form
+ \[\left( \begin{matrix} x & y \\ -y & x \end{matrix} \right) \]
+is of the same form.  Hence, for any integers $k$ and $n$, the matrix 
+$m_n^k$ will be of this form.  We can therefore define functions $S$ and
+$C$ from rational numbers whose denominator is a power of two to real
+numbers by the following equation:
+ \[\left( \begin{matrix} C \left( {n \over 2^k} \right) & S \left( {n 
+\over 2^k} \right) \\ - S \left( {n \over 2^k} \right) & C \left( {n 
+\over 2^k} \right) \end{matrix} \right) = \left( \begin{matrix} 1 - c_k 
+& s_k \\ - s_k & 1 - c_k \end{matrix} \right)^n.\] 
+
+From the recursion relations, we may prove the following identities:
+\begin{eqnarray*} S^2 (r) + C^2 (r) &=& 1 \cr
+S (p + q) &=& S(p) C(q) + S(q) C(p) \cr
+C (p + q) &=& C(p) C(q) - S(p) S(q) \end{eqnarray*}
+
+From the fact that $c_n \to 0$ and $s_n \to 0$ as $n \to \infty$, it 
+follows that, if $\{p_n\}_{n=1}^\infty$ and $\{q_n\}_{n=1}^\infty$ are 
+two sequences of rational numbers whose denominators are powers of two
+such that $\lim_{n \to \infty} p_n = \lim_{n \to \infty} q_n$, then
+$\lim_{n \to \infty} C(p_n) = \lim_{n \to \infty} C(q_n)$ and
+$\lim_{n \to \infty} S(p_n) = \lim_{n \to \infty} S(q_n)$.  Therefore,
+we may define functions by the conditions that, for any convergent
+series of rational numbers $\{r_n\}_{n=0}^\infty$ whose denominators
+are powers of two,
+ \[\cos \left( \pi  \lim_{n \to \infty} r_n \right) = 
+\lim_{n \to \infty} C(r_n)\]
+and
+ \[\sin \left( \pi  \lim_{n \to \infty} r_n \right) = 
+\lim_{n \to \infty} S(r_n).\] 
+By continuity, we see that these functions satisfy the angle addition
+identities.
+
+\textbf{Application}.  Let us use the definitions above to find $\sin(\frac{\pi}{2})$ and $\cos(\frac{\pi}{2})$.  Let $r_i:=\frac{1}{2}$ for every positive integer $i$.  Then we need to find $C(\frac{1}{2})$ and $S(\frac{1}{2})$.  We use the matrix above defining $C$ and $S$, and set $n=k=1$:
+ \[\left( \begin{matrix} C \left( {\frac{1}{2}} \right) & S \left( {\frac{1}{2}} \right) \\ - S \left( {\frac{1}{2}} \right) & C \left( {\frac{1}{2}} \right) \end{matrix} \right) = \left( \begin{matrix} 1 - c_1 
+& s_1 \\ - s_1 & 1 - c_1 \end{matrix} \right) = \left( \begin{matrix} 0 & 1 \\ -1 & 0 \end{matrix} \right).\] 
+As a result, $\cos(\frac{\pi}{2})= \cos(\pi \lim_{i \to \infty} \frac{1}{2}) = 
+\lim_{i \to \infty} C(\frac{1}{2}) = C(\frac{1}{2}) = 0$.  Similarly, $\sin(\frac{\pi}{2})= 1$.
+%%%%%
+%%%%%
+\end{document}

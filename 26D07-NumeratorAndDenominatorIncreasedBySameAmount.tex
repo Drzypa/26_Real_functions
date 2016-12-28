@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NumeratorAndDenominatorIncreasedBySameAmount}
+\pmcreated{2013-03-22 19:36:29}
+\pmmodified{2013-03-22 19:36:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{numerator and denominator increased by same amount}
+\pmrecord{9}{42601}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D07}
+\pmclassification{msc}{11A99}
+\pmrelated{AdjacentFraction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let the positive fraction $\displaystyle \frac{a}{b}$ be altered by adding a positive number $\delta$ to both $a$ and $b$.\, Then
+$$\frac{a}{b} \;<\; \frac{a\!+\!\delta}{b\!+\!\delta} \quad  \mbox{if} \quad a \;<\; b,$$
+$$\frac{a}{b} \;>\; \frac{a\!+\!\delta}{b\!+\!\delta} \quad  \mbox{if} \quad a \;>\; b.$$\\
+The asserted inequalities follow from the identity
+$$\frac{a}{b}-\frac{a\!+\!\delta}{b\!+\!\delta} \;=\; \frac{(a\!-\!b)\delta}{b^2\!+\!b\delta}.$$\\
+
+Accordingly, we have for example 
+$$\frac{2}{3} \;<\; \frac{3}{4}, \quad \frac{200}{99} \;>\; \frac{201}{100}.$$
+
+
+%%%%%
+%%%%%
+\end{document}

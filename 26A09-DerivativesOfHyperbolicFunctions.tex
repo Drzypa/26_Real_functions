@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativesOfHyperbolicFunctions}
+\pmcreated{2013-03-22 14:32:18}
+\pmmodified{2013-03-22 14:32:18}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{derivatives of hyperbolic functions}
+\pmrecord{5}{36083}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+In this entry we compute the derivative of the hyperbolic functions $\sinh(x)$ and $\cosh(x)$.
+
+Recall that by definition:
+
+\begin{eqnarray*}
+\sinh(x)&:=&\frac{e^x-e^{-x}}{2}\\
+\cosh(x)&:=&\frac{e^x+e^{-x}}{2}.
+\end{eqnarray*}
+
+Therefore:
+
+\begin{eqnarray*}
+\frac{d}{dx}\sinh(x) &=& \frac{d}{dx}\left(\frac{e^x-e^{-x}}{2}\right)\\
+&=& \frac{1}{2}\cdot\frac{d}{dx}\left(e^x-e^{-x}\right)\\
+&=& \frac{1}{2}\cdot\left(e^x-(-e^{-x})\right)\\
+&=& \frac{e^x+e^{-x}}{2}\\
+&=& \cosh(x).
+\end{eqnarray*}
+
+Similarly $\displaystyle \frac{d}{dx}\cosh(x)=\sinh(x)$. Using the quotient rule, we compute the derivative of $\displaystyle \tanh(x)=\frac{\sinh(x)}{\cosh(x)}$:
+$$\frac{d}{dx}\tanh(x)=\frac{\cosh^2(x)-\sinh^2(x)}{\cosh^2(x)}=\frac{1}{\cosh^2(x)}$$
+where we have used the equality $\cosh^2(x)-\sinh^2(x)=1$.
+%%%%%
+%%%%%
+\end{document}

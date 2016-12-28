@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedDarbouxFunction}
+\pmcreated{2013-03-22 19:18:36}
+\pmmodified{2013-03-22 19:18:36}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{generalized Darboux function}
+\pmrecord{5}{42247}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Recall that a function $f:I\to\mathbb{R}$, where $I\subseteq\mathbb{R}$ is an interval, is called a \textbf{Darboux function} if it satisfies the intermediate value theorem. This means, that if $a,b\in I$ and $f(a)\leqslant d\leqslant f(b)$ for some $d\in\mathbb{R}$, then there exists $c\in I$ such that $a\leqslant c\leqslant b$ and $f(c)=d$.
+
+Darboux proved (see parent object) that if $f:[a,b]\to\mathbb{R}$ is differentiable then $f'$ is a Darboux function. The class of Darboux functions is very wide. It can be shown that any function $f:\mathbb{R}\to\mathbb{R}$ can be written as a sum of two Darboux functions. We wish to give more general definiton of Darboux function.
+
+\textbf{Definition.} Let $X$, $Y$ be topological spaces. Function $f:X\to Y$ is called a \textbf{(generalized) Darboux function} if and only if whenever $C\subseteq X$ is a connected subset, then so is $f(C)\subseteq Y$.
+
+It can be easily proved that connected subsets of intervals (in $\mathbb{R}$) are exactly intervals. Thus this definition coincides with classical definiton, when $X$ is an interval and $Y=\mathbb{R}$.
+
+Note that every continuous map is a Darboux function.
+
+Also the composition of Darboux functions is again a Darboux function and thus the class of all topological spaces, together with Darboux functions forms a category. The category of topological spaces and continuous maps is its subcategory.
+%%%%%
+%%%%%
+\end{document}

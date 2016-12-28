@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LengthOfCurveInAMetricSpace}
+\pmcreated{2013-03-22 16:50:27}
+\pmmodified{2013-03-22 16:50:27}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{length of curve in a metric space}
+\pmrecord{8}{39085}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B15}
+\pmdefines{length of a curve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Suppose that $(X,d)$ is a metric space. Let $f$ be a curve, so that
+$f: [0,1] \to X$ is a continuous function, and let $0=t_0 < t_1 < \cdots < t_n=1$ and
+$x_i = f(t_i)$ for $0 \le i \le n$. 
+The set $\{x_0, x_1, \ldots , x_n\}$
+is called a partition of the curve. 
+The \emph{\PMlinkescapetext{length} of the curve} is defined to be 
+the supremum over all partitions of the quantity $\sum_{i=1}^n d(x_i , x_{i-1})$.
+
+
+%%%%%
+%%%%%
+\end{document}

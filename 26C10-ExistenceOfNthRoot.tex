@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExistenceOfNthRoot}
+\pmcreated{2013-03-22 15:52:15}
+\pmmodified{2013-03-22 15:52:15}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{existence of $n$th root}
+\pmrecord{21}{37867}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C10}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{12D99}
+\pmrelated{ExistenceOfNthRoot}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{thm*}{Theorem}
+\begin{document}
+\begin{thm*}
+If $a \in \mathbb{R}$ with $a>0$ and $n$ is a positive integer, then there exists a unique positive real number $u$ such that $u^n=a$.
+\end{thm*}
+
+\begin{proof}
+The statement is clearly true for $n=1$ (let $u=a$).  Thus, it will be assumed that $n>1$.
+
+Define $p \colon \mathbb{R} \to \mathbb{R}$ by $p(x)=x^n-a$.  Note that a positive real root of $p(x)$ corresponds to a positive real number $u$ such that $u^n=a$.
+
+If $a=1$, then $p(1)=1^n-1=0$, in which case the existence of $u$ has been established.
+
+Note that $p(x)$ is a polynomial function and thus is continuous.  If $a<1$, then $p(1)=1^n-a>1-1=0$.  If $a>1$, then $p(a)=a^n-a=a(a^{n-1}-1)>0$.  Note also that $p(0)=0^n-a=-a<0$.  Thus, if $a \neq 1$, then the intermediate value theorem can be applied to yield the existence of $u$.
+
+For uniqueness, note that the function $p(x)$ is strictly increasing on the interval $(0, \infty)$.  It follows that $u$ as described in the statement of the theorem exists uniquely.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OnesidedContinuity}
+\pmcreated{2013-03-22 17:57:50}
+\pmmodified{2013-03-22 17:57:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{one-sided continuity}
+\pmrecord{6}{40469}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{OneSidedLimit}
+\pmrelated{OneSidedDerivatives}
+\pmrelated{OneSidedContinuityBySeries}
+\pmdefines{continuous from the left}
+\pmdefines{continuous from the right}
+\pmdefines{from the left continuous}
+\pmdefines{from the right continuous}
+\pmdefines{continuous on closed interval}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The real function $f$ is {\em continuous from the left} in the point\, $x = x_0$\, iff
+$$\lim_{x\to x_0-}f(x) = f(x_0).$$
+
+The real function $f$ is {\em continuous from the right} in the point\, $x = x_0$\, iff
+$$\lim_{x\to x_0+}f(x) = f(x_0).$$
+
+The real function $f$ is {\em continuous on the closed interval} \,$[a,\,b]$\, iff it is continuous at all points of the open interval \,$(a,\,b)$,\, from the right continuous at $a$ and from the left continuous at $b$.\\
+
+
+\textbf{Examples.}\, The ceiling function $\lceil{x}\rceil$ is from the left continuous at each integer, the mantissa function $x\!-\!\lfloor{x}\rfloor$ is from the right continuous at each integer.
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

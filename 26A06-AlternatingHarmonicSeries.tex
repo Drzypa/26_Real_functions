@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternatingHarmonicSeries}
+\pmcreated{2013-03-22 17:53:25}
+\pmmodified{2013-03-22 17:53:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{alternating harmonic series}
+\pmrecord{13}{40376}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{40A05}
+\pmsynonym{alternating $p$-series}{AlternatingHarmonicSeries}
+\pmrelated{AbsoluteConvergence}
+\pmrelated{MultiplicationOfSeries}
+\pmrelated{SumOfSeriesDependsOnOrder}
+\pmdefines{alternating p-series}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+The \emph{alternating harmonic series} is given by the following infinite series:
+\begin{equation}
+\sum_{i=1}^{\infty} \frac{(-1)^{n+1}}{n}.
+\end{equation}
+
+The series converges to $\ln 2$ and it is the prototypical example of a conditionally convergent series.
+
+First, notice that the series is not absolutely convergent.  By taking the absolute value of each term, we get the harmonic series, which is divergent.  There are several ways to show this, and we invite the reader to the entry on harmonic series for further exploration.
+
+Next, to show that the series (1) converges, we use the \PMlinkname{alternating series test}{AlternatingSeriesTest}: since $$\lim_{n\to \infty} \frac{1}{n}=0,$$ the alternating series (1) converges.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+Other examples of conditionally convergent series can be discovered using variants of the alternating harmonic series.  For instance, the following series
+$$ \sum_{i=1}^{\infty} \frac{(-1)^n n^2+\cos n}{n^3-n^2+e^{-n}}. $$
+can easily be shown to be conditionally convergent.  Here is another example, more of a generalization, called the \PMlinkescapetext{\emph{alternating $p$-series}}:
+\begin{equation}
+\sum_{i=1}^{\infty} \frac{(-1)^{n+1}}{n^p},
+\end{equation}
+where $p$ is non-negative real number.  The convergence of the \PMlinkescapetext{alternating $p$-series} is tabulated below:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+$p$ & convergence \\
+\hline\hline
+$(1,\infty)$ & absolutely convergent \\
+\hline
+$(0,1]$ & conditionally convergent \\
+\hline
+$0$ & divergent \\ 
+\hline
+\end{tabular}
+\end{center}
+\item
+Using Riemann series theorem, one easily sees that not every conditionally convergent series is alternating.  By appropriately rearranging the alternating harmonic series, one gets a conditionally convergent series that is not alternating:
+define $\sigma:\mathbb{N}\to \mathbb{N}$ as follows:
+\begin{displaymath}
+\sigma(i):=\left \{
+\begin{array}{ll}
+\displaystyle{\frac{2i+1}{3}} & \textrm{if }2i\equiv -1 \pmod 3\\
+\displaystyle{\frac{4i-2}{3}} & \textrm{if }2i\equiv 1 \pmod 3\\
+\displaystyle{\frac{4i}{3}} & \textrm{otherwise}
+\end{array}
+\right.
+\end{displaymath}
+It can be shown that $\sigma$ is a bijection.  Now, let $a_n$ be the $n$th term of alternating harmonic series.  Then it is not hard to see that $$\sum_{i=1}^n a_{\sigma(i)}\longrightarrow \frac{\ln 2}{2}\qquad\mbox{ as } \qquad n \longrightarrow \infty.$$
+Thus, it is conditionally convergent and yet it is not alternating (the first three terms are $1,\,-\frac{1}{2},\,-\frac{1}{4}$).
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

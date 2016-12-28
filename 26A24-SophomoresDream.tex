@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SophomoresDream}
+\pmcreated{2014-07-20 10:46:23}
+\pmmodified{2014-07-20 10:46:23}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Sophomore's dream}
+\pmrecord{11}{88119}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmclassification{msc}{26A24}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The integral
+\begin{align}
+I := \int_0^1 x^x\, dx
+\end{align}
+may be expanded to a rapidly converging series as follows.
+
+Changing the integrand to a power of $e$ and using the power series expansion of the 
+exponential function gives us
+\begin{align}
+I = \int_0^1 e^{x\ln x}\, dx 
+= \int_0^1 \sum_{n=0}^\infty\frac{(x\ln x)^n}{n!}\, dx.
+\end{align}
+Here the series is uniformly convergent on $[0,1]$ and may be 
+integrated termwise:
+\begin{align}
+I = \sum_{n=0}^\infty\int_0^1\frac{x^n(\ln x)^n}{n!}dx.
+\end{align}
+The last equation of the \PMlinkname{parent entry}{ExampleOfDifferentiationUnderIntegralSign} 
+then gives in the case $m = n$ from (3) the result
+\begin{align}
+I = \sum_{n=0}^\infty\frac{(-1)^n}{(n\!+\!1)^{n+1}},
+\end{align}
+i.e.,
+\begin{align}
+\int_0^1 x^x\, dx \;=\; 
+1-\frac{1}{2^2}+\frac{1}{3^3}-\frac{1}{4^4}+-\ldots
+\end{align}
+
+Cf. the \PMlinkname{function $x^x$}{FunctionXX}.\\
+
+Since the series (5) satisfies the conditions of 
+\PMlinkname{Leibniz' theorem for alternating series}{LeibnizEstimateForAlternatingSeries}, 
+one may easily estimate the error made when a partial sum of (5) is used for the exact value of the integral 
+$I$.\, If one for example takes for $I$ the sum of nine first
+terms, the first omitted term is $-\frac{1}{10^{10}}$; thus the 
+error is negative and its absolute value less than $10^{-10}$.\\
+
+
+
+
+\end{document}

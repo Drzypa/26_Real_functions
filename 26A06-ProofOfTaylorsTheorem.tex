@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTaylorsTheorem}
+\pmcreated{2013-03-22 12:33:59}
+\pmmodified{2013-03-22 12:33:59}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{proof of Taylor's Theorem}
+\pmrecord{8}{32814}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+
+Let $f(x),\; a<x<b$ be a real-valued, $n$-times differentiable
+function, and let $a<x_0<b$ be a  fixed base-point. We will show that
+for all $x\neq x_0$ in the domain of the 
+function, there exists a $\xi$, strictly between $x_0$ and $x$ such
+that $$f(x) = \sum_{k=0}^{n-1} f^{(k)}(x_0)\, \frac{(x-x_0)^k}{k!}
++ f^{(n)}(\xi)\,\frac{(x-x_0)^n}{n!}.$$
+
+Fix $x\neq x_0$ and let $R$ be the remainder defined by
+$$f(x) = \sum_{k=0}^{n-1} f^{(k)}(x_0)\, \frac{(x-x_0)^k}{k!} +
+R\,\frac{(x-x_0)^n}{n!}.$$
+Next, define
+$$F(\xi) = \sum_{k=0}^{n-1} f^{(k)}(\xi)\, \frac{(x-\xi)^k}{k!} +
+R\,\frac{(x-\xi)^n}{n!},\quad a<\xi<b.$$
+We then have
+\begin{align*}
+F'(\xi) &= f'(\xi)+\sum_{k=1}^{n-1} \left(f^{(k+1)}(\xi)\, \frac{(x-\xi)^k}{k!}
+   - f^{(k)}(\xi)\, \frac{(x-\xi)^{k-1}}{(k-1)!}\right)
+- R\,\frac{(x-\xi)^{n-1}}{(n-1)!}\\
+&= f^{(n)}(\xi)\, \frac{(x-\xi)^{n-1}}{(n-1)!}-
+R\,\frac{(x-\xi)^{n-1}}{(n-1)!} \\
+&=  \frac{(x-\xi)^{n-1}}{(n-1)!}\, ( f^{(n)}(\xi)-R),
+\end{align*}
+because the sum telescopes.
+Since, $F(\xi)$ is a differentiable function, and since
+$F(x_0)=F(x)=f(x)$, Rolle's Theorem imples that there exists a $\xi$ lying
+strictly between $x_0$ and $x$ such that $F'(\xi)=0$.  It follows that
+$R=f^{(n)}(\xi)$, as was to be shown.
+%%%%%
+%%%%%
+\end{document}

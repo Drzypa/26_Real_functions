@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfArithmeticgeometricMeansInequality}
+\pmcreated{2013-03-22 14:49:14}
+\pmmodified{2013-03-22 14:49:14}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of arithmetic-geometric means inequality}
+\pmrecord{10}{36482}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+
+\usepackage{pstricks}
+\begin{document}
+A short geometrical proof can be given for the case $n=2$ of the arithmetic-geometric means inequality.
+
+Let $a$ and $b$ be two non negative numbers. 
+Draw the line $AB$ such that $AP$ has length $a$, and $PB$ has length $b$, as in the following picture, and draw a semicircle with diameter $AB$. Let $O$ be the center of the circle.
+\begin{center}
+\begin{pspicture}(4,4)(-5,-1)
+\psset{unit=0.7cm}
+\psset{linewidth=0.5mm}
+\psarc(0,0){4}{0}{180}
+\qline(-4,0)(4,0)
+\qline(-1.5,0)(-1.5,3.708)
+\uput[ul](-1.5,3.708){$Q$}
+\uput[d](0,0){$O$}
+\uput[d](-4,0){$A$}
+\uput[d](4,0){$B$}
+\uput[d](-1.5,0){$P$}
+\uput[u](-2.7,0){$a$}
+\uput[u](2.7,0){$b$}
+\end{pspicture}
+\end{center}
+Now raise perpendiculars $PQ$ and $OT$ to $AB$. Notice that $OT$ is a radius, and so 
+\[OT=\frac{AB}{2}=\frac{a+b}{2}\]
+Also notice that $PQ\leq OT$ for any point $P$, and equality is obtained only when $P=O$, that is, when $a=b$.
+\begin{center}
+\begin{pspicture}(4,4)(-5,-1)
+\psset{unit=0.7cm}
+\psset{linewidth=0.5mm}
+\psarc(0,0){4}{0}{180}
+\qline(-4,0)(4,0)
+\qline(-1.5,0)(-1.5,3.708)
+\uput[ul](-1.5,3.708){$Q$}
+\uput[d](0,0){$O$}
+\uput[d](-4,0){$A$}
+\uput[d](4,0){$B$}
+\uput[d](-1.5,0){$P$}
+\uput[u](0,4){$T$}
+\qline(-4,0)(-1.5,3.708)
+\qline(4,0)(-1.5,3.708)
+\qline(0,0)(0,4)
+\end{pspicture}
+\end{center}
+Notice also that $PQ$ is a height over  the hypotenuse on right triangle $\triangle AQB$. We have then triangle similarities  $\triangle AQB \sim \triangle APQ\sim \triangle QPB$, and thus
+\[
+\frac{AP}{PQ} = \frac{PQ}{PB}
+\]
+which implies $PQ=\sqrt{AP\cdot PB}=\sqrt{ab}$. Since $PQ\leq OT$, we conclude
+\[
+\sqrt{ab}\leq\frac{a+b}{2}.
+\]
+\bigskip
+
+This special case can also be proved using rearrangement inequality.
+Let $a,b$ non negative numbers, and assume $a\leq b$. Let $x_1=\sqrt{a},x_2=\sqrt{b}$, and then $x_1\leq x_2$.
+Now suppose $y_1$ and $y_2$ are such that one of them is $x_1$ and the other is $x_2$. Rearrangement inequality states that $x_1y_1+x_2y_2$ is maximum when $y_1\leq y_2$ and $x_1\leq x_2$.
+So, we have
+\[x_1x_2+x_2x_1 \leq x_1^2 + x_2^2\]
+and substituting back $a,b$ gives
+\[2 \sqrt{ab} \leq (\sqrt{a})^2 + (\sqrt{b})^2 = a+b\]
+where it follows the desired result.
+\bigskip
+
+One more proof can be given as follows.
+Let $x=\sqrt{a}, y =\sqrt{b}$. Then $(x-y)^2 \geq 0$, and equality holds only when $x=y$. Then, 
+$x^2-2xy+ y^2 \geq 0$ becomes
+\[x^2 + y^2 \geq 2 xy\]
+and substituting back $a,b$ gives the desired result as in the previous proof.
+%%%%%
+%%%%%
+\end{document}

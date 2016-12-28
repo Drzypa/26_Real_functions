@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TrigonometricIdentityInvolvingProductOfSinesOfRootsOfUnity}
+\pmcreated{2013-03-22 19:00:03}
+\pmmodified{2013-03-22 19:00:03}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{trigonometric identity involving product of sines of roots of unity}
+\pmrecord{11}{41869}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{33B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\begin{document}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{proof}
+Let $n>1$ be a positive integer, and $\zeta_n=e^{2i\pi/n}$, a primitive $n^{\mathrm{th}}$ root of unity.
+
+The purpose of this article is to prove
+\begin{thm} \label{thm:one}Let $m=\left\lfloor\frac{n}{2}\right\rfloor$. Then
+\begin{equation}
+ \prod_{k=1}^m \sin^2\left(\frac{\pi k}{n}\right) = \prod_{k=1}^{n-1} \sin\left(\frac{\pi k}{n}\right) 
+    = \frac{n}{2^{n-1}}
+\end{equation}
+\end{thm}
+
+The theorem follows easily from the following simple lemma:
+\begin{lem} Let $n>1$ be a positive integer. Then 
+\[
+  \prod_{k=1}^{n-1} (1-\zeta_n^k) = n
+\]
+\end{lem}
+\begin{proof}
+We have $x^n-1 = \prod_{k=1}^n (x-\zeta_n^k)$. Dividing both sides by $x-1$ gives
+\[
+  \frac{x^n-1}{x-1} = 1+x+x^2+\dots x^{n-1} = \prod_{k=1}^{n-1} (x-\zeta_n^k)
+\]
+Substitute $x=1$ to get the result.
+\end{proof}
+
+\begin{proof} [Proof of Theorem \ref{thm:one}]
+Using the definition of $\zeta_n$ and the half-angle formulas, we have
+\begin{align*}
+  1-\zeta_n^k &= 1-\cos\left(\frac{2\pi k}{n}\right) - i\sin\left(\frac{2\pi k}{n}\right) \\
+              &= 2\sin^2\left(\frac{\pi k}{n}\right) - 
+                   2i\sin\left(\frac{\pi k}{n}\right)\cos\left(\frac{\pi k}{n}\right) \\
+              &= 2\sin\left(\frac{\pi k}{n}\right)
+                   \left(\sin\left(\frac{\pi k}{n}\right)-i\cos\left(\frac{\pi k}{n}\right)\right)
+\end{align*}
+Note that $\lvert \sin\theta - i\cos\theta\rvert = \sin^2\theta + \cos^2\theta=1$, so taking absolute values, we get
+\[
+  \left\lvert 1-\zeta_n^k\right\rvert = 2\left\lvert \sin\left(\frac{\pi k}{n}\right)\right\rvert
+\]
+Now, for $1\leq k\leq n-1$, $\sin\left(\frac{\pi k}{n}\right) > 0$ so is equal to its absolute value. Thus (using, for $n$ even, the fact that $\sin\frac{\pi}{2}=1$),
+\begin{align*}
+  \prod_{k=1}^m \sin^2\left(\frac{\pi k}{n}\right)
+     &= \prod_{k=1}^m \sin\left(\frac{\pi k}{n}\right) \sin\left(\pi - \frac{\pi k}{n}\right) 
+      = \prod_{k=1}^m \sin\left(\frac{\pi k}{n}\right) \sin\left(\frac{\pi(n-k)}{n}\right) \\
+     &= \prod_{k=1}^{n-1} \sin\left(\frac{\pi k}{n}\right) 
+      = \prod_{k=1}^{n-1} \left\lvert\sin\left(\frac{\pi k}{n}\right)\right\rvert \\
+     &= \frac{1}{2^{n-1}}\left\lvert \prod_{k=1}^{n-1} (1-\zeta_n^k)\right\rvert
+      = \frac{1}{2^{n-1}} \left\lvert n\right\rvert \\
+     &= \frac{n}{2^{n-1}}
+\end{align*}
+\end{proof}
+
+(Thanks to dh2718 for greatly simplifying the original proof.)
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedNdimensionalRiemannIntegral}
+\pmcreated{2013-03-22 13:37:43}
+\pmmodified{2013-03-22 13:37:43}
+\pmowner{vernondalhart}{2191}
+\pmmodifier{vernondalhart}{2191}
+\pmtitle{Generalized N-dimensional Riemann Integral}
+\pmrecord{6}{34271}
+\pmprivacy{1}
+\pmauthor{vernondalhart}{2191}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\R}{\mathbb{R}}
+\begin{document}
+Let $I = [a_1, b_1] \times \cdots \times [a_N, b_N] \subset \R^N$ be a compact interval, and let $f:I\to\R^M$ be a function. Let $\epsilon > 0$. If there exists a $y \in \R^M$ and a partition $P_\epsilon$ of $I$ such that for each refinement $P$ of $P_\epsilon$ (and corresponding Riemann Sum $S(f, P)$),
+\[
+\left\|S(f,P) - y\right\| < \epsilon
+\]
+Then we say that $f$ is Riemann integrable over $I$, that $y$ is the Riemann integral of $f$ over $I$, and we write
+\[
+\int_I f := \int_I f\, d\mu := y
+\]
+
+Note also that it is possible to extend this definition to more arbitrary sets; for any bounded set $D$, one can find a compact interval $I$ such that $D \subset I$, and define a function
+\[
+\tilde{f}:I\to\R^M\quad x \mapsto
+\begin{cases}
+f(x),& x \in D \\
+0, &x \notin D
+\end{cases}
+\]
+in which case we define
+\[
+\int_D f := \int_I \tilde{f}
+\]
+%%%%%
+%%%%%
+\end{document}

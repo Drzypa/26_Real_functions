@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KummersAccelerationMethod}
+\pmcreated{2014-12-12 10:34:19}
+\pmmodified{2014-12-12 10:34:19}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Kummer's acceleration method}
+\pmrecord{8}{42623}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Algorithm}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{40A05}
+\pmrelated{ValueOfTheRiemannZetaFunctionAtS2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{form}
+
+There are several methods for acceleration of the convergence of a given series 
+\begin{align}
+\sum_{n=1}^\infty a_n \;=\; S.
+\end{align}\
+One of the simplest is the following one due to Kummer (1837).\\
+
+We suppose that the terms $a_n$ of (1) are nonzero.\, Let
+$$\sum_{n=1}^\infty b_n \;=\; C$$
+be a series with nonzero terms and the known sum $C$.\, We use the limit
+$$\lim_{n\to\infty}\frac{a_n}{b_n} \;=\; \varrho \;\neq\; 0$$
+and the identity
+\begin{align}
+S \;=\; \varrho C+ \sum_{n=1}^\infty\left(1-\varrho\frac{b_n}{a_n}\right)a_n.
+\end{align}
+Thus the original series (1) has attained a new form (2) the convergence of which is faster because of 
+$$\lim_{n\to\infty}\left(1-\varrho\frac{b_n}{a_n}\right) \;=\;0.$$\\
+
+\textbf{Example.}\, For replacing the series 
+$$\sum_{n=1}^\infty\frac{1}{n^2} \;=\; S$$
+by a faster converging series we may take 
+$$\sum_{n=1}^\infty\frac{1}{n(n\!+\!1)} \;=:\; C,$$
+which, for its part, can be expressed as the telescoping series
+$$C \;=\; \sum_{n=1}^\infty\left(\frac{1}{n}-\frac{1}{n\!+\!1}\right) \;=\; 1.$$
+Now we have\, $\varrho = 1$,\, and using (2) we obtain
+$$S \;=\; 1+\sum_{n=1}^\infty\frac{1}{n^2(n\!+\!1)}.$$
+The convergence of this series may accelerated similarly taking e.g.
+$$\sum_{n=1}^\infty\frac{1}{n(n\!+\!1)(n\!+\!2)} \;=:\; C,$$
+where now\, $C = \frac{1}{4}$;\, then we get
+$$S \;=\; \frac{5}{4}+2\!\sum_{n=1}^\infty\frac{1}{n^2(n\!+\!1)(n\!+\!2)}.$$
+The procedure may be repeated $N$ times in all, yielding the result
+$$S \;=\; \sum_{n=1}^N\frac{1}{n^2}+N!\sum_{n=1}^\infty\frac{1}{n^2(n\!+\!1)(n\!+\!2)\cdots(n\!+\!N)}.$$
+
+As for the sum of this series, see 
+\PMlinkname{Riemann zeta function at $s = 2$}{valueoftheriemannzetafunctionats2}.
+
+
+
+
+\begin{thebibliography}{8}
+\bibitem{SG}{\sc Pascal Sebah \& Xavier Gourdon}: \PMlinkexternal{{\it Acceleration of the convergence of series} (2002)}{http://numbers.computation.free.fr/Constants/constants.html}.
+\end{thebibliography}
+
+%%%%%
+\end{document}

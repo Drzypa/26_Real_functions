@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaguerrePolynomial}
+\pmcreated{2013-03-22 12:30:56}
+\pmmodified{2013-03-22 12:30:56}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Laguerre polynomial}
+\pmrecord{22}{32753}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C99}
+\pmrelated{HermitePolynomials}
+\pmrelated{OrthogonalityOfChebyshevPolynomials}
+\pmdefines{associated Laguerre polynomial}
+\pmdefines{Laguerre's equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\section{Definition}
+
+The \emph{Laguerre polynomials} are orthogonal polynomials with respect to the 
+weighting function $e^{-x}$ on the half-line $[0,\infty)$.  They are denoted 
+by the letter ``$L$'' with the order as subscript and are normalized by the condition that the coefficient of the highest order term of $L_n$ is 
+$(-1)^n / n!$. 
+
+The first few Laguerre poynomials are as follows:
+\begin{align*}
+L_0 (x) &= 1 \\
+L_1 (x) &= -x + 1 \\
+L_2 (x) &= \frac{1}{2} x^2 - 2x + 1 \\
+L_3 (x) &= -\frac{1}{6} x^3 + \frac{3}{2} x^2 - 3 x + 1 
+\end{align*}
+
+A generalization is given by the \emph{associated Laguerre polynomials}
+which depends on a parameter (traditionally denoted ``$\alpha$'').  As it 
+turns out, they are polynomials of the argument $\alpha$ as as well, so 
+they are polynomials of two variables.  They  are defined over the same 
+interval with the same normalization condition, but the weight function 
+is generalized to $x^\alpha e^{-x}$.  They are notated by including the 
+parameter as a parenthesized superscript (not all authors use the
+parentheses).
+
+The ordinary Laguerre polynomials are the special case of the generalized
+Laguerre polynomials when the parameter goes to zero.  When some result
+holds for generalized Laguerre polynomials which is not more complicated
+than that for ordinary Laguerre polynomials, we shall only provide the more
+general result and leave it to the reader to send the parameter to zero
+to recover the more specific result. 
+
+The first few generalized Laguerre polynomials are as follows:
+
+\begin{align*}
+L_0^{(\alpha)} (x) &= 1 \\
+L_0^{(\alpha)} (x) &= -x + \alpha + 1 \\
+L_0^{(\alpha)} (x) &= \frac{1}{2} x^2 - (\alpha + 2) x + \frac{1}{2}
+(\alpha + 2) (\alpha + 1) \\
+L_0^{(\alpha)} (x) &= - \frac{1}{6} x^3 + \frac{1}{2} (\alpha + 3) x^2 -
+\frac{1}{2} (\alpha + 2) (\alpha + 3) x + \frac{1}{6} (\alpha + 1)
+(\alpha + 2) (\alpha + 3)
+\end{align*}
+
+\section{Formulae for these polynomials}
+
+The Laguerre polynomials may be exhibited explicitly as a sum in terms
+of factorials, which may also be written using binomial coefficients:
+ \[L_n (x) = \sum_{k=0}^n {n! \over (k!)^2 (n-k)!} (-x)^k =
+\sum_{k=0}^n {n \choose k} {(-x)^k \over k!}\]
+The generalization may be expressed in terms of gamma functions or
+falling factorials:
+ \[L_n^{(\alpha)} = \sum_{k=0}^n {\Gamma (n + \alpha + 1) \over
+\Gamma (k + \alpha + 1)} {(-x)^k \over k! (n-k)!} = \sum_{k=0}^n
+{(n + \alpha)^{\underline{n-k}} \over k! (n-k)!} (-x)^k \]
+
+They can be computed from a Rodrigues formula:
+\[L_n^{(\alpha)} (x)= \frac{1}{n!} x^{-\alpha} e^x 
+\frac{d^n}{dx^n} \left( e^{-x} x^{n + \alpha} \right)\]
+
+They have several integral representations.  They can be expressed
+in terms of a countour integral
+\[L_n(x) = \frac{1}{2\pi i} \oint \frac{e^{-\frac{xt} {1-t}}}
+{(1-t)t^{n+1}} \, \mathit{dt},\]
+where the origin is enclosed by the contour, but not $z=1$.
+
+
+\section{Equations they satisfy}
+
+The Laguerre polynomials satisfy the orthogonality relation
+
+\[
+\int_0^{\infty}e^{-x} x^\alpha L_n^{(\alpha)} (x) 
+L_m^{(\alpha)} (x) \, dx = \frac {(n+\alpha)!} {n!} 
+\delta_{nm}.
+\]
+
+The Laguerre polynomials satisfy the differential equation
+\[
+x \frac{d^2}{dx^2} L_n^{(\alpha)} (x) + 
+(\alpha+1-x) \frac{d}{dx} L_n^{(\alpha)} (x) + 
+(n-\alpha) L_n^{(\alpha)} (x) = 0
+\]
+This equation arises in many contexts such as in the quantum 
+mechanical treatment of the hydrogen atom.
+
+%\begin{figure}[htbp]
+%\begin{centering}
+%\includegraphics[angle=270,scale=0.5]{laguerre.ps}
+%\caption{Graphs for the first five Laguerre polynomials}\label{fig:graph}
+%\end{centering}
+%\end{figure}
+%%%%%
+%%%%%
+\end{document}

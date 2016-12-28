@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaOfSphericalZone}
+\pmcreated{2013-03-22 18:19:05}
+\pmmodified{2013-03-22 18:19:05}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{area of spherical zone}
+\pmrecord{9}{40944}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{53A05}
+\pmclassification{msc}{51M04}
+\pmsynonym{area of spherical calotte}{AreaOfSphericalZone}
+%\pmkeywords{area of sphere}
+\pmrelated{AreaOfTheNSphere}
+\pmrelated{CentreOfMassOfHalfDisc}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formula}
+Let us consider the circle 
+$$(x\!-\!r)^2\!+\!y^2 \;=\; r^2$$
+with radius $r$ and centre \,$(r,\,0)$.\, A spherical zone may be thought to be formed when an arc of the circle rotates around the $x$-axis.\, For finding the are of the zone, we can use the formula
+\begin{align}
+A \;=\; 2\pi\!\int_{a}^{b}\!y\,\sqrt{1+\left(\frac{dy}{dx}\right)^2}\,dx
+\end{align}
+of the entry area of surface of revolution.\, Let the ends of the arc correspond the values $a$ and $b$ of the abscissa such that\, $b\!-\!a = h$\, is the \PMlinkescapetext{height} of the spherical zone.\, In the formula, we must use the solved form
+$$y \;=\; (\pm)\sqrt{rx\!-\!x^2}$$
+of the equation of the circle.\, The formula then yields
+$$A \;=\; 2\pi\!\int_a^b\sqrt{rx\!-\!x^2}\,\sqrt{1+\left(\frac{r\!-\!x}{\sqrt{rx\!-\!x^2}}\right)^2}\,dx 
+\;=\; 2\pi\!\int_a^br\,dx \;=\; 2\pi r(b\!-\!a).$$
+Hence the area of a spherical zone (and also of a spherical calotte) is
+\begin{align}
+A \;=\; 2\pi rh.
+\end{align}
+From here one obtains as a special case \,$h = 2r$\, the area of the whole sphere:
+\begin{align}
+A \;=\; 4\pi r^2.
+\end{align}
+
+
+\textbf{Remark.}\, The formula (2) implies that the centre of mass of a half-sphere is at the halfway point of the axis of symmetry ($h = \frac{r}{2}$).
+
+
+%%%%%
+%%%%%
+\end{document}

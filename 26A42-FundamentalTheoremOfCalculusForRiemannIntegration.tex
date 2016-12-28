@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfCalculusForRiemannIntegration}
+\pmcreated{2013-03-22 17:57:32}
+\pmmodified{2013-03-22 17:57:32}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{fundamental theorem of calculus for Riemann integration}
+\pmrecord{10}{40459}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmrelated{FundamentalTheoremOfCalculusClassicalVersion}
+\pmrelated{FundamentalTheoremOfCalculus}
+\pmdefines{first fundamental theorem of calculus (Riemann integral)}
+\pmdefines{second fundamental theorem of calculus (Riemann integral)}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this entry we discuss the fundamental theorems of calculus for Riemann integration.
+
+{\bf \PMlinkescapetext{First Fundamental Theorem of Calculus} -} Let $f$ be a Riemann integrable function on an interval $[a,b]$ and $F$ defined in $[a,b]$ by $F(x)= \int_a^x f(t)\,dt + k$, where $k \in \mathbb{R}$ is a constant. Then $F$ is continuous in $[a,b]$ and $F'=f$ \PMlinkname{almost everywhere}{MeasureZeroInMathbbRn}.
+
+$\,$
+
+{\bf \PMlinkescapetext{Second Fundamental Theorem of Calculus} -} Let $F$ be a continuous function in an interval $[a,b]$ and $f$ a Riemann integrable function such that $F'(x)=f(x)$ except at most in a finite number of points $x$. Then $F(x)-F(a) = \int_a^xf(t)\,dt$.
+
+$\,$
+
+\subsection{Observations}
+Notice that the second fundamental theorem is not a converse of the first. In the first we conclude that $F'=f$ except in a set of \PMlinkname{measure zero}{MeasureZeroInMathbbRn}, while in the second we assume that $F'=f$ except in a finite number of points. In fact, the two theorems can never be the converse of each other as the following example shows:
+
+{\bf Example :} Let $F$ be the devil staircase function, defined on $[0,1]$. We have that
+\begin{itemize}
+\item $F$ is continuous in $[0,1]$,
+\item $F'=0$ except in a set of \PMlinkescapetext{measure zero} (this set must be contained in the Cantor set),
+\item $f:=0$ is clearly a Riemann integrable function and $\int_0^x 0\,dt = 0$.
+\end{itemize}
+Thus, $F(x) \neq \int_0^x F'(t)\,dt$.
+
+This leads to the question: what kind functions $F$ can be expressed as $F(x) = F(a) + \int_a^x g(t)\,dt$, for some function $g$ ? The answer to this question lies in the concept of \PMlinkname{absolute continuity}{AbsolutelyContinuousFunction2} (a \PMlinkescapetext{property} which the devil staircase does not possess), but for that a more general \PMlinkescapetext{theory} of integration must be developed (the \PMlinkname{Lebesgue integration}{Integral2}).
+%%%%%
+%%%%%
+\end{document}

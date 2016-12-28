@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirichletKernel}
+\pmcreated{2013-03-22 14:11:53}
+\pmmodified{2013-03-22 14:11:53}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{Dirichlet kernel}
+\pmrecord{10}{35629}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A30}
+\pmrelated{ExampleOfTelescopingSum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{Dirichlet \PMlinkescapetext{kernel}} $D_n$ of order $n$ is defined as
+$$D_n(t)=\sum_{k=-n}^ne^{ikt}.$$
+It can be represented as
+$$D_n(t)=\frac{\sin\left(n+\frac{1}{2}\right)t}{\sin\frac{t}{2}}.$$
+\textbf{Proof:} It is
+\begin{align*}
+\sum_{k=-n}^ne^{ikt}&= e^{-int}\frac{1-e^{i(2n+1)t}}{1-e^{it}}\\
+&=\frac{e^{i\left(n+\frac{1}{2}\right)t}-e^{-i\left(n+\frac{1}{2}\right)t}} {e^{i\frac{t}{2}}-e^{-i\frac{t}{2}}}\\
+&=\frac{\sin\left(n+\frac{1}{2}\right)t}{\sin\frac{t}{2}}.\qquad\qquad\Box
+\end{align*}
+The Dirichlet kernel arises in the analysis of periodic functions because for any function $f$ of period $2\pi$, the convolution of $D_N$ and $f$ results in the Fourier-series approximation of order $n$:
+$$(D_N*f)(x)=\frac{1}{2\pi}\int_{-\pi}^\pi f(y)D_n(x-y)dy=\sum_{k=-n}^n\hat{f}(k)e^{ikx}.$$
+%%%%%
+%%%%%
+\end{document}

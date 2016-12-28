@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReductionFormulas}
+\pmcreated{2013-03-22 17:37:06}
+\pmmodified{2013-03-22 17:37:06}
+\pmowner{curious}{18562}
+\pmmodifier{curious}{18562}
+\pmtitle{reduction formulas}
+\pmrecord{9}{40037}
+\pmprivacy{1}
+\pmauthor{curious}{18562}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmsynonym{powers of sines and cosines}{ReductionFormulas}
+\pmsynonym{integration of trigonometric functions}{ReductionFormulas}
+\pmrelated{TrigonometricFormulasFromDeMoivreIdentity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+To obtain a reduction formula for $\displaystyle \int \sin^n x \cos^m x \, dx$ :
+
+- Split off $\sin x$ to integrate by parts
+
+$\displaystyle = \int \sin^{n-1} x \cos^m x \sin x \, dx$
+
+Take $\displaystyle u = \sin^{n-1} x \cos^m x\,, \text{   and }dv = \sin x \, dx$ \linebreak
+So   $\displaystyle du = [(n-1)\sin^{n-2} x \cos^{m+1} x - m \sin ^n x \cos^{m-1} x] \, dx\,, \text{   and }v = - \cos x$ \linebreak
+\newline
+- Then simplify to get
+
+$\displaystyle = - \sin^{n-1} x \cos^{m+1} x + (n-1) \int \sin^{n-2} x \cos^{m+2} x \, dx - m \int \sin^n x \cos^m x \, dx$\linebreak
+\newline
+- Now use the identity $\displaystyle \sin^2 x + \cos^2 x = 1$ in the middle term and simplify to get
+
+$\displaystyle = - \sin^{n-1} x \cos^{m+1} x + (n-1) \int \sin^{n-2} x \cos^m x \, dx - (n-1) \int \sin^n x \cos^m x \, dx - m \int \sin^n x \cos^m x \, dx$\linebreak
+\newline
+- Take the last two integrals to the left side:
+
+$\displaystyle [1+(n-1)+m] \int \sin^n x \cos^m x \, dx = - \sin^{n-1} x \cos^{m+1} x + (n-1) \int \sin^{n-2}x \cos^m x \, dx$\linebreak
+\newline
+- Since $[1+(n-1)+m]=m+n$ divide both sides by $m+n$ and hence
+
+\begin{center}$\displaystyle \int \sin^n x \cos^m x \, dx = -\frac{\sin^{n-1} x \cos^{m+1} x}{m+n} + \frac{n-1}{m+n} \int \sin^{n-2}x \cos^m x \, dx$\end{center}
+
+Using the exact same method but instead of splitting off $\sin x$ , one can split off $\cos x$ and follow similar procedure to obtain another reduction formula:
+
+\begin{center}$\displaystyle \int \sin^n x \cos^m x \, dx = \frac{\sin^{n+1} x \cos^{m-1} x}{m+n} + \frac{m-1}{m+n} \int \sin^n x \cos^{m-2} x \, dx$\end{center}
+
+%%%%%
+%%%%%
+\end{document}

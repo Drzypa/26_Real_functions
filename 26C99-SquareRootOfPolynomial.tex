@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SquareRootOfPolynomial}
+\pmcreated{2013-03-22 15:32:06}
+\pmmodified{2013-03-22 15:32:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{square root of polynomial}
+\pmrecord{17}{37428}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C99}
+\pmclassification{msc}{12E05}
+\pmsynonym{calculation of square root of polynomial}{SquareRootOfPolynomial}
+\pmrelated{SquareOfSum}
+\pmrelated{BombellisMethodOfComputingSquareRoots}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+The \PMlinkescapetext{{\em square root of a polynomial}}\, $f$,\, denoted by $\sqrt{f}$, is any polynomial $g$ having the square\, $g^2$ equal to $f$.\, For example,\, $\sqrt{9x^2\!-\!30x\!+\!25} = 3x\!-\!5$ or $-3x\!+\!5$.
+
+A polynomial needs not have a square root, but if it has a square root $g$, then also the opposite polynomial $-g$ is its square root.
+
+\textbf{Algorithm.}\, The idea of the squaring \PMlinkescapetext{formula}
+$$(a\!+\!b\!+\!c+..)^2 =(a)a+(2a\!+\!b)b+(2a\!+\!2b\!+\!c)c+..$$
+(see the square of sum) gives a method for getting the square root of a polynomial:
+\begin{itemize}
+ \item The \PMlinkescapetext{terms of the radicand are ordered according to the rising or falling powers of certain letter (the first term must have a positive coefficient and even exponents).
+ \item The leading term of the root is equal to the square root of the first term of the radicand.
+ \item The second term of the root is equal to the first term of the first remainder divided by the double leading term.
+ \item The third term of the root is equal to first term of the second remainder  divided by the double leading term}. 
+ \item And so on.
+\end{itemize}
+
+In the examples below, on the \PMlinkescapetext{left under the lines there are the remainders, on the right under the lines the corresponding sums}.
+
+\textbf{Example 1.}\, $\sqrt{9x^4\!+\!6x^3\!-\!11x^2\!-\!4x\!+\!4} =$ ? 
+
+\begin{tabular}{lcrrrrrrrrrrr}
+$\sqrt{}
+$&$(9x^4$&$+6x^3$&$-11x^2$&$-4x$&$+4)$&$=$&$\pm$&$(3x^2$&$ +x$&$-2)$\\
+$       $&$ 9x^4$&$     $&$      $&$   $&$   $&$ $&$   $&$ 3x^2$&$   $&$   $\\
+\cline{2-2} \cline{9-9}
+$       $&$     $&$ 6x^3$&$-11x^2$&$   $&$   $&$ $&$   $&$ 6x^2$&$  +x$&$  $\\
+$       $&$     $&$ 6x^3$&$  +x^2$&$   $&$   $&$ $&$   $&$     $&$   x$&$  $\\
+\cline{3-4} \cline{9-10}
+$       $&$     $&$     $&$-12x^2$&$-4x$&$ +4$&$ $&$   $&$ 6x^2$&$ +2x$&$-2$\\
+$       $&$     $&$     $&$-12x^2$&$-4x$&$ +4$&$ $&$   $&$     $&$    $&$-2$\\
+\cline{4-6} \cline{9-11}
+$       $&$     $&$     $&$      $&$   $&$ 0$&$  $&$   $&$     $&$    $&$   $\\
+\end{tabular}
+
+\textbf{Example 2.}\, $\sqrt{x^6\!-\!2x^5\!-\!x^4\!+\!3x^2\!+\!2x\!+\!1} =$ ? 
+
+\begin{tabular}{lcrrrrrrrrrrrrrr} $\sqrt{}$&
+$(1$&$+2x$&$+3x^2$&$$&$-x^4$&$-2x^5$&$+x^6)$&$=$&
+               $\pm$&$(1$&$ +x$&$+x^2$&$-x^3)$\\
+$$&$1$&$$&$$&$$&$$&$$&$$&$$&$$&$1$&$$&$$&$$\\
+\cline{2-2} \cline{11-11} $$&
+$$&$2x$&$+3x^2$&$$&$$&$$&$$&$$&$$&$2$&$+x$&$$&$$\\
+$$&$$&$2x$&$+x^2$&$$&$$&$$&$$&$$&$$&$$&$+x$&$$&$$\\
+\cline{3-4} \cline{11-12} $$&
+$$&$$&$2x^2$&$$&$-x^4$&$$&$$&$$&$$&$2$&$+2x$&$+x^2$&$$\\
+$$&$$&$$&$2x^2$&$+2x^3$&$+x^4$&$$&$$&$$&$$$$&&$$&$x^2$&$$\\
+\cline{4-6} \cline{11-13} $$&
+$$&$$&$$&$-2x^3$&$-2x^4$&$-2x^5$&$+x^6$&$$&$$&$2$&$+2x$&$+2x^2$&$-x^3$\\
+$$&$$&$$&$$&$-2x^3$&$-2x^4$&$-2x^5$&$+x^6$&$$&$$&$$&$$&$$&$-x^3$\\
+\cline{5-8} \cline{11-14} $$&
+$$&$$&$$&$$&$$&$$&$0$&$$&$$&$$&$$&$$&$$\\
+\end{tabular}
+
+\textbf{Remark.}\, The procedure may give a Taylor series expansion of the square root, if it is not a polynomial.\, E.g. we get
+$$\sqrt{1+x} = 1+\frac{1}{2}x-\frac{1}{8}x^2+\frac{1}{16}x^3
+  -\frac{5}{128}x^4+-...$$
+
+\begin{thebibliography}{9}
+\bibitem{MR}{} {\em Meyers Rechenduden}.\, Erster verbesserter Neudruck.\, Bibliographisches Institut AG, Mannheim (1960).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

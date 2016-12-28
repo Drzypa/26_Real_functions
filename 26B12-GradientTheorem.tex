@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GradientTheorem}
+\pmcreated{2013-03-22 19:11:16}
+\pmmodified{2013-03-22 19:11:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{gradient theorem}
+\pmrecord{8}{42096}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{fundamental theorem of line integrals}{GradientTheorem}
+\pmrelated{LaminarField}
+\pmrelated{Gradient}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{domain}
+
+If\, $u = u(x,\,y,\,z)$\, is continuously differentiable function in a simply connected \PMlinkname{domain}{Domain2} $D$ of $\mathbb{R}^3$ and\, 
+$P = (x_0,\,y_0,\,z_0)$\, and\, $Q = (x_1,\,y_1,\,z_1)$\, lie in this domain, then
+\begin{align}
+\int_P^Q\!\nabla u\!\cdot\!\vec{ds} \;=\; u(x_1,\,y_1,\,z_1)-u(x_0,\,y_0,\,z_0)
+\end{align}
+where the line integral of the left hand side is taken along an arbitrary path in $D$.\\
+
+
+The equation (1) is illustrated by the fact that 
+$$\nabla u\!\cdot\!\vec{ds} 
+\;=\; \frac{\partial u}{\partial x}dx+\frac{\partial u}{\partial y}dy+\frac{\partial u}{\partial z}dz$$
+is the total differential of $u$, and thus
+$$\int_P^Q\!\nabla u\!\cdot\!\vec{ds} \;=\; \int_P^Q\!du.$$
+%%%%%
+%%%%%
+\end{document}

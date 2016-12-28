@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContrageometricProportion}
+\pmcreated{2013-04-19 7:14:46}
+\pmmodified{2013-04-19 7:14:46}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{contrageometric proportion}
+\pmrecord{17}{42624}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{a blemish }
+\pmclassification{msc}{26E60}
+\pmclassification{msc}{11-00}
+\pmclassification{msc}{01A20}
+\pmclassification{msc}{01A17}
+\pmrelated{ContraharmonicProportion}
+\pmdefines{contrageometric mean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Just as one converts the proportion equation 
+$$\frac{m\!-\!x}{y\!-\!m} \;=\; \frac{x}{y}$$
+defining the harmonic mean of $x$ and $y$ into the proportion equation 
+$$\frac{m\!-\!x}{y\!-\!m} \;=\; \frac{y}{x}$$
+defining their \PMlinkname{contraharmonic 
+mean}{ContraharmonicProportion}, one also may convert the proportion 
+equation 
+$$\frac{m\!-\!x}{y\!-\!m} \;=\; \frac{m}{y}$$
+defining the geometric mean into a new equation 
+\begin{align}
+\frac{m\!-\!x}{y\!-\!m} \;=\; \frac{y}{m}
+\end{align}
+defining the {\it contrageometric mean} $m$ of $x$ and $y$.\, Thus, the 
+three positive numbers $x$, $m$, $y$ satisfying (1) are in {\it 
+contrageometric proportion}.\, One integer example is 
+$1,\,4,\,6$.\\
+ 
+Solving $m$ from (1) one gets the expression
+\begin{align}
+m \;=\; \frac{x\!-\!y+\sqrt{(x\!-\!y)^2+4y^2}}{2} \;=:\; f(x,\,y).
+\end{align}
+
+Suppose now that\, $0 \le x \le y$.\, Using (2) we see that
+$$m \;\ge\; \frac{x\!-\!y+\sqrt{0^2\!+\!4y^2}}{2} \;=\; \frac{x\!+\!y}{2} 
+\;\ge\; x,$$
+$$y^2\!-\!m^2 \;=\; 
+\frac{-(y\!-\!x)^2+(y\!-\!x)\sqrt{(x\!-\!y)^2+4y^2}}{2} \;=\; 
+\frac{(y\!-\!x)[\sqrt{(y\!-\!x)^2+4y^2}-(y\!-\!x)]}{2} \;\ge\; 0,$$
+accordingly
+\begin{align}
+x \;\le\; f(x,\,y) \;\le\; y.
+\end{align}
+Thus the contrageometric mean of $x$ and $y$ also is at least equal to 
+their arithmetic mean.\, We can also compare $m$ with their quadratic mean by watching the difference
+$$\left(\sqrt{\frac{x^2\!+\!y^2}{2}}\right)^2-m^2 \;=\; (y\!-\!x)\left(\frac{1}{2}\sqrt{(y\!-\!x)^2+4y^2}-y\right)
+\;\ge\; 0.$$
+So we have
+\begin{align}
+\frac{x\!+\!y}{2}\;\le\; f(x,\,y) \;\le\; \sqrt{\frac{x^2\!+\!y^2}{2}}.
+\end{align}
+Cf. this result with the \PMlinkname{comparison of Pythagorean means}{ComparisonOfPythagoreanMeans}; there the brown curve is the graph of\, $f(x,\,1)$.
+
+It's clear that the contrageometric mean (2) is not symmetric with 
+respect to the variables $x$ and $y$, contrary to the other types of 
+means in general.\, On the other hand, the contrageometric mean is, as other types of means, a first-degree homogeneous function its arguments:
+\begin{align}
+f(tx,\,ty) \;=\; tf(x,\,y).
+\end{align}
+
+\begin{thebibliography}{8}
+\bibitem{F}{\sc Mabrouk K. Faradj}: \PMlinkexternal{{\em What mean do you mean? An exposition on means}}{http://etd.lsu.edu/docs/available/etd-07082004-091436/unrestricted/Faradj_thesis.pdf}.\, Louisiana State University (2004).
+\bibitem{D}{\sc Georghe Toader \& Silvia Toader}: \PMlinkexternal{Greek means and the arithmetic-geometric mean}{http://rgmia.org/papers/monographs/Grec.pdf}.\, RGMIA (2010).
+\end{thebibliography}
+
+%%%%%
+\end{document}

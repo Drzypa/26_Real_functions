@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LipschitzConditionAndDifferentiabilityResult}
+\pmcreated{2013-03-22 13:32:42}
+\pmmodified{2013-03-22 13:32:42}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{Lipschitz condition and differentiability result}
+\pmrecord{5}{34145}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A16}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\begin{document}
+About lipschitz continuity of differentiable functions the following holds.
+
+\begin{theorem}
+Let $X,Y$ be Banach spaces and let $A$
+be a convex (see convex set), open subset of $X$. 
+Let $f\colon \overline{A}\to Y$ be a function which is continuous in $\overline A$ and differentiable in $A$. Then $f$ is lipschitz continuous on $\overline A$ 
+if and only if the derivative $Df$ is bounded on $A$ i.e.
+\[
+   \sup_{x\in A} \Vert Df(x) \Vert < +\infty.
+\]
+\end{theorem}
+
+\begin{proof}
+Suppose that $f$ is lipschitz continuous:
+\[
+  \Vert f(x) - f(y)\Vert \le L \Vert x - y\Vert.
+\]
+Then given any $x\in A$ and any $v\in X$, for all small $h\in \mathbb R$ we have 
+\[
+   \Vert \frac{f(x+hv)-f(x)}{h}\Vert \le L.
+\]
+Hence, passing to the limit $h\to 0$ it must hold $\Vert Df(x)\Vert\le L$.
+
+On the other hand suppose that $Df$ is bounded on $A$:
+\[
+  \Vert Df(x)\Vert \le L,\qquad \forall x \in A.
+\]
+Given any two points $x,y\in \overline A$ and given any $\alpha\in Y^*$ consider the function $G:[0,1]\to \mathbb R$
+\[
+  G(t) = \langle \alpha, f((1-t)x +t y)\rangle.
+\]
+For $t\in (0,1)$ it holds
+\[
+  G'(t) = \langle \alpha, Df((1-t)x+ty)[y-x]\rangle
+\]
+and hence
+\[
+   \vert G'(t)\vert \le L \Vert \alpha\Vert\, \Vert y-x\Vert.
+\]
+Applying Lagrange mean-value theorem to $G$ we know that there exists $\xi\in(0,1)$ such that
+\[
+  \vert \langle \alpha, f(y)-f(x)\rangle\vert =  \vert G(1)-G(0)\vert  = \vert G'(\xi)\vert \le \Vert \alpha\Vert L \Vert y-x\Vert 
+\]
+and since this is true for all $\alpha\in Y^*$ we get
+\[
+  \Vert f(y)-f(x) \Vert \le L \Vert y-x\Vert
+\]
+which is the desired claim.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

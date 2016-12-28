@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfVectorvaluedFunctions}
+\pmcreated{2013-03-22 19:02:42}
+\pmmodified{2013-03-22 19:02:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{properties of vector-valued functions}
+\pmrecord{9}{41923}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{26A36}
+\pmclassification{msc}{26A24}
+\pmrelated{ProductAndQuotientOfFunctionsSum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If\, $F = (f_1,\,\ldots,\,f_n)$\, and\, $G = (g_1,\,\ldots,\,g_n)$\, are vector-valued and $u$ a real-valued function of the real variable $t$, one defines the vector-valued functions $F\!+\!G$ and $uF$ componentwise as
+$$F\!+\!G \;:=\; (f_1\!+\!g_1,\,\ldots,\,f_n\!+\!g_n), \quad uF \;:=\; (uf_1,\,\ldots,\,uf_n)$$
+and the real valued dot product as
+$$F \cdot G \;:=\; f_1g_1\!+\ldots+\!f_ng_n.$$
+If\, $n = 3$,\, one my define also the vector-valued cross product function as
+$$F\!\times\!G \;:=\; 
+\left( 
+\left|\begin{matrix}
+f_2 & f_3 \\
+g_2 & g_3
+\end{matrix}\right|\!,\, 
+\left|\begin{matrix}
+f_3 & f_1 \\
+g_3 & g_1
+\end{matrix}\right|\!,\,
+\left|\begin{matrix}
+f_1 & f_2 \\
+g_1 & g_2
+\end{matrix}\right|
+\right)\!.$$\\
+
+It's not hard to verify, that if $F$, $G$ and $u$ are differentiable on an interval, so are also
+$F\!+\!G$, $uF$ and $F\cdot G$, and the formulae
+$$(F\!+\!G)' \;=\; F'\!+\!G', \quad (uF)' \;=\; u'F\!+\!uF', \quad (F\cdot G)' \;=\; F'\cdot G+F\cdot G'$$
+are valid, in $\mathbb{R}^3$ additionally
+$$(F\!\times\!G)' \;=\; F'\!\times\!G+F\!\times\!G'.$$\\
+
+Likewise one can verify the following theorems.\\
+
+\textbf{Theorem 1.}\, If $u$ is continuous in the point $t$ and $F$ in the point $u(t)$, then
+$$H \;=\; F\!\circ\!u \;:=\; (f_1\!\circ\!u,\,\ldots,\,f_n\!\circ\!u)$$
+is continuous in the point $t$.\, If $u$ is differentiable in the point $t$ and $F$ in the point $u(t)$, then the composite function $H$ is differentiable in $t$ and the chain rule
+$$H'(t) \;=\; F'(u(t))\,u'(t)$$
+is in \PMlinkescapetext{force}.\\
+
+\textbf{Theorem 2.}\, If $F$ and $G$ are integrable on\, $[a,\,b]$,\, so is also $c_1F\!+\!c_2G$, where $c_1,\,c_2$ are real constants, and 
+$$\int_a^b\!(c_1F\!+\!c_2G)\,dt \;=\; c_1\int_a^b\!F\,dt+c_2\int_a^b\!G\,dt.$$\\
+
+\textbf{Theorem 3.}\, Suppose that $F$ is continuous on the interval $I$ and\, $c \in I$.\, Then the vector-valued function 
+$$t\; \mapsto\; \int_c^t\!F(\tau)\,d\tau \;:=\; G(t) \quad \forall\, t \in I$$
+is differentiable on $I$ and satisfies\, $G' = F$.\\
+
+\textbf{Theorem 4.}\, Suppose that $F$ is continuous on the interval\, $[a,\,b]$\, and $G$ is an arbitrary function such that\, $G' = F$\, on this interval.\, Then
+$$\int_a^b\!F(t)\,dt \;=\; G(b)\!-\!G(a).$$
+
+Theorem 2 may be generalised to
+
+\textbf{Theorem 5.}\, If $F$ is integrable on\, $[a,\,b]$\, and\, $C = (c_1,\,\ldots,\,c_n)$\, is an arbitrary vector of $\mathbb{R}^n$, then dot product $C\cdot F$ is integrable on this interval and
+$$\int_a^b\!C\cdot F(t)\,dt \;=\; C\cdot\!\int_a^b\!F(t)\,dt.$$
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegrationOfPolynomial}
+\pmcreated{2013-03-22 15:57:29}
+\pmmodified{2013-03-22 15:57:29}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{integration of polynomial}
+\pmrecord{30}{37971}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{thm*}{Theorem}
+\begin{document}
+\PMlinkescapeword{integral}
+
+\begin{thm*}
+For all nonnegative integers $n$,
+\[
+\int x^n \, dx = \frac{1}{n+1}x^{n+1}+C.
+\]
+\end{thm*}
+
+\begin{proof}
+It will first be proven that, for any nonnegative integer $n$ and any $a \in \mathbb{R}$,
+\[
+\int\limits_0^a x^n \, dx = \frac{1}{n+1}a^{n+1}.
+\]
+
+If $a=0$, the above statement is obvious.  If $a>0$, the following computation uses the right hand rule for computing the \PMlinkname{integral}{RiemannIntegral}; if $a<0$, the following computation uses the left hand rule for computing the integral:
+
+\begin{center}
+\begin{tabular}{ll}
+$\displaystyle \int\limits_0^a x^n \, dx$ & $\displaystyle =\lim_{t \to \infty} \sum_{k=1}^t \left( \frac{ak}{t} \right)^n \left( \frac{a}{t} \right)$ \\
+& $\displaystyle =a^{n+1} \lim_{t \to \infty} \frac{1}{t^{n+1}} \sum_{k=1}^t k^n$ \\
+& $\displaystyle =a^{n+1} \lim_{t \to \infty} \frac{1}{t^{n+1}} \sum_{l=1}^{n+1} {n+1 \choose r} \frac{B_{n+1-l}}{n+1}(t+1)^l$ by \PMlinkname{this theorem}{SumOfKthPowersOfTheFirstNPositiveIntegers}, \\
+& $\displaystyle =a^{n+1} \lim_{t \to \infty} \frac{1}{t^{n+1}} {n+1 \choose n+1} \frac{B_{n+1-(n+1)}}{n+1} (t+1)^{n+1}$ \\
+& $\displaystyle =\frac{B_0}{n+1} a^{n+1} \lim_{t \to \infty} \left( \frac{t+1}{t} \right)^{n+1}$ \\
+& $\displaystyle =\frac{1}{n+1}a^{n+1}$ \end{tabular}
+\end{center}
+
+Thus, if $a,b \in \mathbb{R}$, then $\displaystyle \int\limits_a^b x^n \, dx = \int\limits_0^b x^n \, dx - \int\limits_0^a x^n \, dx = \frac{1}{n+1}b^{n+1}-\frac{1}{n+1}a^{n+1}.$
+
+It follows that $\displaystyle \int x^n \, dx = \frac{1}{n+1}x^n+C$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

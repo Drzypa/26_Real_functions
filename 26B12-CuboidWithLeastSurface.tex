@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CuboidWithLeastSurface}
+\pmcreated{2013-03-22 17:24:00}
+\pmmodified{2013-03-22 17:24:00}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{cuboid with least surface}
+\pmrecord{7}{39770}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmdefines{cuboid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let us determine among all {\em cuboids} (i.e. rectangular parallelepipeds) with a given volume $k^3$ such one which has the least surface area.
+
+Let the three edges of the cuboid beginning from a vertex be $x$, $y$ and $z$; then we must start from the condition\, $xyz = k^3$,\, whence\, $z = \frac{k^3}{xy}$.  We get the expression
+\begin{align}
+f(x,\,y) := 2(yz\!+\!zx\!+\!xy) = 2\!\left(\!xy+\frac{k^3}{x}+\frac{k^3}{y}\!\right)
+\end{align}
+for the whole area of the \PMlinkescapetext{surface} of the cuboid.  Thus we have to make\, $f(x,\,y)$ a minimum, when only the positive values of $x$ and $y$ can be taken into consideration.  
+
+The function $f$ and its first order partial derivatives are continuous for all positive $x$ and $y$.  According to the \PMlinkescapetext{theorem} of the \PMlinkname{parent entry}{ExtremumPointsOfFunctionOfSeveralVariables}, a minimum can occur only when simultaneously
+\begin{align*}
+\begin{cases}
+{f'_x(x,\,y) = y-\frac{k^3}{x^2} = 0},\\
+{f'_y(x,\,y) = x-\frac{k^3}{y^2} = 0}.
+\end{cases}
+\end{align*}
+These equations are true only for\, $x = y = k$,\, i.e. for the case that the cuboid is a cube.  
+We can infer that a cube has the least area.  In fact, we see from (1) that\, $f(x,\,y)\to\infty$\, as\, $x\to 0$\, or $y\to 0$\, or\, $xy\to\infty$;\, therefore there exist a small positive number $m$ and a big positive number $M$ such that outside and on the boundary of the region resembling a triangle and bounded by the lines \, $x = m$\, and\, $y = m$\, and the rectangular hyperbola \, $xy = M$,\, the value of\, $f(x,\,y)$\, is always greater than in the point \, $(k,\,k)$\, inside this region.  Thus the function gets its smallest value in an interior point of the region, and this point must be\, $(k,\,k)$\, since it is the only point where $f'_x$ and $f'_y$ both vanish.\\
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(3.5,4)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-0.5,-0.5)(5.5,4.5)
+\rput(5.4,-0.2){$x$}
+\rput(0.2,4.44){$y$}
+\rput(-0.2,-0.2){$0$}
+\psline[linecolor=blue](0.7,0)(0.7,4.4)
+\psline[linecolor=blue](0,0.7)(4.9,0.7)
+\psplot[linecolor=blue]{0.57}{4.9}{2.5 x div}
+\rput(0.7,-0.25){$m$}
+\rput(-0.25,0.7){$m$}
+\rput(2,2.4){$xy = M$}
+\psdot[linecolor=red](1,1)
+\rput(1.4,1.15){$^{(k,\,k)}$}
+\end{pspicture}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

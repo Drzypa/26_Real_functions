@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LogarithmicProofOfProductRule}
+\pmcreated{2013-03-22 16:18:48}
+\pmmodified{2013-03-22 16:18:48}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{logarithmic proof of product rule}
+\pmrecord{6}{38438}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{97D40}
+\pmrelated{LogarithmicProofOfQuotientRule}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+Following is a proof of the product rule using the natural logarithm, the chain rule, and implicit differentiation.  Note that circular reasoning does not occur, as each of the concepts used can be proven independently of the product rule.
+
+\begin{proof}
+Let $f$ and $g$ be differentiable functions and $y=f(x)g(x)$.  Then $\ln y=\ln (f(x)g(x))=\ln f(x)+\ln g(x)$.  Thus, $\displaystyle \frac{1}{y} \cdot \frac{dy}{dx}=\frac{f'(x)}{f(x)}+\frac{g'(x)}{g(x)}$.  Therefore,
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \frac{dy}{dx} & \displaystyle = y \left( \frac{f'(x)}{f(x)}+\frac{g'(x)}{g(x)} \right) \\
+& \\
+& \displaystyle = f(x)g(x) \left( \frac{f'(x)}{f(x)}+\frac{g'(x)}{g(x)} \right) \\
+& \\
+& = f'(x)g(x)+g'(x)f(x). \end{array}$
+\end{center}
+\end{proof}
+
+Once students are familiar with the natural logarithm, the chain rule, and implicit differentiation, they typically have no problem following this proof of the product rule.  Actually, with some prompting, they can produce a proof of the product rule \PMlinkescapetext{similar} to this one.  This exercise is a great way for students to review many concepts from calculus.
+%%%%%
+%%%%%
+\end{document}

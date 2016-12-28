@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuityOfConvexFunctionsAlternateProof}
+\pmcreated{2013-03-22 18:25:28}
+\pmmodified{2013-03-22 18:25:28}
+\pmowner{yesitis}{13730}
+\pmmodifier{yesitis}{13730}
+\pmtitle{continuity of convex functions, alternate proof}
+\pmrecord{4}{41078}
+\pmprivacy{1}
+\pmauthor{yesitis}{13730}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B25}
+\pmclassification{msc}{26A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $f$ be convex and $y\in(a, b)$ be arbitrary but fixed. Then
+\begin{eqnarray}
+    f(\lambda x+(1-\lambda)y) &\leq& \lambda f(x)+(1-\lambda)f(y) \\
+    f(\lambda x+(1-\lambda)y)-f(y) &\leq&
+    \lambda(f(x)-f(y))\leq\lambda|f(x)-f(y)|.
+\end{eqnarray}
+
+Fix a number $c>\sup\{|f(u)-f(v)|: u,v\in(a, b)\}$. Then
+\begin{equation}\label{5}
+    |f(\lambda
+    x+(1-\lambda)y)-f(y)|\leq\lambda|f(x)-f(y)|<\lambda c.
+\end{equation}
+
+Given $\epsilon>0$, let $\lambda$ range over $(0, \epsilon/c)$ if
+$\epsilon/c<1$, or $\lambda=1$ otherwise. Then it is easy to see
+that $f(\lambda x+(1-\lambda)y)$ and $f(y)$ lie within $\epsilon$
+distance of each other when $\lambda$ varies as specified.
+
+Continuity of $f$ now follows--for $x<y$, the left-hand limit equals
+$f(y)$ and for $y<x$, the right-hand limit also equals $f(y)$, hence
+the limit is $f(y)$.
+%%%%%
+%%%%%
+\end{document}

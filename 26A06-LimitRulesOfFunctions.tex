@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitRulesOfFunctions}
+\pmcreated{2013-03-22 14:51:21}
+\pmmodified{2013-03-22 14:51:21}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{limit rules of functions}
+\pmrecord{20}{36528}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{30A99}
+\pmsynonym{limit rules of sequences}{LimitRulesOfFunctions}
+%\pmkeywords{limit rule}
+\pmrelated{GrowthOfExponentialFunction}
+\pmrelated{ImproperLimits}
+\pmrelated{DerivativesOfSineAndCosine}
+\pmrelated{ListOfCommonLimits}
+\pmrelated{LimitExamples}
+\pmrelated{ProductAndQuotientOfFunctionsSum}
+\pmrelated{DerivationOfPlasticNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+ \, Let $f$ and $g$ be two \PMlinkname{real}{RealFunction} or complex functions.\, Suppose that there exist the limits \,$\lim_{x\to x_0}f(x)$\, and\, $\lim_{x\to x_0}g(x)$.\, Then there exist the limits\, $\lim_{x\to x_0}[f(x)\!\pm\!g(x)]$,\, $\lim_{x\to x_0}f(x)g(x)$\, and, if\, $\lim_{x\to x_0}g(x)\neq 0$,\, also\, $\lim_{x\to x_0}f(x)/g(x)$, and
+\begin{enumerate}
+\item $\lim_{x\to x_0}[f(x)\!\pm\!g(x)] 
+\;=\; \lim_{x\to x_0}f(x)\pm\lim_{x\to x_0}g(x),$
+\item $\lim_{x\to x_0}f(x)g(x) \;=\; \lim_{x\to x_0}f(x)\cdot\lim_{x\to x_0}g(x),$
+\item $\lim_{x\to x_0}\frac{f(x)}{g(x)} \;=\; 
+\frac{\lim_{x\to x_0}f(x)}{\lim_{x\to x_0}g(x)},$
+\item $\lim_{x\to x_0}c \;=\; c
+\quad\mathrm{where}\,\,c\,\,\mathrm{is\,\,a\,\,constant}.$
+\end{enumerate}
+\end{thmplain}
+
+These rules are used in limit calculations and in proving the corresponding differentiation rules (sum rule, product rule etc.). 
+
+In \PMlinkescapetext{theorem} 1, the domains of $f$ and $g$ could be any topological space (not necessarily $\mathbb{R}$ or $\mathbb{C}$).\\
+
+There are \PMlinkescapetext{similar} limit rules of \PMlinkname{sequences}{Sequence}.\\
+
+As well, one often needs the
+
+\begin{thmplain}
+ \,If there exists the limit\, $\lim_{x\to x_0}f(x) = a$\, and if $g$ is continuous at the point\, $x = a$, then there exists the limit\, $\lim_{x\to x_0}g(f(x))$, and 
+           $$\lim_{x\to x_0}g(f(x)) \;=\; g(\lim_{x\to x_0}f(x)).$$
+\end{thmplain}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GudermannianFunction}
+\pmcreated{2014-10-27 7:59:12}
+\pmmodified{2014-10-27 7:59:12}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Gudermannian function}
+\pmrecord{27}{41997}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E05}
+\pmclassification{msc}{26A48}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{26A09}
+\pmsynonym{Gudermannian}{GudermannianFunction}
+\pmrelated{ChainRule}
+\pmrelated{EulerNumbers2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{atan}
+
+The \emph{Gudermannian function}\, \textbf{gd}\, is defined by the definite integral
+\begin{align}
+\mbox{gd}\,x \;:=\; \int_0^x\!\frac{dt}{\cosh t} \;=\; \int_0^x\!\frac{2\,dt}{e^t+e^{-t}} 
+\;=\; 2\!\int_0^x\!\frac{e^t}{e^{2t}+1}\,dt.
+\end{align}
+Because of the continuity of the integrand of (1), this equation defines a differentiable real function, which by the \PMlinkid{fundamental theorem of calculus}{5660} has the derivative 
+\begin{align}
+\frac{d}{dx}\,\mbox{gd}\,x \;=\; \frac{1}{\cosh{x}}.
+\end{align}
+From this we infer that the Gudermannian is an odd function.
+
+
+Using the \PMlinkname{substitution}{ChangeOfVariableInDefiniteIntegral} \,$e^t \:= u$\, we can make from (1) the closed form
+\begin{align}
+\mbox{gd}\,x \;=\; 2\arctan{e^x}-\frac{\pi}{2}.
+\end{align}
+This enables to see that 
+$$\lim_{x\to-\infty}\mbox{gd}\,x \;=\; -\frac{\pi}{2}, \qquad \lim_{x\to+\infty}\mbox{gd}\,x \;=\; +\frac{\pi}{2},$$
+whence the \PMlinkescapetext{graph} of the gudermannian has the lines \,$y = \pm\frac{\pi}{2}$\, as asymptotes.
+
+Besides (3), one has also e.g. the closed forms
+$$\mbox{gd}\,x \;=\; \arcsin(\tanh{x}), \qquad \mbox{gd}\,x \;=\; \arctan(\sinh{x}),$$
+since both of these composition functions have the derivative $\displaystyle\frac{1}{\cosh{x}}$, as (2), and vanish in the origin (see the fundamental theorem of integral calculus).\, Accordingly, we may write the formulae
+\begin{align}
+\sin(\mbox{gd}\,x) \;=\; \tanh{x}, \qquad \tan(\mbox{gd}\,x) \;=\; \sinh{x}
+\end{align}
+which are illustrated by the below right triangle.\, Cf. the properties of the catenary!
+\begin{center}
+\begin{pspicture}(-3,-0.5)(3,2.8)
+\pspolygon(-2.5,0)(2,0)(2,2.5)
+\rput(2.7,1.2){$\sinh{x}$}
+\rput(-0.7,1.5){$\cosh{x}$}
+\rput(0,-0.25){$1$}
+\rput(-1.5,0.25){$\mbox{gd}\,x$}
+\psarc(-2.5,0){0.5}{0}{29}
+\psline(1.75,0)(1.75,0.25)(2,0.25)
+\rput(-3,0){.}
+\rput(3,2.8){.}
+\end{pspicture}
+\end{center}
+
+
+Thus, Gudermannian function offers a beautiful \PMlinkescapetext{connection} between the \PMlinkid{trigonometric}{4676} and the hyperbolic functions without using imaginary numbers (cf. the paragraph 3 in hyperbolic identities).\\
+
+
+The Taylor series expansion of $\mbox{gd}\,x$ may be expressed with the Euler numbers $E_n$; these have as generating function the derivative of Gudermannian function:
+$$\frac{1}{\cosh{x}} \;:=\; \sum_{n=0}^\infty\frac{E_n}{n!}\,x^n\; \qquad (|x| < \frac{\pi}{2})$$
+\begin{align}
+\therefore \;\, \mbox{gd}\,x \;=\; \sum_{n=0}^\infty\frac{E_n}{(n\!+\!1)!}\,x^{n+1} \qquad (|x| < \frac{\pi}{2})
+\end{align}
+Since gd is \PMlinkescapetext{odd} (and its derivative \PMlinkname{even}{EvenFunction}), the numbers $E_n$ with odd indices are 0; the others are non-zero integers.\, The begin of (5) is
+$$\mbox{gd}\,x \;=\; x-\frac{1}{3!}x^3+\frac{5}{5!}x^5-\frac{61}{7!}x^7+\frac{1385}{9!}x^9-+\ldots$$
+
+
+\begin{center}
+\begin{pspicture}(-6,-3.2)(6,2.5)
+\psline[linestyle=dashed](-5.5,+1.5707)(5.5,+1.5707)
+\psline[linestyle=dashed](-5.5,-1.5707)(5.5,-1.5707)
+\pscurve[linecolor=blue](0,0)(0.1,0.09983)(0.2,0.1987)(0.3,0.2956)(0.4,0.3897)(0.5,0.4804)(0.6,0.5669)(0.7,0.6490)(0.8,0.7262)(0.9,0.7985)(1.0,0.8658)(1.1,0.9281)(1.2,0.9857)(1.3,1.0387)(1.4,1.0872)(1.5,1.1317)(1.6,1.1724)(1.7,1.2094)(1.8,1.2432)(1.9,1.2739)(2.0,1.3018)(2.1,1.3271)(2.2,1.3501)(2.3,1.3710)(2.4,1.3899)(2.5,1.4070)(2.6,1.4225)(2.7,1.4366)(2.8,1.4493)(2.9,1.4609)(3.0,1.4713)(3.1,1.4808)(3.2,1.4893)(3.3,1.4971)(3.4,1.5041)(3.5,1.5104)(3.6,1.5162)(3.7,1.5214)(3.8,1.5261)(3.9,1.5303)(4.0,1.5342)(4.1,1.5377)(4.2,1.5408)(4.3,1.5437)(4.4,1.5462)(4.5,1.5486)(4.6,1.5507)(4.7,1.5526)(4.8,1.5543)(4.9,1.5559)(5.0,1.5573)(5.1,1.5586)(5.2,1.5598)(5.3,1.5608)(5.4,1.5618)(5.5,1.5626)
+\pscurve[linecolor=blue](0,0)(-0.1,-0.09983)(-0.2,-0.1987)(-0.3,-0.2956)(-0.4,-0.3897)(-0.5,-0.4804)(-0.6,-0.5669)(-0.7,-0.6490)(-0.8,-0.7262)(-0.9,-0.7985)(-1.0,-0.8658)(-1.1,-0.9281)(-1.2,-0.9857)(-1.3,-1.0387)(-1.4,-1.0872)(-1.5,-1.1317)(-1.6,-1.1724)(-1.7,-1.2094)(-1.8,-1.2432)(-1.9,-1.2739)(-2.0,-1.3018)(-2.1,-1.3271)(-2.2,-1.3501)(-2.3,-1.3710)(-2.4,-1.3899)(-2.5,-1.4070)(-2.6,-1.4225)(-2.7,-1.4366)(-2.8,-1.4493)(-2.9,-1.4609)(-3.0,-1.4713)(-3.1,-1.4808)(-3.2,-1.4893)(-3.3,-1.4971)(-3.4,-1.5041)(-3.5,-1.5104)(-3.6,-1.5162)(-3.7,-1.5214)(-3.8,-1.5261)(-3.9,-1.5303)(-4.0,-1.5342)(-4.1,-1.5377)(-4.2,-1.5408)(-4.3,-1.5437)(-4.4,-1.5462)(-4.5,-1.5486)(-4.6,-1.5507)(-4.7,-1.5526)(-4.8,-1.5543)(-4.9,-1.5559)(-5.0,-1.5573)(-5.1,-1.5586)(-5.2,-1.5598)(-5.3,-1.5608)(-5.4,-1.5618)(-5.5,-1.5626)
+\rput(0,-2.8){$\textrm{The curve  }y = \mbox{gd}\,x$}
+\psaxes{->}(0,0)(-5.5,-1.8)(5.5,2.4)
+\rput[a](5.6,-0.25){$x$}
+\rput[r](0.3,2.4){$y$}
+\rput[l](-6.5,0){.}
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

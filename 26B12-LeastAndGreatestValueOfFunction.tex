@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeastAndGreatestValueOfFunction}
+\pmcreated{2013-03-22 15:38:57}
+\pmmodified{2013-03-22 15:38:57}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{least and greatest value of function}
+\pmrecord{11}{37581}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{global extrema of real function}{LeastAndGreatestValueOfFunction}
+%\pmkeywords{least value}
+%\pmkeywords{greatest value}
+\pmrelated{Extremum}
+\pmrelated{LeastAndGreatestNumber}
+\pmrelated{FermatsTheoremStationaryPoints}
+\pmrelated{MinimalAndMaximalNumber}
+\pmdefines{absolute minimum}
+\pmdefines{absolute maximum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\, If the real function $f$ is
+\begin{enumerate}
+\item continuous on the closed interval\, $[a,\,b]$\, and
+\item differentiable on the open interval\, $(a,\,b)$,
+\end{enumerate}
+then the function has on the interval\, $[a,\,b]$\, a least value and a greatest value.\, These are always got in the end of the interval or in the zero of the derivative.
+\end{thmplain}
+
+\textbf{Remark 1.}\, If the preconditions of the theorem are fulfilled by a function $f$, then one needs only to determine the values of $f$ in the end points $a$ and $b$ of the interval and in the zeros of the derivative $f'$ inside the interval; then the least and the greatest value are found among those values.\\
+
+\textbf{Remark 2.}\, Note that the theorem does not require anything of the derivative $f'$ in the points $a$ and $b$; one needs not even the right-sided derivative in $a$ or the left-sided derivative in $b$.\, Thus e.g. the function\, $f:\,x \mapsto \sqrt{1-x^2}$,\, fulfilling the conditions of the theorem on the interval\, $[-1,\,1]$\, but not having such one-sided derivatives, gains its least value in the end-point\, $x = -1$\, and its greatest value in the zero\, $x = 0$\, of the derivative.\\
+
+\textbf{Remark 3.}\, The least value of a function is also called the \emph{absolute minimum} and the greatest value the \emph{absolute maximum} of the function.
+%%%%%
+%%%%%
+\end{document}

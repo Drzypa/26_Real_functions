@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtremumPointsOfFunctionOfSeveralVariables}
+\pmcreated{2013-03-22 17:23:57}
+\pmmodified{2013-03-22 17:23:57}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{extremum points of function of several variables}
+\pmrecord{12}{39769}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmrelated{VanishingOfGradientInDomain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The points where a function of two or more real variables attains its extremum values are found in the set containing the points where all first order partial derivatives vanish, the points where one or more of those derivatives does not exist, and the points where the function itself is discontinuous.
+
+\textbf{Example 1.}\, The function \,$f(x,\,y) = x^2\!+\!y^2\!+\!1$\, from $\mathbb{R}^2$ to $\mathbb{R}$ has a (global) minimum point\, $(0,\,0)$,\, where its partial derivatives\, $\frac{\partial f}{\partial x} = 2x$\, and\, 
+$\frac{\partial f}{\partial y} = 2y$\, both equal to zero.
+
+\textbf{Example 2.}\, Also the function \,$g(x,\,y) = \sqrt{x^2\!+\!y^2}$\, from $\mathbb{R}^2$ to $\mathbb{R}$ has a (global) minimum in\, $(0,\,0)$,\, where neither of its partial derivatives\, $\frac{\partial g}{\partial x}$\, and\, 
+$\frac{\partial g}{\partial y}$\, exist.
+
+\textbf{Example 3.}\, The function \, $f(x,\,y,\,z)= x^2\!+\!y^2\!+\!z^2$\, from $\mathbb{R}^3$ to $\mathbb{R}$ has an absolute minimum point\, $(0,\,0,\,0)$,\, since $\nabla{f}=2x\mathbf{i}\!+\!2y\mathbf{j}\!+\!2z\mathbf{k}=\mathbf{0}\,\implies\,x=y=z=0$,\, $\frac{\partial^2{f}}{\partial{x}^2}=\frac{\partial^2{f}}{\partial{y}^2}=\frac{\partial^2{f}}{\partial{z}^2}=2>0$, and $f(0,\,0,\,0)\leq f(x,\,y,\,z)$ for all $ (x,\,y,\,z)\,\in\mathbb{R}^3$.
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FractionPower}
+\pmcreated{2014-09-21 12:12:39}
+\pmmodified{2014-09-21 12:12:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{fraction power}
+\pmrecord{21}{37340}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+\pmsynonym{fractional power}{FractionPower}
+%\pmkeywords{fractional number exponent}
+\pmrelated{PowerFunction}
+\pmrelated{GeneralPower}
+\pmrelated{IntegrationOfFractionPowerExpressions}
+\pmrelated{NthRootFormulas}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $m$ be an integer and $n$ a positive factor of $m$.\, If $x$ is a positive real number, we may write the identical equation
+       $$(x^{\frac{m}{n}})^n \;=\; x^{\frac{m}{n}\cdot n} \;=\; x^m$$
+and therefore the definition of \PMlinkname{$n^\mathrm{th}$ root}{NthRoot} gives the \PMlinkescapetext{formula}
+\begin{align}
+\sqrt[n]{x^m} \;=\;  x^{\frac{m}{n}}.
+\end{align}
+Here, the exponent $\frac{m}{n}$ is an integer.\, For enabling the validity of (1) for the cases where $n$ does not divide $m$ we must set the following
+
+\textbf{Definition.}\, Let $\frac{m}{n}$\, be a fractional number, i.e. an integer $m$ not divisible by the integer $n$, which latter we assume to be positive.\, For any positive real number $x$ we define the\, {\em fraction power}\, $x^{\frac{m}{n}}$ as the $n^\mathrm{th}$ \PMlinkescapetext{root}
+\begin{align}
+             x^{\frac{m}{n}} \;:=\; \sqrt[n]{x^m}.
+\end{align}
+
+\textbf{Remarks}
+\begin{enumerate}
+
+\item The existence of the \PMlinkescapetext{root} in the right 
+hand side of (2) is proved 
+\PMlinkname{here}{existenceofnthroot}.
+
+\item The defining equation (2) is independent on the form of the exponent $\frac{m}{n}$:\, If\, $\frac{k}{l} = \frac{m}{n}$,\, then we have\, $(\sqrt[n]{x^m})^{ln} = [(\sqrt[n]{x^m})^n]^l = x^{lm} = x^{kn} = 
+[(\sqrt[l]{x^k})^l]^n = (\sqrt[l]{x^k})^{ln}$,\, and because the mapping\, 
+$y\mapsto y^{ln}$\, is injective in $\mathbb{R}_+$, the positive numbers $\sqrt[l]{x^k}$ and $\sqrt[n]{x^m}$ must be equal.
+
+\item The fraction power function\, $x\mapsto x^{\frac{m}{n}}$\, is a special case of power function.
+
+\item The presumption that $x$ is positive signifies that one can not identify all $n^\mathrm{th}$ \PMlinkname{roots}{NthRoot} $\sqrt[n]{x}$ and the powers $x^{\frac{1}{n}}$.\, For example, $\sqrt[3]{-8}$ equals $-2$ and\, 
+$\frac{2}{6} = \frac{1}{3}$,\, but one \textbf{must not} \PMlinkescapetext{calculate}
+ $$(-8)^{\frac{1}{3}} \;=\; (-8)^{\frac{2}{6}} \;=\; \sqrt[6]{(-8)^2} \;=\; \sqrt[6]{64} \;=\; 2.$$
+The point is that $(-8)^{\frac{1}{3}}$ is not defined in $\mathbb{R}$.\, Here we have\, $l = 6$\, and the mapping\, 
+$y\mapsto y^{ln}$\, is not injective in\, $\mathbb{R}_-\cup\mathbb{R}_+$.\,
+ --- Nevertheless, some people and books may use also for negative $x$ the equality\, $\sqrt[n]{x} = x^{\frac{1}{n}}$\, and more generally\, $\sqrt[n]{x^m} = x^{\frac{m}{n}}$\, where one then insists that\, $\gcd(m,\,n) = 1.$
+
+\item According to the preceding item, for the negative values of $x$ the derivative of \PMlinkname{odd roots}{NthRoot}, e.g. $\sqrt[3]{x}$, ought to be calculated as follows:
+$$\frac{d\sqrt[3]{x}}{dx} \;=\; \frac{d(-\sqrt[3]{-x})}{dx} 
+\;=\; -\frac{d(-x)^\frac{1}{3}}{dx} \;=\; -\frac{1}{3}\!\cdot\!(-x)^{-\frac{2}{3}}(-1) 
+\;=\;\frac{1}{3\sqrt[3]{(-x)^2}} \;=\; \frac{1}{3\sqrt[3]{x^2}}$$
+The result is similar as $\frac{d\sqrt[3]{x}}{dx}$ for positive $x$'s, although the \PMlinkescapetext{odd} root functions are not special cases of the power function.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

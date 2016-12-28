@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfContinuousFunctionsAreRiemannIntegrable}
+\pmcreated{2013-03-22 13:45:34}
+\pmmodified{2013-03-22 13:45:34}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of continuous functions are Riemann integrable}
+\pmrecord{7}{34462}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Recall the definition of Riemann integral. To prove that $f$ is integrable we have to prove that $\lim_{\delta \to 0^+} S^*(\delta)-S_*(\delta) =0$.
+Since $S^*(\delta)$ is decreasing and $S_*(\delta)$ is increasing it is enough to show that given $\epsilon>0$ there exists $\delta>0$ such that $S^*(\delta)-S_*(\delta)<\epsilon$.
+
+So let $\epsilon>0$ be fixed.
+
+By Heine-Cantor Theorem $f$ is uniformly continuous i.e.
+\[
+  \exists \delta>0\ 
+   \vert x-y\vert < \delta \Rightarrow \vert f(x)-f(y)\vert <\frac{\epsilon}{b-a}.
+\]
+
+Let now $P$ be any partition of $[a,b]$ in $C(\delta)$ i.e. a partition $\{x_0=a, x_1,\ldots,x_N=b\}$ such that $x_{i+1}-x_i<\delta$. In any small interval $[x_i,x_{i+1}]$ the function $f$ (being continuous) has a maximum $M_i$ and minimum $m_i$. Since $f$ is uniformly continuous and $x_{i+1}-x_i<\delta$ we  have $M_i - m_i < \epsilon/(b-a)$. So the difference between upper and lower Riemann sums is 
+\[
+  \sum_i M_i(x_{i+1}-x_i) - \sum_i m_i(x_{i+1}-x_i)
+  \le \frac{\epsilon}{b-a} \sum_i (x_{i+1}-x_i) = \epsilon.
+\] 
+
+This being true for every partition $P$ in $C(\delta)$ we conclude that $S^*(\delta)-S_*(\delta)<\epsilon$.
+%%%%%
+%%%%%
+\end{document}

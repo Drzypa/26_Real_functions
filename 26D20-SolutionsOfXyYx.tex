@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolutionsOfXyYx}
+\pmcreated{2014-12-16 16:29:29}
+\pmmodified{2014-12-16 16:29:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{solutions of $x^y = y^x$}
+\pmrecord{13}{42127}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D20}
+\pmclassification{msc}{26B35}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{11D61}
+\pmsynonym{equation $x^y = y^x$}{SolutionsOfXyYx}
+%\pmkeywords{exponentiation}
+%\pmkeywords{power}
+\pmrelated{CatalansConjecture}
+\pmrelated{RationalAndIrrational}
+\pmrelated{PerfectPower}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The equation
+\begin{align}
+x^y \;=\; y^x
+\end{align}
+has trivial solutions on the line \,$y = x$.\, For other solutions one has the\\
+
+\textbf{Theorem.}\, $1^\circ$. The only positive solutions of the equation (1) with\,  $1 < x < y$\, are in a parametric form
+\begin{align}
+x \;=\; (1\!+\!u)^{\frac{1}{u}}, \qquad y \;=\; (1\!+\!u)^{\frac{1}{u}+1}
+\end{align}
+where\, $u > 0$.\\
+$2^\circ$. The only rational solutions of (1) are
+\begin{align}
+x \;=\; \left(1\!+\!\frac{1}{n}\right)^n\!, \qquad y \;=\; \left(1\!+\!\frac{1}{n}\right)^{n+1}
+\end{align}
+where\, $n = 1,\,2,\,3,\,\ldots$\\
+$3^\circ$. Consequently, the only integer solution of (1) is
+$$2^4 \;=\; 16 \;=\; 4^2.$$\\
+
+
+\emph{Proof.} $1^\circ$. Let\, $(x,\,y)$\, be a solution of (1) with\, $1 < x < y$.\, Set\, $y = x\!+\!\delta$\, 
+($\delta > 0$).\, Now
+$$x^{x+\delta} \;=\; (x\!+\!\delta)^x,$$
+from which we obtain easily
+$$x \;=\; \left(1\!+\!\frac{\delta}{x}\right)^{\frac{x}{\delta}} \;:=\; (1\!+\!u)^{\frac{1}{u}},$$
+where\, $u = \frac{\delta}{x}$.\, Then 
+$$y \;=\; x\!+\!\delta \;=\; x\!\left(1\!+\!\frac{\delta}{x}\right) 
+\;=\; (1\!+\!u)^{\frac{1}{u}}(1\!+\!u) \;=\; (1\!+\!u)^{\frac{1}{u}+1}.$$
+$2^\circ$. The unit fractions\, $u = \frac{1}{n}$\, yield from (2) rational solutions (3).
+Further, no irrational value of $u$ cannot make both $x$ and $y$ of (2) rational, since otherwise the ratio $1\!+\!u$ of the latter numbers would be irrational (cf. rational and irrational).\, Accordingly, for other rational solutions than (3), we must consider the values
+$$u \;:=\; \frac{m}{n}$$
+with coprime positive integers $m,\,n$ where\, $m > 1$.\, Make the antithesis that
+$$x \;=\; \left(1\!+\!\frac{m}{n}\right)^{\frac{n}{m}} \;\in\; \mathbb{Q}.$$
+Because the integers coprime with $m$ form a group with respect to the multiplication modulo $m$ (cf. prime residue classes), the congruence
+$$nz \;\equiv\; 1 \pmod{m}$$
+has a solution $z$.\, Thus we may write\, $nz = km\!+\!1$\, and rewrite the rational number
+\begin{align}
+\left[\left(1\!+\!\frac{m}{n}\right)^{\frac{n}{m}}\right]^z \;=\; \left(1\!+\!\frac{m}{n}\right)^{\frac{nz}{m}} 
+\;=\; \left(1\!+\!\frac{m}{n}\right)^{\frac{km+1}{m}} 
+\;=\; \left(1\!+\!\frac{m}{n}\right)^k\left(1\!+\!\frac{m}{n}\right)^{\frac{1}{m}}.
+\end{align}
+This product form tells that $\left(1\!+\!\frac{m}{n}\right)^{\frac{1}{m}}$ is rational.\, But the number
+$$\left(1\!+\!\frac{m}{n}\right)^{\frac{1}{m}} \;=\; \sqrt[m]{\frac{m\!+\!n}{n}}$$ 
+cannot be rational without the coprime integers $m\!+\!n$ and $n$ both being $m^{\mbox{th}}$ \PMlinkname{powers}{GeneralAssociativity}.\, If we had\, $n = v^m$,\, then by Bernoulli inequality,
+$$(v\!+\!1)^m \;>\; v^m\!+\!mv \geqq n\!+\!m,$$
+i.e. $m\!+\!n$ could not be a $m^{\mbox{th}}$ power.\, The contradictory situation means, by (4), that the antithesis is wrong.\, Therefore, the numbers (3) give the only rational solutions of (1).\\
+
+
+\textbf{Note.}\, The value\, $n = 2$\, in (3) produces\, $x = \frac{9}{4}$,\, $y = \frac{27}{8}$,\, whence (1) reads
+\begin{align}
+\left(\frac{9}{4}\right)^{\frac{27}{8}} \;=\; \left(\frac{27}{8}\right)^{\frac{9}{4}}\!.
+\end{align}
+The truth of the equality (5) may also be checked by the calculation
+$$\left(\frac{9}{4}\right)^{\frac{27}{8}} \;=\; \left[\left(\frac{9}{4}\right)^{\frac{1}{2}}\right]^{\frac{27}{4}} 
+\;=\; \left(\frac{3}{2}\right)^{\frac{27}{4}} \;=\; \left[\left(\frac{3}{2}\right)^3\right]^{\frac{9}{4}} 
+\;=\; \left(\frac{27}{8}\right)^{\frac{9}{4}}\!.$$
+
+
+\begin{thebibliography}{8}
+\bibitem{HG}{\sc P. Hohler \& P. Gebauer}:\, Kann man ohne Rechner entscheiden, ob $e^\pi$ oder $\pi^e$ gr\"osser ist? $-$ \emph{Elemente der Mathematik} \textbf{36} (1981).
+\bibitem{SM}{\sc J. Sondow \& D. Marques}:\, Algebraic and transcendental solutions
+of some exponential equations.\, $-$ \emph{Annales Mathematicae et Informaticae} \textbf{37} (2010); available directly at \PMlinkexternal{arXiv}{http://arxiv.org/pdf/1108.6096.pdf}.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

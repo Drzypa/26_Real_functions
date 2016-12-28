@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LandauKernel}
+\pmcreated{2013-03-22 14:11:38}
+\pmmodified{2013-03-22 14:11:38}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{Landau kernel}
+\pmrecord{7}{35624}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For $k\in\mathbb{N}$ the \emph{Landau kernel} $L_k(t)$ is defined as
+$$L_k=\left\{\begin{array}{lr}
+\frac{1}{c_k}(1-t^2)^k&\text{if }t\in[-1,1]\\
+0&\text{otherwise}
+\end{array}\right.$$
+with
+$$c_k:=\int_{-1}^1(1-t^2)^kdt.$$
+$L_k$ is nonnegative and continuous on $\mathbb{R}$. Due to the choice of $c_k$ we have
+$$\int_{-\infty}^\infty L_k(t)dt=1.$$
+Also we have for all positive, real $r$:
+\begin{align*}
+\int_{\mathbb{R}\backslash[-r,r]}L_k(t)dt&\leq\frac{2}{c_k}\int_r^1(1-t^2)^kdt\\
+&\leq(k+1)(1-r^2)^k.
+\end{align*}
+Therefore $(L_k)_{k\in\mathbb{N}}$ is a Dirac sequence.
+%%%%%
+%%%%%
+\end{document}

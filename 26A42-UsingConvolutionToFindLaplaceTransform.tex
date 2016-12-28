@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UsingConvolutionToFindLaplaceTransform}
+\pmcreated{2013-03-22 18:44:05}
+\pmmodified{2013-03-22 18:44:05}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{using convolution to find Laplace transform}
+\pmrecord{12}{41504}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{44A10}
+\pmrelated{ErrorFunction}
+\pmrelated{SubstitutionNotation}
+\pmrelated{IntegrationOfLaplaceTransformWithRespectToParameter}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+\PMlinkescapeword{formula}
+
+We start from the \PMlinkescapetext{relations} (see the table of Laplace transforms)
+\begin{align}
+e^{\alpha t} \;\curvearrowleft\; \frac{1}{s\!-\!\alpha}, 
+\quad \frac{1}{\sqrt{t}} \;\curvearrowleft\; \sqrt{\frac{\pi}{s}} \qquad (s > \alpha)
+\end{align}
+where the curved \PMlinkescapetext{arrows point} from the Laplace-transformed functions to the original functions.\, Setting\, $\alpha = a^2$\, and dividing by $\sqrt{\pi}$ in (1), the convolution property of Laplace transform yields
+$$\frac{1}{(s\!-\!a^2)\sqrt{s}} \;\;\curvearrowright\;\; 
+e^{a^2t}*\frac{1}{\sqrt{\pi t}} \;=\; \int_0^t\!e^{a^2(t-u)}\frac{1}{\sqrt{\pi u}}\,du.$$
+The \PMlinkname{substitution}{ChangeOfVariableInDefiniteIntegral} \,$a^2u = x^2$\, then gives
+$$\frac{1}{(s\!-\!a^2)\sqrt{s}} \;\curvearrowright\;
+\frac{e^{a^2t}}{\sqrt{pi}}\int_0^{a\sqrt{t}}\!e^{-x^2}\!\cdot\!\frac{a}{x}\!\cdot\!\frac{2x}{a^2}\,dx
+\;=\; \frac{e^{a^2t}}{a}\!\cdot\!\frac{2}{\sqrt{\pi}}\int_0^{a\sqrt{t}}\!e^{-x^2}\,dx 
+\;=\; \frac{e^{a^2t}}{a}\,{\rm erf}\,a\sqrt{t}.$$
+Thus we may write the formula
+\begin{align}
+\mathcal{L}\{e^{a^2t}\,{\rm erf}\,a\sqrt{t}\} \;=\; \frac{a}{(s\!-\!a^2)\sqrt{s}} \qquad (s > a^2).
+\end{align}
+
+Moreover, we obtain
+$$\frac{1}{(\sqrt{s}\!+\!a)\sqrt{s}} \;=\; \frac{\sqrt{s}\!-\!a}{(s\!-\!a^2)\sqrt{s}} \;=\, 
+\frac{1}{s-a^2}-\frac{a}{(s-a^2)\sqrt{s}} \;\curvearrowright\; 
+e^{a^2t}-e^{a^2t}\,{\rm erf}\,a\sqrt{t} \;=\; e^{a^2t}(1-{\rm erf}\,a\sqrt{t}),$$
+whence we have the other formula
+\begin{align}
+\mathcal{L}\{e^{a^2t}\,{\rm erfc}\,a\sqrt{t}\} \;=\; \frac{1}{(a\!+\!\sqrt{s})\sqrt{s}}.
+\end{align}
+
+\subsection{An improper integral}
+
+One can utilise the formula (3) for evaluating the improper integral
+$$\int_0^\infty\frac{e^{-x^2}}{a^2\!+\!x^2}\,dx.$$
+We have
+$$e^{-tx^2} \;\curvearrowleft\; \frac{1}{s\!+\!x^2}$$
+(see the \PMlinkname{table of Laplace transforms}{TableOfLaplaceTransforms}).\, Dividing this by $a^2\!+\!x^2$ and integrating from 0 to $\infty$, we can continue as follows:
+\begin{align*}
+\int_0^\infty\frac{e^{-tx^2}}{a^2\!+\!x^2}\,dx & \;\curvearrowleft\; \int_0^\infty\frac{dx}{(a^2\!+\!x^2)(s\!+\!x^2)}
+\;=\; \frac{1}{s\!-\!a^2}\int_0^\infty\left(\frac{1}{a^2\!+\!x^2}-\frac{1}{s\!+\!x^2}\right)dx\\
+& \;=\; \frac{1}{s\!-\!a^2}\sijoitus{x=0}{\quad\infty}\left(\frac{1}{a}\arctan\frac{x}{a}-\frac{1}{\sqrt{s}}\arctan\frac{x}{\sqrt{s}}\right)\\
+& \;=\; \frac{1}{s\!-\!a^2}\!\cdot\!\frac{\pi}{2}\left(\frac{1}{a}-\frac{1}{\sqrt{s}}\right)
+ \;=\; \frac{\pi}{2a}\!\cdot\!\frac{1}{(a\!+\!\sqrt{s})\sqrt{s}}\\
+& \;\curvearrowright\; \frac{\pi}{2a}e^{a^2t}\,{\rm erfc}\,a\sqrt{t}
+\end{align*}
+Consequently, 
+$$\int_0^\infty\frac{e^{-tx^2}}{a^2\!+\!x^2}\,dx \;=\; \frac{\pi}{2a}e^{a^2t}\,{\rm erfc}\,a\sqrt{t},$$
+and especially
+$$\int_0^\infty\frac{e^{-x^2}}{a^2\!+\!x^2}\,dx \;=\; \frac{\pi}{2a}e^{a^2}\,{\rm erfc}\,a.$$
+
+%%%%%
+%%%%%
+\end{document}

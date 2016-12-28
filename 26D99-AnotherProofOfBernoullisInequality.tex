@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnotherProofOfBernoullisInequality}
+\pmcreated{2013-03-22 15:45:43}
+\pmmodified{2013-03-22 15:45:43}
+\pmowner{a4karo}{12322}
+\pmmodifier{a4karo}{12322}
+\pmtitle{another proof of Bernoulli's inequality}
+\pmrecord{7}{37717}
+\pmprivacy{1}
+\pmauthor{a4karo}{12322}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For fixed $x>0,\ x\neq 1$ the function
+$$
+w_x(r)=\int_1^x t^{r-1} dt=
+\begin{cases} \frac{x^r-1}{r}\quad& r\neq 0\\
+\log x\quad& r=0
+\end{cases}
+$$
+is strictly increasing.\\
+Bernoulli inequality is equivalent to
+$$ w_{1+x}(r) > (<)\ w_{1+x}(1)$$
+%%%%%
+%%%%%
+\end{document}

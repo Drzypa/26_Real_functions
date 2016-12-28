@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConcavityOfSineFunction}
+\pmcreated{2013-03-22 17:00:26}
+\pmmodified{2013-03-22 17:00:26}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{concavity of sine function}
+\pmrecord{8}{39289}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+The sine function is concave on the interval $[0, \pi]$.
+\end{thm}
+
+\begin{proof}
+Suppose that $x$ and $y$ lie in the interval $[0, \pi/2]$.
+Then $\sin x$, $\sin y$, $\cos x$, and $\cos y$ are all
+non-negative.  Subtracting the identities
+\[
+\sin^2 x + \cos^2 x = 1
+\]
+and 
+\[
+\sin^2 y + \cos^2 y = 1
+\]
+from each other, we conclude that
+\[
+\sin^2 x - \sin^2 y = \cos^2 y - \cos^2 x .
+\]
+This implies that $\sin^2 x - \sin^2 y \ge 0$ if and only if
+$\cos^2 y - \cos^2 x \ge 0$, which is equivalent to stating
+that $\sin^2 x \ge \sin^2 y$ if and only if $\cos^2 x \le
+\cos^2 y$.  Taking square roots, we conclude that 
+$\sin x \le \sin y$ if and only if
+$\cos x \ge \cos y$. 
+
+Hence, we have
+\[
+(\sin x - \sin y) (\cos x - \cos y) \le 0 .
+\]
+Multiply out both sides and move terms to conclude
+\[
+\sin x \cos x + \sin y \cos y \le \sin x \cos y + \sin y \cos x .
+\]
+Applying the angle addition and double-angle identities for the
+sine function, this becomes
+\[
+{1 \over 2} \left( \sin (2x) + \sin (2y) \right) \le \sin (x + y) .
+\]
+This is equivalent to stating that, for all
+$u,v \in [0, \pi]$,
+\[
+{1 \over 2} \left( \sin u + \sin v \right) \le
+\sin \left( {u + v \over 2} \right) ,
+\]
+which implies that $\sin$ is concave in the interval $[0, \pi]$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

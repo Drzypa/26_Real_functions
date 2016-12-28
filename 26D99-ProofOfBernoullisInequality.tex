@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBernoullisInequality}
+\pmcreated{2013-03-22 12:38:14}
+\pmmodified{2013-03-22 12:38:14}
+\pmowner{danielm}{240}
+\pmmodifier{danielm}{240}
+\pmtitle{proof of Bernoulli's inequality}
+\pmrecord{6}{32900}
+\pmprivacy{1}
+\pmauthor{danielm}{240}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $I$ be the interval $(-1, \infty)$ and 
+$f :I \rightarrow \mathbb R$ the function defined as:
+\[
+   f(x) = (1 + x)^\alpha - 1 - \alpha x
+\]
+with $\alpha \in \mathbb R \setminus \lbrace 0, 1 \rbrace$ fixed.
+Then $f$ is differentiable and its derivative is
+\[
+   f'(x) = \alpha (1 + x)^{\alpha - 1} - \alpha,
+   \mbox{ for all } x \in I,
+\]
+from which it follows that $f'(x) = 0 \Leftrightarrow x = 0$.
+\begin{enumerate}
+\item
+If $0 < \alpha < 1$ then $f'(x) < 0$ for all $x \in (0, \infty)$
+and $f'(x) > 0$ for all $x \in (-1, 0)$ which means that $0$ is a
+global maximum point for $f$.
+Therefore 
+$f(x) < f(0)$ for all $x \in I \setminus \lbrace 0 \rbrace$
+which means that
+$(1 + x)^\alpha < 1 + \alpha x$ for all $x \in (-1, 0)$.
+\item
+If $\alpha \notin [0, 1]$ then $f'(x) > 0$ for all $x \in (0, \infty)$
+and $f'(x) < 0$ for all $x \in (-1, 0)$ meaning that $0$ is a global
+minimum point for $f$.
+This implies that 
+$f(x) > f(0)$ for all $x \in I \setminus \lbrace 0 \rbrace$
+which means that 
+$(1 + x)^\alpha > 1 + \alpha x$ for all $x \in (-1, 0)$.
+\end{enumerate}
+
+Checking that the equality is satisfied for $x = 0$ or for \( \alpha \in
+\lbrace 0, 1 \rbrace \) ends the proof.
+%%%%%
+%%%%%
+\end{document}

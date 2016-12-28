@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitExamples}
+\pmcreated{2013-03-22 17:40:16}
+\pmmodified{2013-03-22 17:40:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{limit examples}
+\pmrecord{8}{40109}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A03}
+\pmsynonym{utilizing limit of $\frac{\sin{x}}{x}$ in 0}{LimitExamples}
+\pmrelated{LimitRulesOfFunctions}
+\pmrelated{DerivativeOfInverseFunction}
+\pmrelated{ListOfCommonLimits}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Example 1.}\, Determine the limit $\displaystyle\lim_{x\to 0}\frac{\tan{x}}{x}$.\; --- Using the definition of $\tan$ and the \PMlinkname{limit rule of product}{LimitRulesOfFunctions} we can write
+$$\displaystyle\lim_{x\to 0}\frac{\tan{x}}{x} = 
+\lim_{x\to0}\left(\frac{\sin{x}}{x}\cdot\frac{1}{\cos{x}}\right) = 
+\lim_{x\to0}\frac{\sin{x}}{x}\cdot\lim_{x\to0}\frac{1}{\cos{x}}.$$
+The limit in the former \PMlinkname{factor}{Product} is 1 by the \PMlinkname{parent entry}{LimitOfDisplaystyleFracsinXxAsXApproaches0}.  Also the latter limit is 1, since\, $\cos{x}$ and thus the quotient $\displaystyle\frac{1}{\cos{x}}$ is continuous in the point \,$x = 0$ (see continuity of sine and cosine).\, Accordingly the desired limit is $1$.\\
+
+\textbf{Example 2.}\, Determine the limit $\displaystyle\lim_{x\to 0}\frac{\sin{ax}}{\sin{bx}}$.\; --- As above, we can write
+$$\displaystyle\lim_{x\to 0}\frac{\sin{ax}}{\sin{bx}} = 
+\lim_{x\to0}\left(\frac{\sin{ax}}{ax}\cdot\frac{bx}{\sin{bx}}\cdot\frac{a}{b}\right) = 
+\lim_{x\to0}\frac{\sin{ax}}{ax}\cdot\lim_{x\to0}\frac{bx}{\sin{bx}}\cdot\lim_{x\to0}\frac{a}{b} 
+= 1\cdot1\cdot\frac{a}{b} = \frac{a}{b}.$$
+
+\textbf{Example 3.}\, The perimeter of a regular $n$-gon, circumscribed to a circle with radius 1, is $2n\tan\frac{\pi}{n}$.\, Determine the limit of this perimeter as $n$ tends to infinity.\, --- Utilising the example 1 we can calculate
+$$\lim_{n\to\infty}2n\tan\frac{\pi}{n} = \lim_{n\to\infty}2\pi\frac{\tan\frac{\pi}{n}}{\frac{\pi}{n}} = 2\pi\cdot1 = 2\pi,$$
+which is the circumference of the circle.\\
+
+\textbf{Example 4.}\, Determine the limit $\displaystyle\lim_{x\to 0}\frac{\arcsin{x}}{x}$.\; --- If we denote\,      $$\arcsin{x} := y,$$
+the monotonicity of the \PMlinkname{arcus sine}{CyclometricFunctions} function on\, $[-1,\,1]$\, implies that ``$x\to0$'' is \PMlinkname{equivalent}{Equivalent3} to ``$y\to0$''.\, Then we can calculate:
+$$\lim_{x\to 0}\frac{\arcsin{x}}{x} = \lim_{y\to0}\frac{y}{\sin{y}} = \lim_{y\to0}\frac{1}{\frac{\sin{y}}{y}} = \frac{1}{1} = 1.$$
+
+\textbf{Example 5.}\, One may use the definition of derivative in
+$$\lim_{x\to0}\frac{\arctan{x}}{x} = \lim_{x\to0}\frac{\arctan{x}-\arctan{0}}{x-0} = \left[\frac{d}{dx}\arctan{x}\right]_{x=0} = \frac{1}{1+0^2} = 1.$$
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

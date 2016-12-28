@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AntiderivativeOfRationalFunction}
+\pmcreated{2013-03-22 19:21:38}
+\pmmodified{2013-03-22 19:21:38}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{antiderivative of rational function}
+\pmrecord{19}{42313}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmsynonym{integration of rational functions}{AntiderivativeOfRationalFunction}
+\pmrelated{IntegrationTechniques}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The most notable real functions, which can be integrated in a closed form, are the rational functions:
+
+\textbf{Theorem.}\, The antiderivative of a rational function is always expressible in a closed form, which only can comprise, except a rational expression summand, summands of logarithms and arcustangents of rational functions.
+
+One can justify the theorem by using the general form of the (unique) partial fraction decomposition
+
+\begin{align*}R(x) \;=\quad H(x)+&
+\sum_{i=1}^m\left(\frac{A_{i1}}{x\!-\!a_i}+\frac{A_{i2}}{(x\!-\!a_i)^2}+\ldots
++\frac{A_{i\mu_i}}{(x\!-\!a_i)^{\mu_i}}\right)\\
++&\sum_{j=1}^n\left(\frac{B_{j1}x\!+\!C_{j1}}{x^2\!+\!2p_jx\!+\!q_j}+
+\frac{B_{j2}x\!+\!C_{j2}}{( x^2\!+\!2p_jx\!+\!q_j)^2}+\ldots
++\frac{B_{j\nu_j}x\!+\!C_{j\nu_j}}{( x^2\!+\!2p_jx\!+\!q_j)^{\nu_j}}\right)\!,
+\end{align*}
+
+of the rational function $R(x)$ ; here, $H(x)$ is a polynomial, the first sum expression is determined by the real zeroes $a_i$ of the denominator of $R(x)$, the second sum is determined by the real quadratic prime factors $x^2\!+\!2p_jx\!+\!q_j$ of the denominator (which have no real zeroes).
+
+The addends of the form $\displaystyle\frac{A}{(x\!-\!a)^r}$ in the first sum are integrated directly, giving
+\begin{align}
+\int\!\frac{A}{x\!-\!a}\,dx \;=\; A\ln|x\!-\!a|+\mbox{constant} \qquad (r = 1)
+\end{align}
+and
+\begin{align}
+\int\!\frac{A}{(x\!-\!a)^r}\,dx \;=\; -\frac{A}{r\!-\!1}\!\cdot\!\frac{1}{(x\!-\!a)^{r-1}}+\mbox{constant} \qquad (r > 1).
+\end{align}
+
+The remaining partial fractions are of the form $\displaystyle\frac{Bx\!+\!C}{(x^2\!+\!2px\!+\!q)^s}$ where\, $p^2 < q$\, and $s$ is a positive integer.\, Now we may write 
+$$x^2\!+\!2px\!+\!q \;=\; (x\!+\!p)^2\!+\!q\!-\!p^2 \;=\; (q\!-\!p^2)\!\left[1+\left(\!\frac{x\!+\!p}{\sqrt{q\!-\!p^2}}\!\right)^{\!2}\right]$$ and make the substitution
+\begin{align}
+\frac{x\!+\!p}{\sqrt{q\!-\!p^2}} \;=\; t,
+\end{align}
+i.e.\, $x \,=\, t\sqrt{q\!-\!p^2}\!-\!p$,\, getting
+\begin{align}
+\int\!\frac{Bx\!+\!C}{(x^2\!+\!2px\!+\!q)^s}\,dx \;=\; \int\!\frac{Et\!+\!F}{(1\!+\!t^2)^s}\,dt \;=\; 
+E\!\int\!\frac{t\,dt}{(1\!+\!t^2)^s}+F\!\int\!\frac{dt}{(1\!+\!t^2)^s}
+\end{align}
+where $E$ and $F$ are certain constants.\, In the case \,$s = 1$\, we have
+\begin{align}
+\int\!\frac{t\,dt}{1\!+\!t^2} \;=\; \frac{1}{2}\ln(1\!+\!t^2)+\mbox{constant}
+\end{align}
+and in the case \,$s >1$
+\begin{align}
+\int\!\frac{t\,dt}{(1\!+\!t^2)^s} \;=\; -\frac{1}{2(s\!-\!1)}\!\cdot\!\frac{1}{(1\!+\!t^2)^{s-1}}+\mbox{constant}.
+\end{align}
+The latter addend of the right hand side of (4) is for\, $s = 1$\, got from
+\begin{align}
+\int\!\frac{dt}{1\!+\!t^2} \;=\; \arctan{t}+\mbox{constant}
+\end{align}
+and for the cases $s > 1$ on may first write 
+$$\int\!\frac{dt}{(1\!+\!t^2)^s} \;=\; \int\!\frac{(1\!+\!t^2)\!-\!t^2}{(1\!+\!t^2)^s}\,dt \;=\;
+\int\!\frac{dt}{(1\!+\!t^2)^{s-1}}-\int\!t\!\cdot\!\frac{t\,dt}{(1\!+\!t^2)^s}.$$ 
+Using integration by parts in the last integral, this equation can be converted into the reduction formula
+\begin{align}
+\int\!\frac{dt}{(1\!+\!t^2)^s} \;=\; 
+\frac{1}{2s\!-\!2}\!\cdot\!\frac{t}{(1\!+\!t^2)^{s-1}}+\frac{2n\!-\!3}{2n\!-\!2}\int\!\frac{dt}{(1\!+\!t^2)^{s-1}}.
+\end{align}
+The assertion of the theorem follows from (1), \ldots, (8).\\
+
+\textbf{Example.}\, 
+$$\int\!\frac{dx}{1\!+\!x^4} \;=\; \frac{1}{4\sqrt{2}}\ln\frac{1\!+\!x\sqrt{2}\!+\!x^2}{1\!-\!x\sqrt{2}\!+\!x^2}
++\frac{1}{2\sqrt{2}}\arctan\frac{x\sqrt{2}}{1\!-\!x^2}+C$$
+
+%%%%%
+%%%%%
+\end{document}

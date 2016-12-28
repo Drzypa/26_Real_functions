@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeierstrassSubstitutionFormulas}
+\pmcreated{2013-03-22 17:05:25}
+\pmmodified{2013-03-22 17:05:25}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{Weierstrass substitution formulas}
+\pmrecord{12}{39383}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmclassification{msc}{33B10}
+\pmsynonym{Weierstra{\ss} substitution formulas}{WeierstrassSubstitutionFormulas}
+\pmrelated{GoniometricFormulae}
+\pmrelated{IntegrationOfRationalFunctionOfSineAndCosine}
+\pmrelated{PolynomialAnalogonForFermatsLastTheorem}
+\pmdefines{Weierstrass substitution}
+\pmdefines{Weiersta{\ss} substitution}
+\pmdefines{universal trigonometric substitution}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{formulas}
+\PMlinkescapeword{restriction}
+
+The \emph{Weierstrass substitution formulas} for $-\pi < x < \pi$ are:
+
+\begin{center}
+$\begin{array}{rl}
+\sin x & =\displaystyle \frac{2t}{1+t^2} \\
+& \\
+\cos x & =\displaystyle \frac{1-t^2}{1+t^2}\\
+& \\
+dx & =\displaystyle \frac{2}{1+t^2} \, dt
+\end{array}$
+\end{center}
+
+They can be obtained in the following manner:
+
+Make the \emph{Weierstrass substitution} $\displaystyle t=\tan \left( \frac{x}{2} \right)$.  (This substitution is also known as the \emph{universal trigonometric substitution}.)  Then we have
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \cos \left( \frac{x}{2} \right) & = \displaystyle \frac{1}{\displaystyle \sec \left( \frac{x}{2} \right)} \\
+& \\
+& = \displaystyle \frac{1}{\displaystyle \sqrt{1+\tan^2\left( \frac{x}{2} \right)}} \\
+& \\
+& = \displaystyle \frac{1}{\sqrt{1+t^2}}
+\end{array}$
+\end{center}
+
+and
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \sin \left( \frac{x}{2} \right) & = \displaystyle \cos \left( \frac{x}{2} \right) \cdot \tan \left( \frac{x}{2} \right) \\
+& \\
+& = \displaystyle \frac{t}{\sqrt{1+t^2}}.
+\end{array}$
+\end{center}
+
+Note that these are just the ``formulas involving \PMlinkname{radicals}{Radical6}'' as designated in the entry goniometric formulas; however, due to the restriction on $x$, the $\pm$'s are unnecessary.
+
+Using the above formulas along with the double angle formulas, we obtain
+
+\begin{center}
+$\begin{array}{rl}
+\sin x & =\displaystyle 2\sin\left( \frac{x}{2} \right)\cdot \cos\left( \frac{x}{2} \right) \\
+& \\
+& =\displaystyle 2 \cdot \frac{t}{\sqrt{1+t^2}} \cdot \frac{1}{\sqrt{1+t^2}} \\
+& \\
+& =\displaystyle \frac{2t}{1+t^2}
+\end{array}$
+\end{center}
+
+and
+
+\begin{center}
+$\begin{array}{rl}
+\cos x & =\displaystyle \cos^2\left( \frac{x}{2} \right)-\sin^2\left( \frac{x}{2} \right) \\
+& \\
+& =\displaystyle \left( \frac{1}{\sqrt{1+t^2}} \right)^2-\left( \frac{t}{\sqrt{1+t^2}} \right)^2 \\
+& \\
+& =\displaystyle \frac{1}{1+t^2}-\frac{t^2}{1+t^2} \\
+& \\
+& =\displaystyle \frac{1-t^2}{1+t^2}.
+\end{array}$
+\end{center}
+
+Finally, since $\displaystyle t=\tan\left( \frac{x}{2} \right)$, solving for $x$ yields that $x=2\arctan t$.  Thus, $\displaystyle dx=\frac{2}{1+t^2} \, dt$.
+
+The Weierstrass substitution formulas are most useful for \PMlinkname{integrating rational functions of sine and cosine}{IntegrationOfRationalFunctionOfSineAndCosine}.
+%%%%%
+%%%%%
+\end{document}

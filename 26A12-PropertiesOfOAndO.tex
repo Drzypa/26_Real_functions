@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfOAndO}
+\pmcreated{2013-03-22 15:15:45}
+\pmmodified{2013-03-22 15:15:45}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{properties of $O$ and $o$}
+\pmrecord{7}{37048}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A12}
+\pmrelated{FormalDefinitionOfLandauNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+The following properties of Landau notation hold:
+\begin{enumerate}
+\item $o(f)$ and $O(f)$ are vector spaces, i.e.\ if $g,h\in o(f)$ (resp. in $O(f)$) then $\lambda g + \mu h \in o(f)$ (resp. in $O(f)$) whenever $\lambda,\mu \in \R$;
+In particular $o(f) + o(f) = o(f)$ and $\lambda o(f) = o(f)$;
+\item if $\lambda\neq 0$ then $\lambda o(f) = o(f)$ and $\lambda O(f)=O(f)$;
+\item $f o(g)=o(f g)$, $f O(g)= O(f g)$;
+\item $o(g)^\alpha = o(g^\alpha)$, $O(g)^\alpha = O(g^\alpha)$;
+\item $o(f) \subseteq O(f)$; on the other hand if $f\in o(g)$ then $O(f)\subseteq o(g)$;
+\item $o(f)\subseteq o(g)$ if $f\in O(g)$; analogously $O(f)\subseteq O(g)$ if $f\in O(g)$;
+\item $o(o(f))=o(f)$, $O(O(f))=O(f)$, $o(O(f))=o(f)$, $O(o(f))=o(f)$.
+\end{enumerate}
+
+Here are some examples.
+First of all we consider Taylor formula. 
+If $x_0\in (a,b)\subset \R$ and $f\colon (a,b)\to \R$ has $n$ derivatives, then
+\[
+  f(x) \in \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!} (x-x_0)^k + o((x-x_0)^n).
+\]
+As a consequence, if $f$ has $n+1$ derivatives, we can replace $o((x-x_0)^n)$ with $O((x-x_0)^{n+1})$ in the previous formula.
+
+For example:
+\[
+  e^x \in 1 + x + \frac 12 x^2 + \frac 16 x^4 + O(x^5)
+   \subset 1 + x + \frac 12 x^2 + \frac 16 x^4 + o(x^4).
+\]
+
+Using the properties stated above we can compose and iterate Taylor expansions.
+For example from the expansions
+\[
+  \sin x \in x + \frac {x^3}{3!} + o(x^4),\qquad
+  e^x \in 1 + x + \frac{x^2}{2} + O (x^3),
+\]
+\[
+  \cos x \in 1 - \frac{x^2}{2} +  \frac {x^4}{4!} + o (x^5)
+   \subseteq 1- \frac{x^2}{2} + O(x^4),\qquad
+   \log( 1+x) \in x - \frac{x^2}{2} + o (x^2)
+\]
+we get
+\begin{align*}
+  (x\sin x - e^{(x^2)})\log (\cos x)
+&\in \left( x(x  - \frac {x^3}{3!} + o(x^4)) - (1 + x^2 + \frac{x^4}{2} + O((x^2)^3)\right)
+  \log ( 1 - \frac{x^2}{2} +\frac{x^4}{4!}+ o (x^5))\\
+&= \left( x^2 -\frac {x^4}{3!}+ o(x^4) -1 -x^2-\frac{x^4}{2}+O(x^6)\right)
+  \left(- \frac{x^2}{2} +\frac{x^4}{4!}+ o (x^5)  - \frac{( - \frac{x^2}{2} + o (x^3))^2}{2}
+  + o(( -\frac{x^2}{2} + o (x^3))^2)\right)\\
+&=( -1-\frac{2}{3} x^4 + o(x^4)+O(x^6))
+  \left( - \frac{x^2}{2} +\frac{x^4}{4!}+ o (x^5) - \frac{\frac{x^4}{4} - 2 \frac{x^2}{2}  o (x^3) + (o(x^3))^2}{2} + o(\frac{x^4}{4}+o(x^4))\right)\\
+& = ( -1-\frac{2}{3} x^4 + o(x^4))
+  (  - \frac{x^2}{2} +\frac{x^4}{4!} +o(x^5) + \frac{x^4}{8}+ o(x^5)+o(x^6)+o(x^4))\\
+&= (-1-\frac{2}{3} x^4 + o(x^4)) (- \frac{x^2}{2} +6x^4 + o(x^4))\\
+&= - \frac{x^2}{2}-6x^4 + o(x^4) + x^4 O(x^2) + o(x^4)O(x^2)\\
+&= - \frac{x^2}{2}-6x^4 + o(x^4) + O(x^6) + o(x^6)\\
+&=  - \frac{x^2}{2}-6x^4 + o(x^4)
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

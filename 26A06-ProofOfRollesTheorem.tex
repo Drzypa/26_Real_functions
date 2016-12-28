@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRollesTheorem}
+\pmcreated{2013-03-22 12:40:19}
+\pmmodified{2013-03-22 12:40:19}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{proof of Rolle's theorem}
+\pmrecord{5}{32947}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+\usepackage{amssymb, amsmath, amsthm, alltt, setspace}
+\newtheorem{thm}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{definition}
+\newtheorem*{rem}{Remark}
+
+\theoremstyle{definition}
+\newtheorem*{nott}{Notation}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem*{eg}{Example}
+\newtheorem*{ex}{Exercise}
+\newtheorem*{prop}{Proposition}
+
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\leftbb}{[ \! [}
+\newcommand{\rightbb}{] \! ]}
+\newcommand{\bt}{\begin{thm}}
+\newcommand{\et}{\end{thm}}
+\newcommand{\Rel}{\mathbf{R}}
+\newcommand{\er}{\thicksim}
+\newcommand{\sqle}{\sqsubseteq}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+\begin{document}
+Because $f$ is continuous on a compact (closed and bounded) interval $I = [a,b]$, it attains its 
+maximum and minimum values.  In case $f(a)=f(b)$ is both the maximum and 
+the minimum, then there is nothing more to say, for then $f$ is a constant function and
+$f' \equiv 0$ on the whole interval $I$.  So suppose otherwise, and $f$ attains an extremum 
+in the open interval
+$(a,b)$, and without loss of generality, let this extremum be a maximum, considering $-f$ in
+lieu of $f$ as necessary.  We claim that at this extremum $f(c)$ we have $f'(c) = 0$, with $a < c < b$.
+
+To show this, note that $f(x) - f(c) \leq 0$ for all 
+$x \in I$, because $f(c)$ is the maximum.  By definition of the derivative, we have that
+\[
+f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c}.
+\]
+Looking at the one-sided limits, we note that 
+\[
+R = \lim_{x \to c^+} \frac{f(x) - f(c)}{x - c} \leq 0
+\]
+because the numerator in the limit is nonpositive in the interval $I$, 
+yet $x - c > 0$, as $x$ approaches $c$ from the right.  Similarly,
+\[
+L = \lim_{x \to c^-} \frac{f(x) - f(c)}{x - c} \geq 0.
+\]
+Since $f$ is differentiable at $c$, the left and right limits must coincide, so 
+$0 \leq L = R \leq 0$, that is to say, $f'(c) = 0$.
+%%%%%
+%%%%%
+\end{document}

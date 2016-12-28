@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Piecewise}
+\pmcreated{2013-03-22 15:50:42}
+\pmmodified{2013-03-22 15:50:42}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{piecewise}
+\pmrecord{10}{37825}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+The word ``piecewise'' is used widely in mathematics, primarily in the analysis of functions of a single real variable.  Piecewise is typically applied to a set of mathematical properties on a function.  Loosely speaking, a function satisfies a particular property ``piecewise'' if that function can be broken down into pieces (to be made precise later) so that each piece satisfies that particular property.  However, to avoid potential problems with infinity, the number of pieces is generally set to be finite (particularly in the case when the domain is bounded).  Another potential problem is that the function having this ``piecewise'' property (let's call it $P$) usually fails to have this property $P$ at certain boundary points of the pieces.  To get around this technicality, and thus allowing a much wider class of functions to being ``piecewise $P$'', pieces are re-defined so as to exclude these problematic ``boundary points''.
+
+Formally speaking, we have the following:
+
+\begin{quote}
+That a function $f$ with domain $D\subseteq \mathbb{R}$ having ``piecewise'' property $P$ means that there is a finite partition of $D$: 
+$$D=D_1\cup\cdots\cup D_n,\mbox{ with }D_i\cap D_j=\varnothing\mbox{ for }i\neq j$$ 
+such that the restriction of $f$ to the interior of each $D_i$: $f_i:=f\mid \operatorname{int}(D_i)$ has property $P$.
+\end{quote}
+
+\textbf{Remarks}.
+\begin{itemize}
+\item If $D$ is an interval or a ray on $\mathbb{R}$, then this finite partition can usually be done so that each ``piece'' is an interval or a ray.
+\item If function $f$ satisfies property $P$, then $f$ satisfies $P$ piecewise.
+\item Conversely, if $f$ satisfies property $P$ piecewise and $f$ satisfies $P$ at the boundary points of each ``piece'' of the domain $D$, then $f$ satisfies $P$.
+\end{itemize}
+
+For example, if $P$ means continuity of a function, then to say that a function $f$ defined on $\mathbb{R}$ is \emph{piecewise continuous} is the same thing as saying that $\mathbb{R}$ can be partitioned into intervals and rays so that $f$ is continuous in each of the intervals and rays.
+
+Other commonly used terms involving the concept of ``piecewise'' are \emph{piecewise differentiable}, \emph{piecewise smooth}, \emph{piecewise linear}, and \emph{piecewise constant}.
+
+Anyone who can supply some graphs illustrating the concepts mentioned above will be greatly appreciated.
+%%%%%
+%%%%%
+\end{document}

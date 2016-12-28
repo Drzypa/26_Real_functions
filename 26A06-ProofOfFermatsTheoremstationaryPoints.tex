@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFermatsTheoremstationaryPoints}
+\pmcreated{2013-03-22 13:45:09}
+\pmmodified{2013-03-22 13:45:09}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of Fermat's Theorem (stationary points)}
+\pmrecord{5}{34452}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose that $x_0$ is a local maximum (a similar proof applies if $x_0$ is a local minimum). Then there exists $\delta>0$ such that $(x_0-\delta,x_0+\delta)\subset (a,b)$ and such that we have $f(x_0)\ge f(x)$ 
+for all $x$ with $\vert x-x_0\vert <\delta$. Hence for $h\in (0,\delta)$ we notice that it holds
+\[
+  \frac{f(x_0+h) - f(x_0)}{h} \le 0.
+\]
+Since the limit of this ratio as $h\to 0^+$ exists and is equal to $f'(x_0)$ we conclude that $f'(x_0)\le 0$. On the other hand for $h\in (-\delta,0)$ we notice that
+\[
+  \frac{f(x_0+h) - f(x_0)}{h} \ge 0
+\]
+but again the limit as $h\to 0^+$ exists and is equal to $f'(x_0)$ so we also have $f'(x_0)\ge 0$. 
+
+Hence we conclude that $f'(x_0)=0$.
+
+To prove the second part of the statement (when $x_0$ is equal to $a$ or $b$), just notice that in such
+points we have only one of the two estimates written above.
+%%%%%
+%%%%%
+\end{document}

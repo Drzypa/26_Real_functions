@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SurfaceNormal}
+\pmcreated{2013-03-22 17:23:10}
+\pmmodified{2013-03-22 17:23:10}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{surface normal}
+\pmrecord{16}{39753}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{53A04}
+\pmclassification{msc}{53A05}
+\pmsynonym{surface normal line}{SurfaceNormal}
+\pmsynonym{normal of surface}{SurfaceNormal}
+\pmrelated{NormalLine}
+\pmrelated{EquationOfPlane}
+\pmrelated{Parameter}
+\pmdefines{parametre plane}
+\pmdefines{parameter plane}
+\pmdefines{parametre curve}
+\pmdefines{parameter curve}
+\pmdefines{Gaussian coordinates}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{curves} \PMlinkescapeword{components} \PMlinkescapeword{length}
+Let $S$ be a smooth surface in $\mathbb{R}^3$.  The {\em surface normal} of $S$ at a point $P$ of $S$ is the line passing through $P$ and perpendicular to the tangent plane $\tau$ of $S$ at the point $P$, i.e. perpendicular to all lines in $\tau$.
+
+If the surface $S$ is given in a parametric form
+$$x = x(u,\,v),\quad y = y(u,\,v),\quad z = z(u,\,v),$$
+it is useful to interpret the parameters $u$ and $v$ as the rectangular coordinates of a point in a plane, the so-called {\em parameter plane}.  We can consider on $S$ the so-called {\em parameter curves}, namely the $u$-{\em curves} which correspond the lines parallel to the $u$-axis and the $v$-{\em curves} which correspond the lines parallel to the $v$-axis in the parameter plane.   One $u$-curve and one $v$-curve passes through every point on the surface (the values of $u$ and $v$ in a point of $S$ are the {\em Gaussian coordinates} of this point).  The surface normal at any point of $S$ is perpendicular to both parameter curves, and thus its direction cosines $a$, $b$, $c$ satisfy the equations
+\begin{align*}
+\begin{cases}
+\displaystyle{a\frac{\partial x}{\partial u}+b\frac{\partial y}{\partial u}+c\frac{\partial z}{\partial u}= 0},\\
+\\
+\displaystyle{a\frac{\partial x}{\partial v}+b\frac{\partial y}{\partial v}+c\frac{\partial z}{\partial v}= 0.}
+\end{cases}
+\end{align*}
+This homogeneous pair of linear equations determines the ratio of the direction cosines 
+$$a:b:c = \frac{\partial(y,\,z)}{\partial(u,\,v)}:\frac{\partial(z,\,x)}{\partial(u,\,v)}:\frac{\partial(x,\,y)}{\partial(u,\,v)}$$
+via the Jacobians.\\
+
+\textbf{Example.}  Determine the direction cosines of the normal of the helicoid
+$$x = u\cos{v},\quad y = u\sin{v},\quad z = cv.$$
+We have the Jacobians
+$$\left| \begin{matrix}
+\frac{\partial y}{\partial u} & \frac{\partial z}{\partial u}\\
+\frac{\partial y}{\partial v} & \frac{\partial z}{\partial v}
+\end{matrix}\right| =  
+\left|\begin{matrix}
+\sin{v} & 0 \\
+u\cos{v} & c
+\end{matrix}\right| = c\sin{v},\;\;
+\left|\begin{matrix}
+\frac{\partial z}{\partial u} & \frac{\partial x}{\partial u}\\
+\frac{\partial z}{\partial v} & \frac{\partial x}{\partial v}
+\end{matrix}\right| = 
+\left|\begin{matrix}0 & \cos{v} \\
+c & -u\sin{v}\end{matrix}\right| = -c\cos{v},\;\;
+\left|\begin{matrix}
+\frac{\partial x}{\partial u} & \frac{\partial y}{\partial u}\\
+\frac{\partial x}{\partial v} & \frac{\partial y}{\partial v}
+\end{matrix}\right| =
+\left|\begin{matrix}\cos{v} & \sin{v}\\
+-u\sin{v} & u\cos{v}\end{matrix}\right| = u.$$
+These are the components of the normal vector of the helicoid surface in the point with the Gaussian coordinates $u$ and $v$.\, The length of the vector is\, $\sqrt{(c\sin{v})^2+(-c\cos{v})^2+u^2} = \sqrt{u^2+c^2}$.\, If we \PMlinkname{divide}{Division} the vector by its length, we obtain a unit vector, the components of which are the direction cosines of the surface normal:
+$$\frac{c\sin{v}}{\sqrt{u^2+c^2}},\;\;-\frac{c\cos{v}}{\sqrt{u^2+c^2}},\;\;\frac{u}{\sqrt{u^2+c^2}}.$$
+%%%%%
+%%%%%
+\end{document}

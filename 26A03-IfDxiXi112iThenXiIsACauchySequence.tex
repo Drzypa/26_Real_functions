@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IfDxiXi112iThenXiIsACauchySequence}
+\pmcreated{2013-03-22 14:37:31}
+\pmmodified{2013-03-22 14:37:31}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{if $d(x_i, x_{i+1})<1/2^i$ then $x_i$ is a Cauchy sequence}
+\pmrecord{5}{36205}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+\pmclassification{msc}{54E35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{lemma}
+Suppose $x_1, x_2, \ldots$, is a sequence in a metric space. 
+If for some $N\ge 1$, we have $d(a_i,a_{i+1})<1/2^i$ for all $i\ge N$, 
+then $\{x_i\}$ is a Cauchy sequence. 
+\end{lemma}
+
+\begin{proof} 
+Let us denote by $d$ the metric function. 
+If $\varepsilon>0$, then for some $N\in \sN$ we have $1/2^N<\varepsilon$.
+Thus, if $N<m<n$ we have
+\begin{eqnarray*}
+d(x_m, x_n) &\le& d(x_m, x_{m+1}) + \cdots + d(x_{n-1}, x_n) \\
+   &=& \left(\frac{1}{2}\right)^m + \cdots + \left(\frac{1}{2}\right)^{n-1} \\
+   &=&  \left(\frac{1}{2}\right)^{m-1} \ \sum_{i=1}^{n-m} \left(\frac{1}{2}\right)^i \\
+   &=&  \left(\frac{1}{2}\right)^{m-1} \ \frac{1-\left(\frac{1}{2}\right)^{n-m}}{1-\frac{1}{2}} \\
+   &<&  \left(\frac{1}{2}\right)^{m} \\
+   &<&  \left(\frac{1}{2}\right)^{N} \\
+   &<&  \varepsilon,
+\end{eqnarray*}
+where we have used the triangle inequality and the 
+\PMlinkname{geometric sum formula}{GeometricSeries}.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

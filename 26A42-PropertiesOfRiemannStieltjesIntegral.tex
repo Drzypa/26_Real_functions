@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfRiemannStieltjesIntegral}
+\pmcreated{2013-03-22 18:54:59}
+\pmmodified{2013-03-22 18:54:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{properties of Riemann--Stieltjes integral}
+\pmrecord{12}{41766}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmsynonym{properties of Riemann-Stieltjes integral}{PropertiesOfRiemannStieltjesIntegral}
+\pmrelated{ProductAndQuotientOfFunctionsSum}
+\pmrelated{FactsAboutRiemannStieltjesIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Denote by $R(g)$ the set of bounded real functions which are \PMlinkid{Riemann--Stieltjes integrable}{3187} with respect to a given monotonically nondecreasing function $g$ on\, a given interval.
+
+The \PMlinkid{Riemann--Stieltjes integral}{3187} is a generalisation of the Riemann integral,  and both have \PMlinkescapetext{similar} properties; N.B. however the items 5, 7 and 9.
+
+\begin{enumerate}
+
+\item If\, $f_1,\, f_2 \in R(g)$\, on\, $[a,\,b]$,\, then also\, $f_1\!+\!f_2,\,cf_1 \in R(g)$ on\, $[a,\,b]$\, and\\ 
+$\int_a^b(f_1\!+\!f_2)dg = \int_a^bf_1\,dg+\int_a^bf_2\,dg,\;\; \int_a^bcf_1\,dg = c\int_a^bf_1\,dg$.
+
+\item If\, $f_1,\, f_2 \in R(g)$\, on\, $[a,\,b]$, then also\, $f_1f_2 \in R(g)$ on\, $[a,\,b]$.
+
+\item If\, $f_1,\,f_2 \in R(g)$\, on\, $[a,\,b]$\, and\, $\displaystyle\inf_{x\in[a,b]}|f_2(x)| > 0$,\, then also\, 
+$\frac{f_1}{f_2} \in R(g)$\, on\, $[a,\,b]$.
+
+\item If\, $f_1,\, f_2 \in R(g)$\, and\, $f_1 \le f_2$\, on\, $[a,\,b]$,\, then\\
+$\int_a^bf_1\,dg \le \int_a^bf_2\,dg$.
+
+\item If\, $f \in R(g)$\, on\, $[a,\,b]$,\, and $V_g$ is the total variation of $g$ on\, $[a,\,b]$,\, then\\
+$\left|\int_a^bfdg\right| \le$ $\displaystyle\sup_{x\in[a,b]}f(x)\cdot V_g$.
+
+\item If\, $f \in R(g)$\, on\, $[a,\,b]$,\, then also\, $|f| \in R(g)$ on\, $[a,\,b]$\, and\\
+$\left|\int_a^bf\,dg\right| \le \int_a^b|f|\,dg$.
+
+\item If\, $f \in R(g)$\, and\, $m \le f(x) \le M$\, on\, $[a,\,b]$,\, then\\
+$m[g(b)-g(a)] \le \int_a^bf\,dg \le M[g(b)-g(a)]$.
+
+\item If\, $f \in R(g)$\, on\, $[a,\,b]$\, and on\, $[b,\,c]$,\, then also \, $f\in R(g)$\, on\, $[a,\,c]$\, and\\
+$\int_a^cf\,dg = \int_a^bf\,dg+\int_b^cf\,dg$.
+
+\item If\, $f \in R(g_1),\,R(g_2)$\, on\, $[a,\,b]$,\, then\, $f \in R(g_1\!+\!g_2)$\, on the same interval and\\
+$\int_a^bf\,d(g_1\!+\!g_2) = \int_a^bf\,dg_1+\int_a^bf\,dg_2$.
+
+\item If\, $f \in R(g)$\, on\, $[a,\,b]$,\, then\, $g \in R(f)$\, on the same interval and one can integrate by parts:\\
+$\int_a^bf\,dg \;=\; f(b)g(b)\!-\!f(a)g(a)\!-\int_a^bg\,df$.
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundedlyHomogeneousFunction}
+\pmcreated{2013-03-22 19:13:17}
+\pmmodified{2013-03-22 19:13:17}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{boundedly homogeneous function}
+\pmrecord{9}{42142}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B35}
+\pmclassification{msc}{15-00}
+\pmsynonym{boundedly homogeneous}{BoundedlyHomogeneousFunction}
+\pmdefines{set of homogeneity}
+\pmdefines{degree of homogeneity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A function \,$f\!: \mathbb{R}^n \to \mathbb{R}$,\, where $n$ is a positive integer, is called \emph{boundedly homogeneous} with respect to a set $\Lambda$ of positive reals and a real number $r$, if the equation
+   $$f(\lambda \vec{x}) \;=\; \lambda^r f(\vec{x})$$
+is true for all and $\vec{x} \in \mathbb{R}^n$\, and\, $\lambda \in \Lambda$.\, Then $\Lambda$ is the \emph{set of homogeneity} and $r$ the \emph{degree of homogeneity} of $f$. \\
+
+\textbf{Example.}\, The function\, $x \mapsto x^r\sin(\ln{x})$\, is boundedly homogeneous with respect to the set 
+$\Lambda = \{e^{2\pi\nu}\,\vdots\;\; \nu \in \mathbb{Z}\}$\, and\, with degree of homogeneity $r$.\\
+
+
+\textbf{Theorem.}\, Let\, $f\!: \mathbb{R}_+ \to \mathbb{R}$\, be a boundedly homogeneous function with the degree of homogeneity $r$ and the set of homogeneity\, $\Lambda \supset \{1\}$.\, Then $f$ is of the form
+\begin{align}
+f(x) \;=\; x^rf_1(\ln{x})
+\end{align}
+where\, $f_1\!: \mathbb{R} \to \mathbb{R}$\, is a periodic real function depending on $f$.
+
+\emph{Proof.}\, Defining\, $g(x) := \frac{f(x)}{x^r}$,\, we obtain
+$$g(\lambda x) \;=\; \frac{f(\lambda x)}{(\lambda x)^r} \;=\; \frac{\lambda^rf(x)}{\lambda^rx^r} \;=\; \lambda^0g(x) 
+\quad \forall \lambda \in \Lambda.$$
+Thus $g$ is a boundedly homogeneous function with the set of homogeneity $\Lambda$ and the degree of homogeneity 0.\, Moreover, define\, $f_1(x) := g(e^x)$.\, If\, $\lambda \in \Lambda\!\smallsetminus\!\{1\}$\, and\, $p := \ln\lambda$,\, 
+we see that
+$$f_1(x\!+\!p) \;=\; g(e^xe^p) \;=\; g(e^x\lambda) \;=\; g(e^x) \;=\; f_1(x) \quad \forall x \in \mathbb{R}_+.$$
+Therefore, $f_1$ is periodic and (1) is in \PMlinkescapetext{force}.
+
+\begin{thebibliography}{8}
+\bibitem{KS}{\sc Konrad Schlude}: ``Bemerkung zu beschr\"ankt homogenen Funktionen''.\, -- \emph{Elemente der Mathematik} \textbf{54} (1999).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativeForParametricForm}
+\pmcreated{2013-03-22 17:30:48}
+\pmmodified{2013-03-22 17:30:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivative for parametric form}
+\pmrecord{9}{39904}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{46G05}
+\pmclassification{msc}{26A24}
+%\pmkeywords{parametric form}
+\pmrelated{GoniometricFormulae}
+\pmrelated{CurvatureOfNielsensSpiral}
+\pmrelated{Parameter}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Instead of the usual way\, $y = f(x)$\, to present plane curves it is in many cases more comfortable to express both coordinates, $x$ and $y$, by means of a suitable auxiliary variable, the parametre.  It is true e.g. for the cycloid curve.\\
+
+Suppose we have the parametric form
+\begin{align}
+x = x(t),\quad y = y(t).
+\end{align}
+For getting now the derivative $\displaystyle\frac{dy}{dx}$ in a point $P_0$ of the curve, we chose another point $P$ of the curve.  If the values of the parametre $t$ corresponding these points are $t_0$ and $t$, we thus have the points\, $(x(t_0),\,y(t_0))$\, and\, $(x(t),\,y(t))$\, and the slope of the secant line through the points is the difference quotient
+\begin{align}
+\frac{y(t)-y(t_0)}{x(t)-x(t_0)} = \frac{\frac{y(t)-y(t_0)}{t-t_0}}{\frac{x(t)-x(t_0)}{t-t_0}}.
+\end{align}
+Let us assume that the functions (1) are differentiable when\, $t = t_0$\, and that\, $x'(t_0) \neq 0$.  As we let\, $t\to t_0$, the left side of (2) tends to the derivative $\frac{dy}{dx}$ and the \PMlinkescapetext{right} side to the quotient $\frac{y'(t_0)}{x'(t_0)}$.  Accordingly we have the result
+\begin{align}
+\left(\frac{dy}{dx}\right)_{\!t=t_0} =\, \frac{y'(t_0)}{x'(t_0)}.
+\end{align}
+Note that the \PMlinkescapetext{formula} (3)
+may be written
+$$\frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}.$$
+
+\textbf{Example.}  For the cycloid
+  $$x = a(\varphi-\sin{\varphi}),\quad y = a(1-\cos{\varphi}),$$
+we obtain
+$$\frac{dy}{dx} = \frac{\frac{d}{d\varphi}(1-\cos\varphi)}{\frac{d}{d\varphi}(\varphi-\sin\varphi)} 
+= \frac{\sin\varphi}{1-\cos\varphi} = \cot\frac{\varphi}{2}.$$ 
+
+
+%%%%%
+%%%%%
+\end{document}

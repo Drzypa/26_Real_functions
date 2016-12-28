@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegrationOfFractionPowerExpressions}
+\pmcreated{2013-03-22 17:50:33}
+\pmmodified{2013-03-22 17:50:33}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integration of fraction power expressions}
+\pmrecord{7}{40313}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmrelated{FractionPower}
+\pmrelated{RationalFunction}
+\pmrelated{IntegrationBySubstitution}
+\pmrelated{SubstitutionForIntegration}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The antiderivatives of every expression containing fraction powers can not be expressed by using elementary functions. However, there are \PMlinkescapetext{types in which the integration succeeds} after making a substitution.
+
+\begin{itemize}
+\item $\displaystyle\int R(x,\,x^{r_1},\,\ldots,\,x^{r_m})\,dx$,\, where $R$ means a rational function of its arguments.
+If the common denominator of the fraction power exponents $r_j$ is $n$, the substitution
+$$x \;:=\; t^n, \qquad dx \;=\; nt^{n-1}dt$$
+changes each exponent to an integer and the whole integrand to a rational function in the variable $t$.\\
+
+\textbf{Example.}\, For\, $\displaystyle\int\frac{x^{\frac{1}{2}}}{x^{\frac{3}{4}}+1}\,dx$\, the least common multiple of the denominators of $\frac{1}{2}$ and $\frac{3}{4}$ is 4, whence we make the substitution\, $x = t^4$,\, $dx = 4t^3dt$.\, Then we obtain
+$$\int\frac{x^{\frac{1}{2}}}{x^{\frac{3}{4}}+1}\,dx \;=\; 4\!\int\frac{t^5dt}{t^3+1} \;=\; 4\!\int\left(t^2-\frac{t^2}{t^3+1}\right)dt
+\;=\; 4\left(\frac{t^3}{3}-\frac{1}{3}\ln|t^3+1|\right)+C$$ 
+$$=\; \frac{4}{3}\left(x^{\frac{3}{4}}-\ln|x^{\frac{3}{4}}+1|\right)+C.\\$$
+
+
+\item In $\displaystyle\int R\left(x,\,\left(\frac{ax+b}{cx+d}\right)^{r_1},\,\ldots,\,\left(\frac{ax+b}{cx+d}\right)^{r_m}\right)\,dx$,\, correspondently the substitution
+$$\frac{ax+b}{cx+d} \;:=\; t^n$$
+changes the integrand to a rational function.\\
+
+\textbf{Example.}\, For\, $\displaystyle\int\frac{\sqrt{x+4}}{x}\,dx$\, we substitute\, $x+4 = t^2$,\, $dx = 2t\,dt$,\, getting
+$$\int\frac{\sqrt{x+4}}{x}\,dx \;=\;  2\!\int\frac{t^2}{t^2-4}\,dt \;=\; 2\!\int\left(1+\frac{4}{t^2-4}\right)dt 
+\;=\; 2t+2\ln\left|\frac{t-2}{t+2}\right|+C$$
+$$=\; 2\sqrt{x+4}+2\ln\left|\frac{\sqrt{x+4}-2}{\sqrt{x+4}+2}\right|+C.$$
+\end{itemize} 
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc N. Piskunov:} {\em Diferentsiaal- ja integraalarvutus k\~{o}rgematele tehnilistele \~{o}ppeasutustele}.  Viies, t\"aiendatud tr\"ukk.\, Kirjastus ``Valgus'', Tallinn  (1965).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

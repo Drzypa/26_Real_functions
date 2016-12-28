@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnIntegrableFunctionWhichDoesNotTendToZero}
+\pmcreated{2014-02-01 3:01:47}
+\pmmodified{2014-02-01 3:01:47}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{an integrable function which does not tend to zero}
+\pmrecord{15}{39233}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{words}
+
+In this entry, we give an example of a function $f$ such that $f$ is Lebesgue 
+integrable on $\mathbb{R}$ but $f(x)$ does not tend to zero as 
+$x \rightarrow \infty$.
+
+Set
+\[
+ f(x) = \sum_{k=1}^\infty {k \over k^6 (x-k)^2 + 1}.
+\]
+Note that every term in this series is positive, hence we may integrate
+term-by-term, then make a change of variable $y = k^3 x - k^4$ and
+compute the answer:
+\begin{align*}
+ \int_{-\infty}^{+\infty} f(x) \, dx &=
+ \sum_{k=1}^\infty
+ \int_{-\infty}^{+\infty}
+ {k \, dx \over k^6 (x-k)^2 + 1} \\ &=
+ \sum_{k=1}^\infty
+ {1 \over k^2} 
+ \int_{-\infty}^{+\infty}
+ {dy \over y^2 + 1} \\ &=
+ {\pi^2 \over 6} \cdot \pi = {\pi^3 \over 6}
+\end{align*}
+However, when $k$ is an integer, $f(k) > k$, so not only does $f(x)$ not 
+tend to zero as $x \rightarrow \infty$, it gets arbitrarily large.
+As we can see from the plot, we have a sequence of peaks which, as they get
+taller, also get narrower in such a way that the total area under
+the curve stays finite:
+\begin{figure}
+ \includegraphics{integrable-no-tend-zero.gif}
+\end{figure}
+
+By a variation of our procedure, we can produce a function which is
+defined almost everywhere on the interval $(0,1)$, is Lebesgue integrable,
+but is unbounded on any subinterval, no matter how small.  For instance,
+define 
+\[
+ f(x) = \sum_{m=1}^\infty \sum_{n=1}^\infty 
+ {1\over (m + n)^6 (x-m/(m+n))^2 + 1}.
+\]
+Making a computation similar to the one above, we find that 
+\begin{align*}
+ \int_{-\infty}^{+\infty} f(x) \, dx &=
+ \sum_{m=1}^\infty
+ \sum_{n=1}^\infty
+  \int_{-\infty}^{+\infty}
+   {dx \over (m+n)^6 (x-m/(m+n))^2 + 1} \\ &=
+ \sum_{m=1}^\infty
+ \sum_{n=1}^\infty
+  {1 \over (m+n)^3} 
+  \int_{-\infty}^{+\infty}
+   {dy \over y^2 + 1} \\ &=
+ \pi \sum_{k=1}^\infty
+ {k-1 \over k^3}
+\end{align*}
+Hence the integral is finite.
+
+Now, however, we find that $f$ cannot be bounded in any interval,
+however small.  For, in any interval, we can find rational
+numbers.  Given a rational number $r$, there are an infinite
+number of ways to express it as a fraction $m/(m+n)$.  For
+each of these ways, we have a term in the series which equals 1 
+when $x=r$, hence $f(r)$ diverges to infinity.
+
+To help in understanding this function, we have made a slide show
+which shows partial sums of the series.  As before, the successive
+peaks become narrower in such a way that the arae under the curve 
+stays finite but, this time, instead of marching off to infinity,
+they become dense in the interval.
+
+\begin{figure}
+ \includegraphics{integrable-everywhere-unbounded_3.gif}
+\end{figure}
+\end{document}

@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralsOfEvenAndOddFunctions}
+\pmcreated{2014-03-13 16:17:44}
+\pmmodified{2014-03-13 16:17:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integrals of even and odd functions}
+\pmrecord{10}{40129}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{integral of odd function}{IntegralsOfEvenAndOddFunctions}
+\pmsynonym{integral of even function}{IntegralsOfEvenAndOddFunctions}
+\pmrelated{DefiniteIntegral}
+\pmrelated{ChangeOfVariableInDefiniteIntegral}
+\pmrelated{ExampleOfUsingResidueTheorem}
+\pmrelated{FourierSineAndCosineSeries}
+\pmrelated{IntegralOverAPeriodInterval}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, Let the real function $f$ be 
+\PMlinkname{Riemann-integrable}{RiemannIntegrable} on\, 
+$[-a, a]$.\, If $f$ is an
+\begin{itemize}
+\item even function, then\, 
+$\displaystyle \int_{-a}^a{f(x)}\,dx \;=\; 2\int_0^a f(x)\,dx$,
+\item odd function, then\, 
+$\displaystyle \int_{-a}^a f(x)\,dx \;=\; 0.$
+\end{itemize}
+Of course, both cases concern the {\it zero map} which is both 
+\PMlinkescapetext{odd and even}.\\
+
+{\it Proof.} Since the definite integral is additive with respect to the interval of integration, one has 
+$$I \;:=\; \int_{-a}^a f(x)\,dx 
+\;=\; \int_{-a}^0 f(t)\,dt+\int_0^a f(x)\,dx.$$
+Making in the first addend the substitution\, $t = -x,\; dt = -dx$\, and swapping the limits of integration one gets
+$$I \;=\; \int_a^0 f(-x)(-dx)+\int_0^a f(x)\,dx 
+\;=\; \int_0^a f(-x)\,dx+\int_0^a f(x)\,dx.$$
+Using then the definitions of \PMlinkname{even}{EvenoddFunction} ($+$) and \PMlinkname{odd}{EvenoddFunction} ($-$) function yields
+$$I\;=\; \int_0^a\!(\pm f(x))\,dx+\!\int_0^a\!f(x)\,dx 
+\;=\; \pm\!\int_0^a\!f(x)\,dx+\!\int_0^a\!f(x)\,dx,$$
+which settles the equations of the theorem.
+
+
+
+%%%%%
+%%%%%
+\end{document}

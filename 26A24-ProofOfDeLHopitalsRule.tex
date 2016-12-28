@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDeLHopitalsRule}
+\pmcreated{2013-03-22 13:23:31}
+\pmmodified{2013-03-22 13:23:31}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of De l'H\^opital's rule}
+\pmrecord{10}{33930}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{26C15}
+%\pmkeywords{Hospital}
+%\pmkeywords{Hopital}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\R}{\mathbb R}
+\begin{document}
+Let $x_0\in \R$, $I$ be an interval containing $x_0$ and let $f$ and $g$ be two differentiable functions defined on $I\setminus\{x_0\}$ with $g'(x)\neq 0$ for all $x\in I$. Suppose that
+\[
+\lim_{x\to x_0} f(x) = 0, \quad \lim_{x\to x_0} g(x)=0
+\]
+and that
+\[
+   \lim_{x\to x_0} \frac{f'(x)}{g'(x)}=m.
+\]
+
+We want to prove that hence $g(x)\neq 0$ for all $x\in I\setminus\{x_0\}$ and
+\[
+  \lim_{x\to x_0} \frac{f(x)}{g(x)}=m.
+\]
+
+First of all (with little abuse of notation) we suppose that $f$ and $g$ are defined also in the point $x_0$ by $f(x_0)=0$ and $g(x_0)=0$. The resulting functions are continuous in $x_0$ and hence in the whole interval $I$. 
+
+Let us first prove that $g(x)\neq 0$ for all $x\in I\setminus\{x_0\}$. If by contradiction $g(\bar x)=0$ since we also have $g(x_0)=0$, by Rolle's Theorem we get that $g'(\xi)=0$ for some $\xi\in (x_0,\bar x)$ which is against our hypotheses.
+
+Consider now any sequence $x_n\to x_0$ with $x_n\in I\setminus\{x_0\}$.
+By Cauchy's mean value Theorem there exists a sequence $x'_n$ such that
+\[
+  \frac{f(x_n)}{g(x_n)} = \frac{f(x_n)-f(x_0)}{g(x_n)-g(x_0)}
+  = \frac{f'(x'_n)}{g'(x'_n)}.
+\]
+But as $x_n\to x_0$ and since $x'_n \in (x_0,x_n)$ we get that $x'_n\to x_0$ and hence
+\[
+  \lim_{n\to\infty} \frac{f(x_n)}{g(x_n)} 
+  = \lim_{n\to\infty} \frac{f'(x_n)}{g'(x_n)}
+  = \lim_{x\to x_0} \frac{f'(x)}{g'(x)} = m.
+\]
+
+Since this is true for any given sequence $x_n\to x_0$ we conclude that
+\[
+  \lim_{x\to x_0} \frac{f(x)}{g(x)} = m.
+\]
+%%%%%
+%%%%%
+\end{document}

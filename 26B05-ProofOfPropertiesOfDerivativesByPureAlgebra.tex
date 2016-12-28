@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPropertiesOfDerivativesByPureAlgebra}
+\pmcreated{2013-03-22 16:00:03}
+\pmmodified{2013-03-22 16:00:03}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{proof of properties of derivatives by pure algebra}
+\pmrecord{5}{38028}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{46G05}
+\pmclassification{msc}{26A24}
+\pmrelated{RulesOfCalculusForDerivativeOfPolynomial}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\begin{thm}
+The derivative satisfies the following rules:
+\begin{itemize}
+\item[Linearity]
+\[\frac{d}{dx}(f(x)+g(x))=\frac{df}{dx}+\frac{dg}{dx},\qquad
+\frac{d}{dx}(af(x))=a\frac{df}{dx},\]
+for $f(x),g(x)\in R[x]$ and $a\in R$.
+\item[Power Rule]
+\[\frac{d}{dx}(x^n)=nx^{n-1}.\]
+\item[Product Rule]
+\[\frac{d}{dx}(f(x)g(x))=\frac{df}{dx}g(x)+f(x)\frac{dg}{dx}.\]
+\end{itemize}
+\end{thm}
+\begin{remark}
+The following proofs apply to \PMlinkname{derivatives by pure algebra}{DerivativesByPureAlgebra}.  While the nature of the proofs are 
+similar to the usual proofs, the notion of a limit is replaced by modular
+arithmetic in $R[x,h]/(h)$.
+\end{remark}
+\begin{proof}
+\noindent\textit{Power rule.}
+\begin{eqnarray*}
+\frac{d}{dx}(x^n) 
+  & \equiv & \frac{(x+h)^n-x^n}{h} \\
+   & = & \sum_{j=1}^{n} \binom{i}{j} x^{n-j} h^{j-1}\\
+  & \equiv & \binom{n}{1} x^{n-1}=nx^{n-1}.
+\end{eqnarray*}
+
+\noindent\textit{Linearity rule.}
+For all $f(x),g(x)\in R[x]\cong R[x,h]/(h)$, it follows
+\[\frac{(f+g)(x+h)-(f+g)(x)}{h} \equiv \frac{f(x+h)+g(x+h)-f(x)-g(x)}{h}
+    \equiv \frac{f(x+h)-f(x)}{h}+\frac{g(x+h)-g(x)}{h}.\]
+Furthermore, for all $a\in R$
+\[\frac{(af)(x+h)-(af)(x)}{h}\equiv \frac{af(x+h)-af(x)}{h}=a\frac{f(x+h)-f(x)}{h}.\]
+
+\noindent\textit{Product rule.}
+In $R[x,h]$ modulo $(h)$ we have:
+\begin{eqnarray*}
+\frac{d}{dx}(fg) 
+  & \equiv & \frac{f(x+h)g(x+h))-f(x)g(x)}{h}\\
+  & \equiv & \frac{f(x+h)g(x+h)-f(x)g(x+h)+f(x)g(x+h)-f(x)g(x)}{h}\\
+  & \equiv & \frac{(f(x+h)-f(x))g(x+h)+f(x)(g(x+h)-g(x))}{h}\\
+  & \equiv & \frac{f(x+h)-f(x)}{h}g(x+h)+f(x)\frac{g(x+h)-g(x)}{h}\\
+  & \equiv & \frac{df}{dx}g(x)+f(x)\frac{dg}{dx}. 
+\end{eqnarray*}
+\end{proof}
+
+
+%%%%%
+%%%%%
+\end{document}

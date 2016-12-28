@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSumRule}
+\pmcreated{2013-03-22 12:28:13}
+\pmmodified{2013-03-22 12:28:13}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of sum rule}
+\pmrecord{5}{32638}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmrelated{Derivative}
+\pmrelated{FixedPointsOfNormalFunctions}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\D}[1]{\ensuremath{\mathrm{d}#1}}
+\newcommand{\DDX}{\ensuremath{\frac{\D{}}{\D{x}}}}
+\begin{document}
+\begin{eqnarray*}
+\DDX\left[f(x)+g(x)\right]
+& = & \lim_{h\to0}\frac{f(x+h)+g(x+h)-f(x)-g(x)}{h} \\
+& = & \lim_{h\to0}\left[\frac{f(x+h)-f(x)}{h}+\frac{g(x+h)-g(x)}{h}\right] \\
+& = & f'(x) + g'(x)
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

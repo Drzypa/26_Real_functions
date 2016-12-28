@@ -1,0 +1,220 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TangentPlaneelementary}
+\pmcreated{2013-03-22 14:58:40}
+\pmmodified{2013-03-22 14:58:40}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{tangent plane (elementary)}
+\pmrecord{15}{36679}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmsynonym{tangent space}{TangentPlaneelementary}
+\pmdefines{tangent plane}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The notion of \emph{tangent plane} is a generalization of the notion of tangent vector to surfaces.  Just as the tangent line is a special line which is associated to a point of a smooth curve, so too a tangent plane is a special plane which is associated to a point on a smooth surface.
+
+\section{Defining formulae}
+
+Let $S$ be a surface in three-dimensional space $\mathbb{R}^3$ and let ${\bf p} = (p_x, p_y, p_z)$ be a point of $S$.  Three common methods of describing a surface are as the graph of a function, by an implicit equation, and parametrically.  We shall now present formulae for computing the tangent plane in each of these cases.
+
+If the surface is described by an equation of the form
+ $$z = g(x,y),$$
+then the tangent plane to $S$ at ${\bf p}$ is described by the equation
+ $$z = p_z + \left. \frac{\partial z}{\partial x} \right|_{\begin{matrix}x &= p_x \\ y &= p_y \\z &= p_z\end{matrix}} (x - p_x) + \left. \frac{\partial z}{\partial y} \right|_{\begin{matrix}x &= p_x \\ y &= p_y \\z &= p_z\end{matrix}} (y - p_y). \eqno{(1)}$$
+
+More generally, if the surface is described by an equation $f(x,y,z) = 0$, then the equation for the tangent plane is
+ $$\frac{\partial f}{\partial x} (x - p_x) + \frac{\partial f}{\partial y} (y - p_y) + \frac{\partial f}{\partial z} (z - p_z) = 0. \eqno{(2)}$$
+
+If the surface $S$ is described by giving the coordinates $x$, $y$, and $z$ as functions of parameters $u$ and $v$ and the point ${\bf p}$ is specified by the values $(u_0, v_0)$ of the parameters, then the tangent plane at ${bf p}$ is described in terms of parameters $s$ and $t$ by the equations
+ $$\begin{matrix} \hfill x &= p_x + \left. \frac{\partial x}{\partial u} \right|_{\begin{matrix} u &= u_0 \\ v &= v_0\end{matrix}} s + \left. \frac{\partial x}{\partial v} \right|_{\begin{matrix} u &= u_0 \\ v &= v_0\end{matrix}} t \\
+ \hfill y &= p_x + \left. \frac{\partial y}{\partial u} \right|_{\begin{matrix} u &= u_0 \\ v &= v_0 \end{matrix}} s + \left. \frac{\partial y}{\partial v} \right|_{\begin{matrix} u &= u_0 \\ v &= v_0\end{matrix}} t \\
+ \hfill z &= p_x + \left. \frac{\partial z}{\partial u} \right|_{\begin{matrix} u &= u_0 \\ v &= v_0\end{matrix}} s + \left. \frac{\partial z}{\partial v} \right|_{\begin{matrix} u &= u_0 \\ v &= v_0\end{matrix}} t \end{matrix} \eqno{(3)}$$
+
+\section{Examples}
+
+To illustrate and explain the definition, let us consider three examples.  
+
+\subsection{Example 1}
+
+Let $S$ be the cone specified by the equation
+ $$z = \sqrt{x^2 + y^2}$$
+and let ${\bf p} = (1,0,1)$.  Then we compute the tangent plane as follows:
+ $$\frac{\partial z}{\partial x} = \frac{x}{\sqrt{x^2 + y^2}}$$
+ $$\frac{\partial z}{\partial y} = \frac{y}{\sqrt{x^2 + y^2}}$$
+Evaluating at ${\bf p}$, we have
+ $$\left. \frac{\partial z}{\partial x} \right|_{\begin{matrix} x &= 1 \\ y &= 0 \end{matrix}} = 1$$
+ $$\left. \frac{\partial z}{\partial y} \right|_{\begin{matrix} x &= 1 \\ y &= 0 \end{matrix}} = 0,$$
+so the tangent plane is specified by the equation
+ $$z = 1 + 1(x-1) + 0(y-0),$$
+which simplifies to
+ $$z = x.$$
+
+Before leaving this example, there are two features which are worth noticing.  First, note that the tangent plane intersects the cone not only in the point $p$, but in the whole line $\{(s,0,s) \mid s \in \mathbf{R} \}$.  While it is more typical for the tangent plane to intersect in a point, it is possible for the intersection to be a line or even a curve.  In fact, it can be shown that if a surface contains a line, then the intersection of the tangent plane to the surface through a point on the line with the surface will include the line.
+
+Second, note that the tangent plane is not defined at the point $(0,0,0).$  If we try to evaluate the partial derivatives at this point, we run into the indeterminate form $0/0$.  Sometimes, one can make sense of such a form by using  L'Hospital's rule, but in this case, that does not work --- the derivatives are simply not defined for the values $x = 0$ and $y = 0$.  When it happens that it is not possible to define a tangent plane at a certain point, that point is known as a \emph{singular point} of the surface.  In our case, $(0,0,0)$ is a singular point of the cone.  Looking at the surface, it is not hard to see why this point is singular --- this point is the vertex of the cone.
+
+\subsection{Example 2}
+
+To illustrate the computation of tangent planes to a surface which is described by an implicit equation, we shall now compute the tangent plane to the sphere of radius $R$ centred about the origin.  The sphere may be described by the equation
+ $$x^2 + y^2 + z^2 = R^2.$$
+In the notation of the last section, we have
+ $$f (x, y, z) = x^2 + y^2 + z^2 - R^2.$$
+Computing partial derivatives, we find that
+ $$\begin{matrix}
+\frac {\partial f}{\partial x} &= 2 x \\
+\frac {\partial f}{\partial y} &= 2 y \\
+\frac {\partial f}{\partial z} &= 2 z
+\end{matrix}.$$
+If ${\bf p}$ is a point which lies on the sphere, the equation of the tangent plane through ${\bf p}$ is as follows:
+ $$2 p_x (x - p_x) + 2 p_y (y - p_y) + 2 p_z (z - p_z) = 0.$$
+We may simplify this equation by cancelling the factors of $2$ and using the fact that $p_x^2 + p_y^2 + p_z^2 = R^2$:
+ $$p_x x + p_y y + p_z z = R^2$$
+
+Having derived this equation, let us note an interesting fact about the tangent plane to the sphere.  Let $L$ be the radius through ${\bf p}$. (By definition, $L$ is the line connecting ${\bf p}$ with the point $(0, 0, 0)$.)  It is easy to see that $L$ is perpendicular to the tangent plane.  This is a generalization to three dimensions of the well-known fact of plane geometry that the tangent to a circle through a point on the circle is perpendicular to the radius through that point.
+
+\subsection{Example 3}
+
+To gain some practise with computing tangent planes to parameterized surfaces, let us compute a tangent plane to a sphere a different way.  A sphere of radius $R$ centred about the origin may be also described by the parametric equations
+ $$x = R \sin u \sin v$$
+ $$y = R \sin u \cos v$$
+ $$z = R \cos u.$$
+Let us compute the tangent plane through the point ${\bf p} = (0,R,0)$ using this description of the sphere.  First, we notice that to describe the point ${\bf p}$, we should take $u_0 = \pi / 2$ and $v_0 = 0$.
+
+Taking derivatives, we find that
+ $$\frac{\partial x}{\partial u} = R \cos u \sin v \quad \frac{\partial x}{\partial v} = R \sin u \cos v$$
+ $$\frac{\partial y}{\partial u} = R \cos u \cos v \qquad \frac{\partial y}{\partial v} = - R \sin u \sin v$$
+ $$\frac{\partial z}{\partial u} = - R \sin u \qquad \frac{\partial z}{\partial v} = 0.$$
+Substituting $u_0$ for $u$ and $v_0$ for $v$, we find
+$$\frac{\partial x}{\partial u} = 0 \quad \frac{\partial x}{\partial v} = R$$
+ $$\frac{\partial y}{\partial u} = 0 \qquad \frac{\partial y}{\partial v} = 0$$
+ $$\frac{\partial z}{\partial u} = - R \qquad \frac{\partial z}{\partial v} = 0.$$
+
+Hence the parametric equations of the tangent plane are
+ $$x = Rt$$
+ $$y = R$$
+ $$z = -Rs .$$
+It is clear that this agrees with the answer obtained in the last example.
+
+\section {Consistency of definitions}
+
+Since we have presented three different formulas for computing the tangent plane, logical consistency demands that we make sure that they indeed define the same plane.  Moreover, we should check that if we compute the tangent plane to the same point to the ame surface using two different parameterizations, we obtain the same plane both ways.  As we will soon see, consistency follows readily from the chain rule and implicit differentiation.
+
+Since it is rather trivial, let us first derive equations (1) as a special case of (2).  Suppose that our surface is given by an equation 
+ $$z = g(x, y).$$
+Let us define $f(x,y,z) = g(x, y) - z.$  Our surface is described by the equation $f(x, y, z) = 0.$   By formula (2), its tangent plane at a point ${\bf p}$ is described by the equation
+ $$\frac{\partial g}{\partial x} (x - p_x) + \frac{\partial g}{\partial y} (y - p_y) - (z - p_z) = 0.$$
+Making minor rearrangements and recognizing that $\partial g / \partial x$ and  $\partial g / \partial y$ here denote the same entites as $\partial z / \partial x$ and  $\partial z / \partial y$ did in the statement of equation (2) because there $z$ is assumed to equal $g(x, y)$, we see that (2) is indeed a consequence of (1).
+
+To show that equations (2) and (3) are consistent, we will make use of the chain rule.  If the same surface is described by a parameterization
+ $$\begin{matrix} \hfill x &= g(u,v) \\ \hfill y &= h(u,v) \\ \hfill z &= k(u,v) \end{matrix}$$
+and an implicit equation
+ $$f(x,y,z) = 0,$$
+then we must have
+ $$f (g(u,v), h(u,v), k(u,v)) = 0.$$
+Differentiating with respect to $u$ and using the chain rule, we find that
+ $$\frac{\partial f}{\partial x} \frac{\partial g}{\partial u} + \frac{\partial f}{\partial y} \frac{\partial h}{\partial u} + \frac{\partial f}{\partial z} \frac{\partial k}{\partial u} = 0.$$
+Likewise, diferentiating with respect to $v$, we find that
+ $$\frac{\partial f}{\partial x} \frac{\partial g}{\partial v} + \frac{\partial f}{\partial y} \frac{\partial h}{\partial v} + \frac{\partial f}{\partial z} \frac{\partial k}{\partial v} = 0.$$
+Note that the two equations above are exactly the conditions which are needed to  guarantee that (2) and (3) describe the same plane.
+
+Finally, we consider the effect of changing the parameters from $u,v$ to two new parameters $u',v'$.  By the chain rule, we have
+  $$\frac{\partial x}{\partial u} = \frac{\partial x}{\partial u'} \frac{\partial u'}{\partial u} + \frac{\partial x}{\partial v'} \frac{\partial v'}{\partial u}$$
+and
+ $$\frac{\partial x}{\partial v} = \frac{\partial x}{\partial u'} \frac{\partial u'}{\partial v} + \frac{\partial x}{\partial v'} \frac{\partial v'}{\partial v}$$
+and likewise for $y$ and $z$.  Substituting these expressions into formula (3), we obtain
+ $$\begin{matrix}
+\hfill x &= p_x + (\frac{\partial x}{\partial u'} \frac{\partial u'}{\partial u} + \frac{\partial x}{\partial v'} \frac{\partial v'}{\partial u}) s + (\frac{\partial x}{\partial u'} \frac{\partial u'}{\partial v} + \frac{\partial x}{\partial v'} \frac{\partial v'}{\partial v})t \\
+\hfill y &= p_y + (\frac{\partial x}{\partial u'} \frac{\partial u'}{\partial u} + \frac{\partial x}{\partial v'} \frac{\partial v'}{\partial u}) s + (\frac{\partial x}{\partial u'} \frac{\partial u'}{\partial v} + \frac{\partial x}{\partial v'} \frac{\partial v'}{\partial v})t \\
+\hfill z &= p_z + (\frac{\partial x}{\partial u'} \frac{\partial u'}{\partial u} + \frac{\partial x}{\partial v'} \frac{\partial v'}{\partial u}) s + (\frac{\partial x}{\partial u'} \frac{\partial u'}{\partial v} + \frac{\partial x}{\partial v'} \frac{\partial v'}{\partial v})t
+\end{matrix}$$
+If we define
+ $$s' = \frac{\partial u'}{\partial u} s + \frac{\partial u'}{\partial v} t$$
+and
+ $$t' = \frac{\partial v'}{\partial u} s + \frac{\partial v'}{\partial v} t,$$
+then our system of equations may be rewritten as
+ $$\begin{matrix} \hfill x &= p_x + \frac{\partial x}{\partial u'} s' +  \frac{\partial x}{\partial v'} t' \\
+ \hfill y &= p_x + \frac{\partial y}{\partial u'} s' +  \frac{\partial y}{\partial v'} t' \\
+ \hfill z &= p_x + \frac{\partial z}{\partial u'} s' + \frac{\partial z}{\partial v'} t' \end{matrix},$$
+which is formula (3) evaluated wit respect to the primed coordinates.
+
+\section{Motivation and derivation}
+
+So far, we presented formulae for computing the tangent plane.  We showed how to use them with examples and verified that they were consistent.  However, the defining formulae might as well have been ``plucked from out of a hat'' since we made no attempt to explain what the formulae mean intuitively of to derive them from more basic principles.  The purpose of this section is to make up for this shortcoming by discussing the concept of tangent plane intuitively and proving some results which shed light on this concept.
+
+Just as the tangent to a line may be understood as the limit of a line connecting two nearby points in the limit where the points coalesce, so too the tangent plane can be regarded as a limit.  Whereas a line is determined by two points, a plane is determined by three points.  Thus, we may try to define the tangent plane as the limit of the plane that passes through three points as the three points approach each other.
+
+Whilst this line of reasoning is correct, a bit of care is needed in order to make it work properly.  The problem is that three distinct points do not always determine a unique plane --- if the points lie on a straight line, then any plane passing through the line will contain all three points.  Furthermore, should the points even be close to collinear, then the position of the plane they span will still depend sensitively on the position of the points.  Hence, to guarantee that the limit exists, we need to impose a condition which keeps the points from  being or tending to become collinear in the limit.  One possible way out of this problem is to insist that the angles formed by the triangle of points stay bounded away from zero.  If we make such a stipulation, then we can obtain the tangent plane as a limit.
+
+{\bf Theorem}  Suppose that $S$ is a smooth surface and that ${\bf a}_n$, ${\bf b}_n$, and ${\bf c}_n$ are three sequences of points such that
+\begin{enumerate}
+\item For every $n$, the points ${\bf a}_n$, ${\bf b}_n$, and ${\bf c}_n$ are distinct.
+\item There exists a point ${\bf p} \in S$ such that 
+ $$\begin{matrix} \lim_{n \to \infty} |{\bf a}_n - {\bf p}| &= 0 \\ \lim_{n \to \infty} |{\bf b}_n - {\bf p}| &= 0 \\ \lim_{n \to \infty} |{\bf c}_n - {\bf p}| &= 0 \end{matrix}.$$
+\item There exists a constant $0 < \alpha < \pi$ such that for every $n$, the angles of the triangle ${\bf a}_n {\bf b}_n {\bf c}_n$ lie in the interval $[\alpha, \pi - \alpha]$.
+\end{enumerate}
+Then the planes spanned by the triplets $({\bf a}_n, {\bf b}_n, {\bf c}_n)$ tend towards the tangent plane of $S$ through ${\bf p}$ in the limit $n \to \infty$
+ 
+Also, there is a simple relation of tangent planes to tangent lines --- the tangent plane of smooth surface $S$ at a point ${\bf p}$ is exactly the union of the tangents to the all the smooth curves which lie on $S$ and pass through ${\bf p}$.
+
+Finally, equation (1) bears a strong resemblance to the multivariate Taylor's expansion.  A weak form of the bivariate Taylor's theorem with remainder reads
+ $$z - p_z = \left. \frac{\partial z}{\partial x} \right|_{\begin{matrix}x &= p_x \\ y &= p_y \\z &= p_z\end{matrix}} (x - p_x) + \left. \frac{\partial z}{\partial y} \right|_{\begin{matrix}x &= p_x \\ y &= p_y \\z &= p_z\end{matrix}} (y - p_y) + c_1 (x,y) (x - p_x)^2 + c_2 (x,y) (x - p_x) (y - p_y) + c_3 (x,y) (y - p_y)^2 $$
+where the functions $c_1$, $c_2$, and $c_3$ are bounded in a neighborhood of ${\bf p}$.  (A strong version of the theorem would be more explicit about the form of these functions.  Since we do not need precise information about these functions, the weak theorem suffices.)  As $x$ gets closer to to $p_x$ and $y$ gets closer to $p_y$, the remainder terms become increasingly smaller in comparison to the first order terms in the expansion.  Therefore, if we are only interested in small values of $x - p_x$ and $y - p_y$ it is safe to approximate $z$ by ignoring the remainder.  By doing so, we obtain the equation of the tangent plane at ${\bf p}$.  In other words, if we are only interested in a small enough neighborhood of the point ${\bf p}$, we may approximate the surface by its tangent plane.
+
+This observation allows one to understand the tangent plane intuitively as a planar approximation to a surface in the neighborhood of a point of the surface.  At least in one instance, we make use of this fact in everyday life.  With the exception of a few benighted souls who belong to the Flat Earth Society, we know that the Earth is a sphere, yet we find that planar maps afford a perfectly adequate representation of the Earth's surface for planning excursions within a city.  The reason for this is that the size of a city is small compared to the size of the Earth.  Hence, the error committed by approximating the spherical Earth on such scales by a tangent plane is a fraction of a percent and it is perfectly reasonable to use a planar map.  However, when we move the scale of, say, continents, the errors become proportionately larger and it is not possible to represent such a large portion of the Earth on a planar map without introducing significant distortions.
+
+\section{Higher dimensions}
+
+The formalism presented here is capable of generalization to more than three dimensions.  Since most of the differences between the case of three-dimensions which we have considered and higher dimensions are a matter of bookkeeping to keep track of more variables, we are content to simply present the results.  How to use these results and the justifications for them are substantially the same as in three dimensions, so there is no reason to repeat them here with essentially cosmetic changes.
+
+Suppose that $S$ is an $m$-dimensional surface located in $\mathbb{R}^n$ and let  ${\bf p}$ be a point of $S$.  Then we may generalize formulas (1) - (3) as follows:
+
+If the surface $S$ is described by the system of equations
+ $$\begin{matrix} x_n &= g_1 (x_1, x_2, \ldots x_m) \\ &\vdots \\ x_{n-m+1} &= g_{n-m+1} (x_1, x_2, \ldots x_m) \end{matrix},$$
+then its tangent space is described by the system
+ $$\begin{matrix} x_n &= \sum_{i = 1}^m \left. \frac{\partial g_1}{\partial x_i} \right|_{\bf p} x_i \\ &\vdots \\ x_{n-m+1} &= \sum_{i = 1}^m \left. \frac{\partial g_{n-m+1}}{\partial x_i} \right|_{\bf p} x_i \end{matrix}, \eqno{(1')}$$
+
+If the surface $S$ is described by the system of equations
+ $$\begin{matrix} f_1 (x_1, x_2, \ldots x_n) &= 0\\ &\vdots \\ f_{n-m+1} (x_1, x_2, \ldots x_n) &= 0 \end{matrix},$$
+then the tangent space is described by the system
+  $$\begin{matrix} \sum_{i = 1}^m \left. \frac{\partial f_1}{\partial x_i} \right|_{\bf p} x_n &= 0 \\ &\vdots \\ \sum_{i = 1}^n \left. \frac{\partial f_{n-m+1}}{\partial x_i} \right|_{\bf p} x_i &= 0 \end{matrix}, \eqno{(2')}$$
+
+If the surface is described parametrically on terms of a set of parameters $(u_1, u_2, \ldots, u_m)$, then the tangent space may be parameterized as follows:
+ $$\begin{matrix} x_1 &= p_1 + \sum_{i = 1}^m \frac{\partial x_1}{\partial u_i} s_i \\ &\vdots \\ x_n &= p_n + \sum_{i = 1}^m \frac{\partial x_n}{\partial u_i} s_i \end{matrix}$$
+
+\section{Generalizations}
+
+In closing, it might be worthwhile to say a few words about how the notion of tangent space has been generalized by modern mathematicians, even though the methods used lie well beyond the scope of this entry.
+
+There is the intrinsic definition of tangent space.  Whereas we considered our surface as situated in an ambient space and defined the tangent space as a certain linear subspace of this space, in the intrinsic method one only considers geometric constructions defined on the surface without reference to an ambient space.  This is useful because oftentimes one is interested only in the surface and the ambient space is irrelevant; furthermore, it may be possible to embed the same surface several different ways in an ambient space or describe it in a fashion that makes no reference to an ambient space so it is preferrable not to embed the sufrace in an arbitrary ambient space in order to define its tangent spaces.  For this reason, modern differential geometry almost exclusively uses the intrinsic definition; for more on this definition, see \PMlinkid{this entry}{902} and \PMlinkid{this entry.}{2007}
+
+Even more remarkably, it is possible to extend the notion of tangent space to such non-geometric entites as number fields and functors in a meaningful way.  The secret to this is the axiomatic approach.  By expressing the definition of vector field in terms of an abstract algebraic system, one arrives at a definition which, when applied to surfaces, agrees with the concrete concept defined here, but which, with a different interpretation of the axioms, can apply to other mathematical objects as well.  Since it turns out that many properties of vector fields can be deduced from the abstract axioms, it automatically follows that the tangent space of a number field or a functor defined in this way behaves a lot like the tangent space to a surface in many respects.  This point of view has yielded intuitions and insights into various fields of mathematics such as number theory which may not otherwise have been available and lies at the heart of a lot of contemporary mathematics.
+%%%%%
+%%%%%
+\end{document}

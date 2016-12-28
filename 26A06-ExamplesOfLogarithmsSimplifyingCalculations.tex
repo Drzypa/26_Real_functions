@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfLogarithmsSimplifyingCalculations}
+\pmcreated{2013-03-22 18:08:47}
+\pmmodified{2013-03-22 18:08:47}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{examples of logarithms simplifying calculations}
+\pmrecord{5}{40702}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Before the days of calculators and computers, tables of logarithms were used to simplify what would otherwise be difficult calculations with pencil and paper, thanks to algebraic identities such as $\log ab = \log a + \log b$ and $\log ( \frac{a}{b} ) = \log a - \log b$. Even $\log \sqrt[b]{a} = \frac{\log a}{b}$ could be more efficient than the ``long'' method for extracting the square root.
+
+Because we usually use base 10 to represent numbers, base 10 logarithms were more helpful than natural logarithms in simplifying calculations. These examples will therefore all use base 10 as the base of logarithms.
+
+First, an example of multiplication as might have arisen for an inland revenue officer: multiply 17.81 by 6.520. The base 10 logarithms of these numbers are 1.25066 and 0.81425, respectively. Adding the two logarithms gives 2.06491, which is the logarithm of the desired product. To get the product, one looks in the table for the logarithm closest to 0.06491 and finds that the logarithm of 1.161 is 0.06521 so the answer is 116.1 to four digits. Some arithmetic books from the past sometimes also included tables of antilogarithms, but  reading the table of logarithms ``backwards'' accomplishes the same goal.
+
+Now let's consider an example of division that might have arisen in an astronomy class. A student wonders how many Earths would fit between the Sun and Jupiter at Jupiter's perihelion. Jupiter's perihelion is 740573600 kilometers. The equatorial radius of the Earth is 6378 kilometers. The first of these numbers is out of the range of even Babbage's extensive tables of logarithms, but if we divide both numbers by a thousand and discard the fractional parts, the result should still be good enough for this application, with is thoroughly hypothetical in nature. The logarithm of 740537 is 5.86957. The logarithm of 6 is 0.778151. Subtracting gives 5.09142. Looking this up in the table of antilogarithms gives 123429, which is off from the actual answer of 116114 by more than seven thousand. Seven thousand Earths is not so much of an error when we consider that at least a hundred thousand Earths would be necessary to fill the given distance.
+
+\begin{thebibliography}{3}
+\bibitem{wj} William Harris Johnston, {\it Loftus's inland revenue officer's manual}. Oxford: Oxford University Press (1865)
+\bibitem{rp} Raymond Puzio, PlanetMath message, June 13, 2008
+\bibitem{gr} Gerald R. Rising, {\it Inside Your Calculator: From Simple Programs to Significant Insights}. Hoboken, New Jersey: John Wiley \& Sons (2007): Appendix P
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

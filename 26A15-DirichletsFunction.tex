@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirichletsFunction}
+\pmcreated{2013-03-22 13:11:14}
+\pmmodified{2013-03-22 13:11:14}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Dirichlet's function}
+\pmrecord{9}{33639}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmrelated{FunctionContinuousAtOnlyOnePoint}
+\pmrelated{APathologicalFunctionOfRiemann}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\emph{Dirichlet's function} $f:\mathbb{R}\to\mathbb{R}$ is defined as
+\begin{displaymath}
+  f\left(x\right) =
+  \left\{ 
+  \begin{array}{ll} 
+    \frac{1}{q}  &  \textrm{if } x=\frac{p}{q}
+                        \textrm{ is a rational number in lowest terms,} \\
+    0              &  \textrm{if } x \textrm{ is an irrational number.} 
+  \end{array}
+  \right.
+\end{displaymath}
+This function has the property that it is continuous at every
+irrational number and discontinuous at every rational one.
+
+Another function that often goes by the same name is the function
+\begin{displaymath}
+  f\left(x\right) =
+  \left\{ 
+  \begin{array}{ll} 
+    1  &  \textrm{if } x \textrm{ is an rational number.}\\
+    0              &  \textrm{if } x \textrm{ is an irrational number.} 
+  \end{array}
+  \right.
+\end{displaymath}
+This nowhere-continuous function has the surprising \PMlinkescapetext{analytic} expression
+\begin{align*}
+f(x) = \lim_{m \to \infty} \lim_{n \to \infty} \cos^{2 n} (m! \pi x).
+\end{align*}
+
+This is often given as the (amazing!) example of a sequence of everywhere-continuous functions whose limit function is nowhere continuous.
+%%%%%
+%%%%%
+\end{document}

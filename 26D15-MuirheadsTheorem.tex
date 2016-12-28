@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MuirheadsTheorem}
+\pmcreated{2013-03-22 13:15:25}
+\pmmodified{2013-03-22 13:15:25}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Muirhead's theorem}
+\pmrecord{7}{33736}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+\pmsynonym{Muirhead's inequality}{MuirheadsTheorem}
+\pmrelated{CharacterizationsOfMajorization}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $0\leq s_1\leq\cdots\leq s_n$ and $0\leq t_1\leq\dots\leq t_n$ 
+be real numbers such that
+\[\sum_{i=1}^n s_i = \sum_{i=1}^n t_i\; \mbox{and}
+\;\; \sum_{i=1}^k s_i \leq \sum_{i=1}^k t_i\;\; (k=1,\dots,n-1)\]
+Then for any nonnegative numbers $x_1,\dots,x_n$, 
+\[\sum_\sigma x_1^{s_{\sigma(1)}}\dots x_n^{s_{\sigma(n)}} \geq 
+\sum_\sigma x_1^{t_{\sigma(1)}}\dots x_n^{t_{\sigma(n)}}\]
+where the sums run over all permutations $\sigma$ of $\{1,2,\dots,n\}$.
+%%%%%
+%%%%%
+\end{document}

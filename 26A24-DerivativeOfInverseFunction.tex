@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativeOfInverseFunction}
+\pmcreated{2015-02-21 16:02:46}
+\pmmodified{2015-02-21 16:02:46}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivative of inverse function}
+\pmrecord{12}{39359}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmrelated{InverseFunctionTheorem}
+\pmrelated{Derivative2}
+\pmrelated{DerivativeOfTheNaturalLogarithmFunction}
+\pmrelated{CyclometricFunctions}
+\pmrelated{SquareRoot}
+\pmrelated{LimitExamples}
+\pmrelated{IntegrationOfSqrtx21}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If the real function $f$ has an inverse function $f_\leftarrow$ and the derivative of $f$ at the point \, 
+$x = f_\leftarrow(y)$\; is distinct from zero, then $f_\leftarrow$ is also differentiable at the point $y$ and
+\begin{equation}
+\label{d}     
+   f_\leftarrow'(y) = \frac{1}{f'(x)}.
+\end{equation}
+That is, the derivatives of a function and its inverse function are inverse numbers of each other, provided that they have been taken at the points which correspond to each other.\\
+
+\{it Proof.}
+Now we have
+      $$f(f_\leftarrow(y)) = f(x) =y.$$
+The derivatives of both sides must be equal:
+$$\frac{d}{dy}\left[f(f_\leftarrow(y))\right] = \frac{d}{dy}y$$
+Using the chain rule we get
+$$f'(f_\leftarrow(y))\cdot f_\leftarrow'(y) = 1,$$
+whence
+$$f_\leftarrow'(y) = \frac{1}{f'(f_\leftarrow(y))}.$$
+This is same as the asserted \PMlinkescapetext{equation} (1).\\
+
+
+\textbf{Examples.}\; For simplicity, we express here the functions by symbols $y$ and the inverse functions by $x$.
+\begin{enumerate}
+\item $y = \tan{x}$,\; $x = \arctan{y}$;\;
+ $\frac{dx}{dy} = \frac{1}{\frac{dy}{dx}} = \frac{1}{1+\tan^2{x}} = 
+ \frac{1}{1+y^2}$
+\item $y = \sin{x}$,\; $x = \arcsin{y}$;\; 
+ $\frac{dx}{dy} = \frac{1}{\frac{dy}{dx}} = \frac{1}{\cos{x}} = 
+ \frac{1}{+\sqrt{1-\sin^2{x}}} = +\frac{1}{\sqrt{1-y^2}}$
+\item $y = x^2$,\,\; $x = \pm\sqrt{y}$;\;
+$\frac{dx}{dy} = \frac{1}{\frac{dy}{dx}} = \frac{1}{2x} =
+\frac{1}{\pm2\sqrt{y}}$
+\end{enumerate}
+If the variable symbol $y$ in those results is changed to $x$, the results can be written
+$$\frac{d}{dx}\arctan{x} = \frac{1}{1+x^2},\qquad
+\frac{d}{dx}\arcsin{x} = \frac{1}{\sqrt{1-x^2}},\qquad
+\frac{d}{dx}\sqrt{x} = \frac{1}{2\sqrt{x}}.$$
+
+%%%%%
+%%%%%
+\end{document}

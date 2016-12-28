@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TestsForLocalExtremaInLagrangeMultiplierMethod}
+\pmcreated{2013-03-22 15:28:52}
+\pmmodified{2013-03-22 15:28:52}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{tests for local extrema in Lagrange multiplier method}
+\pmrecord{6}{37336}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{49-00}
+\pmclassification{msc}{49K35}
+%\pmkeywords{Lagrange multipler}
+%\pmkeywords{Lagrangian multiplier}
+%\pmkeywords{second derivative test}
+%\pmkeywords{local extrema}
+%\pmkeywords{Hessian}
+\pmrelated{HessianForm}
+\pmrelated{RelationsBetweenHessianMatrixAndLocalExtrema}
+\pmdefines{projected Hessian}
+\pmdefines{reduced Hessian}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amsthm}
+\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\begin{document}
+Let $U$ be open in $\real^n$,
+and $f\colon U \to \real$, $g\colon U \to \real^m$ be twice continuously differentiable functions.
+Assume that $p \in U$ is a stationary point
+for $f$ on $M = g^{-1}(\{ 0 \})$,
+and $\D g$ has full rank everywhere\footnote{Actually, only $\D g(p)$ needs to have full rank, and the arguments presented here continue to hold in that case, although $M$ would not necessarily be a manifold then.} on $M$.
+Then we know that $p$ is the solution
+to the Lagrange multiplier system
+\begin{equation}\label{lagrange}
+\D f(p) = \lambda \cdot \D g(p)\,,
+\end{equation}
+for a Lagrange multiplier vector $\lambda = (\lambda_1, \dotsc, \lambda_m)$.
+
+Our aim is to develop an analogue of the second derivative test for the stationary point $p$.
+
+The most straightforward way to proceed is to consider a coordinate chart $\alpha\colon V \to M$
+for the manifold $M$, and consider the Hessian of the function $f \circ \alpha\colon V \to \real^n$
+at $0 = \alpha^{-1}(p)$.  This Hessian is in fact just the Hessian form of $f \colon M \to \real$
+expressed in the coordinates of the chart $\alpha$.  But the whole point of using Lagrange multipliers
+is to avoid calculating coordinate charts directly, so we find an equivalent expression
+for $\D^2 (f\circ \alpha)(0)$ in terms of $\D^2 f(p)$ without mentioning derivatives of $\alpha$.
+
+To do this, we differentiate $f \circ \alpha$ twice using the chain rule and product
+ rule\footnote{Note that the ``product'' operation involved (second equality of \eqref{second-derivative})
+is the operation of \emph{composition of two linear mappings}.
+Think hard about this if you are not sure; it took me several tries to get this formula right,
+since multi-variable iterated derivatives have a complicated structure.}.
+To reduce clutter, from now on we use the prime notation for derivatives rather than $\D$.
+\begin{equation}\label{second-derivative}
+\begin{split}
+(f \circ \alpha)''(0) &= ((f' \circ \alpha) \cdot \alpha')'(0)  \\
+&= \bigl ( (f'' \circ \alpha) \cdot \alpha' \cdot \alpha' + (f' \circ \alpha) \cdot \alpha'' \bigr) (0) \\
+&= f''(\alpha(0)) \cdot \alpha'(0) \cdot \alpha'(0) + f'(\alpha(0)) \cdot \alpha''(0) \\
+&= f''(p) \cdot \alpha'(0) \cdot \alpha'(0) + f'(p) \cdot \alpha''(0)\,.
+\end{split}
+\end{equation}
+
+If we interpret $(f \circ \alpha)''(0)$ as a bilinear mapping of vectors $u,v \in \real^{n-m}$,
+then formula \eqref{second-derivative} really means
+\begin{equation}\label{bilinear}
+(f \circ \alpha)''(0) \cdot (u, v) = 
+f''(p) \cdot \bigl(\alpha'(0)\cdot u, \alpha'(0) \cdot v\bigr) + f'(p) \cdot \bigl(\alpha''(0) \cdot (u, v)\bigr)\,.
+\end{equation}
+To obtain the quadratic form, we set $v = u$; also we abbreviate the vector $\alpha'(0) \cdot u$ by $h$,
+which belongs to the tangent space $\mathrm{T}_p M$ of $M$ at $p$. So,
+\begin{equation}\label{quadratic}
+(f \circ \alpha)''(0) \cdot u^2 = 
+f''(p) \cdot h^2 + f'(p) \cdot \bigl(\alpha''(0) \cdot u^2 \bigr)\,.
+\end{equation}
+Na\"ively, we might think that $(f \circ \alpha)''(0)$ is simply
+$f''(p)$ restricted to the tangent space $\mathrm{T}_p M$.
+This happens to be the first term in \eqref{quadratic}, but there is also
+an additional contribution by the second term involving $\alpha''(0)$;
+intuitively, $\alpha''(0)$ is the curvature of the surface (manifold) $M$,
+``changing the geometry'' of the graph of $f$.
+
+But the second term of \eqref{quadratic} still involves $\alpha$.
+To eliminate it, we differentiate the equation $g \circ \alpha = 0$ twice.
+\begin{equation}\label{g-second-derivative}
+0 = (g \circ \alpha)''(0) = g''(p) \cdot \alpha'(0) \cdot \alpha'(0) + g'(p) \cdot \alpha''(0)\,.
+\end{equation}
+(It is derived the same way as \eqref{second-derivative} but with $f$ replaced by $g$.)
+Now we can substitute \eqref{g-second-derivative} and \eqref{lagrange}
+in \eqref{second-derivative} to eliminate the term $f'(p) \cdot \alpha''(0)$:
+\begin{equation}\label{ff-second-derivative}
+\begin{split}
+(f \circ \alpha)''(0) &= f''(p) \cdot \alpha'(0) \cdot \alpha'(0) + \lambda \cdot g'(p) \cdot \alpha''(0) \\
+&= f''(p) \cdot \alpha'(0) \cdot \alpha'(0) - \lambda \cdot g''(p) \cdot \alpha'(0) \cdot \alpha'(0)\,,
+\end{split}
+\end{equation}
+or expressed as a quadratic form,
+\begin{equation}\label{ff-quadratic}
+(f \circ \alpha)''(0) \cdot u^2 = f''(p) \cdot h^2 - \lambda \cdot g''(p) \cdot h^2\,.
+\end{equation}
+
+Thus, to understand the nature of the stationary point $p$, we can study the modified Hessian:
+\begin{equation}\label{lagrange-hessian}
+f''(p) - \lambda \cdot g''(p)\,, \quad \text{ restricted to $\mathrm{T}_p M$. }
+\end{equation}
+For example, if this bilinear form is positive definite, then $p$ is a local minimum,
+and if it is negative definite, then $p$ is a local maximum, and so on.
+All the tests that apply to the usual Hessian in $\real^n$ apply to the modified Hessian \eqref{lagrange-hessian}.
+
+In coordinates of $\real^n$, the modified Hessian \eqref{lagrange-hessian}
+takes the form
+\begin{equation}\label{lagrange-hessian-coord}
+\sum_{i=1}^n \sum_{j=1}^n \left( \left.\frac{\partial^2 f}{\partial x^i \partial x^j}\right|_p - \sum_{k=1}^m \lambda_k \, \left.\frac{\partial^2 g^k}{\partial x^i \partial x^j}\right|_p \right)  h^i h^j\,.
+\end{equation}
+We emphasize that the vector $h$ can be restricted to lie in the tangent space $\mathrm{T}_p M$,
+when studying the stationary point $p$ of $f$ restricted to $M$.
+
+In matrix form \eqref{lagrange-hessian-coord}
+can be written
+\begin{equation}\label{lagrange-hessian-matrix}
+B= \begin{bmatrix}
+\dfrac{\partial^2 f}{\partial x^i \partial x^j} - \sum\limits_{k=1}^m \lambda_k \, \dfrac{\partial^2 g^k}{\partial x^i \partial x^j} 
+\end{bmatrix}_{ij}\,.
+\end{equation}
+But again, the test vector $h$ need only lie on $\mathrm{T}_p M$,
+so if we want to apply positive/negative definiteness tests for matrices,
+they should instead be applied to the \emph{projected} or \emph{reduced} Hessian:
+\begin{equation}
+Z^\mathrm{t} B Z
+\end{equation}
+where the columns of the $n \times (n-m)$ matrix $Z$ form a \emph{basis}
+for $\mathrm{T}_p M = \ker g'(p) \subset \real^n$.
+%%%%%
+%%%%%
+\end{document}

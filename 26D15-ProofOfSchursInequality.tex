@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSchursInequality}
+\pmcreated{2013-03-22 15:35:25}
+\pmmodified{2013-03-22 15:35:25}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Schur's inequality}
+\pmrecord{7}{37501}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+\pmclassification{msc}{15A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+By Schur's theorem, a unitary matrix $U$ and an upper triangular matrix $T$ exist such that $A=UTU^H$, $T$ being diagonal if and only if $A$ is normal.
+Then $A^HA=UT^HU^HUTU^H=UT^HTU^H$, which means $A^HA$ and $T^HT$ are similar; so they have the same trace. We have:
+
+$\|A\|_F^2=\operatorname{Tr}(A^HA)=\operatorname{Tr}(T^HT)=\sum_{i=1}^n\left|\lambda_i\right|^2+\sum_{i<j}\left|t_{ij}\right|^2=$
+
+$=\operatorname{Tr}(D^HD)+\sum_{i<j}\left|t_{ij}\right|^2\geq\operatorname{Tr}(D^HD)=\|D\|_F^2.$
+
+If and only if $A$ is normal, $T=D$ and therefore equality holds.$\square$
+%%%%%
+%%%%%
+\end{document}

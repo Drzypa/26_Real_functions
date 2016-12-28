@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfAlmostConvexFunctions}
+\pmcreated{2013-03-22 15:21:07}
+\pmmodified{2013-03-22 15:21:07}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{characterization of almost convex functions}
+\pmrecord{9}{37173}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A real function $f$ is almost convex iff it is monotonic or there exists $p \in \mathbb{R}$ such that $f$ is nonincreasing on the half-line $(-\infty, p)$ and
+nondecreasing on the half-line $(p,+\infty)$
+
+{\bf Proof:}
+
+The proof is based on some simple observations about the values of an almost convex function. Suppose that $a < b$ and $f(a) \le f(b)$.  Then for any $c > b$, it must be the case that $f(b) \le f(c)$.  This follows from the fact that, by definition of almost convex, either $f(b) \le f(a)$ or $f(b) \le f(c)$.  Since the first option is excluded by assumption, the second option must be true.
+
+Furthermore, with $a$, $b$ as above, $f$ is nondecreasing in the half-line $[b,\infty)$.  By the result of the last paragraph, it suffices to show that $f$ is non-decreasing in the open half-line $(c,\infty)$.  This is tantamount to showing that, if $c < d < e$, then $f(d) \le f(e)$.  From the conlusion of last paragraph, we already know that $f(c) \le f(d)$.  Applying the result shown in the last paragraph to this conclusion, we further conclude that $f(d) \le f(e)$, as desired.
+
+By replacing ``$\le$'' by ``$\ge$'' in the above two paragraphs suitably, we also can likewise that, if $a < b$ and $f(a) \ge f(b)$, then $f$ is nonincreasing on the half-line $(-\infty,a]$.
+
+Now assume that $f$ is almost convex but not monotonic.  By the hypothesis of nonmomotonicity, there must exist $a < b < c$ such that it is the case that neither $f(a) \le f(b) \le f(c)$ nor $f(a) \ge f(b) \ge f(c)$.  Furthermore, by almost-convexity, it follows that $f(b) \le f(a)$ and $f(b) \le f(c)$.  This, in turn, implies that $f$ is nonincreasing on $(-\infty,a]$ and nondecreasing on $[c,+\infty)$.
+
+Let $L$ be the set of all real numbers $q$ such that $f$ is nondecreasing on the interval $(q,+\infty)$.  This set is not empty because $c \in L$.  It is a proper subset of the real line because, for instance, $q \notin L$ whenever $q < a$. This follows from the observation that $f$ cannot be nondecreasing on $(q,+\infty)$ because $f(a) > f(b)$.  Also, $L$ must be a proper subset of the real line, because, if it were not, $f$ would be nondecreasing on the whole real line, which is contrary to assumption.
+
+Note that, if $r < q$ and $q \notin L$, then $r \notin L$ as well.  This is an expression of the fact that, if a function is not monotonic on a set, it is not monotonic on a superset, which is the contrapositive of the assertion that a the resticition of a function which is monotonic on a set to a subset is still monotonic.  Since there exists a real number $r$ such that $r \notin L$, this means that $r$ is a lower bound for $L$.  Since $L$ is bounded from below and not empty, it follows that $L$ has a greatest lower bound, which we shall call $p$.
+
+By construction, $f$ is non-decreasing on the half-line $(p,+\infty)$.  We will now show that $f$ is nonincreasing on the half-line $(-\infty,p)$.  Suppose that $q < p$.  Then, by the choice of $p$, the function $f$ is not nondecreasing on the half-line $(q,+\infty)$.  This means that there must exist $a,b$ such that $q < a < b$ and $f(a) > f(b)$.  By the result demonstrated above, it follows that $f$ is nonincreasing on $(-\infty,a)$, hence, since $q < a$, in particular, $f$ is nononicreasing on $(-\infty,q)$.  Since $f$ is nonincreasing on $(-\infty,q)$ for all $q$, it is the case that $f$ is nonincreasing on $(-\infty,p)$.
+%%%%%
+%%%%%
+\end{document}

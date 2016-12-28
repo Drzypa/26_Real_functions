@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralisationOfGaussianIntegral}
+\pmcreated{2013-03-22 18:43:36}
+\pmmodified{2013-03-22 18:43:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{generalisation of Gaussian integral}
+\pmrecord{6}{41495}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{26A36}
+\pmrelated{SubstitutionNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+The integral
+$$\int_0^\infty\!e^{-x^2}\cos{tx}\,dx \;:=\; w(t)$$
+is a generalisation of the Gaussian integral \,$w(0) = \frac{\sqrt{\pi}}{2}$.\, For evaluating it we first form its derivative which may be done by \PMlinkname{differentiating under the integral sign}{DifferentiationUnderIntegralSign}:
+$$w'(t) \;=\; \int_0^\infty\!e^{-x^2}(-x)\sin{tx}\,dx 
+\;=\; \frac{1}{2}\int_0^\infty\!e^{-x^2}(-2x)\sin{tx}\,dx$$
+Using integration by parts this yields
+$$w'(t) \;=\; \frac{1}{2}\!\sijoitus{x=0}{\quad\infty}\!e^{-x^2}\sin{tx}-\frac{t}{2}\int_0^\infty\!e^{-x^2}\cos{tx}\,dx
+\,=\, \frac{1}{2}(0-0)-\frac{t}{2}\int_0^\infty\!e^{-x^2}\cos{tx}\,dx \,=\, -\frac{t}{2}w(t).$$
+Thus $w(t)$ satisfies the linear differential equation
+$$\frac{dw}{dt} \;=\; -\frac{1}{2}tw,$$
+where one can \PMlinkname{separate the variables}{SeparationOfVariables} and integrate:
+$$\int\!\frac{dw}{w} \;=\; -\frac{1}{2}\int\!t\,dt.$$
+So,\, $\ln{w} \,=\, -\frac{1}{4}t^2+\ln{C}$,\, i.e.\, $w = w(t) = Ce^{-\frac{1}{4}t^2}$,\, 
+and since there is the initial condition\, $w(0) = \frac{\sqrt{\pi}}{2}$, we obtain the result
+$$w(t) \;=\; \frac{\sqrt{\pi}}{2}e^{-\frac{1}{4}t^2}.$$
+
+
+%%%%%
+%%%%%
+\end{document}

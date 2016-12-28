@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfCalculusForKurzweilHenstockIntegral}
+\pmcreated{2013-03-22 16:44:27}
+\pmmodified{2013-03-22 16:44:27}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{fundamental theorem of calculus for Kurzweil-Henstock integral}
+\pmrecord{4}{38964}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmrelated{FundamentalTheoremOfCalculusClassicalVersion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Let the $\int$ symbol denote the Kurzweil-Henstock integral.  We can then give the most general version of the fundamental theorem of calculus.
+
+\begin{thm}
+Let $F \colon [a,b] \to {\mathbb{R}}$ and suppose the derivative
+$F'(x)$ exists for all $x \in [a,b]$.  Then
+\begin{equation*}
+\int_a^b F'(x) dx = F(b)-F(a) .
+\end{equation*}
+\end{thm}
+
+The reader should note the subtle difference from the standard version.  Here we do not assume anything about $F'$ except that it exists.  For the standard version we usually assume that $F'$ is continuous, and if we use the Lebesgue integral we must assume that $F'$ is Lebesgue integrable.  Part of this theorem is that $F'$ is Kurzweil-Henstock integrable, hence no extra assumptions are necessary.
+
+An example of a function where the standard version has problems is the function
+\begin{equation*}
+F(x) :=
+\begin{cases}
+x^2 \sin \frac{1}{x^2} & \text{ if $x \not= 0$} \\
+0 & \text{ if $x = 0$} .
+\end{cases}
+\end{equation*}
+$F$ is differentiable everywhere, but
+\begin{equation*}
+F'(x) =
+\begin{cases}
+2x \sin \frac{1}{x^2} - \frac{2}{x}\cos \frac{1}{x^2} & \text{ if $x \not= 0$} \\
+0 & \text{ if $x = 0$} .
+\end{cases}
+\end{equation*}
+Which is not continuous and in fact unbounded on any interval containing zero.
+%%%%%
+%%%%%
+\end{document}

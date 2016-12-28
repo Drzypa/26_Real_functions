@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TangentOfHalvedAngle}
+\pmcreated{2013-03-22 17:00:32}
+\pmmodified{2013-03-22 17:00:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{tangent of halved angle}
+\pmrecord{9}{39291}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmrelated{DerivationOfHalfAngleFormulaeForTangent}
+\pmrelated{GoniometricFormulae}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formula}
+The formulae
+$$\cos{2\alpha} = 1-2\sin^2{\alpha},$$
+$$\cos{2\alpha} = 2\cos^2{\alpha}-1$$
+may be solved for\, $\sin{\alpha}$\, and\, $\cos{\alpha}$, respectively.\, One gets the equations
+$$\sin{\alpha} = \pm\sqrt{\frac{1-\cos{2\alpha}}{2}},\quad\cos{\alpha} = \pm\sqrt{\frac{1+\cos{2\alpha}}{2}},$$
+where the signs have to be chosen according to the quadrant where the angle $\alpha$ is.\, Changing $\alpha$ to $\frac{x}{2}$ and dividing these equations gives us the formula
+\begin{align}
+\tan{\frac{x}{2}}\, = \,\pm\sqrt{\frac{1-\cos{x}}{1+\cos{x}}}.
+\end{align}
+Also here one must chose the sign according to the quadrant of\, $\displaystyle\frac{x}{2}$.
+
+We obtain two alternative forms of (1) when we multiply both the numerator and
+ the denominator of the radicand the first time by\, $1-\cos{x}$\, and the 
+second time by\, $1+\cos{x}$; note that\, $1-\cos^2{x} = \sin^2{x}$:
+\begin{align}
+\tan{\frac{x}{2}} = \frac{1-\cos{x}}{\sin{x}},
+\end{align}
+\begin{align}
+\tan{\frac{x}{2}} = \frac{\sin{x}}{1+\cos{x}}
+\end{align}
+Here,\, $\sin{x}$\, determines the sign of the \PMlinkescapetext{right} hand sides; 
+it can be justified that it has always the same sign as $\tan{\frac{x}{2}}$.
+%%%%%
+%%%%%
+\end{document}

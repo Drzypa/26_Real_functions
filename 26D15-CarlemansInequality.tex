@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CarlemansInequality}
+\pmcreated{2013-03-22 13:43:17}
+\pmmodified{2013-03-22 13:43:17}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Carleman's inequality}
+\pmrecord{5}{34405}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+{\bf Theorem} (\cite{hormander}, pp. 24)
+For positive real numbers $\{a_n\}_{n=1}^\infty$,
+\emph{Carleman's inequality} states that
+$$ \sum_{n=1}^\infty \big(a_1 a_2 \cdots a_n\big)^{1/n} \le e \sum_{n=1}^\infty
+a_n.$$
+Although the constant $e$ (the natural log base)
+is optimal, it is possible to refine
+Carleman's inequality by decreasing the weight coefficients
+on the right hand side \cite{yuan}.
+
+
+\begin{thebibliography}{9}
+\bibitem{hormander}
+L. H\"ormander, \emph{The Analysis of Linear Partial Differential Operators I,
+(Distribution theory and Fourier Analysis)}, 2nd ed, Springer-Verlag, 1990.
+\bibitem{yuan}
+B.Q. Yuan, \emph{Refinements of Carleman's inequality},
+Journal of Inequalities in Pure and Applied Mathematics, Vol. 2, Issue 2, 2001,
+Article 21. \PMlinkexternal{online}{http://jipam.vu.edu.au/v2n2/029_00.html}
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

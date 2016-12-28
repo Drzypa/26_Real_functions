@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FractionalIntegration}
+\pmcreated{2013-03-22 16:17:47}
+\pmmodified{2013-03-22 16:17:47}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{fractional integration}
+\pmrecord{17}{38416}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A33}
+\pmsynonym{fractional integral}{FractionalIntegration}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The basic idea of "Riemann-Liouville" type fractional integration comes from the following observation:
+
+Given any integrable function $f:{\mathbb R}\mapsto {\mathbb R}$ in one variable, we have the following Cauchy Integration Formula:
+
+\begin{displaymath}D^{-n}(f)(x)=\int_{t_n=0}^x dt_n\ldots \int_{t_1=0}^{t_2}
+f(t_1)\,dt_1 =\frac{1}{(n-1)!} \int_{t=0}^x f(t)(x-t)^{n-1}\,dt
+\end{displaymath}
+
+when switching the index from integer $n$ to non-integer $\alpha$ gives the ideas of the following definitions: 
+
+{\bf Definition 1:}  {\rm Left-Hand Riemann-Liouville Integration}
+
+\begin{displaymath}I^{\alpha}_L (f)(s,t)=
+\frac{1}{\Gamma(\alpha)}\int_{u=s}^tf(u)(t-u)^{\alpha-1}\,du
+=\int_{u=s}^t f(u)\,dg^{\alpha}_t(u) \end{displaymath}
+
+where \begin{displaymath}g^{\alpha}_t(u)=\frac{t^{\alpha}-(t-u)^{\alpha}}
+{\Gamma(\alpha+1)}\end{displaymath}
+
+{\bf Definition 2:}  {\rm Right-Hand Riemann-Liouville Integration}
+
+\begin{displaymath}I^{\alpha}_R (f)(s,t)=
+\frac{1}{\Gamma(\alpha)}\int_{u=s}^tf(u)(u-s)^{\alpha-1}\,du
+=\int_{u=s}^t f(u)\,dh^{\alpha}_t(u) \end{displaymath}
+
+where \begin{displaymath}h^{\alpha}_t(u)=\frac{s^{\alpha}+(u-s)^{\alpha}}
+{\Gamma(\alpha+1)}\end{displaymath}
+
+{\bf Definition 3:}  {\rm Riesz Potential}
+
+\begin{displaymath}I^{\alpha}_C (f)(s,t;p)=
+\frac{1}{\Gamma(\alpha)}\int_{u=s}^tf(u)|u-p|^{\alpha-1}\,du
+=\int_{u=s}^t f(u)\,dr^{\alpha}_p(u) \end{displaymath}
+
+where \begin{displaymath}r^{\alpha}_p(u)=\frac{p^{\alpha}+{\rm sign}(u-p)
+|u-p|^{\alpha}}{\Gamma(\alpha+1)}\end{displaymath},
+
+${\rm sign}(x)=1$ for $x>0$, ${\rm sign}(x)=0$ for $x=0$, ${\rm sign}(x)=-1$ for $x<0$
+
+and $\Gamma(x)$ is the gamma function of $x$
+%%%%%
+%%%%%
+\end{document}

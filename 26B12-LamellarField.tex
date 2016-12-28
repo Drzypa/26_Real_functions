@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LamellarField}
+\pmcreated{2013-03-22 14:43:44}
+\pmmodified{2013-03-22 14:43:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{lamellar field}
+\pmrecord{18}{36360}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{lamellar}{LamellarField}
+\pmsynonym{irrotational}{LamellarField}
+\pmsynonym{conservative}{LamellarField}
+\pmsynonym{laminar}{LamellarField}
+\pmrelated{CurlFreeField}
+\pmrelated{PoincareLemma}
+\pmrelated{VectorPotential}
+\pmrelated{GradientTheorem}
+\pmdefines{scalar potential}
+\pmdefines{potential}
+\pmdefines{rotor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A vector field \,$\vec{F} = \vec{F}(x,\,y,\,z)$,\, defined in an open set $D$ of $\mathbb{R}^3$, is\, {\em lamellar}\, if the condition 
+                   $$\nabla\!\times\!\vec{F} = \vec{0}$$
+is satisfied in every point \,$(x,\,y,\,z)$\, of $D$.
+
+Here, $\nabla\!\times\!\vec{F}$ is the curl or {\em rotor} of $\vec{F}$.\, The condition is equivalent with both of the following:
+\begin{itemize}
+\item The line integrals 
+                $$\oint_s \vec{F}\cdot d\vec{s}$$
+taken around any \PMlinkescapetext{closed} contractible curve $s$ vanish.
+\item The vector field has a \PMlinkescapetext{{\em scalar potential}}\, $u = u(x,\,y,\,z)$\, which has continuous partial derivatives and which is up to a \PMlinkescapetext{constant term} unique in a simply connected domain; the scalar potential means that
+                      $$\vec{F} = \nabla u.$$
+\end{itemize}
+The scalar potential has the expression
+$$u = \int_{P_0}^P\vec{F}\cdot d\vec{s},$$
+where the point $P_0$ may be chosen freely,\, $P = (x,\,y,\,z)$.
+
+\textbf{Note.}\, In physics, $u$ is in general replaced with\, $V = -u$.\, If the $\vec{F}$ is interpreted as a \PMlinkescapetext{force}, then the potential $V$ is equal to the work made by the \PMlinkescapetext{force} when its point of application is displaced from $P_0$ to infinity.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Nabla}
+\pmcreated{2013-03-22 14:00:20}
+\pmmodified{2013-03-22 14:00:20}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{nabla}
+\pmrecord{7}{34847}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{gradient}
+\pmrelated{NablaActingOnProducts}
+\pmrelated{Gradient}
+\pmrelated{AlternateCharacterizationOfCurl}
+\pmdefines{$\nabla$}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+% copied from "gradient"
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+
+\newcommand{\vF}{\mathbf{F}}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\vv}{\mathbf{v}}
+
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\ve}{\mathbf{e}}
+
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vX}{\mathbf{X}}
+\newcommand{\vA}{\mathbf{A}}
+
+\newcommand{\grad}{\operatorname{grad}}
+\newcommand{\curl}{\operatorname{curl}}
+\begin{document}
+Let $f:\mathbb{R}^n\to \mathbb{R}$ be a 
+$C^1(\mathbb{R}^n)$ function, that is, a partially differentiable 
+function in all its coordinates. The symbol $\nabla$, named 
+\emph{nabla}, represents the gradient operator, whose action on $f(x_1,x_2,\ldots,x_n)$ is given  by
+\begin{eqnarray*}
+\nabla f&=&\left(f_{x_1},f_{x_2},\ldots,f_{x_n}\right)\\
+&=&\left(
+\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2},\ldots,\frac{\partial f}{\partial x_n}
+\right)
+\end{eqnarray*}
+
+\section*{Properties}
+\begin{enumerate}
+\item If $f,g$ are functions, then 
+\[
+   \nabla(fg) = (\nabla f) g + f \nabla g.
+\]
+\item For any scalars $\alpha$ and $\beta$ and functions $f$ and $g$,
+\[
+   \nabla(\alpha f + \beta g) = \alpha \nabla f + \beta \nabla g.
+\]
+\end{enumerate}
+
+\section*{The $\nabla$ symbolism}
+Using the $\nabla$ formalism,
+the divergence operator can be expressed as
+$\nabla\cdot$, the curl operator as $\nabla\times$, and the
+Laplacian operator as $\nabla^2$. To wit, for a given vector field
+\[
+\vA = A_x\, \vi + A_y\, \vj + A_z\, \vk,
+\]
+and a given function $f$
+we have
+\begin{align*}
+\nabla\cdot \vA &= \frac{\partial A_x}{\partial x} +
+\frac{\partial A_y}{\partial y} +\frac{\partial A_z}{\partial z} \\
+\nabla\times \vA &=
+\lp\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}
+\rp \vi+
+\lp \frac{\partial A_x}{\partial z} -
+\frac{\partial A_z}{\partial x}\rp \vj+
+\lp \frac{\partial A_y}{\partial x} -
+\frac{\partial A_x}{\partial y}\rp \vk\\
+\nabla^2 f &= \frac{\partial^2 f}{\partial x^2} +
+\frac{\partial^2 f}{\partial y^2} +\frac{\partial^2 f}{\partial z^2}.
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

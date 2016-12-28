@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralOverAPeriodInterval}
+\pmcreated{2013-03-22 18:43:57}
+\pmmodified{2013-03-22 18:43:57}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integral over a period interval}
+\pmrecord{7}{41501}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{26A42}
+\pmsynonym{integral over a period}{IntegralOverAPeriodInterval}
+\pmsynonym{integral of periodic function}{IntegralOverAPeriodInterval}
+\pmrelated{DefiniteIntegral}
+\pmrelated{IntegralsOfEvenAndOddFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{period}
+\textbf{Theorem.}\, If the real function $f$ is periodic and \PMlinkname{integrable}{RiemannIntegrable} over a \PMlinkname{period}{Periodic} interval, the value of integral over a period interval is always the same, i.e.
+\begin{align}
+\int_a^{a+p}\!f(x)\,dx \;=\; \int_0^pf(x)\,dx \quad \forall\,a \in \mathbb{R}
+\end{align}
+where $p$ is the period of $f$.\\
+
+{\em Proof.}\, The right hand side of the equation (1) is manipulated, with one \PMlinkname{substitution}{ChangeOfVariableInDefiniteIntegral} \,$x = t\!+\!p$:
+\begin{align*}
+\int_0^pf(x)\,dx & \;=\; \int_0^af(x)\,dx+\int_a^pf(x)\,dx\\
+& \;=\; \int_0^af(x)\,dx+\int_a^{a+p}\!f(x)\,dx-\int_p^{a+p}\!f(x)\,dx\\ 
+& \;=\; \int_0^af(x)\,dx+\int_a^{a+p}\!f(x)\,dx-\int_0^{a}f(t\!+\!p)\,dt\\
+& \;=\; \int_0^af(x)\,dx+\int_a^{a+p}\!f(x)\,dx-\int_0^{a}f(t)\,dt\\
+& \;=\; \int_a^{a+p}\!f(x)\,dx
+\end{align*}
+
+\begin{thebibliography}{8}
+\bibitem{J} {\sc Ernst Lindel\"of}: {\em Johdatus korkeampaan analyysiin}. Fourth edition. Werner S\"oderstr\"om Osakeyhti\"o, Porvoo ja Helsinki (1956).
+\bibitem{L} {\em Fr{\aa}ga Lund om matematik}, \PMlinkexternal{here}{http://www.maths.lth.se/query/}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

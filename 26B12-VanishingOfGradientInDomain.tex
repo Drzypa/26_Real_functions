@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VanishingOfGradientInDomain}
+\pmcreated{2013-03-22 19:11:58}
+\pmmodified{2013-03-22 19:11:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{vanishing of gradient in domain}
+\pmrecord{8}{42113}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{partial derivatives vanish}{VanishingOfGradientInDomain}
+%\pmkeywords{domain}
+%\pmkeywords{open}
+%\pmkeywords{connected}
+\pmrelated{FundamentalTheoremOfIntegralCalculus}
+\pmrelated{ExtremumPointsOfFunctionOfSeveralVariables}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{domain}
+
+\textbf{Theorem.}\, If the function $f$ is defined in a \PMlinkname{domain}{Domain2} $D$ of $\mathbb{R}^n$ and all the partial derivatives of a $f$ vanish identically in $D$, i.e.
+$$\nabla{f} \;\equiv\; \vec{0} \quad \mbox{in}\; D,$$
+then the function has a constant value in the whole domain.\\
+
+\emph{Proof.}\, For the sake of simpler notations, think that\, $n = 3$; thus we have
+\begin{align}
+f_x'(x,\,y,\,z) \;=\; f_y'(x,\,y,\,z) \;=\; f_z'(x,\,y,\,z) \;=\; 0 \quad \mbox{for all}\;\;(x,\,y,\,z) \in D.
+\end{align}
+Make the antithesis that there are the points \,$P_0 = (x_0,\,y_0,\,z_0)$\, and\, $P_1 = (x_1,\,y_1,\,z_1)$\, of $D$ such that\, 
+$f(x_0,\,y_0,\,z_0) \neq f(x_1,\,y_1,\,z_1)$.\,
+Since $D$ is connected, one can form the broken line $P_0Q_1Q_2\ldots Q_kP_1$ contained in $D$.\, When one now goes along this broken line from $P_0$ to $P_1$, one mets the first corner where the value of $f$ does not equal 
+$f(x_0,\,y_0,\,z_0)$.\, Thus $D$ contains a line segment, the end points of which give unequal values to $f$.\, When necessary, we change the notations such that this line segment is $P_0P_1$.\, Now, $f_x',\,f_y',\,f_z'$ are continuous in $D$ because they vanish.\, The  mean-value theorem for several variables guarantees an interior point \,$(a,\,b,\,c)$\, of the segment such that
+$$0 \;\neq\; f(x_1,\,y_1,\,z_1)-f(x_0,\,y_0,\,z_0) 
+\;=\; f_x'(a,\,b,\,c)(x_1\!-\!x_0)+f_y'(a,\,b,\,c)(y_1\!-\!y_0)+f_z'(a,\,b,\,c)(z_1\!-\!z_0).$$
+But by (1), the last sum must vanish.\, This contradictory result shows that the antithesis is wrong, which settles the proof.
+
+%%%%%
+%%%%%
+\end{document}

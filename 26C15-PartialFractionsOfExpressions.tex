@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartialFractionsOfExpressions}
+\pmcreated{2013-03-22 14:20:27}
+\pmmodified{2013-03-22 14:20:27}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{partial fractions of expressions}
+\pmrecord{29}{35812}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C15}
+\pmsynonym{partial fractions}{PartialFractionsOfExpressions}
+%\pmkeywords{multiplicity}
+\pmrelated{ALectureOnThePartialFractionDecompositionMethod}
+\pmrelated{PartialFractionsForPolynomials}
+\pmrelated{ConjugatedRootsOfEquation2}
+\pmrelated{MixedFraction}
+\pmdefines{fractional expression}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{decomposition}
+
+Let\, $R(z) = \frac{P(z)}{Q(z)}$\, be a {\em fractional expression}, i.e., a quotient of the polynomials $P(z)$ and $Q(z)$ such that $P(z)$ is not divisible by $Q(z)$.\, Let's restrict to the case that the coefficients are real or complex numbers. 
+
+If the distinct complex zeros of the denominator are\, $b_1,\,b_2,\,\ldots,\,b_t$\, with the multiplicities\, $\tau_1,\,\tau_2,\,\ldots,\,\tau_t$ ($t \ge 1$), and the numerator has not common zeros, then $R(z)$ can be decomposed uniquely as the sum
+$$R(z) \;=\; H(z)+
+\sum_{j=1}^t\left(\frac{A_{j1}}{z-b_j}+\frac{A_{j2}}{(z-b_j)^2}+\ldots
+        +\frac{A_{j\tau_j}}{(z-b_j)^{\tau_j}}\right),$$
+where $H(z)$ is a polynomial and the $A_{jk}$'s are certain complex numbers.
+
+Let us now take the special case that all coefficients of $P(z)$ and $Q(z)$ are real.\, Then the \PMlinkescapetext{{\em imaginary}} (i.e. non-real) zeros of $Q(z)$ are pairwise complex conjugates, with same multiplicities, and the corresponding linear \PMlinkname{factors}{Product} of $Q(z)$ may be pairwise multiplied to quadratic polynomials of the form\, $z^2\!+\!pz\!+\!q$\, with real $p$'s and $q$'s and\, $p^2 < 4q$.\, Hence the above decomposition leads to the unique decomposition of the form
+\begin{align*}R(x) \;=\quad & H(x)+
+\sum_{i=1}^m\left(\frac{A_{i1}}{x-b_i}+\frac{A_{i2}}{(x-b_i)^2}+\ldots
++\frac{A_{i\mu_i}}{(x-b_i)^{\mu_i}}\right)\\
+&+\sum_{j=1}^n\left(\frac{B_{j1}x+C_{j1}}{x^2+p_jx+q_j}+
+\frac{B_{j2}x+C_{j2}}{( x^2+p_jx+q_j)^2}+\ldots
++\frac{B_{j\nu_j}x+C_{j\nu_j}}{( x^2+p_jx+q_j)^{\nu_j}}\right),
+\end{align*}
+where $m$ is the number of the distinct real zeros and $2n$ the number of the distinct \PMlinkescapetext{imaginary} zeros of the denominator $Q(x)$ of the fractional expression\, $R(x) = \frac{P(x)}{Q(x)}$.\, The coefficients $A_{ik}$, $B_{jk}$ and $C_{jk}$ are uniquely determined real numbers.
+
+Cf. the partial fractions of {\em fractional numbers}.\\
+
+\textbf{Example.} 
+$$\frac{-x^5\!+\!6x^4\!-\!7x^3\!+\!15x^2\!-\!4x\!+\!3}
+{(x\!-\!1)^3(x^2\!+\!1)^2} \;=\;
+-\frac{1}{x\!-\!1}\!+\!\frac{3}{(x\!-\!1)^3}\!+
+\!\frac{x}{x^2\!+\!1}\!+\!\frac{2x\!-\!1}{(x^2\!+\!1)^2}$$
+%%%%%
+%%%%%
+\end{document}

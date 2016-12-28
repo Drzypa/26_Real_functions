@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfConvergenceCriterionForInfiniteProduct}
+\pmcreated{2013-03-22 15:35:36}
+\pmmodified{2013-03-22 15:35:36}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{proof of convergence criterion for infinite product}
+\pmrecord{10}{37506}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E99}
+%\pmkeywords{series}
+%\pmkeywords{convergent}
+%\pmkeywords{limit}
+%\pmkeywords{logarithm}
+%\pmkeywords{product}
+%\pmkeywords{limit comparison test}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the partial product $P_n = \prod_{i=1}^n p_i$.
+
+By definition we say that the infinite product $\prod_{n=1}^\infty p_n$ is convergent iff $P_n$ is convergent.
+
+Suppose every $p_n>0$
+
+$\ln$ is a continuous bijection from $\mathbb{R}^+$ to $\mathbb{R}$, therefore
+$\lim_{n\to \infty} a_n = a \iff \lim_{n\to \infty} \ln(a_n) = \ln(a)$, provided $a_n>0$ and $a>0$.
+
+so saying $P_n\to P > 0$ is equivalent to saying that $\ln(P_n)$ converges.
+
+Since $\ln(P_n) = \ln(\prod_{i=1}^n p_i) = \sum_{i=1}^n \ln(p_i)$, the infinite product converges to a positive value iff the series $\sum_{n=1}^\infty \ln(p_n)$ is convergent.
+
+In particular, if the infinite product converges to a positive value, then $\ln(p_n)\to 0 \implies p_n \to 1$.
+
+$P_n \to 0$, is equivalent to saying $\sum_{n=1}^\infty \ln(p_n) = -\infty$
+
+For the second part of the theorem:
+
+$\prod_{n=1}^\infty (1+p_n)$ converges absolutely to a positive value iff $\sum_{n=1}^\infty p_n$ converges absolutely.
+
+as we have seen, $1+p_n \to 1 \implies p_n \to 0$
+
+consider: $\lim_{x\to 0} \frac{\ln(1+x)}{x} = 1$ (this is easy to prove since by Taylor's expansion $\ln(1+x) = x + O(x^2)$)
+
+Since $p_n \to 0$ we can say that $\lim_{n \to \infty} \frac{\ln(1+p_n)}{p_n} = 1$ and by the limit comparison test, either both $\sum_{n=1}^\infty \ln(1+p_n)$ and $\sum_{i=1}^n p_i$ converge or diverge.
+%%%%%
+%%%%%
+\end{document}

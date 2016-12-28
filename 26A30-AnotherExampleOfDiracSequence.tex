@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnotherExampleOfDiracSequence}
+\pmcreated{2013-03-22 17:19:50}
+\pmmodified{2013-03-22 17:19:50}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{another example of Dirac sequence}
+\pmrecord{8}{39683}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A30}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+Let $\displaystyle A_n=\left[\frac{-1}{2^n},\frac{1}{2^n}\right]$ and $\delta_n=2^{n-1}\chi_{A_n}$ for every positive integer $n$, where $\chi_S$ denotes the characteristic function of the set $S$.  Then $\{\delta_n\}$ is a Dirac sequence:
+
+\begin{enumerate}
+\item $\delta_n(t)\ge 0$ for every positive integer $n$ and every $t\in\mathbb{R}$.
+\item Let $n$ be a positive integer.  Then $\displaystyle \int\limits_{-\infty}^{\infty} \delta_n(t) \, dt=\int\limits_{\frac{-1}{2^n}}^{\frac{1}{2^n}} 2^{n-1} \, dt=1$.
+
+\item Let $r>0$.  Then there exists a positive integer $N$ such that, for every integer $k>N$, we have $\displaystyle \frac{1}{2^k}<r$.  Thus, for every integer $k>N$, we have $\displaystyle \int\limits_{\mathbb{R}\setminus\left[ -r,r\right]} d_k(t) \, dt=0$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TaylorSeriesOfArcusSine}
+\pmcreated{2013-03-22 14:51:18}
+\pmmodified{2013-03-22 14:51:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Taylor series of arcus sine}
+\pmrecord{12}{36527}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{11B65}
+\pmclassification{msc}{05A10}
+\pmrelated{ExamplesOnHowToFindTaylorSeriesFromOtherKnownSeries}
+\pmrelated{TaylorSeriesOfArcusTangent}
+\pmrelated{CyclometricFunctions}
+\pmrelated{LogarithmSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We give an example of obtaining the Taylor series \PMlinkescapetext{expansion} of an elementary function by integrating the Taylor series of its derivative.
+
+For\, $-1 < x < 1$\, we have the derivative of the principal \PMlinkescapetext{branch} of the \PMlinkname{arcus sine}{CyclometricFunctions} function:
+$$\frac{d\,\arcsin{x}}{dx} = \frac{1}{\sqrt{1\!-\!x^2}} = 
+(1\!-\!x^2)^{-\frac{1}{2}}.$$
+
+Using the generalized binomial coefficients ${-\frac{1}{2} \choose r}$ we thus can form the Taylor series for it as \PMlinkname{Newton's binomial series}{BinomialFormula}: 
+$$(1\!-\!x^2)^{-\frac{1}{2}} = \sum_{r = 0}^\infty{-\frac{1}{2} \choose r}(-x^2)^r = 
+1\!+\!{-\frac{1}{2}\choose 1}(-x^2)\!+\!{-\frac{1}{2}\choose 2}(-x^2)^2\!+\!
+{-\frac{1}{2}\choose 3}(-x^2)^3\!+\!\cdots =$$
+$$ =1\!-\!\frac{-\frac{1}{2}}{1!}x^2\!+
+\!\frac{-\frac{1}{2}(-\frac{1}{2}\!-\!1)}{2!}x^4\!
+-\!\frac{-\frac{1}{2}(-\frac{1}{2}\!-\!1)(-\frac{1}{2}\!-\!2)}{3!}x^6\!+-\cdots =$$
+$$ = 1\!+\!\frac{1}{2}x^2\!+\!\frac{1\cdot 3}{2\cdot 4}x^4\!+\!
+\frac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6}x^6\!+\!\cdots
+\quad\quad\quad\quad \mathrm{for}\,\, -1 < x < 1$$
+
+Because\, $\arcsin{0} = 0$\, for the principal \PMlinkname{branch}{GeneralPower} of the function, we get, by \PMlinkname{integrating the series termwise}{SumFunctionOfSeries}, the \PMlinkescapetext{expansion}
+$$\arcsin{x} = \int_0^x\frac{dx}{\sqrt{1\!-\!x^2}} = 
+  x\!+\!\frac{1}{2}\!\cdot\!\frac{x^3}{3}\!+
+\!\frac{1\!\cdot\!3}{2\!\cdot\!4}\!\cdot\!\frac{x^5}{5}\!+\!
+\frac{1\!\cdot\!3\cdot\!5}{2\!\cdot\!4\cdot\!6}\!\cdot\!\frac{x^7}{7}\!+\!\cdots,$$
+the validity of which is true for\, $|x| < 1$.\, It can be proved, in addition, that it is true also when\, $x = \pm 1$.
+%%%%%
+%%%%%
+\end{document}

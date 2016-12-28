@@ -1,0 +1,1136 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChapterII}
+\pmcreated{2014-08-03 22:52:11}
+\pmmodified{2014-08-03 22:52:11}
+\pmowner{PMBookProject}{1000683}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Chapter II}
+\pmrecord{3}{87452}
+\pmprivacy{1}
+\pmauthor{PMBookProject}{6075}
+\pmtype{Topic}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+CHAPTER II
+\begin{center}
+RATES LIMITS DERIVATIVES
+\end{center}
+
+4. Rate of Increase.
+Slope. In the study of any quantity,
+its rate of increase (or decrease), when some related quantity
+changes, is very important for any complete understanding.
+Thus, the rate of increase of the speed of a boat when the
+power applied is increased is a fundamental consideration.
+Graphically, the rate of increase of $y$ with respect to $x$ is
+shown by the rate of increase of the height
+of a curve. If the curve is very flat, there
+is a small rate of increase; if steep, a large
+rate.
+
+The steepness, or slope, of a curve shows
+the rate at which the dependent variable is
+increasing with respect to the independent
+variable.
+
+When we speak of the slope of a curve
+at any point $P$ we mean the slope of its tangent 
+at that point. To find this, we must
+start, as in Analytic Geometry, with a {\it secant}
+through $P$.
+
+Fig.3
+
+Let the equation of the curve, Fig. 3, be
+$ y=x^2$, and let the point $P$ at which the slope is to be found, be
+the point (2, 4).
+
+Let $Q$ be any other point on the curve, and let $\Delta x$ represent
+the difference of the values of $x$ at the two points $P$ and {\it Q}.
+\footnote{$\Delta x$ may be regarded as an abbreviation of the phrase, 
+`` difference of the
+$x$'s.'' The quotient of two such differences is called a difference quotient.
+Notice particularly that $\Delta x$ does {\it not} mean $\Delta\times x$. 
+Instead of `` difference of
+the $x$'s'' the phrases ` ` change in $x$ '' and ``increment of $x$'' are often used.}
+
+Then, in the figure, $OA=2, AB=\Delta x,$ and $OB=2+\Delta x$.
+Moreover, since $y=x^{2}$ at every point, the value of $y$ at $Q$ is
+$BQ=(2+\Delta x)^{2}$.
+
+The slope $S$ of the secant $PQ$ is the quotient of the 
+differences $\Delta y$ and $\Delta x$:
+
+$$S= \tan\angle MPQ=\frac{\Delta y}{\Delta x}=\frac{MQ}{PM}=
+\frac{(2+\Delta x)^{2}-4}{\Delta x}=4+\Delta x.$$
+
+The slope $m$ of the tangent at $P$, that is $\tan\angle MPT$, is the
+limit of the slope of the secant as $Q$ approaches $P$.
+The slope of the secant is the average slope of the curve between the points
+$P$ and Q. The slope of the curve at the single point $P$ is the limit of this
+average slope as $\mathrm{Q}$ approaches $P$.
+
+But, since $S=4+\Delta x$, it is clear that the limit of $S$ as $Q$ 
+approaches $P$ is 4, since $\Delta x$ approaches zero when $Q$ approaches
+$P$; hence the slope $m$ of the curve is 4 at the point $P$.
+
+At any other point the argument would be similar. If the
+co\&quot;{o}rdinates of $P$ are $(a, a^2)$, those of $Q$ would be 
+$[(a+\Delta x), (a+\Delta x)^{2}]$; and the slope of the secant would be the difference
+quotient $\Delta y \div \Delta x$:
+$$
+S=\frac{\Delta y}{\Delta x}=\frac{(a+\Delta x)^{2}-a^{2}}{\Delta x}=
+\frac{2a\Delta x+{\overline \Delta x}^{2}}{\Delta x}=2a+\Delta x.
+$$
+Hence the slope of the curve at the point $(a,\ a^{s})$ is 
+\footnote{Read ``$\Delta x \doteq 0$'' as ``$\Delta x$ approaches zero.'' 
+A detailed discussion of limits is given in \S 10, p. 16.}
+$$
+m=\lim_{\Delta x \doteq 0}S=\lim_{\Delta x\doteq 0}\Delta y/\Delta x=
+\lim_{\Delta x \doteq 0}(2a+\Delta x)=2a.
+$$
+On the curve $y=x^2$, the slope at any point is numerically twice
+the value of $x$.
+
+When the slope can be found, as above, the {\it equation of the
+tangent} at $P$ can be written down at once, by Analytic Geometry, 
+since the slope $m$ and a point $(a,\ b)$ on a line determine
+its equation:
+$$
+(y-b)=m(x-a).
+$$
+Hence, in the preceding example, at the point (2, 4), where
+we found $m=4$, the equation of the tangent is
+\begin{center}
+$(y-4)=4(x-2)$, or $4x-y=4$.
+\end{center}
+At the point $(a, a^{2})$ on the curve $y=x^2$, we found $m=2a$;
+hence the equation of the tangent there is
+\begin{center}
+$(y-a^2)=2a(x-a)$, or 2 $ax- y=a^2$.
+\end{center}
+
+5. General Rules.
+
+A part of the preceding work holds true
+for any curve, and all of the work is at least similar. Thus,
+for any curve, the slope is
+$$
+m=\lim_{\Delta x \doteq 0}S=\lim_{\Delta x \doteq 0}(\Delta y/\Delta x);
+$$
+{\it that is, the slope} $m$ {\it of the curve is the limit of the 
+difference quotient} $\Delta y/\Delta x$.
+
+The changes in various examples arise in the calculation of
+the difference quotient, $\Delta y+\Delta x$, or $S$.
+
+{\it This difference quotient. is always obtained, as above, by finding
+the value of} $y$ {\it at} $Q$, {\it from the value of} $x$ {\it at} $Q$, 
+{\it from the equation of the curve, then finding} $\Delta y$  
+{\it by subtracting from this the value of} $y$ {\it at} $P$, 
+{\it and finally forming the difference quotient by dividing} $\Delta y$ 
+{\it by} $\Delta x$.
+
+\$. Slope Negative or Zero. If the slope of the curve is
+{\it negative}, the rate of increase in its height is negative, that is,
+the height is really {\it decreasing} with respect to the independent
+variable. 
+\footnote{Increase or decrease in the height is always measured as we go toward
+the right, i.e. as the independent variable increases.}
+
+If the slope is {\it zero}, the tangent to the curve is {\it horizontal}.
+this is what happens ordinarily at a highest point (maximum)
+or at a lowest point (minimum) on a curve.
+\footnote{A maximum need not be the highest point on the entire curve, but merely
+the highest point in a small arc of the curve about that point See \S 37, p. 63.
+Horizontal tangents sometimes occur without any maximum or any minimum.
+See \S 38, p. 63.}
+
+{\it Example} 1. Thus the curve $y=x^{2}$, as we have just seen, has, at any
+point $x=a$, a slope $m=2a$. Since $m1s$ positive when $a$ is positive, the
+curve is rising on the right of the origin; since $m$ is negative when $a$ is
+negative, the curve is falling (that is, thee height $y$ decreases as $x$ increases)
+on the left of the origin. At the origin $m=0$; the origin is the lowest
+point (a minimum) on the curve, because the curve falls as we come toward
+the origin and rises afterwards.
+
+{\it Example} 2. Find the slope of the curve
+\begin{equation}
+y=x^{2}+3x-6
+\end{equation}
+at the point where $x=-2$; also in general at a point $x=a$. Use these
+values to find the equation
+of the tangent at $x=2$; the
+tangent at any point; the
+maximum or minimum
+points if any exist.
+
+When $x=-2$, we find $y=-7$, ( $P$ in Fig. 4); taking
+any second point $Q$, $(-2+\Delta x, -7+\Delta y)$, its 
+co\&quot;{o}rdinates must satisfy the given equation, therefore
+
+(2) $-7+\Delta y=(-2+\Delta x)^{2}+3(-2+\Delta x)-6$,
+
+or
+
+(3) $\Delta y=-4 +\overline{\Delta x}^{2}+ 
+\Delta x=-\Delta x+\overline{\Delta x}^{2}$,
+
+where $\overline{\Delta}^{\eta}x$ means the square
+
+of $\Delta x$. Hence the slope of
+the secant $PQ$ i8
+\begin{center}
+(4)   $S=\Delta y/\Delta x=-1+\Delta x$.
+\end{center}
+The slope $m$ of the curve is the limit of $S$ as $\Delta x$ approaches zero; {\it i.e}.
+\begin{center}
+(5)   $m=\displaystyle \lim_{\Delta x \doteq 0} S=
+\lim_{\Delta x \doteq 0}\frac{\Delta y}{\Delta x}=
+\lim_{\Delta x \doteq 0}(-1+\Delta x)=-1$.
+$$
+u\underline{\wedge}0\ \mathrm{A}ae\pm 0M\ \mathrm{A}a=0
+$$
+\end{center}
+It follows that the equation of the tangent at $(-2,\ -7)$ is
+\begin{center}
+(6)   $(y+7)=-1(x+2)$, or $x+y+9=0$.
+\end{center}
+Likewise, if we take the point $P(a,\ b)$ in any position on the curve
+whatsoever, the equation (1) gives
+\begin{center}
+(7)   $b=a^{2}+3a-6$.
+\end{center}
+Any second point $Q$ has co\:{o}rdinates $(a+\Delta x,\ b+\Delta y)$ where $\Delta x$ and $\Delta y$ are the differences in $x$ and in $y$, respectively, 
+between $P$ and $Q$. Since $Q$ also lies on the curve, these 
+co\:{o}rdinates satisfy (1) :
+%\begin{center}
+%\includegraphics[width=53.47mm,height=64.90mm]{./chap2_images/image001.eps}
+%\end{center}
+
+\begin{center}
+(8)   $b+\Delta y=(a+\Delta x)^{2}+3(a+\Delta x)-5$.
+\end{center}
+Subtracting the equation (7) from (8),
+$\Delta y=2a\Delta x+{\overline\Delta x}^{2}+3\Delta x$, whence $S=\Delta y/\Delta x=(2 a + 3)+ \Delta x$,
+and
+\begin{center}
+(9)   $m=\displaystyle \lim_{x\doteq 0}S=
+\lim_{x\doteq 0}\frac{\Delta y}{\Delta x}=
+\lim_{x\doteq 0}[(2a+3)+\Delta x]=2a+3$.
+\end{center}
+Therefore the tangent at $(a,\ b)$ is
+\begin{center}
+(10) $y-(a^{2}+3a-6)=(2a+3)(x-a)$, or $(2\ a+3)x-y=a^{2}+5$.
+\end{center}
+From (9) we observe that $m=0$, when $2a+3=0$, {\it i.e.}. when $a=-3/2$.
+For all values greater than $-3/2, m=(2a+3$) is positive; for all
+values less than $-3/2, m$ is negative. Hence the curve has a minimum
+at $(-3/2,\ -29/4)$ In Fig. 4, since the curve falls as we come toward
+this point and rises afterwards.
+
+{\it Example} 3. Consider the curve $y=x^{2}-12x+7.$ 
+If the value of $x$
+at any point $P$ is $a$, the value of $y$ is $a^{2}-12a+7$. If the value of $x$ at
+$Q$ is $a+\Delta x$, the value of $y$ at $Q$ is $(a+\Delta x)^{2}-12(a+\Delta x)+7$.
+
+Hence
+$$
+S=\frac{\Delta y}{\Delta x}=\frac{[(a+\Delta x)^{2}-12(a+\Delta x)+7]-[a^{2}-12a+7]}{\Delta x}
+$$
+$$
+=(3a^{2}+3a\Delta x+\overline{\Delta x}^{2})-12,
+$$
+and
+$$
+m=\lim_{\Delta \doteq 0}\frac{\Delta y}{\Delta x}=3a^{2}-12.
+$$
+
+For example, if $x=1, y=-4$; at this point $(1,\ -4)$
+the slope is S. $1^{2}-12=-9$:
+and the equation of the tangent is
+$(y+4)=-9(x-1)$, or
+\begin{center}
+$ 9x+y-5=0$.
+\end{center}
+Since 3 $a^{2}-12$ is negative
+when $a^{2}&lt;4$, the curve is falling when $a$ lies between $-2$
+and $+2$. Since $3a^{2}-12$ is
+positive when $a^{2}&gt;4$, the curve is rising whien $x&lt;-2$ and when $x&gt;+2$.
+At $x=\pm 2$, the slope is zero. At $x=+2$ there is a minimum (see Fig.
+5 $)$, since the curve i8 falling before this point and rising afterwards. At
+$x=-2$ there is a maximum. At $x=+2, y=(2)^{2}-12\cdot 2+7=-9$,
+which is the lowest value of $y$ near that point. At $x=-2, y=23$, the
+highest value near it.
+
+This information is quite useful in drawing an accurate figure. We
+know also that the curve rises faster and faster to the right of $x=2$.
+
+Draw an accurate figure of your own on a large scale.
+
+\begin{center}
+EXERCISES III.--SLOPES OF CURVES
+\end{center}
+
+1. Find the slope of the curve $y=x^{2}+2$ at the point where $x=1$.
+Find the equation of the tangent at that point. Verify the fact that the
+equation obtained i8 a straight line, that it has the correct slope, and that
+it passes through the point $(1, 3)$.
+
+2. Draw the curve $y=x^{2}+2$ on a large scale. Through the point
+$(1, 3)$ draw secants which make $\Delta x=1,3,0.1,0.01$, respectively. 
+Calculate the slope of each of these secants and show that the values are 
+approaching the value of the slope of the curve at (1, 3).
+
+3. Find the slope of the curve and the equation of the tangent to
+each of the following curves at the point mentioned. Verify each answer
+as in Ex. 1.
+
+(a) $y=3x^{2};(1,3)$.\ (d) $y=x^{2}+4x-5;(1,0)$.
+
+(b)$y=2x^{2}-5;(2,3)$\. (e) $y=x^3+x^{2};(1,2)$.
+
+(c) $y=x^{3};(1,1)$.\ (f) $y=x^{3}-3x+4;(2,6)$.
+
+4. Find the slope of the curve $y=x^{2}-3x+1$ at any point $x=a$;
+from this find the highest (maximum) or lowest (minimum) point (if
+any), and show in what portions the curve is rising or falling.
+
+5. Draw the following curves, using for greater accuracy the precise
+values of $x$ and $y$ at the highest (maximum) and the lowest (minimum)
+points, and the knowledge of the values of $x$ for which the curve rises or
+falls. The slope of the curve at the point where $x=0$ is also useful in
+$(b), (c), (e), (g)$.
+
+(a) $y=x^{2}+5x+2$.\ (d) $y=x^{4}$.\ (g) $y=2x^3-8x$.
+
+(b) $y=x^3$.\ (e)$y=-x^{2}+3x$.\ (h) $y=x^3-6x+5$.
+
+(c) $y=x^3-3x+4$.\ (f) $y=3+12x-x^{3}$. (i) $y=x^{3}+x^{2}$.
+
+6. Show that the slope of the graph of $y=ax+b$ is always $m=a$,
+(1) geometrically,(2) by the methods of \S 6.
+
+7. Show that the lowest point on $y=x^{2}+px+q$ is the point where
+$x=-p/2,$ (1) by Analytic Geometry, (2) by the methods of \S 6.
+
+8. The normal to a curve at a point ls defined in Analytic Geometry
+to be the perpendicular to the tangent at that point. Its slope $n$ is shown
+to be the negative reciprocal of the slope $m$ of the tangent: $n=-1/m$.
+Find the slope of the normal, and the equation of the normal in Ex. 1;
+in each of the equations under Ex. 8.
+
+9. The slope $m$ of the curve $y=x^{2}$ at any point where $x=a$ is
+$m=2a$. Show that the slope is $+1$ at the point where $a=1/2$. Find the
+points where the slope has the value $-1,2,10$. Note that if the curve
+is drawn by taking different scales on the two axes, the slope no longer
+means the tangent of the angle made with the horizontal axis.
+
+10. Find the points on the following curves where the slope has the
+values assigned to it;
+\begin{center}
+(a) $y=x^{2}-3x+6;(m=1,\ -1,2)$.
+\end{center}
+\begin{center}
+(b) $y=x^3;(m=0.\ +1,\ +6)$.
+\end{center}
+\begin{center}
+(c) $y=x^3-3x+4;(m=9,1)$.
+\end{center}
+
+11. Show that the curve $y=x^{3}-0.03x+2$ has a minimum at 
+$(0.1, 1.998)$ and a maximum at $(-0.1,2.002)$. Draw the curve near the point
+$(0,2)$ on a very large scale.
+
+12. Draw each of the following curves on an appropriate scale; in
+each case show that the peculiar twist of the curve through its maximum
+and minimum would have been overlooked in ordinary plotting by
+points:
+\begin{center}
+(a) $y=48x^{3}-x+1$.
+\end{center}
+[HINT. Use a very small vertical scale and a rather large horizontal
+scale. The slope at $x=0$ is also useful.]
+\begin{center}
+(b) $y=x^3-30x^{2}+297x$.
+\end{center}
+[HINT. Use an exceedingly small vertical scale and a moderate 
+horizontal scale. The slope at $x=10$ is also useful.]
+
+7. Speed.
+
+An important case of rate of change of a quantity is the
+rate at which a body moves,--its speed.
+
+Consider the motion of a body falling from rest under the
+influence of gravity. During the first second it passes over
+16 ft., during the next it passes over 48 ft., during the third
+over 80 ft. In general, if $t$ is the number of seconds, and $s$
+the entire distance it has fallen, $s=16t^{2}$ if the gravitational
+constant $g$ be taken as 32. The graph of this equation (see
+Fig. 6) is a parabola with its vertex at the origin.
+
+The speed, that is the rate of increase of the space passed
+over, is the slope of this curve, {\it i.e}.
+$$
+\lim_{\Delta t \doteq 0}\Delta s/\Delta t.
+$$
+
+This may be seen directly in another way. The {\it average}
+speed for an interval of time $\Delta t$ is found by dividing the 
+difference between the space passed over at the beginning and at
+the end of that interval of time by the difference in time: {\it i.e}.
+the average speed is the difference quotient $\Delta s\div\Delta t$. By the
+speed at a given instant we mean {\it the limit of the average speed}
+over an interval $\Delta t$ beginning or ending at that instant as that
+interval approaches zero, {\it i.e}.
+$$
+\mathrm{speed}=\lim_{\Delta t \doteq 0}\Delta s/\Delta t.
+$$
+%\includegraphics[width=97.03mm,height=73.32mm]{./chap2_images/image002.eps}
+
+Taking the equation $s = 16 t^2$, if $t = 1/2$, $s = 4$. 
+(See point P in Fig. 6).  After a lapse of time $\Delta t$, the
+new values are $t = 1/2 + \Delta t$, and $s = 16 (t = 1/2 + \Delta t)^2$
+(Q in Fig. 6)
+
+Then
+$$
+\Delta s = 16 (t = 1/2 + \Delta t)^2 - 4
+= 16 \Delta t + 16 \overline{\Delta t}^2,
+$$
+$$
+\frac{\Delta t}{\Delta s} = 16 + 16 \Delta t.
+$$
+Whence
+$$
+\mathrm{speed} = \lim_{\Delta t \doteq 0} \frac{\Delta t}{\Delta s} =
+\lim_{\Delta t \doteq 0}(16 + 16 \Delta t) = 16 ;
+$$
+that is, the speed at the end of the first half second is 16 ft. per second. 
+
+Likewise, for any value of $t$, say $t=T$, $s=16T^2$, while for
+$t = T+\Delta t$, $s = 16(T+\Delta t)^2$; hence
+$$
+\mathrm{average\ speed}=\frac{\Delta s}{\Delta t}=\frac{16(T+\Delta t)^{2}-16T^{l}}{\Delta t}=32T+16 \Delta t
+$$
+and 
+$$
+\mathrm{speed} = \lim_{\Delta t \doteq 0} \frac{\Delta t}{\Delta s} =32T.
+$$
+
+Thus, at the end of two seconds, $T=2$, and the speed is $32 \cdot 2=64$, 
+in feet per second.
+
+% \includegraphics[width=96.60mm,height=76.83mm]{./chap2_images/image003.eps}
+
+8. Component Speeds.  Any curve may be regarded as the
+path of a moving point.  If a point $P$ does move along a curve,
+both $x$ and $y$ are fixed when the time $t$ is fixed.  To specify
+the motion completely, we need equations which give the values
+of $x$ and $y$ in terms of $t$. 
+
+The {\it horizontal speed} is the rate of increase of $x$ with
+respect to the time.  This may be thought of as the speed of
+the projection $M$ of $P$ on the $x$-axis.  As shown in \S 7,
+this speed is the limit of the difference quotient
+$\Delta x \div \Delta t$ as $\Delta t \doteq 0$.
+
+Likewise, the {\it vertical speed} is the limit of the difference quotient
+$\Delta y \div \Delta t$ as $\Delta t \doteq 0$.  Since the slope
+$m$ of the curve is the limit of $\Delta y \div \Delta x$ as
+$\Delta x \doteq 0$; and since
+$$
+\frac{\Delta y}{\Delta x} = 
+\frac{\Delta y}{\Delta t} \div \frac{\Delta x}{\Delta t},
+$$
+it follows that
+$$
+ m=({\it vertical\ speed}) \div ({\it horizontal\ speed});
+$$
+that is, the slope of the curve is the ratio of the rate of increase
+of $y$ to the rate of increase of $x$.
+
+9. Continuous Functions.
+In \S\S 4-8, we have supposed that
+the curves used were {\it smooth}. The functions which we have
+bad have all been representable by smooth curves; except
+perhaps at isolated points, to a small change in the value of
+one co\&quot;{o}rdinate, there has been a correspondingly small change
+in the value of the other co\&quot;{o}rdinate. Throughout this text,
+unless the contrary is expressly stated, the functions dealt with
+will be of the same sort. Such functions are called continuous.
+(See \S 10, p. 17.)
+
+The curve $y=1/x$ is continuous except at the point $x=0$; $y=\tan x$
+is continuous except at the points $x=\pm\pi/2, \pm 3\pi/2,$ etc. 
+Such exceptional points occur frequently; we do not discard a curve because of them, but it is understood that any of our results may fail at such points.
+
+\begin{center}
+EXERCISES IV.--SPEED
+\end{center}
+
+1. From the formula $s=16t^{2}$, calculate the values of $s$ when $t=1,2,
+1.1, 1.01, 1.001$. From these values calculate the average speed between
+$t=1$ and $t=2$; between $t=1$ and $t=1.1$ ; between $t=1$ and $t=1.01$;
+between $t=1$ and $t=1.001$. Show that these average speeds are 
+successively nearer to the speed at the instant $t=1$.
+
+2. Calculate as in Ex. 1 the average speed for smaller and smaller 
+intervals of time after $t=2$; and show that these approach the speed at the
+instant $t=2$.
+
+3. A body thrown vertically downwards from any height with an
+original velocity of 100 ft. per second, passes over in time $t$ 
+(in seconds) a distance $s$ (in feet) given by the equation 
+$s=100t+16t^{2}$ (if $g=32$, as in \S 7). Flnd the speed $v$ at the 
+time $t=1$; at the time $t=2$; at the time $t=4$; at the time $t=T$.
+
+4. In Ex. $3$ calculate the average speeds for smaller and smaller 
+intervals of time after $t=0$; and show that they approach the original
+speed $v_{0}=100$. Repeat the calculations for intervals beginning with $t=2$.
+
+5. Calculate the speed of a body at the times indicated in the 
+following possible relations between $s$ and $t$:
+
+(a)$s=t^{2};t=1,2,10,T$. (c) $s=-16t^{2}+160t;t=0,2,5$.
+
+(b) $s=16t^{2}-100t;t=0,2,T$. (d) $s=t^3-3t+4;t=0,1/2,1$.
+
+6. The relation (c) in Ex. 5 holds (approximately, since $g=32$ 
+approximately) for a body thrown upward with an initial speed of 160 ft.
+per second, where $s$ means the distance from the starting point counted
+positive upwards. Draw a graph which represents this relation between
+the values of $s$ and $t$.
+
+In this graph mark the greatest value of $s$. What is the value of $v$ at
+that point? Find {\it exact} values of $s$ and $t$ for this point.
+
+7. A body thrown horizontally with an original speed of 4 ft. per
+second falls in a vertical plane curved path so that the values of its 
+horizontal and its vertical distances from its original position are respectively,
+$x=4t,  y=16t^2$, where $y$ is measured downwards. Show that the vertical
+speed is $32 T$, and that the horizontal speed is 4, at the instant $t=T$.
+Eliminate $t$ to show that the path is the curve $y=x^{2}$.
+
+8. Show by Ex. 7 and \S 8 that the slope of the curve $y=x^{2}$ at the
+point where $t=1$, {\it i.e.} $(4,16)$, is $32 \div 4$, or 8. Write the
+equation of the tangent at that point.
+
+9. Show that the slope of the curve $y=x^{2}$ (Ex. 7) at the point 
+$(a,\ a^{2})$, {\it i.e.} $t=a/4$, is $2a$, from Ex. 7 and \S 8; and also directly by means of \S 6.
+
+10. If a body moves so that its horizontal and its vertical distances
+from the starting point are, respectively, $x=16t^{2}, y=4t$, show that its
+path is the curve $y^{2}=x$; that its horizontal speed and its vertical speed
+are, respectively, $32 T$ and 4, at the instant $t=T$.
+
+11. From Ex. 10 and \S 8 show that the slope of the curve $y^{2}=x$ at the
+point $(16, 4)$, {\it i.e.} when $t=1$, is $4\div 32=1/8$. Write the equation of the tangent at that point.
+
+12. From Ex. 10 and \S 8 show that the slope of the curve $y^{2}=x$ at the
+point where $t=T$ is $4\div(32T)=1/(8T)=1/(2k)$, where $k$ is the value
+of $y$ at the point. Compare this result with that of Ex. 8.
+
+10. Limits. Infinitesimals.
+
+We have been led in what precedes to make use of limits. 
+Thus the tangent to a curve at
+the point $P$ is defined by saying that its slope is the {\it limit} of
+the slope of a variable secant through $P$; the speed at a given
+instant is the {\it limit} of the average speed; the difference of the
+two values of $x, \Delta x$, was thought of as {\it approaching zero}; and
+so on. To make these concepts clear, the following precise
+statements are necessary and desirable.
+
+{\it When the difference between the variable} $x$ {\it and a constant} $a$ {\it becomes and remains less, in absolute value, than} \footnote{
+When dealing with real numbers, absolute value is the value without
+regard to signs so that the absolute value of $-2$ is $2$. A convenient symbol
+for it is two vertical lines; thus $|3-7|=4$.}
+{\it any preassigned positive quantity, however small, then} $a$ {\it is the} limit {\it of the variable} $x$.
+
+We also use the expression `` $x$ approaches $a$ as a limit,'' or,
+more simply, `` $x$ approaches $a.$'' The symbol for limit is $\lim$;
+the symbol for approaches is $\doteq$ thus we may write 
+$\lim x=a$, or $x \doteq a$, or $\lim(a-x)=0$, or $a-x \doteq 0$.
+
+When the limit of a variable is {\it zero}, the variable is called
+an infinitesimal. Thus $a-x$ above is an infinitesimal. The
+difference between any variable and its limit is always an 
+infinitesimal. {\it When a variable} $x$ {\it approaches a limit} $a$, 
+{\it any} oontinuous {\it function} $f(x)$ {\it approaches the limit} $f(a)$: thus, if $y=f(x)$ and $b=f(a)$, we may write
+\begin{center}
+$\displaystyle \lim_{x \doteq a}y=b$, or 
+$\displaystyle \lim_{x \doteq a}f(x)=f(a)$.
+\end{center}
+This condition is the precise definition of continuity at the
+point $x=a$. (See \S 9, p. 14.)
+
+11. Properties of Limits.
+The following properties of limits
+will be assumed as self-evident; some of them have already
+been used in the articles noted below.
+
+THEOREM A. {\it The limit of the sum of two variables is the sum
+of the limits of the two variables}. This is easily extended to the
+case of more than two variables. (Used in \S\S 4, 6, and 7.)
+
+THEOREM B. {\it The limit of the produot of two variables is the
+product of the limits of the variables}. (Used in \S\S 4, 6, and 7.)
+
+THEOREM C. {\it The limit of the quotient of one variable divided
+by another is the quotient of the limits of the variables}, provided
+{\it the limit of the divisor is not zero}. (Used in \S 8.)
+
+The exceptional case in Theorem $\mathrm{C}$ is really the most 
+interesting and important case of all. The exception arises
+because when zero occurs as a denominator, the division 
+cannot be performed. In finding the slope of a curve, we consider
+$\displaystyle \lim(\Delta y/\Delta x)$ {\it as} $\Delta x$ {\it approaches zero}; notice that this is precisely the case ruled out in Theorem C. Again, the speed is
+$\displaystyle \lim(\Delta s/\Delta t)$ {\it as} $\Delta t$ {\it approaches zero}. The limit of any such
+{\it difference quotient} is one of these exceptional cases.
+
+Now it is clear that the slope of a curve (or the speed of an
+object) may have a great variety of values in different cases:
+{\it no one answer is sufficient} for all examples, in the case of the
+limit of a quotient when the denominator approaches zero.
+
+THEOREM D. The {\it limit of the ratio of two infinitesimals
+pends upon the law connecting them; otherwise it is quite inderminate}. 
+Of this the student will see many instances; for
+{\it thee Differential Calculus consists of the consideration of just
+such limits}. In fact, the very reason for the existence of the 
+Differential Calculus is that the exceptional case of Theorem 
+$\mathrm{C}$ is important, and cannot be settled in an offhand manner.
+
+The thing to be noted here is, that, no matter how small two
+quantities may be, their ratio may be either small or large;
+and that, if the two quantities are variables whose limit is
+zero, the limit of their ratio may be either finite, zero, or
+non-existent. In our work with such forms we shall try to
+substitute an equivalent form whose limit can be found.
+Obviously, to say that two variables are vanishing implies
+nothing about the limit of their {\it ratio}.
+
+12. Ratio of an Arc to its Chord.
+
+Another important illustration of a ratio of infinitesimals is 
+the ratio of the chord of
+a curve to its subtended arc:
+$$
+R=\frac{\mathrm{chord}\ PQ}{\mathrm{arc}\ PQ}.
+$$
+% \includegraphics[width=39.24mm,height=33.78mm]{./chap2_images/image004.eps}
+If $Q$ approaches $P$, both the arc
+and the chord approach zero. At
+any stage of the process the arc is
+greater than the chord; but as $Q$
+approaches $P$ this difference 
+diminishes very rapidly, and the
+ratio $R$ approaches 1:
+$$
+\lim_{Q \doteq P}R=
+\lim_{PQ \doteq 0}\frac{\mathrm{chord}\ PQ}{\mathrm{arc}\ PQ}=1.
+$$
+
+This property is self-evident because it amounts to the same
+thing as the definition of the length of the curve; we ordinarily
+think of the length of an are of a curve as the limit of the
+length of an inscribed broken line, as the lengths of the
+segments of the broken line approach zero. Thus, the length
+of circumference of a circle is defined to be the limit of the
+perimeter of an inscribed polygon
+as the lengths of all its sides 
+approach zero. This would not be
+true if the ratio of an arc to its
+chord did not approach $1$.
+\footnote{This point of view is fundamental. See Goursat-Hedrick,
+{\it Mathematical Analysis}, Vol. I, \S 80, p. 161. At some exceptional
+points the property may fail, but such points we always subject to 
+special investigation.}
+% \begin{center}
+% \includegraphics[width=38.90mm,height=39.50mm]{./chap2_images/image005.eps}
+% \end{center}
+
+la. Ratio of the Sine of an
+Angle to the Angle. In a circle,
+the arc $PQ$ and the chord $PQ$ can
+be expressed in terms of the angle
+at the center. Let $\alpha=\angle QOP/2$;
+then $\mathrm{arc}\ PQ=2\alpha\times r$ if $\alpha$ 
+is measured in {\it circular measure} (see
+{\it Tables}, II, F, 3); and the chord $PQ=2r\sin a$, 
+since $r\sin\alpha=AP$.
+
+It follows that
+$$
+\lim_{\alpha \doteq 0}\frac{\mathrm{chord}\ PQ}{\mathrm{arc}\ PQ}=
+\lim_{\alpha \doteq 0}\frac{2r\sin a}{2r\alpha}=
+\lim_{\alpha \doteq 0}\frac{\sin\alpha}{\alpha}=1,
+$$
+hence $\displaystyle \lim_{\alpha \doteq 0}
+\frac{\sin \alpha}{\alpha}=1$,
+for we have just seen that the limit of the ratio of an infinitesimal 
+chord to its arc is 1.
+
+This result is very important in later work; just here it
+serves as a new illustration of the ratio of infinitesimals: 
+{\it the ratio of the sine of an angle to the angle itself 
+(measured in circular measure) approaches 1 as the angle 
+approaches zero}.
+
+14. Infinity.
+Theorem D accounts for the case when the
+numerator as well as the denominator in Theorem C is 
+infinitesimal. There remains the case when the denominator only
+is infinitesimal. {\it A variable whose reciprocal is infinitesimal is
+said to} become infinite as {\it the reciprocal approaches zero}.
+
+Thus $y=1/x$ is a variable whose reciprocal is $x$. As $x$ 
+approaches zero, $y$ is said to become infinite. Notice however
+that $y$ has no value whatever when $x=0$.
+Likewise $y=\sec x$ is a variable whose reciprocal, $\cos x$, is
+infinitesimal as $x$ approaches $\pi/2$; hence we say that $\sec x$ 
+becomes infinite as $x$ approaches $\pi/2$.
+
+In any case, it is clear that a variable which becomes infinite
+becomes and remains larger in absolute value than any 
+preassigned positive number, however large.
+
+The student should carefully notice that infinity is not a
+number; when we say that '` $\sec x$ becomes infinite as $x$ 
+approaches $\pi/2$,
+\footnote{Or, as is stated in short form in many texts, ``$\sec(\pi/2)=\infty.$''}
+we do not mean that $\sec(\pi/2)$ has a value, we
+merely tell what occurs when $x$ approaches $\pi/2$.
+
+\begin{center}
+EXERCISES V.--LIMITS AND INPINITESSIMALS
+\end{center}
+
+1. Imagine a point traversing a line-segment in such fashion that it
+traverses half the segment in the first second, half the remainder in the
+next second, and so on; always half the remainder in the next following
+second. Will it ever traverse the entire line ? Show that the remainder
+after $t$ seconds is $1/2^{t}$, if the total length of the segment is 1. 
+Is this infinitessimal? Why?
+
+2. Show that the distance traversed by the point in Ex. 1 in $t$ seconds
+is $1/2+1/2^{n}+\cdots+1/2^{t}$. Show that this sum is equal to $1-1/2^{t}$; hence show that its limit is 1. Show that in any case the limit of the distance
+traversed ls the total distance, as $t$ increases indefinitely.
+
+3. Show that the limit of $3-x^{2}$ as $x$ approaches zero is 3. State this
+result in the symbols used in \S 10. Draw the graph of $y=3-x^{2}$ and
+show that $y$ approaches 3 as $x$ approaches zero.
+
+4. Evaluate the following limits:
+
+(a)$\displaystyle \lim_{x \doteq 0}(2-6x+3x^{2})$.
+(d)$\displaystyle \lim_{x \doteq 1}\frac{3-2x^{2}}{4+2x^{2}}$. 
+(g)$\displaystyle \lim_{x \doteq 7}\frac{x^{2}-3x+2}{x^{2}+2x+3}$.
+
+(b)$\displaystyle \lim_{x \doteq 1}(2-6x+3x^{2})$.
+(e)$\displaystyle \lim_{x \doteq0}\frac{x_{j}}{1-x}$.
+(h)$\displaystyle \lim_{x \doteq0}\frac{a+bx}{c+dx}$.
+
+(c) $\displaystyle \lim_{x \doteq k}(a+bx+cx^{2})$.
+(f) $\displaystyle \lim_{x \doteq 1}\frac{1-x}{x}$. 
+(i) $\displaystyle \lim_{x \doteq 0}\frac{a+bx+cx^{2}}{m+nx+lx^{2}}$.
+
+5. If the numerator and denominator of a fraction contain a common
+factor, that factor may be canceled in finding a limit, since the value of
+the fraction which we use is not changed. Evaluate before and after
+canceling a common factor:
+
+(a) $\displaystyle \lim_{x \doteq 1}\frac{(x+2)(x+1)}{(2x+3)(x+1)}$.
+(b) $\displaystyle \lim_{x \doteq 0}\frac{x(x+2)}{(x+1)(x+2)}$.
+
+Evaluate after (not before) removing a common factor:
+
+(c) $\displaystyle \lim_{x \doteq 0}\frac{x^{2}}{x}$.
+(d) $\displaystyle \lim_{x \doteq 1}\frac{x^{2}-3x+2}{x^{2}-1}$.
+(e) $\displaystyle \lim_{x \doteq 1}\frac{(x+2)(x-1)}{(2x+3)(x-1)}$.
+
+(f) $\displaystyle \lim_{x \doteq 1}\frac{\sqrt{x-1}}{x-1}$
+(g) $\lim_{x \doteq  0}\frac{x^{2}(x+1)^{2}}{x^{3}+2x^{2}}$
+(h) $\displaystyle \lim_{x \doteq  0}\frac{x^{n}}{x}=\left\{\begin{array}{l}
+0,n&gt;1\\ \mathrm{l},n=\mathrm{l} \end{array}\right.$
+
+6. Show that
+$$
+\lim_{x \doteq \infty}\frac{2x^{2}+3}{x^{2}+4x+b}=2.
+$$
+[HINT. Divide numerator and denominator by $x^{2}$; then such 
+terms as $3/x^2$ approach zero as $x$ becomes infinite.]
+
+7. Evaluate:
+
+(a) $\displaystyle \lim_{x \doteq \infty}\frac{2x+1}{3x+2}$.
+(b) $\displaystyle \lim_{x \doteq \infty}\frac{2x^{2}-4}{3x^{2}+2}$.
+(c) $\displaystyle \lim_{x \doteq \infty}\frac{ax+b}{mx+n}$.
+
+(d) $\displaystyle \lim_{x \doteq \infty}\frac{x}{\sqrt{1+x^{2}}}$.
+(e) $\displaystyle \lim_{x \doteq \infty}\frac{\sqrt{1+x^{2}}}{\sqrt{x^{2}-1}}$ .
+(f) $\displaystyle \lim_{x \doteq \infty}\frac{\sqrt{ax^2+bx+c}}{mx+n}$.
+
+8. Let $0$ be the center of a circle of radius $r=OB$, and let 
+$a=\angle {\it COB}$ be an angle at the center. Let $BT$ be
+perpendicular to $OB$, and let $BF$ be perpendicular to
+$OC$. Show that $OF$ approaches $OC$ as $\alpha$ 
+approaches zero; likewise arc $OB \doteq 0$, arc $DB \doteq 0$,
+and $FC \doteq 0$, as $\alpha \doteq 0$.
+
+%\begin{center}
+%\includegraphics[width=28.15mm,height=20.95mm]{./chap2_images/image006.eps}
+%\end{center}
+
+9. In the figure of Ex. 8, show that the 
+obvious geometric inequality $FB&lt; \mathrm{arc} CB&lt;BT$
+is equivalent to $ r\sin\alpha&lt;r\cdot\alpha&lt;r\tan\alpha$, if $\alpha$ is measured in circular
+measure. Hence show that $\alpha/\sin\alpha$ lies between 1 and 
+$1/\cos\alpha$, and therefore that $\displaystyle \lim(\alpha/\sin\alpha)=1$ 
+as $\alpha \doteq 0$. (Verification of. \S l3.)
+
+10. In the flgure of Ex. 8, show that
+
+$\displaystyle \lim{\alpha \doteq 0} \frac{FB}{r}=0;
+\lim_{\alpha \doteq 0} \frac{OF}{r}=1;
+\lim_{\alpha \doteq 0} \frac{BT}{r}=0;
+\lim_{\alpha \doteq 0} \frac{FC}{r}=0;
+\lim_{\alpha \doteq 0} \frac{\mathrm{arc}\ CB}{r}=0$.
+
+11. Show that the following quantities become infinite as the 
+independent variable approaches the value specified: in $(a)$ and $(b)$ draw the graph.
+
+(a) $\displaystyle \lim_{x \doteq 0}\frac{1}{x^{2}}$. 
+(b) $\displaystyle \lim_{x \doteq 1}\frac{x+2}{x-1}$
+
+(c) $\displaystyle \lim_{x \doteq 0}\frac{r}{FC}$, (Ex. 8). 
+(d) $\displaystyle \lim_{x \doteq 0}\frac{f}{BT}$, (Ex. 8). 
+
+(e) $\displaystyle \lim_{x \doteq 0}\frac{x^n}{x}, (n&lt;1)$.
+(f) $\displaystyle \lim_{x \doteq 2}\frac{2x+3}{\sqrt{x^{2}-3x+2}}$.
+
+12. As the chord of a circle approaches zero, which of the following
+ratios has a finite limit, which is infinitesimal, and which is becoming
+infinite: the chord to its arc; the radius to the chord; the sector of the
+arc to the triangle cut off by the chord; the area of the circle to the 
+sector; the chord of twice the arc to the chord of thrice the arc; the 
+radius of the circle to the chord of an arc a thousand times the given arc ?
+
+13. Is the sum of two infinitesimals itself infinitesimal ? Is the 
+difference ? Is the product Is the quotient ? Is a constant times an
+infinitesimal an infinitesimal?
+
+14. If to each of two integers an infinitesimal is added, show that the
+ratio of these sums differs from that of the integers by an infinitesimal.
+[See Ex. 4 $(h).$]
+
+15. Show that the graph of $y=f(x)$ has a vertical asymptote if $f(x)$
+becomes infinite as $x=a$. Illustrate this by drawing the following graphs:
+
+(a) $y=\displaystyle \frac{3x+2}{x-2}$.
+(c) $y=\displaystyle \frac{1}{1-\cos x}$.
+(e) $y=\displaystyle \frac{1}{\sqrt{1-x^{2}}}$.
+
+(b) $y=\displaystyle \frac{2x-1}{(x+1)(x-b)}$.
+(d) $y=\displaystyle \frac{e^{x}+e^{-x}}{e^{x}-e^{-x}}$.
+(f) $y=\displaystyle \frac{ax+b}{cx+d}$.
+
+15. Derivatives. While such illustrations as those in \S 12
+and Exercises V, above, are interesting and reasonably important, 
+by far the most important cases of the ratio of two infinitesimals 
+are those of the type studied in \S\S 4-8, in which each
+of the infinitesimals is the difference of two values of a variable, 
+such as $\Delta y/\Delta x$ or $\Delta s/\Delta t$. Such a difference q
+quotient $\Delta y/\Delta x$ of $y$ with respect to $x$ evidently 
+represents the {\bf average}
+rate of increase of $y$ with respect to $x$ in the interval $\Delta x$; 
+if $x$ represents time and $y$ distance, then $\Delta y/\Delta x$ is the 
+average speed over the interval $\Delta x$ (\S 7, p. 13); 
+if $y=f(x)$ is thought of as a curve, then $\Delta y/\Delta x$ is the 
+slope of a secant or the average rate of rise of the curve in the 
+interval $\Delta x$ (\S 4, p. 6).
+
+The {\it limit} obtained in such cases represents the {\bf instantaneous}
+{\it rate of increase} of one variable with respect to the other, --
+this may be tho slope of a curve, or the speed of a moving
+object, or some other {\it rate}, depending upon the nature of the
+problem in which it arises.
+
+In general, {\it the limit of the quotient} $\Delta y/\Delta x$ 
+{\it of two infinitesimal differences is called} the derivative of 
+$y$ with respect to $x$; {\it it is represented by the symbol} $dy/dx$:
+$$
+\frac{dy}{dx} \equiv \mathrm{derivative\ of\ y\ with\ respect\ to\ x} =
+\lim_{\Delta x \doteq 0} \frac{\Delta y}{\Delta x}.
+$$
+Henceforth we shall use this new symbol $dy/dx$ or other
+convenient abbreviations; 
+\footnote{Often read `` {\it the} $x$ derivative of $y.$'' Other names sometimes used are
+{\it differential coefficient}, and {\it derived function}. 
+Other convenient notations
+often used are $D_{x}y, y_{x}, y',\dot{y}$ ; the last two are not safe 
+unless it is otherwise
+clear what the independent variable is.} 
+but the student must not forget the
+real meaning: {\it slope}, in the case of curve; 
+{\it speed}, in the case of
+motion; some other tangible concept in any new problem
+which we may undertake; {\it in every case the rate of increase of}
+$y$ {\it with respect to} $x$.
+
+Any mathematical formulas we obtain will apply in any of
+these cases; we shall use the letters $x$ and $y$, the letters $s$ and
+$t$, and other suggestive combinations; but the student should
+remember that any formula written in $x$ and $y$ also holds true,
+for example, with the letters $s$ and $t$, or for any other pair of
+letters.
+
+16. Formula for Derivatives. If we are to find the value of
+a derivative, as in \S\S 4-7, we must have given one of the 
+variables $y$ as a function of the other $x$:
+\begin{center}
+(1)   $y=f(x)$.
+\end{center}
+If we think of (1) as a curve, we may, as in \S 4, take any
+point $P$ whose co\&quot;{o}rdinates are $x$ and $y$, and join it by a secant
+$PQ$ to any other point $Q$, whose co\&quot;{o}rdinates are 
+$x+\Delta x, y+\Delta y$.
+Here $x$ aud $y$ represent fixed values
+of $x$ and $y$; this will prove more 
+convenient than to use new letters
+each time, as we did in'\S\S 4-7.
+
+Since $P$ lies on the curve (1), its
+co\&quot;{o}rdinates $(x,\ y)$ satisfy the 
+equation (1), $y=f(x)$. Since $Q$ lies on
+(1), $x+\Delta x$ and $y+\Delta y$ satisfy the
+same equation; hence we must have
+\begin{center}
+(2)   $y+\Delta y=f(x+\Delta x)$.
+\end{center}
+Subtracting (1) from (2) we get
+\begin{center}
+(3)   $\Delta y=f(x+\Delta x)-f(x)$;
+\end{center}
+whence the {\it difference quotient} is
+\begin{center}
+(4) $\displaystyle \frac{\Delta y}{\Delta x}=
+\frac{f(x+\Delta x)-f(x)}{\Delta x}=
+{\it average\ slope\ over\ PM}$,
+\end{center}
+and therefore the {\it derivative} is
+$$
+\frac{dy}{dx} =
+\lim_{\Delta x \doteq 0} \frac{\delta y}{\Delta x} \equiv
+\lim_{\Delta x \doteq 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}=
+{\it slope\ at\ P}
+$$
+\footnote{Instead of {\it slope}, read {\it speed} in case the problem 
+deals with a motion, as in \S 7. In general, $\Delta y/\Delta x$ is the
+{\it average} rate of increase, and $dy/dx$ is the
+{\it instantaneous} rate.}
+% \includegraphics[width=37.21mm,height=26.46mm]{./chap2_images/image007.eps}
+
+This formula is often convenient; we shall apply it at once.
+
+17. Rule for Differentiation.
+
+The process of finding a derivative is called differentiation. 
+To apply formula (5) of \S 16:
+
+{\it (A) Find} $(y+\Delta y)$ {\it by substituting} $(x+\Delta x)$ 
+{\it for} $x$ {\it in the given function or equation}; this gives 
+$y+\Delta y=f(x+\Delta x)$.
+
+{\it (B) Subtract} $y$ {\it from} $y+\Delta y$; this gives $\Delta y=f(x+\Delta x)-f(x)$.
+
+{\it (C) Divide} $\Delta y$ {\it by} $\Delta x$ {\it to find the difference quotient} $\Delta|J/\Delta x$; {\it simplify this result}.
+
+{\it (D) Find the} {\bf limit} {\it of} $\Delta y/\Delta x$ {\it as} 
+$\Delta x$ {\it approaches zero}; this
+result is the {\bf derivative}, $dy/dx$.
+
+{\it Example} 1. Given $y=f(x)\equiv x^{2}$, to flnd $dy/dx$.
+
+$(A) f(x+\Delta x)=(x+\Delta x)^{2}$.
+
+$(B) \Delta y=f(x+\Delta x)-f(x)=(x+\Delta x)^{2}-x^{2}=2x\Delta x+\overline{\Delta x}^{2}$.
+
+$(C) \Delta y/\Delta x=(2x\Delta x+\overline{\Delta x}^{2})+\Delta x=2x+\Delta x$.
+
+$(D) dy/dx = \displaystyle \lim_{\Delta x \doteq 0}\Delta y/\Delta x=\lim_{\Delta x \doteq 0}(2x+\Delta x)=2x$.
+
+Compare this work and the answer with the work of \S 4, p. 6.
+
+{\it Example} 2. Given $y=f(x)\equiv\theta-12x+7$, to flnd $dy/k$.
+
+$(A) f(x+\Delta x) =(x+\Delta x)^3-12(x+\Delta x)+7$.
+
+$(B) \Delta\nu=f(x+\Delta x)-f(x)=3x^{2}\Delta x+3x\overline{\Delta x}^{2}+\overline{\Delta x}^{3}-12\Delta x$.
+
+$(C) \Delta y/\Delta x=3x^{2}+3x\Delta x+\overline{\Delta x}^{2}-12$.
+
+$(D) dy/dx=\displaystyle \lim_{\Delta x \doteq 0}\Delta y/\Delta x=
+\lim_{\Delta x \doteq 0}(3x^{2}+3x\Delta x+\overline{\Delta x}^{2}-12)=
+3x^{2}-12$
+
+Compare thls work and the answer with the work of Example 3, \S 6.
+
+{\it Example} 3. Given $y=f(x)\equiv 1/x^{2}$, to flnd $dy/dx$.
+
+$(A) f(x+\Delta x)=\frac{1}{(x+\Delta x)^{2}}$ .
+
+$(B) \displaystyle \Delta y=f(x+\Delta x)-f(x)=
+\frac{1}{(x+\Delta x)^{2}}-\frac{1}{x^{2}}=
+-\frac{2x\Delta x+\overline{\Delta x}^2}{x^{2}(x+\Delta x)^{2}}\cdot$
+
+$(C) \displaystyle \Delta y/\Delta x=-\frac{2x+\Delta x}{x^{2}(x+\Delta x)^{2}}\cdot$
+
+$(D) dy/dx=\lim_{\Delta x \doteq 0}\displaystyle \frac{\Delta y}{\Delta x}=
+\lim_{\Delta x \doteq 0}\left[-\displaystyle \frac{2x+\Delta x}
+{x^{2}(x+\Delta x)^{2}}\right]=
+-\frac{2x}{x^{4}}=-\frac{2}{x^{3}}\cdot$
+
+{\it Example} 4. Given $y=f(x)\equiv\sqrt{x}$, to flnd $dy/dx$, or $ df(x)/d\alpha$
+
+$(A) f(x+\Delta x)=\sqrt{x+\Delta x}$.
+
+$(B) \Delta y=f(x+\Delta x)-f(x)=\sqrt{x+\Delta x}-\sqrt{x}$.
+
+(C) $\displaystyle \frac{\Delta y}{\Delta x}=
+\frac{\sqrt{x+\Delta x}-\sqrt{x}}{\Delta x}
+=\frac{\sqrt{x+\Delta x}-\sqrt{x}}{\Delta x} \cdot 
+\displaystyle \frac{\sqrt{x+\Delta x}+\sqrt{x}}{\sqrt{x+\Delta x}+\sqrt{x}}$
+$$
+=\frac{1}{\sqrt{x+\Delta x}+\sqrt{x}}
+$$
+$(D) \displaystyle \frac{dy}{dx}=
+\lim_{\Delta x \doteq 0}\frac{\Delta y}{\Delta x}=
+\lim_{\Delta x \doteq 0}\frac{1}{\sqrt{x+\Delta x}+\sqrt{}\overline{x}}=
+\frac{1}{2\sqrt{x}}$.
+
+(Compare Ex. 11, p. 10.)
+
+{\it Example} 6. Given $y=f(x)\equiv x^{7}$, to flnd $df(x)/dx$.
+
+$(A) f(x+\Delta x)=(x+\Delta x)^{7}=x^{7}+7x^{0}\Delta x+$( $\mathrm{terms}$ with a factor $\overline{\Delta x}^{2}$).
+
+$(B) \Delta\nu=f(x+\Delta x)-f(x)=7x^{6}\Delta x+$( $\mathrm{terms}$ with a factor $\overline{\Delta}x^{2}$).
+
+$(C) \Delta y/\Delta x=7x^6+$( $\mathrm{t}\epsilon \mathrm{ms}$ with a factor $\overline{\Delta}x^{2}$).
+
+$(D) dy/dx=\displaystyle \lim_{\Delta x \doteq 0}\Delta y/\Delta x=\lim_{Delta x \doteq 0}$[ $7x^6+($ terms with a factor $\Delta x)$] $=7x^6$.
+
+\begin{center}
+EXERCISES VI.--FORMAL DIFFERENTIATION
+\end{center}
+
+1. Find the derivative of $y=x^{3}$ with respect to $x$. [Compare Ex. 8
+(c), p. 11.] Write the equation of the tangent at the point $(2, 8)$ to the
+curve $y=x^3$.
+
+2. Find the derivatives of the following functions with respect to $x$:
+
+(a)$x^{2}-3x+4$.\ (b) $x^3-6x+7$. (c) $x^4+5$.
+
+(d) $x^{4}+3x^{2}-2$.\ (e) $x^3+2x^{2}-4$.\ (f) $x^{4}-3x^3+6x$.
+
+(g) $\displaystyle \frac{1}{x^{2}}$.\ 
+(h) $\displaystyle \frac{1}{x+1}$. 
+(i) $\displaystyle \frac{1}{2x-3}$.
+
+(j) $\sqrt{x+1}$.\
+(k) $\displaystyle \frac{x}{x+1}$.\ 
+(l) $\displaystyle \frac{2x+3}{x-2}$
+
+3. Find the equation of the tangent and the equation of the normal
+to the curve $y=1/x$ at the point where $x=2$. (See Ex. 8, p. 11.)
+
+4. Find the values of x for which the curve $y=x^{3}-16x+1$ rises
+and those for which it falls; find the highest point (maximum) and the
+lowest point (minimum). Draw the graph accurately.
+
+5. Draw accurate graphs for the following curves:
+
+(a)$y=x^3-18x+3$. (c) $y=x^{4}-32x$.
+
+(b)$y=x^{3}+3x^{2}$.\ (d)$y=x^{4}-18x^{2}$.
+
+6. Determine the speed of a body which moves so that
+$$
+s=16t^{2}+10t+5.
+$$
+[A body thrown down from a height with initial speed 10 ft. per second 
+moves in this way approximately, if s is measured downward from a
+mark 5 ft. above the starting point.]
+
+7. If a body moves so that its horizontal and its vertical distances
+from a point are, respectively, $x=10t, y=-16t^{2}+10t$, flnd its 
+horizontal speed and its vertical speed. Show that the path is
+$$
+y=-16x^{2}/100+x,
+$$
+and that the slope of this path is the ratio of the vertioal speed to the
+horizontal speed. [These equations represent, approximately, the motion
+of an object thrown upward at an angle of $45^{\mathrm{o}}$ with a speed $10\sqrt{}\overline{2}.$]
+
+8. A stone is dropped into still water. The circumference $\mathrm{c}$ of the
+growing circular waves thus made, as a function of the radius $r$, is $c=2\pi r$.
+
+Show that $d\mathrm{c}/dr=2\pi, i.e$. that the circumference changes 
+$2 \pi$ times as fast as the radius.
+
+Let $A$ be the area of the circle. Show that $dA/dr=2\pi r$; {\it i.e}. the
+rate at which the area is changing compared to the radius is numerically
+equal to the circumference.
+
+9. Determine the rates of change of the following variables:
+(a) The surface of a sphere compared with its radius, as the sphere
+expands.
+(b) The volume of a cube compaoed with its edge, as the cube enlarges.
+(c) The volume of a right circular cone compared with the radius of
+its base (the height being flxed), as the base spreads out.
+
+10. If a man 6 ft. tall is at a distance $x$ from the base of an arc light
+10 ft. high, and if the length of his shadow is $s$, show that $s/6=x/4$, or
+$s=3x/2$. Find the rate $(ds/dx)$ at which the length $s$ of his shadow
+increases as compared with hls distance $x$ from the lamp base.
+
+11. The {\it specific heat} of a substance ({\it e.g}. water) is the amount of
+heat required to raise the temperature of a unit volume of that substance $1^{\text{o}}$. (Centigrade). This amount is known to change for the same substance for different temperatures. The average speciflc heat between two 
+temperatures is the ratio of the quantity of heat $\Delta H$ consumed in 
+raising the temperature divided by the change $\Delta t$ in the temperature; show that the actual specific heat at a given temperature is $dH/dt$.
+
+12. The {\it coefflcient of expansion} of a solid substance is the amount a
+bar of that substance 1 ft. long will expand when the temperature changes
+$1^{\mathrm{o}}$. Express the average coefflcient of expansion, and show that 
+the coefficient of expansion at any given temperature is $dl/dt$, if the bar 
+is precisely 1 ft. long at that temperature. (See also Ex. 12, p. 145.)
+\end{document}

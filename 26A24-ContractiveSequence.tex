@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContractiveSequence}
+\pmcreated{2014-11-30 16:45:13}
+\pmmodified{2014-11-30 16:45:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{contractive sequence}
+\pmrecord{13}{88151}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The sequence 
+\begin{align}
+a_0,a_1,a_2, \ldots
+\end{align}
+in a metric space $(X, d)$ is called {\it contractive}, iff there is a real number 
+$r \in (0,1)$ such that for any positive integer $n$ the inequality
+\begin{align}
+d(a_n, a_{n+1}) \leqq r\!\cdot\!d(a_{n-1}, a_n)
+\end{align}
+is true.    \\
+
+We will prove the 
+
+\textbf{Theorem.}\, If the sequence (1) is contractive, it is 
+a Cauchy sequence.
+
+{\it Proof.}\, Suppose that the sequence (1) is 
+contractive.  Let $\varepsilon$ be an arbitrary positive number and 
+$m, n$ some positive integers from which e.g. $n$ is greater than
+$m,$ $n = m+\delta$.
+
+Using repeatedly the triangle inequality we get
+\begin{align*}
+d(a_m, a_n) &\leqq d(a_m, a_{m+1})+d(a_{m+1}, a_{m+\delta})\\
+            &\leqq d(a_m, a_{m+1})+d(a_{m+1}, a_{m+2})+d(a_{m+2}, a_{m+\delta})\\
+            & \ldots\\
+            &\leqq d(a_m, a_{m+1})+d(a_{m+1}, a_{m+2})+
+            d(a_{m+2}, a_{m+3})+\ldots+d(a_{n-1}, a_n).           
+
+\end{align*}
+
+Now the contractiveness gives the inequalities
+$$d(a_1, a_2) \leqq rd(a_0, a_1),$$
+$$d(a_2, a_3) \leqq rd(a_1, a_2) \leqq r^2d(a_0, a_1),$$
+$$d(a_3, a_4) \leqq rd(a_2, a_3) \leqq r^3d(a_0, a_1),$$
+$$\ldots$$
+$$d(a_m, a_{m+1}) \leqq r^md(a_0, a_1),$$
+$$\ldots$$
+$$d(a_{n-1}, a_n}) \leqq r^{n-1}d(a_0, a_1),$$
+by which we obtain the estimation
+\begin{align*}
+d(a_m, a_n) &\leqq d(a_0, a_1)(r^m+r^{m+1}+\ldots+r^{m+\delta-1})\\
+  & = d(a_0, a_1)r^m(1+r+r^2+\ldots+r^{\delta-1})\\
+  & = d(a_0, a_1)r^m\frac{1-r^\delta}{1-r}\\
+  & < d(a_0, a_1)\frac{r^m}{1-r}.
+\end{align*}
+The last expression tends to zero as $m \to \infty$.\, Thus 
+there exists a positive number $M$ such that  
+$$d(a_m, a_n) < \varepsilon \mbox{  for each } m > M$$
+when $n > m$.\, Consequently, (1) is a Cauchy sequence.\\
+
+\textbf{Remark.}\; The assertion of the Theorem cannot be 
+reversed.  E.g. in the usual metric of $\mathbb{R}$, the 
+sequence\, $1,\frac{1}{2},\frac{1}{3},\ldots$\, converges to 0 
+and hence is Cauchy, but for it the ratio
+$$|a_n-a_{n+1}|:|a_{n-1}-a_n}| \;=\; 1-\frac{2}{n+1}$$
+tends to 1 as\, $n \to \infty$.\\
+
+Cf. \PMlinkname{sequences of bounded variation}{SequenceOfBoundedVariation}.
+
+
+\begin{thebibliography}{8}
+\bibitem{loya}{\sc Paul Loya}: {\it Amazing and Aesthetic
+Aspects of Analysis: On the incredible infinite}.\, A Course in Undergraduate Analysis, Fall 2006.\; 
+Available in http://www.math.binghamton.edu/dennis/478.f07/EleAna.pdf
+\end{thebibliography} 
+
+\end{document}

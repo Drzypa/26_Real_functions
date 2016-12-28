@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfImplicitFunctionTheorem}
+\pmcreated{2013-03-22 13:31:23}
+\pmmodified{2013-03-22 13:31:23}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of implicit function theorem}
+\pmrecord{8}{34113}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newcommand{\CC}{\mathcal C}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+We state the Theorem with a different notation:
+\begin{theorem}
+Let $\Omega$ be an open subset of $\R^n \times \R^m$ 
+and let $f\in \CC^1(\Omega,\R^m)$. Let $(x_0,y_0)\in \Omega \subset \R^n\times\R^m$.
+If the matrix $D_y f(x_0,y_0)$ defined by
+\[
+D_y f(x_0,y_0) = \left( \frac{\partial f_j}{\partial y_k}(x_0,y_0)\right)_{j,k}
+\quad j=1,\ldots,m\quad k=1,\ldots,m
+\]
+is invertible, then there exists a neighbourhood $U\subset \R^n$ of $x_0$,
+a neighbourhood $V\subset \R^m$ of $y_0$
+and a function $g \in \CC^1(U,V)$ such that
+\[
+  f(x,y) = f(x_0,y_0) \Leftrightarrow y=g(x) \qquad \forall (x,y) \in U\times V.
+\]
+
+Moreover
+\[
+  Dg(x) = - (D_y f(x,g(x))) ^ {-1} D_x f(x,g(x)).
+\]
+\end{theorem}
+
+\begin{proof}
+
+Consider the function $F\in \CC^1(\Omega, \R^n \times \R^m)$ defined by
+\[
+  F(x,y)=(x,f(x,y)).
+\]
+One finds that
+\[
+  DF(x,y) = 
+\left(\begin{array}{c|c}
+I_m & 0 \\ \hline
+D_x f & D_y f \\
+\end{array}\right).
+\]
+
+Being $D_y f(x_0,y_0)$ invertible, $DF(x_0,y_0)$ is invertible too. 
+Applying the inverse function Theorem to $F$ 
+we find that there exist a neighbourhood $U$ of $x_0$ and $V$ of $y_0$ and 
+a function $G\in C^1(U\times V,\R^{n+m})$ such that $F(G(x,y))=(x,y)$ 
+for all $(x,y)\in U\times V$. Letting $G(x,y)=(G_1(x,y),G_2(x,y))$ 
+(so that $G_1\colon V\times W\to\R^n$, $G_2\colon V\times W\to \R^m$)
+we hence have
+\[
+  (x,y) = F(G_1(x,y),G_2(x,y)) = (G_1(x,y), f(G_1(x,y),G_2(x,y)))
+\]
+and hence $x=G_1(x,y)$ and $y=f(G_1(x,y),G_2(x,y))=f(x,G_2(x,y))$.
+So we only have to set $g(x)=G_2(x,f(x_0,y_0))$ to obtain
+\[
+  f(x,g(x)) = f(x_0,y_0),\quad \forall x\in U.
+\]
+Differentiating with respect to $x$ we obtain 
+\[
+  D_x f(x,g(x)) + D_y f(x,g(x)) Dg(x) = 0
+\]
+which gives the desired formula for the computation of $Dg$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

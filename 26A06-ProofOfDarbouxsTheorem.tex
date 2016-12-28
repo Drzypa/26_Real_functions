@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDarbouxsTheorem}
+\pmcreated{2013-03-22 12:45:04}
+\pmmodified{2013-03-22 12:45:04}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of Darboux's theorem}
+\pmrecord{7}{33056}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\begin{document}
+Without loss of generality we migth and shall assume $f'_{+}(a)>t>f'_{-}(b)$. Let $g(x):=f(x)-tx$.  
+Then $g'(x)=f'(x)-t$, $g'_{+}(a)>0>g'_{-}(b)$, and we wish to find a zero of $g'$.
+
+Since $g$ is a continuous function on $[a,b]$, it attains a maximum on $[a,b]$.  
+Since $g'_+(a)>0$ and $g'_+(b)<0$ \PMlinkname{Fermat's theorem}{FermatsTheoremStationaryPoints} states that 
+neither $a$ nor $b$ can be points where $f$ has a local maximum. 
+So a maximum is attained at some $c \in (a,b)$.  But then $g'(c)=0$ again by \PMlinkname{Fermat's theorem}{FermatsTheoremStationaryPoints}.
+%%%%%
+%%%%%
+\end{document}

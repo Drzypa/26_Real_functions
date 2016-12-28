@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ImproperLimits}
+\pmcreated{2013-03-22 14:40:45}
+\pmmodified{2013-03-22 14:40:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{improper limits}
+\pmrecord{24}{36283}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmsynonym{infinite limits}{ImproperLimits}
+\pmsynonym{improper limit}{ImproperLimits}
+\pmrelated{LHpitalsRule}
+\pmrelated{ExtendedRealNumbers}
+\pmrelated{LimitRulesOfFunctions}
+\pmrelated{IntegratingTanXOver0fracpi2}
+\pmrelated{IndeterminateForm}
+\pmrelated{ExampleOfJumpDiscontinuity}
+\pmrelated{ListOfCommonLimits}
+\pmrelated{LimitsOfNaturalLogarithm}
+\pmrelated{SecondDerivativeAsSimpleLimit}
+\pmrelated{AngleBetweenTwoLines}
+\pmdefines{limit at infinity}
+\pmdefines{mnemonic of infinite}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In calculus there is often used such expressions as ``the limit of a function is infinite'', and one may write for instance that 
+$$\lim_{x \to 0}\frac{1}{x^2} \;=\; \infty.$$
+Such ``limits'' are actually \PMlinkescapetext{extensions} of the limit notion, and can be defined exactly.\, They are called {\em improper limits}.
+
+
+\textbf{Definition.}\, Let the real function $f$ be defined in a neighbourhood of the point $x_0$. 
+            $$\lim_{x \to x_0}f(x) \;=\; \infty$$
+iff for every real number $M$ there exists a number $\delta_M$ such that
+                     $$f(x) \;>\; M$$
+as soon as
+              $$0 \;<\; |x\!-\!x_0| \;<\; \delta_M.$$\\
+In a similar way we can define the improper limit $-\infty$ of a real function.\, The definition may be extended also to the cases\, $x \to \pm\infty$, when one speaks of \emph{limits at infinity}.\\
+
+
+\textbf{Note 1.}\, If\, $\lim_{x \to x_0}f(x) \,=\, \infty$\, and\, 
+$\lim_{x \to x_0}g(x) \,=\, a > 0$,\, then we have 
+          $$\lim_{x \to x_0}f(x)g(x) \;=\; \infty.$$
+Hence we can say that\, $\infty\cdot a = \infty$\, when\, $a > 0$.\, There are some other \PMlinkescapetext{comparable} ``mnemonics of infinite'' (cf. the extended real numbers):
+$$\infty\cdot a \;=\; -\infty \qquad(a \;<\; 0)$$
+$$\pm\infty+a \;=\; \pm\infty$$
+$$\frac{a}{\pm\infty} \;=\; 0$$
+$$\infty+\infty \;=\; \infty$$
+$$\infty\cdot\infty \;=\; \infty$$
+$$-\infty\cdot\infty \;=\; -\infty$$
+
+
+On the contrary, there exist no mnemonics for the cases
+   $$\infty\cdot0,\,\, \infty-\infty,\,\, \frac{\infty}{\infty},\,\, 
+     \frac{0}{0},\,\, 0^0,\,\, \infty^0,\,\, 1^\infty;$$
+they are \PMlinkescapetext{indefinite} and depend on the instance (cf. the indeterminate form).\\
+
+
+\textbf{Note 2.}\, In the complex plane, the expression
+          $$\lim_{z \to z_0}f(z) \;=\; \infty$$
+means that\, $\displaystyle \lim_{z \to z_0}|f(z)| \,=\, \infty$.
+%%%%%
+%%%%%
+\end{document}

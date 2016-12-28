@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeierstrassProductInequality}
+\pmcreated{2013-03-22 13:58:23}
+\pmmodified{2013-03-22 13:58:23}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Weierstrass product inequality}
+\pmrecord{5}{34744}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+%26D05
+\PMlinkescapeword{fixed}
+For any finite family $(a_i)_{i\in I}$ of real numbers in the interval
+$[0,1]$, we have
+$$\prod_i(1-a_i)\ge 1-\sum_ia_i\;.$$
+\textbf{Proof: } Write
+$$f=\prod_i(1-a_i)+\sum_ia_i\;.$$
+For any $k\in I$, and any fixed values of the $a_i$ for $i\ne k$,
+$f$ is a polynomial of the first degree in $a_k$.
+Consequently $f$ is minimal either at $a_k=0$ or $a_k=1$.
+That brings us down to two cases: all the $a_i$ are zero, or at least
+one of them is $1$. But in both cases it is clear that $f\ge 1$, QED.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegrationOfsqrtx21}
+\pmcreated{2013-03-22 18:06:58}
+\pmmodified{2013-03-22 18:06:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integration of $\sqrt{x^2+1}$}
+\pmrecord{7}{40662}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmsynonym{antiderivative of $\sqrt{x^2+1}$}{IntegrationOfsqrtx21}
+\pmrelated{IntegrationByParts}
+\pmrelated{AreaFunctions}
+\pmrelated{DerivativeOfInverseFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arcoth}{arcoth}
+\begin{document}
+The integral
+$$I \,:=\, \int\!\sqrt{x^2\!+\!1}\;dx$$
+can be found by using the first \PMlinkname{Euler's substitution}{EulersSubstitutionsForIntegration} 
+$$\sqrt{x^2\!+\!1} \;:=\; -x\!+\!t,$$
+but another possibility is to use \PMlinkname{partial integration}{ASpecialCaseOfPartialIntegration} if one knows the integral $\int\!\frac{dx}{\sqrt{x^2+1}}$.\, The corresponding may be said of the more general
+$$\int\!\sqrt{x^2\!+\!c}\;dx.$$
+
+We think that the integrand of $I$ has the other factor 1 and integrate partially:
+$$I \,=\, \int\!1\cdot\sqrt{x^2\!+\!1}\;dx \,=\, x\sqrt{x^2\!+\!1}-\!\int\!x\cdot\frac{1}{2\sqrt{x^2\!+\!1}}\cdot2x\,dx+C' 
+\,=\, x\sqrt{x^2\!+\!1}-\!\int\!\frac{x^2}{\sqrt{x^2\!+\!1}}\,dx+C'.$$
+Writing the numerator as $(x^2\!+\!1)\!-\!1$ and dividing its minuend and subtrahend separately, we can write
+$$ I \,=\, x\sqrt{x^2\!+\!1}-\!\left(\!\int\!\sqrt{x^2\!+\!1}\,dx-\!\int\!\frac{1}{\sqrt{x^2\!+\!1}}\,dx\right)+C' \,=\,
+x\sqrt{x^2\!+\!1}-I+\!\int\!\frac{dx}{\sqrt{x^2\!+\!1}}+C'.$$
+Having $I$ in two \PMlinkescapetext{places}, we solve it from these equalities, obtaining
+$$I \,=\, \frac{x}{2}\sqrt{x^2\!+\!1}+\frac{1}{2}\!\int\frac{dx}{\sqrt{x^2\!+\!1}}+C,$$
+i.e.,
+$$\int\!\sqrt{x^2\!+\!1}\;dx \;=\; \frac{x}{2}\sqrt{x^2\!+\!1}+\frac{1}{2}\arsinh{x}+C$$
+
+%%%%%
+%%%%%
+\end{document}

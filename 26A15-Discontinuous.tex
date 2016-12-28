@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Discontinuous}
+\pmcreated{2013-03-22 13:45:01}
+\pmmodified{2013-03-22 13:45:01}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{discontinuous}
+\pmrecord{14}{34447}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{54C05}
+\pmdefines{removable discontinuity}
+\pmdefines{saltus}
+\pmdefines{jump}
+\pmdefines{jump discontinuity}
+\pmdefines{discontinuity of the second kind}
+\pmdefines{discontinuity of the first kind}
+\pmdefines{essential discontinuity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{types}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{simple}
+\section*{Definition}
+ Suppose $A$ is an open set in $\sR$ (say an interval $A=(a,b)$, or $A=\sR$), 
+ and $f:A\to \sR$ is a function.
+ Then $f$ is \emph{discontinuous} at $x\in A$, if $f$ is not continuous
+ at $x$. One also says that $f$ is discontinuous at all boundary points of $A$.
+
+We know that $f$ is continuous at $x$ if and only 
+if $\lim_{z\to x} f(z)=f(x)$. Thus, from the properties of the 
+one-sided limits, which we denote by $f(x+)$ and $f(x-)$, it follows
+ that $f$ is discontinuous at $x$ if and only if 
+$f(x+)\neq f(x)$, or $f(x-)\neq f(x)$.
+
+If $f$ is discontinuous at $x\in\overline{A}$, the closure of $A$, we can then distinguish four types of
+different discontinuities as follows  \cite{hoskins, contline}:
+\begin{enumerate}
+\item If $f(x+)=f(x-)$, but $f(x)\neq f(x\pm)$,
+then $x$ is called a \emph{removable discontinuity} of $f$. 
+If we modify the value of $f$ at $x$ to $f(x)=f(x\pm)$, 
+then $f$ will become continuous at $x$. 
+This is clear since the modified $f$ (call it $f_0$) satisfies 
+$f_0(x) = f_0(x+)=f_0(x-).$
+\item If $f(x+)=f(x-)$, but $x$ is not in $A$ (so $f(x)$ is 
+not defined), then $x$ is also called a \emph{removable discontinuity}. 
+If we assign $f(x)=f(x\pm)$, then this modification renders $f$
+continuous at $x$. 
+\item If $f(x-)\neq f(x+)$, then $f$ has a \emph{jump discontinuity} at $x$
+Then the number $f(x+)-f(x-)$ is then called the \emph{jump},
+or \emph{saltus}, of $f$ at $x$.  
+\item If either (or both) of $f(x+)$ or $f(x-)$ does not exist, then 
+$f$ has an \emph{essential discontinuity} at $x$
+(or a \emph{discontinuity of the second kind}).
+\end{enumerate}
+Note that $f$ may be continuous (continuous in all points in $A$), but still have discontinuities in $\overline{A}$
+ 
+ \section*{ Examples}
+\begin{enumerate}
+\item Consider the function $f:\sR\to \sR$ given by
+\[
+f(x)=\begin{cases} 
+ 1 & \text{when }x\neq 0, \\
+ 0 & \text{when }x=0.  
+\end{cases}
+\]
+Since $f(0-)=1$, $f(0)=0$, and $f(0+)=1$,
+it follows that $f$ has a removable discontinuity at $x=0$. 
+If we modify $f(0)$ so that $f(0)=1$, then $f$ becomes the 
+continuous function $f(x)=1$. 
+\item Let us consider the function defined by the formula 
+\[
+f(x) = \frac{\sin x }{x}
+\]
+where $x$ is a nonzero real number. When $x=0$, the formula is undefined, so 
+$f$ is only determined for $x\neq 0$. Let us show that this point is
+a removable discontinuity. Indeed, it is easy 
+to see that $f$ is continuous for all $x\neq 0$, and using 
+\PMlinkname{L'H\^opital's rule}{LHpitalsRule} we have $f(0+)=f(0-)=1$. 
+Thus, if we assign $f(0)=1$, then $f$ becomes a continuous function
+defined for all real $x$.  In fact, $f$ can be made into an analytic 
+function on the whole complex plane. 
+\newcommand{\signum}[0]{\mathop{\mathrm{sign}}}
+\item  The signum function $\signum\colon\sR\to \sR$ is defined as
+\[
+ \signum (x) =\begin{cases} 
+ -1 & \text{when }x<0, \\
+ 0 & \text{when } x=0, \text{ and}\\
+ 1 & \text{when } x>0. 
+\end{cases}
+\]
+Since $\signum(0+)=1$, $\signum(0)=0$, and since $\signum(0-)=-1$,
+it follows that $\signum$ has a jump discontinuity at $x=0$
+with jump $\signum(0+)-\signum(0-)=2$.
+\item The function $f:\sR\to\sR$ given by
+\[
+f(x) =\begin{cases}
+ 1 & \text{when }x= 0, \\
+ \sin(1/x) & \text{when } x\neq 0
+\end{cases}
+\]
+has an essential discontinuity at $x=0$.  See \cite{contline} for details.
+\end{enumerate} 
+ 
+\section*{General Definition} Let $X,Y$ be topological spaces, and let $f$ be a mapping
+ $f:X\to Y$. Then $f$ is \emph{discontinuous} at $x\in X$, if $f$ is not
+ \PMlinkname{continuous at}{Continuous} $x$.
+
+In this generality, one generally does not classify discontinuities quite so closely, since they can have quite complicated behaviour.
+
+\section*{Notes}
+A jump discontinuity is also called a \emph{simple discontinuity}, or  a 
+\emph{ discontinuity of the first kind}.  
+An  \emph{essential discontinuity} is also called a 
+\emph{discontinuity of the second kind}.
+
+
+\begin{thebibliography}{9}
+\bibitem{hoskins}
+R.F. Hoskins, \emph{Generalised functions}, 
+Ellis Horwood Series: Mathematics and its applications, 
+John Wiley \& Sons, 1979.
+\bibitem{contline} P. B. Laval, 
+\PMlinkexternal{http://science.kennesaw.edu/~plaval/spring2003/m4400_02/Math4400/contwork.pdf}{http://science.kennesaw.edu/~plaval/spring2003/m4400_02/Math4400/contwork.pdf}.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

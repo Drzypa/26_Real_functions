@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartialFractionsOfExpressionsAndPartitionProblemsrecreational}
+\pmcreated{2013-03-22 14:57:02}
+\pmmodified{2013-03-22 14:57:02}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{partial fractions of expressions and partition problems (recreational)}
+\pmrecord{15}{36645}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In \PMlinkescapetext{collections} of mathematical puzzles and pastimes, one often encounters questions like the following: ``If it takes 1 oz of flour to bake a cookie 3 oz of flour to make a cupcake, and 5 oz to make a roll, how many possible combinations of baked goods can one make with a pound (16 oz) of flour?''
+
+One can, of course, approach such a problem by brute force (a tedious job best left to a computer) but there is a quick and clever way of solving such problems based on partial fractions and infinite series.
+
+We start with the well-known formula for the infinite geometric series:
+ $$1 + x + x^2 + x^3 + x^4 + \cdots = {1 \over 1 - x}$$
+If we replace $x$ by $x^n$ in this series, we find that
+ $$1 + x^n + x^{2n} + x^{3n} + x^{4n} + \cdots = {1 \over 1 - x^n}.$$
+
+Now take two such series and multiplied them together term by term.  For example, consider the product
+ $$(1 + x^3 + x^6 + x^9 + x^{12} + \cdots)(1 + x + x^2 + x^3 + x^4 + \cdots) = 1 + x + x^2 + 2 x^3 + 2 x^4 + 2 x^5 + 3 x^6 + \cdots$$
+Let us take a few moments to understand why the coefficients are what they are.  Start with the coefficient of $x$.  The reason that it is one is that the only way to obtain $x$ in the product is to multiply the $1$ in the first series by the $x$ in the second.  Likewise, the coefficient of $x^2$ is also 1 because there is only one way to obtain an $x^2$.  However, when we get to $x^3$, things get more complicated -- we can get an $x^3$ either by multiplying the 1 in the first series by the $x^3$ in the second series or the $x^3$ in the first series by the 1 in the second.  Therefore the coefficient of $x^3$ is 2.  The story is even more interesting when we get to $x^6$ --- there are three different ways to obtain $x^6$ --- either multiply the 1 in the first series by the $x^6$ in the second or multiply the $x^3$ in the first by the $x^3$ in the second or multiply the $x^6$ in the first series by the 1 in the second series.  And so on and so forth, ad infinitum.
+
+Let us now pause for a moment to see how this pile of algebra has anything to do with our bakery problem.  To keep things simple let's simplify the problem by not baking any rolls.  If we have one oz of flour, there is only one possibility -- bake a cookie.  With 2 oz, we still don't have enough to make a cupcake, so there is still only one possibility -- bake two cookies.  With 3 oz, we have two options --- either bake one cupcake or three cookies.  With 6 oz, there are three possibilities --- either we could make two cupcakes or we could use 3 oz for a cupcake and bake 3 cokies with the remaining 3 ounces or we could bake 6 cookies.
+
+Comparing the last two paragraphs, we come to the interesting conclusion that the coefficient of $x^n$ is equal to the number of possible combinations of cookies and cupcakes that can be made from $n$ ounces of flour.  The reason for this is quite simple --- in both cases we are taking $n$ things and seeing how many ways we can partition them into a a multiple of three and a multiple of one.  It is really no different than solving the bakery problem by taking a pile of beans, letting each bean stand for an ounce of flour, and then counting how many different ways we can make piles of 3's and piles of ones.  The only difference is that we are now using $x$'s as counters instead of beans.  The advantage that $x$'s have over beans is that we can use algebraic tricks and techniques to manipulate them and simplify expressions.  The disadvantage is that we don't get a delicious pot of baked beans to go with the rolls when we are done using them.  (Alphabet soup with only $x$'s in it isn't all that exciting. :) )
+
+Using the formulas for the sums of the series, we can re-express what we found as follows:
+ $${1 \over (1-x)(1-x^3)} = 1 + x + x^2 + 2 x^3 + 2 x^4 + 2 x^5 + 3 x^6 + \cdots$$
+Thus, to solve our cake and cookie problem, we can take the rational function ${1 \over (1-x)(1-x^3)}$, expand it in a series and read off the coefficient of $x^n$ to learn how many ways there are of baking cookies and cakes with $n$ ounces of flour.
+
+This is all well and good, but how do we find this coefficient?  If there is no efficient way of computing it, then we might as well scrap the algebra and go back to counting beans.  This is where partial fractions come in.  If we factor $1 - x^3$, we obtain
+\begin{eqnarray*}
+{1 \over (1-x)(1-x^3)} &=& {1 \over (x-1)^2 (x + 1/2 - \sqrt{-3}/2) (x + 1/2 + \sqrt{-3}/2)} \\
+&=& {1 \over (1-x)^2 (1 - (-1/2 - \sqrt{-3}/2) x) (1 - (-1/2 + \sqrt{-3}/2) x)}
+\end{eqnarray*}
+The partial fractions expansion of this is
+ $${1/3 \over (1 - x)^2} + {1/3 \over 1 - x} + {1/6 + \sqrt{-3}/18 \over 1 - (-1/2 - \sqrt{-3}/2) x} + {1/6 - \sqrt{-3}/18 \over 1 - (-1/2 + \sqrt{-3}/2)x}$$
+To compute the series expansion of the original series, all we need to do is expand each term in the partial fraction expansion as a series and add the resulting series.  We recognize the latter three terms as giving rise to geometric series.  As for the first term, it can be expanded using the binomial theorem with negative exponents:
+ $${1 \over (1-x)^2} = 1 + 2 x + 3 x^2 + 4 x^3 + \cdots$$
+
+Combining these expansions, we arrive at the following formula for the coefficient of $x^n$:
+ $${n \over 3} + {2 \over 3} + (1/6 - \sqrt{-3}/6) (-1/2 - \sqrt{-3}/2)^n + (1/6 - \sqrt{-3}/6) (-1/2 + \sqrt{-3}/2)^n$$
+At first blush, this formula, with all its square roots of negative numbers, may look rather formidable, but with a little examination, we can see that it is not as nasty as it seems.  First, let us note that that the quantities $-1/2 - \sqrt{-3}/2$ and $-1/2 - \sqrt{-3}/2$ both cube to $1$.  This, of course, is why they are there in the first place --- they arose from factoring the polynomial $1 - x^3$.  Because of this fact, the last two terms of the expression involving the square roots will have the same values for $n+3$ as they will have for $n$, so if we know their values for $n = 0, 1, 2$, we will know their values for all $n$.  For $n=0$, we have
+ $$(1/6 - \sqrt{-3}/18) (-1/2 - \sqrt{-3}/2)^0 + (1/6 + \sqrt{-3}/18) (-1/2 + \sqrt{-3}/2)^0 = $$
+ $$(1/6 - \sqrt{-3}/18) + (1/6 + \sqrt{-3}/18) = 1/3.$$
+since anything raised to the zero power equals one.  When $n = 1$, we have
+ $$(1/6 - \sqrt{-3}/18) (-1/2 - \sqrt{-3}/2)^1 + (1/6 + \sqrt{-3}/18) (-1/2 + \sqrt{-3}/2)^1 = $$
+ $$(1/6 - \sqrt{-3}/18) (-1/2 - \sqrt{-3}/2) + (1/6 + \sqrt{-3}/18) (-1/2 + \sqrt{-3}/2) = 0.$$
+When $n = 2$,
+ $$(1/6 - \sqrt{-3}/18) (-1/2 - \sqrt{-3}/2)^2 + (1/6 + \sqrt{-3}/18) (-1/2 + \sqrt{-3}/2)^2 = $$
+ $$(1/6 - \sqrt{-3}/18) (-1/2 + \sqrt{-3}/2) + (1/6 + \sqrt{-3}/18) (-1/2 - \sqrt{-3}/2) = -1/3.$$
+Thus, when $n$ is a multpile of 3, we have $n/3 + 1$ ways of baking cookies and cupcakes, when $n$ is one more than a multiple of $3$, we have $(n+2)/3$ ways, and when $n$ is two more than a multiple of $3$, we have $(n+1)/3$ ways.  Comparing this with the answers we obtained in the special cases $n = 1, 2, 3, 4, 5, 6$ a few paragraphs back, one sees that these formulas agree.  Finally, if $n = 16$, we see that since $16 = 3 \cdot 5 + 1$, there are $18/3 = 6$ possibilities.
+
+As further practise, the reader may wish to tackle the question when the possibility of buns as well as cookies and cupcakes is allowed.  In that case, it is necessary to expand the rational function
+ $${1 \over (1 - x) (1 - x^3) (1 - x^5)}$$
+into partial fractions.  The first step, of course, is to factor the three polynomials.  In the simple case we examined, we wrote out the factors explicitly in terms of square roots.  However, for the sake of keeping the computations simple, it is often better not to write the roots out so explicitly.  That is to say, one could write
+ $$1 - x^3 = (1 - x) (1 - \alpha x) (1 - \alpha^2 x)$$
+and
+ $$1 - x^5 = (1 - x) (1 - \beta x) (1 - \beta^2 x) (1 - \beta^3 x) (1 - \beta^4 x)$$
+where $\alpha^3 = 1$ and $\beta^5 = 1$ without specifying what $\alpha$ and $\beta$ are explicitly.
+ Then the partial fractions expansion will be of the form
+ $${c_1 \over (1 - x)^3} + {c_2 \over (1 - x)^2} + {c_3 \over 1 - x} + {c_4 \over 1 - \alpha x} + {c_5 \over 1 - \alpha^2 x} + {c_6 \over 1 - \beta x} + {c_7 \over 1 - \beta^2 x} + {c_8 \over 1 - \beta^3 x} + {c_9 \over 1 - \beta^4 x}$$
+for suitable constants $c_1, c_2, \ldots, c_9$.  Upon determining these constants and expanding in series, the reader will be able to write down a formula for the number of combinations which can be baked fron $n$ ounces of flour and, in particular, will be able to determine how many possibilities there are with a pound of flour.
+%%%%%
+%%%%%
+\end{document}

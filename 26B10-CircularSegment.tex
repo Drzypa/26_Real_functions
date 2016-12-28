@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CircularSegment}
+\pmcreated{2013-03-22 19:05:02}
+\pmmodified{2013-03-22 19:05:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{circular segment}
+\pmrecord{10}{41972}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B10}
+\pmclassification{msc}{51M04}
+%\pmkeywords{chord}
+%\pmkeywords{circular arc}
+\pmrelated{LineSegment}
+\pmrelated{SphericalSegment}
+\pmrelated{ExampleOfCalculusOfVariations}
+\pmdefines{height of circular segment}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A chord of a circle \PMlinkescapetext{divides} the corresponding disk into two \emph{circular segments}.\, The perimetre of a circular segment consists thus of the chord ($c$) and a circular arc ($a$).
+
+The magnitude $r$ of the radius of circle and the magnitude $\alpha$ of a central angle naturally determine uniquely the magnitudes of the corresponding arc and chord, and these may be directly calculated from
+\begin{align}
+\begin{cases}
+a \;=\; r\alpha,\\
+c \;=\; 2r\sin\frac{\alpha}{2}.
+\end{cases}
+\end{align}
+Conversely, the magnitudes of $a$ and $c$ ($< a$) uniquely determine $r$ and $\alpha$ from the pair of equations (1), but $r$ and $\alpha$ are generally not \PMlinkescapetext{expressible} in a closed form; this becomes clear from the relationship\, $\frac{c}{a}\cdot\frac{\alpha}{2} = \sin\frac{\alpha}{2}$\, implied by (1).\\
+
+\begin{center}
+\begin{pspicture}(-4,-3)(4,3)
+\psdot[linewidth=0.02](0,0)
+\psarc[linecolor=blue](0,0){2.5}{20}{130}
+\psarc[linecolor=red](0,0){2.5}{130}{380}
+\psline[linecolor=red,linewidth=0.04](-1.607,1.915)(2.349,0.855)
+\psline[linecolor=blue](-1.607,1.915)(2.349,0.855)
+\psline[linestyle=dotted](-1.607,1.915)(0,0)(2.349,0.855)
+\rput(0.1,0.3){$\alpha$}
+\rput(0.6,2.6){$a$}
+\rput(0.35,1.15){$c$}
+\rput(-0.9,0.8){$r$}
+\rput(-4,-3){.}
+\rput(4,3){.}
+\end{pspicture}
+\end{center}
+
+The area of a circular segment is obtained by subtracting from [resp. adding to] the area of the corresponding sector the area of the isosceles triangle having the chord as \PMlinkname{base}{BaseAndHeightOfTriangle} [the adding concerns the case where the central angle is greater than the straight angle]:
+$$A \;=\; \frac{\alpha}{2\pi}\cdot\pi r^2\mp\frac{1}{2}r^2\sin\alpha \;=\;\frac{r^2}{2}(\alpha\mp\sin\alpha)$$\\
+
+The \PMlinkescapetext{\emph{height}} of the circular segment, i.e. the distance of the \PMlinkname{midpoints}{ArcLength} of the arc and the chord, may be expressed in the following forms:
+$$h \;=\; \left(1-\cos\frac{\alpha}{2}\right)r \;=\; r-\sqrt{r^2-\frac{c^2}{4}} \;=\; \frac{c}{2}\tan\frac{\alpha}{4}$$
+
+
+%%%%%
+%%%%%
+\end{document}

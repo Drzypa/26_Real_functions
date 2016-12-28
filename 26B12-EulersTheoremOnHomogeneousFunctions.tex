@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulersTheoremOnHomogeneousFunctions}
+\pmcreated{2013-03-22 15:18:58}
+\pmmodified{2013-03-22 15:18:58}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Euler's theorem on homogeneous functions}
+\pmrecord{10}{37121}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{15-00}
+\pmdefines{Euler operator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\del{\partial}
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+\PMlinkescapeword{identity}
+\PMlinkescapeword{degree}
+\PMlinkescapeword{state}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{side}
+%
+\begin{thm}[Euler] Let $f(x_1,\ldots,x_k)$ be a smooth homogeneous function of degree $n$. That is,
+\begin{equation*}
+  f(t x_1, \ldots, t x_k) = t^n f(x_1, \ldots, x_k).
+    \label{hom-def} \tag{*}
+\end{equation*}
+Then the following identity holds
+\[
+  x_1 \frac{\del f}{\del x_1} + \cdots + x_k \frac{\del f}{\del x_k}
+    = n f.
+\]
+\end{thm}
+\begin{proof}
+By homogeneity, the relation \eqref{hom-def} holds for all $t$. Taking the t-derivative of both sides, we establish that the following identity holds for all $t$:
+\[
+  x_1 \frac{\del f}{\del x_1}(t x_1, \ldots, t x_k) + \cdots +
+  x_k \frac{\del f}{\del x_k}(t x_1, \ldots, t x_k)
+    = n t^{n-1} f(x_1, \ldots, x_k).
+\]
+To obtain the result of the theorem, it suffices to set $t=1$ in the previous formula.
+\end{proof}
+
+Sometimes the differential operator $\displaystyle{x_1 \frac{\del}{\del x_1} + \cdots
++ x_k \frac{\del}{\del x_k}}$ is called the \emph{Euler operator}. An equivalent way to state the theorem is to say that homogeneous functions are eigenfunctions of the Euler operator, with the degree of homogeneity as the eigenvalue.
+%%%%%
+%%%%%
+\end{document}

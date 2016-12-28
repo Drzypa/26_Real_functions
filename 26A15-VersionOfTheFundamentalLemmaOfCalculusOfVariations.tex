@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VersionOfTheFundamentalLemmaOfCalculusOfVariations}
+\pmcreated{2013-03-22 19:12:04}
+\pmmodified{2013-03-22 19:12:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{version of the fundamental lemma of calculus of variations}
+\pmrecord{4}{42116}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{26A42}
+\pmsynonym{fundamental lemma of calculus of variations}{VersionOfTheFundamentalLemmaOfCalculusOfVariations}
+%\pmkeywords{calculus of variations}
+\pmrelated{EulerLagrangeDifferentialEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Lemma.}\, If a real function $f$ is continuous on the interval \,$[a,\,b]$\, and if
+$$\int_a^b\!f(x)\varphi(x)\,dx \;=\; 0$$
+for all functions $\varphi$ continuously differentiable on the interval and vanishing at its end points, then\, 
+$f(x) \,\equiv\, 0$\, on the whole interval.\\
+
+\emph{Proof.}\, We make the antithesis that $f$ does not vanish identically.\, Then there exists a point $x_0$ of the open interval \,$(a,\,b)$\, such that\, $f(x_0) \neq 0$;\, for example\, $f(x_0) > 0$.\, The continuity of $f$ implies that there are the numbers $\alpha$ and $\beta$ such that\, $a < \alpha < x_0 < \beta < b$\, and\, $f(x) > 0$\, for all\, 
+$x \in [\alpha,\,\beta]$.\, Now the function $\varphi_0$ defined by
+\begin{align*}
+\varphi_0(x) \;:=\; 
+\begin{cases}
+(x\!-\!\alpha)^2(x\!-\!\beta)^2 \quad \mbox{for}\;\; \alpha \leqq x \leqq \beta,\\
+0 \qquad \mbox{otherwise}
+\end{cases}
+\end{align*}
+fulfils the requirements for the functions $\varphi$.\, Since both $f$ and $\varphi_0$ are positive on the open interval\, $(\alpha,\,\beta)$,\, we however have
+$$\int_a^b\!f(x)\varphi_0(x)\,dx \;=\; \int_\alpha^\beta\!f(x)\varphi_0(x)\,dx \;>\; 0.$$
+Thus the antithesis causes a contradiction.\, Consequently, we must have\, $f(x) \,\equiv\, 0$.
+%%%%%
+%%%%%
+\end{document}

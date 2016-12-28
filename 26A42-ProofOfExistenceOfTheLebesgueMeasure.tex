@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfExistenceOfTheLebesgueMeasure}
+\pmcreated{2013-03-22 18:33:14}
+\pmmodified{2013-03-22 18:33:14}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of existence of the Lebesgue measure}
+\pmrecord{10}{41276}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28A12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{lemma}{Lemma}
+\begin{document}
+First, let $\mathcal{C}$ be the collection of bounded open intervals of the real numbers. As this is a \PMlinkname{$\pi$-system}{PiSystem}, \PMlinkname{uniqueness of measures extended from a $\pi$-system}{UniquenessOfMeasuresExtendedFromAPiSystem} shows that any measure defined on the $\sigma$-algebra $\sigma(\mathcal{C})$ is uniquely determined by its values restricted to $\mathcal{C}$. It remains to prove the existence of such a measure.
+
+Define the length of an interval as $p((a,b))=b-a$ for $a<b$. The Lebesgue outer measure $\mu^*\colon\mathcal{P}(X)\rightarrow\mathbb{R}_+\cup\{\infty\}$ is defined as
+\begin{equation}\label{eq:1}
+\mu^*(A)=\inf\left\{\sum_{i=1}^\infty p(A_i): A_i\in\mathcal{C},\ A\subseteq\bigcup_{i=1}^\infty A_i\right\}.
+\end{equation}
+This is indeed an \PMlinkname{outer measure}{OuterMeasure2} (see construction of outer measures) and, furthermore, for any interval of the form $(a,b)$ it agrees with the standard definition of length, $\mu^*((a,b))=p((a,b))=b-a$ (see \PMlinkname{proof that the outer (Lebesgue) measure of an interval is its length}{ProofThatTheOuterLebesgueMeasureOfAnIntervalIsItsLength}).
+
+We show that intervals $(-\infty,a)$ are \PMlinkname{$\mu^*$-measurable}{CaratheodorysLemma}. Choosing any $\epsilon > 0$ and interval $A\in\mathcal{C}$ the definition of $p$ gives
+\begin{equation*}
+p(A)=p(A\cap(-\infty,a))+p(A\cap(a,\infty)).
+\end{equation*}
+So, choosing an arbitrary set $E\subseteq\mathbb{R}$ and a sequence $A_i\in\mathcal{C}$ covering $E$,
+\begin{equation*}\begin{split}
+\sum_{i=1}^\infty p(A_i) &=\sum_{i=1}^\infty p(A_i\cap (-\infty,a))+\sum_{i=1}^\infty p(A_i\cap(a,\infty))\\
+&\ge \mu^*(E\cap(-\infty,a))+\mu^*(E\cap(a,\infty)).
+\end{split}\end{equation*}
+So, from equation (\ref{eq:1})
+\begin{equation}\label{eq:2}
+\mu^*(E)\ge \mu^*(E\cap(-\infty,a))+\mu^*(E\cap(a,\infty)).
+\end{equation}
+Also, choosing any $\epsilon>0$ and using the subadditivity of $\mu^*$,
+\begin{equation*}\begin{split}
+\mu^*(E\cap(a,\infty))&\ge\mu^*(E\cap(a-\epsilon,\infty))-\mu^*(E\cap(a-\epsilon,a+\epsilon))\\
+&\ge\mu^*(E\cap[a,\infty))-\mu^*((a-\epsilon,a+\epsilon))\\
+&=\mu^*(E\cap[a,\infty))-2\epsilon.
+\end{split}\end{equation*}
+As $\epsilon>0$ is arbitrary, $\mu^*(E\cap(a,\infty))\ge\mu^*(E\cap[a,\infty))$ and substituting into (\ref{eq:2}) shows that
+\begin{equation*}
+\mu^*(E)\ge \mu^*(E\cap(-\infty,a))+\mu^*(E\cap[a,\infty)).
+\end{equation*}
+Consequently, intervals of the form $(-\infty,a)$ are $\mu^*$-measurable. As such intervals generate the Borel $\sigma$-algebra and, by Caratheodory's lemma, the $\mu^*$-measurable sets form a $\sigma$-algebra on which $\mu^*$ is a measure, it follows that the restriction of $\mu^*$ to the Borel $\sigma$-algebra is itself a measure.
+
+%%%%%
+%%%%%
+\end{document}

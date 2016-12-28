@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HessianMatrix}
+\pmcreated{2013-03-22 12:59:41}
+\pmmodified{2013-03-22 12:59:41}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{Hessian matrix}
+\pmrecord{31}{33370}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+%\pmkeywords{second derivative}
+\pmrelated{Gradient}
+\pmrelated{PartialDerivative}
+\pmrelated{SymmetricMatrix}
+\pmrelated{ComplexHessianMatrix}
+\pmrelated{HessianForm}
+\pmrelated{DirectionalDerivative}
+\pmdefines{Hessian}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $x \in \mathbb{R}^n$ and let $f\colon\mathbb{R}^n\to\mathbb{R}$ be a real-valued function having 2nd-order partial derivatives in an open set $U$ containing $x$.  The \emph{Hessian matrix} of $f$ is the matrix of second partial derivatives evaluated at $x$: 
+
+\begin{equation}
+\mathbf{H}(x):=
+\begin{bmatrix}
+\displaystyle{\frac{\partial^2 f}{\partial x_1^2}} & \displaystyle{\frac{\partial^2 f}{\partial x_1\partial x_2}} & \ldots & \displaystyle{\frac{\partial^2 f}{\partial x_1\partial x_n}}
+\\ \displaystyle{\frac{\partial^2 f}{\partial x_2\partial x_1}} & \displaystyle{\frac{\partial^2 f}{\partial x_2^2}} & \ldots & \displaystyle{\frac{\partial^2 f}{\partial x_2\partial x_n}} 
+\\ \vdots & \vdots & \ddots & \vdots
+\\ \displaystyle{\frac{\partial^2 f}{\partial x_n\partial x_1}} & \displaystyle{\frac{\partial^2 f}{\partial x_n\partial x_2}} & \ldots & \displaystyle{\frac{\partial^2 f}{\partial x_n^2}}
+\end{bmatrix}.
+\end{equation}
+
+If  $f$ is in $C^2(U)$, $\mathbf{H}(x)$ is \PMlinkname{symmetric}{SymmetricMatrix} because of the equality of mixed partials.  Note that $\mathbf{H}(x)=\mathbf{J}(\nabla f)$, the Jacobian of the gradient of $f$.
+
+Given  a vector $\boldsymbol{v}\in\mathbb{R}^n$, the \emph{Hessian} of $f$ at $\boldsymbol{v}$ is:
+\begin{equation}
+\mathbf{H}(x)(\boldsymbol{v}):=\frac{1}{2}\boldsymbol{v}\mathbf{H}(x)\boldsymbol{v}^{\operatorname{T}}.
+\end{equation}
+Here we view $\boldsymbol{v}$ as a $1$ by $n$ matrix so that $\boldsymbol{v}^{\operatorname{T}}$ is the transpose of $\boldsymbol{v}$.  
+
+\textbf{Remark}.  The Hessian of $f$ at $\boldsymbol{v}$ is a quadratic form, since $\mathbf{H}(x)(r\boldsymbol{v})=r^2\mathbf{H}(x)(\boldsymbol{v})$ for any $r\in\mathbb{R}$. 
+
+ If $f$ is further assumed to be in $C^2(U)$, and $x$ is a critical point of $f$ such that $\mathbf{H}(x)$ is \PMlinkname{positive definite}{PositiveDefinite}, then 
+$x$ is a strict local minimum of $f$.
+
+This is not difficult to show. Since $\mathbf{H}(x)$ is \PMlinkname{positive definite}{PositiveDefinite}, the Rayleigh-Ritz theorem shows that there is a  $c > 0$ such that for all $h \in \mathbb{R}^n$, 
+$h^T\mathbf{H}(x)h \ge 2c \Vert h\Vert^2$. Thus by
+\PMlinkname{Taylor's theorem}{TaylorPolynomialsInBanachSpaces} (\PMlinkescapetext{weaker} form)
+$$
+f(x + h ) = f(x) + \frac{1}{2} h^T\mathbf{H}(x)h + o(\Vert h \Vert^2) \ge c \Vert h \Vert^2 + o(\Vert h\Vert^2).$$
+For small $\Vert h \Vert$ the first \PMlinkescapetext{term} on the \PMlinkescapetext{right dominates} the second, so that both sides are positive for small $\Vert h\Vert$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,295 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Derivative}
+\pmcreated{2013-03-22 12:41:41}
+\pmmodified{2013-03-22 12:41:41}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{derivative}
+\pmrecord{35}{32975}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{46G05}
+\pmclassification{msc}{26A24}
+\pmrelated{TableOfDerivatives}
+\pmrelated{DerivativeOfInverseFunction}
+\pmrelated{PartialDerivative}
+\pmrelated{Gradient}
+\pmrelated{RelatedRates}
+\pmrelated{CalculatingLipschitzRatios}
+\pmdefines{directional derivative}
+\pmdefines{Fr\'echet derivative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+\usepackage{color}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+%\usepackage{color}
+%\usepackage{graphicx}
+%\usepackage{epsfig}
+
+% define commands here
+\def\R{{\mathbb R}}
+\def\V{{\mathsf V}}
+\def\W{{\mathsf W}}
+\def\x{{\mathbf x}}
+\def\y{{\mathbf y}}
+\def\h{{\mathbf h}}
+\def\eps{\epsilon}
+\def\0{{\mathbf 0}}
+\def\d{{\mathrm d}}
+\def\of{\circ}
+\begin{document}
+\PMlinkescapeword{word}
+\PMlinkescapeword{words}
+
+	Qualitatively the {\em derivative} is a \PMlinkescapetext{measure} of the change of a
+	function in a small \PMlinkescapetext{region} around a specified point.
+
+\section*{Motivation}
+	The idea behind the derivative comes from the straight line. What
+	characterizes a straight line is the fact that it has constant
+	``slope''. 
+	\begin{figure}[h]
+	\begin{center}
+		\input{derivative-line.pstex_t}
+		\caption{The straight line $y=mx+b$\label{line}}
+	\end{center}
+	\end{figure}
+%%	\begin{figure}[h]
+%%	\begin{center}
+%%		\includegraphics{derivative-line.eps}
+%%		\caption{The straight line $y=mx+b$\label{line}}
+%%	\end{center}
+%%	\end{figure}
+	In other words, for a line given by the equation $y=mx+b$, as in Fig.
+	\ref{line}, the ratio of $\Delta y$ over $\Delta x$ is always constant
+	and has the value $\displaystyle \frac{\Delta y}{\Delta x} = m$.
+
+	\begin{figure}[h]
+	\begin{center}
+		\input{derivative-parabola.pstex_t}
+		\caption{The parabola $y=x^2$ and its tangent at $(x_0,y_0)$
+			\label{parabola}}
+	\end{center}
+	\end{figure}
+%%	\begin{figure}[h]
+%%	\begin{center}
+%%		\includegraphics{derivative-parabola.eps}
+%%		\caption{The parabola $y=x^2$ and its tangent at $(x_0,y_0)$
+%%			\label{parabola}}
+%%	\end{center}
+%%	\end{figure}
+	For other curves we cannot define a ``slope'', like for the straight
+	line, since such a quantity would not be constant. However, for
+	sufficiently smooth curves, each point on a curve has a tangent line.
+	For example consider the curve $y=x^2$, as in Fig. \ref{parabola}. At
+	the point $(x_0,y_0)$ on the curve, we can draw a tangent of slope $m$
+	given by the equation $y-y_0=m(x-x_0)$.
+
+	Suppose we have a curve of the form $y=f(x)$, and at the point
+	$(x_0,f(x_0))$ we have a tangent given by $y-y_0=m(x-x_0)$. Note that
+	for values of $x$ sufficiently close to $x_0$ we can make the
+	approximation $f(x)\approx m(x-x_0)+y_0$. So the slope $m$ of the
+	tangent describes how much $f(x)$ changes in the vicinity of $x_0$. It
+	is the slope of the tangent that will be associated with the
+	derivative of the function $f(x)$.
+
+\section*{Formal definition}
+	More formally for any real function $f\colon\R\to\R$, we define the
+	{\em derivative} of $f$ at the point $x$ as the following limit (if
+	it exists)
+	\[
+		f'(x) := \lim_{h\to 0} \frac{f(x+h)-f(x)}{h}.
+	\]
+	This definition turns out to be \PMlinkescapetext{consistent} with
+	the motivation introduced above.
+
+	The derivatives for some elementary functions are (cf. derivative
+	notation)
+	\begin{enumerate}
+	\item $\displaystyle \frac{d}{dx} c = 0$, ~~~ where $c$ is constant;
+	\item $\displaystyle \frac{d}{dx} x^n = nx^{n-1}$;
+	\item $\displaystyle \frac{d}{dx} \sin x = \cos x$;
+	\item $\displaystyle \frac{d}{dx} \cos x = -\sin x$;
+	\item $\displaystyle \frac{d}{dx} e^x = e^x$;
+	\item $\displaystyle \frac{d}{dx} \ln x = \frac{1}{x}$.
+	\end{enumerate}
+	While derivatives of more complicated expressions can be
+	calculated algorithmically using the following rules
+%	\begin{quote}
+	\begin{description}
+	\item[Linearity] $\displaystyle \frac{d}{dx}\left(af(x)+bg(x)\right) = af'(x)+bg'(x)$;
+	\item[Product rule] $\displaystyle \frac{d}{dx}\left(f(x)g(x)\right)
+		= f'(x)g(x) + f(x)g'(x)$;
+	\item[Chain rule] $\displaystyle \frac{d}{dx}g(f(x)) = g'(f(x))f'(x)$;
+	\item[Quotient Rule] $\displaystyle \frac{d}{dx}\frac{f(x)}{g(x)} = 
+		\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}$.
+	\end{description}
+%	\end{quote}
+	Note that the quotient rule, although given as much importance as the
+	other rules in elementary calculus, can be derived by succesively
+	applying the product rule and the chain rule to
+	$\displaystyle \frac{f(x)}{g(x)}=f(x)\frac{1}{g(x)}$. Also the quotient rule does not generalize as well as the other ones.
+
+	Since the derivative $f'(x)$ of $f(x)$ is also a function $x$,
+	higher derivatives can be obtained by applying the same procedure
+	to $f'(x)$ and so on.
+
+\section*{Generalization}
+\subsection*{Banach Spaces}
+	Unfortunately the notion of the ``slope of the tangent'' does not
+	directly generalize to more abstract situations. What we can do is
+	keep in mind the facts that the tangent is a linear function and that
+	it approximates the function near the point of tangency, as well as
+	the formal definition above.
+
+	Very general conditions under which we can define a derivative in
+	a manner much similar to the above areas follows.
+	Let $f\colon\V\to\W$, where $\V$ and $\W$ are Banach
+	spaces. Let $\h\ne 0$ be an element of $\V$. We define the
+	\emph{directional derivative} $(D_\h f)(\x)$ at $\x$ as the following
+	limit (when it exists):
+	\[
+		(D_\h f)(\x) := \lim_{\eps\to0} \frac{f(\x+\eps\h)-f(\x)}{\eps},
+	\]
+	where $\eps$ is a scalar. Note that $f(x+\eps\h)\approx f(\x) +
+	\eps(D_\h f)(\x)$, which is \PMlinkescapetext{consistent} with
+	our original motivation. In certain contexts, this directional derivative is also called the \emph{G\^ateaux derivative}.
+
+	Finally we define the {\em derivative} at
+	$\x$ as the bounded linear map $(Df)(\x)\colon\V\to\W$ such that for any
+	non-zero $\h\in\V$
+	\[
+		\lim_{\|\h\|\to0} \frac{(f(\x+\h)-f(\x))-(Df)(\x)\cdot\h}{\|\h\|}=0.
+	\]
+	Once again we have $f(\x+\h)\approx f(\x)+(Df)(\x)\cdot\h$. In fact,
+	if the derivative $(Df)(\x)$ exists, the directional derivatives can
+	be obtained as $(D_\h f)(\x) = (Df)(\x)\cdot\h$.%
+		\footnote{The notation $A\cdot\h$ is used when $\h$ is a
+		vector and $A$ a linear operator. This notation can be
+		considered advantageous to the usual notation $A(\h)$, since
+		the latter is rather bulky and the former incorporates the
+		intuitive distributive properties of linear operators also
+		associated with usual multiplication.} %
+	However, the
+	existence of $(D_\h f)$ for each non-zero $\h\in\V$ does not guarantee
+	the existence of $(Df)(\x)$. This derivative is also called the
+	\emph{Fr\'echet derivative}. In the more familiar case
+	$f\colon\R^n\to\R^m$, the derivative $Df$ is simply the Jacobian of
+	$f$.
+
+	Under these general conditions the following properties of the
+	derivative remain
+	\begin{enumerate}
+	\item $D\h = 0$, ~~~ where $\h$ is a constant;
+	\item $D(A\cdot\x) = A$, ~~~ where $A$ is linear.
+	\end{enumerate}
+	\begin{description}
+	\item[Linearity] $D(af(\x)+bg(\x))\cdot\h =
+		a(Df)(\x)\cdot\h+b(Dg)(\x)\cdot\h$;
+	\item[``Product'' rule] $D(B(f(\x),g(\x)))\cdot\h =
+		B((Df)(\x)\cdot\h,g(\x)) + B(f(\x),(Dg)(\x)\cdot\h)$,
+		~~~ where $B$ is bilinear;
+	\item[Chain rule] $D(g(f(\x))\cdot\h =
+		(Dg)(f(\x))\cdot((Df)(\x)\cdot\h)$.
+	\end{description}
+
+	Note that the derivative of $f$ can be seen as a function $Df\colon
+	\V\to L(\V,\W)$ given by $Df\colon\x\mapsto(Df)(\x)$, where $L(\V,\W)$
+	is the space of bounded linear maps from $\V$ to $\W$. Since $L(\V,\W)$
+	can be considered a Banach space itself with the norm taken as the
+	operator norm, higher derivatives can be
+	obtained by applying the same procedure to $Df$ and so on.
+
+\subsection{Partial derivatives}
+A straightforward extension of the derivatives defined above is that of partial derivatives for functions
+of several independent variables. Partial derivatives have numerous applications, as for example in
+physics and engineering; wave equations are among such important examples of the use of partial derivatives
+in physics and engineering. 
+
+\subsection*{Manifolds}
+	Let $\V$ be a Banach space (for finite dimensional manifolds $\V=\R^n$). A manifold modeled on $\V$ is a topological space that is locally homeomorphic to
+	$\V$  and
+	is endowed with enough structure to define derivatives. Since the
+	notion of a manifold was constructed specifically to generalize the
+	notion of a derivative, this seems like the end of the road for this
+	entry. The following discussion is rather technical, a more
+	intuitive explanation of the same concept can be found in the entry
+	on related rates.
+
+	Consider manifolds $V$ and $W$ modeled on Banach spaces $\V$ and $\W$,
+	respectively. Say we have
+	$y=f(x)$ for some $x\in V$ and $y\in W$, then, by definition of a
+	manifold, we can find charts $(X,\x)$ and $(Y,\y)$, where $X$ and $Y$
+	are neighborhoods of $x$ and $y$, respectively. These charts provide us
+	with canonical isomorphisms between the Banach spaces $\V$ and $\W$,
+	and the respective tangent spaces $T_x V$ and $T_y W$:
+	\[
+		\d\x_x \colon T_x V \to \V, \quad
+		\d\y_y \colon T_y W \to \W.
+	\]
+
+	Now consider a map $f\colon V\to W$ between the manifolds. By
+	composing it with the chart maps we construct the map
+	\[ g_{(X,\x)}^{(Y,\y)}=\y\of f\of \x^{-1} \colon \V \to \W, \]
+	defined on an appropriately \PMlinkescapetext{restricted} domain.
+	Since we now have a map between Banach spaces, we can define its
+	derivative at $\x(x)$ in the sense defined above, namely
+	$Dg_{(X,\x)}^{(Y,\y)}(\x(x))$. If this derivative exists for every
+	choice of admissible charts $(X,\x)$ and $(Y,\y)$, we can say that
+	the derivative of $Df(x)$ of $f$ at $x$ is defined and given by
+	\[ Df(x) = \d\y_y^{-1}\of Dg_{(X,\x)}^{(Y,\y)}(\x(x)) \of \d\x_x \]
+	(it can be shown that this is well defined and independent of the
+	choice of charts).
+
+	Note that the derivative is now a map between the tangent spaces of
+	the two manifolds $Df(x)\colon T_x V \to T_y W$. Because of this a
+	common notation for the derivative of $f$ at $x$ is $T_x f$. Another
+	alternative notation for the derivative is $f_{*,x}$ because of its
+	connection to the category-theoretical pushforward.
+
+\subsection*{Distributions}
+	Derivatives can also be generalized in less ``smooth'' contexts.
+	For example the derivative is one \PMlinkescapetext{type} of
+	\PMlinkname{operation}{OperationsOnDistributions} that can be
+	defined for distributions.
+
+\subsection*{Standard connection of $\R^n$}
+Let $\Omega$ be an open set in $\R^n$. There is an operator on vectors fields in $\Omega$ which measure how a
+pair of them, $X,Y:\Omega\to \R^n$ vary, one with respect to the other: 
+$$D_XY=(JY)X$$
+Here $JY$ is the Jacobian of $Y$, so when we multiply, we can see that the components 
+of $D_XY$ are the directional variations of the components of $Y$ in the direction $X$.
+
+\subsection*{Additional Topic}
+\begin{itemize}
+\item Non-Newtonian calculus
+\end{itemize}
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

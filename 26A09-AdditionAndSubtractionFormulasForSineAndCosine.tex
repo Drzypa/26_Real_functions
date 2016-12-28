@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdditionAndSubtractionFormulasForSineAndCosine}
+\pmcreated{2013-03-22 16:59:01}
+\pmmodified{2013-03-22 16:59:01}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{addition and subtraction formulas for sine and cosine}
+\pmrecord{16}{39260}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{33B10}
+\pmsynonym{addition and subtraction formulae for sine and cosine}{AdditionAndSubtractionFormulasForSineAndCosine}
+\pmsynonym{addition formulas for sine and cosine}{AdditionAndSubtractionFormulasForSineAndCosine}
+\pmsynonym{addition formulae for sine and cosine}{AdditionAndSubtractionFormulasForSineAndCosine}
+\pmsynonym{subtraction formulas for sine and cosine}{AdditionAndSubtractionFormulasForSineAndCosine}
+\pmsynonym{subtraction formulae for sine and cosine}{AdditionAndSubtractionFormulasForSineAndCosine}
+\pmsynonym{addition formula for sine}{AdditionAndSubtractionFormulasForSineAndCosine}
+\pmsynonym{subtraction}{AdditionAndSubtractionFormulasForSineAndCosine}
+\pmrelated{AdditionFormula}
+\pmrelated{DefinitionsInTrigonometry}
+\pmrelated{DoubleAngleIdentity}
+\pmrelated{MeanCurvatureAtSurfacePoint}
+\pmrelated{DAlembertAndDBernoulliSolutionsOfWaveEquation}
+\pmrelated{AdditionFormulas}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+The rotation matrix $\displaystyle \left( \begin{array}{lr}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta \end{array} \right)$ will be used to obtain the addition formulas for sine and cosine.
+
+Recall that a vector in $\mathbb{R}^2$ can be rotated $\theta$ radians in the counterclockwise direction by multiplying on the left by the rotation matrix $\displaystyle \left( \begin{array}{lr}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta \end{array} \right)$.  Because rotating by $\alpha+\beta$ radians is the same as rotating by $\beta$ radians followed by rotating by $\alpha$ radians, we obtain:
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \left( \begin{array}{lr}
+\cos ( \alpha + \beta ) & -\sin ( \alpha + \beta ) \\
+\sin ( \alpha + \beta ) & \cos ( \alpha + \beta ) \end{array} \right) & =\displaystyle \left( \begin{array}{lr}
+\cos \alpha & -\sin \alpha \\
+\sin \alpha & \cos \alpha \end{array} \right) \left( \begin{array}{lr}
+\cos \beta & -\sin \beta \\
+\sin \beta & \cos \beta \end{array} \right) \\
+& \\
+& =\displaystyle \left( \begin{array}{lr}
+\cos \alpha \cos \beta -\sin \alpha \sin \beta & -\cos \alpha \sin \beta -\sin \alpha \cos \beta \\
+\sin \alpha \cos \beta +\cos \alpha \sin \beta & -\sin \alpha \sin \beta +\cos \alpha \cos \beta \end{array} \right)
+\end{array}$
+\end{center}
+
+Hence, $\sin ( \alpha + \beta )=\sin \alpha \cos \beta +\cos \alpha \sin \beta$ and $\cos ( \alpha + \beta )=\cos \alpha \cos \beta -\sin \alpha \sin \beta$.
+
+Note that sine is an even function and that cosine is an odd function, \PMlinkname{i.e.}{Ie} $\sin(-x)=-\sin x$ and $\cos(-x)=-\cos x$.  These facts enable us to obtain the subtraction formulas for sine and cosine.
+
+$$\sin(\alpha-\beta)=\sin(\alpha+(-\beta))=\sin(\alpha)\cos(-\beta)+\cos(\alpha)\sin(-\beta)=\sin(\alpha)\cos(\beta)-\cos(\alpha)\sin(\beta)$$
+
+$$\cos(\alpha-\beta)=\cos(\alpha+(-\beta))=\cos(\alpha)\cos(-\beta)-\sin(\alpha)\sin(-\beta)=\cos(\alpha)\cos(\beta)+\sin(\alpha)\sin(\beta)$$
+%%%%%
+%%%%%
+\end{document}

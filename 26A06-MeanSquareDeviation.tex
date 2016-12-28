@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeanSquareDeviation}
+\pmcreated{2013-03-22 18:21:57}
+\pmmodified{2013-03-22 18:21:57}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{mean square deviation}
+\pmrecord{8}{41005}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{41A99}
+\pmclassification{msc}{26A42}
+\pmsynonym{mean squared error}{MeanSquareDeviation}
+\pmrelated{Variance}
+\pmrelated{RmsError}
+\pmrelated{AverageValueOfFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If $f$ is a Riemann integrable real function on the interval \,$[a,\,b]$ which is wished to be approximated by another function $\varphi$ with the same property, then the \PMlinkname{mean}{MeanValueTheorem}
+$$m \;=\; \frac{1}{b\!-\!a}\int_a^b[f(x)\!-\!\varphi(x)]^2\,dx$$
+is called the {\em mean square deviation} of $\varphi$ from $f$.
+
+For example, if\, $\sin{x}$\, is approximated by $x$ on\, $[0,\,\frac{\pi}{2}]$, the mean square deviation is 
+$$\frac{2}{\pi}\int_0^{\frac{\pi}{2}}(\sin{x}-x)^2\,dx \,\approx\, 0.04923.$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLeastAndGreatestValueOfFunction}
+\pmcreated{2013-03-22 15:52:09}
+\pmmodified{2013-03-22 15:52:09}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{proof of least and greatest value of function}
+\pmrecord{5}{37865}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmrelated{FermatsTheoremStationaryPoints}
+\pmrelated{HeineBorelTheorem}
+\pmrelated{CompactnessIsPreservedUnderAContinuousMap}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+$f$ is continuous, so it will transform compact sets into compact sets.
+Thus since $[a,b]$ is compact, $f([a,b])$ is also compact.
+$f$ will thus attain on the interval $[a,b]$ a maximum and a minimum value because real compact sets are closed and bounded.
+
+Consider the maximum and later use the same argument for $-f$ to consider the minimum.
+
+By a known \PMlinkname{theorem}{FermatsTheoremStationaryPoints} if the maximum is attained in the interior of the domain, $c \in ]a,b[$ then $f(c) \text{is a maximum} \implies f'(c)=0$, since $f$ is differentiable.
+
+If the maximum isn't attained in $]a,b[$ and since it must be attained in $[a,b]$ either $f(a)$ or $f(b)$ is a maximum.
+
+For the minimum consider $-f$ and note that $-f$ will verify all conditions of the theorem and that a maximum of $-f$ corresponds to a minimum of $f$ and that
+$-f'(c)=0 \iff f'(c)=0$.
+%%%%%
+%%%%%
+\end{document}

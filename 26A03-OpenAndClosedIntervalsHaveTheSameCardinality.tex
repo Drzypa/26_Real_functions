@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OpenAndClosedIntervalsHaveTheSameCardinality}
+\pmcreated{2013-03-22 15:43:32}
+\pmmodified{2013-03-22 15:43:32}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{open and closed intervals have the same cardinality}
+\pmrecord{8}{37675}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+\pmclassification{msc}{03E10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{proposition*}{Proposition}
+\DeclareMathOperator{\id}{id}
+\begin{document}
+\PMlinkescapeword{cover}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{argument}
+\begin{proposition*}
+The sets of real numbers $[0,1]$, $[0,1)$, $(0,1]$, and $(0,1)$ all have the same cardinality.
+\end{proposition*}
+
+We give two proofs of this proposition.
+
+\begin{proof}
+Define a map $f:[0,1]\to[0,1]$ by $f(x)=(x+1)/3$.  The map $f$ is strictly increasing, hence injective.  Moreover, the image of $f$ is contained in the interval $[\frac{1}{3}, \frac{2}{3}]\subsetneq (0,1)$, so the maps 
+$f_r:[0,1]\to[0,1)$ and $f_o:[0,1]\to(0,1)$ obtained from $f$ by restricting the codomain are both injective.  Since the inclusions into $[0,1]$ are also injective, the \PMlinkname{Cantor-Schr\"oder-Bernstein theorem}{SchroederBernsteinTheorem} can be used to construct bijections $h_r:[0,1]\to[0,1)$ and $h_o:[0,1]\to(0,1)$.  Finally, the map $r:(0,1]\to[0,1)$ defined by $r(x)=1-x$ is a bijection.
+
+Since having the same cardinality is an equivalence relation, all four intervals have the same cardinality.
+\end{proof}
+
+\begin{proof}
+Since $[0,1]\cap\mathbb{Q}$ is countable, there is a bijection $a:\mathbb{N}\to[0,1]\cap\mathbb{Q}$.  We may select $a$ so that $a(0)=0$ and $a(1)=1$.  The map $f:[0,1]\cap\mathbb{Q}\to(0,1)\cap\mathbb{Q}$ defined by $f(x)=a(a^{-1}(x)+2)$ is a bijection because it is a composition of bijections.  A bijection $h:[0,1]\to(0,1)$ can be constructed by gluing the map $f$ to the identity map on $(0,1)\setminus\mathbb{Q}$.  The formula for $h$ is
+\[
+h(x)=\begin{cases}
+f(x),    & x\in\mathbb{Q} \\
+x,       & x\notin\mathbb{Q}.
+\end{cases}
+\]
+The other bijections can be constructed similarly.
+\end{proof}
+
+The reasoning above can be extended to show that any two arbitrary intervals in $\mathbb{R}$ have the same cardinality.
+%%%%%
+%%%%%
+\end{document}

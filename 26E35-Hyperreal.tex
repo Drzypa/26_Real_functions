@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Hyperreal}
+\pmcreated{2013-03-22 12:35:45}
+\pmmodified{2013-03-22 12:35:45}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{hyperreal}
+\pmrecord{4}{32847}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26E35}
+\pmsynonym{nonstandard real}{Hyperreal}
+\pmsynonym{non-standard real}{Hyperreal}
+\pmrelated{Infinitesimal2}
+\pmdefines{nonprincipal ultrafilter}
+\pmdefines{infinitesimal}
+\pmdefines{hypernatural}
+\pmdefines{hyperinteger}
+\pmdefines{hyperrational}
+\pmdefines{hyperfinite}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\begin{document}
+An ultrafilter $\F$ on a set $I$ is called {\em nonprincipal} if no finite subsets of $I$ are in $\F$.
+
+Fix once and for all a nonprincipal ultrafilter $\F$ on the set $\N$ of natural numbers. Let $\sim$ be the equivalence relation on the set $\R^\N$ of sequences of real numbers given by
+$$
+\{a_n\} \sim \{b_n\} \iff \{n \in \N \mid a_n = b_n\} \in \F
+$$
+Let $^*\R$ be the set of equivalence classes of $\R^\N$ under the equivalence relation $\sim$. The set $^*\R$ is called the set of {\em hyperreals}. It is a field under coordinatewise addition and multiplication:
+\begin{eqnarray*}
+\{a_n\} + \{b_n\} & = & \{a_n+b_n\} \\
+\{a_n\} \cdot \{b_n\} & = & \{a_n\cdot b_n\}
+\end{eqnarray*}
+The field $^*\R$ is an ordered field under the ordering relation
+$$
+\{a_n\} \leq \{b_n\} \iff \{n \in \N \mid a_n \leq b_n\} \in \F
+$$
+The real numbers embed into $^*\R$ by the map sending the real number $x \in \R$ to the equivalence class of the constant sequence given by $x_n := x$ for all $n$. In what follows, we adopt the convention of treating $\R$ as a subset of $^*\R$ under this embedding.
+
+A hyperreal $x \in\,^*\R$ is:
+\begin{itemize}
+\item {\em limited} if $a < x < b$ for some real numbers $a,b \in \R$
+\item {\em positive unlimited} if $x > a$ for all real numbers $a \in \R$
+\item {\em negative unlimited} if $x < a$ for all real numbers $a \in \R$
+\item {\em unlimited} if it is either positive unlimited or negative unlimited
+\item {\em positive infinitesimal} if $0 < x < a$ for all positive real numbers $a \in \R^+$
+\item {\em negative infinitesimal} if $a < x < 0$ for all negative real numbers $a \in \R^-$
+\item {\em infinitesimal} if it is either positive infinitesimal or negative infinitesimal
+\end{itemize}
+
+For any subset $A$ of $\R$, the set $^*A$ is defined to be the subset of $^*\R$ consisting of equivalence classes of sequences $\{a_n\}$ such that
+$$
+\{n \in \N \mid a_n \in A\} \in \F.
+$$
+The sets $^*\mathbb{N}$, $^*\mathbb{Z}$, and $^*\mathbb{Q}$ are called {\em hypernaturals}, {\em hyperintegers}, and {\em hyperrationals}, respectively. An element of $^*\mathbb{N}$ is also sometimes called {\em hyperfinite}.
+%%%%%
+%%%%%
+\end{document}

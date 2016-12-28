@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Limit}
+\pmcreated{2013-03-22 12:28:25}
+\pmmodified{2013-03-22 12:28:25}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{limit}
+\pmrecord{12}{32662}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26B12}
+\pmclassification{msc}{54E35}
+\pmrelated{Continuous}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ and $Y$ be metric spaces and let $a \in X$ be a limit point of $X$. Suppose that $f\colon X \setminus \{a\} \to Y$ is a function defined everywhere except at
+$a$. For $L \in Y$, we say the \emph{limit} of $f(x)$ as $x$
+approaches $a$ is equal to $L$, or
+$$
+\lim_{x \to a} f(x) = L
+$$
+if, for every real number $\varepsilon > 0$, there exists a real
+number $\delta > 0$ such that, whenever $x \in X$ with $0 < d_X(x,a)
+< \delta$, then $d_Y(f(x), L) < \varepsilon$.
+
+The formal definition of limit as given above has a well--deserved
+reputation for being notoriously hard for inexperienced students to
+master. There is no easy fix for this problem, since the concept of a
+limit is inherently difficult to state precisely (and indeed wasn't
+even accomplished historically until the 1800's by Cauchy, well after
+the development of calculus in the 1600's by Newton and Leibniz).
+However, there are number of related definitions, which, taken
+together, may shed some light on the nature of the concept.
+
+\begin{itemize}
+\item The notion of a limit can be generalized to mappings between arbitrary 
+topological spaces, under some mild restrictions.  In this context we say that
+$\lim_{x \to a} f(x) = L$ if $a$ is a limit point of $X$ and, for every
+neighborhood $V$ of $L$ (in $Y$), there is a deleted neighborhood
+$U$ of $a$ (in $X$) which is mapped into $V$ by $f$. One also requires that the range $Y$ be Hausdorff (or at least $T_1$) in order to ensure that limits, when they exist, are unique.
+\item Let $a_n, n\in\mathbb{N}$ be a sequence of elements in a metric
+  space $X$.  We say that $L\in X$ is the limit of the sequence, if
+  for every $\varepsilon>0$ there exists a natural number $N$ such
+  that $d(a_n,L)< \varepsilon$ for all natural numbers $n> N$.
+\item The definition of the limit of a mapping can be based on the
+  limit of a sequence.  To wit, $\lim_{x \to a} f(x) = L$ if and only
+  if, for every sequence of points $x_n$ in $X$ converging to $a$
+  (that is, $x_n \to a$, $x_n \neq a$), the sequence of points
+  $f(x_n)$ in $Y$ converges to $L$.
+\end{itemize}
+In calculus, $X$ and $Y$ are frequently taken to be Euclidean spaces
+$\mathbb{R}^n$ and $\mathbb{R}^m$, in which case the distance
+functions $d_X$ and $d_Y$ cited above are just Euclidean distance.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGeneralizedLeibnizRule}
+\pmcreated{2013-03-22 14:34:14}
+\pmmodified{2013-03-22 14:34:14}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of generalized Leibniz rule}
+\pmrecord{7}{36128}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+%\pmkeywords{calculus}
+%\pmkeywords{Leibniz rule}
+%\pmkeywords{derivative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The generalized Leibniz rule can be derived from the plain Leibniz rule by induction on $r$.
+
+If $r=2$, the generalized Leibniz rule reduces to the plain Leibniz rule.  This will be the starting point for the induction.  To complete the induction, assume that the generalized Leibniz rule holds for a certain value of $r$; we shall now show that it holds for $r+1$.
+
+Write $\prod_{i=1}^{r+1} f_i(t) = \left( f_{r+1} (t) \right) \left( \prod_{i=1}^{r+1} f_i(t) \right)$.  Applying the plain Leibniz rule,
+ $${d^n \over dt^n} \left( f_{r+1} (t) \right) \left( \prod_{i=1}^{r+1} f_i(t) \right) = \sum_{n_{r+1}=0}^n \left( {n \atop n_{r+1}} \right) \left( {d^{n_{r+1}} \over dn^{n_{r+1}}} f_{r+1} (t) \right) \left( {d^{n - n_{r+1}} \over dn^{n - n_{r+1}}}\prod_{i=1}^{r+1} f_i(t) \right)$$
+By the generalized Leibniz rule for $r$ (assumed to be true as the induction hypothesis), this equals
+ $$\sum_{n_{r+1}=0}^n \sum_{n_1 + \cdots + n_r = n - n_{r+1}} \left( {n - n_{r+1}\atop n_1, n_2, \ldots n_r}  \right) \left( {n \atop n_{r+1}} \right) \left( {d^{n_{r+1}} \over dn^{n_{r+1}}} f_{r+1} (t) \right) \left( \prod_{i=1}^r {d^{n_i} \over dt^{n_i}} f_i(t) \right)$$
+Note that
+ $$\left( {n - n_{r+1}\atop n_1, n_2, \ldots n_r}  \right) \left( {n \atop n_{r+1}} \right) = \left( {n - n_{r+1}\atop n_1, n_2, \ldots n_r, n_{r+1}}  \right)$$
+This is an immediate consequence of the expression for multinomial coefficients as quotients of factorials.  Using this identity, the quantity can be written as
+ $$\sum_{n_1 + \cdots + n_r + n_{r+1} = n} \left( {n - n_{r+1}\atop n_1, n_2, \ldots n_r, n_{r+1}} \right) \prod_{i=1}^{r+1} {d^{n_i} \over dt^{n_i}} f_i(t)$$
+which is the generalized Leibniz rule for the case of $r+1$.
+%%%%%
+%%%%%
+\end{document}

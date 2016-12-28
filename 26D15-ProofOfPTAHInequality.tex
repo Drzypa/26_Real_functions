@@ -1,0 +1,194 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPTAHInequality}
+\pmcreated{2013-03-22 16:55:00}
+\pmmodified{2013-03-22 16:55:00}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof  of PTAH inequality}
+\pmrecord{29}{39178}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In order to prove the PTAH inequality two lemmas are needed. 
+The first lemma is quite general and does not depend on the specific
+$P$ and $Q$ that are defined for the PTAH inequality. 
+
+The setup for the first lemma is as follows:
+
+We still have a measure space $X$ with measure $m$.
+We have a subset $\Lambda \subseteq {\mathbb{R}}^{n}$.
+And we have a function $p: X \times \Lambda \to \mathbb{R}$ which is 
+positive and is integrable in $x$ for all $\lambda \in \Lambda$.
+Also, $p(x,\lambda )\log p(x, \lambda')$ is integrable in $x$ for each
+pair $\lambda, \lambda' \in \Lambda$.
+
+Define $P: \Lambda \to \mathbb{R}$ by
+
+$$
+P(\lambda ) = \int p(x,\lambda ) dm(x)
+$$
+
+and $Q: \Lambda \times \Lambda \to \mathbb{R}$
+
+by
+$$
+Q(\lambda, \lambda' ) = \int p(x,\lambda ) \log p(x, \lambda') dm(x).
+$$
+
+\textbf{Lemma 1} (1) $P(\lambda ) \log \frac{P(\lambda')}{P(\lambda)} \ge Q(\lambda , \lambda' ) - Q(\lambda, \lambda) $
+\newline
+(2) if $Q(\lambda , \lambda') \ge Q(\lambda , \lambda) $ then
+$P(\lambda') \ge P(\lambda)$. If equality holds then $p(x,\lambda) = p(x,\lambda')$ a.e [m].
+
+\textbf{Proof} It is clear that (2) follows from (1), so we only need to prove (1). Define a measure $d\nu(x) = \frac{p(x,\lambda)dm(x)}{P(\lambda)}$.
+Then 
+$$
+\int d\nu(x) = 1
+$$
+so we can use Jensen's inequality for the logarithm.
+
+\begin{eqnarray*}
+Q(\lambda, \lambda')- Q(\lambda , \lambda ) &=& \int p(x,\lambda )[\log p(x, \lambda' ) - \log p(x, \lambda ) ] dm(x) \\
+&=& \int p(x,\lambda ) \log \frac{p(x,\lambda')}{p(x,\lambda)} dm(x) \\
+& =& P(\lambda) \int \log \frac{p(x,\lambda')}{p(x,\lambda)} d\nu(x) \\
+& \le& P(\lambda) \log \int \frac{p(x,\lambda')}{p(x,\lambda)} d\nu(x) \\
+& =& P(\lambda ) \log \int \frac{p(x, \lambda')}{P(\lambda)} dm(x) \\
+& =& P(\lambda) \log \frac{P(\lambda')}{P(\lambda)}.
+\end{eqnarray*} 
+
+The  next lemma uses the notation of the parent entry.
+
+\textbf{Lemma 2} Suppose $r_i \ge 0$ for $i=1, \ldots, n$ and $\theta = (\theta_1, \ldots, \theta_n ) \in \sigma$. If $\sum_j r_j > 0$  then 
+$$
+\prod_{i=1}^{n} {\theta_i}^{r_i} \le \prod_i ( \frac{r_i}{\sum_j r_j})^{r_i}.
+$$
+
+
+\textbf{Proof.} Let $\lambda = (\lambda_i) \in \sigma$. By the concavity of the
+$\log$ function we have
+
+$$
+\sum_i \lambda_i \log x_i \le \log \sum_i \lambda_i x_i 
+$$ 
+where $x_i > 0$ for $\i=1, \ldots, n$.
+
+so that 
+\begin{equation}
+\prod_i {x_i}^{\lambda_i} \le \sum_i \lambda_i x_i = \prod_i ( \sum_j \lambda_j x_j )^{\lambda_i} .
+\end{equation} 
+
+It is enough to prove the lemma for the case where $r_i>0$ for all $i$.
+We can also assume $\theta_i > 0$ for all $i$, otherwise the result is trivial.
+
+Let $\rho = \sum_j r_j > 0$ and $\lambda_i = \frac{r_i}{\rho}$ so that
+$\rho \lambda_i = r_i$. 
+
+Raise each side of (1) to the $\rho$ power:
+
+\begin{equation}
+\prod_i {x_i}^{r_i} \le \prod_i (\sum_j \lambda_j x_j )^{r_i} 
+\end{equation}
+so that
+\begin{equation}
+\prod_i (\frac{x_i}{\sum_j \lambda_j x_j })^{r_i} \le 1 
+\end{equation}
+Multiply (3) by $\prod (\frac{r_i}{\rho})^{r_i}$ to get:
+
+\begin{equation}
+\prod_i ( \frac{r_i x_i}{\sum_j r_j x_j})^{r_i} \le \prod_i (r_i/\rho)^{r_i}.
+\end{equation}
+
+Claim: There exist $x_i>0 $, $i=1,\ldots, n$ such that
+\begin{equation}
+\theta_i = \frac{r_i x_i}{\sum_j r_j x_j}.
+\end{equation}
+ If so, then substituting into (4)
+$$
+\prod_i {\theta_i}^{r_i} \le \prod_i ( \frac{r_i}{\rho})^{r_i} = \prod_i (\frac{r_i}{\sum_j r_j})^{r_i}
+$$
+
+So it remains to prove the claim. We have to solve the system of equations
+$\theta_i \sum_j r_j x_j = r_i x_i$, $i=1, \ldots, n$ for $x_i$. 
+Rewriting this in matrix form, let $A=(a_{ij})$,  $R=\textrm{diag}(r_1, \ldots, r_n)$,
+and $x=\textrm{diag}(x_1, \ldots, x_n)$, 
+where $a_{ii} = \theta_i-1$ and $a_{ij} = \theta_i$ if $i \not = j$,  $i,j=1,\ldots, n$.
+The columns sums of $A$ are $0$, since 
+$\theta \in \sigma$. Hence $A$ is singular and  the homogenous system $ARx=0$
+has a nonzero solution, say $x$. Since $R$ is nonsingular, it follows that
+$Rx \not = 0$. It follows that $r_i x_i \not = 0$ for some $i$ and therefore
+$\sum_j r_j x_j \not = 0$. If necessary, we can replace $x$ by $-x$ so that
+$\sum_j r_j x_j >0$. From (5) it follows that $x_j >0$ for all $j$.
+
+
+Now we can prove the PTAH inequality. 
+Let $r_i(\lambda) = \int a_i(x) \prod_j {\lambda_j}^{a_j(x)} dm(x)$.
+
+We calculate $\frac{\partial P}{\partial \lambda_i}$ by differentiating
+under the integral sign. If $\lambda_i>0$ then
+$$
+\frac{\partial P}{\partial \lambda_i} = r_i(\lambda)/\lambda_i .
+$$
+Thus
+\begin{equation}
+\lambda_i \frac{\partial P}{\partial \lambda_i} = r_i(\lambda).
+\end{equation}
+If $\lambda_i =0$ then by writing 
+$$
+r_i(\lambda) = \int_E a_i(x) \ldots dm(x) + \int_{E^c} {\lambda_i}^{a_i(x)} \ldots dm(x)
+$$ 
+where $E = \{x \in X | a_i(x) =0\}$
+it is clear that each integral is 0, so that $r_i(\lambda) =0$.
+So again, (6) holds. Therefore,
+$$
+ \frac{r_i(\lambda)}{\sum_j r_j (\lambda)} =  \frac{\lambda_i \partial P/\partial \lambda_i }{\sum_j \lambda_j \partial P/\lambda_j} = \overline{\lambda_i}. 
+$$
+
+Then
+\begin{eqnarray*}
+Q(\lambda, \lambda') &=& \int  \prod_j {\lambda_j}^{a_j(x)} \log \prod_i ( {\lambda_i}')^{a_i(x)} dm(x)\\
+& =&\sum_i \log {\lambda_i}' \int a_i(x) \prod_j {\lambda_j}^{a_j(x)} dm(x) \\
+&=& \sum_i r_i(\lambda) \log {\lambda_i}' \\
+&=& \log \prod_i ({\lambda_i}')^{r_i(\lambda)} \\
+& \le&\log \prod_i ( \frac{r_i(\lambda)}{\sum_j r_j(\lambda)})^{r_i(\lambda)} \\
+& =& \log \prod_i ({\overline{\lambda_i}})^{ r_i(\lambda) }\\
+& =& Q(\lambda , \overline{\lambda}).
+\end{eqnarray*}
+
+Now by Lemma 1, with $\overline{\lambda} = \lambda'$ we get
+$P(\overline{\lambda}) \ge P(\lambda)$.
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

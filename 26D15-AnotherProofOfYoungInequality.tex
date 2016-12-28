@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnotherProofOfYoungInequality}
+\pmcreated{2013-03-22 15:45:38}
+\pmmodified{2013-03-22 15:45:38}
+\pmowner{a4karo}{12322}
+\pmmodifier{a4karo}{12322}
+\pmtitle{another proof of Young inequality}
+\pmrecord{10}{37715}
+\pmprivacy{1}
+\pmauthor{a4karo}{12322}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let 
+$$F(x)=\int_0^x \phi(t)dt, \text{   and   } G(x)=\int_0^x \phi^{-1}(t)dt.$$
+Since $\phi^{-1}$ is strictly increasing, $G$ is strictly convex, hence lies above its supporting line, i.e. for every $c$ and $x\neq c$
+$$G(b)> G(c)+G'(c)(b-c)=G(c)+ \phi^{-1}(c)(b-c).$$
+In particular, for $c=\phi(a)$ we have
+$$F(a)+G(b)>F(a)+G(\phi(a))+a(b-\phi(a))=ab,$$
+because $F(a)+G(\phi(a))=a\phi(a)$.
+%%%%%
+%%%%%
+\end{document}

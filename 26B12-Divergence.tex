@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Divergence}
+\pmcreated{2013-03-22 12:55:08}
+\pmmodified{2013-03-22 12:55:08}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{divergence}
+\pmrecord{11}{33271}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmrelated{SourcesAndSinksOfVectorField}
+\pmdefines{incompressible}
+\pmdefines{divergence theorem}
+\pmdefines{Gauss's theorem}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+
+
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\be}{\mathbf{e}}
+
+\newcommand{\vF}{\mathbf{F}}
+\newcommand{\vN}{\mathbf{N}}
+
+
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\vnabla}{\nabla}
+
+\newcommand{\vdiv}{\operatorname{div}}
+\begin{document}
+\paragraph{Basic Definition.}
+Let $x,y,z$ be a system of Cartesian coordinates on $3$-dimensional
+Euclidean space, and let $\vi, \vj, \vk$ be the
+corresponding basis of unit vectors.  The \emph{divergence} of a continuously
+differentiable vector field
+$$\vF = F^1\vi+F^2\vj+F^3\vk,$$
+is defined to be the function
+$$\vdiv\vF=
+\frac{\partial F^1}{\partial x}+
+\frac{\partial F^2}{\partial y}+
+\frac{\partial F^3}{\partial z}.$$
+Another common notation for the divergence
+is $\vnabla\cdot\vF$ (see gradient), a convenient mnemonic.
+
+\paragraph{Physical interpretation.}
+In physical \PMlinkescapetext{terms}, the divergence of a vector field
+is the extent to which the vector field flow behaves like a source or
+a sink at a given point.  Indeed, an alternative, but logically
+equivalent definition, gives the divergence as the derivative of the
+net flow of the vector field across the surface of a small sphere
+relative to the surface area of the sphere.  To wit,
+$$(\vdiv \vF)(p)= \lim_{r\rightarrow 0}
+\int_{S} \!\!(\vF \cdot \vN)dS\;/\left(4 \pi r^2\right),
+$$
+where $S$ denotes the sphere of radius $r$ about a point
+$p\in\reals^3$, and the integral is a surface integral taken with
+respect to $\vN$, the normal to that sphere.  
+
+The non-infinitesimal interpretation of divergence is given by Gauss's
+Theorem. This theorem is a conservation law, stating that the volume total of
+all sinks and sources, i.e. the volume integral of the divergence, is
+equal to the net flow across the volume's boundary.  In symbols,
+$$\int_V \vdiv \vF \, dV = \int_S (\vF\cdot \vN)\, dS,$$
+where
+$V\subset\reals^3$ is a compact region with a smooth boundary, and
+$S=\partial V$ is that boundary oriented by outward-pointing normals.
+We note that Gauss's theorem follows from the more general Stokes'
+Theorem, which itself generalizes the fundamental theorem of calculus.
+
+In light of the physical interpretation, a vector field with constant
+zero divergence is called \emph{incompressible} -- in this case, no
+\PMlinkescapetext{net} flow can occur across any
+\PMlinkescapetext{closed} surface.
+
+\paragraph{General definition.}
+% By Clairaut's Theorem, the divergence operator annihilates the
+% curl of any vector field which has continuous second partial
+% derivatives.
+The notion of divergence has meaning in the more general setting of
+Riemannian geometry.  To that end, let $\bV$ be a vector field on a
+Riemannian manifold.  The covariant derivative of $\bV$ is a type
+$(1,1)$ tensor field. We define the \emph{divergence} of $\bV$ to be the
+trace of that field.  In terms of coordinates (see tensor and Einstein
+summation convention), we have
+$$\vdiv \bV = V^i{}_{;i} \ .$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FluxOfVectorField}
+\pmcreated{2013-03-22 18:45:25}
+\pmmodified{2013-03-22 18:45:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{flux of vector field}
+\pmrecord{14}{41536}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{26B12}
+\pmsynonym{flux of vector}{FluxOfVectorField}
+%\pmkeywords{vector field}
+\pmrelated{GaussGreenTheorem}
+\pmrelated{MutualPositionsOfVectors}
+\pmrelated{AngleBetweenTwoVectors}
+\pmdefines{flux}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{projection} \PMlinkescapeword{flow}
+
+Let
+$$\vec{U} \;=\; U_x\vec{i}+U_y\vec{j}+U_z\vec{k}$$
+be a vector field in $\mathbb{R}^3$\, and let $a$ be a portion of some surface in the vector field.\, Define one \PMlinkescapetext{side of $a$ to be positive}; if $a$ is a closed surface, then the \PMlinkescapetext{positive side must be the outer surface} of it.\, For any surface element $da$ of $a$, the corresponding {\em vectoral surface element} is
+$$d\vec{a} \;=\; \vec{n}\,da,$$
+where $\vec{n}$ is the unit normal vector on the \PMlinkescapetext{positive side} of $da$.
+
+
+  The {\em flux} of the vector $\vec{U}$ through the surface $a$ is the \PMlinkescapetext{surface integral}
+$$\int_a\vec{U} \cdot d\vec{a}.$$\\
+
+\textbf{Remark.}\, One can imagine that $\vec{U}$ represents the velocity vector of a flowing liquid; suppose that the flow is \PMlinkescapetext{stationary}, i.e. the velocity $\vec{U}$ depends only on the location, not on the time.\, Then the scalar product $\vec{U} \cdot d\vec{a}$ is the volume of the liquid flown per time-unit through the surface element $da$; it is positive or negative depending on whether the flow is from the negative \PMlinkescapetext{side} to the positive \PMlinkescapetext{side} or contrarily.
+
+  \textbf{Example.}\, Let\, $\vec{U} = x\vec{i}+2y\vec{j}+3z\vec{k}$\, and $a$ be the portion of the plane \,$x+y+x = 1$\, in the first octant ($x \geqq 0,\; y \geqq 0,\, z \geqq 0$) with the \PMlinkescapetext{positive normal} away from the origin.
+
+ One has the constant unit normal vector:
+$$\vec{n} \;=\; \frac{1}{\sqrt{3}}\vec{i}+\frac{1}{\sqrt{3}}\vec{j}+\frac{1}{\sqrt{3}}\vec{k}.$$
+The flux of $\vec{U}$ through $a$ is
+$$\varphi \;=\; \int_a\vec{U}\cdot d\vec{a} \;=\; \frac{1}{\sqrt{3}}\int_a(x+2y+3z)\,da.$$
+
+However, this surface integral may be converted to one in which $a$ is replaced by its \PMlinkname{projection}{ProjectionOfPoint} $A$ on the $xy$-plane, and $da$ is then similarly replaced by its projection $dA$;
+$$dA = \cos\alpha\, da$$
+where $\alpha$ is the angle between the normals of both surface elements, i.e. the angle between $\vec{n}$ and $\vec{k}$:
+$$\cos\alpha \;=\; \vec{n}\cdot\vec{k} \;=\; \frac{1}{\sqrt{3}}.$$
+Then we also express $z$ on $a$ with the coordinates $x$ and $y$:
+$$\varphi \;=\; \frac{1}{\sqrt{3}}\int_A(x+2y+3(1-x-y))\,\sqrt{3}\,dA
+\;=\; \int_0^1\left(\int_0^{1-x}(3-2x-y)\,dy\right)dx \;=\; 1$$
+
+
+%%%%%
+%%%%%
+\end{document}

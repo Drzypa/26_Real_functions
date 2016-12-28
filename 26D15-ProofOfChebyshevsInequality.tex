@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfChebyshevsInequality}
+\pmcreated{2013-03-22 13:08:38}
+\pmmodified{2013-03-22 13:08:38}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of Chebyshev's inequality}
+\pmrecord{4}{33582}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $x_1,x_2,\ldots,x_n$ and $y_1,y_2,\ldots,y_n$ be real numbers such
+that $x_1\le x_2\le\cdots\le x_n$.  Write the product
+$(x_1+x_2+\cdots+x_n)(y_1+y_2+\cdots+y_n)$ as
+\begin{eqnarray}
+\nonumber
+&&(x_1y_1+x_2y_2+\cdots+x_ny_n)\\
+\nonumber
+&+&(x_1y_2+x_2y_3+\cdots+x_{n-1}y_n+x_ny_1)\\
+\nonumber
+&+&(x_1y_3+x_2y_4+\cdots+x_{n-2}y_n+x_{n-1}y_1+x_ny_2)\\
+\nonumber
+&+&\cdots\\
+&+&(x_1y_n+x_2y_1+x_3y_2+\cdots+x_ny_{n-1}).
+\label{expanded}
+\end{eqnarray}
+\begin{itemize}
+\item
+If $y_1\le y_2\le\cdots\le y_n$, each of the $n$ terms in parentheses
+is less than or equal to $x_1y_1+x_2y_2+\cdots+x_ny_n$, according to
+the rearrangement inequality.  From this, it follows that
+$$
+(x_1+x_2+\cdots+x_n)(y_1+y_2+\cdots+y_n)\le
+n(x_1y_1+x_2y_2+\cdots+x_ny_n)
+$$
+or (dividing by $n^2$)
+$$
+\left(\frac{x_1+x_2+\cdots+x_n}{n}\right)
+\left(\frac{y_1+y_2+\cdots+y_n}{n}\right)\le
+\frac{x_1y_1+x_2y_2+\cdots+x_ny_n}{n}.
+$$
+\item
+If $y_1\ge y_2\ge\cdots\ge y_n$, the same reasoning gives
+$$
+\left(\frac{x_1+x_2+\cdots+x_n}{n}\right)
+\left(\frac{y_1+y_2+\cdots+y_n}{n}\right)\ge
+\frac{x_1y_1+x_2y_2+\cdots+x_ny_n}{n}.
+$$
+\end{itemize}
+It is clear that equality holds if $x_1=x_2=\cdots=x_n$ or
+$y_1=y_2=\cdots=y_n$.  To see that this condition is also necessary,
+suppose that not all $y_i$'s are equal, so that $y_1\neq y_n$.
+Then the second term in parentheses of (\ref{expanded}) can only be
+equal to $x_1y_1+x_2y_2+\cdots+x_ny_n$ if $x_{n-1}=x_n$, the third
+term only if $x_{n-2}=x_{n-1}$, and so on, until the last term which
+can only be equal to $x_1y_1+x_2y_2+\cdots+x_ny_n$ if $x_1=x_2$.  This
+implies that $x_1=x_2=\cdots=x_n$.  Therefore, Chebyshev's inequality
+is an equality if and only if $x_1=x_2=\cdots=x_n$ or
+$y_1=y_2=\cdots=y_n$.
+%%%%%
+%%%%%
+\end{document}

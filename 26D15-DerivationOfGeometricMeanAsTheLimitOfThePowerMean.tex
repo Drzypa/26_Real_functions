@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfGeometricMeanAsTheLimitOfThePowerMean}
+\pmcreated{2013-03-22 14:17:13}
+\pmmodified{2013-03-22 14:17:13}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{derivation of geometric mean as the limit of the power mean}
+\pmrecord{8}{35741}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+\pmrelated{LHpitalsRule}
+\pmrelated{PowerMean}
+\pmrelated{WeightedPowerMean}
+\pmrelated{ArithmeticGeometricMeansInequality}
+\pmrelated{ArithmeticMean}
+\pmrelated{GeometricMean}
+\pmrelated{DerivationOfZerothWeightedPowerMean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{fix}
+\PMlinkescapeword{calculate}
+Fix $x_1, x_2, \ldots, x_n \in \mathbb{R}^+$.  Then let 
+\[
+\mu(r) := \left(\frac{x_1^r+\cdots+x_n^r}{n}\right)^{1/r}.
+\]
+
+For $r\neq 0$, by definition $\mu(r)$ is the $r$th power mean of the $x_i$.  It is also clear that $\mu(r)$ is a differentiable function for $r\neq 0$.  What is $\lim_{r\to 0} \mu(r)$?  
+
+We will first calculate $\lim_{r\to 0} \log\mu(r)$ using \PMlinkname{l'H\^opital's rule}{LHpitalsRule}.
+\begin{align*}
+\lim_{r\to 0} \log\mu(r) & = \lim_{r\to 0} \frac{\log\left(\frac{x_1^r+\cdots +x_n^r}{n}\right)}{r}\\
+& = \lim_{r\to 0} \frac{\left(\frac{x_1^r\log x_1+\cdots+x_n^r\log x_n}{n}\right)}{\left(\frac{x_1^r+\cdots+x_n^r}{n}\right)}\\
+& = \lim_{r\to 0} \frac{x_1^r\log x_1+\cdots+x_n^r\log x_n}{x_1^r+\cdots+x_n^r}\\
+& = \frac{\log x_1+\cdots+\log x_n}{n}\\
+& = \log \sqrt[n]{x_1\cdots x_n}.
+\end{align*}
+
+It follows immediately that 
+\[
+\lim_{r\to 0} \left(\frac{x_1^r+\cdots+x_n^r}{n}\right)^{1/r} = \sqrt[n]{x_1\cdots x_n}.
+\]
+%%%%%
+%%%%%
+\end{document}

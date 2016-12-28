@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfZerothWeightedPowerMean}
+\pmcreated{2013-03-22 13:10:29}
+\pmmodified{2013-03-22 13:10:29}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{derivation of zeroth weighted power mean}
+\pmrecord{6}{33620}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B99}
+%\pmkeywords{power mean}
+\pmrelated{PowerMean}
+\pmrelated{GeometricMean}
+\pmrelated{GeneralMeansInequality}
+\pmrelated{DerivationOfHarmonicMeanAsTheLimitOfThePowerMean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $x_1,x_2,\ldots,x_n$ be positive real numbers, and let
+$w_1,w_2,\ldots,w_n$ be positive real numbers such that
+$w_1+w_2+\cdots+w_n=1$.  For $r\neq 0$, the $r$-th weighted power mean
+of $x_1,x_2,\ldots,x_n$ is
+$$
+M_w^r(x_1,x_2,\ldots,x_n)=(w_1x_1^r+w_2x_2^r+\cdots+w_nx_n^r)^{1/r}.
+$$
+Using the Taylor series expansion $e^t=1+t+{\mathcal O}(t^2)$, where ${\mathcal O}(t^2)$
+is Landau notation for terms of order $t^2$ and higher, we can
+write $x_i^r$ as
+$$
+x_i^r=e^{r\log x_i}=1+r\log x_i+{\mathcal O}(r^2).
+$$
+By substituting this into the definition of $M_w^r$, we get
+\begin{eqnarray*}
+M_w^r(x_1,x_2,\ldots,x_n)&=&\left[w_1(1+r\log x_1)
++\cdots+w_n(1+r\log x_n)+{\mathcal O}(r^2)\right]^{1/r}\\
+&=&\left[1+r(w_1\log x_1+\cdots+w_n\log x_n)+{\mathcal O}(r^2)\right]^{1/r}\\
+&=&\left[1+r\log(x_1^{w_1}x_2^{w_2}\cdots x_n^{w_n})+{\mathcal O}(r^2)\right]^{1/r}\\
+&=&\exp\left\{\frac{1}{r}\log\left[1+r\log(x_1^{w_1}x_2^{w_2}\cdots
+x_n^{w_n})+{\mathcal O}(r^2)\right]\right\}.
+\end{eqnarray*}
+Again using a Taylor series, this time $\log (1+t)=t+{\mathcal O}(t^2)$, we get
+\begin{eqnarray*}
+M_w^r(x_1,x_2,\ldots,x_n)&=&\exp\left\{\frac{1}{r}
+\left[r\log(x_1^{w_1}x_2^{w_2}\cdots x_n^{w_n})+{\mathcal O}(r^2)\right]\right\}\\
+&=&\exp\left[\log(x_1^{w_1}x_2^{w_2}\cdots x_n^{w_n})+{\mathcal O}(r)\right].
+\end{eqnarray*}
+Taking the limit $r\to 0$, we find
+\begin{eqnarray*}
+M_w^0(x_1,x_2,\ldots,x_n)&=&\exp\left[\log
+(x_1^{w_1}x_2^{w_2}\cdots x_n^{w_n})\right]\\
+&=&x_1^{w_1}x_2^{w_2}\cdots x_n^{w_n}.
+\end{eqnarray*}
+In particular, if we choose all the weights to be $\frac{1}{n}$,
+$$
+M^0(x_1,x_2,\ldots,x_n)=\sqrt[n]{x_1x_2\cdots x_n},
+$$
+the geometric mean of $x_1,x_2,\ldots,x_n$.
+%%%%%
+%%%%%
+\end{document}

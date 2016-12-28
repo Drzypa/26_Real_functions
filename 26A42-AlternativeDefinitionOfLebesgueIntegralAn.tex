@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeDefinitionOfLebesgueIntegralAn}
+\pmcreated{2013-03-22 17:32:46}
+\pmmodified{2013-03-22 17:32:46}
+\pmowner{Gorkem}{3644}
+\pmmodifier{Gorkem}{3644}
+\pmtitle{alternative definition of Lebesgue integral, an}
+\pmrecord{6}{39948}
+\pmprivacy{1}
+\pmauthor{Gorkem}{3644}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28A25}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amssymb,amsbsy}
+\usepackage{graphicx,color}
+\usepackage{epsfig}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+
+
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{rk}[thm]{Remark}
+\newtheorem{crl}[thm]{Corollary}
+\newtheorem{stp}{Step}
+
+\newcommand{\disp}{\displaystyle}
+\newcommand{\dintl}{\disp\int\limits}
+\newcommand{\dsuml}{\disp\sum\limits}
+\newcommand{\hsp}{\hspace{30pt}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\trns}{\,\widehat{}\,\,}
+
+\newcommand{\bthm}{\begin{thm}}
+\newcommand{\ethm}{\end{thm}}
+\newcommand{\bstp}{\begin{stp}}
+\newcommand{\estp}{\end{stp}}
+\newcommand{\blemma}{\begin{lemma}}
+\newcommand{\elemma}{\end{lemma}}
+\newcommand{\bprop}{\begin{prop}}
+\newcommand{\eprop}{\end{prop}}
+\newcommand{\bpf}{\begin{pf}}
+\newcommand{\epf}{\end{pf}}
+\newcommand{\bdefn}{\begin{defn}}
+\newcommand{\edefn}{\end{defn}}
+\newcommand{\brk}{\begin{rk}}
+\newcommand{\erk}{\end{rk}}
+\newcommand{\bcrl}{\begin{crl}}
+\newcommand{\ecrl}{\end{crl}}
+
+
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\brackets}[1]{\left[#1\right]}
+\newcommand{\beqn}{\begin{equation}}
+\newcommand{\eeqn}{\end{equation}}
+\newcommand{\supnorm}[1]{\norm{#1}_\infty}
+\newcommand{\normt}[1]{\norm{#1}_2}
+\newcommand{\ip}[2]{\left\langle#1 , #2\right\rangle}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\calg}[1]{\mathcal{#1}}
+
+
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\qed}{$\ \ \ \ \ \Box$}
+\newcommand{\qedin}{\ \ \ \ \ \Box}
+\newcommand{\Tr}{\operatorname{\Tr}}
+
+\newenvironment{pf}{\begin{trivlist}\item[\hskip%
+\labelsep{\bf Proof.}]}
+{\rm\end{trivlist}}
+
+\begin{document}
+The standard way of defining Lebesgue integral is first to define it for  simple functions, and then to take limits for arbitrary positive measurable functions.  
+
+There is also another way which uses the Riemann integral \cite{lieb}.
+
+Let $(X,\calg{M},\mu)$ be a measure space. Let $f\colon x\rightarrow \mathbb{R}^+\cup \{0\}$ be a nonnegative measurable function.  We will define $\int f d\mu$ in $[0,\infty]$ and will call it as the \emph{Lebesgue integral} of $f$.
+
+If there exists a $t>0$ such that $\mu\left(\left\{x\colon f(x)>t \right\}\right)=\infty$, then we define $\int f d\mu = \infty.$
+
+Otherwise, assume $\mu\left(\left\{x\colon f(x)>t \right\}\right)<\infty$ for all $t\in(0,\infty)$ and let $F_f(t) = \mu\left(\left\{x\colon f(x)>t \right\}\right)$.  $F_f(t)$ is a monotonically non-increasing function on $(0,\infty)$, therefore its Riemann integral is well defined on any interval $[a,b]\subset (0,\infty)$, so it exists as an improper Riemann integral on $(0,\infty)$.  We define
+$$
+\int f d\mu = \int_0^\infty F_f(t) dt.
+$$
+
+The definition can be extended first to real-valued functions, then complex valued functions as usual.
+
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{lieb} Lieb, E. H., Loss, M., \textsl{Analysis},  AMS, 2001.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

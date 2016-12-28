@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonotoneConvergenceTheorem}
+\pmcreated{2013-03-22 12:47:27}
+\pmmodified{2013-03-22 12:47:27}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{monotone convergence theorem}
+\pmrecord{9}{33106}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28A20}
+\pmsynonym{Lebesgue's monotone convergence theorem}{MonotoneConvergenceTheorem}
+\pmsynonym{Beppo Levi's theorem}{MonotoneConvergenceTheorem}
+\pmrelated{DominatedConvergenceTheorem}
+\pmrelated{FatousLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+Let $X$ be a measure space, and let $0\leq f_1\leq f_2\leq\cdots$ be a monotone increasing sequence of nonnegative measurable functions. Let $f\colon X \to \mathbb{R}\cup \{\infty\}$ be the
+function defined by $f(x) = \lim_{n\rightarrow\infty} f_n(x)$.
+Then $f$ is measurable, and 
+$$\lim_{n\rightarrow\infty} \int_X f_n = \int_X f.$$
+
+\textbf{Remark.} This theorem is the first of several theorems which allow us to ``exchange integration and limits''.  It requires the use of the Lebesgue integral: with the Riemann integral, we cannot even formulate the theorem, lacking, as we do, the concept of ``almost everywhere''.  For instance, the characteristic function of the rational numbers in $[0,1]$ is not Riemann integrable, despite being the limit of an increasing sequence of Riemann integrable functions.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComparisonOfsinthetaAndthetaNeartheta0}
+\pmcreated{2013-03-22 16:58:29}
+\pmmodified{2013-03-22 16:58:29}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{comparison of $\sin \theta$ and $\theta$ near $\theta = 0$}
+\pmrecord{7}{39251}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+\pmclassification{msc}{51N20}
+\pmclassification{msc}{26A06}
+\pmrelated{LimitOfDisplaystyleFracsinXxAsXApproaches0}
+\pmrelated{JordansInequality}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{amsthm}
+\usepackage{pstricks}
+
+\newtheorem{thm*}{Theorem}
+\newtheorem{cor*}{Corollary}
+
+\begin{document}
+\begin{thm*}
+Let $\displaystyle 0< \theta < \frac{\pi}{2}$, where $\theta$ is an angle measured in radians.  Then $\sin \theta<\theta$.
+\end{thm*}
+
+\begin{proof}
+Let $O=(0,0)$, $P=(1,0)$, and $Q=(\cos \theta, \sin \theta)$.  Note that the circle $x^2+y^2=1$ passes through $P$ and $Q$ and that the shortest arc along this circle from $P$ to $Q$ has length $\theta$.  Note also that the line segments $\overline{OP}$ and $\overline{OQ}$ are radii of the circle $x^2+y^2=1$ and therefore must each have length 1.
+
+\begin{center}
+\begin{pspicture}(-1,1)(-2,2)
+\psdots(0,0)(2,0)(1.2,1.6)
+\rput[b](0,-0.5){$O$}
+\rput[b](2,-0.5){$P$}
+\rput[b](1.2,1.6){$Q$}
+\psline(1.2,1.6)(0,0)(2,0)
+\psarc(0,0){0.3}{0}{55.5}
+\rput[l](0.3,0.2){$\theta$}
+\psarc(0,0){2}{0}{55.5}
+\end{pspicture}
+\end{center}
+
+Draw the line segment $\overline{PQ}$.  Since this does not correspond to the arc, its length $\left| \overline{PQ} \right|<\theta$.
+
+\begin{center}
+\begin{pspicture}(-1,1)(-2,2)
+\psdots(0,0)(2,0)(1.2,1.6)
+\rput[b](0,-0.5){$O$}
+\rput[b](2,-0.5){$P$}
+\rput[b](1.2,1.6){$Q$}
+\psline(2,0)(1.2,1.6)(0,0)(2,0)
+\psarc(0,0){0.3}{0}{55.5}
+\rput[l](0.3,0.2){$\theta$}
+\psarc(0,0){2}{0}{55.5}
+\end{pspicture}
+\end{center}
+
+Drop the perpendicular from $Q$ to $\overline{OP}$.  Let $R$ be the point of intersection.  Note that $\left| \overline{OR} \right|=\cos \theta$ and $\left| \overline{QR} \right|=\sin \theta$.
+
+\begin{center}
+\begin{pspicture}(-1,1)(-2,2)
+\psdots(0,0)(2,0)(1.2,1.6)(1.2,0)
+\rput[b](0,-0.5){$O$}
+\rput[b](2,-0.5){$P$}
+\rput[b](1.2,1.6){$Q$}
+\psline(2,0)(1.2,1.6)(0,0)(2,0)
+\psarc(0,0){0.3}{0}{55.5}
+\rput[l](0.3,0.2){$\theta$}
+\psarc(0,0){2}{0}{55.5}
+\psline(1.2,0)(1.2,1.6)
+\rput[b](1.2,-0.5){$R$}
+\end{pspicture}
+\end{center}
+
+Since $\displaystyle 0< \theta <\frac{\pi}{2}$, $0< \sin \theta <1$ and $0< \cos \theta <1$.  Thus, $R \neq Q$ and $R$ lies strictly in between $O$ and $P$.  Therefore, $\left| \overline{PR} \right|>0$.
+
+By the Pythagorean theorem, $\left| \overline{QR} \right|^2+\left| \overline{PR} \right|^2=\left| \overline{PQ} \right|^2$.  Thus, $\left| \overline{QR} \right|^2< \left| \overline{PQ} \right|^2$.  Therefore, $\sin \theta = \left| \overline{QR} \right|< \left| \overline{PQ} \right| < \theta$.
+\end{proof}
+
+The analogous result for $\theta$ slightly below 0 is:
+
+\begin{cor*}
+Let $\displaystyle \frac{-\pi}{2}< \theta <0$, where $\theta$ is an angle measured in radians.  Then $\theta < \sin \theta$.
+\end{cor*}
+
+\begin{proof}
+Since $\displaystyle 0< -\theta < \frac{\pi}{2}$, the previous theorem yields $\sin (-\theta)<-\theta$.  Since $\sin$ is an odd function, $-\sin \theta < -\theta$.  It follows that $\theta < \sin \theta$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

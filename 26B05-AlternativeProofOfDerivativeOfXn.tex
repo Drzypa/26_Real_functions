@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeProofOfDerivativeOfXn}
+\pmcreated{2013-03-22 15:59:31}
+\pmmodified{2013-03-22 15:59:31}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{alternative proof of derivative of $x^n$}
+\pmrecord{12}{38013}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmrelated{DerivativeOfXn}
+\pmrelated{DerivativesByPureAlgebra}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+The typical derivative formula
+
+$$\frac{df}{dx}=\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}$$
+
+combined with the binomial theorem yield an alternative way to prove that
+
+$$ \frac{d}{dx}(x^n)=nx^{n-1}$$
+
+for any positive integer $n$.
+
+\begin{proof}
+\begin{center}
+$\begin{array}{ll}
+\displaystyle \frac{d}{dx}(x^n) & \displaystyle =\lim_{h \to 0}\frac{(x+h)^n-x^n}{h} \\
+& \\
+& \displaystyle =\lim_{h \to 0}\frac{\displaystyle \left( \sum_{j=0}^n {n \choose j} x^j h^{n-j} \right) - x^n}{h}\\
+& \\
+& \displaystyle =\lim_{h \to 0}\frac{\displaystyle x^n+nx^{n-1}h+h^2 \left( \sum_{j=0}^{n-2} {n \choose j} x^j h^{n-2-j} \right) - x^n}{h} \\
+& \\
+& \displaystyle =\lim_{h \to 0}\frac{\displaystyle nx^{n-1}h+h^2 \sum_{j=0}^{n-2} {n \choose j} x^j h^{n-2-j}}{h} \\
+& \\
+& \displaystyle =\lim_{h \to 0} \left( nx^{n-1}+h \sum_{j=0}^{n-2} {n \choose j} x^j h^{n-2-j} \right) \\
+& \\
+& \displaystyle = nx^{n-1} \end{array}$
+\end{center}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

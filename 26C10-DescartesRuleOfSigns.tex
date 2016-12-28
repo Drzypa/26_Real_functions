@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DescartesRuleOfSigns}
+\pmcreated{2013-03-22 14:28:31}
+\pmmodified{2013-03-22 14:28:31}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Descartes' rule of signs}
+\pmrecord{14}{35997}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C10}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Descartes's rule of signs is a method for determining the number of positive or negative roots of a polynomial.
+
+Let $p(x) = \sum_{i=0}^m a_ix^i $ be a polynomial with real coefficients such that $a_m \neq 0$.
+
+Define $v$ to be the number of {\it variations in sign} of the sequence of coefficients $a_m, \ldots, a_0$.  By 'variations in sign' we mean the number of values of $n$ such that the sign of $a_n$ differs from the sign of $a_{n - 1}$, as $n$ ranges from $m$ down to 1.
+
+For example, consider $p(x) = x^2 - 4x + 4$.  The coefficients are $1, -4, 4$, so there are 2 variations in sign (since the sign of $1$ differs from that of $-4$, which in turn differs from that of $4$.)
+
+Then the number of positive real roots of $p(x)$ is $v-2N$ for some integer $N$ satisfying $0 \leq N \leq \frac{v}{2}$.
+
+The number $N$ represents the number of irreducible factors of degree $2$ in the factorization of $p(x)$.  Thus $N=0$ if is known that $p(x)$ splits over the real numbers.
+
+The number of negative roots of $p(x)$ may be obtained by the same method by applying the rule of signs to $p(-x)$.
+
+\subsubsection*{History}
+
+This result is believed to have been first described by R\'{e}n\'{e} Descartes in his 1637 work {\it La G\'eom\'etrie}. In 1828, Carl Friedrich Gauss improved the rule by proving that when there are fewer roots of polynomials than there are variations of sign, the parity of the difference between the two is even.
+
+\subsubsection*{Example}
+
+Let $p(x) = x^3+3x^2-x-3$.  Looking at the list of coefficients, we have $1, 3, -1, -3$, so there is only one variation in sign (from $3$ to $-1$).
+
+Thus $v = 1$.  Since $0 \leq N \leq \frac{1}{2}$ then we must have $N=0$.  Thus $v-2N=1$ and so there is exactly one positive real root of $p(x)$.
+
+To find the negative roots, we examine $p(-x) = -x^3+3x^2+x-3$.  The coefficient list is $-1,3,1,-3$, so here are are two variations in sign (from $-1$ to $3$ and $1$ to $-3$.  Thus $v=2$ and so $0 \leq N \leq \frac{2}{2} = 1$.
+
+Thus we have two possible solutions, $N=0$ and $N=1$, and two possible values of $v-2N$.  Therefore there are either two negative real roots or none at all.
+
+We note that $p(-1)=(-1)^3+3 \cdot (-1)^2-(-1)-3=0$, hence there is at least one negative root.  Therefore there must be exactly two.
+%%%%%
+%%%%%
+\end{document}

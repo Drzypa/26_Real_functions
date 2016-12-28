@@ -1,0 +1,254 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ALectureOnTrigonometricIntegralsAndTrigonometricSubstitution}
+\pmcreated{2013-03-22 15:38:39}
+\pmmodified{2013-03-22 15:38:39}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{A lecture on trigonometric integrals and trigonometric substitution}
+\pmrecord{4}{37576}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmrelated{ALectureOnIntegrationByParts}
+\pmrelated{ALectureOnIntegrationBySubstitution}
+\pmrelated{ALectureOnThePartialFractionDecompositionMethod}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{exe}{Problem}
+\newtheorem*{exe1}{Problem 1}
+\newtheorem*{exe2}{Problem 2}
+\newtheorem*{exe3}{Problem 3}
+\newtheorem*{exe4}{Problem 4}
+
+\theoremstyle{definition}
+\newtheorem{exa}[thm]{Example}
+
+\def\notdiv{\ \mathbin{\mkern-8mu|\!\!\!\smallsetminus}}
+\newcommand{\Qoft}{\mathbb{Q}(T)}  %use in linux
+\newcommand{\done}{\Box} %use in linux
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\peri}{\operatorname{Perimeter}}
+\newcommand{\lc}{\lim_{x\to c}}
+\newcommand{\lzero}{\lim_{x\to 0}}
+\newcommand{\lhzero}{\lim_{h\to 0}}
+\begin{document}
+\section{Trigonometric Integrals}
+
+First, we must recall a few trigonometric identities:
+\begin{eqnarray}
+\sin^2x+\cos^2x &=& 1\\
+\sec^2x &=& 1 + \tan^2 x\\
+\sin^2x &=& \frac{1-\cos (2x)}{2}\\
+\cos^2x &=& \frac{1+\cos(2x)}{2}\\
+\sin(2x) &=& 2\sin x \cos x\\
+\cos(2x) &=& \cos^2x - \sin^2 x.
+\end{eqnarray}
+
+The most usual integrals which involve trigonometric functions can
+be solved using the identities above.
+
+\begin{exa}
+$\int \sin x dx = -\cos x +C$ and $\int \cos x dx = \sin x +C$ are
+immediate integrals.
+\end{exa}
+\begin{exa}
+For $\int \sin^2x dx,\ \int \cos^2x dx$ we use formulas (3) and
+(4) respectively, e.g.
+$$\int \sin^2x dx =\int \frac{1-\cos (2x)}{2} dx = \frac{1}{2}
+\int (1 - \cos(2x)) dx =
+\frac{1}{2}\left(x-\frac{\sin(2x)}{2}\right)+C.$$
+\end{exa}
+\begin{exa}
+\label{combo} For integrals of the form $\int \cos^m x\sin x\ dx$
+or $\int \sin^m x \cos x\ dx$ we use substitution with $u=\cos x$
+or $u=\sin x$ respectively, e.g.
+$$\int \cos^2x \sin x dx = \int -u^2
+du = -\frac{u^3}{3} + C= -\frac{\cos^3 x}{3} +C.\ [u=\cos x,\
+du=-\sin x dx]$$
+\end{exa}
+
+In the following examples, we use equations (1) in the forms
+$\sin^2x=1-\cos^2x$ or $\cos^2x=1-\sin^2x$ to transform the
+integral into one of the type described in Example \ref{combo}.
+
+\begin{exa}
+\begin{eqnarray*}
+\int \sin^3 x dx &=& \int \sin^2x\sin x dx=\int(1-\cos^2 x)\sin x
+dx\\
+&=& \int \sin x dx - \int \cos^2 x \sin x dx\\
+&=& -\cos x + \frac{\cos^3 x}{3} + C.
+\end{eqnarray*}
+Similarly one can solve $\int \cos^3 x dx$.
+\end{exa}
+\begin{exa}
+\begin{eqnarray*}
+\int \cos^3x\sin^2 x dx &=& \int \cos^2 x \cos x \sin^2x dx = \int
+(1-\sin^2x)\cos x \sin^2 x dx\\
+&=& \int \cos x \sin^2 x dx - \int \cos x \sin^4 x dx\\
+&=& \frac{\sin^3 x}{3} - \frac{\sin^5 x}{5} + C.
+\end{eqnarray*}
+\end{exa}
+\begin{exa}
+In order to solve $\int \cos^5 x \sin^3 x dx$ we express it first
+as $\int \cos^5x \sin^2 x \sin x=\int \cos^5 x (1-\cos^2x)\sin x
+dx$ and then proceed as in the previous example.
+\end{exa}
+One can use similar tricks to solve integrals which involve
+products of powers of $\sec x $ and $\tan x$, by using Equation
+(2). Also, recall that the derivative of $\tan x$ is $\sec^2 x$
+while the derivative of $\sec x$ is $\sec x \tan x$.
+\begin{exa}
+\begin{eqnarray*}
+\int \tan^5x\sec^4 x dx &=& \int \tan^5 x \sec^2 x \sec^2x dx =
+\int
+\tan^5 x(1+\tan^2x)\sec^2 x dx\\
+&=& \int \tan^5 x \sec^2 x dx + \int \tan^7 x \sec^2 x dx\\
+&=& \frac{\tan^6 x}{6} + \frac{\tan^8 x}{8} + C.
+\end{eqnarray*}
+\end{exa}
+\begin{exa}
+\begin{eqnarray*}
+\int \tan^3x\sec^4 x dx &=& \int \tan x \tan^2 x \sec^4x dx = \int
+\tan x(\sec^2x-1)\sec^4 x dx\\
+&=& \int \tan x \sec x \sec^5 x dx - \int \tan x \sec x\sec^3 x dx\\
+&=& \frac{\sec^6 x}{6} - \frac{\sec^4 x}{4} + C.
+\end{eqnarray*}
+\end{exa}
+
+\section{Trigonometric Substitutions}
+
+One can easily deduce that $\int_0^1 \sqrt{1-x^2}dx$ has value
+$\frac{\pi}{4}$. Why? Simply because the graph of the function
+$y=\sqrt{1-x^2}$ is half a circumference of radius $r=1$ (because
+if you square both sides of $y=\sqrt{1-x^2}$ you obtain
+$x^2+y^2=1$ which is the equation of a circle or radius $r=1$).
+Therefore, the area under the graph is a quarter of the area of a
+circle.
+
+How does one compute $\int_0^1 \sqrt{1-x^2} dx$ without using the
+geometry of the problem? This is the prototype of integral where a
+trigonometric substitution will work very nicely. Notice that
+neither substitution nor integration by parts will work
+appropriately.
+
+\begin{exa}
+Suppose we want to solve $\int_0^1 \sqrt{1-x^2}dx$ with analytic
+methods. We will use a substitution $x=\sin \theta$ (so $\theta$
+will be our new variable of integration), because, as we know from
+Equation (1), $\sqrt{1-x^2}=\sqrt{1-\sin^2 \theta}=\cos \theta$,
+thus getting rid of the pesky square root. Notice that
+$dx=\cos\theta d\theta$. We also need to find the new limits of
+integration with respect to the new variable of integration,
+namely $\theta$. When $x=0=\sin\theta$ we must have $\theta=0$.
+Similarly, when $x=1=\sin\theta$ one has $\theta=\pi/2$. We are
+now ready to integrate:
+\begin{eqnarray*}
+\int_0^1 \sqrt{1-x^2}dx &=& \int_0^{\pi/2} (\cos \theta)\cos
+\theta
+d\theta=\int_0^{\pi/2} \cos^2 \theta d\theta\\
+&=& \int_0^{\pi/2} \frac{1+\cos(2\theta)}{2}d\theta =
+\frac{1}{2}\left(\theta+\frac{\sin(2\theta)}{2}\right)_0^{\pi/2}=\pi/4.
+\end{eqnarray*}
+Notice that we made use of Equation (4) in the second line.
+\end{exa}
+\begin{exa}
+Similarly, one can solve $\int_0^r\sqrt{r^2 - x^2}dx$ by using a
+substitution $x=r\sin\theta$. Indeed,
+$\sqrt{r^2-x^2}=\sqrt{r^2-r^2\sin^2 \theta}=r\cos \theta$ and
+$dx=r\cos\theta d\theta$. The limits of integration with respect
+to $\theta$ are again $\theta=0$ to $\theta=\pi/2$ (check this!).
+Thus:
+\begin{eqnarray*}
+\int_0^r \sqrt{r^2-x^2}dx &=& \int_0^{\pi/2} r^2(\cos \theta)\cos
+\theta
+d\theta=r^2\int_0^{\pi/2} \cos^2 \theta d\theta\\
+&=& r^2\int_0^{\pi/2} \frac{1+\cos(2\theta)}{2}d\theta =
+\frac{r^2}{2}\left(\theta+\frac{\sin(2\theta)}{2}\right)_0^{\pi/2}=r^2\pi/4.
+\end{eqnarray*}
+Thus, we have proved that a quarter of a circle of radius $r$ has
+area $r^2\pi/4$ which implies that the area of such a circle is
+$\pi r^2$, as usual.
+\end{exa}
+
+The trigonometric substitutions {\it usually} work when
+expressions like $\sqrt{r^2-x^2}$, $\sqrt{r^2+x^2}$,
+$\sqrt{x^2-r^2}$ appear in the integral at hand, for some real
+number $r$. Here is a table of the suggested change of variables
+in each particular case:\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  {\it If you see...} & {\it try this...} & {\it because...} \\
+  \hline
+  $\sqrt{1-x^2}$ & $x=\sin \theta$ & $\sqrt{1-\sin^2\theta}=\cos \theta$ \\
+  $\sqrt{r^2-x^2}$ & $x=r\sin\theta$ & $\sqrt{r^2-\sin^2\theta}=r\cos\theta$ \\
+  $\sqrt{1+x^2}$ & $x=\tan \theta$ & $\sqrt{1+\tan^2\theta}=\sec \theta$ \\
+  $\sqrt{r^2+x^2}$ & $x=r\tan\theta$ & $\sqrt{r^2+\tan^2\theta}=r\sec\theta$ \\
+  $\sqrt{x^2-1}$ & $x=\sec \theta$ & $\sqrt{\sec^2\theta-1}=\tan \theta$ \\
+  $\sqrt{x^2-r^2}$ & $x=r\sin\theta$ & $\sqrt{\sec^2\theta-1}=r\tan\theta$ \\
+  \hline
+\end{tabular}
+\end{center}
+
+\begin{remark}
+The above are ``suggested'' substitutions, they may not be the
+most ideal choice! For example, for the integral $\int
+2x\sqrt{1-x^2}dx$, the change $u=1-x^2$ will work much better than
+$x=\sin \theta$.
+\end{remark}
+
+\begin{exa}
+We would like to find the value of
+$$\int_{\sqrt{2}}^2 \frac{1}{x^3\sqrt{x^2-1}} dx.$$
+Since neither a $u$-substitution nor integration by parts seem
+appropriate, we try $x=\sec \theta$, $dx=\sec\theta \tan \theta
+d\theta$. When $x=\sqrt{2}=\sec\theta$ one has $\theta=\pi/4$
+while $x=2$ implies $\theta=\pi/3$. Hence:
+\begin{eqnarray*}\int_{\sqrt{2}}^2 \frac{1}{x^3\sqrt{x^2-1}} dx &=&
+\int_{\pi/4}^{\pi/3} \frac{\sec\theta \tan\theta}{\sec^3\theta
+\tan\theta} d\theta = \int_{\pi/4}^{\pi/3}
+\frac{1}{\sec^2\theta}d\theta=\int_{\pi/4}^{\pi/3} \cos^2 \theta
+d\theta
+\end{eqnarray*}
+and the last integral is easy to compute using Equation (4).
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

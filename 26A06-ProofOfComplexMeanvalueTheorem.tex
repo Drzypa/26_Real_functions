@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfComplexMeanvalueTheorem}
+\pmcreated{2013-03-22 14:34:39}
+\pmmodified{2013-03-22 14:34:39}
+\pmowner{Wolfgang}{5320}
+\pmmodifier{Wolfgang}{5320}
+\pmtitle{proof of complex mean-value theorem}
+\pmrecord{21}{36136}
+\pmprivacy{1}
+\pmauthor{Wolfgang}{5320}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\def\Re{\operatorname{Re}}
+\def\Im{\operatorname{Im}}
+The function $h(t)=\Re \frac{f(a+t(b-a))-f(a)}{b-a}$ is a function defined on [0,1].
+We have $h(0)=0$ and $h(1)=\Re\frac{f(b)-f(a)}{b-a}$.
+By the ordinary mean-value theorem, there is a number $t$, $0<t<1$, such that $h'(t)=h(1)-h(0)$.
+To evaluate $h'(t)$, we use the assumption that $f$ is complex differentiable (holomorphic). The derivative of $\frac{f(a+t(b-a))-f(a)}{b-a}$ is equal to $f'(a+t(b-a))$, then $h'(t) =\Re(f'(a+t(b-a)))$, so $u=a+t(b-a)$ satisfies the required equation.
+The proof of the second assertion can be deduced from the result just proved by applying it to the function f multiplied by i.
+%%%%%
+%%%%%
+\end{document}

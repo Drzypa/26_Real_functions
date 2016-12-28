@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BriggsianLogarithms}
+\pmcreated{2013-03-22 16:39:37}
+\pmmodified{2013-03-22 16:39:37}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Briggsian logarithms}
+\pmrecord{15}{38865}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26-00}
+\pmclassification{msc}{65A05}
+\pmclassification{msc}{01-08}
+\pmsynonym{decadic logarithms}{BriggsianLogarithms}
+\pmsynonym{common logarithms}{BriggsianLogarithms}
+\pmsynonym{lg}{BriggsianLogarithms}
+%\pmkeywords{logarithm tables}
+\pmrelated{RationalBriggsianLogarithmsOfIntegers}
+\pmrelated{LimitOfRealNumberSequence}
+\pmdefines{mantissa}
+\pmdefines{characteristic}
+\pmdefines{numerus}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{places} \PMlinkescapeword{unit} \PMlinkescapeword{join}
+\PMlinkescapeword{point} \PMlinkescapeword{right} \PMlinkescapeword{units}
+
+The {\em Briggsian logarithm} of a positive number $a$ is the logarithm of $a$ in the base 10, i.e. $\log_{10}{a}$, nowadays denoted by $\lg{a}$ (probably from the Latin ``\PMlinkname{logarithmus generalis}{TermsFromForeignLanguagesUsedInMathematics}'').\, The \PMlinkescapetext{term} is due to Henry Briggs (1561--1630).\, Before the electronic calculators and computers the tabulated values of logarithms were used for performing laborious numerical calculations (multiplications, divisions, powers, roots).\, E.g. in the high schools of Finland, the use of logarithm tables was teached still in the begin of the 1970s.
+
+There was several wide tables of Briggsian logarithms, e.g. the well-known five-place tables of Ho\"uel and Voellmy.\, Since the logarithms of rational numbers are mostly irrational, the logarithms in the tables are in general approximate values.
+
+Because
+$$\lg{10a} = \lg{a}+\lg{10} = \lg{a}+1, 
+\quad \lg\frac{a}{10} = \lg{a}-\lg{10} = \lg{a}-1,$$
+moving the decimal point one step to the right resp. to the left increases resp. decreases the Briggsian logarithm by the integer value 1; the decimals of the logarithm do not alter.\, Thus the tables give only the decimals of the logarithms of positive integers.\, For example, the table gives for the logarithm of 8322 only the five decimals 92023.\, Since\, $\lg{1} = 0$,\,  $\lg{10} = 1$\, and the logarithm function is increasing, we can infer that
+$$\lg{8322} \approx 0.92023\!+\!3$$
+$$\lg{832.2} \approx 0.92023\!+\!2$$
+$$\lg{83.22} \approx 0.92023\!+\!1$$
+$$\lg{8.322} \approx 0.92023$$
+$$\lg{0.8322} \approx 0.92023\!-\!1$$
+$$\lg{0.08322} \approx 0.92023\!-\!2$$
+$$\lg{0.008322} \approx 0.92023\!-\!3$$
+
+When one expresses logarithms of numbers as sum and difference in the way as above, the decimal part is called the {\em mantissa} and the integer part the {\em characteristic} of the logarithm.\, A positive caracteristic is joined to the mantissa (e.g. 3.92023), but a negative characteristic is held apart (e.g. $0.92023\!-\!3$).
+
+It's clear that the mantissa of the logarithm of a number does not depend on the position of the decimal point in the number.\, For obtaining the logarithm of a number from the table, one may drop the decimal point away and seek for the gotten integer the the mantissa of its logarithm.\, Then one deduces the characteristic for the logarithm of the initial number.\\
+
+\textbf{Example.}\, Determine $\sqrt[3]{63.873}$ as accurately as possible using five-place decadic logarithms.\, We use the \PMlinkescapetext{formula}
+$$\log\sqrt[3]{a} = \log{(a^\frac{1}{3})} = \frac{1}{3}\log{a}.$$
+
+We don't find in the table so big numerus as 63873; therefore we take first the mantissa corresponding the numerus 6387, it is 0.80530.\, The next mantissa, corresponding 6388, is 0.80536.\, The difference of both mantissae is thus 6 units of the last decimal \PMlinkescapetext{place}, and we could interpolate for getting the last mantissa decimal corresponding the numerus 63873.\, For such interpolations there is on the same table page the auxiliary table P.P. (`partes proportionales') titled ``6''; it gives for 3 the value 2 to be added to the last decimal \PMlinkescapetext{place}.\, So we have
+\begin{align}
+\lg{63.873} \approx 1.80532,
+\end{align}
+where the charactesistic 1 is infered from the fact that 63.873 is between 10 and 100.\, Then the logarithm of the cube root is obtained by dividing (1) by 3:
+$$\lg{\sqrt[3]{63.87}} \approx 0.60177$$
+The mantissa digits 60177 are not found in the table, the most nearest are 60173 and 60184 which correspond the numeri 3997 and 3998.\, The P.P. table titled ``11'' tells that we must join 4 to the end of 3997 (since\, 
+$60177\!-\!60173 = 4)$.\, Thus we have got the result
+$$\sqrt[3]{63.873} \approx 3.9974.$$
+This is the most accurate value with five places.
+
+
+\begin{thebibliography}{9}
+\bibitem{VA}{\sc K. V\"ais\"al\"a:} {\em Algebran oppi- ja esimerkkikirja II.  Pitempi kurssi}.\, Werner S\"oderstr\"om osakeyhti\"o, Porvoo \& Helsinki. Nelj\"as painos (1956).
+\bibitem{Houel}{\sc G. J. Ho\"uel:} ``{\em Tables de logarithmes \`a cinq d\'ecimales pour les nombres et les lignes trigonom\'etriques...}''.\, Gauthier-Villars, Paris. S\'econd \'edition (1864).
+\bibitem{Voellmy}{\sc E. Voellmy}: ``{\em F\"unfstellige Logarithmen und Zahlentafeln f\"ur die 90$^o$-Teilung des rechten Winkels}''.\, Orell F\"ussli Verlag, Z\"urich. Vierzehnte Auflage (1962).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

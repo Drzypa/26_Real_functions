@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HigherOrderDerivatives}
+\pmcreated{2013-03-22 16:46:30}
+\pmmodified{2013-03-22 16:46:30}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{higher order derivatives}
+\pmrecord{7}{39004}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmrelated{HigherOrderDerivativesOfSineAndCosine}
+\pmrelated{TaylorSeriesOfHyperbolicFunctions}
+\pmdefines{derivative function}
+\pmdefines{first derivative}
+\pmdefines{second derivative}
+\pmdefines{order of derivative}
+\pmdefines{differentiation}
+\pmdefines{differentiate}
+\pmdefines{twice differentiable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{order} 
+
+Let the real function $f$ be defined and differentiable on the open interval $I$.\, Then for every\, $x \in I$,\, there exists the value $f'(x)$ as a certain real number.\, This means that we have a new function
+\begin{align}
+x \mapsto f'(x),
+\end{align}
+the so-called {\em derivative function} of $f$; it is denoted by 
+$$f':\, I\to \mathbb{R}$$
+or simply $f'$.
+
+Forming the derivative function of a function is called {\em differentiation}, the corresponding verb is {\em differentiate}.
+
+If the derivative function $f'$ is differentiable on $I$, then we have again a new function, the derivative function of the derivative function of $f$, which is denoted by $f''$.\, Then $f$ is said to be \emph{twice differentiable}.\, Formally,
+$$f''(x) = \lim_{h\to 0}\frac{f'(x+h)-f'(x)}{h}\quad \mathrm{for\,all\,}\,x\in I.$$
+The function\, $x\mapsto f''(x)$\, is called the \PMlinkescapetext{{\em second order derivative}} or {\em the second derivative} of $f$.\, Similarly, one can call (1) the \PMlinkescapetext{{\em first (order) derivative}} of $f$.
+
+\textbf{Example.}\, The first derivative of\, $x\mapsto x^3$\, is\, $x\mapsto 3x^2$\, and the second derivative is\, $x\mapsto 6x$,\, since
+$$\frac{d}{dx}(3x^2) = 2\cdot 3x^{2-1} = 6x.$$
+
+If also $f''$ is a differentiable function, its derivative function is denoted by $f'''$ and called the \PMlinkescapetext{{\em third (order) derivative}} of $f$, and so on.
+
+Generally, $f$ can have the derivatives of first, second, third, \ldots, $n$th order, where $n$ may be an arbitrarily big positive integer.\, If $n$ is four or greater, the $n$th derivative of $f$ is usually denoted by $f^{(n)}$.\, In \PMlinkescapetext{addition}, it's sometimes convenient to think that the $0${\em th order derivative} $f^{(0)}$ of $f$ is the function $f$ itself.
+
+The phrase ``$f$ is infinitely differentiable'' means that $f$ has the derivatives of all \PMlinkescapetext{orders}.
+%%%%%
+%%%%%
+\end{document}

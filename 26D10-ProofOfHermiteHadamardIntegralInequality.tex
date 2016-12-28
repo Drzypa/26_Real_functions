@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHermiteHadamardIntegralInequality}
+\pmcreated{2013-03-22 16:59:22}
+\pmmodified{2013-03-22 16:59:22}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Hermite-Hadamard integral inequality}
+\pmrecord{7}{39269}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D10}
+\pmclassification{msc}{26D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+First of all, let's recall that a convex function on a open
+interval $(a,b)$ is continuous on $(a,b)$ and admits left and right
+derivative $f^{+}(x)$ and $f^{-}(x)$ for any $x\in (a,b)$. For this reason,
+it's always possible to construct at least one \PMlinkname{supporting line}{ConvexFunctionsLieAboveTheirSupportingLines} for $f\left(
+x\right) $ at any $x_{0}\in (a,b)$ : if  $f\left( x_{0}\right) $ is
+differentiable in $x_{0}$, one has $r(x)=f\left( x_{0}\right) +f^{\prime
+}\left( x_{0}\right) \left( x-x_{0}\right) $; if not, it's obvious that all $%
+r(x)=f\left( x_{0}\right) +c\left( x-x_{0}\right) $ are supporting lines for
+any $c\in \lbrack f^{-}(x_{0}),f^{+}(x_{0})]$.\\
+Let now $r(x)=f\left( \frac{a+b}{2}\right) +c\left( x-\frac{a+b}{2}%
+\right) $ be a supporting line of $f(x)$ in $x=\frac{a+b}{2}\in (a,b)$.
+Then, $r\left( x\right) \leq f\left( x\right) $. On the other side, by
+convexity definition, having defined $s\left( x\right) =f\left( a\right) +%
+\frac{f(b)-f(a)}{b-a}(x-a)$ the line connecting the points $(a,f(a))$ and $%
+(b,f(b))$ , one has $f(x)\leq s(x)$. Shortly,%
+\[
+r\left( x\right) \leq f\left( x\right) \leq s(x)
+\]
+Integrating both inequalities between $a$ and $b$
+\[
+\int_{a}^{b}r\left( x\right) dx\leq \int_{a}^{b}f\left( x\right) dx\leq
+\int_{a}^{b}s(x)dx 
+\]
+\begin{eqnarray*}
+&&\int_{a}^{b}r\left( x\right) dx \\
+&=&\int_{a}^{b}\left[ f\left( \frac{a+b}{2}\right) +c\left( x-\frac{a+b}{2}%
+\right) \right] dx \\
+&=&f\left( \frac{a+b}{2}\right) (b-a)+c\int_{a}^{b}\left( x-\frac{a+b}{2}%
+\right) dx \\
+&=&f\left( \frac{a+b}{2}\right) (b-a) \\
+&& \\
+&&\int_{a}^{b}s(x)dx \\
+&=&\int_{a}^{b}\left[ f\left( a\right) +\frac{f(b)-f(a)}{b-a}(x-a)\right] dx
+\\
+&=&f(a)(b-a)+\frac{f(b)-f(a)}{b-a}\int_{a}^{b}(x-a)dx \\
+&=&\frac{f(a)+f(b)}{2}(b-a)
+\end{eqnarray*}
+and so%
+\[
+f\left( \frac{a+b}{2}\right) (b-a)\leq \int_{a}^{b}f\left( x\right) dx\leq 
+\frac{f(a)+f(b)}{2}(b-a) 
+\]
+which is the thesis.
+%%%%%
+%%%%%
+\end{document}

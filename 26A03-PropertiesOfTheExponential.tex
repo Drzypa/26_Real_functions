@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfTheExponential}
+\pmcreated{2013-03-22 12:30:02}
+\pmmodified{2013-03-22 12:30:02}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{properties of the exponential}
+\pmrecord{15}{32731}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A03}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+The exponential operation possesses the following properties.  
+\begin{itemize}
+\item \PMlinkescapetext{{\bf  Homogeneity.}} For $x,y\in\reals^+, p\in \reals$ we have
+$$(xy)^p = x^p y^p$$
+\item \PMlinkescapetext{{\bf Exponent additivity.}} For $x\in\reals^+$ we have
+$$x^0=1,\quad x^1 = x,\quad x^{p+q} = x^p x^q,\quad (x^p)^q=x^{pq}\qquad p,q\in\reals.$$
+\item \PMlinkname{\bf Monotonicity.}{TotalOrder}  For $x,y\in\reals^+$ with $x<y$
+  and $p\in \reals^+$ we have
+  $$x^p < y^p,\qquad x^{-p} > y^{-p}.$$
+\item {\bf Continuity.}
+The exponential operation is continuous with respect to its
+arguments. To be more precise, the following function is continuous:
+$$P:\reals^+\times\reals\rightarrow \reals,\qquad P(x,y)=x^y.$$
+\end{itemize}
+Let us also note that the exponential operation is characterized (in
+the sense of existence and uniqueness) by the {\em additivity} and
+{\em continuity} properties.  [{\bf Author's note}: One can probably get away with
+substantially less, but I haven't given this enough thought.]
+%%%%%
+%%%%%
+\end{document}

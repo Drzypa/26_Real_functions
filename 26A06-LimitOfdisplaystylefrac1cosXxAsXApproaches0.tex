@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitOfdisplaystylefrac1cosXxAsXApproaches0}
+\pmcreated{2013-03-22 16:58:49}
+\pmmodified{2013-03-22 16:58:49}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{limit of $\displaystyle \frac{1-\cos x}{x}$ as $x$ approaches 0}
+\pmrecord{7}{39256}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A03}
+\pmrelated{DerivativesOfSinXAndCosX}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem{cor*}{Corollary}
+\begin{document}
+\begin{cor*}
+\[
+\lim_{x \to 0} \frac{1-\cos x}{x}=0
+\]
+\end{cor*}
+
+\begin{proof}
+
+\begin{center}
+\begin{tabular}{rl}
+$\displaystyle \lim_{x \to 0} \frac{1-\cos x}{x}$ & $=\displaystyle \lim_{x \to 0} \frac{(1-\cos x)(1+\cos x)}{x(1+\cos x)}$ \\
+& \\
+& $=\displaystyle \lim_{x \to 0} \frac{1-\cos x+\cos x-\cos^2 x}{x(1+\cos x)}$ \\
+& \\
+& $=\displaystyle \lim_{x \to 0} \frac{1-\cos^2 x}{x(1+\cos x)}$ \\
+& \\
+& $=\displaystyle \lim_{x \to 0} \frac{\sin^2 x}{x(1+\cos x)}$ \\
+& \\
+& $=\displaystyle \lim_{x \to 0} \frac{\sin x}{x} \cdot \frac{\sin x}{1+\cos x}$ \\
+& \\
+& $=\displaystyle \left( \lim_{x \to 0} \frac{\sin x}{x} \right) \left( \lim_{x \to 0} \frac{\sin x}{1+\cos x} \right)$ by \PMlinkname{this entry}{LimitRulesOfFunctions} \\
+& \\
+& $=\displaystyle 1 \cdot \lim_{x \to 0} \frac{\sin x}{1+\cos x}$ by \PMlinkname{this entry}{LimitOfDisplaystyleFracsinXxAsXApproaches0} \\
+& \\
+& $=\displaystyle \frac{\sin 0}{1+\cos 0}$ by \PMlinkname{this entry}{LimitRulesOfFunctions} and the fact that $\sin$ and $\cos$ are continuous \\
+& \\
+& $=\displaystyle \frac{0}{1+1}$ \\
+& \\
+& $=0$ \qedhere
+\end{tabular}
+\end{center}
+\end{proof}
+
+This corollary has an obvious corollary to it:
+
+\begin{cor*}
+\[
+\lim_{x \to 0} \frac{\cos x-1}{x}=0
+\]
+\end{cor*}
+%%%%%
+%%%%%
+\end{document}

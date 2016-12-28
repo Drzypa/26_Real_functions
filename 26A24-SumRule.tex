@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumRule}
+\pmcreated{2013-03-22 12:28:09}
+\pmmodified{2013-03-22 12:28:09}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{sum rule}
+\pmrecord{8}{32637}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmrelated{Derivative}
+\pmrelated{ProductRule}
+\pmrelated{FixedPointsOfNormalFunctions}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\D}[1]{\ensuremath{\mathrm{d}#1}}
+\newcommand{\DDX}{\ensuremath{\frac{\D{}}{\D{x}}}}
+\begin{document}
+\PMlinkescapeword{states}
+
+The \emph{sum rule} states that
+
+\begin{equation*}
+\DDX\left[f(x)+g(x)\right] = f'(x) + g'(x)
+\end{equation*}
+
+\subsubsection*{Proof}
+
+See the \PMlinkname{proof of the sum rule}{ProofOfSumRule}.
+
+\subsubsection*{Examples}
+
+\begin{eqnarray*}
+\DDX(x + 1) & = & \DDX x + \DDX 1 = 1 \\
+\DDX(x^2 - 3x + 2) & = & \DDX x^2 + \DDX(-3x) + \DDX(2) = 2x-3 \\
+\DDX(\sin x + \cos x) & = & \DDX\sin x + \DDX\cos x = \cos x - \sin x
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

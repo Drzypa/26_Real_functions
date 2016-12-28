@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InequalitiesForDifferencesOfPowers}
+\pmcreated{2013-03-22 15:48:42}
+\pmmodified{2013-03-22 15:48:42}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{inequalities for differences of powers}
+\pmrecord{11}{37776}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D99}
+\pmrelated{BernoullisInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Oftentimes, one needs to estimate differences of powers of real numbers.
+The following inequalities are useful for this purpose:
+\[ n (u-v) v^{n-1} < u^n - v^n < n (u-v) u^{n-1} \]
+\[ n x \le (1 + x)^n - 1 \]
+\[ (1 + x)^n - 1 \le { n x \over 1 - (n - 1) x} \]
+
+Here $n$ is an integer greater than 1.
+The first inequality holds when $0 < v < u$, the second inequality holds
+when $-1 < x $, and the third inequality holds when $-1 < x < 1/(n-1)$.
+Equality can only occur in the latter two inequalities when $x = 0$.
+%%%%%
+%%%%%
+\end{document}

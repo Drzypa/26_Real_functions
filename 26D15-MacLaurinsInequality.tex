@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MacLaurinsInequality}
+\pmcreated{2013-03-22 13:19:28}
+\pmmodified{2013-03-22 13:19:28}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{MacLaurin's inequality}
+\pmrecord{7}{33835}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+%\pmkeywords{Young's Inequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $a_1,a_2,\ldots,a_n$ be positive real numbers , and define the sums
+$S_k$ as follows :
+$$ S_k = \frac{\displaystyle \sum_{ 1\leq i_1 < i_2 < \cdots < i_k \leq n}a_{i_1} a_{i_2}
+\cdots a_{i_k}}{\displaystyle {n \choose k}}$$
+Then the following chain of
+inequalities is true :
+$$ S_1 \geq \sqrt{S_2} \geq \sqrt[3]{S_3} \geq \cdots \geq \sqrt[n]{S_n}$$
+\textbf{Note} : $S_k$ are called the averages of the elementary symmetric sums
+\\ This inequality is in fact important because it shows that the arithmetic-geometric mean inequality is nothing but a consequence of a chain of stronger inequalities
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaFunctions}
+\pmcreated{2013-03-22 14:21:18}
+\pmmodified{2013-03-22 14:21:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{area functions}
+\pmrecord{38}{35834}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmsynonym{inverse hyperbolic functions}{AreaFunctions}
+\pmrelated{UnitHyperbola}
+\pmrelated{CyclometricFunctions}
+\pmrelated{HyperbolicAngle}
+\pmrelated{IntegralTables}
+\pmrelated{IntegrationOfSqrtx21}
+\pmrelated{IntegralRelatedToArcSine}
+\pmrelated{ArcLengthOfParabola}
+\pmrelated{ListOfImproperIntegrals}
+\pmrelated{InverseGudermannianFunction}
+\pmrelated{EulersSubstitutionsForIntegration}
+\pmrelated{ArcoshCurve}
+\pmrelated{EqualArcLength}
+\pmdefines{arsinh}
+\pmdefines{arcosh}
+\pmdefines{artanh}
+\pmdefines{arcoth}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arcoth}{arcoth}
+\begin{document}
+The most usual {\em area functions}:
+
+\begin{itemize}
+ \item The inverse function of the hyperbolic sine (in Latin {\em sinus hyperbolicus}) is $\arsinh$ ({\em area sini hyperbolici}):
+          $$\arsinh{x} := \ln{(x+\sqrt{x^2+1})}$$
+
+ \item The inverse function of the hyperbolic cosine (in Latin {\em cosinus hyperbolicus}) is $\arcosh$ ({\em area cosini hyperbolici}):
+          $$\arcosh{x} := \ln(x+\sqrt{x^2-1})$$
+It is defined for\, $x \geqq 1$.
+
+ \item The inverse function of the hyperbolic tangent (in Latin {\em tangens hyperbolica}) is $\artanh$ ({\em area tangentis hyperbolicae}):
+          $$\artanh{x} := \frac{1}{2}\ln \frac{1+x}{1-x}$$
+It is defined for\, $-1 < x < 1$.
+
+\item The inverse function of the hyperbolic cotangent (in Latin {\em cotangens hyperbolica}) is $\arcoth$ ({\em area cotangentis hyperbolicae}):
+          $$\arcoth{x} := \frac{1}{2}\ln \frac{x+1}{x-1}$$
+It is defined for\, $|x| > 1$.
+
+\end{itemize}
+
+These four functions are denoted also by $\sinh^{-1}x$, $\cosh^{-1}x$, $\tanh^{-1}x$ and $\coth^{-1}x$.
+
+Derivatives:
+    $$\frac{d}{dx} \arsinh x = \frac{1}{\sqrt{x^2\!+\!1}}$$
+    $$\frac{d}{dx} \arcosh x = \frac{1}{\sqrt{x^2\!-\!1}}$$
+    $$\frac{d}{dx} \artanh x = \frac{1}{1\!-\!x^2}$$
+    $$\frac{d}{dx} \arcoth x = \frac{1}{1\!-\!x^2}$$
+
+The functions\, $\arsinh$\, and\, $\artanh$\, have the \PMlinkescapetext{simple} Taylor series
+   $$\arsinh{x} = x-\frac{1}{2}\!\cdot\!\frac{x^3}{3}
++\frac{1\!\cdot\!3}{2\!\cdot\!4}\!\cdot\!\frac{x^5}{5}
+-\frac{1\!\cdot\!3\!\cdot\!5}{2\!\cdot\!4\cdot\!6}\!\cdot\!\frac{x^7}{7}
++-\cdots\quad (|x|\leqq 1),$$
+   $$\artanh x = x+\frac{x^3}{3}+\frac{x^5}{5}+\frac{x^7}{7}+\cdots 
+\quad (|x| < 1).$$
+Because the inverse tangent function (see the cyclometric functions) has the \PMlinkescapetext{expansion}
+\, $\arctan x = x-\frac{x^3}{3}+\frac{x^5}{5}-\frac{x^7}{7}+-\cdots\,\, 
+(|x|\leqq 1)$,
+ we see that
+   $$\artanh x = \frac{1}{i}\arctan ix;$$
+similarly we get
+   $$\arsinh x = \frac{1}{i}\arcsin ix.$$ 
+Some other formulae which may be obtained by means of the addition formulae of the hyperbolic functions:
+  $$\arsinh x\pm\arsinh y = \arsinh(x\sqrt{y^2\!+\!1}\pm y\sqrt{x^2\!+\!1})$$
+  $$\arcosh x\pm\arcosh y = \arcosh(xy\pm\sqrt{x^2\!-\!1}\sqrt{y^2\!-\!1})$$
+  $$\artanh x\pm\artanh y = \artanh\frac{x\pm y}{1\pm xy}$$
+
+The classic abbreviations ``$\arsinh$'' and ``$\arcosh$'' are explained as follows:\, The unit hyperbola\, $x^2\!-\!y^2 = 1$\,(its right half) has the parametric \PMlinkescapetext{representation}
+\[\begin{cases}       
+        x = \cosh A,\\
+        y = \sinh A;
+\end{cases}\]
+here $A$ means the area \PMlinkescapetext{bounded} by the hyperbola and the straight line segments $OP$ and $OQ$, where $O$ is the origin, $P$ is the point \,$(x,\,y)$\, of the hyperbola and $Q$ is the point\, $(x,\,-y)$\, of the hyperbola.\, Thus, conversely, $A$ is the area having hyperbolic cosine equal to $x$ ({\em area cosini hyperbolici x}), similarly $A$ is the area having hyperbolic sine equal to $y$ ({\em area sini hyperbolici y}).
+
+{\bf Note.}\, In some countries the abbreviation ``ar'' in the symbols arsinh etc. is replaced by\, ``a'', ``Ar'', ``arc'' or ``arg''.
+%%%%%
+%%%%%
+\end{document}

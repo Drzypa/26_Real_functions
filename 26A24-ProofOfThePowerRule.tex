@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfThePowerRule}
+\pmcreated{2013-03-22 12:28:06}
+\pmmodified{2013-03-22 12:28:06}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of the power rule}
+\pmrecord{9}{32631}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A24}
+\pmrelated{ProductRule}
+\pmrelated{Derivative2}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\D}[1]{\ensuremath{\mathrm{d}#1}}
+\newcommand{\DDX}{\ensuremath{\frac{\D{}}{\D{x}}}}
+\begin{document}
+The power rule can be derived by repeated application of the product rule.
+
+\subsubsection*{Proof for all positive integers $n$}
+
+The power rule has been shown to hold for $n = 0$ and $n = 1$.
+If the power rule is known to hold for some $k > 0$, then we have
+
+\begin{eqnarray*} 
+\DDX x^{k+1}
+& = & \DDX (x\cdot x^k) \\
+& = & x\left(\DDX x^k\right) + x^k \\
+& = & x\cdot(kx^{k-1}) + x^k \\
+& = & kx^k + x^k \\
+& = & (k + 1)x^k
+\end{eqnarray*}
+
+Thus the power rule holds for all positive integers $n$.
+
+\subsubsection*{Proof for all positive rationals $n$}
+
+Let $y = x^{p/q}$.  We need to show
+
+\begin{equation}
+\frac{\D{y}}{\D{x}}(x^{p/q}) = \frac{p}{q}x^{p/q-1} \label{prat}
+\end{equation}
+
+The proof of this comes from implicit differentiation.
+
+By definition, we have $y^q = x^p$.  We now take the derivative with respect to $x$ on both sides of the equality.
+
+\begin{eqnarray*}
+\DDX y^q & = & \DDX x^p \\ 
+\frac{\D{}}{\D{y}}(y^q)\frac{\D{y}}{\D{x}} & = & px^{p-1} \\
+qy^{q-1}\frac{\D{y}}{\D{x}} & = & px^{p-1} \\
+\frac{\D{y}}{\D{x}} & = & \frac{p}{q}\frac{x^{p-1}}{y^{q-1}} \\
+&=& \frac{p}{q}x^{p-1}y^{1-q} \\
+&=& \frac{p}{q}x^{p-1}x^{p(1-q)/q} \\
+&=& \frac{p}{q}x^{p-1+p/q-p} \\
+&=& \frac{p}{q}x^{p/q-1}
+\end{eqnarray*}
+
+\subsubsection*{Proof for all positive irrationals $n$}
+
+For positive irrationals we claim continuity due to the fact that (\ref{prat})
+holds for all positive rationals, and there are positive rationals that approach any positive irrational.
+
+\subsubsection*{Proof for negative powers $n$}
+
+We again employ implicit differentiation.  Let $u = x$, and differentiate $u^n$ with respect to $x$ for some non-negative $n$.  We must show
+
+\begin{equation}
+\frac{\D{u^{-n}}}{\D{x}} = -nu^{-n-1} \label{neg}
+\end{equation}
+
+By definition we have $u^nu^{-n} = 1$.
+We begin by taking the derivative with respect to $x$ on both sides of the equality.  By application of the product rule we get
+
+\begin{eqnarray*}
+\DDX(u^nu^{-n}) & = & 1 \\
+u^n\frac{\D{u^{-n}}}{\D{x}} + u^{-n}\frac{\D{u^n}}{\D{x}} & = & 0\, \\
+u^n\frac{\D{u^{-n}}}{\D{x}} + u^{-n}(nu^{n-1}) & = & 0\, \\
+u^n\frac{\D{u^{-n}}}{\D{x}} & = & -nu^{-1} \\
+\frac{\D{u^{-n}}}{\D{x}} & = & -nu^{-n-1}
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

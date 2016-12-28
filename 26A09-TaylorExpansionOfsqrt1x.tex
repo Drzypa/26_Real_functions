@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TaylorExpansionOfsqrt1x}
+\pmcreated{2013-03-22 15:45:52}
+\pmmodified{2013-03-22 15:45:52}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{Taylor expansion of $\sqrt{1+x}$}
+\pmrecord{11}{37720}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmrelated{ExamplesOnHowToFindTaylorSeriesFromOtherKnownSeries}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{amsthm}
+%\usepackage{enumerate}
+\usepackage{graphicx}
+%\usepackage{psfrag}
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\begin{document}
+The Taylor series for\, $f(x) = \sqrt{1+x}$\, using the \PMlinkescapetext{formula}
+\[
+T(x) = \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!} \, (x-a)^k
+\]
+is given in the table below for the first few \PMlinkescapetext{terms}.
+
+\begin{table}[htb]
+\begin{center}
+
+\begin{tabular}{cccc}
+%\\ [.3ex] \hline \\ [.3ex]
+
+{$k$} & expansion & simplified & at\, {$a = 0$}\\ 
+%heading
+\hline \\ 
+0 & $f(a)$   & $(1 + a)^{1/2}$ & $1$\\
+1 & $f'(a) \, (x-a)$  & $\dfrac{1}{2}(1 + a)^{-1/2}(x - a)$ & $\dfrac{1}{2} \, x$ \\
+2 & $\dfrac{f^{(2)}(a)}{2!} \, (x-a)^2$  & $-\dfrac{1}{8} \, (1 + a)^{-3/2} \, (x - a)^2$ & $-\dfrac{1}{8} \, x^2$ \\
+3 & $\dfrac{f^{(3)}(a)}{3!} \, (x-a)^3$  & $\dfrac{3}{48} \, (1 + a)^{-5/2} \, (x - a)^3$ & $\dfrac{1}{16} \, x^3$ \\
+4 & $\dfrac{f^{(4)}(a)}{4!} \, (x-a)^4$  & $-\dfrac{15}{384} \, (1 + a)^{-7/2} \, (x - a)^4$ & $-\dfrac{5}{128} \, x^4$ \\
+5 & $\dfrac{f^{(5)}(a)}{5!} \, (x-a)^5$  & $\dfrac{105}{3840} \, (1 + a)^{-9/2} \, (x - a)^5$ & $\dfrac{7}{256} \, x^5$ \\
+6 & $\dfrac{f^{(6)}(a)}{6!} \, (x-a)^6$  & $-\dfrac{945}{46080} \, (1 + a)^{-11/2} \, (x - a)^6$ & $-\dfrac{21}{1024} \, x^6$\\
+\hline
+\end{tabular}
+\caption{Taylor Series for $f(x) = \sqrt{1+x}$}
+\end{center}
+\end{table}
+
+The general coefficient of the expansion, for $n \geq 2$
+is:
+\begin{align*}
+\frac{f^{(n)}(a)}{n!} &= \binom{\frac{1}{2}}{n} \, (1+a)^{\frac{1}{2}-n} \\
+&= \frac{ \frac{1}{2} \left(-\frac{1}{2}\right) \left(- \frac{3}{2}\right) \dotsm \left( \frac{1}{2} - (n-1) \right) }{n (n-1) (n-2) \dotsm 1} 
+\quad (1+a)^{-\frac{2n-1}{2}}
+\\
+&= \frac{ \frac{1}{2} \, (-\frac{1}{2})^{n-1} \quad 1 \cdot 3 \dotsm (2n-3)}{n (n-1) (n-2) \dotsm 1} 
+\quad (1+a)^{-\frac{2n-1}{2}}
+\\
+&= \frac{(-1)^{n-1}}{2^n \: n!} \frac{(2n-3)!}{(2n-4) (2n-6) \dotsm 2} 
+\quad (1+a)^{-\frac{2n-1}{2}}
+\\
+&= (-1)^{n-1} \: \frac{(2n-3)!}{2^{2n-2} \: n! \, (n-2)!}
+\quad (1+a)^{-\frac{2n-1}{2}}\,.
+\end{align*}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{sqrt-expansion.eps}
+\end{center}
+\end{figure}
+%%%%%
+%%%%%
+\end{document}

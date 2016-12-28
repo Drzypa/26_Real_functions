@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChainRuleseveralVariables}
+\pmcreated{2013-03-22 12:33:10}
+\pmmodified{2013-03-22 12:33:10}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{chain rule (several variables)}
+\pmrecord{10}{32798}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmrelated{ChainRule}
+\pmrelated{Jacobian}
+\pmrelated{JacobianMatrix}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\vF}{\mathbf{F}}
+\newcommand{\vG}{\mathbf{G}}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+The chain rule is a theorem of analysis that governs derivatives of
+composed functions.  The basic theorem is the chain rule for functions
+of one variables (\PMlinkname{see here}{ChainRule}). This entry
+is devoted to the more general version involving functions of several
+variables and partial derivatives.  Note: the symbol $D_k$ will be
+used to denote the partial derivative with respect to the $k\supth$
+variable.
+
+Let $F(x_1,\ldots,x_n)$ and
+$G_1(x_1,\ldots,x_m),\ldots,G_n(x_1,\ldots,x_m)$  be differentiable
+functions of several variables, and let
+$$H(x_1,\ldots,x_m) =
+F(G_1(x_1,\ldots,x_m),\ldots,G_n(x_1,\ldots,x_m))$$
+be the function determined by the composition of $F$ with
+$G_1,\ldots,G_n$
+The partial derivatives of $H$ are given by
+$$(D_k H)(x_1,\ldots,x_m) = \sum_{i=1}^n (D_i
+F)(G_1(x_1,\ldots,x_m),\ldots) (D_k G_i)(x_1,\ldots,x_m). $$
+
+The chain rule can be more compactly (albeit less precisely) expressed
+in terms of the Jacobi-Legendre partial derivative symbols
+(\PMlinkexternal{historical note}{http://members.aol.com/jeff570/calculus.html}).  Just as in
+the Leibniz system, the basic idea is that of one quantity (i.e.
+variable) depending on one or more other quantities.  Thus we would
+speak about a variable $z$ depends differentiably on $y_1,\ldots,y_n$,
+which in turn depend differentiably on variables $x_1,\ldots,x_m$.  We
+would then write the chain rule as
+$$\frac{\partial z}{\partial x_j} = \sum_{i=1}^n \frac{\partial
+  z}{\partial y_i} \frac{\partial y_i}{\partial x_j},\qquad j=1,\ldots
+m.$$
+
+
+% The customary approach is to use a hybrid system, one which makes use
+% of the notion of a function, but nonetheless makes use of the partial
+% derivative symbols.  In this approach it is vitally important to use
+% different dummy variables in different functions, and this is the
+% principal weakness of the hybrid system.  Now we begin with a
+% functions $F(y_1,\ldots, y_n)$ and $G_i(x_1,\ldots,x_m)$,
+% $i=1\ldots,n$ and agree that the composed function $H$ is a function
+% of $x_1,\ldots,x_m$. The chain rule now takes the following appearance:
+% $$\frac{\partial H}{\partial x_j}=\sum_{i=1}^n \frac{\partial
+%   F}{\partial y_i} \left. \frac{\partial G_i}{\partial
+%     x_j}\right|_{y_i = G_i},\qquad j=1,\ldots,m.$$
+
+The most general, and conceptually clear approach to the
+multi-variable chain is based on the notion of a differentiable
+mapping, with the Jacobian matrix of partial derivatives playing the
+role of generalized derivative.  Let, $X\subset\reals^m$ and
+$Y\subset\reals^n$ be open domains and let
+$$\vF:Y\rightarrow\reals^l,\qquad \vG:X\rightarrow Y$$
+be differentiable mappings.  In essence, the symbol $\vF$ represents
+$l$ functions of $n$ variables each:
+$$\vF = (F_1,\ldots,F_l),\qquad F_i=F_i(x_1,\ldots,x_n),$$
+whereas
+$\vG=(G_1,\ldots,G_n)$ represents $n$ functions of $m$ variables each.
+The derivative of such mappings is no longer a function, but rather a
+matrix of partial derivatives, customarily called the Jacobian matrix.
+Thus
+$$
+D\vF = 
+\begin{pmatrix}
+  D_1 F_1 & \ldots & D_n F_1 \\
+  \vdots & \ddots & \vdots \\
+  D_1 F_l & \ldots & D_n F_l
+\end{pmatrix}
+\qquad
+D\vG = 
+\begin{pmatrix}
+  D_1 G_1 & \ldots & D_m G_1 \\
+  \vdots & \ddots & \vdots \\
+  D_1 G_n & \ldots & D_m G_n
+\end{pmatrix}
+$$
+The chain rule now takes the same form as it did for functions of one
+variable:
+$$D(\vF\circ \vG) = ((D\vF) \circ \vG)\, (D\vG),$$
+albeit with matrix
+multiplication taking the place of ordinary multiplication.
+
+This form of the chain rule also generalizes quite nicely to the even
+more general setting where one is interested in describing the
+derivative of a composition of mappings between manifolds.
+%%%%%
+%%%%%
+\end{document}

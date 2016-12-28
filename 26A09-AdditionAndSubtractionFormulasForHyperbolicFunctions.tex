@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+\pmcreated{2013-03-22 17:50:45}
+\pmmodified{2013-03-22 17:50:45}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{addition and subtraction formulas for hyperbolic functions}
+\pmrecord{5}{40317}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{33B10}
+\pmsynonym{addition and subtraction formulae for hyperbolic functions}{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+\pmsynonym{addition formulas for hyperbolic functions}{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+\pmsynonym{addition formulae for hyperbolic functions}{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+\pmsynonym{subtraction formulas for hyperbolic functions}{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+\pmsynonym{subtraction formulae for hyperbolic functions}{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+\pmsynonym{addition form}{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+\pmrelated{AdditionFormula}
+\pmrelated{HyperbolicIdentities}
+\pmrelated{AdditionFormulas}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newcommand{\ds}{\displaystyle}
+\begin{document}
+The addition formulas for hyperbolic sine, hyperbolic cosine, and hyperbolic tangent will be achieved via brute \PMlinkescapetext{force}.
+
+\begin{align*}
+\sinh(x+y) & =\frac{e^{x+y}-e^{-(x+y)}}{2} \\
+& =\frac{e^xe^y-e^xe^{-y}+e^xe^{-y}-e^{-x}e^{-y}}{2} \\
+& =e^x\left(\frac{e^y-e^{-y}}{2}\right)+e^{-y}\left(\frac{e^x-e^{-x}}{2}\right) \\
+& =(\cosh x+\sinh x)\sinh y+(\cosh y-\sinh y)\sinh x \\
+& =\cosh x\sinh y+\sinh x\sinh y+\sinh x\cosh y-\sinh x\sinh y \\
+& =\sinh x\cosh y+\cosh x\sinh y
+\end{align*}
+
+\begin{align*}
+\cosh(x+y) & =\frac{e^{x+y}+e^{-(x+y)}}{2} \\
+& =\frac{e^xe^y-e^xe^{-y}+e^xe^{-y}+e^{-x}e^{-y}}{2} \\
+& =e^x\left(\frac{e^y-e^{-y}}{2}\right)+e^{-y}\left(\frac{e^x+e^{-x}}{2}\right) \\
+& =(\cosh x+\sinh x)\sinh y+(\cosh y-\sinh y)\cosh x \\
+& =\cosh x\sinh y+\sinh x\sinh y+\cosh x\cosh y-\cosh x\sinh y \\
+& =\cosh x\cosh y+\sinh x\sinh y
+\end{align*}
+
+\begin{align*}
+\tanh(x+y) & =\frac{\sinh(x+y)}{\cosh(x+y)} \\
+& =\frac{\sinh x\cosh y+\cosh x\sinh y}{\cosh x\cosh y+\sinh x\sinh y} \\
+& =\frac{\ds\frac{\sinh x}{\cosh x} \cdot \frac{\cosh y}{\cosh y}+\frac{\cosh x}{\cosh x} \cdot \frac{\sinh y}{\cosh y}}
+        {\ds\frac{\cosh x}{\cosh x} \cdot \frac{\cosh y}{\cosh y}+\frac{\sinh x}{\cosh x} \cdot \frac{\sinh y}{\cosh y}} \\
+& =\frac{\tanh x+\tanh y}{1+\tanh x\tanh y}
+\end{align*}
+
+Note that $\sinh$ and $\tanh$ are odd functions and $\cosh$ is an even function, \PMlinkname{i.e.}{Ie} $\sinh(-t)=-\sinh t$, $\tanh(-t)=-\tanh t$, and $\cosh(-t)=\cosh t$.  These facts enable us to obtain the subtraction formulas.
+
+\[
+\sinh(x-y)=\sinh(x+(-y))=\sinh x\cosh(-y)+\cosh x\sinh(-y)=\sinh x\cosh y-\cosh x\sinh y
+\]
+
+\[
+\cosh(x-y)=\cosh(x+(-y))=\cosh x\cosh(-y)+\sinh x\sinh(-y)=\cosh x\cosh y-\sinh x\sinh y
+\]
+
+\[
+\tanh(x-y)=\tanh(x+(-y))=\frac{\tanh x+\tanh(-y)}{1+\tanh x\tanh(-y)}=\frac{\tanh x-\tanh y}{1-\tanh x\tanh y}
+\]
+%%%%%
+%%%%%
+\end{document}

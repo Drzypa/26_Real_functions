@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RulerFunction}
+\pmcreated{2013-03-22 18:23:55}
+\pmmodified{2013-03-22 18:23:55}
+\pmowner{yesitis}{13730}
+\pmmodifier{yesitis}{13730}
+\pmtitle{ruler function}
+\pmrecord{5}{41044}
+\pmprivacy{1}
+\pmauthor{yesitis}{13730}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The ruler function $f$ on the real line is defined as follows:
+
+\begin{equation}
+    f(x)=\left\{
+           \begin{array}{ll}
+             0, & \hbox{$x$ is irrational;} \\
+             1/n, & \hbox{$x=m/n$, $m$ and $n$ are relatively primes}.
+           \end{array}
+         \right.
+\end{equation}
+
+Given a rational number $\frac{m}{n}$ in lowest terms, $n$ positive, the ruler function outputs the size (length) of a piece resulting from equally subdividing the unit interval into $n$, the number in the denominator, parts. It ``ignores'' inputs of irrational functions, sending them to 0.
+
+The ruler function is so termed because it resembles a ruler. The following picture might be helpful: if $\frac{m}{n}$ in lowest terms  is a reasonably small rational number (which we assume positive). Then it can be ``read off'' on a ruler whose intervals of one unit size are each equally subdivided into $n$ parts measuring $\frac{1}{n}$ units each by 
+\begin{enumerate}
+\item{running one's finger through until the integer preceding it and then} 
+\item{running through to the subsequent $r$th subunit, ``left-over'' from the division of $m$ by $n$.} 
+\end{enumerate}
+On the other hand, an irrational number can not be read off from any ruler no matter how fine we subdivide a unit interval in any ruler.
+
+\begin{thebibliography}{1}
+\bibitem{Du2003}
+Dunham, W., \emph{Nondifferentiability of the Ruler Function}, Mathematics Magazine, Mathematical Association of America, 2003.
+
+\bibitem{Sc1997}
+Heuer, G.A., \emph{Functions Continuous at the Irrationals and Discontinuous at the Rationals}, The American Mathematical Monthly, Mathematical Association of America, 1965.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProductRule}
+\pmcreated{2013-03-22 12:27:57}
+\pmmodified{2013-03-22 12:27:57}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{product rule}
+\pmrecord{12}{32628}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmrelated{Derivative}
+\pmrelated{ProofOfProductRule}
+\pmrelated{ProductRule}
+\pmrelated{PowerRule}
+\pmrelated{ProofOfPowerRule}
+\pmrelated{SumRule}
+\pmrelated{ZeroesOfDerivativeOfComplexPolynomial}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\D}[1]{\ensuremath{\mathrm{d}#1}}
+\begin{document}
+The \emph{product rule} states that if $f:\mathbb{R}\rightarrow\mathbb{R}$ and $g:\mathbb{R}\rightarrow\mathbb{R}$ are functions in one variable both differentiable at a point $x_0$, then the derivative of the product of the two functions, denoted $f\cdot g$, at $x_0$ is given by
+\begin{equation*}
+\frac{\D{}}{\D{x}}\left(f\cdot g\right)(x_0) = f(x_0)g'(x_0) + f'(x_0)g(x_0).
+\end{equation*}
+
+\subsubsection*{Proof}
+See the \PMlinkname{proof of the product rule}{ProofOfProductRule}.
+\subsection{Generalized Product Rule}
+More generally, for differentiable functions $f_1, f_2,\ldots,f_n$ in one variable, all differentiable at $x_0$, we have
+\begin{align*}
+D(f_1\cdots f_n)(x_0)=\sum_{i=1}^n\left(f_i(x_0)\cdots f_{i-1}(x_0)\cdot Df_i(x_0)\cdot f_{i+1}(x_0)\cdots f_n(x_0)\right).
+\end{align*}
+
+Also see \PMlinkname{Leibniz' rule}{LeibnizRule}.
+
+\subsubsection*{Example}
+
+The derivative of $x\ln|x|$ can be found by application of this rule.
+Let $f(x) = x, g(x) = \ln|x|$, so that $f(x)g(x) = x\ln|x|$.  Then $f'(x) = 1$ and
+$g'(x) = \frac{1}{x}$.  Therefore, by the product rule,
+
+\begin{eqnarray*}
+\frac{\D{}}{\D{x}}(x\ln|x|) & = & f(x)g'(x) + f'(x)g(x) \\
+& = & \frac{x}{x} + 1\cdot\ln|x| \\
+& = & \ln|x| + 1
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RationalFunction}
+\pmcreated{2013-03-22 13:38:54}
+\pmmodified{2013-03-22 13:38:54}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{rational function}
+\pmrecord{6}{34300}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C15}
+\pmsynonym{rational expression}{RationalFunction}
+\pmrelated{PolynomialRing}
+\pmrelated{FractionField}
+\pmrelated{RealFunction}
+\pmrelated{PropertiesOfEntireFunctions}
+\pmrelated{IntegrationOfFractionPowerExpressions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\begin{document}
+A real function $R(x)$ of a single variable $x$ is called
+\emph{\PMlinkescapetext{rational}} if it can be written as a quotient
+\[ R(x) = \frac{P(x)}{Q(x)}, \]
+where $P(x)$ and $Q(x)$ are polynomials in $x$ with real coefficients. When one is only interested in algebraic properties of $R(x)$ or $P(x)$ and $Q(x)$, it is convenient to forget that they define functions and simply treat them as algebraic expressions in $x$. In this case $R(x)$ is referred to as a \emph{rational expression}.
+
+In general, a rational function (expression) $R(x_1,\ldots,x_n)$ has the form
+\[ R(x_1,\ldots,x_n) = \frac{P(x_1,\ldots,x_n)}{Q(x_1,\ldots,x_n)}, \]
+where $P(x_1,\ldots,x_n)$ and $Q(x_1,\ldots,x_n)$ are polynomials in the
+variables $(x_1,\ldots,x_n)$ with coefficients in some field or
+ring $S$.
+
+In this sense, $R(x_1,\ldots,x_n)$ can be regarded as an element of the fraction
+field $S(x_1,\ldots,x_n)$ of the polynomial ring $S[x_1,\ldots,x_n]$.
+%%%%%
+%%%%%
+\end{document}

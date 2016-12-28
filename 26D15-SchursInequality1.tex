@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchursInequality}
+\pmcreated{2013-03-22 13:19:30}
+\pmmodified{2013-03-22 13:19:30}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Schur's inequality}
+\pmrecord{11}{33836}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+%\pmkeywords{sum}
+%\pmkeywords{inequality}
+%\pmkeywords{Schur}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+If $a$, $b$, and $c$ are non-negative real numbers and $k\geq 1$ is real, then the following inequality holds: 
+\[
+a^k(a-b)(a-c)+b^k(b-c)(b-a)+c^k(c-a)(c-b)\geq 0
+\]
+
+\begin{proof}
+We can assume without loss of generality that $c\leq b\leq a$ via a permutation of the variables (as both sides are symmetric in those variables).  Then collecting terms, we wish to show that 
+\begin{align*}
+(a-b)\left(a^k(a-c)-b^k(b-c)\right)+c^k(a-c)(b-c)\geq 0
+\end{align*}
+which is clearly true as every term on the left is positive.\end{proof}
+
+There are a couple of special cases worth noting:
+\begin{itemize}
+\item Taking $k=1$, we get the well-known $$ a^3 + b^3 + c^3 + 3abc \geq ab(a+b) + ac(a+c) + bc(b+c) $$
+\item If $c=0$, we get $(a-b)(a^{k+1}-b^{k+1})\geq0$.
+\item If $b=c=0$, we get $a^{k+2}\geq0$.
+\item If $b=c$, we get $a^{k}(a-c)^2\geq 0$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

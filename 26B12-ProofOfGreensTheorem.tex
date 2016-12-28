@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGreensTheorem}
+\pmcreated{2013-03-22 12:28:47}
+\pmmodified{2013-03-22 12:28:47}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Green's theorem}
+\pmrecord{11}{32690}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the region $R$ bounded by the closed curve $P$ in a simply connected space. $P$ can be given by a vector valued function $\vec{F}(x,y)=( f(x,y), g(x,y))$. 
+The region $R$ can then be described by 
+$$\int\!\!\!\int_R \left(\frac{\partial g}{\partial x} - \frac{\partial f}{\partial y}\right)\;dA = \int\!\!\!\int_R \frac{\partial g}{\partial x}\;dA -  \int\!\!\!\int_R \frac{\partial f}{\partial y}\;dA$$
+The double integrals above can be evaluated separately. Let's look at
+$$\int\!\!\!\int_R \frac{\partial g}{\partial x}\;dA = \int_a^b\int_{A(y)}^{B(y)}\frac{\partial g}{\partial x}\;dxdy$$
+Evaluating the above double integral, we get
+$$\int_a^b (g(A(y),y) - g(B(y),y))\;dy = \int_a^b g(A(y),y)\;dy - \int_a^b g(B(y),y)\;dy$$
+According to the fundamental theorem of line integrals, the above equation is actually equivalent to the evaluation of the line integral of the function $\vec{F}_1(x,y)=( 0, g(x,y))$ over a path $P=P_1 + P_2$, where $P_1=(A(y), y)$ and $P_2=(B(y), y)$.
+$$\int_a^b g(A(y), y)\;dy - \int_a^b g(B(y), y)\;dy = \int_{P_1} \vec{F_1}\cdot d\vec{t} + \int_{P_2}\vec{F_1}\cdot d\vec{t} = \oint_P \vec{F_1}\cdot d\vec{t}$$
+Thus we have 
+$$\int\!\!\!\int_R \frac{\partial g}{\partial x}\;dA = \oint_P \vec{F_1}\cdot d\vec{t}$$
+By a similar argument, we can show that
+$$\int\!\!\!\int_R \frac{\partial f}{\partial y}\;dA = -\oint_P \vec{F_2}\cdot d\vec{t}$$
+where $\vec{F}_2=( f(x,y), 0)$. Putting all of the above together, we can see that
+$$\int\!\!\!\int_R \left(\frac{\partial g}{\partial x} - \frac{\partial f}{\partial y}\right)\;dA = \oint_P \vec{F_1}\cdot d\vec{t} + \oint_P \vec{F_2}\cdot d\vec{t} = \oint_P (\vec{F}_1 + \vec{F}_2)\cdot d\vec{t}=\oint_P (f(x,y), g(x,y))\cdot d\vec{t}$$
+which is Green's theorem.
+%%%%%
+%%%%%
+\end{document}

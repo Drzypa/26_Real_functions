@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMinkowskiInequality}
+\pmcreated{2013-03-22 12:42:14}
+\pmmodified{2013-03-22 12:42:14}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Minkowski inequality}
+\pmrecord{10}{32987}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D15}
+\pmrelated{HolderInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For $p=1$ the result follows immediately from the triangle inequality, so we may assume $p>1$.
+
+We have 
+\[ |a_k+b_k|^p=|a_k+b_k| |a_k+b_k|^{p-1} \leq (|a_k|+|b_k|)|a_k+b_k|^{p-1} \]
+by the triangle inequality.  Therefore we have 
+\[ |a_k+b_k|^p  \leq |a_k||a_k+b_k|^{p-1} + |b_k||a_k+b_k|^{p-1} \]
+Set $q=\frac{p}{p-1}$.  Then $\frac{1}{p}+\frac{1}{q}=1$, so by the H\"older inequality we have 
+\[ \sum_{k=0}^n |a_k||a_k+b_k|^{p-1} \leq
+    \left( \sum_{k=0}^n |a_k|^p \right)^{\frac{1}{p}} 
+    \left( \sum_{k=0}^n |a_k+b_k|^{(p-1)q} \right)^{\frac{1}{q}} \]
+\[ \sum_{k=0}^n |b_k||a_k+b_k|^{p-1} \leq
+    \left( \sum_{k=0}^n |b_k|^p \right)^{\frac{1}{p}} 
+    \left( \sum_{k=0}^n |a_k+b_k|^{(p-1)q} \right)^{\frac{1}{q}} \]
+Adding these two inequalities, dividing by the factor common to the right sides of both, and observing that $(p-1)q=p$ by definition, we have
+\[ \left( \sum_{k=0}^n |a_k+b_k|^p \right)^{1-\frac{1}{q}}
+   \leq \frac{ \sum_{k=0}^n (|a_k|+|b_k|)|a_k+b_k|^{p-1} }{ \left( \sum_{k=0}^n |a_k+b_k|^{p} \right)^{\frac{1}{q}} }
+   \leq \left( \sum_{k=0}^n |a_k|^p \right)^{\frac{1}{p}} +
+        \left( \sum_{k=0}^n |b_k|^p \right)^{\frac{1}{p}}  \]
+Finally, observe that $1-\frac{1}{q}=\frac{1}{p}$, and the result follows as required.  The proof for the integral version is analogous.
+%%%%%
+%%%%%
+\end{document}

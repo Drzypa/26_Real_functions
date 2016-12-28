@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TotalVariation}
+\pmcreated{2013-03-22 13:26:09}
+\pmmodified{2013-03-22 13:26:09}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{total variation}
+\pmrecord{8}{33996}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A45}
+\pmclassification{msc}{26B30}
+\pmrelated{BVFunction}
+\pmrelated{IntegralRepresentationOfLengthOfSmoothCurve}
+\pmrelated{OscillationOfAFunction}
+\pmdefines{bounded variation}
+\pmdefines{rectifiable path}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\gamma:[a,b]\rightarrow X$ be a function mapping an interval $[a,b]$ to a metric space $(X,d)$. We say that $\gamma$ is of \emph{bounded variation} if there is a constant $M$ such that, for each partition 
+$P=\{a=t_0<t_1<\cdots < t_n=b\}$ of $[a,b]$,
+\[ v(\gamma, P)= \sum_{k=1}^n d(\gamma(t_k),\gamma(t_{k-1})) \leq M. \]
+The \emph{total variation} $V_\gamma$ of $\gamma$ is defined by 
+\[V_\gamma = \sup\{v(\gamma,P):\textnormal{$P$ is a partition of $[a,b]$}\}.\]
+
+It can be shown that, if $X$ is either $\mathbb{R}$ or $\mathbb{C}$, every continuously differentiable (or piecewise continuously differentiable) function $\gamma:[a,b]\rightarrow X$ \PMlinkname{is of bounded variation}{ContinuousDerivativeImpliesBoundedVariation}, and \[V_\gamma = \int_a^b |\gamma'(t)|dt.\]
+Also, if $\gamma$ is of bounded variation and $f:[a,b]\rightarrow X$ is continuous, then the Riemann-Stieltjes integral $\int_a^b fd\gamma$ is finite.
+
+If $\gamma$ is also continuous, it is said to be a \emph{rectifiable path}, and $V(\gamma)$ is the length of its trace.
+
+If $X=\mathbb{R}$, it can be shown that $\gamma$ is of bounded variation if and only if it is the difference of two monotonic functions.
+%%%%%
+%%%%%
+\end{document}

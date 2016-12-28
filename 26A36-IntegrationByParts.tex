@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegrationByParts}
+\pmcreated{2013-03-22 12:28:33}
+\pmmodified{2013-03-22 12:28:33}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{integration by parts}
+\pmrecord{11}{32683}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A36}
+\pmrelated{GeneralFormulasForIntegration}
+\pmrelated{IntegrationOfSqrtx21}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+When we want to integrate a product of two functions, it is sometimes preferable to simplify the integrand by integrating one of the functions and differentiating the other. This process is called integrating by parts, and is done in the following way, where $u$ and $v$ are functions of $x$.
+$$\int u\cdot v'\; dx = u\cdot v - \int v\cdot u'\; dx$$
+This process may be repeated indefinitely, and in some cases it may be used to solve for the original integral algebraically. For definite integrals, the rule appears as
+$$\int_a^b u(x)\cdot v'(x)\; dx = (u(b)\cdot v(b)-u(a)\cdot v(a)) - \int_a^b v(x)\cdot u'(x)\; dx$$
+\textbf{Proof:}
+Integration by parts is simply the antiderivative of a product rule. Let $G(x)=u(x)\cdot v(x)$. Then,
+$$G'(x) = u'(x)v(x) + u(x)v'(x)$$
+Therefore,
+$$G'(x) - v(x)u'(x) = u(x)v'(x)$$
+We can now integrate both sides with respect to $x$ to get
+$$G(x) - \int v(x)u'(x)\; dx = \int u(x)v'(x)\; dx$$
+which is just integration by parts rearranged. \\
+\textbf{Example:} We integrate the function $f(x)=x\sin x$: Therefore we define $u(x):=x$ and $v'(x)=\sin x$. So integration by parts yields us:
+$$\int x\sin x\mathit{dx}=-x\cos x+\int\cos x\mathit{dx}=-x\cos x+\sin x+C,$$
+where $C$ is an arbitrary constant.
+%%%%%
+%%%%%
+\end{document}

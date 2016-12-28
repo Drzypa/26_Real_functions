@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SquaringConditionForSquareRootInequality}
+\pmcreated{2013-03-22 17:55:56}
+\pmmodified{2013-03-22 17:55:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{squaring condition for square root inequality}
+\pmrecord{6}{40427}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26D05}
+\pmclassification{msc}{26A09}
+\pmsynonym{squaring condition}{SquaringConditionForSquareRootInequality}
+\pmrelated{StrangeRoot}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Of the inequalities \;$\sqrt{a} \lessgtr b$, 
+\begin{itemize}
+\item both are undefined when\; $a < 0$;
+\item both can be sidewise squared when\; $a \geqq 0$\, and\, $b \geqq 0$;
+\item $\sqrt{a} > b$\, is identically true if\, $a \geqq 0$\, and\, $b < 0$.
+\item $\sqrt{a} < b$\, is identically untrue if\, $b < 0$;
+
+\end{itemize}
+
+
+The above theorem may be utilised for solving inequalities involving square roots.\\
+
+\textbf{Example.}\, Solve the inequality
+\begin{align}
+\sqrt{2x+3} \;>\; x.
+\end{align}
+The reality condition\, $2x+3 \geqq 0$\, requires that\, $x \geqq -1\frac{1}{2}$.\, For using the theorem, we distinguish two cases according to the sign of the right hand side:
+
+$1^\circ$:\; $-1\frac{1}{2} \leqq x < 0$.\; The inequality is identically true; we have for (1) the partial solution\, $-1\frac{1}{2} \leqq x < 0$.
+
+$2^\circ$:\; $x \geqq 0$.\; Now we can square both \PMlinkescapetext{sides}, obtaining
+$$2x+3 \;>\; x^2$$
+$$x^2-2x-3 \;<\; 0$$
+The zeros of $x^2\!-\!2x\!-\!3$ are\, $x = 1\pm2$,\, i.e. $-1$ and $3$. Since the graph of the polynomial function is a parabola opening upwards, the polynomial attains its negative values when\, $-1 < x < 3$ (see quadratic inequality).\, Thus we obtain for (1) the partial solution\, $0 \leqq x < 3$.
+
+Combining both partial solutions we obtain the total solution
+$$-1\frac{1}{2} \;\leqq\; x \;<\; 3.$$
+
+
+%%%%%
+%%%%%
+\end{document}

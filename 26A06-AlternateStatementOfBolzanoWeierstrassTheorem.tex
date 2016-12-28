@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternateStatementOfBolzanoWeierstrassTheorem}
+\pmcreated{2013-03-22 16:40:13}
+\pmmodified{2013-03-22 16:40:13}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{alternate statement of Bolzano-Weierstrass theorem}
+\pmrecord{7}{38877}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+%\pmkeywords{limit point}
+%\pmkeywords{cluster point}
+%\pmkeywords{accumulation point}
+%\pmkeywords{supremum}
+%\pmkeywords{complete}
+%\pmkeywords{least upper bound}
+%\pmkeywords{completeness}
+\pmrelated{BolzanoWeierstrassTheorem}
+\pmrelated{LimitPoint}
+\pmrelated{Bounded}
+\pmrelated{Infinite}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{plain}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+
+
+\begin{document}
+\begin{thm}
+Every bounded, infinite set of real numbers has a limit point. 
+\end{thm}
+\begin{proof}
+Let $S\subset\mathbb{R}$ be bounded and infinite. Since $S$ is bounded there exist $a,b\in\mathbb{R}$, with $a<b$, such that $S\subset[a,b]$. Let $b-a=l$ and denote the midpoint of the interval $[a,b]$ by $m$. Note that at least one of $[a,m],[m,b]$ must contain infinitely many points of $S$; select an interval satisfying this condition, denoting its left endpoint by $a_1$ and its right endpoint by $b_1$. Continuing this process inductively, for each $n\in\mathbb{N}$, we have an interval $[a_n,b_n]$ satisfying 
+\begin{equation}
+[a_n,b_n]\subset[a_{n-1},b_{n-1}]\subset\cdots\subset[a_1,b_1]\subset[a,b]\text{,}
+\end{equation}
+where, for each $i\in\mathbb{N}$ such that $1\leq i\leq n$, the interval $[a_i,b_i]$ contains infinitely many points of $S$ and is of length $l/2^i$. Next we note that the set $A=\{a_1,a_2\ldots,a_n\}$ is contained in $[a,b]$, hence is bounded, and as such, has a supremum which we denote by $x$. Now, given $\epsilon>0$, there exists $N\in\mathbb{N}$ such that $x-\epsilon<a_N\leq x$. Furthermore, for every $m\geq N$, we have $x-\epsilon<a_N\leq a_m\leq x$. In particular, if we select $m\geq N$ such that $l/2^m<\epsilon$, then we have
+\begin{equation}
+x-\epsilon<a_n\leq a_m\leq x\leq b_m=a_m+\dfrac{l}{2^m}<x+\epsilon\text{.}
+\end{equation}
+Since $[a_m,b_m]\subset(x-\epsilon,x+\epsilon)$ contains infinitely many points of $S$, we may conclude that $x$ is a limit point of $S$. 
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

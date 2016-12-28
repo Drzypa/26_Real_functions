@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalLine}
+\pmcreated{2013-03-22 17:09:53}
+\pmmodified{2013-03-22 17:09:53}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{normal line}
+\pmrecord{17}{39476}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{53A04}
+\pmsynonym{normal of curve}{NormalLine}
+\pmsynonym{normal}{NormalLine}
+\pmsynonym{perpendicular}{NormalLine}
+\pmrelated{ConditionOfOrthogonality}
+\pmrelated{ParallelCurve}
+\pmrelated{SurfaceNormal}
+\pmrelated{Grafix}
+\pmrelated{NormalOfPlane}
+\pmdefines{foot of normal}
+\pmdefines{foot of perpendicular}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{pstricks}
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A {\it normal line} (or simply {\it normal} or {\it perpendicular}) of a curve at one of its points $P$ is the line passing through this point and perpendicular to the tangent line of the curve at $P$.\, The point $P$ is the {\it foot} of the normal.
+
+If the plane curve\, $y = f(x)$\, has a skew tangent at the point\, $(x_0,\,f(x_0))$,\, then the slope of the tangent at that point is\, $f'(x_0)$\, and the slope of the normal at that point is\, $\displaystyle -\frac{1}{f'(x_0)}$.\, The equation of the normal is thus
+             $$y-f(x_0) = -\frac{1}{f'(x_0)}(x-x_0).$$
+In the case that the tangent is horizontal, the equation of the vertical normal is
+                           $$x = x_0,$$
+and in the case that the tangent is vertical, the equation of the normal is
+                           $$y = f(x_0).$$  
+
+The normal of a curve at its point $P$ always goes through the center of curvature belonging to the point $P$.
+
+In the picture below, the black curve is a parabola, the red line is the tangent at the point $P$, and the blue line is the normal at the point $P$.
+
+\begin{center}
+\begin{pspicture}(-2,-1)(2,4)
+\parabola{-}(2,4)(0,0)
+\rput[b](-2,4){.}
+\rput[b](2,4){.}
+\rput[l](-0.05,-1){.}
+\psline[linecolor=red](0,-1)(2,3)
+\psline[linecolor=blue](-2,2.5)(2,0.5)
+\psdot(1,1)
+\rput[b](0.9,1.2){$P$}
+\psline[linewidth=0.2pt](0.9,0.8)(1.1,0.7)
+\psline[linewidth=0.2pt](1.1,0.7)(1.2,0.9)
+\end{pspicture}
+\end{center}
+
+%%%%%
+%%%%%
+\end{document}

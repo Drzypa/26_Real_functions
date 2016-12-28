@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuousDerivativeImpliesBoundedVariation}
+\pmcreated{2013-03-22 17:56:32}
+\pmmodified{2013-03-22 17:56:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{continuous derivative implies bounded variation}
+\pmrecord{8}{40439}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A45}
+\pmrelated{ProductAndQuotientOfFunctionsSum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If the real function $f$ has continuous derivative on the interval \,$[a,\,b]$,\, then on this interval,
+\begin{itemize}
+\item $f$ is of bounded variation,
+\item $f$ can be expressed as difference of two continuously differentiable monotonic functions.
+\end{itemize}
+
+{\em Proof.}\, $1^{\underline{o}}$. The continuous function $|f'|$ has its greatest value $M$ on the closed interval \,$[a,\,b]$,\, i.e.
+$$|f'(x)| \leqq M \quad \forall x \in [a,\,b].$$
+Let $D$ be an arbitrary partition of\, $[a,\,b]$,\, with the points 
+$$x_0 = a < x_1 < x_2 < \ldots < x_{n-1} < b = x_n.$$
+Consider $f$ on a subinterval \,$[x_{i-1},\,x_i]$.\, By the mean-value theorem, there exists on this subinterval a point $\xi_i$ such that\, $f(x_i)-f(x_{i-1}) = f'(\xi_i)(x_i-x_{i-1})$.\, Then we get
+$$S_D := \sum_{i=1}^n|f(x_i)-f(x_{i-1})| = \sum_{i=1}^n|f'(\xi_i)|(x_i-x_{i-1}) \leqq M\sum_{i=1}^n(x_i-x_{i-1}) 
+= M(b-a).$$
+Thus the total variation satisfies
+$$\sup_{D}\{\mbox{all }S_D\mbox{'s}\} \leqq M(b-a) < \infty,$$
+whence $f$ is of bounded variation on the interval\, $[a,\,b]$.
+
+$2^{\underline{o}}$. Define the functions $G$ and $H$ by setting
+$$G := \frac{|f'|+f'}{2}, \quad H := \frac{|f'|-f'}{2}.$$
+We see that these are non-negative and that\, $f' = G-H$.\, Define then the functions $g$ and $h$ on\, $[a,\,b]$\, by
+$$g(x) := f(a)+\int_a^xG(t)\,dt, \quad h(x) := \int_a^xH(t)\,dt.$$
+Because $G$ and $H$ are non-negative, the functions $g$ and $h$ are monotonically nondecreasing.\, We have also
+$$(g-h)(x) = f(a)\!+\!\int_a^x(G(t)\!-\!H(t))\,dt = f(a)\!+\!\int_a^xf'(t)\,dt = f(x),$$
+whence\, $f = g-h$.\, Since $G$ and $H$ are by their definitions continuous, the monotonic functions $g$ and $h$ have continuous derivatives \,$g' = G$,\, $h' = H$.\, So $g$ and $h$ fulfil the requirements of the theorem.\\
+
+\textbf{Remark.}\, It may be proved that each function of bounded variation is difference of two bounded monotonically increasing functions. 
+
+%%%%%
+%%%%%
+\end{document}

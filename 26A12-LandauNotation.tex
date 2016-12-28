@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LandauNotation}
+\pmcreated{2013-03-22 11:42:56}
+\pmmodified{2013-03-22 11:42:56}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Landau notation}
+\pmrecord{28}{30090}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A12}
+\pmclassification{msc}{20H15}
+\pmclassification{msc}{20B30}
+\pmsynonym{O notation}{LandauNotation}
+\pmsynonym{omega notation}{LandauNotation}
+\pmsynonym{theta notation}{LandauNotation}
+\pmsynonym{big-O notation}{LandauNotation}
+%\pmkeywords{complexity}
+%\pmkeywords{estimate}
+%\pmkeywords{estimation}
+%\pmkeywords{runtime complexity}
+%\pmkeywords{space complexity}
+\pmrelated{LowerBoundForSorting}
+\pmrelated{ConvergenceOfIntegrals}
+\pmdefines{big-o}
+\pmdefines{small-o}
+\pmdefines{small-omega}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{group}
+Given two functions $f$ and $g$ from $\mathbb{R}^+$ to $\mathbb{R}^+$,
+the notation
+$$f=O(g)$$
+means that the ratio $\displaystyle \frac{f(x)}{g(x)}$
+stays bounded as $x\to\infty$. If moreover that ratio approaches zero,
+we write
+$$f=o(g).$$
+
+It is legitimate to write, say, $2x=O(x)=O(x^2)$, with the understanding
+that we are using the equality sign in an unsymmetric (and informal) way,
+in that we do not have, for example, $O(x^2)=O(x)$.
+
+The notation
+$$f=\Omega(g)$$
+means that the ratio $\displaystyle \frac{f(x)}{g(x)}$
+is bounded away from zero as $x\to\infty$, or equivalently $g=O(f)$.
+
+If both $f=O(g)$ and $f=\Omega(g)$, we write $f=\Theta(g)$.
+
+One more notational convention in this group is $$f(x)\sim g(x),$$
+meaning $\displaystyle \lim_{x\to\infty}\frac{f(x)}{g(x)}=1$.
+
+In analysis, such notation is useful in describing error \PMlinkname{estimates}{AsymptoticEstimate}.
+For example, the Riemann hypothesis is equivalent to the conjecture
+$$\pi(x)=\operatorname{li} x+O(\sqrt{x}\log x),$$ where $\operatorname{li} x$ denotes the logarithmic integral.
+
+Landau notation is also handy in applied mathematics, e.g. in describing
+the time complexity of an algorithm. It is common to say that an algorithm
+requires $O(x^3)$ steps, for example, without needing to specify exactly what
+is a step; for if $f=O(x^3)$, then $f=O(Ax^3)$ for any positive constant
+$A$.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

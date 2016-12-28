@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitOfdisplaystylefracsinXxAsXApproaches0}
+\pmcreated{2013-03-22 16:58:45}
+\pmmodified{2013-03-22 16:58:45}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{limit of $\displaystyle \frac{\sin x}{x}$ as $x$ approaches 0}
+\pmrecord{10}{39255}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26A03}
+\pmrelated{ComparisonOfSinThetaAndThetaNearTheta0}
+\pmrelated{SincFunction}
+\pmrelated{DerivativesOfSinXAndCosX}
+\pmrelated{DerivativesOfSineAndCosine}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\begin{thm*}
+$$\lim_{x \to 0} \frac{\sin x}{x}=1$$
+\end{thm*}
+
+\PMlinkescapetext{Note that this entry uses the result} $x<\tan x$ for $\displaystyle 0<x<\frac{\pi}{2}$.  \PMlinkescapetext{I have received word that a proof of this fact which uses no calculus will be supplied on PlanetMath.  Please let me know when this is completed so that I can edit this entry accordingly.}
+
+\begin{proof}
+
+First, let $\displaystyle 0<x<\frac{\pi}{2}$.  Then $0<\cos x<1$.  Note also that
+
+\begin{equation}
+\label{tan}
+x<\tan x.
+\end{equation}
+
+Multiplying both \PMlinkescapetext{sides} of this inequality by $\cos x$ yields
+
+\begin{equation}
+\label{xcos}
+x\cos x<\sin x.
+\end{equation}
+
+By \PMlinkname{this theorem}{ComparisonOfSinThetaAndThetaNearTheta0},
+
+\begin{equation}
+\label{x}
+\sin x<x.
+\end{equation}
+
+Combining inequalities (\ref{xcos}) and (\ref{x}) gives
+
+\begin{equation}
+\label{sin}
+x\cos x<\sin x<x.
+\end{equation}
+
+Dividing by $x$ yields
+
+\begin{equation}
+\label{squeeze}
+\cos x<\frac{\sin x}{x}<1.
+\end{equation}
+
+Now let $\displaystyle \frac{-\pi}{2}<x<0$.  Then $\displaystyle 0<-x<\frac{\pi}{2}$.  Plugging $-x$ into inequality (\ref{squeeze}) gives
+
+\begin{equation}
+\label{squeeze-}
+\cos (-x)<\frac{\sin (-x)}{-x}<1.
+\end{equation}
+
+Since $\cos$ is an even function and $\sin$ is an odd function, we have
+
+\begin{equation}
+\label{-squeeze}
+\cos x<\frac{-\sin x}{-x}<1.
+\end{equation}
+
+Therefore, inequality (\ref{squeeze}) holds for all real $x$ with $\displaystyle 0<|x|<\frac{\pi}{2}$.
+
+Since $\cos$ is continuous, $\displaystyle \lim_{x \to 0} \cos x=\cos 0=1$.  Thus,
+
+\begin{equation}
+\label{limits}
+1=\lim_{x \to 0} \cos x \le \lim_{x \to 0} \frac{\sin x}{x} \le \lim_{x \to 0} 1=1.
+\end{equation}
+
+By the squeeze theorem, it follows that $\displaystyle \lim_{x \to 0} \frac{\sin x}{x}=1$.
+\end{proof}
+
+Note that the above limit is also valid if $x$ is considered as a complex variable.
+%%%%%
+%%%%%
+\end{document}

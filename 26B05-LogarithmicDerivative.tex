@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LogarithmicDerivative}
+\pmcreated{2013-03-22 16:47:02}
+\pmmodified{2013-03-22 16:47:02}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{logarithmic derivative}
+\pmrecord{11}{39015}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{46G05}
+\pmclassification{msc}{26A24}
+\pmrelated{ZeroesOfDerivativeOfComplexPolynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Given a function $f$, the quantity $f'/f$ is known as the
+\emph{logarithmic derivative} of $f$.  This name comes 
+from the observation that, on account of the chain 
+rule, 
+\[
+(\log f)' = f' \log' (f) = f'/f.
+\]
+
+The logarithmic derivative has several basic properties
+which make it useful in various contexts.
+
+The logarithmic derivative of the product of
+functions is the sum of their logarithmic
+derivatives.  This follows from the product rule:
+$$
+{(fg)' \over fg} =
+{fg' + f'g \over fg} = 
+{f' \over f} + {g' \over g}
+$$
+
+The logarithmic derivative of the quotient of
+functions is the difference of their logarithmic
+derivatives.  This follows from the quotient rule:
+\[
+{(f/g)' \over f/g} =
+{f'g - fg' \over g^2} {g \over f} =
+{f' \over f} - {g' \over g}
+\]
+
+The logarithmic derivative of the $p$-th power
+of a function is $p$ times the logarithmic
+derivative of the function.  This follows
+from the power rule:
+\[
+{(f^p)' \over f^p} =
+{p f^{p-1} f' \over f^p} =
+p \, {f' \over f}
+\]
+
+The logarithmic derivative of the exponential 
+of a function equals the derivative of a 
+function.  This follows from the chain rule:
+\[
+{\left( e^f \right)' \over e^f} =
+{e^f \, f' \over e^f} = f'
+\]
+
+Using these identities, it is rather easy to 
+compute the logarithmic derivatives of expressions
+which are presented in factored form.  For instance,
+suppose we want to compute the logarithmic derivative
+of 
+\[
+e^{x^2} { (x-2)^3 (x-3) \over x - 1}.
+\]
+Using our identities, we find that its logarithic 
+derivative is
+\[
+2x + {3 \over x-2} + {1 \over x-3} - {1 \over x-1}.
+\]
+%%%%%
+%%%%%
+\end{document}

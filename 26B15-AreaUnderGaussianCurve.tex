@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaUnderGaussianCurve}
+\pmcreated{2013-03-22 15:16:36}
+\pmmodified{2013-03-22 15:16:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{area under Gaussian curve}
+\pmrecord{22}{37065}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{26A36}
+\pmsynonym{Gaussian integral}{AreaUnderGaussianCurve}
+\pmsynonym{area under the bell curve}{AreaUnderGaussianCurve}
+%\pmkeywords{double integral}
+%\pmkeywords{polar coordinates}
+\pmrelated{SubstitutionNotation}
+\pmrelated{ProofThatNormalDistributionIsADistribution}
+\pmrelated{Distribution}
+\pmrelated{ErrorFunction}
+\pmrelated{EvaluatingTheGammaFunctionAt12}
+\pmrelated{NormalRandomVariable}
+\pmrelated{TableOfProbabilitiesOfStandardNormalDistribution}
+\pmrelated{ApplyingGeneratingFunction}
+\pmrelated{FresnelFormulas}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+The area between the curve\,\, $y = e^{-x^2}$\, and the $x$-axis equals $\sqrt{\pi}$,\, i.e.
+    $$\int_{-\infty}^\infty e^{-x^2}\,dx = \sqrt{\pi}.$$
+\end{thmplain}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{gaussian-curve.eps}
+\end{center}
+\end{figure}
+
+{\em Proof.}\, The square of the area is
+
+\begin{align*}
+\bigg(\int_{-\infty}^\infty e^{-x^2}\,dx\bigg)^2 
+& = \lim_{a\to\infty}\bigg(\int_{-a}^a e^{-x^2}\,dx\bigg)^2\\ 
+& = \lim_{a\to\infty}\int_{-a}^a e^{-x^2}\,dx\,\cdot\int_{-a}^a e^{-y^2}\,dy\\
+& = \lim_{a\to\infty}\int_{-a}^a \int_{-a}^a e^{-(x^2+y^2)}\,dx\,dy\\
+& = \lim_{R\to\infty}\int_0^R\!\int_0^{2\pi}e^{-r^2}r\,dr\,d\varphi\\
+& = \lim_{R\to\infty}2\pi\!\int_0^R e^{-r^2}r\,dr\\
+& = -\pi\!\lim_{R\to\infty}\!\sijoitus{0}{\quad\,\,R}e^{-r^2}\\
+& = \pi\!\lim_{R\to\infty}(1-e^{-R^2}) \;=\; \pi.
+\end{align*}
+
+Here, the limit of the double integral over a square has been replaced by the limit of the double integral over a disc, because both limits are equal.\, That both limits are equal can be demonstrated by the elementary \PMlinkescapetext{estimate}
+$$0 \leq \int_{-a}^a \int_{-a}^a\!e^{-(x^2 + y^2)}\,dx\,dy
+- \int_0^a\!\int_0^{2\pi}\!e^{-r^2} r\,dr\,d\varphi
+\leq \underbrace{e^{-a^2}}_{greatest\,value}\!\cdot\,\underbrace{(4a^2\!-\!\pi a^2)}_{area}
+= (4\!-\!\pi)\!\cdot\!\frac{a^2}{e^{a^2}},$$
+and\, $\frac{a^2}{e^{a^2}} \to 0$\, when\, $a \to \infty$\, (see growth of exponential function).\\
+
+\textbf{Remark.}\, Since $e^{-x^2}$ is an even function,
+\begin{align*}
+\int_0^\infty e^{-x^2}\,dx=\frac{\sqrt{\pi}}{2}\:\cdot
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

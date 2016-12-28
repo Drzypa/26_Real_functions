@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegratingtanXOver0fracpi2}
+\pmcreated{2013-03-22 15:57:47}
+\pmmodified{2013-03-22 15:57:47}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{integrating $\tan x$ over $[0,\frac{\pi}{2}]$}
+\pmrecord{14}{37977}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{45-01}
+\pmrelated{ImproperLimits}
+\pmrelated{OneSidedLimit}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Note that what is meant by $\displaystyle \int\limits_0^{\frac{\pi}{2}} \tan x \, dx$ is actually $\displaystyle \lim_{t \to \frac{\pi}{2}^-} \int\limits_0^t \tan x \, dx$, since $\tan x$ is defined on $[0, \frac{\pi}{2})$ but not at $\frac{\pi}{2}$.
+
+\begin{center}
+$\begin{array}{ll}
+\displaystyle \int\limits_0^{\frac{\pi}{2}} \tan x \, dx & \displaystyle = \lim_{t \to \frac{\pi}{2}^-} \int\limits_0^t \tan x \, dx \\
+& \\
+& \displaystyle  = \lim_{t \to \frac{\pi}{2}^-} \ln |\sec x| \bigg|_0^t \\
+& \\
+& \displaystyle = \lim_{t \to \frac{\pi}{2}^-} \ln |\sec t| - \ln |\sec 0| \\
+& \\
+& \displaystyle = \lim_{t \to \frac{\pi}{2}^-} \ln |\sec t| \\
+& \\
+& \displaystyle = \infty. \end{array}$ \end{center}
+
+%%%%%
+%%%%%
+\end{document}

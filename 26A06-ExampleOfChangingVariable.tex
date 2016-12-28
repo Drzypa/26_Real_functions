@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfChangingVariable}
+\pmcreated{2013-03-22 18:45:49}
+\pmmodified{2013-03-22 18:45:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of changing variable}
+\pmrecord{5}{41544}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A06}
+%\pmkeywords{change of variable}
+\pmrelated{UsingResidueTheoremNearBranchPoint}
+\pmrelated{MethodsOfEvaluatingImproperIntegrals}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If one performs in the improper integral
+\begin{align}
+I \;:=\; \int_{-\infty}^\infty\frac{e^{kx}}{1\!+\!e^x}\,dx \qquad (0 < k < 1)
+\end{align}
+the \PMlinkname{change of variable}{ChangeOfVariableInDefiniteIntegral}
+$$x \;=\; -\ln{t}, \quad dx = -\frac{dt}{t},$$
+the new lower limit becomes $\infty$ and the new upper limit 0; hence one obtains
+$$I \;=\; -\int_\infty^0\frac{e^{-k\ln{t}}dt}{(1\!+\!e^{-\ln{t}})t} \;=\; \int_0^\infty\frac{t^{-k}}{t\!+\!1}\,dt.$$
+Thus one has recurred $I$ to the integral
+\begin{align}
+\int_0^\infty\frac{x^{-k}}{x\!+\!1}\,dx,
+\end{align}
+the value of which has been determined in the entry using residue theorem near branch point.\, Accordingly, we may write the result
+$$\int_{-\infty}^\infty\frac{e^{kx}}{1\!+\!e^x}\,dx \;=\; \frac{\pi}{\sin{\pi k}}.$$\\
+
+
+Calculating the integral (1) directly is quite laborious:\, one has to use Cauchy residue theorem to the integral
+$$\oint_c\frac{e^{kz}}{1\!+\!e^z}\,dz$$
+about the perimetre $c$ of the rectangle 
+$$-a \,\leqq\, \mbox{Re}\,z \,\leqq\, a, \quad 0 \,\leqq\, \mbox{Im}\,z \,\leqq\, 2\pi$$
+and then to let\, $a \to \infty$ (one cannot use the same half-disk as in determining the integral (2)).\, As for using the \PMlinkname{method}{MethodsOfEvaluatingImproperIntegrals} of differentiation under the integral sign or taking Laplace transform with respect to $k$ yields a more complicated integral.
+
+
+%%%%%
+%%%%%
+\end{document}

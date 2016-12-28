@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AreaOfPlaneRegion}
+\pmcreated{2013-03-22 15:17:46}
+\pmmodified{2013-03-22 15:17:46}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{area of plane region}
+\pmrecord{14}{37094}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B20}
+\pmclassification{msc}{26A42}
+\pmsynonym{planar area}{AreaOfPlaneRegion}
+%\pmkeywords{area of ellipse}
+\pmrelated{Area2}
+\pmrelated{DefiniteIntegral}
+\pmrelated{PolarCurve}
+\pmrelated{RiemannMultipleIntegral}
+\pmrelated{PropertiesOfEllipse}
+\pmrelated{AreaBoundedByArcAndTwoLines}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let the contour of the region in the $xy$-plane be a closed curve $P$.\, Then the area of the region equals to the path integral
+\begin{align}       
+           A \;=\; \frac{1}{2}\oint_P (x\,dy-y\,dx)
+\end{align}
+taken in the positive (i.e. anticlockwise) circling direction.
+
+\textbf{Remarks}
+\begin{enumerate}
+ \item The \PMlinkescapetext{formula} (1) can be gotten as a special case of Green's theorem by setting\, $\vec{F} := \frac{1}{2}(-y,\,x)$.
+ \item Because \,$x\,dy+y\,dx = d(xy)$, \,we have
+      $$0 \;=\; \frac{1}{2}\oint_P (x\,dy+y\,dx).$$
+This equation may be added to or subtracted from (1), giving the alternative forms
+\begin{align}
+     A \;=\; \oint_P x\,dy \;=\; -\oint_P y\,dx.
+\end{align}
+ \item The formulae (1) and (2) \PMlinkescapetext{contain} all other formulae concerning the planar area computing, e.g.
+$$A \;=\; \int_a^b f(x)\,dx,$$
+$$A \;=\; \frac{1}{2}\int_{\varphi_1}^{\varphi_2}[r(\varphi)]^2\,d\varphi,$$
+the former of which is factually same as the latter form of (2).
+\end{enumerate}
+
+\textbf{Example.}\, The ellipse \,$\frac{x^2}{a^2}+\frac{y^2}{b^2} = 1$\, has the parametric \PMlinkescapetext{presentation}\, $x = a\cos{t}$,\, $y = b\sin{t}$\, ($0 \leqq t < 2\pi$).\, We have
+   $$x\,dy-y\,dx \;=\; [a\cos{t}\cdot b\cos{t}+b\sin{t}\cdot a\sin{t}]\,dt \;=\; ab\,dt,$$
+and hence (1) gives for the area of the ellipse
+   $$A \;=\; \frac{1}{2}ab\!\int_0^{2\pi}\!dt \;=\; \pi ab.$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvexityOfTangentFunction}
+\pmcreated{2013-03-22 17:00:12}
+\pmmodified{2013-03-22 17:00:12}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{convexity of tangent function}
+\pmrecord{14}{39285}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{convex}
+We will show that the tangent function is convex on the interval $[0, \pi/2)$.
+To do this, we will use the addition formula for the tangent and the fact that
+a continuous real function $f$ is \PMlinkname{convex}{ConvexFunction} if and only if $f((x + y)/2) \le (f(x) + f(y))/2$.
+
+We start with the observation that, if $0 \le x < 1$ and $0 \le y < 1$, then by the 
+\PMlinkname{arithmetic-geometric mean inequality}{ArithmeticGeometricMeansInequality}, 
+\begin{align*}
+-2 x y &\ge - x^2 - y^2 \\
+1 - 2 x y + x^2 y^2 &\ge 1 - x^2 - y^2 + x^2 y^2 \\
+(1 - xy)^2 &\ge (1 - x^2) (1 - y^2),
+\end{align*}
+so
+\[
+{(1 - xy)^2 \over (1 - x^2) (1 - y^2)} \ge 1.
+\]
+
+Let $u$ and $v$ be two numbers in the interval $[0,\pi/4)$.  Set $x = \tan u$ and $y = \tan v$.
+Then $0 \le x < 1$ and $0 \le y < 1.$  By the addition formula, we have
+\begin{align*}
+\tan (2u) &= {2x \over 1 - x^2} \\
+\tan (u+v) &= {x + y \over 1 - x y} \\
+\tan (2v) &= {2y \over 1 - y^2} .
+\end{align*}
+Hence,
+\begin{align*}
+{1 \over 2} \left( \tan (2u) + \tan (2v) \right) &= 
+{x + y - x^2 y - xy^2 \over (1 - x^2) (1 - y^2)} \\ &=
+{(x + y) (1 - x y) \over (1 - x^2) (1 - y^2)} \\ &=
+{x + y \over 1 - x y}
+{(1 - xy)^2 \over (1 - x^2) (1 - y^2)} \\ &\ge
+{x + y \over 1 - x y} = \tan (u + v),
+\end{align*}
+so the tangent function is convex.
+%%%%%
+%%%%%
+\end{document}

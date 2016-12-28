@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EliminationOfUnknown}
+\pmcreated{2013-03-22 19:20:27}
+\pmmodified{2013-03-22 19:20:27}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{elimination of unknown}
+\pmrecord{10}{42289}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C05}
+\pmclassification{msc}{13P10}
+\pmclassification{msc}{12D99}
+\pmsynonym{elementary method of elimination}{EliminationOfUnknown}
+%\pmkeywords{elimination}
+%\pmkeywords{bivariate polynomial}
+\pmrelated{FactorizationOfPrimitivePolynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Consider the simultaneous polynomial equations
+\begin{align}
+\begin{cases}
+a(x,\,y) \;=:\; \sum_{i=0}^ma_i(y)x^i \;=\; 0,\\
+b(x,\,y) \;=:\; \sum_{j=0}^nb_j(y)x^j \;=\; 0
+\end{cases}
+\end{align}
+in two unknowns $x$ and $y$, where e.g.\, $m \ge n$.\, It is possible to eliminate one of the unknowns from (1), i.e. derive an \PMlinkname{equivalent}{Equivalent3} pair of polynomial equations
+\begin{align*}
+\begin{cases}
+f(y) \;=\; 0,\\
+g(x,\,y) \;=\; 0.
+\end{cases}
+\end{align*}
+
+First we form the polynomial
+\begin{align}
+c(x,\,y) \;=:\; b_n(y)\,a(x,\,y)-a_m(y)\,x^{m-n}\,b(x,\,y),
+\end{align}
+the degree of which is less than $m$.\, When\, $(x_0,\,y_0)$\, is a solution of (1), then it satisfies 
+\begin{align}
+\begin{cases}
+c(x,\,y) \;=\; 0\\
+b(x,\,y) \;=\; 0.
+\end{cases}
+\end{align}
+On the other hand, when\, $(x_1,\,y_1)$\, is a solution of (3), then (2) implies that it satisfies also (1), except possibly in the case\, $b_n(y_1) = 0$.\\
+We can continue similarly until we arrive at a pair of equations
+\begin{align}
+\begin{cases}
+f(y) \;=\; 0,\\
+g(x,\,y) \;=\; 0
+\end{cases}
+\end{align}
+Substituting the roots of the former of the equations (4) into the latter one, which in practice is usually of first degree with respect to $x$, one can get the corresponding values of $x$.\, Hence one obtains all solutions of the original system of equations (1).\, Since the cases\, $b_n(y_1) = 0$\, may yield wrong solutions, one should check them by substituting into (1).\\
+
+\textbf{Note.}\, One can derive from the equations (1) an equation of lower degree also by eliminating from them the constant terms; the terms of resulting equation have as common factor $x$ or its higher power, which is removed by dividing.
+
+
+%%%%%
+%%%%%
+\end{document}

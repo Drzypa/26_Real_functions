@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SingularFunction}
+\pmcreated{2013-03-22 14:08:05}
+\pmmodified{2013-03-22 14:08:05}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{singular function}
+\pmrecord{11}{35548}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A30}
+\pmsynonym{purely singular function}{SingularFunction}
+\pmrelated{AbsolutelyContinuousFunction2}
+\pmrelated{CantorFunction}
+\pmrelated{CantorSet}
+\pmrelated{AbsolutelyContinuousFunction2}
+\pmdefines{singular function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+A monotone, non-constant, function $f\colon [a,b] \to {\mathbb{R}}$ is said to be a
+{\em singular function} (or a {\em purely singular function}) if $f'(x) = 0$ almost everywhere.
+\end{defn}
+
+It is easy to see that a singular function cannot be 
+\PMlinkname{absolutely continuous}{AbsolutelyContinuousFunction2}:
+If an absolutely continuous function $f \colon [a,b] \to \mathbb{R}$ satisfies $f'(x)=0$ almost everywhere, then it must be constant. 
+
+An example of such a function is the famous Cantor function.
+While this is not a strictly increasing function, there also do exist singular functions which are in fact strictly increasing, and even more amazingly functions that are quasisymmetric (see attached example).
+
+\begin{thm}
+Any monotone increasing function can be written as a sum of an absolutely continuous function and a singular function.
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{royden}
+H.\@ L.\@ Royden.  \emph{\PMlinkescapetext{Real Analysis}}.  Prentice-Hall, Englewood Cliffs, New Jersey, 1988
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralRelatedToArcSine}
+\pmcreated{2013-03-22 18:44:58}
+\pmmodified{2013-03-22 18:44:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integral related to arc sine}
+\pmrecord{8}{41526}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A09}
+\pmrelated{SubstitutionNotation}
+\pmrelated{ArcSine}
+\pmrelated{Arcosh}
+\pmrelated{MethodsOfEvaluatingImproperIntegrals}
+\pmrelated{CyclometricFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+We want to evaluate the integral
+\begin{align}
+\int_1^\infty\!\left(\arcsin\frac{1}{x}-\frac{1}{x}\right)dx.
+\end{align}
+Therefore we put an extra variable $t$ to the integrand and thus get the function
+$$I(t) \;:=\; \int_1^\infty\!\left(\arcsin\frac{t}{x}-\frac{t}{x}\right)dx,$$
+and in \PMlinkescapetext{order} to obtain a simpler integral, we \PMlinkname{differentiate it under the integral sign}{DifferentiationUnderIntegralSign}, then integrate:
+\begin{align*}
+I'(t) & \;=\; \int_1^\infty\!\left(\frac{1}{\sqrt{1\!-\!\frac{t^2}{x^2}}}\cdot\frac{1}{x}-\frac{1}{x}\right)dx\\
+& \;=\; \int_1^\infty\left(\frac{1}{\sqrt{\frac{x^2}{t^2}\!-\!1}}\cdot\frac{1}{t}-\frac{1}{x}\right)dx\\
+& \;=\; \sijoitus{x=1}{\quad\infty}\!\left[\ln\left(\frac{x}{t}+\sqrt{\frac{x^2}{t^2}\!-\!1}\right)-\ln{x}\right]\\
+& \;=\; \sijoitus{x=1}{\quad\infty}\!\ln\frac{1+\sqrt{1\!-\!\frac{t^2}{x^2}}}{t}\\
+& \;=\; \ln\frac{2}{t}-\ln\frac{1+\sqrt{1\!-\!t^2}}{t} \;=\; \ln{2}-\ln(1+\sqrt{1\!-\!t^2})
+\end{align*}
+The gotten expression implies, since\, $I(0) = \int_1^\infty(\arcsin{0}-0)dx = 0$,\, that
+$$I(t) \;=\; \int_0^t[\ln{2}-\ln(1+\sqrt{1\!-\!t^2})]\,dt \;=\; t\ln{2}-\int_0^t\ln(1+\sqrt{1\!-\!t^2})\,dt,$$
+and consequently
+\begin{align*}
+I(1) & \;=\; \ln{2}-\!\int_0^1\ln(1+\sqrt{1\!-\!t^2})\,dt \;=\; 
+\ln{2}-\!\sijoitus{0}{\quad1}\!t\ln(1+\sqrt{1\!-\!t^2})-\!\int_0^1\frac{t^2\,dt}{(1+\sqrt{1\!-\!t^2})\sqrt{1\!-\!t^2}}\\
+& \;=\; \ln{2}-\!\int_0^1\frac{t^2\,dt}{1\!-\!t^2+\sqrt{1\!-\!t^2}}.
+\end{align*}
+Here, the \PMlinkname{substitution}{ChangeOfVariableInDefiniteIntegral} \,$t = \sin{u}$\, helps, yielding
+$$I(1) \;=\; \ln{2}-\int_0^{\frac{\pi}{2}}\!(1-\cos{u})\,du \;=\; \ln{2}-\frac{\pi}{2}+1.$$
+Accordingly, we have the result
+$$\int_1^\infty\!\left(\arcsin\frac{1}{x}-\frac{1}{x}\right)dx \;=\; 1+\ln{2}-\frac{\pi}{2}.$$\\
+
+
+For the convergence, see the French version of \PMlinkexternal{this article}{http://en.wikipedia.org/wiki/Improper_integral}.
+
+%%%%%
+%%%%%
+\end{document}

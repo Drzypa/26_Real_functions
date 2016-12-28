@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuityOfNaturalPower}
+\pmcreated{2013-03-22 15:39:25}
+\pmmodified{2013-03-22 15:39:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{continuity of natural power}
+\pmrecord{7}{37590}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26C05}
+\pmclassification{msc}{26A15}
+\pmrelated{Exponentiation2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+Let $n$ be arbitrary positive integer.\, The power function\, $x\mapsto x^n$\, from $\mathbb{R}$ to $\mathbb{R}$ (or $\mathbb{C}$ to $\mathbb{C}$) is continuous at each point $x_0$.
+\end{thmplain}
+
+{\em Proof.}\, Let $\varepsilon$ be any positive number.\, Denote\, $x_0+h = x$\, and\, $x^n-x_0^n = \Delta$.\, Then identically
+       $$\Delta \;=\; (x-x_0)(x^{n-1}+x^{n-2}x_0+...+x_0^{n-1}).$$
+Taking the absolute value and using the triangle inequality give
+  $$|\Delta| \;=\; |h|\cdot|x^{n-1}+x^{n-2}x_0+...+x_0^{n-1}| \;\leqq\;
+    |h|\cdot(|x^{n-1}|+|x^{n-2}x_0|+...+|x_0^{n-1}|).$$
+But since\, $|x| = |x_0+h| \leqq |x_0|+|h|$\, and also\, $|x_0| \leqq |x_0|+|h|$,\, so each summand in the parentheses is at most equal to\, $(|x_0|+|h|)^{n-1}$,\, and since there are $n$ summands, the sum is at most equal to $n(|x_0|+|h|)^{n-1}$.\, Thus we get
+          $$|\Delta| \;\leqq\; n|h|(|x_0|+|h|)^{n-1}.$$
+We may choose\, $|h| < 1$;\, this implies
+            $$|\Delta| \;\leqq\; n|h|(|x_0|+1)^{n-1}.$$
+The right hand side of this inequality is less than $\varepsilon$ as soon as we still require
+                $$|h| \;<\; \frac{\varepsilon}{n(|x_0|+1)^{n-1}}.$$
+This means that the power function\, $x\mapsto x^n$ is continuous at the point $x_0$.\\
+
+\textbf{Note.}\, Another way to prove the theorem is to use induction on $n$ and the rule 2 in limit rules of functions.
+%%%%%
+%%%%%
+\end{document}

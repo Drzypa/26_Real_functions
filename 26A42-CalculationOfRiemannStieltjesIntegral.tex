@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalculationOfRiemannStieltjesIntegral}
+\pmcreated{2013-03-22 18:55:09}
+\pmmodified{2013-03-22 18:55:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{calculation of Riemann--Stieltjes integral}
+\pmrecord{8}{41771}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\begin{itemize}
+
+\item If $f$ is defined on\, $[a,\,b]$\, and $g$ is a constant function, then
+$$\int_a^bf\,dg \;=\; 0.$$
+
+\item Let $f$ be continuous on\, $[a,\,b]$,\; $a < c < b$\, and\, $g$ the step function defined as
+$$g(x) = k \quad \mbox{for\;\;} x < c, \quad g(x) =  k\!+\!\alpha \quad \mbox{for\;\;} x > c.$$
+Then
+$$\int_a^bf\,dg \;=\; f(c)\cdot\alpha.$$
+
+\item Let $f$ be continuous on\, $[a,\,b]$,\; $a < c < b$\, and the function $g$ be otherwise continuous but have in\, $x = c$\, a step of magnitude $\alpha$.\, Then $g$ is sum of a continuous function $g^*$ and a step function
+$$h(x) = 0 \quad \mbox{for\;\;} x < c, \quad h(x) = \alpha \quad \mbox{for\;\;} x > c,$$
+and one has
+$$
+\int_a^bf\,dg \;=\; \int_a^bf\,d(g^*\!+\!h) \;=\; \int_a^bf\,dg^*+\int_a^bf\,dh \;=\; \int_a^bf\,dg^*+f(c)\cdot\alpha.
+$$
+
+\item Suppose that $g$ can be expressed in the form\, $g = g^*\!+\!h$\, where $g^*$ is continuous and $h$ a step function having an at most denumerable amount of steps $\alpha_i$ in respectively the same points $c_i$ on the interval \,$[a,\,b]$\, as the function $g$.\, If $f$ is Riemann--Stieltjes integrable on\, $[a,\,b]$,\, then 
+\begin{align}
+\int_a^bf\,dg \;=\; \int_a^bf\,dg^*+\sum_if(c_i)\cdot\alpha_i.
+\end{align}
+
+\item Suppose that\, $g = g^*\!+\!h$ (as above) has a finite amount of steps $\alpha_i$ in the points $c_i$ of the interval \,$[a,\,b]$\, but $f$ does not have same-sided discontinuities as $g$ in any of those points.\, Then $f$ is Riemann--Stieltjes integrable on the interval and the equation (1) is true.
+
+\end{itemize}
+
+\textbf{Example.}\, Find the value of the Riemann--Stieltjes integral
+$$I \;:=\; \int_{-3}^6(x\!-\!\lfloor{x}\rfloor)\,dg(x)$$
+where the integrand $f$ is the mantissa function and the integrator $g$ defined by
+\begin{align*}
+g(x) \;:=\;
+\begin{cases}
+ -x^2 \quad\mbox{for}\;\;\; x \leqq -2,\\
+ x   \qquad\mbox{for}\;\; -\!2 < x \leqq 3,\\
+ 2x\!+\!1 \;\;\mbox{for}\;\; x > 3.
+\end{cases}
+\end{align*}
+Now, $f$ is from the left discontinuous at every integer, but $g$ is bounded and only discontinuous from the right at $-2$ and 3.\, By the above last item, $f$ is Riemann--Stieltjes integrable with respect to $g$ on\, $[-3,\,6]$.\, We can set
+$$g \;=\; g^*\!+\!h$$
+where $g^*$ is continuous and the step function $h$ has the step of 2 at $-2$ and the step of 4 at 3.\; Using (1) we get
+\begin{align*}
+I &\;=\; \int_{-3}^6\!f\,dg^*+f(-2)\cdot2+f(3)\cdot4 \;=\; \sum_{i=-3}^5\int_i^{i+1}\!f(x)g'(x)\,dx+0\cdot2+0\cdot4\\
+  &\;=\; \int_{-3}^{-2}(x\!+\!3)(-2x)\,dx+\int_{-2}^{-1}(x\!+\!2)\cdot1\,dx+\int_{-1}^0(x\!+\!1)\cdot1\,dx+
+\int_0^1x\cdot1\,dx+\int_1^2(x\!-\!1)\cdot1\,dx\\
+& \qquad\qquad\qquad +\int_2^3(x\!-\!2)\cdot1\,dx+\int_3^4(x\!-\!3)\cdot2\,dx+\int_4^5(x\!-\!4)\cdot2\,dx+\int_5^6(x\!-\!5)\cdot2\,dx\\ 
+  &\;=\; \frac{47}{6}.
+\end{align*}
+
+%%%%%
+%%%%%
+\end{document}

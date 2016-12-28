@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Extremum}
+\pmcreated{2013-03-22 12:59:44}
+\pmmodified{2013-03-22 12:59:44}
+\pmowner{bshanks}{153}
+\pmmodifier{bshanks}{153}
+\pmtitle{extremum}
+\pmrecord{20}{33373}
+\pmprivacy{1}
+\pmauthor{bshanks}{153}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26B12}
+\pmsynonym{extrema}{Extremum}
+\pmrelated{Plateau}
+\pmrelated{RelationsBetweenHessianMatrixAndLocalExtrema}
+\pmrelated{LeastAndGreatestValueOfFunction}
+\pmrelated{SpeediestInclinedPlane}
+\pmdefines{global minima}
+\pmdefines{global maxima}
+\pmdefines{local minima}
+\pmdefines{local maxima}
+\pmdefines{global minimum}
+\pmdefines{global maximum}
+\pmdefines{local minimum}
+\pmdefines{local maximum}
+\pmdefines{strict local minima}
+\pmdefines{strict local maxima}
+\pmdefines{strict local minimum}
+\pmdefines{strict local maximum}
+\pmdefines{saddle point}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Extrema are minima and maxima. The \PMlinkescapetext{singular} forms of these \PMlinkescapetext{words} are extremum, minimum, and maximum. 
+
+Extrema may be ``global'' or ``local''. A global minimum of a function $f$ is the lowest value that $f$ ever achieves. If you imagine the function as a surface, then a global minimum is the lowest point on that surface. Formally, it is said that $f\colon U \to V$ has a \emph{global minimum} at $x$ if $\forall u \in U, f(x) \leq f(u)$. 
+
+A local minimum of a function $f$ is a point $x$ which has less value than all points ``next to'' it. If you imagine the function as a surface, then a local minimum is the \PMlinkescapetext{bottom} of a ``valley'' or ``bowl'' in the surface somewhere. Formally, it is said that $f\colon U \to V$ has a \emph{local minimum} at $x$ if $\exists$ a neighborhood $N$ of $x$ such that $\forall y \in N$, $f(x) \leq f(y)$.
+
+If you flip the $\leq$ signs above to $\geq$, you get the definitions of global and local maxima.
+
+A ``strict local minima'' or ``strict local maxima'' means that nearby points are strictly less than or strictly greater than the critical point, rather than $\leq$ or $\geq$. For instance, a strict local minima at $x$ has a neighborhood $N$ such that $\forall y \in N$, $(f(x) < f(y) \textrm{ or } y = x)$.  
+
+A \emph{saddle point} is a critical point which is not a local extremum. 
+
+A related concept is  plateau.
+
+Finding minima or maxima is an important task which is part of the \PMlinkescapetext{field} of optimization.
+This task is also important in Physics where the minima correspond to equilibria.
+%%%%%
+%%%%%
+\end{document}

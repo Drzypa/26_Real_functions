@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformlyContinuousOnmathbbRIsRoughlyLinear}
+\pmcreated{2013-03-22 15:09:41}
+\pmmodified{2013-03-22 15:09:41}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{uniformly continuous on $\mathbb{R}$ is roughly linear}
+\pmrecord{22}{36910}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{26A15}
+%\pmkeywords{roughly linear uniformly continuous}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newtheorem{thm}{Theorem}
+\begin{thm}[]
+Uniformly continuous functions defined on $[a,\infty)$ for $a >0$ are roughly linear. More precisely, if $f:[a,\infty) \to \mathbb{R}$ then there exists 
+$B$ such that $|f(x)| \leq B x$ for $x\geq a$. 
+\end{thm}
+
+\emph{Proof:} By \PMlinkescapetext{uniform} continuity we can choose $\delta>0$ such that $|x-y| \leq \delta$ implies $ |f(x)-f(y)|<1$. 
+ 
+ Let $x \geq a$, choose $n$ to be the smallest positive integer such that
+$x \leq (n+1)\delta$. Then
+$$
+f(x) -f(a) = f(x) - f(a+n\delta) + \sum_{i=1}^n f(a+i\delta)-f(a+(i-1)\delta)
+$$
+so that we have
+\begin{eqnarray}
+|f(x)| &\leq& |f(x)-f(a+n\delta)| + \sum_{i=1}^n |f(a+i\delta)-f(a+(i-1)\delta)| + |f(a)| \\
+&\leq& n+ 1+ |f(a)|. 
+\end{eqnarray}
+Therefore,
+\begin{eqnarray}
+\frac{|f(x)|}{x} &\leq& \frac{|f(a)| + n+1}{n\delta}\\
+ &\leq& \frac{|f(a)|}{n\delta} + \frac{n+1}{n\delta}. 
+\end{eqnarray}
+As $n\to \infty$, the rhs converges to $\frac{1}{\delta}$. 
+Hence, the sequence defined by
+$b_n = \frac{|f(a)|}{n\delta} + \frac{n+1}{n\delta}$ is bounded by some 
+number $B$ as desired.
+
+Note we can extend this result to $f:[0,\infty)\to \mathbb{R}$ if $f$ is differentiable at 0.
+%%%%%
+%%%%%
+\end{document}
