@@ -1,0 +1,188 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lagrange multiplier applied to the Legendre transform</title>
+<!--Generated on Fri Feb  9 19:56:50 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Lagrange multiplier applied to the Legendre transform</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Since the Legendre transform is a stationary point of a function, Lagrange multipliers should be the natural choice for handling constraints. However, there is a problem due to the fact that we are mostly interested in its functional dependence on the transform parameter, and not on its value.
+<br class="ltx_break">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">THE LEGENDRE-LAGRANGE PROBLEM
+<br class="ltx_break"></span></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="f(\overline{x})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math> be a function of the real n-vector <math id="p2.m2" class="ltx_Math" alttext="\overline{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></math> and <math id="p2.m3" class="ltx_Math" alttext="g(\overline{p})" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>p</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math> its Legendre transform defined by</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle g(\overline{p})\;=\;\overline{p}.\overline{x}-f(\overline{x})%
+\quad\quad p_{i}\;=\;\frac{\partial f}{\partial x_{i}}" display="inline"><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>p</mi><mo>¯</mo></mover><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mover accent="true"><mi>p</mi><mo>¯</mo></mover></mrow><mo>.</mo><mrow><mrow><mrow><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mpadded width="+2.8pt"><msub><mi>p</mi><mi>i</mi></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The vector <math id="p2.m4" class="ltx_Math" alttext="\overline{p}" display="inline"><mover accent="true"><mi>p</mi><mo>¯</mo></mover></math> is a function of <math id="p2.m5" class="ltx_Math" alttext="\overline{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></math>, or conversely, <math id="p2.m6" class="ltx_Math" alttext="\overline{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></math> is a function of <math id="p2.m7" class="ltx_Math" alttext="\overline{p}" display="inline"><mover accent="true"><mi>p</mi><mo>¯</mo></mover></math>, so that <math id="p2.m8" class="ltx_Math" alttext="g(\overline{p})" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>p</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math> is a function of <math id="p2.m9" class="ltx_Math" alttext="\overline{p}" display="inline"><mover accent="true"><mi>p</mi><mo>¯</mo></mover></math> alone.
+The Legendre transform is also alternatively defined as the maximum of the function <math id="p2.m10" class="ltx_Math" alttext="\overline{p}.\overline{x}-f(\overline{x})" display="inline"><mrow><mover accent="true"><mi>p</mi><mo>¯</mo></mover><mo>.</mo><mrow><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. This maximum is reached for <math id="p2.m11" class="ltx_Math" alttext="\overline{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></math> satifying the second set of equations in (1).
+Suppose now that the components <math id="p2.m12" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math> are not all independent, but are linked by the constraint:</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle h(\overline{x})\;=\;0" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn> 0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This equation defines one of the components, <math id="p2.m13" class="ltx_Math" alttext="x_{\alpha}" display="inline"><msub><mi>x</mi><mi>α</mi></msub></math> for example, as a function of all the others. Putting this function into (1) would give us the transform <math id="p2.m14" class="ltx_Math" alttext="g(\overline{p})" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>p</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math> as a function of the vector <math id="p2.m15" class="ltx_Math" alttext="\overline{p}" display="inline"><mover accent="true"><mi>p</mi><mo>¯</mo></mover></math> with n-1 components. It would be nice if we could instead use a Lagrange multiplier <math id="p2.m16" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> and compute the maximum of the function</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\overline{p}.\overline{x}-f(\overline{x})+kh(\overline{x})" display="block"><mrow><mover accent="true"><mi>p</mi><mo>¯</mo></mover><mo>.</mo><mrow><mrow><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>k</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with all its n components. But then, how does the constraint (2) on <math id="p2.m17" class="ltx_Math" alttext="\overline{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></math> translate to <math id="p2.m18" class="ltx_Math" alttext="\overline{p}" display="inline"><mover accent="true"><mi>p</mi><mo>¯</mo></mover></math>? The answer is amazingly simple, as we shall see next.
+<br class="ltx_break">
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">DIRECT COMPUTATION OF THE TRANSFORM
+<br class="ltx_break"></span></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We are going first to compute the Legendre transform the hard way, without the help of a multiplier, by considering <math id="p3.m1" class="ltx_Math" alttext="x_{\alpha}" display="inline"><msub><mi>x</mi><mi>α</mi></msub></math> as a function of the other components:</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle p_{i}=\frac{df}{dx_{i}}=\frac{\partial f}{\partial x_{i}}+\frac{%
+\partial f}{\partial x_{\alpha}}\frac{\partial x_{\alpha}}{\partial x_{i}}%
+\quad\quad\frac{dh}{dx_{i}}=\frac{\partial h}{\partial x_{i}}+\frac{\partial h%
+}{\partial x_{\alpha}}\frac{\partial x_{\alpha}}{\partial x_{i}}=0\quad\quad i\neq\alpha" display="inline"><mrow><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>f</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>α</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>α</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>h</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>h</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>h</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>α</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>α</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mi>i</mi><mo>≠</mo><mi>α</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Taking the value of <math id="p3.m2" class="ltx_Math" alttext="\frac{\partial x_{\alpha}}{\partial x_{i}}" display="inline"><mfrac><mrow><mo mathsize="144%" stretchy="false">∂</mo><mo>⁡</mo><msub><mi mathsize="144%">x</mi><mi mathsize="144%">α</mi></msub></mrow><mrow><mo mathsize="144%" stretchy="false">∂</mo><mo>⁡</mo><msub><mi mathsize="144%">x</mi><mi mathsize="144%">i</mi></msub></mrow></mfrac></math><span class="ltx_text" style="font-size:144%;"> </span>from the second set of equations (3) and putting it into the first set, we get:</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle p_{i}\;=\;\frac{\partial f}{\partial x_{i}}-\Phi\frac{\partial h%
+}{\partial x_{i}}\quad\mbox{with}\quad\Phi\;=\;\frac{\frac{\partial f}{%
+\partial x_{\alpha}}}{\frac{\partial h}{\partial x_{\alpha}}}\quad\mbox{and}%
+\quad i\neq\alpha" display="inline"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>p</mi><mi>i</mi></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>-</mo><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>h</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mtext>with</mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mpadded width="+2.8pt"><mi mathvariant="normal">Φ</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><mstyle displaystyle="true"><mfrac><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>α</mi></msub></mrow></mfrac><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>h</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>α</mi></msub></mrow></mfrac></mfrac></mstyle><mo mathvariant="italic" separator="true"> </mo><mtext>and</mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mi>i</mi><mo>≠</mo><mi>α</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">From definition (1), the Legendre transform <math id="p3.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is therefore:</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E5.m1" class="ltx_Math" alttext="\displaystyle g(\overline{p})\;=\;\sum_{i\neq\alpha}x_{i}\left(\frac{\partial f%
+}{\partial x_{i}}-\Phi\frac{\partial h}{\partial x_{i}}\right)-f(\overline{x})" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>p</mi><mo>¯</mo></mover><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>≠</mo><mi>α</mi></mrow></munder></mstyle><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>-</mo><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>h</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">BACK TO THE LAGRANGE MULTIPLIER
+<br class="ltx_break"></span></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In the first equation (4), if we set <math id="p4.m1" class="ltx_Math" alttext="i=\alpha" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>α</mi></mrow></math> we get <math id="p4.m2" class="ltx_Math" alttext="p_{\alpha}=0" display="inline"><mrow><msub><mi>p</mi><mi>α</mi></msub><mo>=</mo><mn>0</mn></mrow></math> and conversely, getting the value of <math id="p4.m3" class="ltx_Math" alttext="\Phi" display="inline"><mi mathvariant="normal">Φ</mi></math>. So, in (5), we may remove the condition <math id="p4.m4" class="ltx_Math" alttext="i\neq\alpha" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>α</mi></mrow></math> and sum over all the n components of <math id="p4.m5" class="ltx_Math" alttext="\overline{p}" display="inline"><mover accent="true"><mi>p</mi><mo>¯</mo></mover></math>. The constraint <math id="p4.m6" class="ltx_Math" alttext="p_{\alpha}=0" display="inline"><mrow><msub><mi>p</mi><mi>α</mi></msub><mo>=</mo><mn>0</mn></mrow></math> reduces the number of independent components to n-1. In fact, we are back to the traditional Lagrange method with the multiplier <math id="p4.m7" class="ltx_Math" alttext="\Phi" display="inline"><mi mathvariant="normal">Φ</mi></math> and an additional constraint. We even have the choice between n such constraints. They generate up to n functionally different transforms corresponding to the n possible forms of the function <math id="p4.m8" class="ltx_Math" alttext="\overline{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></math>, according to which component <math id="p4.m9" class="ltx_Math" alttext="x_{\alpha}" display="inline"><msub><mi>x</mi><mi>α</mi></msub></math> we choose to eliminate.
+The method extends easily to the case of more than one constraint:
+<br class="ltx_break"><math id="p4.m10" class="ltx_Math" alttext="h_{1}=h_{2}=...h_{m}=0" display="inline"><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>=</mo><msub><mi>h</mi><mn>2</mn></msub><mo>=</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>h</mi><mi>m</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math>. We use m multipliers <math id="p4.m11" class="ltx_Math" alttext="\Phi_{1},\Phi_{2}...\Phi_{m}" display="inline"><mrow><msub><mi mathvariant="normal">Φ</mi><mn>1</mn></msub><mo>,</mo><mrow><msub><mi mathvariant="normal">Φ</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi mathvariant="normal">Φ</mi><mi>m</mi></msub></mrow></mrow></math>. They are computed by equating to zero any set of m components from <math id="p4.m12" class="ltx_Math" alttext="\overline{p}" display="inline"><mover accent="true"><mi>p</mi><mo>¯</mo></mover></math>.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_typewriter">http://planetmath.org/encyclopedia/LegendreTransform.html</span>Fersanz at PM - Legendre Transform
+<br class="ltx_break">This link is actually broken but, hopefully, should be operative soon.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_typewriter">http://en.wikipedia.org/wiki/Legendre_transformation</span>Wikipedia - Legendre transformation
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Lagrange multiplier applied to the Legendre transform</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LagrangeMultiplierAppliedToTheLegendreTransform</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:52:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:52:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">dh2718 (16929)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">dh2718 (16929)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">dh2718 (16929)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 26B10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:56:50 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html><html>
+<head>
+<title>square root of polynomial</title>
+<!--Generated on Fri Feb  9 20:00:53 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">square root of polynomial</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The   <math id="p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>,  denoted by <math id="p1.m2" class="ltx_Math" alttext="\sqrt{f}" display="inline"><msqrt><mi>f</mi></msqrt></math>, is any polynomial <math id="p1.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> having the square  <math id="p1.m4" class="ltx_Math" alttext="g^{2}" display="inline"><msup><mi>g</mi><mn>2</mn></msup></math> equal to <math id="p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.  For example,  <math id="p1.m6" class="ltx_Math" alttext="\sqrt{9x^{2}\!-\!30x\!+\!25}=3x\!-\!5" display="inline"><mrow><msqrt><mrow><mrow><mrow><mn>9</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mn>30</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow></mrow><mo rspace="0.8pt">+</mo><mn>25</mn></mrow></msqrt><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mn>5</mn></mrow></mrow></math> or <math id="p1.m7" class="ltx_Math" alttext="-3x\!+\!5" display="inline"><mrow><mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow></mrow><mo rspace="0.8pt">+</mo><mn>5</mn></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A polynomial needs not have a square root, but if it has a square root <math id="p2.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, then also the opposite polynomial <math id="p2.m2" class="ltx_Math" alttext="-g" display="inline"><mrow><mo>-</mo><mi>g</mi></mrow></math> is its square root.
+</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Algorithm.</span>  The idea of the squaring</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(a\!+\!b\!+\!c+..)^{2}=(a)a+(2a\!+\!b)b+(2a\!+\!2b\!+\!c)c+.." display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><mpadded width="-1.7pt"><mi>a</mi></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mi>b</mi></mpadded><mo rspace="0.8pt">+</mo><mi>c</mi><mo>+</mo><mo>.</mo><mo>.</mo><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mi>a</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mpadded width="-1.7pt"><mi>a</mi></mpadded><mo rspace="0.8pt">+</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mi>b</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mpadded width="-1.7pt"><mi>a</mi></mpadded><mo rspace="0.8pt">+</mo><mn>2</mn><mpadded width="-1.7pt"><mi>b</mi></mpadded><mo rspace="0.8pt">+</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mi>c</mi><mo>+</mo><mo>.</mo><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(see the square of sum) gives a method for getting the square root of a polynomial:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The .</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">And so on.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In the examples below, on the .</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 1.</span>  <math id="p5.m1" class="ltx_Math" alttext="\sqrt{9x^{4}\!+\!6x^{3}\!-\!11x^{2}\!-\!4x\!+\!4}=" display="inline"><mrow><msqrt><mrow><mrow><mrow><mrow><mn>9</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>4</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mn>6</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>3</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">-</mo><mrow><mn>11</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mn>4</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow></mrow><mo rspace="0.8pt">+</mo><mn>4</mn></mrow></msqrt><mo>=</mo><mi></mi></mrow></math> ?</p>
+</div>
+<div id="p6" class="ltx_para">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="p6.m1" class="ltx_Math" alttext="\sqrt{}" display="inline"><msqrt><mi></mi></msqrt></math></td>
+<td class="ltx_td ltx_align_center"><math id="p6.m2" class="ltx_Math" alttext="(9x^{4}" display="inline"><mrow><mo stretchy="false">(</mo><mn>9</mn><msup><mi>x</mi><mn>4</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m3" class="ltx_Math" alttext="+6x^{3}" display="inline"><mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m4" class="ltx_Math" alttext="-11x^{2}" display="inline"><mrow><mo>-</mo><mrow><mn>11</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m5" class="ltx_Math" alttext="-4x" display="inline"><mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m6" class="ltx_Math" alttext="+4)" display="inline"><mrow><mo>+</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m7" class="ltx_Math" alttext="=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m8" class="ltx_Math" alttext="\pm" display="inline"><mo>±</mo></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m9" class="ltx_Math" alttext="(3x^{2}" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m10" class="ltx_Math" alttext="+x" display="inline"><mrow><mo>+</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m11" class="ltx_Math" alttext="-2)" display="inline"><mrow><mo>-</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"><math id="p6.m13" class="ltx_Math" alttext="9x^{4}" display="inline"><mrow><mn>9</mn><mo>⁢</mo><msup><mi>x</mi><mn>4</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m20" class="ltx_Math" alttext="3x^{2}" display="inline"><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center ltx_border_t"></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m25" class="ltx_Math" alttext="6x^{3}" display="inline"><mrow><mn>6</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m26" class="ltx_Math" alttext="-11x^{2}" display="inline"><mrow><mo>-</mo><mrow><mn>11</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p6.m31" class="ltx_Math" alttext="6x^{2}" display="inline"><mrow><mn>6</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m32" class="ltx_Math" alttext="+x" display="inline"><mrow><mo>+</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m36" class="ltx_Math" alttext="6x^{3}" display="inline"><mrow><mn>6</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m37" class="ltx_Math" alttext="+x^{2}" display="inline"><mrow><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m43" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_right"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p6.m48" class="ltx_Math" alttext="-12x^{2}" display="inline"><mrow><mo>-</mo><mrow><mn>12</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m49" class="ltx_Math" alttext="-4x" display="inline"><mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m50" class="ltx_Math" alttext="+4" display="inline"><mrow><mo>+</mo><mn>4</mn></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p6.m53" class="ltx_Math" alttext="6x^{2}" display="inline"><mrow><mn>6</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p6.m54" class="ltx_Math" alttext="+2x" display="inline"><mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m55" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m59" class="ltx_Math" alttext="-12x^{2}" display="inline"><mrow><mo>-</mo><mrow><mn>12</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m60" class="ltx_Math" alttext="-4x" display="inline"><mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m61" class="ltx_Math" alttext="+4" display="inline"><mrow><mo>+</mo><mn>4</mn></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p6.m66" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p6.m72" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 2.</span>  <math id="p7.m1" class="ltx_Math" alttext="\sqrt{x^{6}\!-\!2x^{5}\!-\!x^{4}\!+\!3x^{2}\!+\!2x\!+\!1}=" display="inline"><mrow><msqrt><mrow><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>6</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>5</mn></msup></mpadded></mrow><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>4</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mn>3</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow></msqrt><mo>=</mo><mi></mi></mrow></math> ?</p>
+</div>
+<div id="p8" class="ltx_para">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"><math id="p8.m1" class="ltx_Math" alttext="\sqrt{}" display="inline"><msqrt><mi></mi></msqrt></math></td>
+<td class="ltx_td ltx_align_center"><math id="p8.m2" class="ltx_Math" alttext="(1" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m3" class="ltx_Math" alttext="+2x" display="inline"><mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m4" class="ltx_Math" alttext="+3x^{2}" display="inline"><mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m6" class="ltx_Math" alttext="-x^{4}" display="inline"><mrow><mo>-</mo><msup><mi>x</mi><mn>4</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m7" class="ltx_Math" alttext="-2x^{5}" display="inline"><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>5</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m8" class="ltx_Math" alttext="+x^{6})" display="inline"><mrow><mo>+</mo><msup><mi>x</mi><mn>6</mn></msup><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m9" class="ltx_Math" alttext="=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m10" class="ltx_Math" alttext="\pm" display="inline"><mo>±</mo></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m11" class="ltx_Math" alttext="(1" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m12" class="ltx_Math" alttext="+x" display="inline"><mrow><mo>+</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m13" class="ltx_Math" alttext="+x^{2}" display="inline"><mrow><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m14" class="ltx_Math" alttext="-x^{3})" display="inline"><mrow><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"><math id="p8.m16" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m25" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center ltx_border_t"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m31" class="ltx_Math" alttext="2x" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m32" class="ltx_Math" alttext="+3x^{2}" display="inline"><mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m39" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m40" class="ltx_Math" alttext="+x" display="inline"><mrow><mo>+</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m45" class="ltx_Math" alttext="2x" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m46" class="ltx_Math" alttext="+x^{2}" display="inline"><mrow><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m54" class="ltx_Math" alttext="+x" display="inline"><mrow><mo>+</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m60" class="ltx_Math" alttext="2x^{2}" display="inline"><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m62" class="ltx_Math" alttext="-x^{4}" display="inline"><mrow><mo>-</mo><msup><mi>x</mi><mn>4</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m67" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m68" class="ltx_Math" alttext="+2x" display="inline"><mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m69" class="ltx_Math" alttext="+x^{2}" display="inline"><mrow><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m74" class="ltx_Math" alttext="2x^{2}" display="inline"><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m75" class="ltx_Math" alttext="+2x^{3}" display="inline"><mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m76" class="ltx_Math" alttext="+x^{4}" display="inline"><mrow><mo>+</mo><msup><mi>x</mi><mn>4</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m83" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_right"></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m89" class="ltx_Math" alttext="-2x^{3}" display="inline"><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m90" class="ltx_Math" alttext="-2x^{4}" display="inline"><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>4</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m91" class="ltx_Math" alttext="-2x^{5}" display="inline"><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>5</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m92" class="ltx_Math" alttext="+x^{6}" display="inline"><mrow><mo>+</mo><msup><mi>x</mi><mn>6</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m95" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m96" class="ltx_Math" alttext="+2x" display="inline"><mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m97" class="ltx_Math" alttext="+2x^{2}" display="inline"><mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m98" class="ltx_Math" alttext="-x^{3}" display="inline"><mrow><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m103" class="ltx_Math" alttext="-2x^{3}" display="inline"><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m104" class="ltx_Math" alttext="-2x^{4}" display="inline"><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>4</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m105" class="ltx_Math" alttext="-2x^{5}" display="inline"><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>5</mn></msup></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m106" class="ltx_Math" alttext="+x^{6}" display="inline"><mrow><mo>+</mo><msup><mi>x</mi><mn>6</mn></msup></mrow></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"><math id="p8.m112" class="ltx_Math" alttext="-x^{3}" display="inline"><mrow><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left"></td>
+<td class="ltx_td ltx_align_center"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"><math id="p8.m120" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+<td class="ltx_td ltx_align_right ltx_border_t"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark.</span>  The procedure may give a Taylor series expansion of the square root, if it is not a polynomial.  E.g. we get
+</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\sqrt{1+x}=1+\frac{1}{2}x-\frac{1}{8}x^{2}+\frac{1}{16}x^{3}-\frac{5}{128}x^{4%
+}+-..." display="block"><mrow><msqrt><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow></msqrt><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>x</mi><mo>-</mo><mfrac><mn>1</mn><mn>8</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mfrac><mn>1</mn><mn>16</mn></mfrac><msup><mi>x</mi><mn>3</mn></msup><mo>-</mo><mfrac><mn>5</mn><mn>128</mn></mfrac><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mo>-</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> <span class="ltx_text ltx_font_italic">Meyers Rechenduden</span>.  Erster verbesserter Neudruck.  Bibliographisches Institut AG, Mannheim (1960).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p10" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">square root of polynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SquareRootOfPolynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:32:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:32:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26C99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 12E05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">calculation of square root of polynomial</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SquareOfSum</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">BombellisMethodOfComputingSquareRoots</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:00:53 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html><html>
+<head>
+<title>regularity theorem for the Laplace equation</title>
+<!--Generated on Fri Feb  9 19:58:33 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">regularity theorem for the Laplace equation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Warning: This entry is still in the process of being written, hence is not yet .</span></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> be an open subset of <math id="p2.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. Suppose that <math id="p2.m3" class="ltx_Math" alttext="f\colon D\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is twice differentiable and satisfies Laplace’s equation. Then <math id="p2.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> has derivatives of all orders and is, in fact analytic.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof:  </span> Let <math id="p3.m1" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> be any point of <math id="p3.m2" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>. We shall show that <math id="p3.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is analytic at <math id="p3.m4" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>. Since <math id="p3.m5" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is an open set, there must exist a real number <math id="p3.m6" class="ltx_Math" alttext="r&gt;0" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><mn>0</mn></mrow></math> such that the closed ball of radius <math id="p3.m7" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> about <math id="p3.m8" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> lies inside of <math id="p3.m9" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Since <math id="p4.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> satisfies Laplace’s equation, we can express the value of <math id="p4.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> inside this ball in terms of its values on the boundary of the ball by using Poisson’s formula:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="f({\bf x})={1\over r^{n-1}A(n-1)}\int_{|{\bf y}-p|=r}f({\bf y}){r^{2}-|{\bf x}%
+-{\bf p}|^{2}\over|{\bf x}-{\bf y}|^{n}}\,d\Omega({\bf y})" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi>r</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>r</mi></mrow></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐲</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mfrac><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>-</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐲</mi></mrow><mo stretchy="false">|</mo></mrow><mi>n</mi></msup></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi mathvariant="normal">Ω</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐲</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here, <math id="p4.m3" class="ltx_Math" alttext="A(k)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> denotes the <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/4495</span>area of the <math id="p4.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-dimensional sphere and <math id="p4.m5" class="ltx_Math" alttext="d\Omega" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi mathvariant="normal">Ω</mi></mrow></math> denotes the measure on the sphere of radius <math id="p4.m6" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> about <math id="p4.m7" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We shall show that <math id="p5.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is analytic by deriving a convergent power series for <math id="p5.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. From this, it will automatically follow that <math id="p5.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> has derivatives of all orders, so a separate proof of this fact will not be necessary.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Since this involves manipulating power series in several variables, we shall make use of multi-index notation to keep the equations from becoming unnecessarily complicated and drowning in a plethora of indices.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">First, note that since <math id="p7.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is assumed to be twice differentiable in <math id="p7.m2" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>, it is continuous in <math id="p7.m3" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> and, hence, since the sphere of radius <math id="p7.m4" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> about <math id="p7.m5" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> is compact, it attains a maximum on this sphere. Let us denote this maxmum by <math id="p7.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. Next, let us consider the quantity</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="{1\over|{\bf x}-{\bf y}|^{n}}" display="block"><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐲</mi></mrow><mo stretchy="false">|</mo></mrow><mi>n</mi></msup></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which appears in the integral. We may write this quantity more explicitly as</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\left(|{\bf y}-{\bf p}|^{2}-2({\bf x}-{\bf p})\cdot({\bf y}-{\bf p})+|{\bf x}-%
+{\bf p}|^{2}\right)^{-{n\over 2}}." display="block"><mrow><msup><mrow><mo>(</mo><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>-</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow><mo>-</mo><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow></msup><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since the values of the variable <math id="p7.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> has been restricted by the condition <math id="p7.m8" class="ltx_Math" alttext="|{\bf y}-{\bf p}|=r" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>r</mi></mrow></math>, we may rewrite this as</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="{1\over r^{n}}\left(1+{-2({\bf x}-{\bf p})\cdot({\bf y}-{\bf p})+|{\bf x}-{\bf
+p%
+}|^{2}\over r^{2}}\right)^{-{n\over 2}}." display="block"><mrow><mrow><mfrac><mn>1</mn><msup><mi>r</mi><mi>n</mi></msup></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mrow><mo>-</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac></mrow><mo>)</mo></mrow><mrow><mo>-</mo><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Assume that <math id="p8.m1" class="ltx_Math" alttext="|{\bf x}-{\bf p}|&lt;r/4" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mi>r</mi><mo>/</mo><mn>4</mn></mrow></mrow></math>. Then we have</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\left|{-2({\bf x}-{\bf p})\cdot({\bf y}-{\bf p})+|{\bf x}-{\bf p}|^{2}\over r^%
+{2}}\right|\leq{2|({\bf x}-{\bf p})\cdot({\bf y}-{\bf p})|\over r^{2}}+{|{\bf x%
+}-{\bf p}|^{2}\over r^{2}}\leq" display="block"><mrow><mrow><mo>|</mo><mfrac><mrow><mrow><mo>-</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>|</mo></mrow><mo>≤</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><msup><mi>r</mi><mn>2</mn></msup></mfrac></mrow><mo>≤</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="{2|{\bf x}-{\bf p}|\&gt;|{\bf y}-{\bf p}|\over r^{2}}+\left({|{\bf x}-{\bf p}|%
+\over r}\right)^{2}\leq 2\cdot{1\over 4}+\left({1\over 4}\right)^{2}={9\over 1%
+6}&lt;1." display="block"><mrow><mrow><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo rspace="4.7pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mi>r</mi></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>≤</mo><mrow><mrow><mn>2</mn><mo>⋅</mo><mfrac><mn>1</mn><mn>4</mn></mfrac></mrow><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mn>9</mn><mn>16</mn></mfrac><mo>&lt;</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Since this absolute value is less than one, we may apply the binomial theorem to obtain the series</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="{1\over|{\bf x}-{\bf y}|^{n}}={1\over r^{n}}\left(1+{-2({\bf x}-{\bf p})\cdot(%
+{\bf y}-{\bf p})+|{\bf x}-{\bf p}|^{2}\over r^{2}}\right)^{n\over 2}=" display="block"><mrow><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐲</mi></mrow><mo stretchy="false">|</mo></mrow><mi>n</mi></msup></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><msup><mi>r</mi><mi>n</mi></msup></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mrow><mo>-</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac></mrow><mo>)</mo></mrow><mfrac><mi>n</mi><mn>2</mn></mfrac></msup></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\sum_{m=0}^{\infty}{\left({n\over 2}\right)^{\underline{m}}\over m!}\left({-2(%
+{\bf x}-{\bf p})\cdot({\bf y}-{\bf p})+|{\bf x}-{\bf p}|^{2}\over r^{2}}\right%
+)^{m}" display="block"><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mfrac><msup><mrow><mo>(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>)</mo></mrow><munder accentunder="true"><mi>m</mi><mo>¯</mo></munder></msup><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mrow><mo>-</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐲</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>𝐱</mi><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>)</mo></mrow><mi>m</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Note that each term in this sum is a polynomial in <math id="p10.m1" class="ltx_Math" alttext="x-p" display="inline"><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow></math>. The powers of the various components of <math id="p10.m2" class="ltx_Math" alttext="x-p" display="inline"><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow></math> that appear in the <math id="p10.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-th term range between <math id="p10.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="p10.m5" class="ltx_Math" alttext="2m" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></math>. Moreover, let us note that we can strengthen the assertion used to show that the binomial series converged by inserting absolute value bars. If we write</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="{-2(x-p)\cdot(y-p)+|x-p|^{2}\over r^{2}}=\sum_{k=0}^{n}c_{k}(y)\&gt;(x-p)_{k}+%
+\sum_{k_{1},k_{2}=0}^{n}c_{k_{1}k_{2}}(y)\&gt;(x-p)_{k_{1}}(x-p)_{k_{2}}," display="block"><mrow><mrow><mfrac><mrow><mrow><mo>-</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>=</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="4.7pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msub></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub></mrow><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>c</mi><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>k</mi><mn>2</mn></msub></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="4.7pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>2</mn></msub></msub></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(actually, the coefficients <math id="p10.m6" class="ltx_Math" alttext="c_{k_{1}k_{2}}" display="inline"><msub><mi>c</mi><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>k</mi><mn>2</mn></msub></mrow></msub></math> depend on <math id="p10.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> trivially, but the dependence on <math id="p10.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> has been indicated for the sake of uniformity) then</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\sum_{k=0}^{n}|c_{k}(y)|\&gt;|(x-p)_{k}|+\sum_{k_{1},k_{2}=0}^{n}|c_{k_{1}k_{2}}(%
+y)|\&gt;|(x-p)_{k_{1}}|\&gt;|(x-p)_{k_{2}}|\leq{9\over 16}." display="block"><mrow><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.7pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msub><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub></mrow><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>c</mi><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>k</mi><mn>2</mn></msub></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.7pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>1</mn></msub></msub><mo rspace="4.7pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>2</mn></msub></msub><mo stretchy="false">|</mo></mrow></mrow></mrow></mrow><mo>≤</mo><mfrac><mn>9</mn><mn>16</mn></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Raising this to the <math id="p10.m9" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-th power, we see that, if we define</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\left({-2(x-p)\cdot(y-p)+|x-p|^{2}\over r^{2}}\right)^{m}=\sum_{k_{1},k_{2},%
+\ldots,k_{m}=0}^{n}c_{k_{1}k_{2},\cdots k_{m}}(y)(x-p)_{k_{1}}(x-p)_{k_{2}}%
+\cdots(x-p)_{k_{m}}," display="block"><mrow><mrow><msup><mrow><mo>(</mo><mfrac><mrow><mrow><mo>-</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>)</mo></mrow><mi>m</mi></msup><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>k</mi><mi>m</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>c</mi><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>k</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>k</mi><mi>m</mi></msub></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>2</mn></msub></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mi>m</mi></msub></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then we have</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\sum_{k_{1},k_{2},\ldots,k_{m}=0}^{n}|c_{k_{1}k_{2},\cdots k_{m}}(y)|\&gt;|(x-p)_%
+{k_{1}}|\&gt;|(x-p)_{k_{2}}|\cdots|(x-p)_{k_{m}}|\leq\left({9\over 16}\right)^{m}" display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>k</mi><mi>m</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>c</mi><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>k</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>k</mi><mi>m</mi></msub></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.7pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>1</mn></msub></msub><mo rspace="4.7pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>2</mn></msub></msub><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mi>m</mi></msub></msub><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>≤</mo><msup><mrow><mo>(</mo><mfrac><mn>9</mn><mn>16</mn></mfrac><mo>)</mo></mrow><mi>m</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because of the fact that one may freely rearrange and regroup the terms in an absolutely convegent series, we may conclude that the expansion of <math id="p10.m10" class="ltx_Math" alttext="|x-y|^{-n}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mrow><mo>-</mo><mi>n</mi></mrow></msup></math> in powers of <math id="p10.m11" class="ltx_Math" alttext="x-p" display="inline"><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow></math> converges absolutely. Furthermore, there exist constants <math id="p10.m12" class="ltx_Math" alttext="b_{k_{1}k_{2},\cdots k_{m}}" display="inline"><msub><mi>b</mi><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>k</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>k</mi><mi>m</mi></msub></mrow></mrow></msub></math> such that the term involving <math id="p10.m13" class="ltx_Math" alttext="|(x-p)_{k_{1}}|\&gt;|(x-p)_{k_{2}}|\cdots|(x-p)_{k_{m}}|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>1</mn></msub></msub><mo rspace="4.7pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mn>2</mn></msub></msub><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>k</mi><mi>m</mi></msub></msub><mo stretchy="false">|</mo></mrow></mrow></math> in the power series is bounded by <math id="p10.m14" class="ltx_Math" alttext="b_{k_{1}k_{2},\cdots k_{m}}" display="inline"><msub><mi>b</mi><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>k</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>k</mi><mi>m</mi></msub></mrow></mrow></msub></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">regularity theorem for the Laplace equation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RegularityTheoremForTheLaplaceEquation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:57:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:57:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 26B12</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:58:33 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

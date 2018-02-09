@@ -1,0 +1,425 @@
+<!DOCTYPE html><html>
+<head>
+<title>derivative</title>
+<!--Generated on Fri Feb  9 19:55:52 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">derivative</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Qualitatively the <span class="ltx_text ltx_font_italic">derivative</span> is a  of the change of a
+function in a small  around a specified point.</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Motivation</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">The idea behind the derivative comes from the straight line. What
+characterizes a straight line is the fact that it has constant
+“slope”.</p>
+</div>
+<figure id="Sx1.F1" class="ltx_figure">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>The straight line <math id="Sx1.F1.m2" class="ltx_Math" alttext="y=mx+b" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>b</mi></mrow></mrow></math></figcaption>
+</figure>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">In other words, for a line given by the equation <math id="Sx1.p2.m1" class="ltx_Math" alttext="y=mx+b" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>b</mi></mrow></mrow></math>, as in Fig.
+<a href="#Sx1.F1" title="Figure 1 ‣ Motivation ‣ derivative" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>, the ratio of <math id="Sx1.p2.m2" class="ltx_Math" alttext="\Delta y" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>y</mi></mrow></math> over <math id="Sx1.p2.m3" class="ltx_Math" alttext="\Delta x" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi></mrow></math> is always constant
+and has the value <math id="Sx1.p2.m4" class="ltx_Math" alttext="\displaystyle\frac{\Delta y}{\Delta x}=m" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>=</mo><mi>m</mi></mrow></math>.</p>
+</div>
+<figure id="Sx1.F2" class="ltx_figure">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 2: </span>The parabola <math id="Sx1.F2.m3" class="ltx_Math" alttext="y=x^{2}" display="inline"><mrow><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math> and its tangent at <math id="Sx1.F2.m4" class="ltx_Math" alttext="(x_{0},y_{0})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math>
+</figcaption>
+</figure>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">For other curves we cannot define a “slope”, like for the straight
+line, since such a quantity would not be constant. However, for
+sufficiently smooth curves, each point on a curve has a tangent line.
+For example consider the curve <math id="Sx1.p3.m1" class="ltx_Math" alttext="y=x^{2}" display="inline"><mrow><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math>, as in Fig. <a href="#Sx1.F2" title="Figure 2 ‣ Motivation ‣ derivative" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>. At
+the point <math id="Sx1.p3.m2" class="ltx_Math" alttext="(x_{0},y_{0})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math> on the curve, we can draw a tangent of slope <math id="Sx1.p3.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>
+given by the equation <math id="Sx1.p3.m4" class="ltx_Math" alttext="y-y_{0}=m(x-x_{0})" display="inline"><mrow><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">Suppose we have a curve of the form <math id="Sx1.p4.m1" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and at the point
+<math id="Sx1.p4.m2" class="ltx_Math" alttext="(x_{0},f(x_{0}))" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> we have a tangent given by <math id="Sx1.p4.m3" class="ltx_Math" alttext="y-y_{0}=m(x-x_{0})" display="inline"><mrow><mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>0</mn></msub></mrow><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Note that
+for values of <math id="Sx1.p4.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> sufficiently close to <math id="Sx1.p4.m5" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> we can make the
+approximation <math id="Sx1.p4.m6" class="ltx_Math" alttext="f(x)\approx m(x-x_{0})+y_{0}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≈</mo><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><msub><mi>y</mi><mn>0</mn></msub></mrow></mrow></math>. So the slope <math id="Sx1.p4.m7" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> of the
+tangent describes how much <math id="Sx1.p4.m8" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> changes in the vicinity of <math id="Sx1.p4.m9" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>. It
+is the slope of the tangent that will be associated with the
+derivative of the function <math id="Sx1.p4.m10" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Formal definition</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">More formally for any real function <math id="Sx2.p1.m1" class="ltx_Math" alttext="f\colon{\mathbb{R}}\to{\mathbb{R}}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>ℝ</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>, we define the
+<span class="ltx_text ltx_font_italic">derivative</span> of <math id="Sx2.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at the point <math id="Sx2.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> as the following limit (if
+it exists)</p>
+<table id="Sx2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex1.m1" class="ltx_Math" alttext="f^{\prime}(x):=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}." display="block"><mrow><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This definition turns out to be  with
+the motivation introduced above.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">The derivatives for some elementary functions are (cf. derivative
+notation)</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}c=0" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>c</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>,     where <math id="I1.i1.p1.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is constant;</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}x^{n}=nx^{n-1}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}\sin x=\cos x" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}\cos x=-\sin x" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i5.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}e^{x}=e^{x}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i6.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}\ln x=\frac{1}{x}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">While derivatives of more complicated expressions can be
+calculated algorithmically using the following rules
+</p>
+<dl id="I2" class="ltx_description">
+<dt id="I2.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_description">Linearity</span></dt>
+<dd class="ltx_item">
+<div id="I2.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.ix1.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}\left(af(x)+bg(x)\right)=af^{\prime}(x)+bg^{\prime}(x)" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>;</p>
+</div>
+</dd>
+<dt id="I2.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_description">Product rule</span></dt>
+<dd class="ltx_item">
+<div id="I2.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.ix2.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}\left(f(x)g(x)\right)=f^{\prime}(x)g(x)+f(x)g^{\prime%
+}(x)" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>;</p>
+</div>
+</dd>
+<dt id="I2.ix3" class="ltx_item"><span class="ltx_tag ltx_tag_description">Chain rule</span></dt>
+<dd class="ltx_item">
+<div id="I2.ix3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.ix3.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}g(f(x))=g^{\prime}(f(x))f^{\prime}(x)" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>;</p>
+</div>
+</dd>
+<dt id="I2.ix4" class="ltx_item"><span class="ltx_tag ltx_tag_description">Quotient Rule</span></dt>
+<dd class="ltx_item">
+<div id="I2.ix4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.ix4.p1.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dx}\frac{f(x)}{g(x)}=\frac{f^{\prime}(x)g(x)-f(x)g^{%
+\prime}(x)}{g(x)^{2}}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>g</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math>.</p>
+</div>
+</dd>
+</dl>
+<p class="ltx_p">Note that the quotient rule, although given as much importance as the
+other rules in elementary calculus, can be derived by succesively
+applying the product rule and the chain rule to
+<math id="Sx2.p2.m1" class="ltx_Math" alttext="\displaystyle\frac{f(x)}{g(x)}=f(x)\frac{1}{g(x)}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></mrow></math>. Also the quotient rule does not generalize as well as the other ones.</p>
+</div>
+<div id="Sx2.p3" class="ltx_para">
+<p class="ltx_p">Since the derivative <math id="Sx2.p3.m1" class="ltx_Math" alttext="f^{\prime}(x)" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="Sx2.p3.m2" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is also a function <math id="Sx2.p3.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,
+higher derivatives can be obtained by applying the same procedure
+to <math id="Sx2.p3.m4" class="ltx_Math" alttext="f^{\prime}(x)" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and so on.</p>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Generalization</h2>
+
+<section id="Sx3.SSx1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Banach Spaces</h3>
+
+<div id="Sx3.SSx1.p1" class="ltx_para">
+<p class="ltx_p">Unfortunately the notion of the “slope of the tangent” does not
+directly generalize to more abstract situations. What we can do is
+keep in mind the facts that the tangent is a linear function and that
+it approximates the function near the point of tangency, as well as
+the formal definition above.</p>
+</div>
+<div id="Sx3.SSx1.p2" class="ltx_para">
+<p class="ltx_p">Very general conditions under which we can define a derivative in
+a manner much similar to the above areas follows.
+Let <math id="Sx3.SSx1.p2.m1" class="ltx_Math" alttext="f\colon{\mathsf{V}}\to{\mathsf{W}}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>𝖵</mi><mo>→</mo><mi>𝖶</mi></mrow></mrow></math>, where <math id="Sx3.SSx1.p2.m2" class="ltx_Math" alttext="{\mathsf{V}}" display="inline"><mi>𝖵</mi></math> and <math id="Sx3.SSx1.p2.m3" class="ltx_Math" alttext="{\mathsf{W}}" display="inline"><mi>𝖶</mi></math> are Banach
+spaces. Let <math id="Sx3.SSx1.p2.m4" class="ltx_Math" alttext="{\mathbf{h}}\neq 0" display="inline"><mrow><mi>𝐡</mi><mo>≠</mo><mn>0</mn></mrow></math> be an element of <math id="Sx3.SSx1.p2.m5" class="ltx_Math" alttext="{\mathsf{V}}" display="inline"><mi>𝖵</mi></math>. We define the
+<em class="ltx_emph ltx_font_italic">directional derivative</em> <math id="Sx3.SSx1.p2.m6" class="ltx_Math" alttext="(D_{\mathbf{h}}f)({\mathbf{x}})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mi>𝐡</mi></msub><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math> at <math id="Sx3.SSx1.p2.m7" class="ltx_Math" alttext="{\mathbf{x}}" display="inline"><mi>𝐱</mi></math> as the following
+limit (when it exists):</p>
+<table id="Sx3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex2.m1" class="ltx_Math" alttext="(D_{\mathbf{h}}f)({\mathbf{x}}):=\lim_{\epsilon\to 0}\frac{f({\mathbf{x}}+%
+\epsilon{\mathbf{h}})-f({\mathbf{x}})}{\epsilon}," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mi>𝐡</mi></msub><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>+</mo><mrow><mi>ϵ</mi><mo>⁢</mo><mi>𝐡</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>ϵ</mi></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx3.SSx1.p2.m8" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math> is a scalar. Note that <math id="Sx3.SSx1.p2.m9" class="ltx_Math" alttext="f(x+\epsilon{\mathbf{h}})\approx f({\mathbf{x}})+\epsilon(D_{\mathbf{h}}f)({%
+\mathbf{x}})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>ϵ</mi><mo>⁢</mo><mi>𝐡</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≈</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>ϵ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mi>𝐡</mi></msub><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, which is  with
+our original motivation. In certain contexts, this directional derivative is also called the <em class="ltx_emph ltx_font_italic">Gâteaux derivative</em>.</p>
+</div>
+<div id="Sx3.SSx1.p3" class="ltx_para">
+<p class="ltx_p">Finally we define the <span class="ltx_text ltx_font_italic">derivative</span> at
+<math id="Sx3.SSx1.p3.m1" class="ltx_Math" alttext="{\mathbf{x}}" display="inline"><mi>𝐱</mi></math> as the bounded linear map <math id="Sx3.SSx1.p3.m2" class="ltx_Math" alttext="(Df)({\mathbf{x}})\colon{\mathsf{V}}\to{\mathsf{W}}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi>𝖵</mi><mo>→</mo><mi>𝖶</mi></mrow></mrow></math> such that for any
+non-zero <math id="Sx3.SSx1.p3.m3" class="ltx_Math" alttext="{\mathbf{h}}\in{\mathsf{V}}" display="inline"><mrow><mi>𝐡</mi><mo>∈</mo><mi>𝖵</mi></mrow></math></p>
+<table id="Sx3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex3.m1" class="ltx_Math" alttext="\lim_{\|{\mathbf{h}}\|\to 0}\frac{(f({\mathbf{x}}+{\mathbf{h}})-f({\mathbf{x}}%
+))-(Df)({\mathbf{x}})\cdot{\mathbf{h}}}{\|{\mathbf{h}}\|}=0." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mrow><mo>∥</mo><mi>𝐡</mi><mo>∥</mo></mrow><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>+</mo><mi>𝐡</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>-</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>𝐡</mi></mrow></mrow><mrow><mo>∥</mo><mi>𝐡</mi><mo>∥</mo></mrow></mfrac></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Once again we have <math id="Sx3.SSx1.p3.m4" class="ltx_Math" alttext="f({\mathbf{x}}+{\mathbf{h}})\approx f({\mathbf{x}})+(Df)({\mathbf{x}})\cdot{%
+\mathbf{h}}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>+</mo><mi>𝐡</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≈</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>𝐡</mi></mrow></mrow></mrow></math>. In fact,
+if the derivative <math id="Sx3.SSx1.p3.m5" class="ltx_Math" alttext="(Df)({\mathbf{x}})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math> exists, the directional derivatives can
+be obtained as <math id="Sx3.SSx1.p3.m6" class="ltx_Math" alttext="(D_{\mathbf{h}}f)({\mathbf{x}})=(Df)({\mathbf{x}})\cdot{\mathbf{h}}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mi>𝐡</mi></msub><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>𝐡</mi></mrow></mrow></math>.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>The notation <math id="Sx3.SSx1.p3.m7" class="ltx_Math" alttext="A\cdot{\mathbf{h}}" display="inline"><mrow><mi>A</mi><mo>⋅</mo><mi>𝐡</mi></mrow></math> is used when <math id="Sx3.SSx1.p3.m8" class="ltx_Math" alttext="{\mathbf{h}}" display="inline"><mi>𝐡</mi></math> is a
+vector and <math id="Sx3.SSx1.p3.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> a linear operator. This notation can be
+considered advantageous to the usual notation <math id="Sx3.SSx1.p3.m10" class="ltx_Math" alttext="A({\mathbf{h}})" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐡</mi><mo stretchy="false">)</mo></mrow></mrow></math>, since
+the latter is rather bulky and the former incorporates the
+intuitive distributive properties of linear operators also
+associated with usual multiplication.</span></span></span> However, the
+existence of <math id="Sx3.SSx1.p3.m11" class="ltx_Math" alttext="(D_{\mathbf{h}}f)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mi>𝐡</mi></msub><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></math> for each non-zero <math id="Sx3.SSx1.p3.m12" class="ltx_Math" alttext="{\mathbf{h}}\in{\mathsf{V}}" display="inline"><mrow><mi>𝐡</mi><mo>∈</mo><mi>𝖵</mi></mrow></math> does not guarantee
+the existence of <math id="Sx3.SSx1.p3.m13" class="ltx_Math" alttext="(Df)({\mathbf{x}})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math>. This derivative is also called the
+<em class="ltx_emph ltx_font_italic">Fréchet derivative</em>. In the more familiar case
+<math id="Sx3.SSx1.p3.m14" class="ltx_Math" alttext="f\colon{\mathbb{R}}^{n}\to{\mathbb{R}}^{m}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></mrow></math>, the derivative <math id="Sx3.SSx1.p3.m15" class="ltx_Math" alttext="Df" display="inline"><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow></math> is simply the Jacobian of
+<math id="Sx3.SSx1.p3.m16" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="Sx3.SSx1.p4" class="ltx_para">
+<p class="ltx_p">Under these general conditions the following properties of the
+derivative remain</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="D{\mathbf{h}}=0" display="inline"><mrow><mrow><mi>D</mi><mo>⁢</mo><mi>𝐡</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>,     where <math id="I3.i1.p1.m2" class="ltx_Math" alttext="{\mathbf{h}}" display="inline"><mi>𝐡</mi></math> is a constant;</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="D(A\cdot{\mathbf{x}})=A" display="inline"><mrow><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⋅</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>A</mi></mrow></math>,     where <math id="I3.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is linear.</p>
+</div>
+</li>
+</ol>
+<dl id="I4" class="ltx_description">
+<dt id="I4.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_description">Linearity</span></dt>
+<dd class="ltx_item">
+<div id="I4.ix1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.ix1.p1.m1" class="ltx_Math" alttext="D(af({\mathbf{x}})+bg({\mathbf{x}}))\cdot{\mathbf{h}}=a(Df)({\mathbf{x}})\cdot%
+{\mathbf{h}}+b(Dg)({\mathbf{x}})\cdot{\mathbf{h}}" display="inline"><mrow><mrow><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>𝐡</mi></mrow><mo>=</mo><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>𝐡</mi></mrow><mo>+</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>𝐡</mi></mrow></mrow></mrow></math>;</p>
+</div>
+</dd>
+<dt id="I4.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_description">“Product” rule</span></dt>
+<dd class="ltx_item">
+<div id="I4.ix2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.ix2.p1.m1" class="ltx_Math" alttext="D(B(f({\mathbf{x}}),g({\mathbf{x}})))\cdot{\mathbf{h}}=B((Df)({\mathbf{x}})%
+\cdot{\mathbf{h}},g({\mathbf{x}}))+B(f({\mathbf{x}}),(Dg)({\mathbf{x}})\cdot{%
+\mathbf{h}})" display="inline"><mrow><mrow><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>𝐡</mi></mrow><mo>=</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>𝐡</mi></mrow><mo>,</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>𝐡</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
+    where <math id="I4.ix2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is bilinear;</p>
+</div>
+</dd>
+<dt id="I4.ix3" class="ltx_item"><span class="ltx_tag ltx_tag_description">Chain rule</span></dt>
+<dd class="ltx_item">
+<div id="I4.ix3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.ix3.p1.m1" class="ltx_Math" alttext="D(g(f({\mathbf{x}}))\cdot{\mathbf{h}}=(Dg)(f({\mathbf{x}}))\cdot((Df)({\mathbf%
+{x}})\cdot{\mathbf{h}})" display="inline"><mrow><mi>D</mi><mrow><mo stretchy="false">(</mo><mi>g</mi><mrow><mo stretchy="false">(</mo><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mi>𝐡</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mi>g</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mi>f</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mi>𝐡</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="Sx3.SSx1.p5" class="ltx_para">
+<p class="ltx_p">Note that the derivative of <math id="Sx3.SSx1.p5.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be seen as a function <math id="Sx3.SSx1.p5.m2" class="ltx_Math" alttext="Df\colon{\mathsf{V}}\to L({\mathsf{V}},{\mathsf{W}})" display="inline"><mrow><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo>:</mo><mrow><mi>𝖵</mi><mo>→</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝖵</mi><mo>,</mo><mi>𝖶</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> given by <math id="Sx3.SSx1.p5.m3" class="ltx_Math" alttext="Df\colon{\mathbf{x}}\mapsto(Df)({\mathbf{x}})" display="inline"><mrow><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo>:</mo><mrow><mi>𝐱</mi><mo>↦</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, where <math id="Sx3.SSx1.p5.m4" class="ltx_Math" alttext="L({\mathsf{V}},{\mathsf{W}})" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝖵</mi><mo>,</mo><mi>𝖶</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+is the space of bounded linear maps from <math id="Sx3.SSx1.p5.m5" class="ltx_Math" alttext="{\mathsf{V}}" display="inline"><mi>𝖵</mi></math> to <math id="Sx3.SSx1.p5.m6" class="ltx_Math" alttext="{\mathsf{W}}" display="inline"><mi>𝖶</mi></math>. Since <math id="Sx3.SSx1.p5.m7" class="ltx_Math" alttext="L({\mathsf{V}},{\mathsf{W}})" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝖵</mi><mo>,</mo><mi>𝖶</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+can be considered a Banach space itself with the norm taken as the
+operator norm, higher derivatives can be
+obtained by applying the same procedure to <math id="Sx3.SSx1.p5.m8" class="ltx_Math" alttext="Df" display="inline"><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow></math> and so on.
+</p>
+</div>
+</section>
+<section id="Sx3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Partial derivatives</h3>
+
+<div id="Sx3.SS1.p1" class="ltx_para">
+<p class="ltx_p">A straightforward extension of the derivatives defined above is that of partial derivatives for functions
+of several independent variables. Partial derivatives have numerous applications, as for example in
+physics and engineering; wave equations are among such important examples of the use of partial derivatives
+in physics and engineering.</p>
+</div>
+</section>
+<section id="Sx3.SSx2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Manifolds</h3>
+
+<div id="Sx3.SSx2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx3.SSx2.p1.m1" class="ltx_Math" alttext="{\mathsf{V}}" display="inline"><mi>𝖵</mi></math> be a Banach space (for finite dimensional manifolds <math id="Sx3.SSx2.p1.m2" class="ltx_Math" alttext="{\mathsf{V}}={\mathbb{R}}^{n}" display="inline"><mrow><mi>𝖵</mi><mo>=</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>). A manifold modeled on <math id="Sx3.SSx2.p1.m3" class="ltx_Math" alttext="{\mathsf{V}}" display="inline"><mi>𝖵</mi></math> is a topological space that is locally homeomorphic to
+<math id="Sx3.SSx2.p1.m4" class="ltx_Math" alttext="{\mathsf{V}}" display="inline"><mi>𝖵</mi></math> and
+is endowed with enough structure to define derivatives. Since the
+notion of a manifold was constructed specifically to generalize the
+notion of a derivative, this seems like the end of the road for this
+entry. The following discussion is rather technical, a more
+intuitive explanation of the same concept can be found in the entry
+on related rates.</p>
+</div>
+<div id="Sx3.SSx2.p2" class="ltx_para">
+<p class="ltx_p">Consider manifolds <math id="Sx3.SSx2.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="Sx3.SSx2.p2.m2" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> modeled on Banach spaces <math id="Sx3.SSx2.p2.m3" class="ltx_Math" alttext="{\mathsf{V}}" display="inline"><mi>𝖵</mi></math> and <math id="Sx3.SSx2.p2.m4" class="ltx_Math" alttext="{\mathsf{W}}" display="inline"><mi>𝖶</mi></math>,
+respectively. Say we have
+<math id="Sx3.SSx2.p2.m5" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for some <math id="Sx3.SSx2.p2.m6" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math> and <math id="Sx3.SSx2.p2.m7" class="ltx_Math" alttext="y\in W" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>W</mi></mrow></math>, then, by definition of a
+manifold, we can find charts <math id="Sx3.SSx2.p2.m8" class="ltx_Math" alttext="(X,{\mathbf{x}})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></math> and <math id="Sx3.SSx2.p2.m9" class="ltx_Math" alttext="(Y,{\mathbf{y}})" display="inline"><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>𝐲</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="Sx3.SSx2.p2.m10" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="Sx3.SSx2.p2.m11" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>
+are neighborhoods of <math id="Sx3.SSx2.p2.m12" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="Sx3.SSx2.p2.m13" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, respectively. These charts provide us
+with canonical isomorphisms between the Banach spaces <math id="Sx3.SSx2.p2.m14" class="ltx_Math" alttext="{\mathsf{V}}" display="inline"><mi>𝖵</mi></math> and <math id="Sx3.SSx2.p2.m15" class="ltx_Math" alttext="{\mathsf{W}}" display="inline"><mi>𝖶</mi></math>,
+and the respective tangent spaces <math id="Sx3.SSx2.p2.m16" class="ltx_Math" alttext="T_{x}V" display="inline"><mrow><msub><mi>T</mi><mi>x</mi></msub><mo>⁢</mo><mi>V</mi></mrow></math> and <math id="Sx3.SSx2.p2.m17" class="ltx_Math" alttext="T_{y}W" display="inline"><mrow><msub><mi>T</mi><mi>y</mi></msub><mo>⁢</mo><mi>W</mi></mrow></math>:</p>
+<table id="Sx3.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex4.m1" class="ltx_Math" alttext="{\mathrm{d}}{\mathbf{x}}_{x}\colon T_{x}V\to{\mathsf{V}},\quad{\mathrm{d}}{%
+\mathbf{y}}_{y}\colon T_{y}W\to{\mathsf{W}}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁢</mo><msub><mi>𝐱</mi><mi>x</mi></msub></mrow><mo>:</mo><mrow><mrow><msub><mi>T</mi><mi>x</mi></msub><mo>⁢</mo><mi>V</mi></mrow><mo>→</mo><mrow><mi>𝖵</mi><mo rspace="12.5pt">,</mo><mrow><mi mathvariant="normal">d</mi><mo>⁢</mo><msub><mi>𝐲</mi><mi>y</mi></msub></mrow></mrow></mrow><mo>:</mo><mrow><mrow><msub><mi>T</mi><mi>y</mi></msub><mo>⁢</mo><mi>W</mi></mrow><mo>→</mo><mi>𝖶</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx3.SSx2.p3" class="ltx_para">
+<p class="ltx_p">Now consider a map <math id="Sx3.SSx2.p3.m1" class="ltx_Math" alttext="f\colon V\to W" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>W</mi></mrow></mrow></math> between the manifolds. By
+composing it with the chart maps we construct the map</p>
+<table id="Sx3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex5.m1" class="ltx_Math" alttext="g_{(X,{\mathbf{x}})}^{(Y,{\mathbf{y}})}={\mathbf{y}}\circ f\circ{\mathbf{x}}^{%
+-1}\colon{\mathsf{V}}\to{\mathsf{W}}," display="block"><mrow><mrow><mrow><msubsup><mi>g</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>𝐲</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mrow><mi>𝐲</mi><mo>∘</mo><mi>f</mi><mo>∘</mo><msup><mi>𝐱</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>:</mo><mrow><mi>𝖵</mi><mo>→</mo><mi>𝖶</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">defined on an appropriately  domain.
+Since we now have a map between Banach spaces, we can define its
+derivative at <math id="Sx3.SSx2.p3.m2" class="ltx_Math" alttext="{\mathbf{x}}(x)" display="inline"><mrow><mi>𝐱</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> in the sense defined above, namely
+<math id="Sx3.SSx2.p3.m3" class="ltx_Math" alttext="Dg_{(X,{\mathbf{x}})}^{(Y,{\mathbf{y}})}({\mathbf{x}}(x))" display="inline"><mrow><mi>D</mi><mo>⁢</mo><msubsup><mi>g</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>𝐲</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. If this derivative exists for every
+choice of admissible charts <math id="Sx3.SSx2.p3.m4" class="ltx_Math" alttext="(X,{\mathbf{x}})" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></math> and <math id="Sx3.SSx2.p3.m5" class="ltx_Math" alttext="(Y,{\mathbf{y}})" display="inline"><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>𝐲</mi><mo stretchy="false">)</mo></mrow></math>, we can say that
+the derivative of <math id="Sx3.SSx2.p3.m6" class="ltx_Math" alttext="Df(x)" display="inline"><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="Sx3.SSx2.p3.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="Sx3.SSx2.p3.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is defined and given by</p>
+<table id="Sx3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex6.m1" class="ltx_Math" alttext="Df(x)={\mathrm{d}}{\mathbf{y}}_{y}^{-1}\circ Dg_{(X,{\mathbf{x}})}^{(Y,{%
+\mathbf{y}})}({\mathbf{x}}(x))\circ{\mathrm{d}}{\mathbf{x}}_{x}" display="block"><mrow><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁢</mo><msubsup><mi>𝐲</mi><mi>y</mi><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow><mo>∘</mo><mi>D</mi></mrow><mo>⁢</mo><msubsup><mi>g</mi><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>𝐲</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐱</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mi mathvariant="normal">d</mi></mrow><mo>⁢</mo><msub><mi>𝐱</mi><mi>x</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(it can be shown that this is well defined and independent of the
+choice of charts).</p>
+</div>
+<div id="Sx3.SSx2.p4" class="ltx_para">
+<p class="ltx_p">Note that the derivative is now a map between the tangent spaces of
+the two manifolds <math id="Sx3.SSx2.p4.m1" class="ltx_Math" alttext="Df(x)\colon T_{x}V\to T_{y}W" display="inline"><mrow><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mrow><msub><mi>T</mi><mi>x</mi></msub><mo>⁢</mo><mi>V</mi></mrow><mo>→</mo><mrow><msub><mi>T</mi><mi>y</mi></msub><mo>⁢</mo><mi>W</mi></mrow></mrow></mrow></math>. Because of this a
+common notation for the derivative of <math id="Sx3.SSx2.p4.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="Sx3.SSx2.p4.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is <math id="Sx3.SSx2.p4.m4" class="ltx_Math" alttext="T_{x}f" display="inline"><mrow><msub><mi>T</mi><mi>x</mi></msub><mo>⁢</mo><mi>f</mi></mrow></math>. Another
+alternative notation for the derivative is <math id="Sx3.SSx2.p4.m5" class="ltx_Math" alttext="f_{*,x}" display="inline"><msub><mi>f</mi><mrow><mo>*</mo><mo>,</mo><mi>x</mi></mrow></msub></math> because of its
+connection to the category-theoretical pushforward.</p>
+</div>
+</section>
+<section id="Sx3.SSx3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Distributions</h3>
+
+<div id="Sx3.SSx3.p1" class="ltx_para">
+<p class="ltx_p">Derivatives can also be generalized in less “smooth” contexts.
+For example the derivative is one  of
+operation (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OperationsOnDistributions</span>) that can be
+defined for distributions.</p>
+</div>
+</section>
+<section id="Sx3.SSx4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Standard connection of <math id="Sx3.SSx4.m1" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>
+</h3>
+
+<div id="Sx3.SSx4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx3.SSx4.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> be an open set in <math id="Sx3.SSx4.p1.m2" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. There is an operator on vectors fields in <math id="Sx3.SSx4.p1.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> which measure how a
+pair of them, <math id="Sx3.SSx4.p1.m4" class="ltx_Math" alttext="X,Y:\Omega\to{\mathbb{R}}^{n}" display="inline"><mrow><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> vary, one with respect to the other:</p>
+<table id="Sx3.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex7.m1" class="ltx_Math" alttext="D_{X}Y=(JY)X" display="block"><mrow><mrow><msub><mi>D</mi><mi>X</mi></msub><mo>⁢</mo><mi>Y</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>J</mi><mo>⁢</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>X</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here <math id="Sx3.SSx4.p1.m5" class="ltx_Math" alttext="JY" display="inline"><mrow><mi>J</mi><mo>⁢</mo><mi>Y</mi></mrow></math> is the Jacobian of <math id="Sx3.SSx4.p1.m6" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, so when we multiply, we can see that the components
+of <math id="Sx3.SSx4.p1.m7" class="ltx_Math" alttext="D_{X}Y" display="inline"><mrow><msub><mi>D</mi><mi>X</mi></msub><mo>⁢</mo><mi>Y</mi></mrow></math> are the directional variations of the components of <math id="Sx3.SSx4.p1.m8" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> in the direction <math id="Sx3.SSx4.p1.m9" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+</section>
+<section id="Sx3.SSx5" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Additional Topic</h3>
+
+<div id="Sx3.SSx5.p1" class="ltx_para">
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">Non-Newtonian calculus</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx3.SSx5.p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_l ltx_border_t">Title</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">derivative</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t"><span class="ltx_ERROR undefined">\metatable</span></td>
+<td class="ltx_td ltx_border_t"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:55:52 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html><html>
+<head>
+<title>rigorous definition of trigonometric functions</title>
+<!--Generated on Fri Feb  9 19:47:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">rigorous definition of trigonometric functions</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">It is possible to define the trigonometric functions rigorously by means of a
+process based upon the angle addition identities. A sketch of how this is done
+is provided below.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">To begin, define a sequence <math id="p2.m1" class="ltx_Math" alttext="\{c_{n}\}_{n=1}^{\infty}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>c</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup></math> by the initial condition
+<math id="p2.m2" class="ltx_Math" alttext="c_{1}=1" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math> and the recursion</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="c_{n+1}=1-\sqrt{1-{c_{n}\over 2}}." display="block"><mrow><mrow><msub><mi>c</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mn>1</mn><mo>-</mo><msqrt><mrow><mn>1</mn><mo>-</mo><mfrac><msub><mi>c</mi><mi>n</mi></msub><mn>2</mn></mfrac></mrow></msqrt></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Likewise define a sequence <math id="p2.m3" class="ltx_Math" alttext="\{s_{n}\}_{n=1}^{\infty}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup></math> by the conditions <math id="p2.m4" class="ltx_Math" alttext="s_{1}=1" display="inline"><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math> and
+</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="s_{n+1}=\sqrt{c_{n}\over 2}." display="block"><mrow><mrow><msub><mi>s</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msqrt><mfrac><msub><mi>c</mi><mi>n</mi></msub><mn>2</mn></mfrac></msqrt></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(In both equations above, we take the positive square root.)
+It may be shown that both of these sequences are strictly decreasing and approach <math id="p2.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Next, define a sequence of <math id="p3.m1" class="ltx_Math" alttext="2\times 2" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></math> matrices as follows:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="m_{n}=\left(\begin{matrix}1-c_{n}&amp;s_{n}\\
+-s_{n}&amp;1-c_{n}\end{matrix}\right)" display="block"><mrow><msub><mi>m</mi><mi>n</mi></msub><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mn>1</mn><mo>-</mo><msub><mi>c</mi><mi>n</mi></msub></mrow></mtd><mtd columnalign="center"><msub><mi>s</mi><mi>n</mi></msub></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>s</mi><mi>n</mi></msub></mrow></mtd><mtd columnalign="center"><mrow><mn>1</mn><mo>-</mo><msub><mi>c</mi><mi>n</mi></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using the recursion relations which define <math id="p3.m2" class="ltx_Math" alttext="c_{n}" display="inline"><msub><mi>c</mi><mi>n</mi></msub></math> and <math id="p3.m3" class="ltx_Math" alttext="s_{n}" display="inline"><msub><mi>s</mi><mi>n</mi></msub></math>, it may be shown that
+<math id="p3.m4" class="ltx_Math" alttext="m_{n+1}^{2}=m_{n}" display="inline"><mrow><msubsup><mi>m</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></msubsup><mo>=</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></math>, More grenerally, using induction, this can be generalised to
+<math id="p3.m5" class="ltx_Math" alttext="m_{n+k}^{2^{k}}=m_{n}" display="inline"><mrow><msubsup><mi>m</mi><mrow><mi>n</mi><mo>+</mo><mi>k</mi></mrow><msup><mn>2</mn><mi>k</mi></msup></msubsup><mo>=</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">It is easy to check that the product of any two matrices of the form</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\left(\begin{matrix}x&amp;y\\
+-y&amp;x\end{matrix}\right)" display="block"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>x</mi></mtd><mtd columnalign="center"><mi>y</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>y</mi></mrow></mtd><mtd columnalign="center"><mi>x</mi></mtd></mtr></mtable><mo>)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is of the same form. Hence, for any integers <math id="p4.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> and <math id="p4.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the matrix
+<math id="p4.m3" class="ltx_Math" alttext="m_{n}^{k}" display="inline"><msubsup><mi>m</mi><mi>n</mi><mi>k</mi></msubsup></math> will be of this form. We can therefore define functions <math id="p4.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and
+<math id="p4.m5" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> from rational numbers whose denominator is a power of two to real
+numbers by the following equation:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\left(\begin{matrix}C\left({n\over 2^{k}}\right)&amp;S\left({n\over 2^{k}}\right)%
+\\
+-S\left({n\over 2^{k}}\right)&amp;C\left({n\over 2^{k}}\right)\end{matrix}\right)=%
+\left(\begin{matrix}1-c_{k}&amp;s_{k}\\
+-s_{k}&amp;1-c_{k}\end{matrix}\right)^{n}." display="block"><mrow><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="false"><mfrac><mi>n</mi><msup><mn>2</mn><mi>k</mi></msup></mfrac></mstyle><mo>)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="false"><mfrac><mi>n</mi><msup><mn>2</mn><mi>k</mi></msup></mfrac></mstyle><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="false"><mfrac><mi>n</mi><msup><mn>2</mn><mi>k</mi></msup></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="false"><mfrac><mi>n</mi><msup><mn>2</mn><mi>k</mi></msup></mfrac></mstyle><mo>)</mo></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><msup><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mn>1</mn><mo>-</mo><msub><mi>c</mi><mi>k</mi></msub></mrow></mtd><mtd columnalign="center"><msub><mi>s</mi><mi>k</mi></msub></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>s</mi><mi>k</mi></msub></mrow></mtd><mtd columnalign="center"><mrow><mn>1</mn><mo>-</mo><msub><mi>c</mi><mi>k</mi></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mi>n</mi></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">From the recursion relations, we may prove the following identities:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle S^{2}(r)+C^{2}(r)" display="inline"><mrow><mrow><msup><mi>S</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>C</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle 1" display="inline"><mn>1</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle S(p+q)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle S(p)C(q)+S(q)C(p)" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle C(p+q)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle C(p)C(q)-S(p)S(q)" display="inline"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">From the fact that <math id="p6.m1" class="ltx_Math" alttext="c_{n}\to 0" display="inline"><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>→</mo><mn>0</mn></mrow></math> and <math id="p6.m2" class="ltx_Math" alttext="s_{n}\to 0" display="inline"><mrow><msub><mi>s</mi><mi>n</mi></msub><mo>→</mo><mn>0</mn></mrow></math> as <math id="p6.m3" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, it
+follows that, if <math id="p6.m4" class="ltx_Math" alttext="\{p_{n}\}_{n=1}^{\infty}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup></math> and <math id="p6.m5" class="ltx_Math" alttext="\{q_{n}\}_{n=1}^{\infty}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>q</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup></math> are
+two sequences of rational numbers whose denominators are powers of two
+such that <math id="p6.m6" class="ltx_Math" alttext="\lim_{n\to\infty}p_{n}=\lim_{n\to\infty}q_{n}" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msub><mi>p</mi><mi>n</mi></msub></mrow><mo>=</mo><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msub><mi>q</mi><mi>n</mi></msub></mrow></mrow></math>, then
+<math id="p6.m7" class="ltx_Math" alttext="\lim_{n\to\infty}C(p_{n})=\lim_{n\to\infty}C(q_{n})" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>q</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> and
+<math id="p6.m8" class="ltx_Math" alttext="\lim_{n\to\infty}S(p_{n})=\lim_{n\to\infty}S(q_{n})" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>q</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Therefore,
+we may define functions by the conditions that, for any convergent
+series of rational numbers <math id="p6.m9" class="ltx_Math" alttext="\{r_{n}\}_{n=0}^{\infty}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>r</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup></math> whose denominators
+are powers of two,</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\cos\left(\pi\lim_{n\to\infty}r_{n}\right)=\lim_{n\to\infty}C(r_{n})" display="block"><mrow><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msub><mi>r</mi><mi>n</mi></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\sin\left(\pi\lim_{n\to\infty}r_{n}\right)=\lim_{n\to\infty}S(r_{n})." display="block"><mrow><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msub><mi>r</mi><mi>n</mi></msub></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By continuity, we see that these functions satisfy the angle addition
+identities.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Application</span>. Let us use the definitions above to find <math id="p7.m1" class="ltx_Math" alttext="\sin(\frac{\pi}{2})" display="inline"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p7.m2" class="ltx_Math" alttext="\cos(\frac{\pi}{2})" display="inline"><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow></math>. Let <math id="p7.m3" class="ltx_Math" alttext="r_{i}:=\frac{1}{2}" display="inline"><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>:=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math> for every positive integer <math id="p7.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>. Then we need to find <math id="p7.m5" class="ltx_Math" alttext="C(\frac{1}{2})" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p7.m6" class="ltx_Math" alttext="S(\frac{1}{2})" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow></math>. We use the matrix above defining <math id="p7.m7" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> and <math id="p7.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, and set <math id="p7.m9" class="ltx_Math" alttext="n=k=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mi>k</mi><mo>=</mo><mn>1</mn></mrow></math>:</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\left(\begin{matrix}C\left({\frac{1}{2}}\right)&amp;S\left({\frac{1}{2}}\right)\\
+-S\left({\frac{1}{2}}\right)&amp;C\left({\frac{1}{2}}\right)\end{matrix}\right)=%
+\left(\begin{matrix}1-c_{1}&amp;s_{1}\\
+-s_{1}&amp;1-c_{1}\end{matrix}\right)=\left(\begin{matrix}0&amp;1\\
+-1&amp;0\end{matrix}\right)." display="block"><mrow><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mn>1</mn><mo>-</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mtd><mtd columnalign="center"><msub><mi>s</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>s</mi><mn>1</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><mn>1</mn><mo>-</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As a result, <math id="p7.m10" class="ltx_Math" alttext="\cos(\frac{\pi}{2})=\cos(\pi\lim_{i\to\infty}\frac{1}{2})=\lim_{i\to\infty}C(%
+\frac{1}{2})=C(\frac{1}{2})=0" display="inline"><mrow><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><msub><mo>lim</mo><mrow><mi>i</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo>lim</mo><mrow><mi>i</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. Similarly, <math id="p7.m11" class="ltx_Math" alttext="\sin(\frac{\pi}{2})=1" display="inline"><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">rigorous definition of trigonometric functions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RigorousDefinitionOfTrigonometricFunctions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:22:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:22:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">TrigonometricFormulasFromSeries</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:47:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

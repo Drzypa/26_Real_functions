@@ -1,0 +1,288 @@
+<!DOCTYPE html><html>
+<head>
+<title>tests for local extrema in Lagrange multiplier method</title>
+<!--Generated on Fri Feb  9 19:58:41 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">tests for local extrema in Lagrange multiplier method</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> be open in <math id="p1.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>,
+and <math id="p1.m3" class="ltx_Math" alttext="f\colon U\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>, <math id="p1.m4" class="ltx_Math" alttext="g\colon U\to\mathbb{R}^{m}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow></mrow></math> be twice continuously differentiable functions.
+Assume that <math id="p1.m5" class="ltx_Math" alttext="p\in U" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>U</mi></mrow></math> is a stationary point
+for <math id="p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on <math id="p1.m7" class="ltx_Math" alttext="M=g^{-1}(\{0\})" display="inline"><mrow><mi>M</mi><mo>=</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+and <math id="p1.m8" class="ltx_Math" alttext="\operatorname{D}g" display="inline"><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow></math> has full rank everywhere<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>Actually, only <math id="p1.m9" class="ltx_Math" alttext="\operatorname{D}g(p)" display="inline"><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> needs to have full rank, and the arguments presented here continue to hold in that case, although <math id="p1.m10" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> would not necessarily be a manifold then.</span></span></span> on <math id="p1.m11" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.
+Then we know that <math id="p1.m12" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is the solution
+to the Lagrange multiplier system</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\operatorname{D}f(p)=\lambda\cdot\operatorname{D}g(p)\,," display="block"><mrow><mrow><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⋅</mo><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>g</mi></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">for a Lagrange multiplier vector <math id="p1.m13" class="ltx_Math" alttext="\lambda=(\lambda_{1},\ldots,\lambda_{m})" display="inline"><mrow><mi>λ</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>λ</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Our aim is to develop an analogue of the second derivative test for the stationary point <math id="p2.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The most straightforward way to proceed is to consider a coordinate chart <math id="p3.m1" class="ltx_Math" alttext="\alpha\colon V\to M" display="inline"><mrow><mi>α</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>M</mi></mrow></mrow></math>
+for the manifold <math id="p3.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, and consider the Hessian of the function <math id="p3.m3" class="ltx_Math" alttext="f\circ\alpha\colon V\to\mathbb{R}^{n}" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow><mo>:</mo><mrow><mi>V</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math>
+at <math id="p3.m4" class="ltx_Math" alttext="0=\alpha^{-1}(p)" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><msup><mi>α</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This Hessian is in fact just the Hessian form of <math id="p3.m5" class="ltx_Math" alttext="f\colon M\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>
+expressed in the coordinates of the chart <math id="p3.m6" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>. But the whole point of using Lagrange multipliers
+is to avoid calculating coordinate charts directly, so we find an equivalent expression
+for <math id="p3.m7" class="ltx_Math" alttext="\operatorname{D}^{2}(f\circ\alpha)(0)" display="inline"><mrow><mrow><msup><mi mathvariant="normal">D</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> in terms of <math id="p3.m8" class="ltx_Math" alttext="\operatorname{D}^{2}f(p)" display="inline"><mrow><mrow><msup><mi mathvariant="normal">D</mi><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> without mentioning derivatives of <math id="p3.m9" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">To do this, we differentiate <math id="p4.m1" class="ltx_Math" alttext="f\circ\alpha" display="inline"><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow></math> twice using the chain rule and product
+rule<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>Note that the “product” operation involved (second equality of (<a href="#S0.E2" title="(2) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>))
+is the operation of <em class="ltx_emph ltx_font_italic">composition of two linear mappings</em>.
+Think hard about this if you are not sure; it took me several tries to get this formula right,
+since multi-variable iterated derivatives have a complicated structure.</span></span></span>.
+To reduce clutter, from now on we use the prime notation for derivatives rather than <math id="p4.m2" class="ltx_Math" alttext="\operatorname{D}" display="inline"><mi mathvariant="normal">D</mi></math>.</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\begin{split}\displaystyle(f\circ\alpha)^{\prime\prime}(0)&amp;\displaystyle=((f^{%
+\prime}\circ\alpha)\cdot\alpha^{\prime})^{\prime}(0)\\
+&amp;\displaystyle=\bigl{(}(f^{\prime\prime}\circ\alpha)\cdot\alpha^{\prime}\cdot%
+\alpha^{\prime}+(f^{\prime}\circ\alpha)\cdot\alpha^{\prime\prime}\bigr{)}(0)\\
+&amp;\displaystyle=f^{\prime\prime}(\alpha(0))\cdot\alpha^{\prime}(0)\cdot\alpha^{%
+\prime}(0)+f^{\prime}(\alpha(0))\cdot\alpha^{\prime\prime}(0)\\
+&amp;\displaystyle=f^{\prime\prime}(p)\cdot\alpha^{\prime}(0)\cdot\alpha^{\prime}(%
+0)+f^{\prime}(p)\cdot\alpha^{\prime\prime}(0)\,.\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo stretchy="false">)</mo></mrow><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′′</mo></msup></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">If we interpret <math id="p5.m1" class="ltx_Math" alttext="(f\circ\alpha)^{\prime\prime}(0)" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> as a bilinear mapping of vectors <math id="p5.m2" class="ltx_Math" alttext="u,v\in\mathbb{R}^{n-m}" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msup></mrow></math>,
+then formula (<a href="#S0.E2" title="(2) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) really means</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="(f\circ\alpha)^{\prime\prime}(0)\cdot(u,v)=f^{\prime\prime}(p)\cdot\bigl{(}%
+\alpha^{\prime}(0)\cdot u,\alpha^{\prime}(0)\cdot v\bigr{)}+f^{\prime}(p)\cdot%
+\bigl{(}\alpha^{\prime\prime}(0)\cdot(u,v)\bigr{)}\,." display="block"><mrow><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><msup><mi>α</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>u</mi></mrow><mo>,</mo><mrow><mrow><msup><mi>α</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>v</mi></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><msup><mi>α</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">To obtain the quadratic form, we set <math id="p5.m3" class="ltx_Math" alttext="v=u" display="inline"><mrow><mi>v</mi><mo>=</mo><mi>u</mi></mrow></math>; also we abbreviate the vector <math id="p5.m4" class="ltx_Math" alttext="\alpha^{\prime}(0)\cdot u" display="inline"><mrow><mrow><msup><mi>α</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>u</mi></mrow></math> by <math id="p5.m5" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math>,
+which belongs to the tangent space <math id="p5.m6" class="ltx_Math" alttext="\mathrm{T}_{p}M" display="inline"><mrow><msub><mi mathvariant="normal">T</mi><mi>p</mi></msub><mo>⁢</mo><mi>M</mi></mrow></math> of <math id="p5.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> at <math id="p5.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. So,</p>
+<table id="S0.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E4.m1" class="ltx_Math" alttext="(f\circ\alpha)^{\prime\prime}(0)\cdot u^{2}=f^{\prime\prime}(p)\cdot h^{2}+f^{%
+\prime}(p)\cdot\bigl{(}\alpha^{\prime\prime}(0)\cdot u^{2}\bigr{)}\,." display="block"><mrow><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><msup><mi>α</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Naïvely, we might think that <math id="p5.m9" class="ltx_Math" alttext="(f\circ\alpha)^{\prime\prime}(0)" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> is simply
+<math id="p5.m10" class="ltx_Math" alttext="f^{\prime\prime}(p)" display="inline"><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> restricted to the tangent space <math id="p5.m11" class="ltx_Math" alttext="\mathrm{T}_{p}M" display="inline"><mrow><msub><mi mathvariant="normal">T</mi><mi>p</mi></msub><mo>⁢</mo><mi>M</mi></mrow></math>.
+This happens to be the first term in (<a href="#S0.E4" title="(4) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>), but there is also
+an additional contribution by the second term involving <math id="p5.m12" class="ltx_Math" alttext="\alpha^{\prime\prime}(0)" display="inline"><mrow><msup><mi>α</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>;
+intuitively, <math id="p5.m13" class="ltx_Math" alttext="\alpha^{\prime\prime}(0)" display="inline"><mrow><msup><mi>α</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> is the curvature of the surface (manifold) <math id="p5.m14" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>,
+“changing the geometry” of the graph of <math id="p5.m15" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">But the second term of (<a href="#S0.E4" title="(4) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) still involves <math id="p6.m1" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>.
+To eliminate it, we differentiate the equation <math id="p6.m2" class="ltx_Math" alttext="g\circ\alpha=0" display="inline"><mrow><mrow><mi>g</mi><mo>∘</mo><mi>α</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> twice.</p>
+<table id="S0.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E5.m1" class="ltx_Math" alttext="0=(g\circ\alpha)^{\prime\prime}(0)=g^{\prime\prime}(p)\cdot\alpha^{\prime}(0)%
+\cdot\alpha^{\prime}(0)+g^{\prime}(p)\cdot\alpha^{\prime\prime}(0)\,." display="block"><mrow><mrow><mn>0</mn><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><msup><mi>g</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">(It is derived the same way as (<a href="#S0.E2" title="(2) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) but with <math id="p6.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> replaced by <math id="p6.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>.)
+Now we can substitute (<a href="#S0.E5" title="(5) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) and (<a href="#S0.E1" title="(1) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>)
+in (<a href="#S0.E2" title="(2) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) to eliminate the term <math id="p6.m5" class="ltx_Math" alttext="f^{\prime}(p)\cdot\alpha^{\prime\prime}(0)" display="inline"><mrow><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<table id="S0.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E6.m1" class="ltx_Math" alttext="\begin{split}\displaystyle(f\circ\alpha)^{\prime\prime}(0)&amp;\displaystyle=f^{%
+\prime\prime}(p)\cdot\alpha^{\prime}(0)\cdot\alpha^{\prime}(0)+\lambda\cdot g^%
+{\prime}(p)\cdot\alpha^{\prime\prime}(0)\\
+&amp;\displaystyle=f^{\prime\prime}(p)\cdot\alpha^{\prime}(0)\cdot\alpha^{\prime}(%
+0)-\lambda\cdot g^{\prime\prime}(p)\cdot\alpha^{\prime}(0)\cdot\alpha^{\prime}%
+(0)\,,\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><mrow><mi>λ</mi><mo>⋅</mo><msup><mi>g</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mrow><mrow><mrow><mrow><mrow><mi>λ</mi><mo>⋅</mo><msup><mi>g</mi><mo>′′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>α</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">or expressed as a quadratic form,</p>
+<table id="S0.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E7.m1" class="ltx_Math" alttext="(f\circ\alpha)^{\prime\prime}(0)\cdot u^{2}=f^{\prime\prime}(p)\cdot h^{2}-%
+\lambda\cdot g^{\prime\prime}(p)\cdot h^{2}\,." display="block"><mrow><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>-</mo><mrow><mrow><mrow><mi>λ</mi><mo>⋅</mo><msup><mi>g</mi><mo>′′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mpadded width="+1.7pt"><msup><mi>h</mi><mn>2</mn></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Thus, to understand the nature of the stationary point <math id="p7.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, we can study the modified Hessian:</p>
+<table id="S0.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E8.m1" class="ltx_Math" alttext="f^{\prime\prime}(p)-\lambda\cdot g^{\prime\prime}(p)\,,\quad\text{ restricted %
+to $\mathrm{T}_{p}M$. }" display="block"><mrow><mrow><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mrow><mi>λ</mi><mo>⋅</mo><msup><mi>g</mi><mo>′′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mtext> restricted to </mtext><mrow><msub><mi mathvariant="normal">T</mi><mi>p</mi></msub><mo>⁢</mo><mi>M</mi></mrow><mtext>. </mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr>
+</table>
+<p class="ltx_p">For example, if this bilinear form is positive definite, then <math id="p7.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a local minimum,
+and if it is negative definite, then <math id="p7.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a local maximum, and so on.
+All the tests that apply to the usual Hessian in <math id="p7.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> apply to the modified Hessian (<a href="#S0.E8" title="(8) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>).</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">In coordinates of <math id="p8.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>, the modified Hessian (<a href="#S0.E8" title="(8) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>)
+takes the form</p>
+<table id="S0.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E9.m1" class="ltx_Math" alttext="\sum_{i=1}^{n}\sum_{j=1}^{n}\left(\left.\frac{\partial^{2}f}{\partial x^{i}%
+\partial x^{j}}\right|_{p}-\sum_{k=1}^{m}\lambda_{k}\,\left.\frac{\partial^{2}%
+g^{k}}{\partial x^{i}\partial x^{j}}\right|_{p}\right)h^{i}h^{j}\,." display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo>(</mo><mrow><msub><mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mrow></mfrac><mo fence="true">|</mo></mrow><mi>p</mi></msub><mo>-</mo><msub><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mpadded width="+1.7pt"><msub><mi>λ</mi><mi>k</mi></msub></mpadded><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msup><mi>g</mi><mi>k</mi></msup></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mrow></mfrac></mrow></mrow><mo fence="true">|</mo></mrow><mi>p</mi></msub></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mi>h</mi><mi>i</mi></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>h</mi><mi>j</mi></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">We emphasize that the vector <math id="p8.m2" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> can be restricted to lie in the tangent space <math id="p8.m3" class="ltx_Math" alttext="\mathrm{T}_{p}M" display="inline"><mrow><msub><mi mathvariant="normal">T</mi><mi>p</mi></msub><mo>⁢</mo><mi>M</mi></mrow></math>,
+when studying the stationary point <math id="p8.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> of <math id="p8.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> restricted to <math id="p8.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">In matrix form (<a href="#S0.E9" title="(9) ‣ tests for local extrema in Lagrange multiplier method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>)
+can be written</p>
+<table id="S0.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E10.m1" class="ltx_Math" alttext="B=\begin{bmatrix}\dfrac{\partial^{2}f}{\partial x^{i}\partial x^{j}}-\sum%
+\limits_{k=1}^{m}\lambda_{k}\,\dfrac{\partial^{2}g^{k}}{\partial x^{i}\partial
+x%
+^{j}}\end{bmatrix}_{ij}\,." display="block"><mrow><mrow><mi>B</mi><mo>=</mo><mpadded width="+1.7pt"><msub><mrow><mo>[</mo><mtable displaystyle="true"><mtr><mtd columnalign="center"><mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mrow></mfrac><mo>-</mo><mrow><mstyle displaystyle="false"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover></mstyle><mrow><mpadded width="+1.7pt"><msub><mi>λ</mi><mi>k</mi></msub></mpadded><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msup><mi>g</mi><mi>k</mi></msup></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mrow></mfrac></mrow></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr>
+</table>
+<p class="ltx_p">But again, the test vector <math id="p9.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> need only lie on <math id="p9.m2" class="ltx_Math" alttext="\mathrm{T}_{p}M" display="inline"><mrow><msub><mi mathvariant="normal">T</mi><mi>p</mi></msub><mo>⁢</mo><mi>M</mi></mrow></math>,
+so if we want to apply positive/negative definiteness tests for matrices,
+they should instead be applied to the <em class="ltx_emph ltx_font_italic">projected</em> or <em class="ltx_emph ltx_font_italic">reduced</em> Hessian:</p>
+<table id="S0.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E11.m1" class="ltx_Math" alttext="Z^{\mathrm{t}}BZ" display="block"><mrow><msup><mi>Z</mi><mi mathvariant="normal">t</mi></msup><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>Z</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where the columns of the <math id="p9.m3" class="ltx_Math" alttext="n\times(n-m)" display="inline"><mrow><mi>n</mi><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> matrix <math id="p9.m4" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math> form a <em class="ltx_emph ltx_font_italic">basis</em>
+for <math id="p9.m5" class="ltx_Math" alttext="\mathrm{T}_{p}M=\ker g^{\prime}(p)\subset\mathbb{R}^{n}" display="inline"><mrow><mrow><msub><mi mathvariant="normal">T</mi><mi>p</mi></msub><mo>⁢</mo><mi>M</mi></mrow><mo>=</mo><mrow><mrow><mi>ker</mi><mo>⁡</mo><msup><mi>g</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">tests for local extrema in Lagrange multiplier method</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TestsForLocalExtremaInLagrangeMultiplierMethod</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:52</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:52</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 49-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 49K35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HessianForm</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RelationsBetweenHessianMatrixAndLocalExtrema</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">projected Hessian</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">reduced Hessian</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:58:41 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

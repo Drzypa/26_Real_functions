@@ -1,0 +1,218 @@
+<!DOCTYPE html><html>
+<head>
+<title>area under Gaussian curve</title>
+<!--Generated on Fri Feb  9 19:59:01 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">area under Gaussian curve</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmthmplainx1" class="ltx_theorem ltx_theorem_thmplain">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmthmplainx1.p1" class="ltx_para">
+<p class="ltx_p">The area between the curve   <math id="Thmthmplainx1.p1.m1" class="ltx_Math" alttext="y=e^{-x^{2}}" display="inline"><mrow><mi>y</mi><mo>=</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow></math>  and the <math id="Thmthmplainx1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-axis equals <math id="Thmthmplainx1.p1.m3" class="ltx_Math" alttext="\sqrt{\pi}" display="inline"><msqrt><mi>π</mi></msqrt></math>,  i.e.</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\int_{-\infty}^{\infty}e^{-x^{2}}\,dx=\sqrt{\pi}." display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><msqrt><mi>π</mi></msqrt></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<figure id="fig1" class="ltx_figure"><img src="gaussian-curve.eps" id="g1" class="ltx_graphics ltx_centering" alt="">
+</figure>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof.</span>  The square of the area is</p>
+</div>
+<div id="p3" class="ltx_para">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\bigg{(}\int_{-\infty}^{\infty}e^{-x^{2}}\,dx\bigg{)}^{2}" display="inline"><msup><mrow><mo maxsize="210%" minsize="210%">(</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo maxsize="210%" minsize="210%">)</mo></mrow><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\lim_{a\to\infty}\bigg{(}\int_{-a}^{a}e^{-x^{2}}\,dx\bigg{)}^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>a</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msup><mrow><mo maxsize="210%" minsize="210%">(</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi>a</mi></mrow><mi>a</mi></msubsup></mstyle><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo maxsize="210%" minsize="210%">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\lim_{a\to\infty}\int_{-a}^{a}e^{-x^{2}}\,dx\,\cdot\int_{-a}^{a}%
+e^{-y^{2}}\,dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>a</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi>a</mi></mrow><mi>a</mi></msubsup></mstyle><mrow><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded></mrow></mrow><mo>⋅</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi>a</mi></mrow><mi>a</mi></msubsup></mstyle><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\lim_{a\to\infty}\int_{-a}^{a}\int_{-a}^{a}e^{-(x^{2}+y^{2})}\,%
+dx\,dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>a</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi>a</mi></mrow><mi>a</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi>a</mi></mrow><mi>a</mi></msubsup></mstyle><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=\lim_{R\to\infty}\int_{0}^{R}\!\int_{0}^{2\pi}e^{-r^{2}}r\,dr\,d\varphi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>R</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mpadded width="-1.7pt"><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>R</mi></msubsup></mstyle></mpadded><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup></mstyle><mrow><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><mi>r</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>r</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>φ</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=\lim_{R\to\infty}2\pi\!\int_{0}^{R}e^{-r^{2}}r\,dr" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>R</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>π</mi></mpadded><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>R</mi></msubsup></mstyle><mrow><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><mi>r</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>r</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=-\pi\!\lim_{R\to\infty}\!\operatornamewithlimits{\Big{/}}_{\!\!%
+\!0}^{\,\quad\,\,R}e^{-r^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mpadded width="-1.7pt"><mi>π</mi></mpadded><mo>⁢</mo><mrow><mpadded width="-1.7pt"><munder><mo movablelimits="false">lim</mo><mrow><mi>R</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder></mpadded><mo>⁡</mo><mrow><munderover><mo mathsize="160%" movablelimits="false" stretchy="false">/</mo><mpadded lspace="-5pt" width="-5pt"><mn>0</mn></mpadded><mpadded lspace="15pt" width="+15pt"><mi>R</mi></mpadded></munderover><mo>⁡</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></msup></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=\pi\!\lim_{R\to\infty}(1-e^{-R^{2}})\;=\;\pi." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mpadded width="-1.7pt"><mi>π</mi></mpadded><mo>⁢</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>R</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></msup></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mi>π</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Here, the limit of the double integral over a square has been replaced by the limit of the double integral over a disc, because both limits are equal.  That both limits are equal can be demonstrated by the elementary</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="0\leq\int_{-a}^{a}\int_{-a}^{a}\!e^{-(x^{2}+y^{2})}\,dx\,dy-\int_{0}^{a}\!\int%
+_{0}^{2\pi}\!e^{-r^{2}}r\,dr\,d\varphi\leq\underbrace{e^{-a^{2}}}_{greatest\,%
+value}\!\cdot\,\underbrace{(4a^{2}\!-\!\pi a^{2})}_{area}=(4\!-\!\pi)\!\cdot\!%
+\frac{a^{2}}{e^{a^{2}}}," display="block"><mrow><mrow><mn>0</mn><mo>≤</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi>a</mi></mrow><mi>a</mi></msubsup><mrow><mpadded width="-1.7pt"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi>a</mi></mrow><mi>a</mi></msubsup></mpadded><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow><mo>-</mo><mrow><mpadded width="-1.7pt"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>a</mi></msubsup></mpadded><mrow><mpadded width="-1.7pt"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup></mpadded><mrow><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><mi>r</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>r</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>φ</mi></mrow></mrow></mrow></mrow></mrow><mo>≤</mo><mrow><mpadded width="-1.7pt"><munder><munder accentunder="true"><msup><mi>e</mi><mrow><mo movablelimits="false">-</mo><msup><mi>a</mi><mn>2</mn></msup></mrow></msup><mo movablelimits="false">⏟</mo></munder><mrow><mi>g</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>t</mi></mpadded><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>e</mi></mrow></munder></mpadded><mo rspace="4.2pt">⋅</mo><munder><munder accentunder="true"><mrow><mo movablelimits="false" stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo movablelimits="false">⁢</mo><mpadded width="-1.7pt"><msup><mi>a</mi><mn>2</mn></msup></mpadded></mrow><mo movablelimits="false" rspace="0.8pt">-</mo><mrow><mi>π</mi><mo movablelimits="false">⁢</mo><msup><mi>a</mi><mn>2</mn></msup></mrow></mrow><mo movablelimits="false" stretchy="false">)</mo></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mi>a</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi></mrow></munder></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>4</mn></mpadded><mo rspace="0.8pt">-</mo><mi>π</mi></mrow><mo rspace="0.8pt" stretchy="false">)</mo></mrow><mo rspace="0.8pt">⋅</mo><mfrac><msup><mi>a</mi><mn>2</mn></msup><msup><mi>e</mi><msup><mi>a</mi><mn>2</mn></msup></msup></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and  <math id="p4.m1" class="ltx_Math" alttext="\frac{a^{2}}{e^{a^{2}}}\to 0" display="inline"><mrow><mfrac><msup><mi>a</mi><mn>2</mn></msup><msup><mi>e</mi><msup><mi>a</mi><mn>2</mn></msup></msup></mfrac><mo>→</mo><mn>0</mn></mrow></math>  when  <math id="p4.m2" class="ltx_Math" alttext="a\to\infty" display="inline"><mrow><mi>a</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>  (see growth of exponential function).
+<br class="ltx_break"></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark.</span>  Since <math id="p5.m1" class="ltx_Math" alttext="e^{-x^{2}}" display="inline"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></math> is an even function,</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle\int_{0}^{\infty}e^{-x^{2}}\,dx=\frac{\sqrt{\pi}}{2}\&gt;\cdot" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mi>d</mi><mi>x</mi><mo>=</mo><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><msqrt><mi>π</mi></msqrt><mn>2</mn></mfrac></mstyle></mpadded><mo>⋅</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">area under Gaussian curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AreaUnderGaussianCurve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:16:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:16:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">22</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Gaussian integral</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">area under the bell curve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SubstitutionNotation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofThatNormalDistributionIsADistribution</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Distribution</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ErrorFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EvaluatingTheGammaFunctionAt12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NormalRandomVariable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TableOfProbabilitiesOfStandardNormalDistribution</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ApplyingGeneratingFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">FresnelFormulas</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:59:01 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

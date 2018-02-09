@@ -1,0 +1,458 @@
+<!DOCTYPE html><html>
+<head>
+<title>a lecture on the partial fraction decomposition method</title>
+<!--Generated on Fri Feb  9 19:52:43 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">a lecture on the partial fraction decomposition method</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Integrating Rational Functions</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">A rational function is a function of the form
+<math id="S1.p1.m1" class="ltx_Math" alttext="y=\frac{p(x)}{q(x)}" display="inline"><mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></math> where <math id="S1.p1.m2" class="ltx_Math" alttext="p(x)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S1.p1.m3" class="ltx_Math" alttext="q(x)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> are polynomials
+(with real coefficients). Here we are interested in how to solve
+the integral</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\int\frac{p(x)}{q(x)}dx" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We already know how to integrate some functions of this type. As
+we know, the chain rule tells us that the derivative of <math id="S1.p1.m4" class="ltx_Math" alttext="y=\ln(g(x))" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is <math id="S1.p1.m5" class="ltx_Math" alttext="y^{\prime}=\frac{g^{\prime}(x)}{g(x)}" display="inline"><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mfrac><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></math>, where <math id="S1.p1.m6" class="ltx_Math" alttext="g(x)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is any other
+function. Therefore:</p>
+<table id="S2.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S1.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.E1.m1" class="ltx_Math" alttext="\displaystyle\int\frac{g^{\prime}(x)}{g(x)}dx=\ln|g(x)|+C." display="inline"><mrow><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mstyle><mo>=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S1.Thmthm1" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 1.1</span>.</h6>
+<div id="S1.Thmthm1.p1" class="ltx_para">
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\int\frac{2x+1}{x^{2}+x+1}dx=\ln|x^{2}+x+1|+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S1.Thmthm2" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 1.2</span>.</h6>
+<div id="S1.Thmthm2.p1" class="ltx_para">
+<p class="ltx_p">Equation (<a href="#S1.E1" title="(1) ‣ 1 Integrating Rational Functions ‣ a lecture on the partial fraction decomposition method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) may also be used to integrate any function of
+the form <math id="S1.Thmthm2.p1.m1" class="ltx_Math" alttext="y=\frac{a}{bx+c}" display="inline"><mrow><mi>y</mi><mo>=</mo><mfrac><mi>a</mi><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></mfrac></mrow></math>, for any constants <math id="S1.Thmthm2.p1.m2" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math>. Indeed:</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="\int\frac{a}{bx+c}dx=\frac{a}{b}\int\frac{b}{bx+c}dx=\frac{a}{b}\ln|bx+c|+C" display="block"><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mi>a</mi><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mi>a</mi><mi>b</mi></mfrac><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mi>b</mi><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mi>a</mi><mi>b</mi></mfrac><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or alternatively use a
+substitution <math id="S1.Thmthm2.p1.m3" class="ltx_Math" alttext="u=bx+c" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="S1.Thmthm3" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 1.3</span>.</h6>
+<div id="S1.Thmthm3.p1" class="ltx_para">
+<p class="ltx_p">Using a substitution we may also integrate any function of the
+form <math id="S1.Thmthm3.p1.m1" class="ltx_Math" alttext="y=\frac{a}{(bx+c)^{n}}" display="inline"><mrow><mi>y</mi><mo>=</mo><mfrac><mi>a</mi><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mfrac></mrow></math>, namely <math id="S1.Thmthm3.p1.m2" class="ltx_Math" alttext="u=bx+c" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></mrow></math> does the job. For
+example, using <math id="S1.Thmthm3.p1.m3" class="ltx_Math" alttext="u=2x+1" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>, <math id="S1.Thmthm3.p1.m4" class="ltx_Math" alttext="du=2dx" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>:</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\int\frac{3}{(2x+1)^{4}}dx=\frac{3}{2}\int\frac{1}{u^{4}}du=-\frac{1}{2}\frac{%
+1}{u^{3}}+C=-\frac{1}{2(2x+1)^{3}}+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>3</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>4</mn></msup></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>1</mn><msup><mi>u</mi><mn>4</mn></msup></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mfrac><mn>1</mn><msup><mi>u</mi><mn>3</mn></msup></mfrac></mrow></mrow><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mrow></mfrac></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S1.Thmthm4" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 1.4</span>.</h6>
+<div id="S1.Thmthm4.p1" class="ltx_para">
+<p class="ltx_p">The derivative of the arc tangent function, <math id="S1.Thmthm4.p1.m1" class="ltx_Math" alttext="y=\arctan x" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>arctan</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></math>, is
+<math id="S1.Thmthm4.p1.m2" class="ltx_Math" alttext="y^{\prime}=\frac{1}{1+x^{2}}" display="inline"><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></math>. Therefore:</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="\int\frac{1}{1+x^{2}}dx=\arctan x+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>arctan</mi><mo>⁡</mo><mi>x</mi></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, for any constant <math id="S1.Thmthm4.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, using a substitution <math id="S1.Thmthm4.p1.m4" class="ltx_Math" alttext="x=au" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mi>u</mi></mrow></mrow></math> one may
+integrate</p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="\int\frac{1}{a^{2}+x^{2}}dx=\frac{1}{a}\arctan\frac{x}{a}+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mi>a</mi></mfrac><mo>⁢</mo><mrow><mi>arctan</mi><mo>⁡</mo><mfrac><mi>x</mi><mi>a</mi></mfrac></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">You may also use the arctangent function to integrate other
+functions, by completing the square of the denominator. For
+example, <math id="S1.Thmthm4.p1.m5" class="ltx_Math" alttext="x^{2}+2x+2=1+(x+1)^{2}" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math>, thus:</p>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="\int\frac{1}{x^{2}+2x+2}dx=\int\frac{1}{1+(x+1)^{2}}dx=\arctan(x+1)+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>2</mn></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>arctan</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S1.Thmthm5" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 1.5</span>.</h6>
+<div id="S1.Thmthm5.p1" class="ltx_para">
+<p class="ltx_p">The arctangent also allows us to integrate another family of
+functions, namely:</p>
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex8.m1" class="ltx_Math" alttext="\int\frac{bx+c}{a^{2}+x^{2}}dx." display="block"><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The trick is to use the favorite strategy of Napoleon: <span class="ltx_text ltx_font_italic">divide
+and conquer</span>, i.e. we break the fraction into a sum of two (here
+we pick <math id="S1.Thmthm5.p1.m1" class="ltx_Math" alttext="a=1" display="inline"><mrow><mi>a</mi><mo>=</mo><mn>1</mn></mrow></math> for simplicity):</p>
+<table id="S1.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex9.m1" class="ltx_Math" alttext="\int\frac{bx+c}{1+x^{2}}dx=\int\frac{bx}{1+x^{2}}dx+\int\frac{c}{1+x^{2}}dx=%
+\frac{b}{2}\ln|1+x^{2}|+c\arctan x+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>+</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mi>c</mi><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mi>b</mi><mn>2</mn></mfrac><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mi>arctan</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Partial Fraction Decomposition</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">The objective of this method is to reduce any integral of the type
+<math id="S2.p1.m1" class="ltx_Math" alttext="\int\frac{p(x)}{q(x)}dx" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math> to a sum of integrals of the types
+described in the previous sections. For example:</p>
+</div>
+<div id="S2.Thmthm1" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 2.1</span>.</h6>
+<div id="S2.Thmthm1.p1" class="ltx_para">
+<p class="ltx_p">We would like to solve the following integral:</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="\int\frac{2}{x^{2}+3x-4}dx." display="block"><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>2</mn><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">First, we factor the denominator:</p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="x^{2}+3x-4=(x+4)(x-1)" display="block"><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In order
+to integrate, we are going to express the fraction in the
+integrand as a sum:</p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="\frac{2}{x^{2}+3x-4}=\frac{A}{x+4}+\frac{B}{x-1}" display="block"><mrow><mfrac><mn>2</mn><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow></mfrac><mo>=</mo><mrow><mfrac><mi>A</mi><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow></mfrac><mo>+</mo><mfrac><mi>B</mi><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some constants <math id="S2.Thmthm1.p1.m1" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> to be determined. The right hand side
+(after realizing a common denominator) adds up to
+<math id="S2.Thmthm1.p1.m2" class="ltx_Math" alttext="\frac{A(x-1)+B(x+4)}{(x+4)(x-1)}" display="inline"><mfrac><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></math>. Therefore, in order to have an
+equality we need the numerators to be equal:</p>
+<table id="S2.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S2.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.E2.m1" class="ltx_Math" alttext="\displaystyle A(x-1)+B(x+4)=2" display="inline"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for <span class="ltx_text ltx_font_bold">all</span> values of <math id="S2.Thmthm1.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> (i.e. this
+should be an equality of polynomials). Thus, we can substitute
+values of <math id="S2.Thmthm1.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and obtain equations relating <math id="S2.Thmthm1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S2.Thmthm1.p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> and
+hopefully we’ll be able to determine the value of the constants.
+The easiest values to pick are the roots of the denominator of the
+original fraction. In this case, when we plug <math id="S2.Thmthm1.p1.m7" class="ltx_Math" alttext="x=1" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> in Eq.
+(<a href="#S2.E2" title="(2) ‣ Example 2.1. ‣ 2 Partial Fraction Decomposition ‣ a lecture on the partial fraction decomposition method" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) we get <math id="S2.Thmthm1.p1.m8" class="ltx_Math" alttext="5B=2" display="inline"><mrow><mrow><mn>5</mn><mo>⁢</mo><mi>B</mi></mrow><mo>=</mo><mn>2</mn></mrow></math>, and so <math id="S2.Thmthm1.p1.m9" class="ltx_Math" alttext="B=2/5" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mn>2</mn><mo>/</mo><mn>5</mn></mrow></mrow></math>. When we plug <math id="S2.Thmthm1.p1.m10" class="ltx_Math" alttext="x=-4" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>-</mo><mn>4</mn></mrow></mrow></math> we
+obtain <math id="S2.Thmthm1.p1.m11" class="ltx_Math" alttext="-5A=2" display="inline"><mrow><mrow><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>=</mo><mn>2</mn></mrow></math> and so <math id="S2.Thmthm1.p1.m12" class="ltx_Math" alttext="A=-2/5" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo>-</mo><mrow><mn>2</mn><mo>/</mo><mn>5</mn></mrow></mrow></mrow></math>, and we are done! Now we can finish
+the integral:</p>
+<table id="S2.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S2.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex13.m1" class="ltx_Math" alttext="\displaystyle\int\frac{2}{x^{2}+3x-4}dx" display="inline"><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>2</mn><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex13.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex13.m3" class="ltx_Math" alttext="\displaystyle\int\frac{-2/5}{x+4}dx+\int\frac{2/5}{x-1}dx" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mo>-</mo><mrow><mn>2</mn><mo>/</mo><mn>5</mn></mrow></mrow><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mstyle><mo>+</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mn>2</mn><mo>/</mo><mn>5</mn></mrow><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex14.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex14.m3" class="ltx_Math" alttext="\displaystyle-\frac{2}{5}\ln|x+4|+\frac{2}{5}\ln|x-1|+C=\frac{2}{5}\ln|\frac{x%
+-1}{x+4}|+C." display="inline"><mrow><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>5</mn></mfrac></mstyle><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>5</mn></mfrac></mstyle><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>5</mn></mfrac></mstyle><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mstyle displaystyle="true"><mfrac><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow></mfrac></mstyle><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">The method.</span> The goal of the method, as explained above, is
+to express any fraction <math id="S2.p2.m1" class="ltx_Math" alttext="\frac{p(x)}{q(x)}" display="inline"><mfrac><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></math> as the sum of <span class="ltx_text ltx_font_italic">partial fractions</span> of the types discussed in the previous section.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If the degree of <math id="I1.i1.p1.m1" class="ltx_Math" alttext="p(x)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is larger than the degree of <math id="I1.i1.p1.m2" class="ltx_Math" alttext="q(x)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+then use polynomial division to divide and obtain a quotient
+<math id="I1.i1.p1.m3" class="ltx_Math" alttext="t(x)" display="inline"><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and remainder <math id="I1.i1.p1.m4" class="ltx_Math" alttext="r(x)" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> polynomials such that
+<math id="I1.i1.p1.m5" class="ltx_Math" alttext="p(x)=q(x)t(x)+r(x)" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Thus</p>
+<table id="S2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex15.m1" class="ltx_Math" alttext="\frac{p(x)}{q(x)}=t(x)+\frac{r(x)}{q(x)}" display="block"><mrow><mfrac><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mfrac><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the degree of <math id="I1.i1.p1.m6" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is lower than the degree of <math id="I1.i1.p1.m7" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>. Now use
+the partial fraction decomposition with <math id="I1.i1.p1.m8" class="ltx_Math" alttext="r(x)/q(x)" display="inline"><mrow><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>q</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Factor the denominator, <math id="I1.i2.p1.m1" class="ltx_Math" alttext="q(x)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, into irreducible polynomials
+(over <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>). Thus, we may express <math id="I1.i2.p1.m3" class="ltx_Math" alttext="q(x)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> as a product of linear
+polynomials (perhaps to a power other than <math id="I1.i2.p1.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>) and irreducible
+quadratic polynomials.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If a linear factor <math id="I1.i3.p1.m1" class="ltx_Math" alttext="(x-a)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></math> to the <span class="ltx_text ltx_font_bold">first</span> power appears
+in the denominator of <math id="I1.i3.p1.m2" class="ltx_Math" alttext="q(x)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the partial fraction decomposition
+should have a term <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\frac{A}{(x-a)}" display="inline"><mfrac><mi>A</mi><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mfrac></math>, for some constant <math id="I1.i3.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to be
+determined.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If a linear factor to the <span class="ltx_text ltx_font_bold">nth</span> power, say <math id="I1.i4.p1.m1" class="ltx_Math" alttext="(x-b)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math>
+appears in the denominator of <math id="I1.i4.p1.m2" class="ltx_Math" alttext="q(x)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the partial fraction
+decomposition should have terms</p>
+<table id="S2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex16.m1" class="ltx_Math" alttext="\frac{B_{1}}{(x-b)}+\frac{B_{2}}{(x-b)^{2}}+\ldots+\frac{B_{n}}{(x-b)^{n}}" display="block"><mrow><mfrac><msub><mi>B</mi><mn>1</mn></msub><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><msub><mi>B</mi><mn>2</mn></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mfrac><msub><mi>B</mi><mi>n</mi></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some
+<math id="I1.i4.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> constants <math id="I1.i4.p1.m4" class="ltx_Math" alttext="B_{1},B_{2},\ldots,B_{n}" display="inline"><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>,</mo><msub><mi>B</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>B</mi><mi>n</mi></msub></mrow></math> to be determined.</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">If a quadratic polynomial <math id="I1.i5.p1.m1" class="ltx_Math" alttext="ax^{2}+bx+c" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></math> to the <math id="I1.i5.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>th power appears in the
+factorization of <math id="I1.i5.p1.m3" class="ltx_Math" alttext="q(x)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, i.e. <math id="I1.i5.p1.m4" class="ltx_Math" alttext="(ax^{2}+bx+c)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math> is a factor of <math id="I1.i5.p1.m5" class="ltx_Math" alttext="q(x)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, then the partial fraction decomposition
+should have terms</p>
+<table id="S2.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex17.m1" class="ltx_Math" alttext="\frac{C_{1}x+D_{1}}{ax^{2}+bx+c}+\frac{C_{2}x+D_{2}}{(ax^{2}+bx+c)^{2}}+\ldots%
++\frac{C_{n}x+D_{n}}{(ax^{2}+bx+c)^{n}}" display="block"><mrow><mfrac><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><msub><mi>D</mi><mn>1</mn></msub></mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><msub><mi>D</mi><mn>2</mn></msub></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mfrac><mrow><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><msub><mi>D</mi><mi>n</mi></msub></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some constants <math id="I1.i5.p1.m6" class="ltx_Math" alttext="C_{i},D_{i}" display="inline"><mrow><msub><mi>C</mi><mi>i</mi></msub><mo>,</mo><msub><mi>D</mi><mi>i</mi></msub></mrow></math> to be determined.</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Once you have the sum of all appropriate partial fractions
+(see above), group together all these partial fractions into one
+fraction <math id="I1.i6.p1.m1" class="ltx_Math" alttext="\frac{P(x)}{q(x)}" display="inline"><mfrac><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></math> (use a minimum common multiple for
+the denominator! The minimum common multiple will actually be
+<math id="I1.i6.p1.m2" class="ltx_Math" alttext="q(x)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>). In order to have an equality you need to find appropriate
+constants <math id="I1.i6.p1.m3" class="ltx_Math" alttext="A,B,\ldots" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math> such that <math id="I1.i6.p1.m4" class="ltx_Math" alttext="p(x)=P(x)" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. For this, plug
+values of <math id="I1.i6.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to obtain equations relating the constants.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S2.Thmthm2" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 2.2</span>.</h6>
+<div id="S2.Thmthm2.p1" class="ltx_para">
+<p class="ltx_p">Suppose we want to find the partial fraction decomposition of:</p>
+<table id="S2.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex18.m1" class="ltx_Math" alttext="\frac{3x+2}{(x-1)(x-2)(x-3)^{2}(1+x^{2})}" display="block"><mfrac><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>2</mn></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, we need constants <math id="S2.Thmthm2.p1.m1" class="ltx_Math" alttext="A,B,C,D,E,F" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>F</mi></mrow></math> such that</p>
+<table id="S2.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex19.m1" class="ltx_Math" alttext="\frac{3x+2}{(x-1)(x-2)(x-3)^{2}(1+x^{2})}=\frac{A}{x-1}+\frac{B}{x-2}+\frac{C}%
+{x-3}+\frac{D}{(x-3)^{2}}+\frac{Ex+F}{1+x^{2}}." display="block"><mrow><mrow><mfrac><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>2</mn></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mrow><mfrac><mi>A</mi><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>+</mo><mfrac><mi>B</mi><mrow><mi>x</mi><mo>-</mo><mn>2</mn></mrow></mfrac><mo>+</mo><mfrac><mi>C</mi><mrow><mi>x</mi><mo>-</mo><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mi>D</mi><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><mrow><mrow><mi>E</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>F</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The next step would be to add up all the partial fractions into
+one big fraction</p>
+<table id="S2.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex20.m1" class="ltx_Math" alttext="\frac{P(x)}{(x-1)(x-2)(x-3)^{2}(1+x^{2})}" display="block"><mfrac><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and
+find constants <math id="S2.Thmthm2.p1.m2" class="ltx_Math" alttext="A,B,C,D,E,F" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>E</mi><mo>,</mo><mi>F</mi></mrow></math> such that <math id="S2.Thmthm2.p1.m3" class="ltx_Math" alttext="P(x)=3x+2" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>2</mn></mrow></mrow></math> for all <math id="S2.Thmthm2.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
+</div>
+</div>
+<div id="S2.p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">a lecture on the partial fraction decomposition method</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ALectureOnThePartialFractionDecompositionMethod</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:39:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:39:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Feature</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 28-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ALectureOnIntegrationBySubstitution</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ALectureOnIntegrationByParts</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ALectureOnTrigonometricIntegralsAndTrigonometricSubstitution</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PartialFractionsOfExpressions</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">PartialFractionsForPolynomials</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:52:43 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

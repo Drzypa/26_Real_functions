@@ -1,0 +1,277 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of inequalities for difference of powers</title>
+<!--Generated on Fri Feb  9 20:02:50 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of inequalities for difference of powers</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>First Inequality</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">We have the factorization</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="u^{n}-v^{n}=(u-v)\sum_{k=0}^{n-1}u^{k}v^{n-k-1}." display="block"><mrow><mrow><mrow><msup><mi>u</mi><mi>n</mi></msup><mo>-</mo><msup><mi>v</mi><mi>n</mi></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><msup><mi>u</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since the largest term in the sum is is <math id="S1.p1.m1" class="ltx_Math" alttext="u^{n-1}" display="inline"><msup><mi>u</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></math> and the smallest is
+<math id="S1.p1.m2" class="ltx_Math" alttext="v^{n-1}" display="inline"><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></math>, and there are <math id="S1.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> terms in the sum, we deduce the following
+inequalities:</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="n(u-v)v^{n-1}&lt;u^{n}-v^{n}&lt;n(u-v)u^{n-1}" display="block"><mrow><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>&lt;</mo><mrow><msup><mi>u</mi><mi>n</mi></msup><mo>-</mo><msup><mi>v</mi><mi>n</mi></msup></mrow><mo>&lt;</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>u</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Second Inequality</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">This inequality is trivial when <math id="S2.p1.m1" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. We split the rest of
+the proof into two cases.</p>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span><math id="S2.SS1.m1" class="ltx_Math" alttext="-1&lt;x&lt;0" display="inline"><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>
+</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">In this case, we set <math id="S2.SS1.p1.m1" class="ltx_Math" alttext="u=1" display="inline"><mrow><mi>u</mi><mo>=</mo><mn>1</mn></mrow></math> and <math id="S2.SS1.p1.m2" class="ltx_Math" alttext="v=1+x" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow></mrow></math> in the second
+inequality above:</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="1-(1+x)^{n}&lt;n(-x)" display="block"><mrow><mrow><mn>1</mn><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>&lt;</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Reversing the signs of both sides yields</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="nx&lt;(1+x)^{n}-1" display="block"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow><mo>&lt;</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span><math id="S2.SS2.m1" class="ltx_Math" alttext="0&lt;x" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi></mrow></math>
+</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">In this case, we set <math id="S2.SS2.p1.m1" class="ltx_Math" alttext="u=1+x" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow></mrow></math> and <math id="S2.SS2.p1.m2" class="ltx_Math" alttext="v=1" display="inline"><mrow><mi>v</mi><mo>=</mo><mn>1</mn></mrow></math> in the first
+inequality above:</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="nx&lt;(1+x)^{n}-1" display="block"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow><mo>&lt;</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Third Inequality</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">This inequality is trivial when <math id="S3.p1.m1" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. We split the rest of
+the proof into two cases.</p>
+</div>
+<section id="S3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span><math id="S3.SS1.m1" class="ltx_Math" alttext="-1&lt;x&lt;0" display="inline"><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>
+</h3>
+
+<div id="S3.SS1.p1" class="ltx_para">
+<p class="ltx_p">Start with the first inequality for differences of powers, expand
+the left-hand side,</p>
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex6.m1" class="ltx_Math" alttext="nuv^{n-1}-nv^{n}&lt;u^{n}-v^{n}," display="block"><mrow><mrow><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow><mo>&lt;</mo><mrow><msup><mi>u</mi><mi>n</mi></msup><mo>-</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">move the <math id="S3.SS1.p1.m1" class="ltx_Math" alttext="v^{n}" display="inline"><msup><mi>v</mi><mi>n</mi></msup></math> to the other side of the inequality,</p>
+<table id="S3.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex7.m1" class="ltx_Math" alttext="nuv^{n-1}-(n-1)v^{n}&lt;u^{n}," display="block"><mrow><mrow><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><msup><mi>v</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></mrow><mo>&lt;</mo><msup><mi>u</mi><mi>n</mi></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and divide by <math id="S3.SS1.p1.m2" class="ltx_Math" alttext="v^{n}" display="inline"><msup><mi>v</mi><mi>n</mi></msup></math> to obtain</p>
+<table id="S3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex8.m1" class="ltx_Math" alttext="n{u\over v}-n+1&lt;\left({u\over v}\right)^{n}." display="block"><mrow><mrow><mrow><mrow><mrow><mi>n</mi><mo>⁢</mo><mfrac><mi>u</mi><mi>v</mi></mfrac></mrow><mo>-</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>&lt;</mo><msup><mrow><mo>(</mo><mfrac><mi>u</mi><mi>v</mi></mfrac><mo>)</mo></mrow><mi>n</mi></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking the reciprocal, we obtain</p>
+<table id="S3.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex9.m1" class="ltx_Math" alttext="\left({v\over u}\right)^{n}&lt;{v\over v+n(u-v)}=1-{n(u-v)\over v+n(u-v)}" display="block"><mrow><msup><mrow><mo>(</mo><mfrac><mi>v</mi><mi>u</mi></mfrac><mo>)</mo></mrow><mi>n</mi></msup><mo>&lt;</mo><mfrac><mi>v</mi><mrow><mi>v</mi><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac><mo>=</mo><mrow><mn>1</mn><mo>-</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>v</mi><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Setting <math id="S3.SS1.p1.m3" class="ltx_Math" alttext="u=1" display="inline"><mrow><mi>u</mi><mo>=</mo><mn>1</mn></mrow></math> and <math id="S3.SS1.p1.m4" class="ltx_Math" alttext="v=1+x" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow></mrow></math>, and moving a term from one side
+to the other, this becomes</p>
+<table id="S3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex10.m1" class="ltx_Math" alttext="(1+x)^{n}-1&lt;{nx\over 1-(n-1)x}." display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow><mo>&lt;</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S3.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2 </span><math id="S3.SS2.m1" class="ltx_Math" alttext="0&lt;x&lt;1/(n-1)" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mrow><mn>1</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+</h3>
+
+<div id="S3.SS2.p1" class="ltx_para">
+<p class="ltx_p">Start with the second inequality for differences of powers, expand
+the right-hand side,</p>
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex11.m1" class="ltx_Math" alttext="u^{n}-v^{n}&lt;nu^{n}-nu^{n-1}v" display="block"><mrow><mrow><msup><mi>u</mi><mi>n</mi></msup><mo>-</mo><msup><mi>v</mi><mi>n</mi></msup></mrow><mo>&lt;</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mi>u</mi><mi>n</mi></msup></mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><msup><mi>u</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">move terms from one side of the inequality to the other,</p>
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex12.m1" class="ltx_Math" alttext="nu^{n-1}v-(n-1)u^{n}&lt;v^{n}" display="block"><mrow><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mi>u</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>v</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>u</mi><mi>n</mi></msup></mrow></mrow><mo>&lt;</mo><msup><mi>v</mi><mi>n</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and divide by <math id="S3.SS2.p1.m1" class="ltx_Math" alttext="u^{n}" display="inline"><msup><mi>u</mi><mi>n</mi></msup></math> to obtain</p>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex13.m1" class="ltx_Math" alttext="n{v\over u}-n+1&lt;\left({v\over u}\right)^{n}" display="block"><mrow><mrow><mrow><mrow><mi>n</mi><mo>⁢</mo><mfrac><mi>v</mi><mi>u</mi></mfrac></mrow><mo>-</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>&lt;</mo><msup><mrow><mo>(</mo><mfrac><mi>v</mi><mi>u</mi></mfrac><mo>)</mo></mrow><mi>n</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When the left-hand side is positive, (i.e. <math id="S3.SS2.p1.m2" class="ltx_Math" alttext="nv&gt;(n-1)u" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>v</mi></mrow><mo>&gt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>u</mi></mrow></mrow></math>)
+we can take the reciprocal:
+</p>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex14.m1" class="ltx_Math" alttext="\left({u\over v}\right)^{n}&lt;{u\over u-n(u-v)}=1+{n(u-v)\over u-n(u-v)}" display="block"><mrow><msup><mrow><mo>(</mo><mfrac><mi>u</mi><mi>v</mi></mfrac><mo>)</mo></mrow><mi>n</mi></msup><mo>&lt;</mo><mfrac><mi>u</mi><mrow><mi>u</mi><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>u</mi><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Setting <math id="S3.SS2.p1.m3" class="ltx_Math" alttext="u=1+x" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow></mrow></math> and <math id="S3.SS2.p1.m4" class="ltx_Math" alttext="v=1" display="inline"><mrow><mi>v</mi><mo>=</mo><mn>1</mn></mrow></math>, and moving a term from one side
+to the other, this becomes</p>
+<table id="S3.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex15.m1" class="ltx_Math" alttext="(1+x)^{n}-1&lt;{nx\over 1-(n-1)x}" display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow><mo>&lt;</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the positivity condition mentioned above becomes <math id="S3.SS2.p1.m5" class="ltx_Math" alttext="(n-1)x&lt;1" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of inequalities for difference of powers</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfInequalitiesForDifferenceOfPowers</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:48:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:48:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 26D99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:02:50 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

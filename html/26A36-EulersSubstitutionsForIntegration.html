@@ -1,0 +1,349 @@
+<!DOCTYPE html><html>
+<head>
+<title>Euler’s substitutions for integration</title>
+<!--Generated on Fri Feb  9 19:51:50 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Euler’s substitutions for integration</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In the integration task</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\int\!R(x,\,\sqrt{ax^{2}+bx+c})\,dx," display="block"><mrow><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><msqrt><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></msqrt><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the integrand is a rational function of <math id="p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p1.m2" class="ltx_Math" alttext="\sqrt{ax^{2}+bx+c}" display="inline"><msqrt><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></msqrt></math>, the integrand can be changed to a rational function of a new variable <math id="p1.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> by using the following substitutions of Euler.</p>
+</div>
+<div id="p2" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">The first substitution of Euler.</span>  If  <math id="I1.i1.p1.m1" class="ltx_Math" alttext="a&gt;0" display="inline"><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,  we may write</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\sqrt{ax^{2}+bx+c}\;=\;\pm x\sqrt{a}+t." display="inline"><mrow><mrow><mpadded width="+2.8pt"><msqrt><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></msqrt></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mo>±</mo><mrow><mi>x</mi><mo>⁢</mo><msqrt><mi>a</mi></msqrt></mrow></mrow><mo>+</mo><mi>t</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">When we take <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\sqrt{a}" display="inline"><msqrt><mi>a</mi></msqrt></math> with the minus sign, then</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="ax^{2}+bx+c\;=\;ax^{2}-2xt\sqrt{a}+t^{2}," display="block"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mpadded width="+2.8pt"><mi>c</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><msqrt><mi>a</mi></msqrt></mrow></mrow><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">from which we get the expression</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="x\;=\;\frac{t^{2}-c}{b+2t\sqrt{a}};" display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>-</mo><mi>c</mi></mrow><mrow><mi>b</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><msqrt><mi>a</mi></msqrt></mrow></mrow></mfrac></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">thus also <math id="I1.i1.p1.m3" class="ltx_Math" alttext="dx" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></math> is expressible rationally via <math id="I1.i1.p1.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. We have</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\sqrt{ax^{2}+bx+c}\;=\;-x\sqrt{a}+t\;=\;\frac{c-t^{2}}{b+2t\sqrt{a}}\sqrt{a}+t." display="block"><mrow><mrow><mpadded width="+2.8pt"><msqrt><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></msqrt></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><msqrt><mi>a</mi></msqrt></mrow></mrow><mo>+</mo><mpadded width="+2.8pt"><mi>t</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mfrac><mrow><mi>c</mi><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mrow><mi>b</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><msqrt><mi>a</mi></msqrt></mrow></mrow></mfrac><mo>⁢</mo><msqrt><mi>a</mi></msqrt></mrow><mo>+</mo><mi>t</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">The second substitution of Euler.</span>  If  <math id="I1.i2.p1.m1" class="ltx_Math" alttext="c&gt;0" display="inline"><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,  we take</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\sqrt{ax^{2}+bx+c}\;=\;xt\pm\sqrt{c}." display="inline"><mrow><mrow><mpadded width="+2.8pt"><msqrt><mrow><mrow><mi>a</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>c</mi></mrow></msqrt></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>t</mi></mrow><mo>±</mo><msqrt><mi>c</mi></msqrt></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">With the minus sign we obtain, similarly as above,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="x\;=\;\frac{2t\sqrt{c}+b}{t^{2}-a}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><msqrt><mi>c</mi></msqrt></mrow><mo>+</mo><mi>b</mi></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>-</mo><mi>a</mi></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">The third substitution of Euler.</span>  If the polynomial <math id="I1.i3.p1.m1" class="ltx_Math" alttext="ax^{2}\!+\!bx\!+\!c" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mi>b</mi><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mi>c</mi></mrow></math> has the real zeros <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>, we may chose</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle\sqrt{ax^{2}\!+\!bx\!+\!c}\;=\;(x\!-\!\alpha)t." display="inline"><mrow><mrow><mpadded width="+2.8pt"><msqrt><mrow><mrow><mi>a</mi><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mi>b</mi><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mi>c</mi></mrow></msqrt></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Now</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="ax^{2}\!+\!bx\!+\!c\;=\;a(x\!-\!\alpha)(x\!-\!\beta)\;=\;(x\!-\!\alpha)^{2}t^{%
+2}," display="block"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mi>b</mi><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mpadded width="+2.8pt"><mi>c</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>β</mi></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence  <math id="I1.i3.p1.m4" class="ltx_Math" alttext="a(x\!-\!\beta)=(x\!-\!\alpha)t^{2}" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow></math>. This gives the expression</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="x\;=\;\frac{a\beta\!-\!\alpha t^{2}}{a\!-\!t^{2}}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><mrow><mi>a</mi><mo>⁢</mo><mpadded width="-1.7pt"><mi>β</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mi>α</mi><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow><mrow><mpadded width="-1.7pt"><mi>a</mi></mpadded><mo rspace="0.8pt">-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As in the preceding cases, we can express <math id="I1.i3.p1.m5" class="ltx_Math" alttext="dx" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></math> and <math id="I1.i3.p1.m6" class="ltx_Math" alttext="\sqrt{ax^{2}\!+\!bx\!+\!c}" display="inline"><msqrt><mrow><mrow><mi>a</mi><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mi>b</mi><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mi>c</mi></mrow></msqrt></math> rationally via <math id="I1.i3.p1.m7" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples.</span></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">1.</span> In the integral <math id="p4.m1" class="ltx_Math" alttext="\displaystyle\int\!\frac{dx}{\sqrt{x^{2}+c}}" display="inline"><mstyle displaystyle="true"><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow></msqrt></mfrac></mrow></mstyle></math> we can use the first substitution:  <math id="p4.m2" class="ltx_Math" alttext="\sqrt{x^{2}+c}=-x+t" display="inline"><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow></msqrt><mo>=</mo><mrow><mrow><mo>-</mo><mi>x</mi></mrow><mo>+</mo><mi>t</mi></mrow></mrow></math>;  then  <math id="p4.m3" class="ltx_Math" alttext="x^{2}+c=x^{2}-2xt+t^{2}" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow><mo>=</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow></math>  and thus</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="x\;=\;\frac{t^{2}-c}{2t},\quad dx\;=\;\frac{t^{2}+c}{2t^{2}}\,dt,\quad\sqrt{x^%
+{2}+c}\;=\;-\frac{t^{2}-c}{2t}+t\;=\;\frac{t^{2}+c}{2t}." display="block"><mrow><mrow><mrow><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>-</mo><mi>c</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow></mfrac></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="+1.7pt"><mfrac><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mpadded width="+2.8pt"><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow></msqrt></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mo>-</mo><mfrac><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>-</mo><mi>c</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow></mfrac></mrow><mo>+</mo><mpadded width="+2.8pt"><mi>t</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Accordingly we obtain</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\int\!\frac{dx}{\sqrt{x^{2}+c}}\;=\;\int\!\frac{\frac{t^{2}+c}{2t^{2}}dt}{%
+\frac{t^{2}+c}{2t}}\;=\;\int\!\frac{dt}{t}\;=\;\ln|t|+C\;=\;\ln|x+\sqrt{x^{2}+%
+c}|+C." display="block"><mrow><mrow><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mpadded width="+2.8pt"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow></msqrt></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mpadded width="+2.8pt"><mfrac><mrow><mfrac><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mfrac><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow></mfrac></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mpadded width="+2.8pt"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mi>t</mi></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mi>t</mi><mo stretchy="false">|</mo></mrow></mrow><mo>+</mo><mpadded width="+2.8pt"><mi>C</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi></mrow></msqrt></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Especially the cases  <math id="p4.m4" class="ltx_Math" alttext="c=\pm 1" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mo>±</mo><mn>1</mn></mrow></mrow></math>  give the formulas</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\int\!\frac{dx}{\sqrt{x^{2}+1}}\;=\;\operatorname{arsinh}{x}+C,\quad\int\!%
+\frac{dx}{\sqrt{x^{2}-1}}\;=\;\operatorname{arcosh}{x}+C\;\;(x&gt;1)." display="block"><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mpadded width="+2.8pt"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt></mfrac></mpadded><mo rspace="5.3pt">=</mo><mi>arsinh</mi><mi>x</mi><mo>+</mo><mi>C</mi><mo rspace="12.5pt">,</mo><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mpadded width="+2.8pt"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mfrac></mpadded><mo rspace="5.3pt">=</mo><mi>arcosh</mi><mi>x</mi><mo>+</mo><mpadded width="+5.6pt"><mi>C</mi></mpadded><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>&gt;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">2.</span> The integral <math id="p5.m1" class="ltx_Math" alttext="\displaystyle\int\!\frac{\sqrt{c^{2}-x^{2}}}{x}\,dx" display="inline"><mstyle displaystyle="true"><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mi>x</mi></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mstyle></math> is needed in deriving the equation of the tractrix. We use for integrating the second substitution 
+<math id="p5.m2" class="ltx_Math" alttext="\sqrt{c^{2}-x^{2}}=xt-c" display="inline"><mrow><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>t</mi></mrow><mo>-</mo><mi>c</mi></mrow></mrow></math>;  then  <math id="p5.m3" class="ltx_Math" alttext="c^{2}-x^{2}=x^{2}t^{2}-2cxt+c^{2}" display="inline"><mrow><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></mrow></math>, which implies
+</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="x\;=\;\frac{2ct}{t^{2}+1},\quad dx\;=\;\frac{2c(1-t^{2})dt}{(1+t^{2})^{2}},%
+\quad\sqrt{c^{2}-x^{2}}\;=\;\frac{2ct^{2}}{t^{2}+1}-c\;=\;\frac{c(t^{2}-1)}{t^%
+{2}+1}." display="block"><mrow><mrow><mrow><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>t</mi></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mrow><mo rspace="12.5pt">,</mo><mrow><mpadded width="+2.8pt"><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mpadded><mo rspace="5.3pt">=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac><mo>-</mo><mpadded width="+2.8pt"><mi>c</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><mrow><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We then obtain</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\int\!\frac{\sqrt{c^{2}-x^{2}}}{x}\,dx\;=\;-c\int\!\frac{(1-t^{2})^{2}}{t(1+t^%
+{2})^{2}}\,dt\;=\;c\int\!\left(\frac{4t}{(1+t^{2})^{2}}-\frac{1}{t}\right)dt\;%
+=\;-\frac{2c}{1+t^{2}}-c\ln|t|+C_{1}." display="block"><mrow><mrow><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mi>x</mi></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mi>t</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>t</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi>t</mi></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>-</mo><mfrac><mn>1</mn><mi>t</mi></mfrac></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>t</mi></mpadded></mrow></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mo>-</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mi>t</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></mrow><mo>+</mo><msub><mi>C</mi><mn>1</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The equation tying <math id="p5.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p5.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> gives  <math id="p5.m6" class="ltx_Math" alttext="\frac{2c}{1+t^{2}}=\frac{x}{t}" display="inline"><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mfrac><mi>x</mi><mi>t</mi></mfrac></mrow></math>  and  <math id="p5.m7" class="ltx_Math" alttext="t=\frac{c+\sqrt{c^{2}-x^{2}}}{x}" display="inline"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mi>c</mi><mo>+</mo><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mi>x</mi></mfrac></mrow></math>,  whence</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\int\!\frac{\sqrt{c^{2}-x^{2}}}{x}\,dx\;=\;-\frac{x^{2}}{c+\sqrt{c^{2}-x^{2}}}%
+-c\ln\frac{c+\sqrt{c^{2}-x^{2}}}{x}+C_{1}\;=\;-c+\sqrt{c^{2}-x^{2}}-c\ln\frac{%
+c+\sqrt{c^{2}-x^{2}}}{x}+C_{1}," display="block"><mrow><mrow><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mi>x</mi></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mo>-</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mrow><mi>c</mi><mo>+</mo><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mfrac><mrow><mi>c</mi><mo>+</mo><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mi>x</mi></mfrac></mrow></mrow></mrow><mo>+</mo><mpadded width="+2.8pt"><msub><mi>C</mi><mn>1</mn></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mrow><mo>-</mo><mi>c</mi></mrow><mo>+</mo><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mfrac><mrow><mi>c</mi><mo>+</mo><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mi>x</mi></mfrac></mrow></mrow></mrow><mo>+</mo><msub><mi>C</mi><mn>1</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\int\!\frac{\sqrt{c^{2}-x^{2}}}{x}\,dx\;=\;\sqrt{c^{2}-x^{2}}-c\ln\frac{c+%
+\sqrt{c^{2}-x^{2}}}{x}+C." display="block"><mrow><mrow><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mi>x</mi></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mo>-</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mfrac><mrow><mi>c</mi><mo>+</mo><msqrt><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><mi>x</mi></mfrac></mrow></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">3.</span> In the integral <math id="p6.m1" class="ltx_Math" alttext="\displaystyle\int\!\frac{dx}{\sqrt{x^{2}+3x-4}}" display="inline"><mstyle displaystyle="true"><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><msqrt><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow></msqrt></mfrac></mrow></mstyle></math>, the radicand is <math id="p6.m2" class="ltx_Math" alttext="(x+4)(x-1)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Using the third substitution of Euler, we take  <math id="p6.m3" class="ltx_Math" alttext="\sqrt{x^{2}+4x-3}=(x+4)t" display="inline"><mrow><msqrt><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow></math>. This simplifies to  <math id="p6.m4" class="ltx_Math" alttext="x-1=(x+4)t^{2}" display="inline"><mrow><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow></math>. Then we get</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="x\;=\;\frac{1+4t^{2}}{1-t^{2}},\quad dx\;=\;\frac{10t}{(1-t^{2})^{2}}\,dt,%
+\quad\sqrt{x^{2}+3x-4}\;=\;\left(\frac{1+4tr}{1-t^{2}}+4\right)t\;=\;\frac{5t}%
+{1-t^{2}}." display="block"><mrow><mrow><mrow><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow><mrow><mn>1</mn><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="+1.7pt"><mfrac><mrow><mn>10</mn><mo>⁢</mo><mi>t</mi></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mpadded width="+2.8pt"><msqrt><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow></msqrt></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mn>1</mn><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>r</mi></mrow></mrow><mrow><mn>1</mn><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mn>4</mn></mrow><mo>)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mi>t</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><mrow><mn>5</mn><mo>⁢</mo><mi>t</mi></mrow><mrow><mn>1</mn><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">And we obtain</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\int\!\frac{dx}{\sqrt{x^{2}+3x-4}}\;=\;\int\!\frac{10t(1-t^{2})}{(1-t^{2})^{2}%
+\cdot 5t}\,dt\;=\;\int\!\frac{2}{1-t^{2}}\,dt=\ln\left|\frac{1+t}{1-t}\right|+%
+C\;=\;\ln\left|\frac{1+\sqrt{\frac{x-1}{x+4}}}{1-\sqrt{\frac{x-1}{x+4}}}\right%
+|+C" display="block"><mrow><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mpadded width="+2.8pt"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><msqrt><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>-</mo><mn>4</mn></mrow></msqrt></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><mrow><mn>10</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⋅</mo><mn>5</mn></mrow><mo>⁢</mo><mi>t</mi></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>t</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>2</mn><mrow><mn>1</mn><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo>|</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>t</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow></mfrac><mo>|</mo></mrow></mrow><mo>+</mo><mpadded width="+2.8pt"><mi>C</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo>|</mo><mfrac><mrow><mn>1</mn><mo>+</mo><msqrt><mfrac><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow></mfrac></msqrt></mrow><mrow><mn>1</mn><mo>-</mo><msqrt><mfrac><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow></mfrac></msqrt></mrow></mfrac><mo>|</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="=\;\ln\left|\frac{\sqrt{x+4}+\sqrt{x-1}}{\sqrt{x+4}-\sqrt{x-1}}\right|+C." display="block"><mrow><mrow><mi></mi><mo rspace="5.3pt">=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo>|</mo><mfrac><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow></msqrt><mo>+</mo><msqrt><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mrow><msqrt><mrow><mi>x</mi><mo>+</mo><mn>4</mn></mrow></msqrt><mo>-</mo><msqrt><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow></msqrt></mrow></mfrac><mo>|</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_smallcaps">N. Piskunov:</span> <span class="ltx_text ltx_font_italic">Diferentsiaal- ja integraalarvutus kõrgematele tehnilistele õppeasutustele</span>. Viies, täiendatud trükk.  Kirjastus “Valgus”, Tallinn (1965).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Euler’s substitutions for integration</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EulersSubstitutionsForIntegration</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:19:43</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:19:43</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">integration of expressions of square roots of quadratic polynomials</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">IntegrationOfRationalFunctionOfSineAndCosine</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Tractrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Arsinh</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Arcosh</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Euler’s substitutions</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">substitutions of Euler</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:51:50 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

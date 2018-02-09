@@ -1,0 +1,148 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of existence of the Lebesgue measure</title>
+<!--Generated on Fri Feb  9 19:53:50 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of existence of the Lebesgue measure</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">First, let <math id="p1.m1" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> be the collection of bounded open intervals of the real numbers. As this is a <math id="p1.m2" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>-system (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PiSystem</span>), uniqueness of measures extended from a <math id="p1.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>-system (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/UniquenessOfMeasuresExtendedFromAPiSystem</span>) shows that any measure defined on the <math id="p1.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra <math id="p1.m5" class="ltx_Math" alttext="\sigma(\mathcal{C})" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo stretchy="false">)</mo></mrow></mrow></math> is uniquely determined by its values restricted to <math id="p1.m6" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>. It remains to prove the existence of such a measure.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Define the length of an interval as <math id="p2.m1" class="ltx_Math" alttext="p((a,b))=b-a" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow></mrow></math> for <math id="p2.m2" class="ltx_Math" alttext="a&lt;b" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi></mrow></math>. The Lebesgue outer measure <math id="p2.m3" class="ltx_Math" alttext="\mu^{*}\colon\mathcal{P}(X)\rightarrow\mathbb{R}_{+}\cup\{\infty\}" display="inline"><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msub><mi>ℝ</mi><mo>+</mo></msub><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow></math> is defined as</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\mu^{*}(A)=\inf\left\{\sum_{i=1}^{\infty}p(A_{i}):A_{i}\in\mathcal{C},\ A%
+\subseteq\bigcup_{i=1}^{\infty}A_{i}\right\}." display="block"><mrow><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>:</mo><mrow><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo rspace="7.5pt">,</mo><mrow><mi>A</mi><mo>⊆</mo><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msub><mi>A</mi><mi>i</mi></msub></mrow></mrow></mrow><mo>}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This is indeed an outer measure (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OuterMeasure2</span>) (see construction of outer measures) and, furthermore, for any interval of the form <math id="p2.m4" class="ltx_Math" alttext="(a,b)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></math> it agrees with the standard definition of length, <math id="p2.m5" class="ltx_Math" alttext="\mu^{*}((a,b))=p((a,b))=b-a" display="inline"><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow></mrow></math> (see proof that the outer (Lebesgue) measure of an interval is its length (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ProofThatTheOuterLebesgueMeasureOfAnIntervalIsItsLength</span>)).</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We show that intervals <math id="p3.m1" class="ltx_Math" alttext="(-\infty,a)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></math> are <math id="p3.m2" class="ltx_Math" alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math>-measurable (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CaratheodorysLemma</span>). Choosing any <math id="p3.m3" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and interval <math id="p3.m4" class="ltx_Math" alttext="A\in\mathcal{C}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math> the definition of <math id="p3.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> gives</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="p(A)=p(A\cap(-\infty,a))+p(A\cap(a,\infty))." display="block"><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So, choosing an arbitrary set <math id="p3.m6" class="ltx_Math" alttext="E\subseteq\mathbb{R}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mi>ℝ</mi></mrow></math> and a sequence <math id="p3.m7" class="ltx_Math" alttext="A_{i}\in\mathcal{C}" display="inline"><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow></math> covering <math id="p3.m8" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\begin{split}\displaystyle\sum_{i=1}^{\infty}p(A_{i})&amp;\displaystyle=\sum_{i=1}%
+^{\infty}p(A_{i}\cap(-\infty,a))+\sum_{i=1}^{\infty}p(A_{i}\cap(a,\infty))\\
+&amp;\displaystyle\geq\mu^{*}(E\cap(-\infty,a))+\mu^{*}(E\cap(a,\infty)).\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>∩</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mi></mi><mo>≥</mo><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So, from equation (<a href="#S0.E1" title="(1) ‣ proof of existence of the Lebesgue measure" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>)</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\mu^{*}(E)\geq\mu^{*}(E\cap(-\infty,a))+\mu^{*}(E\cap(a,\infty))." display="block"><mrow><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Also, choosing any <math id="p3.m9" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and using the subadditivity of <math id="p3.m10" class="ltx_Math" alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math>,</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\begin{split}\displaystyle\mu^{*}(E\cap(a,\infty))&amp;\displaystyle\geq\mu^{*}(E%
+\cap(a-\epsilon,\infty))-\mu^{*}(E\cap(a-\epsilon,a+\epsilon))\\
+&amp;\displaystyle\geq\mu^{*}(E\cap[a,\infty))-\mu^{*}((a-\epsilon,a+\epsilon))\\
+&amp;\displaystyle=\mu^{*}(E\cap[a,\infty))-2\epsilon.\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>≥</mo><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>-</mo><mi>ϵ</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>-</mo><mi>ϵ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi></mi><mo>≥</mo><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>-</mo><mi>ϵ</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ϵ</mi></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="p3.m11" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> is arbitrary, <math id="p3.m12" class="ltx_Math" alttext="\mu^{*}(E\cap(a,\infty))\geq\mu^{*}(E\cap[a,\infty))" display="inline"><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and substituting into (<a href="#S0.E2" title="(2) ‣ proof of existence of the Lebesgue measure" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) shows that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mu^{*}(E)\geq\mu^{*}(E\cap(-\infty,a))+\mu^{*}(E\cap[a,\infty))." display="block"><mrow><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>μ</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>∩</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Consequently, intervals of the form <math id="p3.m13" class="ltx_Math" alttext="(-\infty,a)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></math> are <math id="p3.m14" class="ltx_Math" alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math>-measurable. As such intervals generate the Borel <math id="p3.m15" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra and, by Caratheodory’s lemma, the <math id="p3.m16" class="ltx_Math" alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math>-measurable sets form a <math id="p3.m17" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra on which <math id="p3.m18" class="ltx_Math" alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math> is a measure, it follows that the restriction of <math id="p3.m19" class="ltx_Math" alttext="\mu^{*}" display="inline"><msup><mi>μ</mi><mo>*</mo></msup></math> to the Borel <math id="p3.m20" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra is itself a measure.</p>
+</div>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of existence of the Lebesgue measure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfExistenceOfTheLebesgueMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:33:14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:33:14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 28A12</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:53:50 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html><html>
+<head>
+<title>testing for continuity via closure operation</title>
+<!--Generated on Fri Feb  9 19:49:41 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">testing for continuity via closure operation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmprop1" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmprop1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmprop1.p1.m1" class="ltx_Math" alttext="X,Y" display="inline"><mrow><mi>X</mi><mo mathvariant="normal">,</mo><mi>Y</mi></mrow></math> be topological spaces, and <math id="Thmprop1.p1.m2" class="ltx_Math" alttext="f:X\to Y" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mi>Y</mi></mrow></mrow></math> a function. Then the following are equivalent:</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">1.</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math><span class="ltx_text ltx_font_italic"> is continuous,</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">2.</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for any closed set </span><math id="I1.i2.p1.m1" class="ltx_Math" alttext="D\subseteq Y" display="inline"><mrow><mi>D</mi><mo>⊆</mo><mi>Y</mi></mrow></math><span class="ltx_text ltx_font_italic">, the set </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="f^{-1}(D)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> is closed in </span><math id="I1.i2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math><span class="ltx_text ltx_font_italic">,</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">3.</span></span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="f(\overline{A})\subseteq\overline{f(A)}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mover accent="true"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow></math><span class="ltx_text ltx_font_italic">, where </span><math id="I1.i3.p1.m2" class="ltx_Math" alttext="\overline{A}" display="inline"><mover accent="true"><mi>A</mi><mo>¯</mo></mover></math><span class="ltx_text ltx_font_italic"> is the closure of </span><math id="I1.i3.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math><span class="ltx_text ltx_font_italic">,</span></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">4.</span></span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="\overline{f^{-1}(B)}\subseteq f^{-1}(\overline{B})" display="inline"><mrow><mover accent="true"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>B</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">,</span></p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">5.</span></span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i5.p1.m1" class="ltx_Math" alttext="f^{-1}(C^{\circ})\subseteq f^{-1}(C)^{\circ}" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>C</mi><mo>∘</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow></mrow></math><span class="ltx_text ltx_font_italic">, where </span><math id="I1.i5.p1.m2" class="ltx_Math" alttext="C^{\circ}" display="inline"><msup><mi>C</mi><mo>∘</mo></msup></math><span class="ltx_text ltx_font_italic"> is the interior of </span><math id="I1.i5.p1.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math><span class="ltx_text ltx_font_italic">.
+</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="(1)\Leftrightarrow(2)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>⇔</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>. Use the identity <math id="I2.i1.p1.m2" class="ltx_Math" alttext="f^{-1}(A-B)=f^{-1}(A)-f^{-1}(B)" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for any function <math id="I2.i1.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. Then <math id="I2.i1.p1.m4" class="ltx_Math" alttext="f^{-1}(Y-D)=X-f^{-1}(D)" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><mi>D</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>X</mi><mo>-</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. So if <math id="I2.i1.p1.m5" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is closed (or open), <math id="I2.i1.p1.m6" class="ltx_Math" alttext="f^{-1}(Y-D)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><mi>D</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is open (or closed), whence <math id="I2.i1.p1.m7" class="ltx_Math" alttext="f^{-1}(D)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow></math> is closed (or open).</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="(2)\Leftrightarrow(3)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>⇔</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math>. Suppose first that <math id="I2.i2.p1.m2" class="ltx_Math" alttext="f:X\to Y" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> is continuous. Since</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\overline{f(A)}=\bigcap\{C\mid C\mbox{ closed in }Y,\mbox{ and }f(A)\subseteq C\}," display="block"><mrow><mrow><mover accent="true"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo>=</mo><mrow><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mrow><mo stretchy="false">{</mo><mi>C</mi><mo>∣</mo><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mtext> closed in </mtext><mo>⁢</mo><mi>Y</mi></mrow><mo>,</mo><mrow><mtext> and </mtext><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⊆</mo><mi>C</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><math id="I2.i2.p1.m3" class="ltx_Math" alttext="A\subseteq f^{-1}f(A)\subseteq f^{-1}(C)" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which is closed in <math id="I2.i2.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. So <math id="I2.i2.p1.m5" class="ltx_Math" alttext="\overline{A}\subseteq f^{-1}(C)" display="inline"><mrow><mover accent="true"><mi>A</mi><mo>¯</mo></mover><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and therefore <math id="I2.i2.p1.m6" class="ltx_Math" alttext="f(\overline{A})\subseteq ff^{-1}(C)\subseteq C" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>f</mi><mo>⁢</mo><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>C</mi></mrow></math>. As a result,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="f(\overline{A})\subseteq\bigcap\{C\mid C\mbox{ closed in }Y,\mbox{ and }f(A)%
+\subseteq C\}=\overline{f(A)}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mrow><mo stretchy="false">{</mo><mi>C</mi><mo>∣</mo><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mtext> closed in </mtext><mo>⁢</mo><mi>Y</mi></mrow><mo>,</mo><mrow><mtext> and </mtext><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⊆</mo><mi>C</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>=</mo><mover accent="true"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="I2.i2.p2" class="ltx_para">
+<p class="ltx_p">Conversely, let <math id="I2.i2.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be closed in <math id="I2.i2.p2.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. Then <math id="I2.i2.p2.m3" class="ltx_Math" alttext="\overline{V}=V" display="inline"><mrow><mover accent="true"><mi>V</mi><mo>¯</mo></mover><mo>=</mo><mi>V</mi></mrow></math>. Let <math id="I2.i2.p2.m4" class="ltx_Math" alttext="U=f^{-1}(V)" display="inline"><mrow><mi>U</mi><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So <math id="I2.i2.p2.m5" class="ltx_Math" alttext="f(U)=V" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>V</mi></mrow></math>. Let <math id="I2.i2.p2.m6" class="ltx_Math" alttext="W=\overline{U}" display="inline"><mrow><mi>W</mi><mo>=</mo><mover accent="true"><mi>U</mi><mo>¯</mo></mover></mrow></math>. Then <math id="I2.i2.p2.m7" class="ltx_Math" alttext="f(W)=f(\overline{U})\subseteq\overline{f(U)}=\overline{V}=V" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>U</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mover accent="true"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo>=</mo><mover accent="true"><mi>V</mi><mo>¯</mo></mover><mo>=</mo><mi>V</mi></mrow></math>. So <math id="I2.i2.p2.m8" class="ltx_Math" alttext="W\subseteq f^{-1}f(W)\subseteq f^{-1}(V)=U\subseteq\overline{U}=W" display="inline"><mrow><mi>W</mi><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>U</mi><mo>⊆</mo><mover accent="true"><mi>U</mi><mo>¯</mo></mover><mo>=</mo><mi>W</mi></mrow></math>. As a result, <math id="I2.i2.p2.m9" class="ltx_Math" alttext="U=W" display="inline"><mrow><mi>U</mi><mo>=</mo><mi>W</mi></mrow></math> is closed.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="(3)\Leftrightarrow(4)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>⇔</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow></math>. First, assume <math id="I2.i3.p1.m2" class="ltx_Math" alttext="(2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math>. Let <math id="I2.i3.p1.m3" class="ltx_Math" alttext="B\subseteq Y" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>Y</mi></mrow></math> and <math id="I2.i3.p1.m4" class="ltx_Math" alttext="A=f^{-1}(B)" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So <math id="I2.i3.p1.m5" class="ltx_Math" alttext="f(A)\subseteq B" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>B</mi></mrow></math>. Then <math id="I2.i3.p1.m6" class="ltx_Math" alttext="f(\overline{A})\subseteq\overline{f(A)}\subseteq\overline{B}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mover accent="true"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo>⊆</mo><mover accent="true"><mi>B</mi><mo>¯</mo></mover></mrow></math>. As a result, <math id="I2.i3.p1.m7" class="ltx_Math" alttext="\overline{f^{-1}(B)}=\overline{A}\subseteq f^{-1}f(\overline{A})\subseteq f^{-%
+1}(\overline{B})" display="inline"><mrow><mover accent="true"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo>=</mo><mover accent="true"><mi>A</mi><mo>¯</mo></mover><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>B</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="I2.i3.p2" class="ltx_para">
+<p class="ltx_p">Conversely, assume <math id="I2.i3.p2.m1" class="ltx_Math" alttext="(3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math>. Let <math id="I2.i3.p2.m2" class="ltx_Math" alttext="A\subseteq X" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>X</mi></mrow></math> and <math id="I2.i3.p2.m3" class="ltx_Math" alttext="B=f(A)" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So <math id="I2.i3.p2.m4" class="ltx_Math" alttext="A\subseteq f^{-1}(B)" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="f(\overline{A})\subseteq f(\overline{f^{-1}(B)})\subseteq ff^{-1}(\overline{B}%
+)\subseteq\overline{B}=\overline{f(A)}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi>f</mi><mo>⁢</mo><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>B</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mover accent="true"><mi>B</mi><mo>¯</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i4.p1.m1" class="ltx_Math" alttext="(4)\Leftrightarrow(5)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>⇔</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></mrow></math>. First, assume <math id="I2.i4.p1.m2" class="ltx_Math" alttext="(3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math>. We use the identity: <math id="I2.i4.p1.m3" class="ltx_Math" alttext="C^{\circ}=Y-\overline{Y-C}" display="inline"><mrow><msup><mi>C</mi><mo>∘</mo></msup><mo>=</mo><mrow><mi>Y</mi><mo>-</mo><mover accent="true"><mrow><mi>Y</mi><mo>-</mo><mi>C</mi></mrow><mo>¯</mo></mover></mrow></mrow></math>. Then</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle f^{-1}(C^{\circ})" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>C</mi><mo>∘</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle f^{-1}(Y-\overline{Y-C})=f^{-1}(Y)-f^{-1}(\overline{Y-C})%
+\subseteq X-\overline{f^{-1}(Y-C)}" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><mover accent="true"><mrow><mi>Y</mi><mo>-</mo><mi>C</mi></mrow><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><mi>Y</mi><mo>-</mo><mi>C</mi></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⊆</mo><mrow><mi>X</mi><mo>-</mo><mover accent="true"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle X-\overline{f^{-1}(Y)-f^{-1}(C)}=X-\overline{X-f^{-1}(C)}=f^{-1}%
+(C)^{\circ}." display="inline"><mrow><mrow><mrow><mi>X</mi><mo>-</mo><mover accent="true"><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>¯</mo></mover></mrow><mo>=</mo><mrow><mi>X</mi><mo>-</mo><mover accent="true"><mrow><mi>X</mi><mo>-</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>¯</mo></mover></mrow><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="I2.i4.p2" class="ltx_para">
+<p class="ltx_p">Conversely, assume <math id="I2.i4.p2.m1" class="ltx_Math" alttext="(4)" display="inline"><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math>. We use the identity <math id="I2.i4.p2.m2" class="ltx_Math" alttext="\overline{B}=Y-(Y-B)^{\circ}" display="inline"><mrow><mover accent="true"><mi>B</mi><mo>¯</mo></mover><mo>=</mo><mrow><mi>Y</mi><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow></mrow></math>. Then</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\overline{f^{-1}(B)}" display="inline"><mover accent="true"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle X-(X-f^{-1}(B))^{\circ}=X-f^{-1}(Y-B)^{\circ}" display="inline"><mrow><mrow><mi>X</mi><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow><mo>=</mo><mrow><mi>X</mi><mo>-</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle X-f^{-1}((Y-B)^{\circ})=f^{-1}(Y-(Y-B)^{\circ})=f^{-1}(\overline%
+{B})." display="inline"><mrow><mrow><mrow><mi>X</mi><mo>-</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>-</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>B</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">testing for continuity via closure operation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TestingForContinuityViaClosureOperation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:09:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:09:11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 54C05</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:49:41 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

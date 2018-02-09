@@ -1,0 +1,228 @@
+<!DOCTYPE html><html>
+<head>
+<title>continuity of convex functions</title>
+<!--Generated on Fri Feb  9 19:55:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">continuity of convex functions</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We will prove below that every convex function on an
+open (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Open</span>) convex subset <math id="p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of a finite-dimensional
+real vector space is continuous. This statement becomes false if we
+do not require <math id="p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to be open,
+since we can increase the value of <math id="p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at any point of <math id="p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> which is
+not a convex combination of two other points without affecting the
+convexity of <math id="p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. An example of this is shown in Figure <a href="#S0.F1" title="Figure 1 ‣ continuity of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>.</p>
+</div>
+<figure id="S0.F1" class="ltx_figure"><img src="convex.2" id="S0.F1.g1" class="ltx_graphics ltx_centering" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>A convex function on a non-open set need not be continuous.</figcaption>
+</figure>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an open convex set in a finite-dimensional vector space <math id="p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+over <math id="p2.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, and let <math id="p2.m4" class="ltx_Math" alttext="f\colon A\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> be a convex
+function. Let <math id="p2.m5" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> be arbitrary, and let <math id="p2.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> be a parallelepiped
+centered at <math id="p2.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and lying completely inside <math id="p2.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Here “a
+parallelepiped centered at <math id="p2.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>” means a subset of <math id="p2.m10" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> of the form</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="P=\left\{x+\sum_{i=1}^{n}\lambda_{i}b_{i}\colon-1\leq\lambda_{i}\leq 1\text{ %
+for }i=1,2,\ldots,n\right\}," display="block"><mrow><mrow><mi>P</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>b</mi><mi>i</mi></msub></mrow></mrow></mrow><mo>:</mo><mrow><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>≤</mo><msub><mi>λ</mi><mi>i</mi></msub><mo>≤</mo><mrow><mn>1</mn><mo>⁢</mo><mtext> for </mtext><mo>⁢</mo><mi>i</mi></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow><mo>}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m11" class="ltx_Math" alttext="\{b_{1},\ldots,b_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> is some basis of <math id="p2.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Furthermore, let</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\partial P=\left\{x+\sum_{i=1}^{n}\lambda_{i}b_{i}\colon\max_{1\leq i\leq n}|%
+\lambda_{i}|=1\right\}" display="block"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>P</mi></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>b</mi><mi>i</mi></msub></mrow></mrow></mrow><mo>:</mo><mrow><mrow><munder><mi>max</mi><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><msub><mi>λ</mi><mi>i</mi></msub><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">denote the boundary of <math id="p2.m13" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. We will show that <math id="p2.m14" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous at
+<math id="p2.m15" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> by showing that <math id="p2.m16" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> attains a maximum on <math id="p2.m17" class="ltx_Math" alttext="\partial P" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>P</mi></mrow></math> and by
+estimating <math id="p2.m18" class="ltx_Math" alttext="|f(y)-f(x)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">|</mo></mrow></math> in 
+of this maximum as <math id="p2.m19" class="ltx_Math" alttext="y\to x" display="inline"><mrow><mi>y</mi><mo>→</mo><mi>x</mi></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The idea is to use the condition of convexity to ‘squeeze’ the graph
+of <math id="p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> near <math id="p3.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, as is shown in Figure <a href="#S0.F2" title="Figure 2 ‣ continuity of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>.</p>
+</div>
+<figure id="S0.F2" class="ltx_figure"><img src="convex.1" id="S0.F2.g1" class="ltx_graphics ltx_centering" alt="">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 2: </span>Given the values of <math id="S0.F2.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> in <math id="S0.F2.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and on
+<math id="S0.F2.m7" class="ltx_Math" alttext="\partial P=\{y_{1},y_{2}\}" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>P</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></math>, the convexity condition restricts the
+graph of <math id="S0.F2.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> to the grey area.</figcaption>
+</figure>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">For <math id="p4.m1" class="ltx_Math" alttext="\lambda\in[0,1]" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math> and <math id="p4.m2" class="ltx_Math" alttext="y\in\partial P" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>P</mi></mrow></mrow></math>, the convexity of <math id="p4.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>
+implies</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E1">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle f\big{(}(1-\lambda)x+\lambda y\big{)}" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle(1-\lambda)f(x)+\lambda f(y)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="2" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.E1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m3" class="ltx_Math" alttext="\displaystyle f(x)+\lambda\big{(}f(y)-f(x)\big{)}." display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">On the other hand, for all <math id="p4.m4" class="ltx_Math" alttext="\mu\in[0,1/2]" display="inline"><mrow><mi>μ</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">]</mo></mrow></mrow></math> we have</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle f\left((1-\mu)\left[\frac{(1-2\mu)x}{1-\mu}+\frac{\mu y}{1-\mu}%
+\right]+\mu(2x-y)\right)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>μ</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi>μ</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>μ</mi></mrow></mfrac></mstyle></mrow><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle(1-\mu)f\left(\frac{(1-2\mu)x}{1-\mu}+\frac{\mu y}{1-\mu}\right)+%
+\mu f(2x-y)." display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>μ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>μ</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi>μ</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>μ</mi></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Dividing by <math id="p4.m5" class="ltx_Math" alttext="1-\mu" display="inline"><mrow><mn>1</mn><mo>-</mo><mi>μ</mi></mrow></math> and setting <math id="p4.m6" class="ltx_Math" alttext="\lambda=\frac{\mu}{1-\mu}\in[0,1]" display="inline"><mrow><mi>λ</mi><mo>=</mo><mfrac><mi>μ</mi><mrow><mn>1</mn><mo>-</mo><mi>μ</mi></mrow></mfrac><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math>
+gives</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="(1+\lambda)f(x)\leq f\big{(}(1-\lambda)x+\lambda y\big{)}+\lambda f(2x-y)." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">From the two inequalities (<a href="#S0.E1" title="(1) ‣ continuity of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) and (<a href="#S0.E2" title="(2) ‣ continuity of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) we obtain</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="-\lambda\big{(}f(2x-y)-f(x)\big{)}\leq f\big{(}x+\lambda(y-x)\big{)}-f(x)\leq%
+\lambda\big{(}f(y)-f(x)\big{)}." display="block"><mrow><mrow><mrow><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow><mo>≤</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Note that both <math id="p4.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> and <math id="p4.m8" class="ltx_Math" alttext="2x-y" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mi>y</mi></mrow></math> 
+<math id="p4.m9" class="ltx_Math" alttext="\partial P" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>P</mi></mrow></math>, and that <math id="p4.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is
+bounded on <math id="p4.m11" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> (hence in particular on <math id="p4.m12" class="ltx_Math" alttext="\partial P" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>P</mi></mrow></math>). Indeed, the
+convexity of <math id="p4.m13" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> implies that <math id="p4.m14" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is bounded by its values at two
+ faces of <math id="p4.m15" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, and repeatedly applying
+this  shows
+that <math id="p4.m16" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> attains a maximum at one of the corners of <math id="p4.m17" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Write <math id="p5.m1" class="ltx_Math" alttext="P_{\lambda}" display="inline"><msub><mi>P</mi><mi>λ</mi></msub></math> for the parallelepiped <math id="p5.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> shrunk by a
+ <math id="p5.m3" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> relative to <math id="p5.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="P_{\lambda}=\{x+\lambda(y-x)\colon y\in P\}." display="block"><mrow><mrow><msub><mi>P</mi><mi>λ</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>:</mo><mrow><mi>y</mi><mo>∈</mo><mi>P</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now the inequality (<a href="#S0.E3" title="(3) ‣ continuity of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) implies that for all
+<math id="p5.m5" class="ltx_Math" alttext="\lambda\in[0,1]" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math> and all <math id="p5.m6" class="ltx_Math" alttext="z\in\partial P_{\lambda}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>P</mi><mi>λ</mi></msub></mrow></mrow></math>,
+we have</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\left|f(z)-f(x)\right|\leq\lambda\left|\max_{y\in\partial P}f(y)-f(x)\right|." display="block"><mrow><mrow><mrow><mo>|</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo>|</mo><mrow><mrow><mrow><munder><mi>max</mi><mrow><mi>y</mi><mo>∈</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>P</mi></mrow></mrow></munder><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>|</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Consequently, the same inequality holds for all <math id="p5.m7" class="ltx_Math" alttext="\lambda\in(0,1]" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></math> and
+all <math id="p5.m8" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> in the open neighbourhood <math id="p5.m9" class="ltx_Math" alttext="P_{\lambda}\setminus\partial P_{\lambda}" display="inline"><mrow><msub><mi>P</mi><mi>λ</mi></msub><mo>∖</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>P</mi><mi>λ</mi></msub></mrow></mrow></math> of <math id="p5.m10" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. The right-hand 
+of this inequality goes to
+zero as <math id="p5.m11" class="ltx_Math" alttext="\lambda\to 0" display="inline"><mrow><mi>λ</mi><mo>→</mo><mn>0</mn></mrow></math>, from which we conclude that <math id="p5.m12" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous
+at <math id="p5.m13" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">continuity of convex functions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ContinuityOfConvexFunctions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:28:00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pbruin (1001)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pbruin (1001)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pbruin (1001)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 26B25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:55:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html><html>
+<head>
+<title>tangent plane (elementary)</title>
+<!--Generated on Fri Feb  9 19:56:32 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">tangent plane (elementary)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The notion of <em class="ltx_emph ltx_font_italic">tangent plane</em> is a generalization of the notion of tangent vector to surfaces. Just as the tangent line is a special line which is associated to a point of a smooth curve, so too a tangent plane is a special plane which is associated to a point on a smooth surface.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Defining formulae</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be a surface in three-dimensional space <math id="S1.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> and let <math id="S1.p1.m3" class="ltx_Math" alttext="{\bf p}=(p_{x},p_{y},p_{z})" display="inline"><mrow><mi>𝐩</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mi>x</mi></msub><mo>,</mo><msub><mi>p</mi><mi>y</mi></msub><mo>,</mo><msub><mi>p</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> be a point of <math id="S1.p1.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. Three common methods of describing a surface are as the graph of a function, by an implicit equation, and parametrically. We shall now present formulae for computing the tangent plane in each of these cases.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">If the surface is described by an equation of the form
+</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="z=g(x,y)," display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then the tangent plane to <math id="S1.p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> at <math id="S1.p2.m2" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> is described by the equation</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="z=p_{z}+\left.\frac{\partial z}{\partial x}\right|_{\begin{matrix}x&amp;=p_{x}\\
+y&amp;=p_{y}\\
+z&amp;=p_{z}\end{matrix}}(x-p_{x})+\left.\frac{\partial z}{\partial y}\right|_{%
+\begin{matrix}x&amp;=p_{x}\\
+y&amp;=p_{y}\\
+z&amp;=p_{z}\end{matrix}}(y-p_{y})." display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><msub><mi>p</mi><mi>z</mi></msub><mo>+</mo><mrow><msub><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">x</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">y</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">z</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">z</mi></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>p</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">x</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">y</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">z</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">z</mi></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>p</mi><mi>y</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">1</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">More generally, if the surface is described by an equation <math id="S1.p3.m1" class="ltx_Math" alttext="f(x,y,z)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, then the equation for the tangent plane is</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="\frac{\partial f}{\partial x}(x-p_{x})+\frac{\partial f}{\partial y}(y-p_{y})+%
+\frac{\partial f}{\partial z}(z-p_{z})=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>p</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>p</mi><mi>y</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><msub><mi>p</mi><mi>z</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">2</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">If the surface <math id="S1.p4.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is described by giving the coordinates <math id="S1.p4.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="S1.p4.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, and <math id="S1.p4.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> as functions of parameters <math id="S1.p4.m5" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="S1.p4.m6" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> and the point <math id="S1.p4.m7" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> is specified by the values <math id="S1.p4.m8" class="ltx_Math" alttext="(u_{0},v_{0})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mn>0</mn></msub><mo>,</mo><msub><mi>v</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math> of the parameters, then the tangent plane at <math id="S1.p4.m9" class="ltx_Math" alttext="{bfp}" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mi>p</mi></mrow></math> is described in terms of parameters <math id="S1.p4.m10" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and <math id="S1.p4.m11" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> by the equations</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\begin{matrix}\hfill x&amp;=p_{x}+\left.\frac{\partial x}{\partial u}\right|_{%
+\begin{matrix}u&amp;=u_{0}\\
+v&amp;=v_{0}\end{matrix}}s+\left.\frac{\partial x}{\partial v}\right|_{\begin{%
+matrix}u&amp;=u_{0}\\
+v&amp;=v_{0}\end{matrix}}t\\
+\hfill y&amp;=p_{x}+\left.\frac{\partial y}{\partial u}\right|_{\begin{matrix}u&amp;=u%
+_{0}\\
+v&amp;=v_{0}\end{matrix}}s+\left.\frac{\partial y}{\partial v}\right|_{\begin{%
+matrix}u&amp;=u_{0}\\
+v&amp;=v_{0}\end{matrix}}t\\
+\hfill z&amp;=p_{x}+\left.\frac{\partial z}{\partial u}\right|_{\begin{matrix}u&amp;=u%
+_{0}\\
+v&amp;=v_{0}\end{matrix}}s+\left.\frac{\partial z}{\partial v}\right|_{\begin{%
+matrix}u&amp;=u_{0}\\
+v&amp;=v_{0}\end{matrix}}t\end{matrix}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>+</mo><mrow><msub><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">u</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">u</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">v</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">v</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mrow><msub><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mstyle><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">u</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">u</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">v</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">v</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>+</mo><mrow><msub><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">u</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">u</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">v</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">v</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mrow><msub><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mstyle><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">u</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">u</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">v</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">v</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>z</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>+</mo><mrow><msub><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">u</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">u</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">v</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">v</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mrow><msub><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mstyle><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">u</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">u</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">v</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">v</mi><mn mathsize="140%">0</mn></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">3</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Examples</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">To illustrate and explain the definition, let us consider three examples.</p>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Example 1</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.SS1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be the cone specified by the equation</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="z=\sqrt{x^{2}+y^{2}}" display="block"><mrow><mi>z</mi><mo>=</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and let <math id="S2.SS1.p1.m2" class="ltx_Math" alttext="{\bf p}=(1,0,1)" display="inline"><mrow><mi>𝐩</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>. Then we compute the tangent plane as follows:</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="\frac{\partial z}{\partial x}=\frac{x}{\sqrt{x^{2}+y^{2}}}" display="block"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mi>x</mi><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="\frac{\partial z}{\partial y}=\frac{y}{\sqrt{x^{2}+y^{2}}}" display="block"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>=</mo><mfrac><mi>y</mi><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Evaluating at <math id="S2.SS1.p1.m3" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>, we have</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="\left.\frac{\partial z}{\partial x}\right|_{\begin{matrix}x&amp;=1\\
+y&amp;=0\end{matrix}}=1" display="block"><mrow><msub><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><mn mathsize="142%">1</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><mn mathsize="142%">0</mn></mrow></mtd></mtr></mtable></msub><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="\left.\frac{\partial z}{\partial y}\right|_{\begin{matrix}x&amp;=1\\
+y&amp;=0\end{matrix}}=0," display="block"><mrow><mrow><msub><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><mn mathsize="142%">1</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><mn mathsize="142%">0</mn></mrow></mtd></mtr></mtable></msub><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so the tangent plane is specified by the equation</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="z=1+1(x-1)+0(y-0)," display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>1</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which simplifies to</p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="z=x." display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mi>x</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">Before leaving this example, there are two features which are worth noticing. First, note that the tangent plane intersects the cone not only in the point <math id="S2.SS1.p2.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, but in the whole line <math id="S2.SS1.p2.m2" class="ltx_Math" alttext="\{(s,0,s)\mid s\in\mathbf{R}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo>,</mo><mn>0</mn><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mo>∣</mo><mrow><mi>s</mi><mo>∈</mo><mi>𝐑</mi></mrow><mo stretchy="false">}</mo></mrow></math>. While it is more typical for the tangent plane to intersect in a point, it is possible for the intersection to be a line or even a curve. In fact, it can be shown that if a surface contains a line, then the intersection of the tangent plane to the surface through a point on the line with the surface will include the line.</p>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p">Second, note that the tangent plane is not defined at the point <math id="S2.SS1.p3.m1" class="ltx_Math" alttext="(0,0,0)." display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math> If we try to evaluate the partial derivatives at this point, we run into the indeterminate form <math id="S2.SS1.p3.m2" class="ltx_Math" alttext="0/0" display="inline"><mrow><mn>0</mn><mo>/</mo><mn>0</mn></mrow></math>. Sometimes, one can make sense of such a form by using L’Hospital’s rule, but in this case, that does not work — the derivatives are simply not defined for the values <math id="S2.SS1.p3.m3" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math> and <math id="S2.SS1.p3.m4" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math>. When it happens that it is not possible to define a tangent plane at a certain point, that point is known as a <em class="ltx_emph ltx_font_italic">singular point</em> of the surface. In our case, <math id="S2.SS1.p3.m5" class="ltx_Math" alttext="(0,0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> is a singular point of the cone. Looking at the surface, it is not hard to see why this point is singular — this point is the vertex of the cone.</p>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span>Example 2</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">To illustrate the computation of tangent planes to a surface which is described by an implicit equation, we shall now compute the tangent plane to the sphere of radius <math id="S2.SS2.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> centred about the origin. The sphere may be described by the equation</p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="x^{2}+y^{2}+z^{2}=R^{2}." display="block"><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In the notation of the last section, we have</p>
+<table id="S2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex13.m1" class="ltx_Math" alttext="f(x,y,z)=x^{2}+y^{2}+z^{2}-R^{2}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>-</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Computing partial derivatives, we find that</p>
+<table id="S2.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex14.m1" class="ltx_Math" alttext="\begin{matrix}\frac{\partial f}{\partial x}&amp;=2x\\
+\frac{\partial f}{\partial y}&amp;=2y\\
+\frac{\partial f}{\partial z}&amp;=2z\end{matrix}." display="block"><mrow><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>z</mi></mrow></mrow></mtd></mtr></mtable><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="S2.SS2.p1.m2" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> is a point which lies on the sphere, the equation of the tangent plane through <math id="S2.SS2.p1.m3" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> is as follows:</p>
+<table id="S2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex15.m1" class="ltx_Math" alttext="2p_{x}(x-p_{x})+2p_{y}(y-p_{y})+2p_{z}(z-p_{z})=0." display="block"><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>p</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>p</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>p</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>p</mi><mi>y</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>p</mi><mi>z</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><msub><mi>p</mi><mi>z</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We may simplify this equation by cancelling the factors of <math id="S2.SS2.p1.m4" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> and using the fact that <math id="S2.SS2.p1.m5" class="ltx_Math" alttext="p_{x}^{2}+p_{y}^{2}+p_{z}^{2}=R^{2}" display="inline"><mrow><mrow><msubsup><mi>p</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>p</mi><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>p</mi><mi>z</mi><mn>2</mn></msubsup></mrow><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></math>:
+</p>
+<table id="S2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex16.m1" class="ltx_Math" alttext="p_{x}x+p_{y}y+p_{z}z=R^{2}" display="block"><mrow><mrow><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><msub><mi>p</mi><mi>y</mi></msub><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><msub><mi>p</mi><mi>z</mi></msub><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>=</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p2" class="ltx_para">
+<p class="ltx_p">Having derived this equation, let us note an interesting fact about the tangent plane to the sphere. Let <math id="S2.SS2.p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> be the radius through <math id="S2.SS2.p2.m2" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>. (By definition, <math id="S2.SS2.p2.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is the line connecting <math id="S2.SS2.p2.m4" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> with the point <math id="S2.SS2.p2.m5" class="ltx_Math" alttext="(0,0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>.) It is easy to see that <math id="S2.SS2.p2.m6" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is perpendicular to the tangent plane. This is a generalization to three dimensions of the well-known fact of plane geometry that the tangent to a circle through a point on the circle is perpendicular to the radius through that point.</p>
+</div>
+</section>
+<section id="S2.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.3 </span>Example 3</h3>
+
+<div id="S2.SS3.p1" class="ltx_para">
+<p class="ltx_p">To gain some practise with computing tangent planes to parameterized surfaces, let us compute a tangent plane to a sphere a different way. A sphere of radius <math id="S2.SS3.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> centred about the origin may be also described by the parametric equations</p>
+<table id="S2.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex17.m1" class="ltx_Math" alttext="x=R\sin u\sin v" display="block"><mrow><mi>x</mi><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>v</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex18.m1" class="ltx_Math" alttext="y=R\sin u\cos v" display="block"><mrow><mi>y</mi><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>v</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex19.m1" class="ltx_Math" alttext="z=R\cos u." display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>u</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us compute the tangent plane through the point <math id="S2.SS3.p1.m2" class="ltx_Math" alttext="{\bf p}=(0,R,0)" display="inline"><mrow><mi>𝐩</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>R</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> using this description of the sphere. First, we notice that to describe the point <math id="S2.SS3.p1.m3" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>, we should take <math id="S2.SS3.p1.m4" class="ltx_Math" alttext="u_{0}=\pi/2" display="inline"><mrow><msub><mi>u</mi><mn>0</mn></msub><mo>=</mo><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></mrow></math> and <math id="S2.SS3.p1.m5" class="ltx_Math" alttext="v_{0}=0" display="inline"><mrow><msub><mi>v</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S2.SS3.p2" class="ltx_para">
+<p class="ltx_p">Taking derivatives, we find that</p>
+<table id="S2.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex20.m1" class="ltx_Math" alttext="\frac{\partial x}{\partial u}=R\cos u\sin v\quad\frac{\partial x}{\partial v}=%
+R\sin u\cos v" display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>v</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>v</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex21.m1" class="ltx_Math" alttext="\frac{\partial y}{\partial u}=R\cos u\cos v\qquad\frac{\partial y}{\partial v}%
+=-R\sin u\sin v" display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>v</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>v</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex22.m1" class="ltx_Math" alttext="\frac{\partial z}{\partial u}=-R\sin u\qquad\frac{\partial z}{\partial v}=0." display="block"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>u</mi></mrow></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Substituting <math id="S2.SS3.p2.m1" class="ltx_Math" alttext="u_{0}" display="inline"><msub><mi>u</mi><mn>0</mn></msub></math> for <math id="S2.SS3.p2.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="S2.SS3.p2.m3" class="ltx_Math" alttext="v_{0}" display="inline"><msub><mi>v</mi><mn>0</mn></msub></math> for <math id="S2.SS3.p2.m4" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, we find</p>
+<table id="S2.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex23.m1" class="ltx_Math" alttext="\frac{\partial x}{\partial u}=0\quad\frac{\partial x}{\partial v}=R" display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mi>R</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex24.m1" class="ltx_Math" alttext="\frac{\partial y}{\partial u}=0\qquad\frac{\partial y}{\partial v}=0" display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex25.m1" class="ltx_Math" alttext="\frac{\partial z}{\partial u}=-R\qquad\frac{\partial z}{\partial v}=0." display="block"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mi>R</mi></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS3.p3" class="ltx_para">
+<p class="ltx_p">Hence the parametric equations of the tangent plane are</p>
+<table id="S2.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex26.m1" class="ltx_Math" alttext="x=Rt" display="block"><mrow><mi>x</mi><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex27.m1" class="ltx_Math" alttext="y=R" display="block"><mrow><mi>y</mi><mo>=</mo><mi>R</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex28.m1" class="ltx_Math" alttext="z=-Rs." display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mi>s</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is clear that this agrees with the answer obtained in the last example.</p>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Consistency of definitions</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Since we have presented three different formulas for computing the tangent plane, logical consistency demands that we make sure that they indeed define the same plane. Moreover, we should check that if we compute the tangent plane to the same point to the ame surface using two different parameterizations, we obtain the same plane both ways. As we will soon see, consistency follows readily from the chain rule and implicit differentiation.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Since it is rather trivial, let us first derive equations (1) as a special case of (2). Suppose that our surface is given by an equation</p>
+<table id="S3.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex29.m1" class="ltx_Math" alttext="z=g(x,y)." display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us define <math id="S3.p2.m1" class="ltx_Math" alttext="f(x,y,z)=g(x,y)-z." display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>z</mi></mrow></mrow><mo>.</mo></mrow></math> Our surface is described by the equation <math id="S3.p2.m2" class="ltx_Math" alttext="f(x,y,z)=0." display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math> By formula (2), its tangent plane at a point <math id="S3.p2.m3" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> is described by the equation</p>
+<table id="S3.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex30.m1" class="ltx_Math" alttext="\frac{\partial g}{\partial x}(x-p_{x})+\frac{\partial g}{\partial y}(y-p_{y})-%
+(z-p_{z})=0." display="block"><mrow><mrow><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>p</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>p</mi><mi>y</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><msub><mi>p</mi><mi>z</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Making minor rearrangements and recognizing that <math id="S3.p2.m4" class="ltx_Math" alttext="\partial g/\partial x" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mrow></math> and <math id="S3.p2.m5" class="ltx_Math" alttext="\partial g/\partial y" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow></math> here denote the same entites as <math id="S3.p2.m6" class="ltx_Math" alttext="\partial z/\partial x" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mrow></math> and <math id="S3.p2.m7" class="ltx_Math" alttext="\partial z/\partial y" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow></math> did in the statement of equation (2) because there <math id="S3.p2.m8" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> is assumed to equal <math id="S3.p2.m9" class="ltx_Math" alttext="g(x,y)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we see that (2) is indeed a consequence of (1).</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">To show that equations (2) and (3) are consistent, we will make use of the chain rule. If the same surface is described by a parameterization</p>
+<table id="S3.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex31.m1" class="ltx_Math" alttext="\begin{matrix}\hfill x&amp;=g(u,v)\\
+\hfill y&amp;=h(u,v)\\
+\hfill z&amp;=k(u,v)\end{matrix}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>z</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and an implicit equation</p>
+<table id="S3.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex32.m1" class="ltx_Math" alttext="f(x,y,z)=0," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then we must have</p>
+<table id="S3.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex33.m1" class="ltx_Math" alttext="f(g(u,v),h(u,v),k(u,v))=0." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Differentiating with respect to <math id="S3.p3.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and using the chain rule, we find that</p>
+<table id="S3.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex34.m1" class="ltx_Math" alttext="\frac{\partial f}{\partial x}\frac{\partial g}{\partial u}+\frac{\partial f}{%
+\partial y}\frac{\partial h}{\partial u}+\frac{\partial f}{\partial z}\frac{%
+\partial k}{\partial u}=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>h</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>k</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Likewise, diferentiating with respect to <math id="S3.p3.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, we find that</p>
+<table id="S3.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex35.m1" class="ltx_Math" alttext="\frac{\partial f}{\partial x}\frac{\partial g}{\partial v}+\frac{\partial f}{%
+\partial y}\frac{\partial h}{\partial v}+\frac{\partial f}{\partial z}\frac{%
+\partial k}{\partial v}=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>g</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>h</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>k</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that the two equations above are exactly the conditions which are needed to guarantee that (2) and (3) describe the same plane.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Finally, we consider the effect of changing the parameters from <math id="S3.p4.m1" class="ltx_Math" alttext="u,v" display="inline"><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow></math> to two new parameters <math id="S3.p4.m2" class="ltx_Math" alttext="u^{\prime},v^{\prime}" display="inline"><mrow><msup><mi>u</mi><mo>′</mo></msup><mo>,</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></math>. By the chain rule, we have
+</p>
+<table id="S3.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex36.m1" class="ltx_Math" alttext="\frac{\partial x}{\partial u}=\frac{\partial x}{\partial u^{\prime}}\frac{%
+\partial u^{\prime}}{\partial u}+\frac{\partial x}{\partial v^{\prime}}\frac{%
+\partial v^{\prime}}{\partial u}" display="block"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex37.m1" class="ltx_Math" alttext="\frac{\partial x}{\partial v}=\frac{\partial x}{\partial u^{\prime}}\frac{%
+\partial u^{\prime}}{\partial v}+\frac{\partial x}{\partial v^{\prime}}\frac{%
+\partial v^{\prime}}{\partial v}" display="block"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and likewise for <math id="S3.p4.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> and <math id="S3.p4.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Substituting these expressions into formula (3), we obtain</p>
+<table id="S3.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex38.m1" class="ltx_Math" alttext="\begin{matrix}\hfill x&amp;=p_{x}+(\frac{\partial x}{\partial u^{\prime}}\frac{%
+\partial u^{\prime}}{\partial u}+\frac{\partial x}{\partial v^{\prime}}\frac{%
+\partial v^{\prime}}{\partial u})s+(\frac{\partial x}{\partial u^{\prime}}%
+\frac{\partial u^{\prime}}{\partial v}+\frac{\partial x}{\partial v^{\prime}}%
+\frac{\partial v^{\prime}}{\partial v})t\\
+\hfill y&amp;=p_{y}+(\frac{\partial x}{\partial u^{\prime}}\frac{\partial u^{%
+\prime}}{\partial u}+\frac{\partial x}{\partial v^{\prime}}\frac{\partial v^{%
+\prime}}{\partial u})s+(\frac{\partial x}{\partial u^{\prime}}\frac{\partial u%
+^{\prime}}{\partial v}+\frac{\partial x}{\partial v^{\prime}}\frac{\partial v^%
+{\prime}}{\partial v})t\\
+\hfill z&amp;=p_{z}+(\frac{\partial x}{\partial u^{\prime}}\frac{\partial u^{%
+\prime}}{\partial u}+\frac{\partial x}{\partial v^{\prime}}\frac{\partial v^{%
+\prime}}{\partial u})s+(\frac{\partial x}{\partial u^{\prime}}\frac{\partial u%
+^{\prime}}{\partial v}+\frac{\partial x}{\partial v^{\prime}}\frac{\partial v^%
+{\prime}}{\partial v})t\end{matrix}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mstyle></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>y</mi></msub><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mstyle></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>z</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>z</mi></msub><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac></mstyle></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we define</p>
+<table id="S3.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex39.m1" class="ltx_Math" alttext="s^{\prime}=\frac{\partial u^{\prime}}{\partial u}s+\frac{\partial u^{\prime}}{%
+\partial v}t" display="block"><mrow><msup><mi>s</mi><mo>′</mo></msup><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex40.m1" class="ltx_Math" alttext="t^{\prime}=\frac{\partial v^{\prime}}{\partial u}s+\frac{\partial v^{\prime}}{%
+\partial v}t," display="block"><mrow><mrow><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then our system of equations may be rewritten as</p>
+<table id="S3.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex41.m1" class="ltx_Math" alttext="\begin{matrix}\hfill x&amp;=p_{x}+\frac{\partial x}{\partial u^{\prime}}s^{\prime}%
++\frac{\partial x}{\partial v^{\prime}}t^{\prime}\\
+\hfill y&amp;=p_{x}+\frac{\partial y}{\partial u^{\prime}}s^{\prime}+\frac{%
+\partial y}{\partial v^{\prime}}t^{\prime}\\
+\hfill z&amp;=p_{x}+\frac{\partial z}{\partial u^{\prime}}s^{\prime}+\frac{%
+\partial z}{\partial v^{\prime}}t^{\prime}\end{matrix}," display="block"><mrow><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>s</mi><mo>′</mo></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mo>′</mo></msup></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>s</mi><mo>′</mo></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mo>′</mo></msup></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>z</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>x</mi></msub><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>u</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>s</mi><mo>′</mo></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>v</mi><mo>′</mo></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mo>′</mo></msup></mrow></mrow></mrow></mtd></mtr></mtable><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is formula (3) evaluated wit respect to the primed coordinates.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Motivation and derivation</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">So far, we presented formulae for computing the tangent plane. We showed how to use them with examples and verified that they were consistent. However, the defining formulae might as well have been “plucked from out of a hat” since we made no attempt to explain what the formulae mean intuitively of to derive them from more basic principles. The purpose of this section is to make up for this shortcoming by discussing the concept of tangent plane intuitively and proving some results which shed light on this concept.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Just as the tangent to a line may be understood as the limit of a line connecting two nearby points in the limit where the points coalesce, so too the tangent plane can be regarded as a limit. Whereas a line is determined by two points, a plane is determined by three points. Thus, we may try to define the tangent plane as the limit of the plane that passes through three points as the three points approach each other.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">Whilst this line of reasoning is correct, a bit of care is needed in order to make it work properly. The problem is that three distinct points do not always determine a unique plane — if the points lie on a straight line, then any plane passing through the line will contain all three points. Furthermore, should the points even be close to collinear, then the position of the plane they span will still depend sensitively on the position of the points. Hence, to guarantee that the limit exists, we need to impose a condition which keeps the points from being or tending to become collinear in the limit. One possible way out of this problem is to insist that the angles formed by the triangle of points stay bounded away from zero. If we make such a stipulation, then we can obtain the tangent plane as a limit.</p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Theorem</span> Suppose that <math id="S4.p4.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is a smooth surface and that <math id="S4.p4.m2" class="ltx_Math" alttext="{\bf a}_{n}" display="inline"><msub><mi>𝐚</mi><mi>n</mi></msub></math>, <math id="S4.p4.m3" class="ltx_Math" alttext="{\bf b}_{n}" display="inline"><msub><mi>𝐛</mi><mi>n</mi></msub></math>, and <math id="S4.p4.m4" class="ltx_Math" alttext="{\bf c}_{n}" display="inline"><msub><mi>𝐜</mi><mi>n</mi></msub></math> are three sequences of points such that</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For every <math id="I1.i1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the points <math id="I1.i1.p1.m2" class="ltx_Math" alttext="{\bf a}_{n}" display="inline"><msub><mi>𝐚</mi><mi>n</mi></msub></math>, <math id="I1.i1.p1.m3" class="ltx_Math" alttext="{\bf b}_{n}" display="inline"><msub><mi>𝐛</mi><mi>n</mi></msub></math>, and <math id="I1.i1.p1.m4" class="ltx_Math" alttext="{\bf c}_{n}" display="inline"><msub><mi>𝐜</mi><mi>n</mi></msub></math> are distinct.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">There exists a point <math id="I1.i2.p1.m1" class="ltx_Math" alttext="{\bf p}\in S" display="inline"><mrow><mi>𝐩</mi><mo>∈</mo><mi>S</mi></mrow></math> such that</p>
+<table id="S4.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex42.m1" class="ltx_Math" alttext="\begin{matrix}\lim_{n\to\infty}|{\bf a}_{n}-{\bf p}|&amp;=0\\
+\lim_{n\to\infty}|{\bf b}_{n}-{\bf p}|&amp;=0\\
+\lim_{n\to\infty}|{\bf c}_{n}-{\bf p}|&amp;=0\end{matrix}." display="block"><mrow><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>𝐚</mi><mi>n</mi></msub><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>𝐛</mi><mi>n</mi></msub><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>𝐜</mi><mi>n</mi></msub><mo>-</mo><mi>𝐩</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr></mtable><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">There exists a constant <math id="I1.i3.p1.m1" class="ltx_Math" alttext="0&lt;\alpha&lt;\pi" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>α</mi><mo>&lt;</mo><mi>π</mi></mrow></math> such that for every <math id="I1.i3.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the angles of the triangle <math id="I1.i3.p1.m3" class="ltx_Math" alttext="{\bf a}_{n}{\bf b}_{n}{\bf c}_{n}" display="inline"><mrow><msub><mi>𝐚</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>𝐛</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>𝐜</mi><mi>n</mi></msub></mrow></math> lie in the interval <math id="I1.i3.p1.m4" class="ltx_Math" alttext="[\alpha,\pi-\alpha]" display="inline"><mrow><mo stretchy="false">[</mo><mi>α</mi><mo>,</mo><mrow><mi>π</mi><mo>-</mo><mi>α</mi></mrow><mo stretchy="false">]</mo></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Then the planes spanned by the triplets <math id="S4.p4.m5" class="ltx_Math" alttext="({\bf a}_{n},{\bf b}_{n},{\bf c}_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>𝐚</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝐛</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝐜</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> tend towards the tangent plane of <math id="S4.p4.m6" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> through <math id="S4.p4.m7" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> in the limit <math id="S4.p4.m8" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math></p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">Also, there is a simple relation of tangent planes to tangent lines — the tangent plane of smooth surface <math id="S4.p5.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> at a point <math id="S4.p5.m2" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> is exactly the union of the tangents to the all the smooth curves which lie on <math id="S4.p5.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and pass through <math id="S4.p5.m4" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>.</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">Finally, equation (1) bears a strong resemblance to the multivariate Taylor’s expansion. A weak form of the bivariate Taylor’s theorem with remainder reads</p>
+<table id="S4.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex43.m1" class="ltx_Math" alttext="z-p_{z}=\left.\frac{\partial z}{\partial x}\right|_{\begin{matrix}x&amp;=p_{x}\\
+y&amp;=p_{y}\\
+z&amp;=p_{z}\end{matrix}}(x-p_{x})+\left.\frac{\partial z}{\partial y}\right|_{%
+\begin{matrix}x&amp;=p_{x}\\
+y&amp;=p_{y}\\
+z&amp;=p_{z}\end{matrix}}(y-p_{y})+c_{1}(x,y)(x-p_{x})^{2}+c_{2}(x,y)(x-p_{x})(y-p%
+_{y})+c_{3}(x,y)(y-p_{y})^{2}" display="block"><mrow><mrow><mi>z</mi><mo>-</mo><msub><mi>p</mi><mi>z</mi></msub></mrow><mo>=</mo><mrow><mrow><msub><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">x</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">y</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">z</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">z</mi></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>p</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac><mo fence="true">|</mo></mrow><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathsize="142%">x</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">x</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">y</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">y</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="142%">z</mi></mtd><mtd columnalign="center"><mrow><mi></mi><mo mathsize="142%" stretchy="false">=</mo><msub><mi mathsize="142%">p</mi><mi mathsize="140%">z</mi></msub></mrow></mtd></mtr></mtable></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>p</mi><mi>y</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>p</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>p</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>p</mi><mi>y</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><msub><mi>p</mi><mi>y</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the functions <math id="S4.p6.m1" class="ltx_Math" alttext="c_{1}" display="inline"><msub><mi>c</mi><mn>1</mn></msub></math>, <math id="S4.p6.m2" class="ltx_Math" alttext="c_{2}" display="inline"><msub><mi>c</mi><mn>2</mn></msub></math>, and <math id="S4.p6.m3" class="ltx_Math" alttext="c_{3}" display="inline"><msub><mi>c</mi><mn>3</mn></msub></math> are bounded in a neighborhood of <math id="S4.p6.m4" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>. (A strong version of the theorem would be more explicit about the form of these functions. Since we do not need precise information about these functions, the weak theorem suffices.) As <math id="S4.p6.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> gets closer to to <math id="S4.p6.m6" class="ltx_Math" alttext="p_{x}" display="inline"><msub><mi>p</mi><mi>x</mi></msub></math> and <math id="S4.p6.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> gets closer to <math id="S4.p6.m8" class="ltx_Math" alttext="p_{y}" display="inline"><msub><mi>p</mi><mi>y</mi></msub></math>, the remainder terms become increasingly smaller in comparison to the first order terms in the expansion. Therefore, if we are only interested in small values of <math id="S4.p6.m9" class="ltx_Math" alttext="x-p_{x}" display="inline"><mrow><mi>x</mi><mo>-</mo><msub><mi>p</mi><mi>x</mi></msub></mrow></math> and <math id="S4.p6.m10" class="ltx_Math" alttext="y-p_{y}" display="inline"><mrow><mi>y</mi><mo>-</mo><msub><mi>p</mi><mi>y</mi></msub></mrow></math> it is safe to approximate <math id="S4.p6.m11" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> by ignoring the remainder. By doing so, we obtain the equation of the tangent plane at <math id="S4.p6.m12" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>. In other words, if we are only interested in a small enough neighborhood of the point <math id="S4.p6.m13" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math>, we may approximate the surface by its tangent plane.</p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">This observation allows one to understand the tangent plane intuitively as a planar approximation to a surface in the neighborhood of a point of the surface. At least in one instance, we make use of this fact in everyday life. With the exception of a few benighted souls who belong to the Flat Earth Society, we know that the Earth is a sphere, yet we find that planar maps afford a perfectly adequate representation of the Earth’s surface for planning excursions within a city. The reason for this is that the size of a city is small compared to the size of the Earth. Hence, the error committed by approximating the spherical Earth on such scales by a tangent plane is a fraction of a percent and it is perfectly reasonable to use a planar map. However, when we move the scale of, say, continents, the errors become proportionately larger and it is not possible to represent such a large portion of the Earth on a planar map without introducing significant distortions.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Higher dimensions</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">The formalism presented here is capable of generalization to more than three dimensions. Since most of the differences between the case of three-dimensions which we have considered and higher dimensions are a matter of bookkeeping to keep track of more variables, we are content to simply present the results. How to use these results and the justifications for them are substantially the same as in three dimensions, so there is no reason to repeat them here with essentially cosmetic changes.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S5.p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is an <math id="S5.p2.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-dimensional surface located in <math id="S5.p2.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> and let <math id="S5.p2.m4" class="ltx_Math" alttext="{\bf p}" display="inline"><mi>𝐩</mi></math> be a point of <math id="S5.p2.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. Then we may generalize formulas (1) - (3) as follows:</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">If the surface <math id="S5.p3.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is described by the system of equations</p>
+<table id="S5.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex44.m1" class="ltx_Math" alttext="\begin{matrix}x_{n}&amp;=g_{1}(x_{1},x_{2},\ldots x_{m})\\
+&amp;\vdots\\
+x_{n-m+1}&amp;=g_{n-m+1}(x_{1},x_{2},\ldots x_{m})\end{matrix}," display="block"><mrow><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>x</mi><mi>n</mi></msub></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>m</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>x</mi><mrow><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>g</mi><mrow><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>m</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr></mtable><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then its tangent space is described by the system</p>
+<table id="S5.Ex45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex45.m1" class="ltx_Math" alttext="\begin{matrix}x_{n}&amp;=\sum_{i=1}^{m}\left.\frac{\partial g_{1}}{\partial x_{i}}%
+\right|_{\bf p}x_{i}\\
+&amp;\vdots\\
+x_{n-m+1}&amp;=\sum_{i=1}^{m}\left.\frac{\partial g_{n-m+1}}{\partial x_{i}}\right%
+|_{\bf p}x_{i}\end{matrix}," display="block"><mrow><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>x</mi><mi>n</mi></msub></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mrow><mrow><mstyle displaystyle="false"><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup></mstyle><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow><mo fence="true">|</mo></mrow><mi>𝐩</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>x</mi><mrow><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mrow><mrow><mstyle displaystyle="false"><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup></mstyle><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>g</mi><mrow><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow><mo fence="true">|</mo></mrow><mi>𝐩</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow></mtd></mtr></mtable><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">1^{\prime}</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">If the surface <math id="S5.p4.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is described by the system of equations</p>
+<table id="S5.Ex46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex46.m1" class="ltx_Math" alttext="\begin{matrix}f_{1}(x_{1},x_{2},\ldots x_{n})&amp;=0\\
+&amp;\vdots\\
+f_{n-m+1}(x_{1},x_{2},\ldots x_{n})&amp;=0\end{matrix}," display="block"><mrow><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>f</mi><mrow><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr></mtable><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then the tangent space is described by the system</p>
+<table id="S5.Ex47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex47.m1" class="ltx_Math" alttext="\begin{matrix}\sum_{i=1}^{m}\left.\frac{\partial f_{1}}{\partial x_{i}}\right|%
+_{\bf p}x_{n}&amp;=0\\
+&amp;\vdots\\
+\sum_{i=1}^{n}\left.\frac{\partial f_{n-m+1}}{\partial x_{i}}\right|_{\bf p}x_%
+{i}&amp;=0\end{matrix}," display="block"><mrow><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mrow><mrow><mstyle displaystyle="false"><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup></mstyle><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow><mo fence="true">|</mo></mrow><mi>𝐩</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mrow><mrow><mstyle displaystyle="false"><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></mstyle><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>f</mi><mrow><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow><mo fence="true">|</mo></mrow><mi>𝐩</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></mtd></mtr></mtable><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">2^{\prime}</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">If the surface is described parametrically on terms of a set of parameters <math id="S5.p5.m1" class="ltx_Math" alttext="(u_{1},u_{2},\ldots,u_{m})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><msub><mi>u</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>u</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></math>, then the tangent space may be parameterized as follows:</p>
+<table id="S5.Ex48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex48.m1" class="ltx_Math" alttext="\begin{matrix}x_{1}&amp;=p_{1}+\sum_{i=1}^{m}\frac{\partial x_{1}}{\partial u_{i}}%
+s_{i}\\
+&amp;\vdots\\
+x_{n}&amp;=p_{n}+\sum_{i=1}^{m}\frac{\partial x_{n}}{\partial u_{i}}s_{i}\end{matrix}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>+</mo><mrow><mstyle displaystyle="false"><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup></mstyle><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>s</mi><mi>i</mi></msub></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>x</mi><mi>n</mi></msub></mtd><mtd columnalign="center"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>p</mi><mi>n</mi></msub><mo>+</mo><mrow><mstyle displaystyle="false"><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup></mstyle><mrow><mstyle displaystyle="false"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>s</mi><mi>i</mi></msub></mrow></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Generalizations</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">In closing, it might be worthwhile to say a few words about how the notion of tangent space has been generalized by modern mathematicians, even though the methods used lie well beyond the scope of this entry.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">There is the intrinsic definition of tangent space. Whereas we considered our surface as situated in an ambient space and defined the tangent space as a certain linear subspace of this space, in the intrinsic method one only considers geometric constructions defined on the surface without reference to an ambient space. This is useful because oftentimes one is interested only in the surface and the ambient space is irrelevant; furthermore, it may be possible to embed the same surface several different ways in an ambient space or describe it in a fashion that makes no reference to an ambient space so it is preferrable not to embed the sufrace in an arbitrary ambient space in order to define its tangent spaces. For this reason, modern differential geometry almost exclusively uses the intrinsic definition; for more on this definition, see <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/902</span>this entry and <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/2007</span>this entry.</p>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">Even more remarkably, it is possible to extend the notion of tangent space to such non-geometric entites as number fields and functors in a meaningful way. The secret to this is the axiomatic approach. By expressing the definition of vector field in terms of an abstract algebraic system, one arrives at a definition which, when applied to surfaces, agrees with the concrete concept defined here, but which, with a different interpretation of the axioms, can apply to other mathematical objects as well. Since it turns out that many properties of vector fields can be deduced from the abstract axioms, it automatically follows that the tangent space of a number field or a functor defined in this way behaves a lot like the tangent space to a surface in many respects. This point of view has yielded intuitions and insights into various fields of mathematics such as number theory which may not otherwise have been available and lies at the heart of a lot of contemporary mathematics.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">tangent plane (elementary)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TangentPlaneelementary</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:58:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:58:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">tangent space</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">tangent plane</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:56:32 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

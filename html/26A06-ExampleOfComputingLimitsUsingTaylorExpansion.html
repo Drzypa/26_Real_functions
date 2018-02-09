@@ -1,0 +1,330 @@
+<!DOCTYPE html><html>
+<head>
+<title>example of computing limits using Taylor expansion</title>
+<!--Generated on Fri Feb  9 19:43:16 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">example of computing limits using Taylor expansion</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmprobx1" class="ltx_theorem ltx_theorem_prob">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Problem</span>.</h6>
+<div id="Thmprobx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Evaluate</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\lim_{x\to-\infty}\bigl{(}x+\sqrt{x^{2}+23x}\bigr{)}\,." display="block"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></munder><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>23</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In beginners’ courses in calculus, one is usually told to
+rationalize the above expression by multiplying by <math id="p2.m1" class="ltx_Math" alttext="(x-\sqrt{x^{2}+23x})/(x-\sqrt{x^{2}+23x})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>23</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>23</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.
+This approach is somewhat dissatisfying, because it depends
+on a specific <em class="ltx_emph ltx_font_italic">algebraic</em> trick that works only for square roots
+— for example, it would have been more difficult or impossible to rationalize, if instead, we had a cube root or even a transcendental function —
+and this trick does not appeal to our intuition that
+<math id="p2.m2" class="ltx_Math" alttext="\sqrt{x^{2}+23x}" display="inline"><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>23</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt></math> should be approximately
+<math id="p2.m3" class="ltx_Math" alttext="\lvert x\rvert" display="inline"><mrow><mo fence="true" stretchy="false">|</mo><mi>x</mi><mo fence="true" stretchy="false">|</mo></mrow></math> for large <math id="p2.m4" class="ltx_Math" alttext="\lvert x\rvert" display="inline"><mrow><mo fence="true" stretchy="false">|</mo><mi>x</mi><mo fence="true" stretchy="false">|</mo></mrow></math>.
+Fortunately, there is another approach that
+exploits the <em class="ltx_emph ltx_font_italic">analytic</em> properties of the functions involved.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">L’Hôpital’s Rule (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/LHpitalsRule</span>) is one analytic approach,
+but in many cases, using Taylor expansion is even easier
+and straightforward. Essentially, Taylor expansion approximates
+complicated functions by polynomials, whose limits are easy to evaluate.
+We illustrate the method below.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">First rewrite</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\lim_{x\to-\infty}\bigl{(}x+\sqrt{x^{2}+23x}\bigr{)}=\lim_{x\to+\infty}\bigl{(%
+}\sqrt{x^{2}-23x}-x\bigr{)}\,," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></munder><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>23</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></munder><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>23</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt><mo>-</mo><mi>x</mi></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that we do not have to worry about the pesky negatives any more.
+Then, with the help of the binomial formula:
+</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="(1+y)^{1/2}=1+\frac{1}{2}y+o(y)\,,\quad\textrm{as $y\to 0$,}" display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>=</mo><mrow><mrow><mn>1</mn><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mtext>as </mtext><mrow><mi>y</mi><mo>→</mo><mn>0</mn></mrow><mtext>,</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(“<math id="p4.m1" class="ltx_Math" alttext="o" display="inline"><mi>o</mi></math>” is Landau notation)
+we obtain:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle\sqrt{x^{2}-23x}-x" display="inline"><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>23</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt><mo>-</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=x\left(\sqrt{1-\frac{23}{x}}-1\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msqrt><mrow><mn>1</mn><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>23</mn><mi>x</mi></mfrac></mstyle></mrow></msqrt><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=x\left(1-\frac{1}{2}\frac{23}{x}+o\left(\frac{23}{x}\right)-1%
+\right)\,,\quad\textrm{as $x\to\infty$ (so $y=-\frac{23}{x}\to 0$)}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><mn>1</mn><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>23</mn><mi>x</mi></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mn>23</mn><mi>x</mi></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow><mo>-</mo><mn>1</mn></mrow><mo rspace="4.2pt">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mtext>as </mtext><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow><mtext> (so </mtext><mrow><mi>y</mi><mo>=</mo><mrow><mo>-</mo><mfrac><mn>23</mn><mi>x</mi></mfrac></mrow><mo>→</mo><mn>0</mn></mrow><mtext>)</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=-\frac{23}{2}+x\,o\left(\frac{23}{x}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>23</mn><mn>2</mn></mfrac></mstyle></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mn>23</mn><mi>x</mi></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=-\frac{23}{2}+o(1)\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>23</mn><mn>2</mn></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\lim_{x\to-\infty}\bigl{(}x+\sqrt{x^{2}+23x}\bigr{)}=\lim_{x\to\infty}\bigl{(}%
+\sqrt{x^{2}-23x}-x\bigr{)}=-\frac{23}{2}\,." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></munder><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>23</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>23</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt><mo>-</mo><mi>x</mi></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mpadded width="+1.7pt"><mfrac><mn>23</mn><mn>2</mn></mfrac></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmprobx2" class="ltx_theorem ltx_theorem_prob">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Problem</span>.</h6>
+<div id="Thmprobx2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Evaluate</span></p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\lim_{x\to 0}\left(\frac{1}{\ln(1+x)}-\frac{1}{\tan x}\right)\,." display="block"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>-</mo><mfrac><mn>1</mn><mrow><mi>tan</mi><mo>⁡</mo><mi>x</mi></mrow></mfrac></mrow><mo rspace="4.2pt">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">This example is admittedly artificial; it was made to be annoying to solve using
+L’Hôpital’s Rule alone, but much simpler if one knows how to use
+the Taylor expansions:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle\ln(1+x)" display="inline"><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=x-\frac{1}{2}x^{2}+o(x^{2})\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>x</mi><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">as <math id="S0.Ex10.m3.m1" class="ltx_Math" alttext="x\to 0" display="inline"><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></math>, and</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle\tan x" display="inline"><mrow><mi>tan</mi><mo>⁡</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=x+o(x^{2})\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">as <math id="S0.Ex11.m3.m1" class="ltx_Math" alttext="x\to 0" display="inline"><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></math>.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So we compute:</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{\ln(1+x)}-\frac{1}{\tan x}=\frac{\tan x-\ln(1+x)}{\ln(1+%
+x)\tan x}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>tan</mi><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>tan</mi><mo>⁡</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mi>tan</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle=\frac{\bigl{(}x+o(x^{2})\bigr{)}-\bigl{(}x-\frac{1}{2}x^{2}+o(x^%
+{2})\bigr{)}}{\ln(1+x)\tan x}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>-</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mi>x</mi><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mi>tan</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=\frac{\frac{1}{2}x^{2}+o(x^{2})}{\bigl{(}x+o(x)\bigr{)}\bigl{(}x%
++o(x)\bigr{)}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=\frac{\frac{1}{2}+o(1)}{\bigl{(}1+o(1)\bigr{)}\bigl{(}1+o(1)%
+\bigr{)}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore,</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\lim_{x\to 0}\left(\frac{1}{\ln(1+x)}-\frac{1}{\tan x}\right)=\frac{1}{2}\,." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>-</mo><mfrac><mn>1</mn><mrow><mi>tan</mi><mo>⁡</mo><mi>x</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mpadded width="+1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The reader might reasonably ask how
+did we know the right number of terms to use in the Taylor expansions.
+The answer is to guess.
+This is not as problematic as it sounds. First, there is no harm
+in using more terms than necessary in the expansion (only that there is more writing).
+And if we used too few terms, we would know when we later encounter indeterminate forms such as <math id="p5.m1" class="ltx_Math" alttext="o(1)/x" display="inline"><mrow><mrow><mi>o</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>x</mi></mrow></math> (as <math id="p5.m2" class="ltx_Math" alttext="x\to 0" display="inline"><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></math>) in our derivations. If that happens,
+it is not hard to go back and add the needed terms.
+</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Notice that all the essential information to evaluate the limit is contained in the first few derivatives of
+the functions involved <em class="ltx_emph ltx_font_italic">at particular points</em> — in the above example,
+only at <math id="p6.m1" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>.
+This information can be obtained by manipulating series,
+unlike L’Hôpital’s Rule
+which necessitates computing the derivative <em class="ltx_emph ltx_font_italic">functions</em> at all points.
+So even monstrous expressions like this one is tractable
+with Taylor expansion:</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\lim_{x\to 0}\left(\frac{1}{\ln(1+\tan(\sin x))}-\frac{1}{e^{\sin(\tan x)}-1}%
+\right)\,." display="block"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi>tan</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>-</mo><mfrac><mn>1</mn><mrow><msup><mi>e</mi><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>tan</mi><mo>⁡</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mrow><mo rspace="4.2pt">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">On the other hand, there definitely are situations where
+L’Hôpital’s Rule works but Taylor expansion does not: for instance,</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\lim_{x\to 0^{+}}x\ln x=\lim_{x\to 0^{+}}\frac{x}{1/\ln x}\,," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></munder><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></munder><mo>⁡</mo><mpadded width="+1.7pt"><mfrac><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mfrac></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">because <math id="p7.m1" class="ltx_Math" alttext="1/\ln x" display="inline"><mrow><mn>1</mn><mo>/</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></math> cannot be expanded in a Taylor series about <math id="p7.m2" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="Thmprobx3" class="ltx_theorem ltx_theorem_prob">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Problem</span>.</h6>
+<div id="Thmprobx3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Here is a problem involving a different sort of limit:
+does the following series converge?</span></p>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\arctan(n^{-1})" display="block"><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>arctan</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Our intuition suggests that it does not, because
+<math id="p8.m1" class="ltx_Math" alttext="\arctan(n^{-1})" display="inline"><mrow><mi>arctan</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></math> should be approximately <math id="p8.m2" class="ltx_Math" alttext="n^{-1}" display="inline"><msup><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math>, and <math id="p8.m3" class="ltx_Math" alttext="\sum_{n}n^{-1}" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>n</mi></msub><msup><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> diverges.
+However, the standard comparison test does not work
+because <math id="p8.m4" class="ltx_Math" alttext="\arctan x\leq x" display="inline"><mrow><mrow><mi>arctan</mi><mo>⁡</mo><mi>x</mi></mrow><mo>≤</mo><mi>x</mi></mrow></math> (for <math id="p8.m5" class="ltx_Math" alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math>) has the inequality in the wrong direction.
+But with Taylor expansion the solution is a snap.
+By expanding</p>
+<table id="S0.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\arctan x=x+O(x^{3})\,,\quad\text{as $x\to 0$.}" display="block"><mrow><mrow><mi>arctan</mi><mo>⁡</mo><mi>x</mi></mrow><mo>=</mo><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>3</mn></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mtext>as </mtext><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow><mtext>.</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and summing both sides, we get</p>
+<table id="S0.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex21.m1" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\arctan(n^{-1})=\sum_{n=1}^{\infty}n^{-1}+\sum_{n=1}^{%
+\infty}O(n^{-3})\,." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>arctan</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msup><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mo>-</mo><mn>3</mn></mrow></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="p8.m6" class="ltx_Math" alttext="\sum_{n}O(n^{-3})" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>n</mi></msub><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mo>-</mo><mn>3</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> converges (being dominated by <math id="p8.m7" class="ltx_Math" alttext="C\sum_{n}n^{-3}" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>n</mi></msub><msup><mi>n</mi><mrow><mo>-</mo><mn>3</mn></mrow></msup></mrow></mrow></math> for some constant <math id="p8.m8" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>), <math id="p8.m9" class="ltx_Math" alttext="\sum_{n}\arctan(n^{-1})" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>n</mi></msub><mrow><mi>arctan</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> must diverge (to <math id="p8.m10" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>).</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">(Of course, this problem could be solved by using the integral test,
+but who really wants to integrate <math id="p9.m1" class="ltx_Math" alttext="\int\arctan(1/x)\,dx" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mi>arctan</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>/</mo><mi>x</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math>?)
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">example of computing limits using Taylor expansion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfComputingLimitsUsingTaylorExpansion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:39:48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:39:48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 26A06</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:43:16 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

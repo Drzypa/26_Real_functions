@@ -1,0 +1,241 @@
+<!DOCTYPE html><html>
+<head>
+<title>gradient in curvilinear coordinates</title>
+<!--Generated on Fri Feb  9 19:57:48 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">gradient in curvilinear coordinates</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We give the formulas for the gradient expressed in various curvilinear coordinate systems.
+We also show the metric tensors <math id="p1.m1" class="ltx_Math" alttext="g_{ij}" display="inline"><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> so
+that the reader may verify the results
+by working from the basic formulas for the gradient.</p>
+</div>
+<div class="ltx_TOC ltx_role_contents">
+<h6>Contents:</h6>
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Cylindrical coordinate system ‣ gradient in curvilinear coordinates" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Cylindrical coordinate system</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Polar coordinate system ‣ gradient in curvilinear coordinates" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Polar coordinate system</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 Spherical coordinate system ‣ gradient in curvilinear coordinates" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Spherical coordinate system</span></a></li>
+</ul>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Cylindrical coordinate system</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">In the
+cylindrical system of coordinates <math id="S1.p1.m1" class="ltx_Math" alttext="(r,\theta,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math> we have</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="g_{ij}=\begin{pmatrix}1&amp;0&amp;0\\
+0&amp;r^{2}&amp;0\\
+0&amp;0&amp;1\end{pmatrix}\,." display="block"><mrow><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mpadded width="+1.7pt"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msup><mi>r</mi><mn>2</mn></msup></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So that</p>
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S1.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\displaystyle\nabla f" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\frac{\partial f}{\partial r}\,\mathbf{e}_{r}+\frac{1}{r}\frac{%
+\partial f}{\partial\theta}\,\mathbf{e}_{\theta}+\frac{\partial f}{\partial z}%
+\,\mathbf{k}\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><msub><mi>𝐞</mi><mi>r</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>r</mi></mfrac></mstyle><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><msub><mi>𝐞</mi><mi>θ</mi></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>𝐤</mi></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">where</p>
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S1.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex3.m1" class="ltx_Math" alttext="\displaystyle\mathbf{e}_{r}" display="inline"><msub><mi>𝐞</mi><mi>r</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\frac{\partial}{\partial r}=\frac{x}{r}\,\mathbf{i}+\frac{y}{r}%
+\,\mathbf{j}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>x</mi><mi>r</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐢</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>r</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐣</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S1.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\displaystyle\mathbf{e}_{\theta}" display="inline"><msub><mi>𝐞</mi><mi>θ</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{r}\frac{\partial}{\partial\theta}=-\frac{y}{r}\,\mathbf%
+{i}+\frac{x}{r}\,\mathbf{j}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>r</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>r</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐢</mi></mrow></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>x</mi><mi>r</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐣</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are the unit vectors in the direction of increase of <math id="S1.p2.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> and <math id="S1.p2.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>. Of course,
+<math id="S1.p2.m3" class="ltx_Math" alttext="\mathbf{i},\mathbf{j},\mathbf{k}" display="inline"><mrow><mi>𝐢</mi><mo>,</mo><mi>𝐣</mi><mo>,</mo><mi>𝐤</mi></mrow></math> denote the unit vectors along the positive <math id="S1.p2.m4" class="ltx_Math" alttext="x,y,z" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow></math> axes respectively.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">The notations <math id="S1.p3.m1" class="ltx_Math" alttext="\partial/\partial r,\partial/\partial\theta" display="inline"><mrow><mrow><mo>∂</mo><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mrow><mo>,</mo><mrow><mo>∂</mo><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mrow></mrow></math>, etc.,
+denote the tangent vectors corresponding to infinitesimal changes in <math id="S1.p3.m2" class="ltx_Math" alttext="r,\theta" display="inline"><mrow><mi>r</mi><mo>,</mo><mi>θ</mi></mrow></math>, etc. respectively.
+Concretely, in terms of Cartesian coordinates, <math id="S1.p3.m3" class="ltx_Math" alttext="\partial/\partial r" display="inline"><mrow><mo>∂</mo><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mrow></math>
+is the vector <math id="S1.p3.m4" class="ltx_Math" alttext="\mathbf{i}\,\partial x/\partial r+\mathbf{j}\,\partial y/\partial r+\mathbf{k}%
+\,\partial z/\partial r" display="inline"><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>𝐢</mi></mpadded><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mrow><mo>+</mo><mrow><mrow><mpadded width="+1.7pt"><mi>𝐣</mi></mpadded><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mrow><mo>+</mo><mrow><mrow><mpadded width="+1.7pt"><mi>𝐤</mi></mpadded><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mrow></mrow></math>.
+And similarly for the other variables. (There is a deep reason for using the seemingly strange notation:
+see Leibniz notation for vector fields for details.)</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Polar coordinate system</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">This is just the special case of the cylindrical coordinate system where we chop off the <math id="S2.p1.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> coordinate.
+Thus
+</p>
+<table id="S3.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S2.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex5.m1" class="ltx_Math" alttext="\displaystyle\nabla f" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex5.m2" class="ltx_Math" alttext="\displaystyle=\frac{\partial f}{\partial r}\,\mathbf{e}_{r}+\frac{1}{r}\frac{%
+\partial f}{\partial\theta}\,\mathbf{e}_{\theta}\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><msub><mi>𝐞</mi><mi>r</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>r</mi></mfrac></mstyle><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>𝐞</mi><mi>θ</mi></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Spherical coordinate system</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">To stave off confusion, note that this is the “mathematicians’ ” convention for the spherical coordinate
+system <math id="S3.p1.m1" class="ltx_Math" alttext="(\rho,\phi,\theta)" display="inline"><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo>,</mo><mi>ϕ</mi><mo>,</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></math>.
+That is, <math id="S3.p1.m2" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is the co-latitude angle, and <math id="S3.p1.m3" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is the longitudinal angle.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex6.m1" class="ltx_Math" alttext="g_{ij}=\begin{pmatrix}1&amp;0&amp;0\\
+0&amp;\rho^{2}&amp;0\\
+0&amp;0&amp;\rho^{2}\sin^{2}\phi\end{pmatrix}." display="block"><mrow><mrow><msub><mi>g</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msup><mi>ρ</mi><mn>2</mn></msup></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><msup><mi>ρ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mi>ϕ</mi></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<table id="S3.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S3.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex7.m1" class="ltx_Math" alttext="\displaystyle\nabla f" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex7.m2" class="ltx_Math" alttext="\displaystyle=\frac{\partial f}{\partial\rho}\,\mathbf{e}_{\rho}+\frac{1}{\rho%
+}\frac{\partial f}{\partial\phi}\,\mathbf{e}_{\phi}+\frac{1}{\rho\sin\phi}%
+\frac{\partial f}{\partial\theta}\,\mathbf{e}_{\theta}\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>ρ</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><msub><mi>𝐞</mi><mi>ρ</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>ρ</mi></mfrac></mstyle><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>ϕ</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><msub><mi>𝐞</mi><mi>ϕ</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>𝐞</mi><mi>θ</mi></msub></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where</p>
+<table id="S3.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S3.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex8.m1" class="ltx_Math" alttext="\displaystyle\mathbf{e}_{\rho}" display="inline"><msub><mi>𝐞</mi><mi>ρ</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex8.m2" class="ltx_Math" alttext="\displaystyle=\frac{\partial}{\partial\rho}=\frac{x}{\rho}\,\mathbf{i}+\frac{y%
+}{\rho}\,\mathbf{j}+\frac{z}{\rho}\,\mathbf{k}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>ρ</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>x</mi><mi>ρ</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐢</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>ρ</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐣</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>z</mi><mi>ρ</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S3.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex9.m1" class="ltx_Math" alttext="\displaystyle\mathbf{e}_{\phi}" display="inline"><msub><mi>𝐞</mi><mi>ϕ</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex9.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\rho}\frac{\partial}{\partial\phi}=\frac{zx}{r\rho}\,%
+\mathbf{i}+\frac{zy}{r\rho}\,\mathbf{j}-\frac{r}{\rho}\,\mathbf{k}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>ρ</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>ϕ</mi></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mrow><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mi>z</mi><mo>⁢</mo><mi>x</mi></mrow><mrow><mi>r</mi><mo>⁢</mo><mi>ρ</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐢</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mi>z</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>r</mi><mo>⁢</mo><mi>ρ</mi></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐣</mi></mrow></mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>r</mi><mi>ρ</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐤</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S3.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex10.m1" class="ltx_Math" alttext="\displaystyle\mathbf{e}_{\theta}" display="inline"><msub><mi>𝐞</mi><mi>θ</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex10.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\rho\sin\theta}\frac{\partial}{\partial\theta}=-\frac{y%
+}{r}\,\mathbf{i}+\frac{x}{r}\,\mathbf{j}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>r</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐢</mi></mrow></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mi>x</mi><mi>r</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>𝐣</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are the unit vectors in the direction of increase of <math id="S3.p3.m1" class="ltx_Math" alttext="\rho,\phi,\theta" display="inline"><mrow><mi>ρ</mi><mo>,</mo><mi>ϕ</mi><mo>,</mo><mi>θ</mi></mrow></math>, respectively.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">gradient in curvilinear coordinates</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GradientInCurvilinearCoordinates</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:27:32</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:27:32</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26B10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gradient</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Gradient</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:57:48 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

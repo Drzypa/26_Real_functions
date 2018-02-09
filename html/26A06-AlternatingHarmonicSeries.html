@@ -1,0 +1,274 @@
+<!DOCTYPE html><html>
+<head>
+<title>alternating harmonic series</title>
+<!--Generated on Fri Feb  9 19:41:57 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">alternating harmonic series</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">alternating harmonic series</em> is given by the following infinite series:
+</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\sum_{i=1}^{\infty}\frac{(-1)^{n+1}}{n}." display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mi>n</mi></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The series converges to <math id="p2.m1" class="ltx_Math" alttext="\ln 2" display="inline"><mrow><mi>ln</mi><mo>⁡</mo><mn>2</mn></mrow></math> and it is the prototypical example of a conditionally convergent series.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">First, notice that the series is not absolutely convergent. By taking the absolute value of each term, we get the harmonic series, which is divergent. There are several ways to show this, and we invite the reader to the entry on harmonic series for further exploration.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Next, to show that the series (1) converges, we use the alternating series test (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AlternatingSeriesTest</span>): since</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\lim_{n\to\infty}\frac{1}{n}=0," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the alternating series (1) converges.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Other examples of conditionally convergent series can be discovered using variants of the alternating harmonic series. For instance, the following series</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\sum_{i=1}^{\infty}\frac{(-1)^{n}n^{2}+\cos n}{n^{3}-n^{2}+e^{-n}}." display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>n</mi></mrow></mrow><mrow><mrow><msup><mi>n</mi><mn>3</mn></msup><mo>-</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">can easily be shown to be conditionally convergent. Here is another example, more of a generalization, called the :</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\sum_{i=1}^{\infty}\frac{(-1)^{n+1}}{n^{p}}," display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><msup><mi>n</mi><mi>p</mi></msup></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i1.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is non-negative real number. The convergence of the  is tabulated below:</p>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="I1.i1.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t">convergence</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_tt"><math id="I1.i1.p1.m3" class="ltx_Math" alttext="(1,\infty)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_tt">absolutely convergent</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t"><math id="I1.i1.p1.m4" class="ltx_Math" alttext="(0,1]" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></math></th>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">conditionally convergent</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_center ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t"><math id="I1.i1.p1.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math></th>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">divergent</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_center"><math id="I1.i1.p1.m6" class="ltx_Math" alttext="{}\end{center}\itemize@item UsingRiemannseriestheorem,%
+oneeasilyseesthatnoteveryconditionallyconvergentseriesisalternating.%
+Byappropriatelyrearrangingthealternatingharmonicseries,%
+onegetsaconditionallyconvergentseriesthatisnotalternating:define" display="inline"><mrow><mtext> • </mtext><mi>U</mi><mi>s</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>R</mi><mi>i</mi><mi>e</mi><mi>m</mi><mi>a</mi><mi>n</mi><mi>n</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>m</mi><mo>,</mo><mi>o</mi><mi>n</mi><mi>e</mi><mi>e</mi><mi>a</mi><mi>s</mi><mi>i</mi><mi>l</mi><mi>y</mi><mi>s</mi><mi>e</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>h</mi><mi>a</mi><mi>t</mi><mi>n</mi><mi>o</mi><mi>t</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>a</mi><mi>l</mi><mi>l</mi><mi>y</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>g</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>e</mi><mi>s</mi><mi>i</mi><mi>s</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>n</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>g</mi><mo>.</mo><mi>B</mi><mi>y</mi><mi>a</mi><mi>p</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>l</mi><mi>y</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>r</mi><mi>r</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>n</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>h</mi><mi>a</mi><mi>r</mi><mi>m</mi><mi>o</mi><mi>n</mi><mi>i</mi><mi>c</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>e</mi><mi>s</mi><mo>,</mo><mi>o</mi><mi>n</mi><mi>e</mi><mi>g</mi><mi>e</mi><mi>t</mi><mi>s</mi><mi>a</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>a</mi><mi>l</mi><mi>l</mi><mi>y</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>g</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>h</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>s</mi><mi>n</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>n</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>n</mi><mi>g</mi><mo>:</mo><mi>d</mi><mi>e</mi><mi>f</mi><mi>i</mi><mi>n</mi><mi>e</mi></mrow></math>σ:<span class="ltx_text ltx_font_blackboard">N→N<math id="I1.i1.p1.m7" class="ltx_Math" alttext="{{{{{asfollows:\begin{displaymath}\sigma(i):=\left\{\begin{array}[]{ll}%
+\displaystyle{\frac{2i+1}{3}}&amp;\textrm{if }2i\equiv-1\pmod{3}\\
+\displaystyle{\frac{4i-2}{3}}&amp;\textrm{if }2i\equiv 1\pmod{3}\\
+\displaystyle{\frac{4i}{3}}&amp;\textrm{otherwise}\\
+}\@unrecurse}\right.\end{displaymath}Itcanbeshownthat$\sigma$isabijection.Now,%
+let$a_{n}$bethe$n$thtermofalternatingharmonicseries.Thenitisnothardtoseethat$$%
+\sum_{i=1}^{n}a_{\sigma(i)}\longrightarrow\frac{\ln 2}{2}\qquad\mbox{ as }%
+\qquad n\longrightarrow\infty.$$Thus,%
+itisconditionallyconvergentandyetitisnotalternating(thefirstthreetermsare$1,\,%
+-\frac{1}{2},\,-\frac{1}{4}$).\end{itemize}\begin{flushright}\begin{tabular}[]%
+{|ll|}\hline Title&amp;alternating harmonic series\\
+Canonical name&amp;AlternatingHarmonicSeries\\
+Date of creation&amp;2013-03-22 17:53:25\\
+Last modified on&amp;2013-03-22 17:53:25\\
+Owner&amp;CWoo (3771)\\
+Last modified by&amp;CWoo (3771)\\
+Numerical id&amp;13\\
+Author&amp;CWoo (3771)\\
+Entry type&amp;Example\\
+Classification&amp;msc 26A06\\
+Classification&amp;msc 40A05\\
+Synonym&amp;alternating $p$-series\\
+Related topic&amp;AbsoluteConvergence\\
+Related topic&amp;MultiplicationOfSeries\\
+Related topic&amp;SumOfSeriesDependsOnOrder\\
+Defines&amp;alternating p-series\\
+\hline}\end{tabular}}$}\end{flushright}\end{document}\end{array}" display="inline"><mrow><mrow><mi mathvariant="normal">a</mi><mo mathvariant="double-struck">⁢</mo><mi mathvariant="normal">s</mi><mo mathvariant="double-struck">⁢</mo><mi mathvariant="normal">f</mi><mo mathvariant="double-struck">⁢</mo><mi mathvariant="normal">o</mi><mo mathvariant="double-struck">⁢</mo><mi mathvariant="normal">l</mi><mo mathvariant="double-struck">⁢</mo><mi mathvariant="normal">l</mi><mo mathvariant="double-struck">⁢</mo><mi mathvariant="normal">o</mi><mo mathvariant="double-struck">⁢</mo><mi mathvariant="normal">w</mi><mo mathvariant="double-struck">⁢</mo><mi mathvariant="normal">s</mi></mrow><mo mathvariant="normal">:</mo><mtext> :=
+                            
+                              ⁢
+                              σ
+                              
+                                
+                                
+                                  (
+                                  i
+                                  )
+                                
+                              
+                            
+                            
+                              
+                                
+                                
+                              
+                              
+                                {
+                                
+                                  
+                                    
+                                      
+                                        
+                                        
+                                          +
+                                          
+                                            ⁢
+                                            2
+                                            i
+                                          
+                                          1
+                                        
+                                        3
+                                      
+                                    
+                                    
+                                      
+                                        ≡
+                                        
+                                          ⁢
+                                          if 
+                                          2
+                                          i
+                                        
+                                        
+                                          
+                                          
+                                            -
+                                            1
+                                          
+                                          
+                                            
+                                              
+                                              
+                                            
+                                            
+                                              (
+                                              
+                                                mod
+                                                3
+                                              
+                                              )
+                                            
+                                          
+                                        
+                                      
+                                    
+                                  
+                                  
+                                    
+                                      
+                                        
+                                        
+                                          -
+                                          
+                                            ⁢
+                                            4
+                                            i
+                                          
+                                          2
+                                        
+                                        3
+                                      
+                                    
+                                    
+                                      
+                                        ≡
+                                        
+                                          ⁢
+                                          if 
+                                          2
+                                          i
+                                        
+                                        
+                                          
+                                          1
+                                          
+                                            
+                                              
+                                              
+                                            
+                                            
+                                              (
+                                              
+                                                mod
+                                                3
+                                              
+                                              )
+                                            
+                                          
+                                        
+                                      
+                                    
+                                  
+                                  
+                                    
+                                      
+                                        
+                                        
+                                          ⁢
+                                          4
+                                          i
+                                        
+                                        3
+                                      
+                                    
+                                    
+                                      otherwise
+                                    
+                                  
+                                  
+                                    
+                                      \@unrecurse </mtext></mrow></math></span></p>
+</div>
+</li>
+</ul>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:41:57 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

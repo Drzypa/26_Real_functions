@@ -1,0 +1,203 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of properties of the exponential</title>
+<!--Generated on Fri Feb  9 19:41:38 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of properties of the exponential</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">This proof will build up to the results in three easy steps. First, they will be proven for integer exponents, then for rational exponents, and finally for real exponents. For simplicity, I have assumed that the exponents are positive; it is easy enough to derive the reults for negative exponents by taking reciprocals.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Integer exponents</em>
+This first case is rather trivial. Although one could make the proofs formal and rigorous by using induction or infinite descent, there is no need to go to such extremities except as an exercise in formal logic, so simple verbal indications should suffice.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Homogeneity: This is a simple consequence of commutativity of multiplication –<math id="p3.m1" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> multiplied by itself <math id="p3.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> times can be rewritten as <math id="p3.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> multiplied by itself <math id="p3.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> times <math id="p3.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> multiplied by itself <math id="p3.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> times.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Additivity: This is a consequence of assocuiativity of multiplication – <math id="p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> multiplied by itself <math id="p4.m2" class="ltx_Math" alttext="p+q" display="inline"><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow></math> times can be rebracketed as <math id="p4.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> multiplied by itself <math id="p4.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> times multiplied by <math id="p4.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> multiplied by itself <math id="p4.m6" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> times.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Monotonicity: If <math id="p5.m1" class="ltx_Math" alttext="a&lt;b" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi></mrow></math> and <math id="p5.m2" class="ltx_Math" alttext="c&lt;d" display="inline"><mrow><mi>c</mi><mo>&lt;</mo><mi>d</mi></mrow></math> for positive integers <math id="p5.m3" class="ltx_Math" alttext="a,b,c,d" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow></math>, then <math id="p5.m4" class="ltx_Math" alttext="ac&lt;bd" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow><mo>&lt;</mo><mrow><mi>b</mi><mo>⁢</mo><mi>d</mi></mrow></mrow></math>. Applying this fact repeatedly to <math id="p5.m5" class="ltx_Math" alttext="x&lt;y" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mi>y</mi></mrow></math> shows that <math id="p5.m6" class="ltx_Math" alttext="x^{p}&lt;y&lt;p" display="inline"><mrow><msup><mi>x</mi><mi>p</mi></msup><mo>&lt;</mo><mi>y</mi><mo>&lt;</mo><mi>p</mi></mrow></math> when <math id="p5.m7" class="ltx_Math" alttext="x&lt;y" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mi>y</mi></mrow></math> and <math id="p5.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a positive integer.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Continuity: This is irrelevant since the integers are discrete.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Rational exponents</em>
+For rational exponent <math id="p7.m1" class="ltx_Math" alttext="p=m/n" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mi>m</mi><mo>/</mo><mi>n</mi></mrow></mrow></math>, <math id="p7.m2" class="ltx_Math" alttext="x^{p}" display="inline"><msup><mi>x</mi><mi>p</mi></msup></math> may be defined as the Dedekind cut</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(\{y\in\mathbb{Q}\mid y^{n}&lt;x^{m}\},\{z\in\mathbb{Q}\mid z^{n}&gt;x^{m}\})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>y</mi><mi>n</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mrow><mi>z</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>z</mi><mi>n</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For this to be well-defined, three conditions need to be verified:</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">1) It must not depend on the choice of <math id="p8.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="p8.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> as long as <math id="p8.m3" class="ltx_Math" alttext="p=m/n" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mi>m</mi><mo>/</mo><mi>n</mi></mrow></mrow></math></p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Any pair of integers <math id="p9.m1" class="ltx_Math" alttext="(m,n)" display="inline"><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math> such that <math id="p9.m2" class="ltx_Math" alttext="p=m/n" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mi>m</mi><mo>/</mo><mi>n</mi></mrow></mrow></math> may uniquely be expressed as <math id="p9.m3" class="ltx_Math" alttext="(km^{\prime},kn^{\prime})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>⁢</mo><msup><mi>m</mi><mo>′</mo></msup></mrow><mo>,</mo><mrow><mi>k</mi><mo>⁢</mo><msup><mi>n</mi><mo>′</mo></msup></mrow><mo stretchy="false">)</mo></mrow></math> where <math id="p9.m4" class="ltx_Math" alttext="m^{\prime}" display="inline"><msup><mi>m</mi><mo>′</mo></msup></math> and <math id="p9.m5" class="ltx_Math" alttext="n^{\prime}" display="inline"><msup><mi>n</mi><mo>′</mo></msup></math> are relatively prime. The monotonicity property implies that <math id="p9.m6" class="ltx_Math" alttext="y^{n}&lt;x^{m}" display="inline"><mrow><msup><mi>y</mi><mi>n</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math> if and only if <math id="p9.m7" class="ltx_Math" alttext="y^{n^{\prime}}&lt;x^{m^{\prime}}" display="inline"><mrow><msup><mi>y</mi><msup><mi>n</mi><mo>′</mo></msup></msup><mo>&lt;</mo><msup><mi>x</mi><msup><mi>m</mi><mo>′</mo></msup></msup></mrow></math>.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">2) If <math id="p10.m1" class="ltx_Math" alttext="y^{n}&lt;x^{m}" display="inline"><mrow><msup><mi>y</mi><mi>n</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math> and <math id="p10.m2" class="ltx_Math" alttext="z^{n}&gt;x^{m}" display="inline"><mrow><msup><mi>z</mi><mi>n</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math> then <math id="p10.m3" class="ltx_Math" alttext="y&lt;z" display="inline"><mrow><mi>y</mi><mo>&lt;</mo><mi>z</mi></mrow></math>.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">By transitivity, <math id="p11.m1" class="ltx_Math" alttext="y^{n}&lt;z^{n}" display="inline"><mrow><msup><mi>y</mi><mi>n</mi></msup><mo>&lt;</mo><msup><mi>z</mi><mi>n</mi></msup></mrow></math>. By monotonicity, it follows that <math id="p11.m2" class="ltx_Math" alttext="y&lt;z" display="inline"><mrow><mi>y</mi><mo>&lt;</mo><mi>z</mi></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">3) At most one rational number can not belong to either <math id="p12.m1" class="ltx_Math" alttext="\{y\in\mathbb{Q}\mid y^{n}&lt;x^{m}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>y</mi><mi>n</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow></math> or <math id="p12.m2" class="ltx_Math" alttext="\{z\in\mathbb{Q}\mid z^{n}&gt;x^{m}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>z</mi><mo>∈</mo><mrow><mi>ℚ</mi><mo>⁢</mo><mrow><mo fence="true">∣</mo><msup><mi>z</mi><mi>n</mi></msup><mo>&gt;</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></mrow><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">Given a rational number <math id="p13.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, it is only possible for a rational number <math id="p13.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> to satisfy neither <math id="p13.m3" class="ltx_Math" alttext="q&lt;r" display="inline"><mrow><mi>q</mi><mo>&lt;</mo><mi>r</mi></mrow></math> nor <math id="p13.m4" class="ltx_Math" alttext="q&gt;" display="inline"><mrow><mi>q</mi><mo>&gt;</mo><mi></mi></mrow></math> if <math id="p13.m5" class="ltx_Math" alttext="q=r" display="inline"><mrow><mi>q</mi><mo>=</mo><mi>r</mi></mrow></math>. So for a rational number <math id="p13.m6" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> to belong to neither set, it must be the case that <math id="p13.m7" class="ltx_Math" alttext="r^{n}=x^{m}" display="inline"><mrow><msup><mi>r</mi><mi>n</mi></msup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math>. Suppose that there were two rational numbers such that <math id="p13.m8" class="ltx_Math" alttext="r_{1}^{n}=x^{m}" display="inline"><mrow><msubsup><mi>r</mi><mn>1</mn><mi>n</mi></msubsup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math> and <math id="p13.m9" class="ltx_Math" alttext="r_{2}^{n}=x^{m}" display="inline"><mrow><msubsup><mi>r</mi><mn>2</mn><mi>n</mi></msubsup><mo>=</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math>. Then <math id="p13.m10" class="ltx_Math" alttext="r_{1}^{n}=r_{2}^{n}" display="inline"><mrow><msubsup><mi>r</mi><mn>1</mn><mi>n</mi></msubsup><mo>=</mo><msubsup><mi>r</mi><mn>2</mn><mi>n</mi></msubsup></mrow></math>. If <math id="p13.m11" class="ltx_Math" alttext="r_{1}\neq r_{2}" display="inline"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>r</mi><mn>2</mn></msub></mrow></math>, either <math id="p13.m12" class="ltx_Math" alttext="r_{1}&lt;r_{2}" display="inline"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>r</mi><mn>2</mn></msub></mrow></math> or <math id="p13.m13" class="ltx_Math" alttext="r_{1}&gt;r_{2}" display="inline"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>&gt;</mo><msub><mi>r</mi><mn>2</mn></msub></mrow></math>. Either way, motonicity implies that <math id="p13.m14" class="ltx_Math" alttext="r_{1}^{n}=r_{2}^{n}" display="inline"><mrow><msubsup><mi>r</mi><mn>1</mn><mi>n</mi></msubsup><mo>=</mo><msubsup><mi>r</mi><mn>2</mn><mi>n</mi></msubsup></mrow></math>, so <math id="p13.m15" class="ltx_Math" alttext="r_{1}=r_{2}" display="inline"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>=</mo><msub><mi>r</mi><mn>2</mn></msub></mrow></math>. Hence at most one rational number belongs to neither set, so one has a well-defined Dedekind cut which defines <math id="p13.m16" class="ltx_Math" alttext="x^{p}" display="inline"><msup><mi>x</mi><mi>p</mi></msup></math> when <math id="p13.m17" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a rational number.</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">Homogeneity: The Dedekind cuts defining <math id="p14.m1" class="ltx_Math" alttext="x^{p}" display="inline"><msup><mi>x</mi><mi>p</mi></msup></math> and <math id="p14.m2" class="ltx_Math" alttext="y^{p}" display="inline"><msup><mi>y</mi><mi>p</mi></msup></math> are</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="(\{u\in\mathbb{Q}\mid u^{n}&lt;x^{m}\},\{v\in\mathbb{Q}\mid v^{n}&gt;x^{m}\})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mrow><mi>u</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>u</mi><mi>n</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mrow><mi>v</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>v</mi><mi>n</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="(\{u\in\mathbb{Q}\mid u^{n}&lt;y^{m}\},\{v\in\mathbb{Q}\mid v^{n}&gt;y^{m}\})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mrow><mi>u</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>u</mi><mi>n</mi></msup><mo>&lt;</mo><msup><mi>y</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mrow><mi>v</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>v</mi><mi>n</mi></msup><mo>&gt;</mo><msup><mi>y</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">respectively. By the homogeneity property for integer exponents, if <math id="p14.m3" class="ltx_Math" alttext="u_{1}^{n}&lt;x^{m}" display="inline"><mrow><msubsup><mi>u</mi><mn>1</mn><mi>n</mi></msubsup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math> and <math id="p14.m4" class="ltx_Math" alttext="u_{2}^{n}&lt;y^{m}" display="inline"><mrow><msubsup><mi>u</mi><mn>2</mn><mi>n</mi></msubsup><mo>&lt;</mo><msup><mi>y</mi><mi>m</mi></msup></mrow></math>, then <math id="p14.m5" class="ltx_Math" alttext="(u_{1}u_{2})^{n}&lt;(xy)^{m}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>u</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>&lt;</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup></mrow></math>. Likewise, if <math id="p14.m6" class="ltx_Math" alttext="v_{1}^{n}&gt;x^{m}" display="inline"><mrow><msubsup><mi>v</mi><mn>1</mn><mi>n</mi></msubsup><mo>&gt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math> and <math id="p14.m7" class="ltx_Math" alttext="v_{2}^{n}&gt;y^{m}" display="inline"><mrow><msubsup><mi>v</mi><mn>2</mn><mi>n</mi></msubsup><mo>&gt;</mo><msup><mi>y</mi><mi>m</mi></msup></mrow></math>, then <math id="p14.m8" class="ltx_Math" alttext="(v_{1}v_{2})^{n}&lt;(xy)^{m}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>&lt;</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup></mrow></math>. By the definition of multiplication for Dedekind cuts, it follows that <math id="p14.m9" class="ltx_Math" alttext="x^{p}y^{p}=(xy)^{p}" display="inline"><mrow><mrow><msup><mi>x</mi><mi>p</mi></msup><mo>⁢</mo><msup><mi>y</mi><mi>p</mi></msup></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mi>p</mi></msup></mrow></math> for rational exponents <math id="p14.m10" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">Additivity: Write <math id="p15.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="p15.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> over a common denominator: <math id="p15.m3" class="ltx_Math" alttext="p=m/k" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mi>m</mi><mo>/</mo><mi>k</mi></mrow></mrow></math> and <math id="p15.m4" class="ltx_Math" alttext="q=n/k" display="inline"><mrow><mi>q</mi><mo>=</mo><mrow><mi>n</mi><mo>/</mo><mi>k</mi></mrow></mrow></math>. Then <math id="p15.m5" class="ltx_Math" alttext="x^{p}" display="inline"><msup><mi>x</mi><mi>p</mi></msup></math> and <math id="p15.m6" class="ltx_Math" alttext="x^{q}" display="inline"><msup><mi>x</mi><mi>q</mi></msup></math> are determined by the Dedekind cuts</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="(\{u\in\mathbb{Q}\mid u^{k}&lt;x^{m}\},\{v\in\mathbb{Q}\mid v^{k}&gt;x^{m}\})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mrow><mi>u</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>u</mi><mi>k</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mrow><mi>v</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>v</mi><mi>k</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="(\{u\in\mathbb{Q}\mid u^{k}&lt;x^{n}\},\{v\in\mathbb{Q}\mid v^{k}&gt;x^{n}\})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mrow><mi>u</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>u</mi><mi>k</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>n</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mrow><mi>v</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>v</mi><mi>k</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>n</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">respectively. If <math id="p15.m7" class="ltx_Math" alttext="\mid u_{1}^{k}&lt;x^{m}" display="inline"><mrow><mo>∣</mo><msubsup><mi>u</mi><mn>1</mn><mi>k</mi></msubsup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math> and <math id="p15.m8" class="ltx_Math" alttext="u_{2}^{k}&lt;x^{n}" display="inline"><mrow><msubsup><mi>u</mi><mn>2</mn><mi>k</mi></msubsup><mo>&lt;</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></math>, then <math id="p15.m9" class="ltx_Math" alttext="(u_{1}u_{2})^{k}&lt;x^{m+n}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>u</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup></mrow></math> by additivity for integer exponents. Likewise, if <math id="p15.m10" class="ltx_Math" alttext="\mid v_{1}^{k}&gt;x^{m}" display="inline"><mrow><mrow><mo fence="true">∣</mo><msubsup><mi>v</mi><mn>1</mn><mi>k</mi></msubsup><mo>&gt;</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math> and <math id="p15.m11" class="ltx_Math" alttext="v_{2}^{k}&gt;x^{n}" display="inline"><mrow><msubsup><mi>v</mi><mn>2</mn><mi>k</mi></msubsup><mo>&gt;</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></math>, then <math id="p15.m12" class="ltx_Math" alttext="(v_{1}v_{2})^{k}&gt;x^{m+n}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup></mrow></math>. By the definition of multiplication for Dedekind cuts, it follows that <math id="p15.m13" class="ltx_Math" alttext="x^{p}x^{q}=x^{p+q}" display="inline"><mrow><mrow><msup><mi>x</mi><mi>p</mi></msup><mo>⁢</mo><msup><mi>x</mi><mi>q</mi></msup></mrow><mo>=</mo><msup><mi>x</mi><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow></msup></mrow></math> for rational exponents <math id="p15.m14" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="p15.m15" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>.</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Monotonicity: Suppose that <math id="p16.m1" class="ltx_Math" alttext="p&lt;q" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi>q</mi></mrow></math>. Write <math id="p16.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="p16.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> over a common denominator: <math id="p16.m4" class="ltx_Math" alttext="p=m/k" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mi>m</mi><mo>/</mo><mi>k</mi></mrow></mrow></math> and <math id="p16.m5" class="ltx_Math" alttext="q=n/k" display="inline"><mrow><mi>q</mi><mo>=</mo><mrow><mi>n</mi><mo>/</mo><mi>k</mi></mrow></mrow></math>. Then <math id="p16.m6" class="ltx_Math" alttext="m&lt;n" display="inline"><mrow><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow></math>. Then <math id="p16.m7" class="ltx_Math" alttext="x^{p}" display="inline"><msup><mi>x</mi><mi>p</mi></msup></math> and <math id="p16.m8" class="ltx_Math" alttext="x^{q}" display="inline"><msup><mi>x</mi><mi>q</mi></msup></math> are determined by the Dedekind cuts</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="(\{u\in\mathbb{Q}\mid u^{k}&lt;x^{m}\},\{v\in\mathbb{Q}\mid v^{k}&gt;x^{m}\})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mrow><mi>u</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>u</mi><mi>k</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mrow><mi>v</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>v</mi><mi>k</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="(\{u\in\mathbb{Q}\mid u^{k}&lt;x^{n}\},\{v\in\mathbb{Q}\mid v^{k}&gt;x^{n}\})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mrow><mi>u</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>u</mi><mi>k</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>n</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo>,</mo><mrow><mo stretchy="false">{</mo><mrow><mi>v</mi><mo>∈</mo><mi>ℚ</mi></mrow><mo>∣</mo><mrow><msup><mi>v</mi><mi>k</mi></msup><mo>&gt;</mo><msup><mi>x</mi><mi>n</mi></msup></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">respectively. If <math id="p16.m9" class="ltx_Math" alttext="\mid u_{1}^{k}&lt;x^{m}" display="inline"><mrow><mo>∣</mo><msubsup><mi>u</mi><mn>1</mn><mi>k</mi></msubsup><mo>&lt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math>, then <math id="p16.m10" class="ltx_Math" alttext="u_{1}^{k}&lt;x^{n}" display="inline"><mrow><msubsup><mi>u</mi><mn>1</mn><mi>k</mi></msubsup><mo>&lt;</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></math> since <math id="p16.m11" class="ltx_Math" alttext="x_{m}&lt;x^{n}" display="inline"><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>&lt;</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></math> by the law of monotonicity for integer exponents. Likewise, <math id="p16.m12" class="ltx_Math" alttext="\mid v_{2}^{k}&gt;x^{n}" display="inline"><mrow><mrow><mo fence="true">∣</mo><msubsup><mi>v</mi><mn>2</mn><mi>k</mi></msubsup><mo>&gt;</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></math>, then <math id="p16.m13" class="ltx_Math" alttext="v_{2}^{k}&gt;x^{m}" display="inline"><mrow><msubsup><mi>v</mi><mn>2</mn><mi>k</mi></msubsup><mo>&gt;</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></math>. Hence, by the definition of “greater than” for Dedekind cuts, <math id="p16.m14" class="ltx_Math" alttext="x^{p}&lt;x^{q}" display="inline"><mrow><msup><mi>x</mi><mi>p</mi></msup><mo>&lt;</mo><msup><mi>x</mi><mi>q</mi></msup></mrow></math>.</p>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">Continuity: Because of the additivity property, it suffices to prove that <math id="p17.m1" class="ltx_Math" alttext="\lim_{p\to 0}x^{p}=1" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>p</mi><mo>→</mo><mn>0</mn></mrow></msub><mo>⁡</mo><msup><mi>x</mi><mi>p</mi></msup></mrow><mo>=</mo><mn>1</mn></mrow></math>. By monotonicity, it suffices to prove that <math id="p17.m2" class="ltx_Math" alttext="\lim_{n\to\infty}x^{1/2^{n}}=1" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></msup></mrow><mo>=</mo><mn>1</mn></mrow></math>. Suppose that <math id="p17.m3" class="ltx_Math" alttext="x&gt;1" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>1</mn></mrow></math>. Write <math id="p17.m4" class="ltx_Math" alttext="x=1+y" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mi>y</mi></mrow></mrow></math>. The considerations of last paragraph show that one can restrict attention to the case <math id="p17.m5" class="ltx_Math" alttext="0&lt;y&lt;1/4" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>y</mi><mo>&lt;</mo><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mrow></math>. Let <math id="p17.m6" class="ltx_Math" alttext="x^{1/2}=1+z" display="inline"><mrow><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mi>z</mi></mrow></mrow></math>. By simple algebra, one has</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="z={y-z^{2}\over 2}" display="block"><mrow><mi>z</mi><mo>=</mo><mfrac><mrow><mi>y</mi><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By monotonicity, <math id="p17.m7" class="ltx_Math" alttext="z&gt;0" display="inline"><mrow><mi>z</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Hence, <math id="p17.m8" class="ltx_Math" alttext="z\leq y/2" display="inline"><mrow><mi>z</mi><mo>≤</mo><mrow><mi>y</mi><mo>/</mo><mn>2</mn></mrow></mrow></math>. Repeating this line of reasoning <math id="p17.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> times, it follows that, if <math id="p17.m10" class="ltx_Math" alttext="x^{1/2^{n}}=1+z_{n}" display="inline"><mrow><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></msup><mo>=</mo><mrow><mn>1</mn><mo>+</mo><msub><mi>z</mi><mi>n</mi></msub></mrow></mrow></math>, then <math id="p17.m11" class="ltx_Math" alttext="z_{n}\leq y/2^{n}" display="inline"><mrow><msub><mi>z</mi><mi>n</mi></msub><mo>≤</mo><mrow><mi>y</mi><mo>/</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></mrow></math>. Hence <math id="p17.m12" class="ltx_Math" alttext="\lim_{n\to\infty}z_{n}=0" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msub><mi>z</mi><mi>n</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math>, so <math id="p17.m13" class="ltx_Math" alttext="\lim_{n\to\infty}x^{1/2^{n}}=1" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msup><mi>x</mi><mrow><mn>1</mn><mo>/</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></msup></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Real exponents</em></p>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p">If <math id="p19.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is real, define <math id="p19.m2" class="ltx_Math" alttext="x^{p}=\lim_{n\to\infty}x^{r_{n}}" display="inline"><mrow><msup><mi>x</mi><mi>p</mi></msup><mo>=</mo><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msup><mi>x</mi><msub><mi>r</mi><mi>n</mi></msub></msup></mrow></mrow></math> where <math id="p19.m3" class="ltx_Math" alttext="r_{n}" display="inline"><msub><mi>r</mi><mi>n</mi></msub></math> is a sequence of rational numbers such that <math id="p19.m4" class="ltx_Math" alttext="\lim_{n\to\infty}r_{n}=p" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msub><mi>r</mi><mi>n</mi></msub></mrow><mo>=</mo><mi>p</mi></mrow></math>. The limit is well-defined and does not depend on the choice of sequence <math id="p19.m5" class="ltx_Math" alttext="r_{n}" display="inline"><msub><mi>r</mi><mi>n</mi></msub></math> because of the monotonicity and continuity properties for rational exponents. The homogeneity, additivity, monotonicity, and homogeneity properties for real exponents follow from the properties for rational exponents by standard theorems on limits.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of properties of the exponential</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfPropertiesOfTheExponential</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:34:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:34:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 26A03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:41:38 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

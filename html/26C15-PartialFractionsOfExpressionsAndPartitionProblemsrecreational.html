@@ -1,0 +1,278 @@
+<!DOCTYPE html><html>
+<head>
+<title>partial fractions of expressions and partition problems (recreational)</title>
+<!--Generated on Fri Feb  9 20:00:44 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">partial fractions of expressions and partition problems (recreational)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In  of mathematical puzzles and pastimes, one often encounters questions like the following: “If it takes 1 oz of flour to bake a cookie 3 oz of flour to make a cupcake, and 5 oz to make a roll, how many possible combinations of baked goods can one make with a pound (16 oz) of flour?”</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">One can, of course, approach such a problem by brute force (a tedious job best left to a computer) but there is a quick and clever way of solving such problems based on partial fractions and infinite series.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We start with the well-known formula for the infinite geometric series:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="1+x+x^{2}+x^{3}+x^{4}+\cdots={1\over 1-x}" display="block"><mrow><mrow><mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we replace <math id="p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> by <math id="p3.m2" class="ltx_Math" alttext="x^{n}" display="inline"><msup><mi>x</mi><mi>n</mi></msup></math> in this series, we find that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="1+x^{n}+x^{2n}+x^{3n}+x^{4n}+\cdots={1\over 1-x^{n}}." display="block"><mrow><mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mi>n</mi></msup><mo>+</mo><msup><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo>+</mo><msup><mi>x</mi><mrow><mn>3</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo>+</mo><msup><mi>x</mi><mrow><mn>4</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now take two such series and multiplied them together term by term. For example, consider the product
+</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="(1+x^{3}+x^{6}+x^{9}+x^{12}+\cdots)(1+x+x^{2}+x^{3}+x^{4}+\cdots)=1+x+x^{2}+2x%
+^{3}+2x^{4}+2x^{5}+3x^{6}+\cdots" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><msup><mi>x</mi><mn>6</mn></msup><mo>+</mo><msup><mi>x</mi><mn>9</mn></msup><mo>+</mo><msup><mi>x</mi><mn>12</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>4</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>5</mn></msup></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>6</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us take a few moments to understand why the coefficients are what they are. Start with the coefficient of <math id="p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. The reason that it is one is that the only way to obtain <math id="p4.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in the product is to multiply the <math id="p4.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> in the first series by the <math id="p4.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in the second. Likewise, the coefficient of <math id="p4.m5" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math> is also 1 because there is only one way to obtain an <math id="p4.m6" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math>. However, when we get to <math id="p4.m7" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math>, things get more complicated – we can get an <math id="p4.m8" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math> either by multiplying the 1 in the first series by the <math id="p4.m9" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math> in the second series or the <math id="p4.m10" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math> in the first series by the 1 in the second. Therefore the coefficient of <math id="p4.m11" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math> is 2. The story is even more interesting when we get to <math id="p4.m12" class="ltx_Math" alttext="x^{6}" display="inline"><msup><mi>x</mi><mn>6</mn></msup></math> — there are three different ways to obtain <math id="p4.m13" class="ltx_Math" alttext="x^{6}" display="inline"><msup><mi>x</mi><mn>6</mn></msup></math> — either multiply the 1 in the first series by the <math id="p4.m14" class="ltx_Math" alttext="x^{6}" display="inline"><msup><mi>x</mi><mn>6</mn></msup></math> in the second or multiply the <math id="p4.m15" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math> in the first by the <math id="p4.m16" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math> in the second or multiply the <math id="p4.m17" class="ltx_Math" alttext="x^{6}" display="inline"><msup><mi>x</mi><mn>6</mn></msup></math> in the first series by the 1 in the second series. And so on and so forth, ad infinitum.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Let us now pause for a moment to see how this pile of algebra has anything to do with our bakery problem. To keep things simple let’s simplify the problem by not baking any rolls. If we have one oz of flour, there is only one possibility – bake a cookie. With 2 oz, we still don’t have enough to make a cupcake, so there is still only one possibility – bake two cookies. With 3 oz, we have two options — either bake one cupcake or three cookies. With 6 oz, there are three possibilities — either we could make two cupcakes or we could use 3 oz for a cupcake and bake 3 cokies with the remaining 3 ounces or we could bake 6 cookies.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Comparing the last two paragraphs, we come to the interesting conclusion that the coefficient of <math id="p6.m1" class="ltx_Math" alttext="x^{n}" display="inline"><msup><mi>x</mi><mi>n</mi></msup></math> is equal to the number of possible combinations of cookies and cupcakes that can be made from <math id="p6.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> ounces of flour. The reason for this is quite simple — in both cases we are taking <math id="p6.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> things and seeing how many ways we can partition them into a a multiple of three and a multiple of one. It is really no different than solving the bakery problem by taking a pile of beans, letting each bean stand for an ounce of flour, and then counting how many different ways we can make piles of 3’s and piles of ones. The only difference is that we are now using <math id="p6.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>’s as counters instead of beans. The advantage that <math id="p6.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>’s have over beans is that we can use algebraic tricks and techniques to manipulate them and simplify expressions. The disadvantage is that we don’t get a delicious pot of baked beans to go with the rolls when we are done using them. (Alphabet soup with only <math id="p6.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>’s in it isn’t all that exciting. :) )</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Using the formulas for the sums of the series, we can re-express what we found as follows:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="{1\over(1-x)(1-x^{3})}=1+x+x^{2}+2x^{3}+2x^{4}+2x^{5}+3x^{6}+\cdots" display="block"><mrow><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>4</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>5</mn></msup></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>6</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, to solve our cake and cookie problem, we can take the rational function <math id="p7.m1" class="ltx_Math" alttext="{1\over(1-x)(1-x^{3})}" display="inline"><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></math>, expand it in a series and read off the coefficient of <math id="p7.m2" class="ltx_Math" alttext="x^{n}" display="inline"><msup><mi>x</mi><mi>n</mi></msup></math> to learn how many ways there are of baking cookies and cakes with <math id="p7.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> ounces of flour.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">This is all well and good, but how do we find this coefficient? If there is no efficient way of computing it, then we might as well scrap the algebra and go back to counting beans. This is where partial fractions come in. If we factor <math id="p8.m1" class="ltx_Math" alttext="1-x^{3}" display="inline"><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math>, we obtain</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle{1\over(1-x)(1-x^{3})}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle{1\over(x-1)^{2}(x+1/2-\sqrt{-3}/2)(x+1/2+\sqrt{-3}/2)}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle{1\over(1-x)^{2}(1-(-1/2-\sqrt{-3}/2)x)(1-(-1/2+\sqrt{-3}/2)x)}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The partial fractions expansion of this is</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="{1/3\over(1-x)^{2}}+{1/3\over 1-x}+{1/6+\sqrt{-3}/18\over 1-(-1/2-\sqrt{-3}/2)%
+x}+{1/6-\sqrt{-3}/18\over 1-(-1/2+\sqrt{-3}/2)x}" display="block"><mrow><mfrac><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac><mo>+</mo><mfrac><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">To compute the series expansion of the original series, all we need to do is expand each term in the partial fraction expansion as a series and add the resulting series. We recognize the latter three terms as giving rise to geometric series. As for the first term, it can be expanded using the binomial theorem with negative exponents:</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="{1\over(1-x)^{2}}=1+2x+3x^{2}+4x^{3}+\cdots" display="block"><mrow><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Combining these expansions, we arrive at the following formula for the coefficient of <math id="p9.m1" class="ltx_Math" alttext="x^{n}" display="inline"><msup><mi>x</mi><mi>n</mi></msup></math>:</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="{n\over 3}+{2\over 3}+(1/6-\sqrt{-3}/6)(-1/2-\sqrt{-3}/2)^{n}+(1/6-\sqrt{-3}/6%
+)(-1/2+\sqrt{-3}/2)^{n}" display="block"><mrow><mfrac><mi>n</mi><mn>3</mn></mfrac><mo>+</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>6</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>6</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">At first blush, this formula, with all its square roots of negative numbers, may look rather formidable, but with a little examination, we can see that it is not as nasty as it seems. First, let us note that that the quantities <math id="p9.m2" class="ltx_Math" alttext="-1/2-\sqrt{-3}/2" display="inline"><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow></math> and <math id="p9.m3" class="ltx_Math" alttext="-1/2-\sqrt{-3}/2" display="inline"><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow></math> both cube to <math id="p9.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>. This, of course, is why they are there in the first place — they arose from factoring the polynomial <math id="p9.m5" class="ltx_Math" alttext="1-x^{3}" display="inline"><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math>. Because of this fact, the last two terms of the expression involving the square roots will have the same values for <math id="p9.m6" class="ltx_Math" alttext="n+3" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>3</mn></mrow></math> as they will have for <math id="p9.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, so if we know their values for <math id="p9.m8" class="ltx_Math" alttext="n=0,1,2" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn></mrow></mrow></math>, we will know their values for all <math id="p9.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. For <math id="p9.m10" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>, we have</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="(1/6-\sqrt{-3}/18)(-1/2-\sqrt{-3}/2)^{0}+(1/6+\sqrt{-3}/18)(-1/2+\sqrt{-3}/2)^%
+{0}=" display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>0</mn></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>0</mn></msup></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="(1/6-\sqrt{-3}/18)+(1/6+\sqrt{-3}/18)=1/3." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">since anything raised to the zero power equals one. When <math id="p9.m11" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>, we have</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="(1/6-\sqrt{-3}/18)(-1/2-\sqrt{-3}/2)^{1}+(1/6+\sqrt{-3}/18)(-1/2+\sqrt{-3}/2)^%
+{1}=" display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>1</mn></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>1</mn></msup></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="(1/6-\sqrt{-3}/18)(-1/2-\sqrt{-3}/2)+(1/6+\sqrt{-3}/18)(-1/2+\sqrt{-3}/2)=0." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When <math id="p9.m12" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math>,</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="(1/6-\sqrt{-3}/18)(-1/2-\sqrt{-3}/2)^{2}+(1/6+\sqrt{-3}/18)(-1/2+\sqrt{-3}/2)^%
+{2}=" display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="(1/6-\sqrt{-3}/18)(-1/2+\sqrt{-3}/2)+(1/6+\sqrt{-3}/18)(-1/2-\sqrt{-3}/2)=-1/3." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>/</mo><mn>6</mn></mrow><mo>+</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>18</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><msqrt><mrow><mo>-</mo><mn>3</mn></mrow></msqrt><mo>/</mo><mn>2</mn></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, when <math id="p9.m13" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a multpile of 3, we have <math id="p9.m14" class="ltx_Math" alttext="n/3+1" display="inline"><mrow><mrow><mi>n</mi><mo>/</mo><mn>3</mn></mrow><mo>+</mo><mn>1</mn></mrow></math> ways of baking cookies and cupcakes, when <math id="p9.m15" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is one more than a multiple of <math id="p9.m16" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>, we have <math id="p9.m17" class="ltx_Math" alttext="(n+2)/3" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>3</mn></mrow></math> ways, and when <math id="p9.m18" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is two more than a multiple of <math id="p9.m19" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>, we have <math id="p9.m20" class="ltx_Math" alttext="(n+1)/3" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>3</mn></mrow></math> ways. Comparing this with the answers we obtained in the special cases <math id="p9.m21" class="ltx_Math" alttext="n=1,2,3,4,5,6" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>6</mn></mrow></mrow></math> a few paragraphs back, one sees that these formulas agree. Finally, if <math id="p9.m22" class="ltx_Math" alttext="n=16" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>16</mn></mrow></math>, we see that since <math id="p9.m23" class="ltx_Math" alttext="16=3\cdot 5+1" display="inline"><mrow><mn>16</mn><mo>=</mo><mrow><mrow><mn>3</mn><mo>⋅</mo><mn>5</mn></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>, there are <math id="p9.m24" class="ltx_Math" alttext="18/3=6" display="inline"><mrow><mrow><mn>18</mn><mo>/</mo><mn>3</mn></mrow><mo>=</mo><mn>6</mn></mrow></math> possibilities.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">As further practise, the reader may wish to tackle the question when the possibility of buns as well as cookies and cupcakes is allowed. In that case, it is necessary to expand the rational function</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="{1\over(1-x)(1-x^{3})(1-x^{5})}" display="block"><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mn>5</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">into partial fractions. The first step, of course, is to factor the three polynomials. In the simple case we examined, we wrote out the factors explicitly in terms of square roots. However, for the sake of keeping the computations simple, it is often better not to write the roots out so explicitly. That is to say, one could write</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="1-x^{3}=(1-x)(1-\alpha x)(1-\alpha^{2}x)" display="block"><mrow><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>α</mi><mn>2</mn></msup><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="1-x^{5}=(1-x)(1-\beta x)(1-\beta^{2}x)(1-\beta^{3}x)(1-\beta^{4}x)" display="block"><mrow><mrow><mn>1</mn><mo>-</mo><msup><mi>x</mi><mn>5</mn></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>β</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>β</mi><mn>3</mn></msup><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>β</mi><mn>4</mn></msup><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p10.m1" class="ltx_Math" alttext="\alpha^{3}=1" display="inline"><mrow><msup><mi>α</mi><mn>3</mn></msup><mo>=</mo><mn>1</mn></mrow></math> and <math id="p10.m2" class="ltx_Math" alttext="\beta^{5}=1" display="inline"><mrow><msup><mi>β</mi><mn>5</mn></msup><mo>=</mo><mn>1</mn></mrow></math> without specifying what <math id="p10.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and <math id="p10.m4" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> are explicitly.
+Then the partial fractions expansion will be of the form</p>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="{c_{1}\over(1-x)^{3}}+{c_{2}\over(1-x)^{2}}+{c_{3}\over 1-x}+{c_{4}\over 1-%
+\alpha x}+{c_{5}\over 1-\alpha^{2}x}+{c_{6}\over 1-\beta x}+{c_{7}\over 1-%
+\beta^{2}x}+{c_{8}\over 1-\beta^{3}x}+{c_{9}\over 1-\beta^{4}x}" display="block"><mrow><mfrac><msub><mi>c</mi><mn>1</mn></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></mfrac><mo>+</mo><mfrac><msub><mi>c</mi><mn>2</mn></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><msub><mi>c</mi><mn>3</mn></msub><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>+</mo><mfrac><msub><mi>c</mi><mn>4</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac><mo>+</mo><mfrac><msub><mi>c</mi><mn>5</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>α</mi><mn>2</mn></msup><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac><mo>+</mo><mfrac><msub><mi>c</mi><mn>6</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><mi>β</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac><mo>+</mo><mfrac><msub><mi>c</mi><mn>7</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac><mo>+</mo><mfrac><msub><mi>c</mi><mn>8</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>β</mi><mn>3</mn></msup><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac><mo>+</mo><mfrac><msub><mi>c</mi><mn>9</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>β</mi><mn>4</mn></msup><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for suitable constants <math id="p10.m5" class="ltx_Math" alttext="c_{1},c_{2},\ldots,c_{9}" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub><mi>c</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>c</mi><mn>9</mn></msub></mrow></math>. Upon determining these constants and expanding in series, the reader will be able to write down a formula for the number of combinations which can be baked fron <math id="p10.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> ounces of flour and, in particular, will be able to determine how many possibilities there are with a pound of flour.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">partial fractions of expressions and partition problems (recreational)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PartialFractionsOfExpressionsAndPartitionProblemsrecreational</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:57:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:57:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Application</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 26C15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:00:44 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

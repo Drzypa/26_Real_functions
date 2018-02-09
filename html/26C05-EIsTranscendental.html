@@ -1,0 +1,341 @@
+<!DOCTYPE html><html>
+<head>
+<title>e is transcendental</title>
+<!--Generated on Fri Feb  9 20:00:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">e is transcendental</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmthmplainx1" class="ltx_theorem ltx_theorem_thmplain">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmthmplainx1.p1" class="ltx_para">
+<p class="ltx_p">Napier’s constant <math id="Thmthmplainx1.p1.m1" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> is transcendental.</p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">This theorem was first proved by Hermite in 1873.  The below proof is near the one given by Hurwitz.  We at first derive a couple of auxiliary results.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let <math id="p3.m1" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> be any polynomial of  <math id="p3.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> and <math id="p3.m3" class="ltx_Math" alttext="F(x)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> the sum of its derivatives,</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle F(x)\;:=\;f(x)+f^{\prime}(x)+f^{\prime\prime}(x)+\ldots+f^{(\mu)%
+}(x)." display="inline"><mrow><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">consider the product  <math id="p3.m4" class="ltx_Math" alttext="\Phi(x):=e^{-x}F(x)" display="inline"><mrow><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.  The derivative of this is simply</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\Phi^{\prime}(x)\;\equiv\;e^{-x}(F^{\prime}(x)-F(x))\;\equiv\;-e^{-x}f(x)." display="block"><mrow><mrow><mrow><msup><mi mathvariant="normal">Φ</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">≡</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>F</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">≡</mo><mrow><mo>-</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Applying the mean value theorem (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/MeanValueTheorem</span>) to the function <math id="p3.m5" class="ltx_Math" alttext="\Phi" display="inline"><mi mathvariant="normal">Φ</mi></math> on the interval with end points 0 and <math id="p3.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> gives</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\Phi(x)-\Phi(0)\;=\;e^{-x}F(x)-F(0)\;=\;\Phi^{\prime}(\xi)x\;=\;-e^{-\xi}f(\xi%
+)x," display="block"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><msup><mi mathvariant="normal">Φ</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>ξ</mi></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which implies that  <math id="p3.m7" class="ltx_Math" alttext="F(0)=e^{-x}F(x)+e^{-\xi}f(\xi)x" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>ξ</mi></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math>.  Thus we obtain the</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 1.</span>  <math id="p4.m1" class="ltx_Math" alttext="F(0)e^{x}=F(x)+xe^{x-\xi}f(\xi)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mi>x</mi></msup></mrow><mo>=</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>x</mi><mo>-</mo><mi>ξ</mi></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> (<math id="p4.m2" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math> is between 0 and <math id="p4.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>)</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">When the polynomial <math id="p5.m1" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is expanded by the powers of <math id="p5.m2" class="ltx_Math" alttext="x\!-\!a" display="inline"><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>a</mi></mrow></math>, one gets</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="f(x)\;\equiv\;f(a)+f^{\prime}(a)(x\!-\!a)+f^{\prime\prime}(a)\frac{(x\!-\!a)^{%
+2}}{2!}+\ldots+f^{(\mu)}(a)\frac{(x\!-\!a)^{\mu}}{\mu!};" display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">≡</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mi>μ</mi></msup><mrow><mi>μ</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">comparing this with (1) one gets the</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Lemma 2.</span>  The value <math id="p6.m1" class="ltx_Math" alttext="F(a)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> is obtained so that the polynomial <math id="p6.m2" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is expanded by the powers of <math id="p6.m3" class="ltx_Math" alttext="x\!-\!a" display="inline"><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>a</mi></mrow></math> and in this  the powers <math id="p6.m4" class="ltx_Math" alttext="x\!-\!a" display="inline"><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>a</mi></mrow></math>, <math id="p6.m5" class="ltx_Math" alttext="(x\!-\!a)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math>, …, <math id="p6.m6" class="ltx_Math" alttext="(x\!-\!a)^{\mu}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mi>μ</mi></msup></math> are replaced respectively by the numbers 1!, 2!, …, <math id="p6.m7" class="ltx_Math" alttext="\mu!" display="inline"><mrow><mi>μ</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Now we begin the proof of the theorem.  We have to show that there cannot be any equation</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle c_{0}+c_{1}e+c_{2}e^{2}+\ldots+c_{n}e^{n}\;=\;0" display="inline"><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>e</mi></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mn>2</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi>e</mi><mi>n</mi></msup></mpadded></mrow></mrow><mo>=</mo><mn> 0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">with integer coefficients <math id="p7.m1" class="ltx_Math" alttext="c_{i}" display="inline"><msub><mi>c</mi><mi>i</mi></msub></math> and at least one of them distinct from zero.  The proof is indirect.  Let’s assume the contrary.  We can presume that  <math id="p7.m2" class="ltx_Math" alttext="c_{0}\neq 0" display="inline"><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">For any positive integer <math id="p8.m1" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math>, lemma 1 gives</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle F(0)e^{\nu}\;=\;F(\nu)+\nu e^{\nu-\xi_{\nu}}f(\xi_{\nu})\quad(0&lt;%
+\xi_{\nu}&lt;\nu)." display="inline"><mrow><mi>F</mi><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mpadded width="+2.8pt"><msup><mi>e</mi><mi>ν</mi></msup></mpadded><mo rspace="5.3pt">=</mo><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>ν</mi><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>ν</mi><msup><mi>e</mi><mrow><mi>ν</mi><mo>-</mo><msub><mi>ξ</mi><mi>ν</mi></msub></mrow></msup><mi>f</mi><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>ν</mi></msub><mo stretchy="false">)</mo></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>&lt;</mo><msub><mi>ξ</mi><mi>ν</mi></msub><mo>&lt;</mo><mi>ν</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">By virtue of this, one may write (2), multiplied by <math id="p8.m2" class="ltx_Math" alttext="F(0)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>, as</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle c_{0}F(0)\!+\!c_{1}F(1)\!+\!c_{2}F(2)\!+\!\ldots\!+\!c_{n}F(n)\;%
+=\;-[c_{1}e^{1-\xi_{1}}f(\xi_{1})\!+\!2c_{2}e^{2-\xi_{2}}f(\xi_{2})\!+\ldots+%
+nc_{n}e^{n-\xi_{n}}f(\xi_{n})]." display="inline"><mrow><mrow><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="0.8pt" stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt">+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo rspace="0.8pt" stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt">+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo rspace="0.8pt" stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mi mathvariant="normal">…</mi></mpadded><mo rspace="0.8pt">+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mn>1</mn><mo>-</mo><msub><mi>ξ</mi><mn>1</mn></msub></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>1</mn></msub><mo rspace="0.8pt" stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt">+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mn>2</mn><mo>-</mo><msub><mi>ξ</mi><mn>2</mn></msub></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mn>2</mn></msub><mo rspace="0.8pt" stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt">+</mo><mi mathvariant="normal">…</mi><mo rspace="0.8pt">+</mo><mrow><mi>n</mi><mo>⁢</mo><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>n</mi><mo>-</mo><msub><mi>ξ</mi><mi>n</mi></msub></mrow></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We shall show that the polynomial <math id="p8.m3" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be chosen such that the left  has absolute value less than 1.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">We choose</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E5.m1" class="ltx_Math" alttext="\displaystyle f(x)\;:=\;\frac{x^{p-1}}{(p-1)!}[(x\!-\!1)(x\!-\!2)\cdots(x\!-\!%
+n)]^{p}," display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow><mi>p</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="p9.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a positive prime number on which we later shall set certain conditions.  We must determine the corresponding values <math id="p9.m2" class="ltx_Math" alttext="F(0)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="p9.m3" class="ltx_Math" alttext="F(1)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>, …, <math id="p9.m4" class="ltx_Math" alttext="F(n)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">For determining <math id="p10.m1" class="ltx_Math" alttext="F(0)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> we need, according to lemma 2, to expand <math id="p10.m2" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> by the powers of <math id="p10.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, getting</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="f(x)\;=\;\frac{1}{(p\!-\!1)!}[(-1)^{np}n!^{p}x^{p-1}+A_{1}x^{p}+A_{2}x^{p}+1+\ldots]" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow></msup><mo>⁢</mo><msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mi>p</mi></msup><mo>⁢</mo><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>x</mi><mi>p</mi></msup></mrow><mo>+</mo><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mi>p</mi></msup></mrow><mo>+</mo><mn>1</mn><mo>+</mo><mi mathvariant="normal">…</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p10.m4" class="ltx_Math" alttext="A_{1},\,A_{2},\,\ldots" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>A</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi></mrow></math> are integers, and to replace the powers <math id="p10.m5" class="ltx_Math" alttext="x^{p-1}" display="inline"><msup><mi>x</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup></math>, <math id="p10.m6" class="ltx_Math" alttext="x^{p}" display="inline"><msup><mi>x</mi><mi>p</mi></msup></math>, <math id="p10.m7" class="ltx_Math" alttext="x^{p+1}" display="inline"><msup><mi>x</mi><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msup></math>, … with the numbers <math id="p10.m8" class="ltx_Math" alttext="(p\!-\!1)!" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math>, <math id="p10.m9" class="ltx_Math" alttext="p!" display="inline"><mrow><mi>p</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math>, <math id="p10.m10" class="ltx_Math" alttext="(p\!+\!1)!" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math>, …  We then get the expression</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="F(0)\;=\;\frac{1}{(p\!-\!1)!}[(-1)^{np}n!^{p}(p\!-\!1)!+A_{1}p!+A_{2}(p\!+\!1)%
+!+\ldots]\;=\;(-1)^{np}n!^{p}+pK_{0}," display="block"><mrow><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow></msup><mo>⁢</mo><msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mi>p</mi></msup><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi>p</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow><mo rspace="5.3pt" stretchy="false">]</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow></msup><mo>⁢</mo><msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mi>p</mi></msup></mrow><mo>+</mo><mrow><mi>p</mi><mo>⁢</mo><msub><mi>K</mi><mn>0</mn></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in which <math id="p10.m11" class="ltx_Math" alttext="K_{0}" display="inline"><msub><mi>K</mi><mn>0</mn></msub></math> is an integer.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">We now set for the prime <math id="p11.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> the condition  <math id="p11.m2" class="ltx_Math" alttext="p&gt;n" display="inline"><mrow><mi>p</mi><mo>&gt;</mo><mi>n</mi></mrow></math>.  Then, <math id="p11.m3" class="ltx_Math" alttext="n!" display="inline"><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math> is not divisible by <math id="p11.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, neither is the former addend <math id="p11.m5" class="ltx_Math" alttext="(-1)^{np}n!^{p}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>⁢</mo><mi>p</mi></mrow></msup><mo>⁢</mo><msup><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mi>p</mi></msup></mrow></math>.  On the other hand, the latter addend <math id="p11.m6" class="ltx_Math" alttext="pK_{0}" display="inline"><mrow><mi>p</mi><mo>⁢</mo><msub><mi>K</mi><mn>0</mn></msub></mrow></math> is divisible by <math id="p11.m7" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.  Therefore:
+<br class="ltx_break">(<math id="p11.m8" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>) <math id="p11.m9" class="ltx_Math" alttext="F(0)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> is a non-zero integer not divisible by <math id="p11.m10" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">For determining <math id="p12.m1" class="ltx_Math" alttext="F(1)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="p12.m2" class="ltx_Math" alttext="F(2)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>, …, <math id="p12.m3" class="ltx_Math" alttext="F(n)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> we expand the polynomial <math id="p12.m4" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> by the powers of <math id="p12.m5" class="ltx_Math" alttext="x\!-\!\nu" display="inline"><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>ν</mi></mrow></math>, putting  <math id="p12.m6" class="ltx_Math" alttext="x:=\nu\!+\!(x\!-\!\nu)" display="inline"><mrow><mi>x</mi><mo>:=</mo><mrow><mpadded width="-1.7pt"><mi>ν</mi></mpadded><mo rspace="0.8pt">+</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>ν</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.  Because <math id="p12.m7" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>  the factor <math id="p12.m8" class="ltx_Math" alttext="(x\!-\!\nu)^{p}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>ν</mi></mrow><mo stretchy="false">)</mo></mrow><mi>p</mi></msup></math>, we obtain an  of the form</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="f(x)\;=\;\frac{1}{(p\!-\!1)!}[B_{p}(x\!-\!\nu)^{p}+B_{p+1}(x\!-\!\nu)^{p+1}+%
+\ldots]," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><msub><mi>B</mi><mi>p</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>ν</mi></mrow><mo stretchy="false">)</mo></mrow><mi>p</mi></msup></mrow><mo>+</mo><mrow><msub><mi>B</mi><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>ν</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the <math id="p12.m9" class="ltx_Math" alttext="B_{i}" display="inline"><msub><mi>B</mi><mi>i</mi></msub></math>’s are integers.  Using the lemma 2 then gives the result</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="F(\nu)\;=\;\frac{1}{(p\!-\!1)!}[p!B_{p}+(p\!+\!1)!B_{p+1}+\ldots]\;=\;pK_{\nu}," display="block"><mrow><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ν</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mrow><mi>p</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><msub><mi>B</mi><mi>p</mi></msub></mrow><mo>+</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><msub><mi>B</mi><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow><mo rspace="5.3pt" stretchy="false">]</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mi>p</mi><mo>⁢</mo><msub><mi>K</mi><mi>ν</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with <math id="p12.m10" class="ltx_Math" alttext="K_{\nu}" display="inline"><msub><mi>K</mi><mi>ν</mi></msub></math> a certain integer.  Thus:
+<br class="ltx_break">(<math id="p12.m11" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>) <math id="p12.m12" class="ltx_Math" alttext="F(1)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="p12.m13" class="ltx_Math" alttext="F(2)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>, …, <math id="p12.m14" class="ltx_Math" alttext="F(n)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> are integers all divisible by <math id="p12.m15" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">So, the left hand  of (4) is an integer having the form <math id="p13.m1" class="ltx_Math" alttext="c_{0}F(0)+pK" display="inline"><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>p</mi><mo>⁢</mo><mi>K</mi></mrow></mrow></math> with <math id="p13.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> an integer.  The factor <math id="p13.m3" class="ltx_Math" alttext="F(0)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> of the first addend is by (<math id="p13.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>) indivisible by <math id="p13.m5" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.  If we set for the prime <math id="p13.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> a new requirement  <math id="p13.m7" class="ltx_Math" alttext="p&gt;|c_{0}|" display="inline"><mrow><mi>p</mi><mo>&gt;</mo><mrow><mo stretchy="false">|</mo><msub><mi>c</mi><mn>0</mn></msub><mo stretchy="false">|</mo></mrow></mrow></math>,  then also the factor <math id="p13.m8" class="ltx_Math" alttext="c_{0}" display="inline"><msub><mi>c</mi><mn>0</mn></msub></math> is indivisible by <math id="p13.m9" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, and thus likewise the whole addend <math id="p13.m10" class="ltx_Math" alttext="c_{0}F(0)" display="inline"><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>.  We conclude that the sum is not divisible by <math id="p13.m11" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and therefore:
+<br class="ltx_break">(<math id="p13.m12" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>) If <math id="p13.m13" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> in (5) is a prime number greater than <math id="p13.m14" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and <math id="p13.m15" class="ltx_Math" alttext="|c_{0}|" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>c</mi><mn>0</mn></msub><mo stretchy="false">|</mo></mrow></math>, then the left  of (4) is a nonzero integer.</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">We then examine the right hand  of (4).  Because the numbers <math id="p14.m1" class="ltx_Math" alttext="\xi_{1}" display="inline"><msub><mi>ξ</mi><mn>1</mn></msub></math>, …, <math id="p14.m2" class="ltx_Math" alttext="\xi_{n}" display="inline"><msub><mi>ξ</mi><mi>n</mi></msub></math> all are positive (cf. (3)), so the  <math id="p14.m3" class="ltx_Math" alttext="e^{1-\xi_{1}}" display="inline"><msup><mi>e</mi><mrow><mn>1</mn><mo>-</mo><msub><mi>ξ</mi><mn>1</mn></msub></mrow></msup></math>, …, <math id="p14.m4" class="ltx_Math" alttext="e^{n-\xi_{n}}" display="inline"><msup><mi>e</mi><mrow><mi>n</mi><mo>-</mo><msub><mi>ξ</mi><mi>n</mi></msub></mrow></msup></math> all are <math id="p14.m5" class="ltx_Math" alttext="&lt;e^{n}" display="inline"><mrow><mi></mi><mo>&lt;</mo><msup><mi>e</mi><mi>n</mi></msup></mrow></math>.  If  <math id="p14.m6" class="ltx_Math" alttext="0&lt;x&lt;n" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>n</mi></mrow></math>, then in the polynomial (5) the factors <math id="p14.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,
+<math id="p14.m8" class="ltx_Math" alttext="x\!-\!1" display="inline"><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow></math>, …, <math id="p14.m9" class="ltx_Math" alttext="x\!-\!n" display="inline"><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">-</mo><mi>n</mi></mrow></math> all have the absolute value less than <math id="p14.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and thus</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="|f(x)|\;&lt;\;\frac{1}{(p\!-\!1)!}n^{p-1}(n^{n})^{p}=n^{n}\cdot\frac{(n^{n+1})^{p%
+-1}}{(p\!-\!1)!}." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt" stretchy="false">|</mo></mrow><mo rspace="5.3pt">&lt;</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><msup><mi>n</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>p</mi></msup></mrow><mo>=</mo><mrow><msup><mi>n</mi><mi>n</mi></msup><mo>⋅</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because <math id="p14.m11" class="ltx_Math" alttext="\xi_{1}" display="inline"><msub><mi>ξ</mi><mn>1</mn></msub></math>, …, <math id="p14.m12" class="ltx_Math" alttext="\xi_{n}" display="inline"><msub><mi>ξ</mi><mi>n</mi></msub></math> all are between 0 and <math id="p14.m13" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> (cf. (3)), we especially have</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="|f(\xi_{\nu})|\;&lt;\;n^{n}\cdot\frac{(n^{n+1})^{p-1}}{(p\!-\!1)!}\quad\forall\,%
+\nu=1,\,2,\,\ldots,\,n." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ξ</mi><mi>ν</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt" stretchy="false">|</mo></mrow><mo rspace="5.3pt">&lt;</mo><mrow><msup><mi>n</mi><mi>n</mi></msup><mo>⋅</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo rspace="4.2pt">∀</mo><mi>ν</mi></mrow><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn> 2</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo rspace="4.2pt">,</mo><mi>n</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we denote by <math id="p14.m14" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> the greatest of the numbers <math id="p14.m15" class="ltx_Math" alttext="|c_{0}|" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>c</mi><mn>0</mn></msub><mo stretchy="false">|</mo></mrow></math>, <math id="p14.m16" class="ltx_Math" alttext="|c_{1}|" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>c</mi><mn>1</mn></msub><mo stretchy="false">|</mo></mrow></math>, …, <math id="p14.m17" class="ltx_Math" alttext="|c_{n}|" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>c</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow></math>, then the right hand  of (4) has the absolute value less than</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="(1\!+\!2\!+\!\ldots\!+\!n)ce^{n}n^{n}\cdot\frac{(n^{n+1})^{p-1}}{(p\!-\!1)!}\;%
+=\;\frac{n(n\!+\!1)}{2}c(en)^{n}\cdot\frac{(n^{n+1})^{p-1}}{(p\!-\!1)!}." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mn>2</mn></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mi mathvariant="normal">…</mi></mpadded><mo rspace="0.8pt">+</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>c</mi><mo>⁢</mo><msup><mi>e</mi><mi>n</mi></msup><mo>⁢</mo><msup><mi>n</mi><mi>n</mi></msup></mrow><mo>⋅</mo><mpadded width="+2.8pt"><mfrac><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>2</mn></mfrac><mo>⁢</mo><mi>c</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>e</mi><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>⋅</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But the limit of <math id="p14.m18" class="ltx_Math" alttext="\frac{(n^{n+1})^{p-1}}{(p\!-\!1)!}" display="inline"><mfrac><msup><mrow><mo stretchy="false">(</mo><msup><mi>n</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>p</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></math> is 0 as  <math id="p14.m19" class="ltx_Math" alttext="p\to\infty" display="inline"><mrow><mi>p</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, and therefore the above expression is less than 1 as soon as <math id="p14.m20" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> exeeds some number <math id="p14.m21" class="ltx_Math" alttext="p_{0}" display="inline"><msub><mi>p</mi><mn>0</mn></msub></math>.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">If we determine the polynomial <math id="p15.m1" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> from the equation (5) such that the prime <math id="p15.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is greater than the greatest of the numbers <math id="p15.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="p15.m4" class="ltx_Math" alttext="|c_{0}|" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>c</mi><mn>0</mn></msub><mo stretchy="false">|</mo></mrow></math> and <math id="p15.m5" class="ltx_Math" alttext="p_{0}" display="inline"><msub><mi>p</mi><mn>0</mn></msub></math> (which is possible since there are infinitely many prime numbers (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ProofThatThereAreInfinitelyManyPrimes</span>)), then the  having the absolute value <math id="p15.m6" class="ltx_Math" alttext="&lt;1" display="inline"><mrow><mi></mi><mo>&lt;</mo><mn>1</mn></mrow></math>.  The contradiction proves that the theorem is right.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_smallcaps">Ernst Lindelöf</span>: <span class="ltx_text ltx_font_italic">Differentiali- ja integralilasku
+ja sen sovellutukset I</span>.  WSOY, Helsinki (1950).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p16" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">e is transcendental</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EIsTranscendental</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26C05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11J82</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11J81</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="p16.m1" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> is transcendental</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">transcendence of e</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NaturalLogBase</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FundamentalTheoremOfTranscendence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LindemannWeierstrassTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EIsIrrational</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ErIsIrrationalForRinmathbbQsetminus0</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfTaylorPolynomialsForTheExponentialFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ProofThatEIsNotANaturalNumber</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:00:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html><html>
+<head>
+<title>a lecture on integration by substitution</title>
+<!--Generated on Fri Feb  9 19:51:30 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">a lecture on integration by substitution</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">The Method of Substitution (or Change of Variables)</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">The following is a general method to find indefinite integrals
+that look like the result of a chain rule.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">When to use it:</span> We use the method of substitution for indefinite integrals which look like the result of
+a chain rule. In particular, try to use this method when you see a <span class="ltx_text ltx_font_bold">composition of two functions</span>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">How to use it:</span> In this method, we go from integrating with respect to <math id="I1.i2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to integrating with respect to
+a new variable, <math id="I1.i2.p1.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>, which makes the integral much easier.</p>
+<ol id="I1.I1" class="ltx_enumerate">
+<li id="I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Find inside the integral the composition of two functions and set <math id="I1.I1.i1.p1.m1" class="ltx_Math" alttext="u=" display="inline"><mrow><mi>u</mi><mo>=</mo><mi></mi></mrow></math> “the inner function”.</p>
+</div>
+</li>
+<li id="I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">We also write <math id="I1.I1.i2.p1.m1" class="ltx_Math" alttext="du=\frac{du}{dx}dx" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(c)</span> 
+<div id="I1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Substitute everything in the integral that depends on <math id="I1.I1.i3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in terms of <math id="I1.I1.i3.p1.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>.</p>
+</div>
+</li>
+<li id="I1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(d)</span> 
+<div id="I1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Integrate with respect to <math id="I1.I1.i4.p1.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>.</p>
+</div>
+</li>
+<li id="I1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(e)</span> 
+<div id="I1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Once we have the result of integration in terms of <math id="I1.I1.i5.p1.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> (<math id="I1.I1.i5.p1.m2" class="ltx_Math" alttext="+C" display="inline"><mrow><mo>+</mo><mi>C</mi></mrow></math>), substitute back in terms of <math id="I1.I1.i5.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">The method is best explained through examples:</p>
+</div>
+<div id="Sx1.Thmthm1" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 0.1</span>.</h6>
+<div id="Sx1.Thmthm1.p1" class="ltx_para">
+<p class="ltx_p">We want to find <math id="Sx1.Thmthm1.p1.m1" class="ltx_Math" alttext="\int e^{2x}dx" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math>. The integrand is <math id="Sx1.Thmthm1.p1.m2" class="ltx_Math" alttext="e^{2x}" display="inline"><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></msup></math>, which is a composition of two functions.
+The inner function is <math id="Sx1.Thmthm1.p1.m3" class="ltx_Math" alttext="2x" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></math> so we set:</p>
+<table id="Sx1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex1.m1" class="ltx_Math" alttext="u=2x,\quad du=2dx" display="block"><mrow><mrow><mi>u</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus,</p>
+<table id="Sx1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex2.m1" class="ltx_Math" alttext="x=u/2,\quad dx=du/2" display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mi>u</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Substitute into the integral:</p>
+<table id="Sx1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex3.m1" class="ltx_Math" alttext="\int e^{2x}dx=\int e^{u}\frac{du}{2}=\frac{1}{2}\int e^{u}du=\frac{1}{2}e^{u}+%
+C=\frac{1}{2}e^{2x}+C" display="block"><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>e</mi><mi>u</mi></msup><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mn>2</mn></mfrac></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>e</mi><mi>u</mi></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>e</mi><mi>u</mi></msup></mrow><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></msup></mrow><mo>+</mo><mi>C</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">The following are typical examples where we use the subsitution method:</p>
+</div>
+<div id="Sx1.Thmthm2" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 0.2</span>.</h6>
+<div id="Sx1.Thmthm2.p1" class="ltx_para">
+<table id="Sx1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex4.m1" class="ltx_Math" alttext="\int xe^{3x^{2}+7}dx" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>x</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>7</mn></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The inner function is <math id="Sx1.Thmthm2.p1.m1" class="ltx_Math" alttext="u=3x^{2}+7" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>7</mn></mrow></mrow></math> and <math id="Sx1.Thmthm2.p1.m2" class="ltx_Math" alttext="du=6xdx" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mn>6</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>. Thus <math id="Sx1.Thmthm2.p1.m3" class="ltx_Math" alttext="dx=du/(6x)" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>6</mn><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Substitute:</p>
+<table id="Sx1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex5.m1" class="ltx_Math" alttext="\int xe^{3x^{2}+7}dx=\int\frac{xe^{u}}{6x}du=\int\frac{e^{u}}{6}du=\frac{e^{u}%
+}{6}+C=\frac{e^{3x^{2}+7}}{6}+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>x</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>7</mn></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mi>x</mi><mo>⁢</mo><msup><mi>e</mi><mi>u</mi></msup></mrow><mrow><mn>6</mn><mo>⁢</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><msup><mi>e</mi><mi>u</mi></msup><mn>6</mn></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mi>e</mi><mi>u</mi></msup><mn>6</mn></mfrac><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mfrac><msup><mi>e</mi><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>7</mn></mrow></msup><mn>6</mn></mfrac><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Sx1.Thmthm3" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 0.3</span>.</h6>
+<div id="Sx1.Thmthm3.p1" class="ltx_para">
+<table id="Sx1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex6.m1" class="ltx_Math" alttext="\int\sin(3x+7)dx" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The inner function is <math id="Sx1.Thmthm3.p1.m1" class="ltx_Math" alttext="u=3x+7" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>7</mn></mrow></mrow></math> and <math id="Sx1.Thmthm3.p1.m2" class="ltx_Math" alttext="du=3dx" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mn>3</mn><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>. Therefore:</p>
+<table id="Sx1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex7.m1" class="ltx_Math" alttext="\int\sin(3x+7)dx=\int\frac{\sin(u)}{3}du=-\frac{\cos(u)}{3}+C=-\frac{\cos(3x+7%
+)}{3}+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mn>3</mn></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mn>3</mn></mfrac></mrow><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mn>3</mn></mfrac></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_pagination ltx_role_newpage"></div>
+<div id="Sx1.Thmthm4" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 0.4</span>.</h6>
+<div id="Sx1.Thmthm4.p1" class="ltx_para">
+<table id="Sx1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex8.m1" class="ltx_Math" alttext="\int(2x+3)\sqrt{x^{2}+3x+20}\ dx" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+5pt"><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>20</mn></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Inner <math id="Sx1.Thmthm4.p1.m1" class="ltx_Math" alttext="u=x^{2}+3x+20" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>20</mn></mrow></mrow></math> and <math id="Sx1.Thmthm4.p1.m2" class="ltx_Math" alttext="du=(2x+3)dx" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>. Thus:</p>
+<table id="Sx1.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex9.m1" class="ltx_Math" alttext="\int(2x+3)\sqrt{x^{2}+3x+20}\ dx=\int\sqrt{u}du=\int u^{1/2}du=\frac{2u^{3/2}}%
+{3}+C=\frac{2(x^{2}+3x+20)^{3/2}}{3}+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+5pt"><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>20</mn></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msqrt><mi>u</mi></msqrt><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>u</mi><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mi>u</mi><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mn>3</mn></mfrac><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>20</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mn>3</mn></mfrac><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Sx1.p5" class="ltx_para">
+<p class="ltx_p">Now another integral which is a little more difficult:</p>
+</div>
+<div id="Sx1.Thmthm5" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 0.5</span>.</h6>
+<div id="Sx1.Thmthm5.p1" class="ltx_para">
+<table id="Sx1.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex10.m1" class="ltx_Math" alttext="\int\frac{\cos(\ln x)}{x}dx" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The inner function here is <math id="Sx1.Thmthm5.p1.m1" class="ltx_Math" alttext="u=\ln x" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></math> and <math id="Sx1.Thmthm5.p1.m2" class="ltx_Math" alttext="du=\frac{1}{x}dx" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>.</p>
+<table id="Sx1.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex11.m1" class="ltx_Math" alttext="\int\frac{\cos(\ln x)}{x}dx=\int\cos(u)\cdot\frac{1}{x}dx=\int\cos(u)du=\sin(u%
+)+C=\sin(\ln x)+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Sx1.Thmthm6" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 0.6</span>.</h6>
+<div id="Sx1.Thmthm6.p1" class="ltx_para">
+<table id="Sx1.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex12.m1" class="ltx_Math" alttext="\int\frac{3x^{2}+14x+1}{x^{3}+7x^{2}+x+115}dx" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>14</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mi>x</mi><mo>+</mo><mn>115</mn></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This function is also a typical example of integration with substitution. Whenever there is a fraction, and the numerator
+looks like the derivative of the denominator, we set <math id="Sx1.Thmthm6.p1.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> to be the denominator:</p>
+<table id="Sx1.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex13.m1" class="ltx_Math" alttext="u=x^{3}+7x^{2}+x+115,\quad du=(3x^{2}+14x+1)dx" display="block"><mrow><mrow><mi>u</mi><mo>=</mo><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mi>x</mi><mo>+</mo><mn>115</mn></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>14</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus:</p>
+<table id="Sx1.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex14.m1" class="ltx_Math" alttext="\int\frac{3x^{2}+14x+1}{x^{3}+7x^{2}+x+115}dx=\int\frac{1}{u}du=\ln u+C=\ln(x^%
+{3}+7x^{2}+x+115)+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>14</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mi>x</mi><mo>+</mo><mn>115</mn></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>1</mn><mi>u</mi></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mi>u</mi></mrow><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mi>x</mi><mo>+</mo><mn>115</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Sx1.Thmthm7" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 0.7</span>.</h6>
+<div id="Sx1.Thmthm7.p1" class="ltx_para">
+<table id="Sx1.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex15.m1" class="ltx_Math" alttext="\int\frac{7}{1+3x}dx" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>7</mn><mrow><mn>1</mn><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As in the example above, we set <math id="Sx1.Thmthm7.p1.m1" class="ltx_Math" alttext="u=1+3x" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math>, <math id="Sx1.Thmthm7.p1.m2" class="ltx_Math" alttext="du=3dx" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mn>3</mn><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>:</p>
+<table id="Sx1.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex16.m1" class="ltx_Math" alttext="\int\frac{7}{1+3x}dx=\int\frac{7}{u}\frac{du}{3}=\frac{7}{3}\int\frac{1}{u}du=%
+\frac{7}{3}\ln u+C=\frac{7}{3}\ln(1+3x)+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>7</mn><mrow><mn>1</mn><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>7</mn><mi>u</mi></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mn>3</mn></mfrac></mrow></mrow><mo>=</mo><mrow><mfrac><mn>7</mn><mn>3</mn></mfrac><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>1</mn><mi>u</mi></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>7</mn><mn>3</mn></mfrac><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>u</mi></mrow></mrow><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mfrac><mn>7</mn><mn>3</mn></mfrac><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Sx1.Thmthm8" class="ltx_theorem ltx_theorem_exa">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 0.8</span>.</h6>
+<div id="Sx1.Thmthm8.p1" class="ltx_para">
+<table id="Sx1.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex17.m1" class="ltx_Math" alttext="\int t^{3}(t^{4}-50)^{700}dt" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>t</mi><mn>3</mn></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mn>4</mn></msup><mo>-</mo><mn>50</mn></mrow><mo stretchy="false">)</mo></mrow><mn>700</mn></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here the inner function is <math id="Sx1.Thmthm8.p1.m1" class="ltx_Math" alttext="u=t^{4}-50" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><msup><mi>t</mi><mn>4</mn></msup><mo>-</mo><mn>50</mn></mrow></mrow></math> and <math id="Sx1.Thmthm8.p1.m2" class="ltx_Math" alttext="du=4t^{3}dt" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>t</mi><mn>3</mn></msup><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math>. Thus</p>
+<table id="Sx1.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex18.m1" class="ltx_Math" alttext="\int t^{3}(t^{4}-50)^{700}dt=\int\frac{u^{700}}{4}du=\frac{1}{4}\frac{u^{701}}%
+{701}+C=\frac{(t^{4}-50)^{701}}{4\cdot 701}+C." display="block"><mrow><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>t</mi><mn>3</mn></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mn>4</mn></msup><mo>-</mo><mn>50</mn></mrow><mo stretchy="false">)</mo></mrow><mn>700</mn></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><msup><mi>u</mi><mn>700</mn></msup><mn>4</mn></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mfrac><msup><mi>u</mi><mn>701</mn></msup><mn>701</mn></mfrac></mrow><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mn>4</mn></msup><mo>-</mo><mn>50</mn></mrow><mo stretchy="false">)</mo></mrow><mn>701</mn></msup><mrow><mn>4</mn><mo>⋅</mo><mn>701</mn></mrow></mfrac><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Sx1.p6" class="ltx_para">
+<p class="ltx_p">Some other examples (solve them!):</p>
+<table id="Sx1.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex19.m1" class="ltx_Math" alttext="\int e^{x}\sin(e^{x})dx,\quad\int\frac{e^{x}}{e^{x}+1}dx,\quad\int\frac{1}{x%
+\ln x}dx" display="block"><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>e</mi><mi>x</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><msup><mi>e</mi><mi>x</mi></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mi>x</mi><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">a lecture on integration by substitution</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ALectureOnIntegrationBySubstitution</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:38:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:38:29</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Feature</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A36</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ALectureOnIntegrationByParts</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ALectureOnTrigonometricIntegralsAndTrigonometricSubstitution</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ALectureOnThePartialFractionDecompositionMethod</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:51:30 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

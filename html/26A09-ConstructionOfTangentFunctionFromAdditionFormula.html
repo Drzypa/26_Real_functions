@@ -1,0 +1,533 @@
+<!DOCTYPE html><html>
+<head>
+<title>construction of tangent function from addition formula</title>
+<!--Generated on Fri Feb  9 19:46:42 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">construction of tangent function from addition formula</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">It is possible to define trigonometric functions rigorously using a
+procedure based upon the addition formula for the tangent function.
+The idea is to first note a few purely algebraic facts and then use
+these to show that a certain limiting process converges to a function
+which satisfies the properties of the tangent function, from which
+the remaining trigonometric functions may be defined by purely
+algebraic operations.</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a positive real number, then</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="0&lt;\sqrt{1+{1\over x^{2}}}-{1\over x}&lt;1" display="block"><mrow><mn>0</mn><mo>&lt;</mo><mrow><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow></msqrt><mo>-</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><mo>&lt;</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">(Here and henceforth, the square root sign denotes
+the positive square root.)</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="y=1/x" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi>x</mi></mrow></mrow></math>. Then <math id="p2.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is also a positive real number.
+We have the following inequalities:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="y^{2}&lt;1+y^{2}&lt;1+2y+y^{2}" display="block"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>&lt;</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>&lt;</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking square roots:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="y&lt;\sqrt{1+y^{2}}&lt;1+y" display="block"><mrow><mi>y</mi><mo>&lt;</mo><msqrt><mrow><mn>1</mn><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt><mo>&lt;</mo><mrow><mn>1</mn><mo>+</mo><mi>y</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Subtracting <math id="p2.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="0\leq\sqrt{1+y^{2}}-y&lt;1" display="block"><mrow><mn>0</mn><mo>≤</mo><mrow><msqrt><mrow><mn>1</mn><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt><mo>-</mo><mi>y</mi></mrow><mo>&lt;</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Remembering the definition of <math id="p2.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, this is the
+inequality which we set out to demonstrate.
+∎</p>
+</div>
+</div>
+<div id="Thmdfn1" class="ltx_theorem ltx_theorem_dfn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmdfn1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Define the algebraic functions <math id="Thmdfn1.p1.m1" class="ltx_Math" alttext="s\colon\{(x,y)\in\mathbb{R}^{2}\mid xy\neq 1\}\to\mathbb{R}" display="inline"><mrow><mi>s</mi><mo mathvariant="normal">:</mo><mrow><mrow><mo mathvariant="normal" stretchy="false">{</mo><mrow><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal">,</mo><mi>y</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">∈</mo><msup><mi mathvariant="normal">R</mi><mn mathvariant="normal">2</mn></msup></mrow><mo mathvariant="normal">∣</mo><mrow><mrow><mi>x</mi><mo mathvariant="italic">⁢</mo><mi>y</mi></mrow><mo mathvariant="normal">≠</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math>
+and <math id="Thmdfn1.p1.m2" class="ltx_Math" alttext="h\colon(0,\infty)\to(0,1)" display="inline"><mrow><mi>h</mi><mo mathvariant="normal">:</mo><mrow><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal">,</mo><mi mathvariant="normal">∞</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">→</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> and
+<math id="Thmdfn1.p1.m3" class="ltx_Math" alttext="g\colon(0,1)\to(0,1)" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">:</mo><mrow><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">→</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> as follows:</span></p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle s(x,y)" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m2" class="ltx_Math" alttext="\displaystyle={x+y\over 1-xy}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle h(x)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m2" class="ltx_Math" alttext="\displaystyle=\sqrt{1+{1\over x^{2}}}-{1\over x}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msqrt><mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mstyle></mrow></msqrt><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle g(x)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E3.m2" class="ltx_Math" alttext="\displaystyle=h\left({1+x\over 1-x}\right)={\sqrt{x^{2}-2x+2}+x-1\over x+1}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mstyle><mo>)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><msqrt><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>+</mo><mn>2</mn></mrow></msqrt><mo>+</mo><mi>x</mi></mrow><mo>-</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmthm2.p1.m1" class="ltx_Math" alttext="s(s(x,y),z)=s(x,s(y,z))" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Calculemus! On the one hand,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="s(s(x,y),z)={{x+y\over 1-xy}+z\over 1-{x+y\over 1-xy}z}\\
+={x+y+z-xyz\over 1-xy-yz-zx}" display="block"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mfrac><mo>+</mo><mi>z</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mfrac><mo>⁢</mo><mi>z</mi></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>-</mo><mrow><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow><mo>-</mo><mrow><mi>z</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">On the other hand,</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="s(x,s(y,z))={x+{y+z\over 1-yz}\over 1-x{y+z\over 1-yz}}={x+y+z-xyz\over 1-xy-%
+yz-zx}" display="block"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi>x</mi><mo>+</mo><mfrac><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></mfrac></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mfrac><mrow><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></mfrac></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>-</mo><mrow><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow><mo>-</mo><mrow><mi>z</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These quantities are equal.
+∎</p>
+</div>
+</div>
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmthm3.p1.m1" class="ltx_Math" alttext="s(h(x),h(x))=x" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Calculemus rursum!</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle s(h(x),h(x))" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle={2\sqrt{1+{1\over x^{2}}}-{2\over x}\over 1-\left(\sqrt{1+{1%
+\over x^{2}}}-{1\over x}\right)^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow><mo>-</mo><mfrac><mn>2</mn><mi>x</mi></mfrac></mrow><mrow><mn>1</mn><mo>-</mo><msup><mrow><mo>(</mo><mrow><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow></msqrt><mo>-</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle={2\sqrt{1+{1\over x^{2}}}-{2\over x}\over 1-\left(1+{2\over x^{2%
+}}-{2\over x}\sqrt{1+{1\over x^{2}}}\right)}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow><mo>-</mo><mfrac><mn>2</mn><mi>x</mi></mfrac></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mo>(</mo><mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow><mo>-</mo><mrow><mfrac><mn>2</mn><mi>x</mi></mfrac><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle={2\sqrt{1+{1\over x^{2}}}-{2\over x}\over-{1\over x}\left({2%
+\over x}-2\sqrt{1+{1\over x^{2}}}\right)}=x" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow><mo>-</mo><mfrac><mn>2</mn><mi>x</mi></mfrac></mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><mn>2</mn><mi>x</mi></mfrac><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mfrac></mstyle><mo>=</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="Thmthm4" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 4</span>.</h6>
+<div id="Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmthm4.p1.m1" class="ltx_Math" alttext="s(h(x),h(y))=h(s(x,y))" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</div>
+<div id="Thmthm5" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 5</span>.</h6>
+<div id="Thmthm5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For all <math id="Thmthm5.p1.m1" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>, we have <math id="Thmthm5.p1.m2" class="ltx_Math" alttext="h(x)&lt;x" display="inline"><mrow><mrow><mi>h</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">&lt;</mo><mi>x</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Since <math id="p5.m1" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, we have</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="x^{2}+1&lt;x^{4}+2x^{2}+1." display="block"><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow><mo>&lt;</mo><mrow><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By the binomial identity, the right-hand side equals <math id="p5.m2" class="ltx_Math" alttext="(x+1)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math>.
+Taking square roots of both sides,</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\sqrt{x^{2}+1}&lt;x^{2}+1." display="block"><mrow><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt><mo>&lt;</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Subtracting <math id="p5.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> from both sides,</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\sqrt{x^{2}+1}-1&lt;x^{2}." display="block"><mrow><mrow><mrow><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt><mo>-</mo><mn>1</mn></mrow><mo>&lt;</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Dividing by <math id="p5.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> on both sides,</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\sqrt{1+{1\over x^{2}}}-{1\over x}&lt;x," display="block"><mrow><mrow><mrow><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow></msqrt><mo>-</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></mrow><mo>&lt;</mo><mi>x</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or <math id="p5.m5" class="ltx_Math" alttext="h(x)&lt;x" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>x</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm6" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 6</span>.</h6>
+<div id="Thmthm6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm6.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> be a positive real number. Then the sequence</span></p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="a,h(a),h(h(a)),h(h(h(a))),h(h(h(h(a)))),h(h(h(h(h(a))))),\ldots" display="block"><mrow><mi>a</mi><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">converges to <math id="Thmthm6.p1.m2" class="ltx_Math" alttext="0" display="inline"><mn mathvariant="normal">0</mn></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">By the foregoing theorem, this sequence is decreasing. Hence, it
+must converge to its infimum. Call this infimum <math id="p6.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>. Suppose that
+<math id="p6.m2" class="ltx_Math" alttext="b&gt;0" display="inline"><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Then, since <math id="p6.m3" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is continuous, we must have <math id="p6.m4" class="ltx_Math" alttext="h(b)=b" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>b</mi></mrow></math>,
+which is not possible by the foregoing theorem. Hence, we must
+have <math id="p6.m5" class="ltx_Math" alttext="b=0" display="inline"><mrow><mi>b</mi><mo>=</mo><mn>0</mn></mrow></math>, so the sequence converges to <math id="p6.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.
+∎</p>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Having made these preliminary observations, we may now begin making
+the construction of the trigonometric function. We begin by defining
+the tangent function for successive bisections of a right angle.</p>
+</div>
+<div id="Thmdfn2" class="ltx_theorem ltx_theorem_dfn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 2</span>.</h6>
+<div id="Thmdfn2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Define the sequence <math id="Thmdfn2.p1.m1" class="ltx_Math" alttext="\{t_{n}\}_{n=0}^{\infty}" display="inline"><msubsup><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi>t</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow><mrow><mi>n</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup></math> as follows:</span></p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle t_{0}" display="inline"><msub><mi>t</mi><mn>0</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=1" display="inline"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\displaystyle t_{n+1}" display="inline"><msub><mi>t</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m2" class="ltx_Math" alttext="\displaystyle=h(t_{n})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">By the forgoing theorem, this is a decreasing sequence which tends
+to zero. These will be the values of the tangent function at
+successive bisections of the right angle. We now use our function
+<math id="p8.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> to construct other values of the tangent function.</p>
+</div>
+<div id="Thmdfn3" class="ltx_theorem ltx_theorem_dfn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 3</span>.</h6>
+<div id="Thmdfn3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Define the sequence <math id="Thmdfn3.p1.m1" class="ltx_Math" alttext="\{r_{mn}\}" display="inline"><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi>r</mi><mrow><mi>m</mi><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow></math> by the following recursions:</span></p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\displaystyle r_{m0}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mn>0</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex17.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\displaystyle r_{m\,n+1}" display="inline"><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex18.m2" class="ltx_Math" alttext="\displaystyle=s(r_{mn},t_{m})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">There is a subtlety involved in this definition (which is why we
+did not specify the range of <math id="p9.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="p9.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>). Since <math id="p9.m3" class="ltx_Math" alttext="s(x,y)" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is
+only well-defined when <math id="p9.m4" class="ltx_Math" alttext="xy\neq 1" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>≠</mo><mn>1</mn></mrow></math>, we do not know that <math id="p9.m5" class="ltx_Math" alttext="r_{mn}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math>
+is well defined for all <math id="p9.m6" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="p9.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. In particular, if it should
+happen that <math id="p9.m8" class="ltx_Math" alttext="r_{mn}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math> is well defined for some <math id="p9.m9" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="p9.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> but that
+<math id="p9.m11" class="ltx_Math" alttext="r_{mn}t_{m}=1" display="inline"><mrow><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><msub><mi>t</mi><mi>m</mi></msub></mrow><mo>=</mo><mn>1</mn></mrow></math>, then <math id="p9.m12" class="ltx_Math" alttext="r_{mk}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>k</mi></mrow></msub></math> will be undefined for all <math id="p9.m13" class="ltx_Math" alttext="k&gt;m" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mi>m</mi></mrow></math>.</p>
+</div>
+<div id="Thmthm7" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 7</span>.</h6>
+<div id="Thmthm7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmthm7.p1.m1" class="ltx_Math" alttext="r_{mn}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow></msub></math>, <math id="Thmthm7.p1.m2" class="ltx_Math" alttext="r_{mn^{\prime}}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo mathvariant="italic">⁢</mo><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup></mrow></msub></math>, and <math id="Thmthm7.p1.m3" class="ltx_Math" alttext="r_{m\,n+n^{\prime}}" display="inline"><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow><mo mathvariant="normal">+</mo><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup></mrow></msub></math> are all well-defined.
+Then <math id="Thmthm7.p1.m4" class="ltx_Math" alttext="r_{m\,n+n^{\prime}}=s(r_{mn},r_{mn^{\prime}})" display="inline"><mrow><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow><mo mathvariant="normal">+</mo><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup></mrow></msub><mo mathvariant="normal">=</mo><mrow><mi>s</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow></msub><mo mathvariant="normal">,</mo><msub><mi>r</mi><mrow><mi>m</mi><mo mathvariant="italic">⁢</mo><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup></mrow></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">We proceed by induction on <math id="p10.m1" class="ltx_Math" alttext="n^{\prime}" display="inline"><msup><mi>n</mi><mo>′</mo></msup></math>. If <math id="p10.m2" class="ltx_Math" alttext="n^{\prime}=0" display="inline"><mrow><msup><mi>n</mi><mo>′</mo></msup><mo>=</mo><mn>0</mn></mrow></math>, then <math id="p10.m3" class="ltx_Math" alttext="r_{m0}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mn>0</mn></mrow></msub></math> is defined to
+be <math id="p10.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, and it is easy to see that <math id="p10.m5" class="ltx_Math" alttext="s(r_{mn},0)=r_{mn}" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></math>.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Suppose, then, that we know that <math id="p11.m1" class="ltx_Math" alttext="r_{m\,n+n^{\prime}-1}=s(r_{mn},r_{m\,n^{\prime}-1})" display="inline"><mrow><msub><mi>r</mi><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><msup><mi>n</mi><mo>′</mo></msup></mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>,</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><msup><mi>n</mi><mo>′</mo></msup></mrow><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. By definition, <math id="p11.m2" class="ltx_Math" alttext="r_{mn^{\prime}}=s(r_{m\,n^{\prime}-1},t_{m})" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><msup><mi>n</mi><mo>′</mo></msup></mrow></msub><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><msup><mi>n</mi><mo>′</mo></msup></mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and,
+by theorem 2, we have</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\displaystyle s(r_{mn},s(r_{m\,n^{\prime}-1},t_{m}))" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>,</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><msup><mi>n</mi><mo>′</mo></msup></mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex19.m2" class="ltx_Math" alttext="\displaystyle=s(s(r_{mn},r_{m\,n^{\prime}-1}),t_{m})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>,</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><msup><mi>n</mi><mo>′</mo></msup></mrow><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m2" class="ltx_Math" alttext="\displaystyle=s(r_{m\,n+n^{\prime}-1},t_{m})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><msup><mi>n</mi><mo>′</mo></msup></mrow><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex21.m2" class="ltx_Math" alttext="\displaystyle=r_{m\,n+n^{\prime}}" display="inline"><mrow><mi></mi><mo>=</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><msup><mi>n</mi><mo>′</mo></msup></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="Thmthm8" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 8</span>.</h6>
+<div id="Thmthm8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm8.p1.m1" class="ltx_Math" alttext="n\leq 2^{m}" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">≤</mo><msup><mn mathvariant="normal">2</mn><mi>m</mi></msup></mrow></math>, then <math id="Thmthm8.p1.m2" class="ltx_Math" alttext="r_{mn}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow></msub></math> is well-defined, <math id="Thmthm8.p1.m3" class="ltx_Math" alttext="r_{mn}\leq 1" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow></msub><mo mathvariant="normal">≤</mo><mn mathvariant="normal">1</mn></mrow></math>, and
+<math id="Thmthm8.p1.m4" class="ltx_Math" alttext="r_{m-1\,n}=r_{m\,2n}" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo mathvariant="normal">-</mo><mrow><mpadded width="+1.7pt"><mn mathvariant="normal">1</mn></mpadded><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow></mrow></msub><mo mathvariant="normal">=</mo><msub><mi>r</mi><mrow><mi>m</mi><mo mathvariant="italic">⁢</mo><mn mathvariant="normal"> 2</mn><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow></msub></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">We shall proceed by induction on <math id="p12.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>. To begin, we note that <math id="p12.m2" class="ltx_Math" alttext="r_{00}\leq 1" display="inline"><mrow><msub><mi>r</mi><mn>00</mn></msub><mo>≤</mo><mn>1</mn></mrow></math>
+because <math id="p12.m3" class="ltx_Math" alttext="r_{00}=0" display="inline"><mrow><msub><mi>r</mi><mn>00</mn></msub><mo>=</mo><mn>0</mn></mrow></math>. Also note that, if <math id="p12.m4" class="ltx_Math" alttext="m=0" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow></math>, then <math id="p12.m5" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math> is the only value for
+which the condition <math id="p12.m6" class="ltx_Math" alttext="n\leq 2^{m}" display="inline"><mrow><mi>n</mi><mo>≤</mo><msup><mn>2</mn><mi>m</mi></msup></mrow></math> happens to be satisfied. The condition
+<math id="p12.m7" class="ltx_Math" alttext="r_{m-1\,n}=r_{m\,2n}" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>-</mo><mrow><mpadded width="+1.7pt"><mn>1</mn></mpadded><mo>⁢</mo><mi>n</mi></mrow></mrow></msub><mo>=</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mn> 2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></math> is not relevant when <math id="p12.m8" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">Suppose that we know that, for a certain <math id="p13.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, when <math id="p13.m2" class="ltx_Math" alttext="n\leq 2^{m}" display="inline"><mrow><mi>n</mi><mo>≤</mo><msup><mn>2</mn><mi>m</mi></msup></mrow></math>, then <math id="p13.m3" class="ltx_Math" alttext="r_{mn}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math> is
+well-defined and <math id="p13.m4" class="ltx_Math" alttext="r_{mn}\leq 1" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>≤</mo><mn>1</mn></mrow></math>. We will now make an induction on <math id="p13.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> to show that
+if <math id="p13.m6" class="ltx_Math" alttext="n\leq 2^{m+1}" display="inline"><mrow><mi>n</mi><mo>≤</mo><msup><mn>2</mn><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>, then <math id="p13.m7" class="ltx_Math" alttext="r_{m+1\,n}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mpadded width="+1.7pt"><mn>1</mn></mpadded><mo>⁢</mo><mi>n</mi></mrow></mrow></msub></math> is well-defined, <math id="p13.m8" class="ltx_Math" alttext="r_{m\,n}\leq 1" display="inline"><mrow><msub><mi>r</mi><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow></msub><mo>≤</mo><mn>1</mn></mrow></math> and
+<math id="p13.m9" class="ltx_Math" alttext="r_{mn}=r_{m+1\,2n}" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>=</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></msub></mrow></math>. When <math id="p13.m10" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>, we have, by definition, <math id="p13.m11" class="ltx_Math" alttext="r_{m+1\,0}=0" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mn>1 0</mn></mrow></msub><mo>=</mo><mn>0</mn></mrow></math>
+so the quantity is defined and it is obvious that <math id="p13.m12" class="ltx_Math" alttext="r_{m\,n}\leq 1" display="inline"><mrow><msub><mi>r</mi><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow></msub><mo>≤</mo><mn>1</mn></mrow></math> and
+<math id="p13.m13" class="ltx_Math" alttext="r_{mn}=r_{m+1\,2n}" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>=</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></msub></mrow></math>.</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">Suppose we know that, for some number <math id="p14.m1" class="ltx_Math" alttext="n&lt;2^{m}" display="inline"><mrow><mi>n</mi><mo>&lt;</mo><msup><mn>2</mn><mi>m</mi></msup></mrow></math>, we find that <math id="p14.m2" class="ltx_Math" alttext="r_{m+1\,2n}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></msub></math>
+is well-defined, strictly less than <math id="p14.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and equals <math id="p14.m4" class="ltx_Math" alttext="r_{m+1\,2n}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></msub></math>. By theorem 4,
+since <math id="p14.m5" class="ltx_Math" alttext="r_{mn}\leq 1" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>≤</mo><mn>1</mn></mrow></math> and <math id="p14.m6" class="ltx_Math" alttext="r_{m\,n+1}\leq 1" display="inline"><mrow><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>≤</mo><mn>1</mn></mrow></math>, we may conclude that <math id="p14.m7" class="ltx_Math" alttext="h(r_{mn})&lt;1" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>
+and <math id="p14.m8" class="ltx_Math" alttext="h(r_{m\,n+1})&lt;1" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, which implies that <math id="p14.m9" class="ltx_Math" alttext="h(r_{mn})h(r_{m\,n+1})\neq 1" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>1</mn></mrow></math>,
+so <math id="p14.m10" class="ltx_Math" alttext="s(h(r_{mn}),h(r_{m\,n+1}))" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is well-defined. By definition, <math id="p14.m11" class="ltx_Math" alttext="r_{m\,n+1}=s(r_{mn},t_{m})" display="inline"><mrow><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so <math id="p14.m12" class="ltx_Math" alttext="h(r_{m\,n+1})=s(h(r_{mn}),h(t_{m}))" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Recall that <math id="p14.m13" class="ltx_Math" alttext="h(t_{m})=t_{m+1}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>. By theorem 1, we have</p>
+<table id="S0.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex22.m1" class="ltx_Math" alttext="s(h(r_{mn}),s(h(r_{mn}),t_{m+1}))=s(s(h(r_{mn}),h(r_{mn})),t_{m+1}))." display="block"><mrow><mi>s</mi><mrow><mo stretchy="false">(</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mi>s</mi><mrow><mo stretchy="false">(</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>s</mi><mrow><mo stretchy="false">(</mo><mi>s</mi><mrow><mo stretchy="false">(</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>,</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By theorem 2, <math id="p14.m14" class="ltx_Math" alttext="s(h(r_{mn}),h(r_{mn}))" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> equals <math id="p14.m15" class="ltx_Math" alttext="r_{mn}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math> which, in turn, by our
+induction hypothesis, equals <math id="p14.m16" class="ltx_Math" alttext="r_{m+1\,n}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mpadded width="+1.7pt"><mn>1</mn></mpadded><mo>⁢</mo><mi>n</mi></mrow></mrow></msub></math>. Combining the results of this
+paragraph, we may conclude that:</p>
+<table id="S0.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex23.m1" class="ltx_Math" alttext="s(h(r_{mn}),h(r_{m\,n+1}))=s(r_{m+1\,2n},t_{m+1})," display="block"><mrow><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></msub><mo>,</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which means that <math id="p14.m17" class="ltx_Math" alttext="r_{m+1\,2n+1}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></math> is defined and equals <math id="p14.m18" class="ltx_Math" alttext="s(h(r_{mn}),h(r_{m\,n+1}))" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">Moreover, by definition,</p>
+<table id="S0.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex24.m1" class="ltx_Math" alttext="s(h(r_{mn}),h(r_{m\,n+1}))={h(r_{mn})+h(r_{m\,n+1})\over 1-h(r_{mn})h(r_{m\,n+%
+1})}" display="block"><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p15.m1" class="ltx_Math" alttext="r_{m\,n+1}&gt;r_{mn}" display="inline"><mrow><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>&gt;</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></math>, we have <math id="p15.m2" class="ltx_Math" alttext="h(r_{m\,n+1})&gt;h(r_{mn})" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> as well. This
+implies that the numerator is less than <math id="p15.m3" class="ltx_Math" alttext="2h(r_{m\,n+1})" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> and that the denominator
+is greater than <math id="p15.m4" class="ltx_Math" alttext="1-h(r_{m\,n+1}^{2}" display="inline"><mrow><mn>1</mn><mo>-</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><msubsup><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mn>2</mn></msubsup></mrow></mrow></math>. Hence, we have <math id="p15.m5" class="ltx_Math" alttext="r_{m+1\,2n+1}&lt;s(h(r_{m\,n+1},h(r_{m\,n+1})=h(r_{m\,n+1}&lt;1" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>&lt;</mo><mi>s</mi><mrow><mo stretchy="false">(</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>h</mi><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>&lt;</mo><mn>1</mn></mrow></mrow></mrow></mrow></math>.
+</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Since, as we have just shown, <math id="p16.m1" class="ltx_Math" alttext="r_{m+1\,2n+1}&lt;1" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>&lt;</mo><mn>1</mn></mrow></math> and, as we already know,
+<math id="p16.m2" class="ltx_Math" alttext="t_{m+1}&lt;1" display="inline"><mrow><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>&lt;</mo><mn>1</mn></mrow></math>, we have <math id="p16.m3" class="ltx_Math" alttext="r_{m+1\,2n+1}t_{m+1}&lt;1" display="inline"><mrow><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, so <math id="p16.m4" class="ltx_Math" alttext="r_{m+1\,2n+2}" display="inline"><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow></msub></math>
+is well-defined. Furthermore, we may evaluate this quantity using theorem 1:</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex25" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex25.m1" class="ltx_Math" alttext="\displaystyle s(r_{m+1\,2n+1},t_{m+1})" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>1 2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex25.m2" class="ltx_Math" alttext="\displaystyle=s(s(r_{m\,n},t_{m+1}),t_{m+1})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow></msub><mo>,</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex26" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex26.m2" class="ltx_Math" alttext="\displaystyle=s(r_{m\,n},s(t_{m+1},t_{m+1}))" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow></msub><mo>,</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>t</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex27" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex27.m2" class="ltx_Math" alttext="\displaystyle=s(r_{m\,n},t_{m})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow></msub><mo>,</mo><msub><mi>t</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex28" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex28.m2" class="ltx_Math" alttext="\displaystyle=r_{m\,n+1}" display="inline"><mrow><mi></mi><mo>=</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, we have <math id="p16.m5" class="ltx_Math" alttext="r_{m+12m+2}=r_{m\,n+1}" display="inline"><mrow><msub><mi>r</mi><mrow><mi>m</mi><mo>+</mo><mrow><mn>12</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>2</mn></mrow></msub><mo>=</mo><msub><mi>r</mi><mrow><mrow><mpadded width="+1.7pt"><mi>m</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>.</p>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="p18" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">construction of tangent function from addition formula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ConstructionOfTangentFunctionFromAdditionFormula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:58:39</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:58:39</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 26A09</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:46:42 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
